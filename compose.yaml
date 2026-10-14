@@ -1,0 +1,17 @@
+services:
+  n5:
+    build: .
+    ports:
+      - "${N5_HOST:-0.0.0.0}:${N5_PORT:-8095}:8080"
+    volumes:
+      - vocabulary:/app/storage
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:size=8m
+
+volumes:
+  vocabulary:

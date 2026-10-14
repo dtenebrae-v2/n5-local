@@ -1,0 +1,103 @@
+{
+  "collections": [
+    {
+      "id": "complete",
+      "label": "Все слова",
+      "description": "Слова уровня N5. Поиск по написанию, чтению и значению.",
+      "symbol": "全",
+      "detail": "Общий словарь N5.",
+      "grouping": "none"
+    },
+    {
+      "id": "nouns",
+      "label": "Существительные",
+      "description": "Существительные по темам: люди, еда, дом, время и другие.",
+      "symbol": "名",
+      "detail": "Люди, предметы, места и время.",
+      "grouping": "topic",
+      "grammar": "grammar/nouns",
+      "practice_kind": "noun"
+    },
+    {
+      "id": "verbs",
+      "label": "Глаголы",
+      "description": "Три группы спряжения: Godan, Ichidan и неправильные глаголы.",
+      "symbol": "動",
+      "detail": "Встречаться, читать, говорить.",
+      "grouping": "topic",
+      "practice_kind": "verb"
+    },
+    {
+      "id": "i-adjectives",
+      "label": "い-прилагательные",
+      "description": "Цвета, ощущения и свойства. Прилагательные, которые заканчиваются на い.",
+      "symbol": "い",
+      "detail": "Цвета, ощущения и свойства.",
+      "grouping": "topic",
+      "parent": "adjectives",
+      "practice_kind": "i-adjective"
+    },
+    {
+      "id": "na-adjectives",
+      "label": "な-прилагательные",
+      "description": "Качества, состояния и эмоции. Прилагательные с частицей な перед существительным.",
+      "symbol": "な",
+      "detail": "Качества, чувства и состояния.",
+      "grouping": "topic",
+      "parent": "adjectives",
+      "practice_kind": "na-adjective"
+    },
+    {
+      "id": "expressions",
+      "label": "Выражения",
+      "description": "Выражения для знакомства, приветствия, благодарности и других ситуаций.",
+      "symbol": "話",
+      "detail": "Приветствия, просьбы и благодарности.",
+      "grouping": "topic"
+    }
+  ],
+  "sections": [
+    {
+      "id": "adjectives",
+      "label": "Прилагательные",
+      "description": "Прилагательные в двух категориях. Выберите тип прилагательных."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "grammar",
+      "label": "Грамматика N5"
+    },
+    {
+      "id": "grammar/verbs",
+      "label": "Глаголы",
+      "sidebar": true
+    },
+    {
+      "id": "grammar/verbs/forms",
+      "label": "Формы глаголов"
+    },
+    {
+      "id": "grammar/adjectives",
+      "label": "Прилагательные",
+      "sidebar": true
+    },
+    {
+      "id": "grammar/adjectives/forms",
+      "label": "Формы прилагательных"
+    },
+    {
+      "id": "grammar/adjectives/i-adjectives",
+      "label": "い-прилагательные"
+    },
+    {
+      "id": "grammar/adjectives/na-adjectives",
+      "label": "な-прилагательные"
+    },
+    {
+      "id": "grammar/nouns",
+      "label": "Существительные и частицы",
+      "sidebar": true
+    }
+  ]
+}
