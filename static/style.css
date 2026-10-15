@@ -1244,3 +1244,5 @@ table {
 .rules-table th, .rules-table td { padding: 12px; text-align: left; border-bottom: 1px solid var(--line); }
 .rules-table td { white-space: nowrap; }
 .rules-table .current-rule { background: #e0edcf; }
+
+.game-filters [hidden], .practice-actions [hidden] { display: none; }

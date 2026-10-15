@@ -121,3 +121,17 @@ test('Loanword long vowels accept romaji vowels and the kana length mark', () =>
   }
   assert.equal(checkAnswer(exerciseFor(adjective('コーヒー'), 'noun', 'past'), 'kohideshita').status, 'incorrect');
 });
+
+test('Vocabulary accepts alternate readings, optional phrases and matching translations', async () => {
+  const { vocabularyExercise } = await import('../static/js/vocabulary-exercise.js');
+  const japan = { meaning: 'Japan', readings: [{ kana: 'にほん' }, { kana: 'にっぽん' }] };
+  assert.equal(checkAnswer(vocabularyExercise(japan), 'nippon').status, 'correct');
+  assert.equal(checkAnswer(vocabularyExercise(japan), 'nihon').status, 'correct');
+  assert.equal(checkAnswer(vocabularyExercise(japan), 'nihongo').status, 'incorrect');
+  const phrase = vocabularyExercise({ meaning: 'You are welcome', readings: [{ kana: '（いいえ）どういたしまして。' }] });
+  assert.equal(checkAnswer(phrase, 'douitashimashite').status, 'correct');
+  assert.equal(checkAnswer(phrase, 'iiedouitashimashite').status, 'correct');
+  const same = [{ meaning: 'zero', readings: [{ kana: 'ゼロ' }] }, { meaning: 'zero', readings: [{ kana: 'れい' }] }];
+  assert.equal(checkAnswer(vocabularyExercise(same[0], same), 'rei').status, 'correct');
+  assert.equal(checkAnswer(vocabularyExercise({ meaning: 'coffee', readings: [{ kana: 'コーヒー' }] }), 'koohii').status, 'correct');
+});
