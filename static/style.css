@@ -1112,13 +1112,13 @@ table {
 }
 #practice-feedback {
   /* Keep the dialog and controls stationary, including multi-line answers. */
-  height: calc(3 * 1.7 * 16px + 30px);
+  height: calc(3 * 1.7 * 24px + 30px);
   overflow-y: auto;
   border: 1px solid transparent;
   border-left-width: 6px;
   border-radius: 8px;
   padding: 14px 16px;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.7;
 }

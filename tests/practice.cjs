@@ -34,9 +34,9 @@ module.exports = async function practiceChecks(page, base) {
   await input.press('Enter');
   assert.deepEqual(await page.locator('.practice-dialog').boundingBox(), beforeAnswer);
   assert.deepEqual(await input.boundingBox(), beforeInput);
-  assert.equal(await feedback.innerText(), 'Верно: いきました');
+  assert.equal(await feedback.innerText(), 'Верно: いきました · Ответ: 行きました（いきました）');
   await answer('ました', 'incorrect');
-  assert.equal(await feedback.innerText(), 'Неверно: ました');
+  assert.equal(await feedback.innerText(), 'Неверно: ました · Ответ: 行きました（いきました）');
   assert.deepEqual(await page.locator('.practice-dialog').boundingBox(), beforeAnswer);
   assert.deepEqual(await input.boundingBox(), beforeInput);
   assert.equal(await input.getAttribute('aria-invalid'), 'true');
@@ -53,7 +53,7 @@ module.exports = async function practiceChecks(page, base) {
   await input.pressSequentially('ikimasen');
   await input.press('Enter');
   assert.equal(await input.inputValue(), 'いきません');
-  assert.equal(await feedback.innerText(), 'Верно: いきません');
+  assert.equal(await feedback.innerText(), 'Верно: いきません · Ответ: 行きません（いきません）');
   await page.locator('#practice-target input[value=\"past_negative\"]').check();
   await answer('ikimasendeshita', 'correct', 'いきませんでした');
   await page.keyboard.press('Escape');
@@ -141,7 +141,7 @@ module.exports = async function practiceChecks(page, base) {
     element.dispatchEvent(new CompositionEvent('compositionend', { data: 'たべました', bubbles: true }));
   });
   await input.press('Enter');
-  assert.equal(await feedback.innerText(), 'Верно: たべました');
+  assert.equal(await feedback.innerText(), 'Верно: たべました · Ответ: 食べました（たべました）');
   console.log('PASS native kana composition guard');
 
   if (process.env.SCREENSHOT_DIR) {

@@ -66,7 +66,33 @@ export function exerciseFor(entry, kind, form) {
     return null;
   }
 
-  return { answers: endings.map(ending => prefix + ending), reading, rule, form, kind };
+  const answers = endings.map(ending => prefix + ending);
+  const displayAnswers = answers.map(answer => {
+    const written = writtenAnswer(entry, kind, reading, answer);
+    return written !== answer ? `${written}（${answer}）` : answer;
+  });
+  return { answers, displayAnswers, reading, rule, form, kind };
+}
+
+function writtenAnswer(entry, kind, reading, answer) {
+  const written = entry.kanji;
+  if (!written || !/[一-龯々]/u.test(written)) return answer;
+  if (kind === 'noun' || kind === 'na-adjective') {
+    return written + answer.slice(reading.length);
+  }
+  if (kind === 'verb' && reading === 'くる' && written === '来る') {
+    return '来' + answer.slice(1);
+  }
+  if (kind === 'i-adjective' && ['いい', 'よい'].includes(reading) && written === '良い') {
+    return '良' + answer.slice(1);
+  }
+  // Keep the written stem only when its kana reading survives conjugation.
+  // This also leaves the exceptional negative ある → ない in kana.
+  const suffix = written.match(/[ぁ-ゖー]+$/u)?.[0] || '';
+  if (!reading.endsWith(suffix)) return answer;
+  const stem = reading.slice(0, reading.length - suffix.length);
+  if (!stem || !answer.startsWith(stem)) return answer;
+  return written.slice(0, written.length - suffix.length) + answer.slice(stem.length);
 }
 
 function answerKey(value) {

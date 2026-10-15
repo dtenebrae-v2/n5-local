@@ -135,3 +135,23 @@ test('Vocabulary accepts alternate readings, optional phrases and matching trans
   assert.equal(checkAnswer(vocabularyExercise(same[0], same), 'rei').status, 'correct');
   assert.equal(checkAnswer(vocabularyExercise({ meaning: 'coffee', readings: [{ kana: 'コーヒー' }] }), 'koohii').status, 'correct');
 });
+
+test('Form feedback preserves kanji and includes conjugated readings', () => {
+  const cases = [
+    ['行く', 'いく', 'Godan', 'verb', 'te', '行って（いって）'],
+    ['食べる', 'たべる', 'Ichidan', 'verb', 'past', '食べました（たべました）'],
+    ['来る', 'くる', 'Irregular', 'verb', 'negative', '来ません（きません）'],
+    ['来る', 'くる', 'Irregular', 'verb', 'imperative', '来い（こい）'],
+    ['良い', 'いい', null, 'i-adjective', 'past', '良かったです（よかったです）'],
+    ['大きい', 'おおきい', null, 'i-adjective', 'past', '大きかったです（おおきかったです）'],
+    ['学生', 'がくせい', null, 'noun', 'past', '学生でした（がくせいでした）'],
+    ['静か', 'しずか', null, 'na-adjective', 'past', '静かでした（しずかでした）'],
+    ['有る', 'ある', 'Godan', 'verb', 'plain_negative', 'ない'],
+    ['', 'たべる', 'Ichidan', 'verb', 'past', 'たべました'],
+  ];
+  for (const [kanji, kana, type, kind, form, expected] of cases) {
+    const exercise = exerciseFor({ kanji, readings: [{ kana }], type }, kind, form);
+    assert.equal(exercise.displayAnswers[0], expected);
+    assert.equal(checkAnswer(exercise, exercise.answers[0]).status, 'correct');
+  }
+});
