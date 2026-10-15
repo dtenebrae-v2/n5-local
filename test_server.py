@@ -47,8 +47,8 @@ class ServiceTests(unittest.TestCase):
             return json.load(response)
 
     def test_counts_and_pagination(self):
-        self.assertEqual(self.get('/api/health')['entries'], 754)
-        expected = {'complete': 675, 'verbs': 108, 'i-adjectives': 58, 'na-adjectives': 35, 'expressions': 19}
+        self.assertEqual(self.get('/api/health')['entries'], 851)
+        expected = {'complete': 772, 'verbs': 115, 'i-adjectives': 58, 'na-adjectives': 37, 'expressions': 21}
         for collection, count in expected.items():
             data = self.get('/api/words?' + urlencode({'collection': collection, 'limit': 7, 'offset': 2}))
             self.assertEqual(data['total'], count)
@@ -86,9 +86,9 @@ class ServiceTests(unittest.TestCase):
     def test_noun_collection(self):
         data = self.get('/api/words?collection=nouns&limit=200')
         rest = self.get('/api/words?collection=nouns&limit=200&offset=200')
-        entries = data['entries'] + rest['entries']
-        self.assertEqual(data['total'], 356)
-        self.assertEqual(len({e['id'] for e in entries}), 356)
+        entries = data['entries'] + rest['entries'] + self.get('/api/words?collection=nouns&limit=200&offset=400')['entries']
+        self.assertEqual(data['total'], 439)
+        self.assertEqual(len({e['id'] for e in entries}), 439)
         words = {e['kanji'] for e in entries}
         self.assertTrue({'学校', 'お水', '勉強', '明日'} <= words)
         self.assertFalse({'会う', '青い', 'しかし', '同じ', '私'} & words)
@@ -127,7 +127,7 @@ class ServiceTests(unittest.TestCase):
                 self.assertEqual(entry['collection'], 'nouns')
             if group['id'] in expected:
                 self.assertIn(expected[group['id']], {entry['kanji'] for entry in data['entries']})
-        self.assertEqual(len(seen), 356)
+        self.assertEqual(len(seen), 439)
         for collection in ['nouns', 'verbs']:
             params = urlencode({'collection': collection, 'group': 'nouns:food', 'q': 'milk'})
             data = self.get('/api/words?' + params)
@@ -204,7 +204,7 @@ class ServiceTests(unittest.TestCase):
         post(payload, 403, Origin='http://another-site.test')
         result = post(payload, 201)
         self.assertEqual(self.get('/api/health')['entries'], before + 1)
-        self.assertEqual(next(c['count'] for c in result['catalog']['collections'] if c['id'] == 'nouns'), 357)
+        self.assertEqual(next(c['count'] for c in result['catalog']['collections'] if c['id'] == 'nouns'), 440)
         data = self.get('/api/words?collection=nouns&q=shikengo')
         self.assertEqual(data['entries'][0]['id'], result['id'])
         self.assertEqual(self.get('/api/words?collection=complete&q=shikengo')['total'], 1)

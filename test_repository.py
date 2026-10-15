@@ -31,7 +31,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(REPOSITORY.words({'collection': ['complete'], 'q': ['青い']})['entries'][0]['readings'][0]['kana'], 'あおい')
 
     def test_export_does_not_paginate(self):
-        self.assertEqual(len(REPOSITORY.words({'collection': ['nouns'], 'limit': ['1']}, paginate=False)), 356)
+        self.assertEqual(len(REPOSITORY.words({'collection': ['nouns'], 'limit': ['1']}, paginate=False)), 439)
 
 
 class VocabularyTests(unittest.TestCase):
@@ -100,7 +100,7 @@ class VocabularyTests(unittest.TestCase):
             self.assertEqual(path.read_bytes(), after)
 
     def test_merged_duplicates_and_normalized_readings(self):
-        self.assertEqual(len(self.data['words']), 754)
+        self.assertEqual(len(self.data['words']), 851)
         words = {word['id']: word for word in self.data['words']}
         self.assertEqual(len(words[40]['readings']), 2)
         self.assertEqual({m['collection'] for m in words[40]['memberships']}, {'complete', 'i-adjectives'})

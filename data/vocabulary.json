@@ -610,7 +610,7 @@
     },
     {
       "id": 9,
-      "kanji": "あげる",
+      "kanji": "上げる",
       "readings": [
         {
           "kana": "あげる",
@@ -619,7 +619,9 @@
       ],
       "meanings": {
         "en": [
-          "to give"
+          "to give",
+          "to raise",
+          "to increase"
         ]
       },
       "verb_type": "Ichidan",
@@ -637,7 +639,8 @@
       "related_words": [],
       "sources": [
         "https://www.llanai.com/jlpt/n5/vocabulary/complete",
-        "https://www.llanai.com/jlpt/n5/vocabulary/verbs"
+        "https://www.llanai.com/jlpt/n5/vocabulary/verbs",
+        "https://jitendex.org/"
       ],
       "notes": []
     },
@@ -4966,7 +4969,7 @@
     },
     {
       "id": 147,
-      "kanji": "かける",
+      "kanji": "掛ける",
       "readings": [
         {
           "kana": "かける",
@@ -4975,7 +4978,9 @@
       ],
       "meanings": {
         "en": [
-          "to wear"
+          "to wear (glasses)",
+          "to hang",
+          "to put on"
         ]
       },
       "verb_type": "Ichidan",
@@ -4993,13 +4998,14 @@
       "related_words": [],
       "sources": [
         "https://www.llanai.com/jlpt/n5/vocabulary/complete",
-        "https://www.llanai.com/jlpt/n5/vocabulary/verbs"
+        "https://www.llanai.com/jlpt/n5/vocabulary/verbs",
+        "https://jitendex.org/"
       ],
       "notes": []
     },
     {
       "id": 148,
-      "kanji": "かける",
+      "kanji": "掛ける",
       "readings": [
         {
           "kana": "かける",
@@ -5026,7 +5032,8 @@
       "related_words": [],
       "sources": [
         "https://www.llanai.com/jlpt/n5/vocabulary/complete",
-        "https://www.llanai.com/jlpt/n5/vocabulary/verbs"
+        "https://www.llanai.com/jlpt/n5/vocabulary/verbs",
+        "https://jitendex.org/"
       ],
       "notes": []
     },
@@ -15606,11 +15613,11 @@
     },
     {
       "id": 489,
-      "kanji": "パーテイー",
+      "kanji": "パーティー",
       "readings": [
         {
-          "kana": "パーテイー",
-          "romaji": "paateii"
+          "kana": "パーティー",
+          "romaji": "paatii"
         }
       ],
       "meanings": {
@@ -15632,7 +15639,8 @@
       ],
       "related_words": [],
       "sources": [
-        "https://www.llanai.com/jlpt/n5/vocabulary/complete"
+        "https://www.llanai.com/jlpt/n5/vocabulary/complete",
+        "https://jitendex.org/"
       ],
       "notes": []
     },
@@ -23685,6 +23693,3348 @@
         "https://www.llanai.com/jlpt/n5/vocabulary/verbs"
       ],
       "notes": []
+    },
+    {
+      "id": 892,
+      "kanji": "私たち",
+      "readings": [
+        {
+          "kana": "わたしたち",
+          "romaji": "watashitachi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "we",
+          "us"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 893,
+      "kanji": "あの人",
+      "readings": [
+        {
+          "kana": "あのひと",
+          "romaji": "ano hito"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "that person",
+          "he",
+          "she"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 894,
+      "kanji": "あの方",
+      "readings": [
+        {
+          "kana": "あのかた",
+          "romaji": "ano kata"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "that person (polite)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 895,
+      "kanji": "〜君",
+      "readings": [
+        {
+          "kana": "〜くん",
+          "romaji": "~kun"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Mr.",
+          "suffix used after the name of a boy or a male of equal or lower status"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 896,
+      "kanji": "日本",
+      "readings": [
+        {
+          "kana": "にほん",
+          "romaji": "nihon"
+        },
+        {
+          "kana": "にっぽん",
+          "romaji": "nippon"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Japan"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 897,
+      "kanji": "日本語",
+      "readings": [
+        {
+          "kana": "にほんご",
+          "romaji": "nihongo"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Japanese language"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 898,
+      "kanji": "教師",
+      "readings": [
+        {
+          "kana": "きょうし",
+          "romaji": "kyoushi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "teacher",
+          "instructor"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 899,
+      "kanji": "会社員",
+      "readings": [
+        {
+          "kana": "かいしゃいん",
+          "romaji": "kaishain"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "company employee",
+          "office worker"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 900,
+      "kanji": "簡単",
+      "readings": [
+        {
+          "kana": "かんたん",
+          "romaji": "kantan"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "simple",
+          "easy"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "na-adjectives",
+          "group": "na-adjectives:66"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 901,
+      "kanji": "ハンサム",
+      "readings": [
+        {
+          "kana": "ハンサム",
+          "romaji": "hansamu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "handsome"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "na-adjectives",
+          "group": "na-adjectives:63"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 902,
+      "kanji": "名刺",
+      "readings": [
+        {
+          "kana": "めいし",
+          "romaji": "meishi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "business card"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 903,
+      "kanji": "コンピューター",
+      "readings": [
+        {
+          "kana": "コンピューター",
+          "romaji": "konpyuutaa"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "computer"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 904,
+      "kanji": "スマホ",
+      "readings": [
+        {
+          "kana": "スマホ",
+          "romaji": "sumaho"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "smartphone"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 905,
+      "kanji": "パソコン",
+      "readings": [
+        {
+          "kana": "パソコン",
+          "romaji": "pasokon"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "personal computer",
+          "PC"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 906,
+      "kanji": "ビデオ",
+      "readings": [
+        {
+          "kana": "ビデオ",
+          "romaji": "bideo"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "video",
+          "videotape",
+          "video recorder"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 907,
+      "kanji": "何時",
+      "readings": [
+        {
+          "kana": "なんじ",
+          "romaji": "nanji"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "what time?"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:time"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 908,
+      "kanji": "何分",
+      "readings": [
+        {
+          "kana": "なにぶん",
+          "romaji": "nanibun"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "anyway",
+          "after all",
+          "please",
+          "some",
+          "a certain amount"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict).",
+        "The exported entry reads なにぶん; this is not なんぷん (how many minutes)."
+      ]
+    },
+    {
+      "id": 909,
+      "kanji": "毎",
+      "readings": [
+        {
+          "kana": "まい",
+          "romaji": "mai"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "every",
+          "each (prefix)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 910,
+      "kanji": "事務所",
+      "readings": [
+        {
+          "kana": "じむしょ",
+          "romaji": "jimusho"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "office"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 911,
+      "kanji": "会議室",
+      "readings": [
+        {
+          "kana": "かいぎしつ",
+          "romaji": "kaigishitsu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "meeting room",
+          "conference room"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 912,
+      "kanji": "受付",
+      "readings": [
+        {
+          "kana": "うけつけ",
+          "romaji": "uketsuke"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "reception",
+          "reception desk"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 913,
+      "kanji": "ロビー",
+      "readings": [
+        {
+          "kana": "ロビー",
+          "romaji": "robii"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "lobby"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 914,
+      "kanji": "地下",
+      "readings": [
+        {
+          "kana": "ちか",
+          "romaji": "chika"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "underground",
+          "basement"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:position"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 915,
+      "kanji": "売り場",
+      "readings": [
+        {
+          "kana": "うりば",
+          "romaji": "uriba"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "sales floor",
+          "sales counter"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:shopping"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 916,
+      "kanji": "で御座います",
+      "readings": [
+        {
+          "kana": "でございます",
+          "romaji": "de gozaimasu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to be (very polite form of desu)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "expressions",
+          "group": "expressions:47"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 917,
+      "kanji": "イギリス",
+      "readings": [
+        {
+          "kana": "イギリス",
+          "romaji": "igirisu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "United Kingdom",
+          "Great Britain"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 918,
+      "kanji": "イタリア",
+      "readings": [
+        {
+          "kana": "イタリア",
+          "romaji": "itaria"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Italy"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 919,
+      "kanji": "中国",
+      "readings": [
+        {
+          "kana": "ちゅうごく",
+          "romaji": "chuugoku"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "China"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 920,
+      "kanji": "韓国",
+      "readings": [
+        {
+          "kana": "かんこく",
+          "romaji": "kankoku"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "South Korea"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 921,
+      "kanji": "居る",
+      "readings": [
+        {
+          "kana": "おる",
+          "romaji": "oru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to be",
+          "to exist (animate, humble)"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict).",
+        "Humble おる (Godan), distinct from いる (Ichidan)."
+      ]
+    },
+    {
+      "id": 922,
+      "kanji": "得る",
+      "readings": [
+        {
+          "kana": "える",
+          "romaji": "eru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to get",
+          "to obtain",
+          "to acquire"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 923,
+      "kanji": "急ぐ",
+      "readings": [
+        {
+          "kana": "いそぐ",
+          "romaji": "isogu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to hurry"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 924,
+      "kanji": "教える",
+      "readings": [
+        {
+          "kana": "おしえる",
+          "romaji": "oshieru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to teach",
+          "to tell"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 925,
+      "kanji": "学ぶ",
+      "readings": [
+        {
+          "kana": "まなぶ",
+          "romaji": "manabu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to learn",
+          "to study"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 926,
+      "kanji": "スーパー",
+      "readings": [
+        {
+          "kana": "スーパー",
+          "romaji": "suupaa"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "supermarket"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:shopping"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 927,
+      "kanji": "コンビニ",
+      "readings": [
+        {
+          "kana": "コンビニ",
+          "romaji": "konbini"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "convenience store"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:shopping"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 928,
+      "kanji": "郵便局",
+      "readings": [
+        {
+          "kana": "ゆうびんきょく",
+          "romaji": "yuubinkyoku"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "post office"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 929,
+      "kanji": "美術館",
+      "readings": [
+        {
+          "kana": "びじゅつかん",
+          "romaji": "bijutsukan"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "art museum",
+          "art gallery"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 930,
+      "kanji": "新幹線",
+      "readings": [
+        {
+          "kana": "しんかんせん",
+          "romaji": "shinkansen"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Shinkansen",
+          "bullet train"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:transport"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 931,
+      "kanji": "船",
+      "readings": [
+        {
+          "kana": "ふね",
+          "romaji": "fune"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "ship",
+          "boat"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:transport"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 932,
+      "kanji": "米",
+      "readings": [
+        {
+          "kana": "こめ",
+          "romaji": "kome"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "uncooked rice"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 933,
+      "kanji": "紅茶",
+      "readings": [
+        {
+          "kana": "こうちゃ",
+          "romaji": "koucha"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "black tea"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 934,
+      "kanji": "コーヒー",
+      "readings": [
+        {
+          "kana": "コーヒー",
+          "romaji": "koohii"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "coffee"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 935,
+      "kanji": "ジュース",
+      "readings": [
+        {
+          "kana": "ジュース",
+          "romaji": "juusu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "juice",
+          "soft drink"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 936,
+      "kanji": "ビール",
+      "readings": [
+        {
+          "kana": "ビール",
+          "romaji": "biiru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "beer"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 937,
+      "kanji": "はさみ",
+      "readings": [
+        {
+          "kana": "はさみ",
+          "romaji": "hasami"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "scissors"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 938,
+      "kanji": "ファクス",
+      "readings": [
+        {
+          "kana": "ファクス",
+          "romaji": "fakusu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "fax",
+          "fax machine"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 939,
+      "kanji": "ワープロ",
+      "readings": [
+        {
+          "kana": "ワープロ",
+          "romaji": "waapuro"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "word processor"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 940,
+      "kanji": "パンチ",
+      "readings": [
+        {
+          "kana": "パンチ",
+          "romaji": "panchi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "hole punch",
+          "punch (with the fist)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 941,
+      "kanji": "ホッチキス",
+      "readings": [
+        {
+          "kana": "ホッチキス",
+          "romaji": "hocchikisu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "stapler"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 942,
+      "kanji": "セロテープ",
+      "readings": [
+        {
+          "kana": "セロテープ",
+          "romaji": "seroteepu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "cellophane tape",
+          "adhesive tape"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 943,
+      "kanji": "消しゴム",
+      "readings": [
+        {
+          "kana": "けしゴム",
+          "romaji": "keshigomu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "eraser"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 944,
+      "kanji": "手帳",
+      "readings": [
+        {
+          "kana": "てちょう",
+          "romaji": "techou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "pocket notebook",
+          "personal organizer"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 945,
+      "kanji": "カード",
+      "readings": [
+        {
+          "kana": "カード",
+          "romaji": "kaado"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "card"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:shopping"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 946,
+      "kanji": "プレゼント",
+      "readings": [
+        {
+          "kana": "プレゼント",
+          "romaji": "purezento"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "present",
+          "gift"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:shopping"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 947,
+      "kanji": "クリスマス",
+      "readings": [
+        {
+          "kana": "クリスマス",
+          "romaji": "kurisumasu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Christmas"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:calendar"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 948,
+      "kanji": "お正月",
+      "readings": [
+        {
+          "kana": "おしょうがつ",
+          "romaji": "oshougatsu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "New Year (especially the first three days)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:calendar"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 949,
+      "kanji": "挙げる",
+      "readings": [
+        {
+          "kana": "あげる",
+          "romaji": "ageru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to give an example",
+          "to list",
+          "to raise",
+          "to hold an event"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 950,
+      "kanji": "貰う",
+      "readings": [
+        {
+          "kana": "もらう",
+          "romaji": "morau"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to receive",
+          "to be given"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 951,
+      "kanji": "胡瓜",
+      "readings": [
+        {
+          "kana": "きゅうり",
+          "romaji": "kyuuri"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "cucumber"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 952,
+      "kanji": "トマト",
+      "readings": [
+        {
+          "kana": "トマト",
+          "romaji": "tomato"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "tomato"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 953,
+      "kanji": "豆",
+      "readings": [
+        {
+          "kana": "まめ",
+          "romaji": "mame"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "bean",
+          "pea"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 954,
+      "kanji": "キャベツ",
+      "readings": [
+        {
+          "kana": "キャベツ",
+          "romaji": "kyabetsu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "cabbage"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 955,
+      "kanji": "葱",
+      "readings": [
+        {
+          "kana": "ねぎ",
+          "romaji": "negi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "green onion",
+          "spring onion"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 956,
+      "kanji": "玉ねぎ",
+      "readings": [
+        {
+          "kana": "たまねぎ",
+          "romaji": "tamanegi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "onion"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 957,
+      "kanji": "じゃが芋",
+      "readings": [
+        {
+          "kana": "じゃがいも",
+          "romaji": "jagaimo"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "potato"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 958,
+      "kanji": "大根",
+      "readings": [
+        {
+          "kana": "だいこん",
+          "romaji": "daikon"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "daikon",
+          "Japanese white radish"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 959,
+      "kanji": "人参",
+      "readings": [
+        {
+          "kana": "にんじん",
+          "romaji": "ninjin"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "carrot"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 960,
+      "kanji": "苺",
+      "readings": [
+        {
+          "kana": "いちご",
+          "romaji": "ichigo"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "strawberry"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 961,
+      "kanji": "桃",
+      "readings": [
+        {
+          "kana": "もも",
+          "romaji": "momo"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "peach"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 962,
+      "kanji": "西瓜",
+      "readings": [
+        {
+          "kana": "すいか",
+          "romaji": "suika"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "watermelon"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 963,
+      "kanji": "葡萄",
+      "readings": [
+        {
+          "kana": "ぶどう",
+          "romaji": "budou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "grape"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 964,
+      "kanji": "柿",
+      "readings": [
+        {
+          "kana": "かき",
+          "romaji": "kaki"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "persimmon"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 965,
+      "kanji": "蜜柑",
+      "readings": [
+        {
+          "kana": "みかん",
+          "romaji": "mikan"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "mandarin orange"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 966,
+      "kanji": "林檎",
+      "readings": [
+        {
+          "kana": "りんご",
+          "romaji": "ringo"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "apple"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 967,
+      "kanji": "バナナ",
+      "readings": [
+        {
+          "kana": "バナナ",
+          "romaji": "banana"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "banana"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 968,
+      "kanji": "ソーセージ",
+      "readings": [
+        {
+          "kana": "ソーセージ",
+          "romaji": "sooseeji"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "sausage"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 969,
+      "kanji": "ハム",
+      "readings": [
+        {
+          "kana": "ハム",
+          "romaji": "hamu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "ham"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 970,
+      "kanji": "鮭",
+      "readings": [
+        {
+          "kana": "さけ",
+          "romaji": "sake"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "salmon"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 971,
+      "kanji": "鮪",
+      "readings": [
+        {
+          "kana": "まぐろ",
+          "romaji": "maguro"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "tuna"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 972,
+      "kanji": "蝦",
+      "readings": [
+        {
+          "kana": "えび",
+          "romaji": "ebi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "shrimp",
+          "prawn"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict).",
+        "Usually written in kana as えび or エビ; 蝦 is an uncommon spelling."
+      ]
+    },
+    {
+      "id": 973,
+      "kanji": "蟹",
+      "readings": [
+        {
+          "kana": "かに",
+          "romaji": "kani"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "crab"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 974,
+      "kanji": "烏賊",
+      "readings": [
+        {
+          "kana": "いか",
+          "romaji": "ika"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "squid"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 975,
+      "kanji": "蛸",
+      "readings": [
+        {
+          "kana": "たこ",
+          "romaji": "tako"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "octopus"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 976,
+      "kanji": "貝",
+      "readings": [
+        {
+          "kana": "かい",
+          "romaji": "kai"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "shellfish",
+          "shell"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 977,
+      "kanji": "調味料",
+      "readings": [
+        {
+          "kana": "ちょうみりょう",
+          "romaji": "choumiryou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "seasoning",
+          "condiment"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 978,
+      "kanji": "胡椒",
+      "readings": [
+        {
+          "kana": "こしょう",
+          "romaji": "koshou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "pepper (spice)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 979,
+      "kanji": "味噌",
+      "readings": [
+        {
+          "kana": "みそ",
+          "romaji": "miso"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "miso",
+          "fermented soybean paste"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 980,
+      "kanji": "油",
+      "readings": [
+        {
+          "kana": "あぶら",
+          "romaji": "abura"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "oil"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 981,
+      "kanji": "ソース",
+      "readings": [
+        {
+          "kana": "ソース",
+          "romaji": "soosu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "sauce"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 982,
+      "kanji": "マヨネーズ",
+      "readings": [
+        {
+          "kana": "マヨネーズ",
+          "romaji": "mayoneezu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "mayonnaise"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 983,
+      "kanji": "ケチャップ",
+      "readings": [
+        {
+          "kana": "ケチャップ",
+          "romaji": "kechappu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "ketchup"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 984,
+      "kanji": "山葵",
+      "readings": [
+        {
+          "kana": "わさび",
+          "romaji": "wasabi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "wasabi",
+          "Japanese horseradish"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 985,
+      "kanji": "食事",
+      "readings": [
+        {
+          "kana": "しょくじ",
+          "romaji": "shokuji"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "meal",
+          "dining"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 986,
+      "kanji": "カップ",
+      "readings": [
+        {
+          "kana": "カップ",
+          "romaji": "kappu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "cup"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:kitchen"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 987,
+      "kanji": "ありがとう",
+      "readings": [
+        {
+          "kana": "ありがとう",
+          "romaji": "arigatou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "thank you"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "expressions",
+          "group": "expressions:48"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 988,
+      "kanji": "語",
+      "readings": [
+        {
+          "kana": "ご",
+          "romaji": "go"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "word",
+          "term",
+          "language"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://jitendex.org/"
+      ],
+      "notes": [
+        "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
     }
   ]
 }

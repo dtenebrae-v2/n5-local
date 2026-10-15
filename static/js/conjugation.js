@@ -1,6 +1,6 @@
 import { verbForms, VERB_FORM_LABELS } from './verb-forms.js';
 // Polite forms verified against Japan Foundation / TUFS; sources are linked in the practice view.
-import { toHiragana } from '../vendor/wanakana-5.3.1.js';
+import { toHiragana, toRomaji } from '../vendor/wanakana-5.3.1.js';
 
 export const FORM_LABELS = {
   past: 'Прошедшее · утверждение',
@@ -69,12 +69,21 @@ export function exerciseFor(entry, kind, form) {
   return { answers: endings.map(ending => prefix + ending), reading, rule, form, kind };
 }
 
+function answerKey(value) {
+  let result = '';
+  for (const kana of value) {
+    const vowel = toRomaji(result.at(-1) || '').at(-1);
+    result += kana === 'ー' ? ({ a: 'あ', i: 'い', u: 'う', e: 'え', o: 'お' }[vowel] || kana) : kana;
+  }
+  return result;
+}
+
 export function checkAnswer(exercise, value) {
   const answer = normalizeAnswer(value);
   if (!answer) return { status: 'empty', answer };
   if (!/^[ぁ-ゖー]+$/u.test(answer)) return { status: 'incomplete', answer };
   return {
-    status: exercise.answers.includes(answer) ? 'correct' : 'incorrect',
+    status: exercise.answers.some(expected => answerKey(expected) === answerKey(answer)) ? 'correct' : 'incorrect',
     answer,
     full: answer,
   };

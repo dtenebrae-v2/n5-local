@@ -77,7 +77,7 @@ async function main() {
     assert.equal(await page.locator('.hero, footer, .sidebar-note').count(), 0);
     assert.doesNotMatch(await page.locator('#navigation').innerText(), /Обзор курса/);
     assert.equal(await page.locator('tbody tr').count(), 60);
-    assert.match(await page.locator('#navigation').innerText(), /Существительные\s+356/);
+    assert.match(await page.locator('#navigation').innerText(), /Существительные\s+439/);
     console.log('PASS home, catalog navigation and titles');
 
     await page.keyboard.press('/');
@@ -86,7 +86,7 @@ async function main() {
     await page.locator('#navigation a[href$="/vocabulary/nouns"]').click();
     await ready();
     assert.equal(await page.title(), 'Существительные · N5');
-    assert.match(await page.locator('#result-count').innerText(), /Найдено 356/);
+    assert.match(await page.locator('#result-count').innerText(), /Найдено 439/);
     assert.equal(await page.locator('tbody tr').count(), 60);
     const first = await page.locator('.japanese-word').first().innerText();
     await page.locator('#next').click();
@@ -141,7 +141,7 @@ async function main() {
     assert.equal(await page.locator('.word-group-card').count(), 1);
     assert.equal(await page.locator('tbody tr').count(), 5);
     await open('/jlpt/n5/vocabulary/nouns?offset=999999');
-    assert.match(await page.locator('#result-count').innerText(), /301–356/);
+    assert.match(await page.locator('#result-count').innerText(), /421–439/);
     await open('/jlpt/n5/vocabulary/nouns?offset=Infinity');
     assert.match(await page.locator('#result-count').innerText(), /1–60/);
     console.log('PASS all collection/grammar routes and invalid offsets');

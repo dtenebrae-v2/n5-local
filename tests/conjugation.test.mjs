@@ -110,5 +110,14 @@ print(json.dumps([{ 'kind': c['practice_kind'], 'entries': REPOSITORY.words({'co
       count++;
     }
   }
-  assert.equal(count, 557);
+  assert.equal(count, 649);
+});
+
+test('Loanword long vowels accept romaji vowels and the kana length mark', () => {
+  for (const [reading, romaji] of [['コーヒー', 'koohiideshita'], ['スーパー', 'suupaadeshita'], ['パーティー', 'paathiideshita']]) {
+    const exercise = exerciseFor(adjective(reading), 'noun', 'past');
+    assert.equal(checkAnswer(exercise, romaji).status, 'correct');
+    assert.equal(checkAnswer(exercise, reading + 'でした').status, 'correct');
+  }
+  assert.equal(checkAnswer(exerciseFor(adjective('コーヒー'), 'noun', 'past'), 'kohideshita').status, 'incorrect');
 });

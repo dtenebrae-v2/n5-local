@@ -159,6 +159,12 @@ def add_word(path, word, collections):
         word.setdefault(field, default)
     document['words'].append(word)
     validate(document, collections)
+    write_document(path, document)
+    return word['id']
+
+
+def write_document(path, document):
+    """Replace a validated dictionary atomically."""
     temporary = None
     try:
         with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', dir=Path(path).parent, delete=False) as output:
@@ -171,7 +177,6 @@ def add_word(path, word, collections):
     finally:
         if temporary and Path(temporary).exists():
             Path(temporary).unlink()
-    return word['id']
 
 
 def main():

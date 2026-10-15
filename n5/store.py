@@ -9,6 +9,7 @@ import unicodedata
 from n5.catalog import Catalog
 from n5.repository import VocabularyRepository
 from n5.vocabulary import add_word
+from n5.vocabulary_updates import apply_updates
 
 
 class WordError(ValueError):
@@ -103,6 +104,7 @@ class VocabularyStore:
             finally:
                 if temporary and Path(temporary).exists():
                     Path(temporary).unlink()
+        apply_updates(data_directory, self.path)
         self.catalog = self._load()
 
     def _load(self):

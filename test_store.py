@@ -1,4 +1,5 @@
 import copy
+import json
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import tempfile
@@ -18,6 +19,43 @@ class StoreTests(unittest.TestCase):
         self.addCleanup(self.directory.cleanup)
         self.path = Path(self.directory.name) / 'vocabulary.json'
         self.store = VocabularyStore(DATA, self.path)
+
+    def old_dictionary(self):
+        bundled = json.loads((DATA / 'vocabulary.json').read_text())
+        updates = json.loads((DATA / 'vocabulary-updates.json').read_text())
+        bundled['words'] = [w for w in bundled['words'] if w['id'] not in updates['add']]
+        for correction in updates['replace']:
+            word = next(w for w in bundled['words'] if w['id'] == correction['id'])
+            word.update(correction['before'])
+        return bundled, updates
+
+    def test_bundle_update_preserves_custom_words_and_id_collisions(self):
+        document, updates = self.old_dictionary()
+        custom = copy.deepcopy(document['words'][0])
+        custom.update(id=updates['add'][0], kanji='試験語', readings=[{'kana': 'しけんご', 'romaji': 'shikengo'}])
+        document['words'].append(custom)
+        self.path.write_text(json.dumps(document, ensure_ascii=False))
+        migrated = VocabularyStore(DATA, self.path)
+        words = json.loads(self.path.read_text())['words']
+        self.assertEqual(len(words), 852)
+        self.assertEqual(next(w for w in words if w['id'] == custom['id']), custom)
+        self.assertEqual(len({w['id'] for w in words}), len(words))
+        self.assertEqual(next(w for w in words if w['id'] == 489)['kanji'], 'パーティー')
+        self.assertEqual(next(w for w in words if w['kanji'] == '居る')['verb_type'], 'Godan')
+        self.assertEqual(migrated.catalog.repository.words({'q': ['私たち']})['total'], 1)
+        before = self.path.read_bytes()
+        VocabularyStore(DATA, self.path)
+        self.assertEqual(self.path.read_bytes(), before)
+
+    def test_bundle_update_failure_is_atomic(self):
+        document, _ = self.old_dictionary()
+        self.path.write_text(json.dumps(document, ensure_ascii=False))
+        before = self.path.read_bytes()
+        with patch('n5.vocabulary.os.replace', side_effect=OSError('disk full')):
+            with self.assertRaises(OSError):
+                VocabularyStore(DATA, self.path)
+        self.assertEqual(self.path.read_bytes(), before)
+        self.assertEqual(len(list(self.path.parent.iterdir())), 1)
 
     def test_required_fields_rejected_without_writes(self):
         before = self.path.read_bytes()
@@ -41,7 +79,7 @@ class StoreTests(unittest.TestCase):
         restarted = VocabularyStore(DATA, self.path)
         self.assertEqual(restarted.catalog.repository.count(), before + 4)
         self.assertEqual(restarted.catalog.repository.words({'q': ['shikengo']})['total'], 4)
-        self.assertEqual(next(c['count'] for c in restarted.catalog.public['collections'] if c['id'] == 'nouns'), 360)
+        self.assertEqual(next(c['count'] for c in restarted.catalog.public['collections'] if c['id'] == 'nouns'), 443)
         with self.assertRaises(WordError) as failure:
             restarted.add(payloads[0])
         self.assertEqual(failure.exception.status, 409)

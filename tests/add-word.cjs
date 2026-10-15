@@ -32,7 +32,7 @@ module.exports = async function addWordChecks(page, base) {
   await page.waitForURL(/vocabulary\/nouns\?q=/);
   await page.waitForSelector('#results[aria-busy="false"]');
   assert.equal(await page.locator('.japanese-word').innerText(), '試験語');
-  assert.match(await page.locator('#navigation a[href="/jlpt/n5/vocabulary/nouns"]').innerText(), /357/);
+  assert.match(await page.locator('#navigation a[href="/jlpt/n5/vocabulary/nouns"]').innerText(), /440/);
   await page.reload();
   await page.waitForSelector('#results[aria-busy="false"]');
   assert.equal(await page.locator('.japanese-word').innerText(), '試験語');
