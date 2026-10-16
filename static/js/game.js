@@ -60,7 +60,7 @@ export async function mountGame(root, catalog, signal) {
   let deck = [], pool = [], exercise, previous, counted = false, correct = 0, answered = 0;
   const updateScore = () => { score.textContent = `С первой попытки: ${correct} из ${answered}`; };
   const record = status => {
-    if (counted || ['empty', 'incomplete'].includes(status)) return;
+    if (counted || status === 'incomplete') return;
     counted = true;
     answered++;
     if (status === 'correct') correct++;

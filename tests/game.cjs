@@ -18,7 +18,6 @@ module.exports = async function gameChecks(page, base) {
     const suffix = { past: 'でした', negative: 'じゃないです', past_negative: 'じゃなかったです' }[await question.getAttribute('data-form')];
     return reading + suffix;
   };
-  await submit();
   assert.equal(await score.innerText(), 'С первой попытки: 0 из 0');
   await input.fill('がく');
   await input.press('F1');
@@ -46,6 +45,10 @@ module.exports = async function gameChecks(page, base) {
   assert.notEqual(await question.getAttribute('data-word'), first);
   assert.equal(await input.inputValue(), '');
   assert.equal(await input.evaluate(el => el === document.activeElement), true);
+  await submit();
+  assert.equal(await feedback.getAttribute('data-status'), 'incorrect');
+  assert.match(await feedback.innerText(), /Ответ:/);
+  assert.equal(await score.innerText(), 'С первой попытки: 1 из 2');
   await input.fill('でした');
   await submit();
   assert.equal(await feedback.getAttribute('data-status'), 'incorrect');

@@ -79,7 +79,7 @@ test('Validation rejects wrong tense, plain forms, bad kana, punctuation and dup
   for (const answer of ['ます', 'ました', 'きませんでした', 'きました', 'った', 'きました。']) {
     assert.notEqual(checkAnswer(exercise, answer).status, 'correct');
   }
-  assert.equal(checkAnswer(exercise, '').status, 'empty');
+  assert.equal(checkAnswer(exercise, '').status, 'incorrect');
   assert.equal(checkAnswer(exercise, 'sh').status, 'incomplete');
   assert.equal(checkAnswer(exercise, '<script>').status, 'incomplete');
   const noun = exerciseFor(adjective('がくせい'), 'noun', 'past_negative');

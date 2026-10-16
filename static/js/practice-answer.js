@@ -37,12 +37,11 @@ export function bindAnswer(root, getExercise, onResult = () => {}) {
     const result = checkAnswer(exercise, input.value);
     feedback.dataset.status = input.dataset.status = result.status;
     input.setAttribute('aria-invalid', String(result.status !== 'correct'));
-    feedback.textContent = result.status === 'empty' ? (getExercise().kind === 'vocabulary' ? 'Введите слово.' : 'Введите форму.')
-      : result.status === 'incomplete' ? 'Завершите ввод ромадзи или введите хирагану.'
+    feedback.textContent = result.status === 'incomplete' ? 'Завершите ввод ромадзи или введите хирагану.'
       : result.status === 'correct' ? `Верно: ${closestAnswer(exercise, result.answer)}`
-      : `Неверно: ${result.answer}`;
+      : result.answer ? `Неверно: ${result.answer}` : 'Неверно: ответ не введён.';
     if (result.status === 'incorrect') {
-      feedback.textContent += exercise.kind === 'vocabulary'
+      feedback.textContent += !result.answer || exercise.kind === 'vocabulary'
         ? ' · Ответ: ' + (exercise.displayAnswers || exercise.answers).join(' / ')
         : ' · Ближайший ответ: ' + closestAnswer(exercise, result.answer);
     }

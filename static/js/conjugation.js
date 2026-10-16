@@ -133,7 +133,7 @@ export function closestAnswer(exercise, value) {
 
 export function checkAnswer(exercise, value) {
   const answer = normalizeAnswer(value);
-  if (!answer) return { status: 'empty', answer };
+  if (!answer) return { status: 'incorrect', answer };
   if (!/^[ぁ-ゖー]+$/u.test(answer)) return { status: 'incomplete', answer };
   return {
     status: exercise.answers.some(expected => answerKey(expected) === answerKey(answer)) ? 'correct' : 'incorrect',

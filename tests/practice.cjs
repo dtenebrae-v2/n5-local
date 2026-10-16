@@ -41,7 +41,7 @@ module.exports = async function practiceChecks(page, base) {
   assert.deepEqual(await input.boundingBox(), beforeInput);
   assert.equal(await input.getAttribute('aria-invalid'), 'true');
   assert.equal(await feedback.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(255, 235, 231)');
-  await answer('', 'empty');
+  await answer('', 'incorrect', 'Ответ: 行きました');
   await answer('sh', 'incomplete');
   await answer('ＩＫＩＭＡＳＨＩＴＡ', 'correct', 'いきました');
   await input.evaluate((element) => { element.focus(); element.setSelectionRange(2, 3); });
