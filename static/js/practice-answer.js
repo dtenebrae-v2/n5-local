@@ -42,7 +42,9 @@ export function bindAnswer(root, getExercise, onResult = () => {}) {
       : result.status === 'correct' ? `Верно: ${closestAnswer(exercise, result.answer)}`
       : `Неверно: ${result.answer}`;
     if (result.status === 'incorrect') {
-      feedback.textContent += ' · Ближайший ответ: ' + closestAnswer(exercise, result.answer);
+      feedback.textContent += exercise.kind === 'vocabulary'
+        ? ' · Ответ: ' + (exercise.displayAnswers || exercise.answers).join(' / ')
+        : ' · Ближайший ответ: ' + closestAnswer(exercise, result.answer);
     }
     onResult(result.status);
   }, options);
