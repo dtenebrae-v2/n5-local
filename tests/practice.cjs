@@ -34,9 +34,9 @@ module.exports = async function practiceChecks(page, base) {
   await input.press('Enter');
   assert.deepEqual(await page.locator('.practice-dialog').boundingBox(), beforeAnswer);
   assert.deepEqual(await input.boundingBox(), beforeInput);
-  assert.equal(await feedback.innerText(), 'Верно: いきました · Ответ: 行きました（いきました）');
+  assert.equal(await feedback.innerText(), 'Верно: 行きました（いきました）');
   await answer('ました', 'incorrect');
-  assert.equal(await feedback.innerText(), 'Неверно: ました · Ответ: 行きました（いきました）');
+  assert.equal(await feedback.innerText(), 'Неверно: ました · Ближайший ответ: 行きました（いきました）');
   assert.deepEqual(await page.locator('.practice-dialog').boundingBox(), beforeAnswer);
   assert.deepEqual(await input.boundingBox(), beforeInput);
   assert.equal(await input.getAttribute('aria-invalid'), 'true');
@@ -53,7 +53,7 @@ module.exports = async function practiceChecks(page, base) {
   await input.pressSequentially('ikimasen');
   await input.press('Enter');
   assert.equal(await input.inputValue(), 'いきません');
-  assert.equal(await feedback.innerText(), 'Верно: いきません · Ответ: 行きません（いきません）');
+  assert.equal(await feedback.innerText(), 'Верно: 行きません（いきません）');
   await page.locator('#practice-target input[value=\"past_negative\"]').check();
   await answer('ikimasendeshita', 'correct', 'いきませんでした');
   await page.keyboard.press('Escape');
@@ -67,10 +67,11 @@ module.exports = async function practiceChecks(page, base) {
   for (const ending of ['dehaarimasendeshita', 'jaarimasendeshita', 'dehanakattadesu', 'janakattadesu']) {
     await answer('gakusei' + ending, 'correct');
   }
-  await answer('janai deshita', 'incorrect');
+  await answer('gakuseijanadeshita', 'incorrect', 'Ближайший ответ: 学生じゃなかったです');
   await page.locator('#practice-reveal').click();
   assert.match(await feedback.innerText(), /がくせいじゃなかったです/);
   assert.match(await feedback.innerText(), /がくせいではありませんでした/);
+  assert.equal(await feedback.evaluate(el => el.scrollHeight <= el.clientHeight), true);
   console.log('PASS noun endings and accepted negative alternatives');
 
   await open('i-adjectives', '大きい', 91);
@@ -141,7 +142,7 @@ module.exports = async function practiceChecks(page, base) {
     element.dispatchEvent(new CompositionEvent('compositionend', { data: 'たべました', bubbles: true }));
   });
   await input.press('Enter');
-  assert.equal(await feedback.innerText(), 'Верно: たべました · Ответ: 食べました（たべました）');
+  assert.equal(await feedback.innerText(), 'Верно: 食べました（たべました）');
   console.log('PASS native kana composition guard');
 
   if (process.env.SCREENSHOT_DIR) {
@@ -151,11 +152,17 @@ module.exports = async function practiceChecks(page, base) {
   await page.setViewportSize({ width: 390, height: 844 });
   assert.equal(await page.locator('.practice-dialog').evaluate((element) => element.scrollWidth <= element.clientWidth), true);
   await answer('tabemashita', 'correct', 'たべました');
+  assert.equal(await feedback.evaluate(el => el.scrollHeight <= el.clientHeight), true);
   if (process.env.SCREENSHOT_DIR) {
     await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, 'n5-practice-mobile.png') });
   }
   await page.locator('.practice-close').click();
   await page.waitForSelector('.practice-dialog', { state: 'detached' });
+  await open('nouns', '学生', 145);
+  await page.locator('#practice-target input[value=past_negative]').check();
+  await page.locator('#practice-reveal').click();
+  assert.equal(await feedback.evaluate(el => el.scrollHeight <= el.clientHeight && el.scrollWidth <= el.clientWidth), true);
+  await page.locator('.practice-close').click();
   await page.setViewportSize({ width: 1440, height: 1000 });
   console.log('PASS mobile practice dialog');
 };

@@ -1,5 +1,5 @@
 import { bind, unbind } from '../vendor/wanakana-5.3.1.js';
-import { checkAnswer, normalizeAnswer } from './conjugation.js';
+import { checkAnswer, closestAnswer, normalizeAnswer } from './conjugation.js';
 
 export function answerFields() {
   return `<label class="practice-label" for="practice-answer">Форма целиком</label>
@@ -39,9 +39,10 @@ export function bindAnswer(root, getExercise, onResult = () => {}) {
     input.setAttribute('aria-invalid', String(result.status !== 'correct'));
     feedback.textContent = result.status === 'empty' ? (getExercise().kind === 'vocabulary' ? 'Введите слово.' : 'Введите форму.')
       : result.status === 'incomplete' ? 'Завершите ввод ромадзи или введите хирагану.'
-      : `${result.status === 'correct' ? 'Верно' : 'Неверно'}: ${result.answer}`;
-    if (exercise.displayAnswers && ['correct', 'incorrect'].includes(result.status)) {
-      feedback.textContent += ' · Ответ: ' + exercise.displayAnswers.join(' / ');
+      : result.status === 'correct' ? `Верно: ${closestAnswer(exercise, result.answer)}`
+      : `Неверно: ${result.answer}`;
+    if (result.status === 'incorrect') {
+      feedback.textContent += ' · Ближайший ответ: ' + closestAnswer(exercise, result.answer);
     }
     onResult(result.status);
   }, options);

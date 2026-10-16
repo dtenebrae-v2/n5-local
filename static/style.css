@@ -1111,14 +1111,13 @@ table {
   outline-offset: 2px;
 }
 #practice-feedback {
-  /* Keep the dialog and controls stationary, including multi-line answers. */
-  height: calc(3 * 1.7 * 24px + 30px);
-  overflow-y: auto;
+  /* Reserve space for short feedback; long answers expand without an inner scrollbar. */
+  min-height: calc(3 * 1.7 * 20px + 30px);
   border: 1px solid transparent;
   border-left-width: 6px;
   border-radius: 8px;
   padding: 14px 16px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.7;
 }

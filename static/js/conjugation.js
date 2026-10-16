@@ -104,6 +104,33 @@ function answerKey(value) {
   return result;
 }
 
+function editDistance(left, right) {
+  let row = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let i = 0; i < left.length; i++) {
+    const next = [i + 1];
+    for (let j = 0; j < right.length; j++) {
+      next.push(Math.min(next[j] + 1, row[j + 1] + 1, row[j] + (left[i] === right[j] ? 0 : 1)));
+    }
+    row = next;
+  }
+  return row[right.length];
+}
+
+export function closestAnswer(exercise, value) {
+  const key = answerKey(normalizeAnswer(value));
+  let best = 0;
+  let distance = Infinity;
+  exercise.answers.forEach((answer, index) => {
+    const candidate = editDistance(key, answerKey(answer));
+    if (candidate < distance) { best = index; distance = candidate; }
+  });
+  const answer = exercise.answers[best];
+  if (exercise.kind === 'vocabulary') {
+    return exercise.displayAnswers?.find(display => display.includes(answer)) || answer;
+  }
+  return exercise.displayAnswers?.[best] || answer;
+}
+
 export function checkAnswer(exercise, value) {
   const answer = normalizeAnswer(value);
   if (!answer) return { status: 'empty', answer };

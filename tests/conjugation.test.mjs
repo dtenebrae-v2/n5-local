@@ -2,7 +2,7 @@ import { VERB_FORM_LABELS } from '../static/js/verb-forms.js';
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import test from 'node:test';
-import { checkAnswer, exerciseFor, normalizeAnswer, readingOf } from '../static/js/conjugation.js';
+import { checkAnswer, closestAnswer, exerciseFor, normalizeAnswer, readingOf } from '../static/js/conjugation.js';
 
 const verb = (reading, type) => ({ kanji: reading, readings: reading.split(/\s*[/／]\s*/).map(kana => ({ kana })), type });
 const adjective = (reading) => ({ kanji: reading, readings: reading.split(/\s*[/／]\s*/).map(kana => ({ kana })) });
@@ -154,4 +154,13 @@ test('Form feedback preserves kanji and includes conjugated readings', () => {
     assert.equal(exercise.displayAnswers[0], expected);
     assert.equal(checkAnswer(exercise, exercise.answers[0]).status, 'correct');
   }
+});
+
+
+test('Closest answer follows the entered alternative without accepting errors', () => {
+  const exercise = exerciseFor({ kanji: '学生', readings: [{ kana: 'がくせい' }] }, 'noun', 'past_negative');
+  assert.equal(closestAnswer(exercise, 'gakuseijanadeshita'), '学生じゃなかったです（がくせいじゃなかったです）');
+  assert.equal(closestAnswer(exercise, 'janadeshita'), '学生じゃなかったです（がくせいじゃなかったです）');
+  assert.equal(closestAnswer(exercise, 'gakuseidehaarimasendeshita'), '学生ではありませんでした（がくせいではありませんでした）');
+  assert.equal(checkAnswer(exercise, 'gakuseijanadeshita').status, 'incorrect');
 });

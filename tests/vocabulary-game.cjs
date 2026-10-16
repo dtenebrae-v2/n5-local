@@ -42,7 +42,7 @@ module.exports = async function vocabularyGameChecks(page, base) {
     await input.fill('あ'); await input.press('Enter');
     assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'), 'incorrect');
     assert.ok((await page.locator('#practice-feedback').innerText()).includes(current.kanji));
-    assert.match(await page.locator('#practice-feedback').innerText(), /Ответ:.*[ぁ-ゖ]/);
+    assert.match(await page.locator('#practice-feedback').innerText(), /Ближайший ответ:.*[ぁ-ゖ]/);
     await page.locator('#practice-reveal').click();
     assert.match(await page.locator('#practice-feedback').innerText(), /Ответ:/);
     await page.keyboard.press('F1');
