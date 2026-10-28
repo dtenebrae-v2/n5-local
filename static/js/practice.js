@@ -1,3 +1,4 @@
+import { highlightedRule } from './form-highlight.js';
 import { openPracticeRules } from './practice-rules.js';
 import { VERB_FORM_LABELS } from './verb-forms.js';
 import { answerFields, bindAnswer } from './practice-answer.js';
@@ -54,7 +55,7 @@ export function openPractice(entry, kind, pageSignal, initialForm = 'past') {
   dialog.querySelector('#practice-rules').addEventListener('click', () => openPracticeRules(kind, exercise.form, pageSignal, () => answer.focus()));
   function showExercise() {
     exercise = exerciseFor(entry, kind, target.querySelector('input:checked').value);
-    rules.textContent = exercise.rule;
+    rules.innerHTML = highlightedRule(exercise.rule);
     answer.reset();
   }
   target.addEventListener('change', showExercise);

@@ -71,7 +71,7 @@ module.exports = async function practiceChecks(page, base) {
   await page.locator('#practice-reveal').click();
   assert.match(await feedback.innerText(), /がくせいじゃなかったです/);
   assert.match(await feedback.innerText(), /がくせいではありませんでした/);
-  assert.equal(await feedback.evaluate(el => el.scrollHeight <= el.clientHeight), true);
+  assert.equal(await feedback.evaluate(el => el.scrollWidth <= el.clientWidth), true);
   console.log('PASS noun endings and accepted negative alternatives');
 
   await open('i-adjectives', '大きい', 91);
@@ -152,7 +152,7 @@ module.exports = async function practiceChecks(page, base) {
   await page.setViewportSize({ width: 390, height: 844 });
   assert.equal(await page.locator('.practice-dialog').evaluate((element) => element.scrollWidth <= element.clientWidth), true);
   await answer('tabemashita', 'correct', 'たべました');
-  assert.equal(await feedback.evaluate(el => el.scrollHeight <= el.clientHeight), true);
+  assert.equal(await feedback.evaluate(el => el.scrollWidth <= el.clientWidth), true);
   if (process.env.SCREENSHOT_DIR) {
     await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, 'n5-practice-mobile.png') });
   }
@@ -160,8 +160,12 @@ module.exports = async function practiceChecks(page, base) {
   await page.waitForSelector('.practice-dialog', { state: 'detached' });
   await open('nouns', '学生', 145);
   await page.locator('#practice-target input[value=past_negative]').check();
+  const fixedInput = await input.evaluate(el => el.getBoundingClientRect().top + window.scrollY);
   await page.locator('#practice-reveal').click();
-  assert.equal(await feedback.evaluate(el => el.scrollHeight <= el.clientHeight && el.scrollWidth <= el.clientWidth), true);
+  assert.equal(await input.evaluate(el => el.getBoundingClientRect().top + window.scrollY), fixedInput);
+  await feedback.evaluate(el => { el.scrollTop = el.scrollHeight; });
+  assert.ok(await feedback.evaluate(el => el.scrollTop > 0));
+  assert.equal(await feedback.evaluate(el => el.scrollWidth <= el.clientWidth && getComputedStyle(el).overflowY === 'auto'), true);
   await page.locator('.practice-close').click();
   await page.setViewportSize({ width: 1440, height: 1000 });
   console.log('PASS mobile practice dialog');

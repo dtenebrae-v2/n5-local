@@ -1245,3 +1245,37 @@ table {
 .rules-table .current-rule { background: #e0edcf; }
 
 .game-filters [hidden], .practice-actions [hidden] { display: none; }
+
+.game-reference-launch { margin-bottom: 16px; }
+.practice-rules-dialog .practice-header { position: sticky; top: -28px; z-index: 1; background: var(--paper); padding: 12px 0; }
+.practice-rules-dialog .practice-header h2 { min-width: 0; overflow-wrap: anywhere; }
+.practice-rules-dialog .practice-close { flex-shrink: 0; }
+.reference-body { min-width: 0; overflow-wrap: anywhere; font-size: 16px; line-height: 1.7; }
+.reference-body .rules-table { font-size: 16px; line-height: 1.7; }
+.reference-body .rules-table th { min-width: 130px; }
+.reference-body .table-scroll:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
+#game-question, .practice-word, .practice-meaning { overflow-wrap: anywhere; }
+#practice-feedback { height: 180px; min-height: 180px; overflow: auto; overflow-wrap: anywhere; scrollbar-gutter: stable; }
+@media (max-width: 600px) {
+  .practice-rules-dialog .practice-header { top: -18px; }
+  .reference-body .rules-table th, .reference-body .rules-table td { padding: 10px; }
+}
+
+@media (max-width: 600px) {
+  .reference-body .te-rules-table thead { display: none; }
+  .reference-body .te-rules-table tbody, .reference-body .te-rules-table tr, .reference-body .te-rules-table td { display: block; width: 100%; }
+  .reference-body .te-rules-table tr { padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .reference-body .te-rules-table td { white-space: normal; border: 0; padding: 4px 12px; overflow-wrap: anywhere; }
+  .reference-body .te-rules-table td:first-child { font-weight: 700; }
+}
+
+.ending-change {
+  color: var(--green);
+  background-color: var(--accent);
+  font-weight: 750;
+  text-decoration: underline;
+  text-decoration-color: var(--green);
+  text-underline-offset: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

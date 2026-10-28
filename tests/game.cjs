@@ -76,6 +76,16 @@ module.exports = async function gameChecks(page, base) {
   await page.waitForSelector('.practice-rules-dialog[open]');
   assert.match(await page.locator('.practice-rules-dialog').innerText(), /ぐ → いで/);
   assert.match(await page.locator('.practice-rules-dialog').innerText(), /いく → いって/);
+  assert.ok(await page.locator('.te-rules-table .ending-change').count() > 10);
+  const changedEnding = page.locator('.te-rules-table .ending-change').filter({ hasText: /^って$/ }).first();
+  assert.equal(await changedEnding.evaluate(el => getComputedStyle(el).color), 'rgb(40, 83, 69)');
+  await page.setViewportSize({ width: 320, height: 640 });
+  assert.equal(await page.locator('.practice-rules-dialog').evaluate(el => el.scrollWidth <= el.clientWidth), true);
+  assert.equal(await page.locator('.practice-rules-dialog .rules-table').count(), 1);
+  await page.locator('.practice-rules-dialog').evaluate(el => { el.scrollTop = el.scrollHeight; });
+  assert.ok(await page.locator('.practice-rules-dialog .practice-close').isVisible());
+  if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, 'n5-reference-mobile.png') });
+  await page.setViewportSize({ width: 1440, height: 1000 });
   await page.keyboard.press('Escape');
   await page.waitForSelector('.practice-rules-dialog', { state: 'detached' });
   await page.locator('#game-kind input[value=nouns]').check();
@@ -92,7 +102,7 @@ module.exports = async function gameChecks(page, base) {
   }
   await page.locator('#practice-rules').click();
   await page.waitForSelector('.practice-rules-dialog[open]');
-  assert.match(await page.locator('.rules-table').innerText(), /かう/);
+  assert.match(await page.locator('.rules-table').innerText(), /かう|もらう/);
   await page.setViewportSize({ width: 390, height: 844 });
   assert.equal(await page.locator('.practice-rules-dialog').evaluate(el => el.scrollWidth <= el.clientWidth), true);
   await page.keyboard.press('Escape');

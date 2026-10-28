@@ -58,6 +58,10 @@ export async function mountGame(root, catalog, signal) {
   const mode = root.querySelector('#game-mode');
   const question = root.querySelector('#game-question');
   const score = root.querySelector('#game-score');
+  const referenceButton = root.querySelector('#practice-rules');
+  referenceButton.classList.add('game-reference-launch');
+  referenceButton.setAttribute('aria-keyshortcuts', 'F1');
+  root.querySelector('.game-card').prepend(referenceButton);
   let deck = [], pool = [], exercise, previous, counted = false, correct = 0, answered = 0;
   const updateScore = () => { score.textContent = `С первой попытки: ${correct} из ${answered}`; };
   const record = status => {
@@ -103,9 +107,9 @@ export async function mountGame(root, catalog, signal) {
     const vocabulary = isVocabulary();
     mode.hidden = vocabulary;
     root.querySelector('#practice-input-help').textContent = 'Ромадзи превращается в хирагану при вводе.' + (vocabulary ? '' : ' Для では набирайте deha, для じゃ — ja.');
-    root.querySelector('#practice-rules').hidden = vocabulary;
+    referenceButton.textContent = vocabulary ? 'Освежить слово · F1' : 'Таблица правил · F1';
     root.querySelector('label[for="practice-answer"]').textContent = vocabulary ? 'Слово по-японски' : 'Форма целиком';
-    root.querySelector('#game-shortcuts').textContent = 'Enter — проверить · Shift + Enter — дальше' + (vocabulary ? '' : ' · F1 — правила');
+    root.querySelector('#game-shortcuts').textContent = 'Enter — проверить · Shift + Enter — дальше' + ' · F1 — справка';
     root.querySelectorAll('[data-vocabulary-only]').forEach(label => { label.hidden = !vocabulary; });
     let selected = kind.querySelector('input:checked');
     if (!vocabulary && selected.value && !practiceCollections.some(item => item.id === selected.value)) {
@@ -131,7 +135,12 @@ export async function mountGame(root, catalog, signal) {
     restart();
   }, { signal });
   const advance = () => { if (!pool.length) return; record('skip'); next(); answer.focus(); };
-  const rules = () => { if (exercise && !isVocabulary()) openPracticeRules(exercise.kind, exercise.form, signal, () => answer.focus()); };
+  const rules = () => {
+    if (!exercise) return;
+    if (isVocabulary()) record('answer');
+    openPracticeRules(exercise.kind, exercise.form, signal, () => answer.focus(), isVocabulary()
+      ? { meaning: question.textContent, answers: exercise.displayAnswers || exercise.answers } : null);
+  };
   root.querySelector('#game-next').addEventListener('click', advance, { signal });
   root.querySelector('#practice-rules').addEventListener('click', rules, { signal });
   document.addEventListener('keydown', event => {

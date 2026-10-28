@@ -17,7 +17,7 @@ module.exports = async function vocabularyGameChecks(page, base) {
     await page.waitForSelector('#game-question[data-word]');
     await page.locator('#game-task input[value=vocabulary]').check();
     assert.equal(await page.locator('#game-mode').isVisible(), false);
-    assert.equal(await page.locator('#practice-rules').isVisible(), false);
+    assert.equal(await page.locator('#practice-rules').isVisible(), true);
     const input = page.locator('#practice-answer');
     const question = page.locator('#game-question');
     const seen = new Set();
@@ -46,7 +46,10 @@ module.exports = async function vocabularyGameChecks(page, base) {
     await page.locator('#practice-reveal').click();
     assert.match(await page.locator('#practice-feedback').innerText(), /Ответ:/);
     await page.keyboard.press('F1');
-    assert.equal(await page.locator('.practice-rules-dialog').count(), 0);
+    await page.waitForSelector('.practice-rules-dialog[open]');
+    assert.ok((await page.locator('.practice-rules-dialog').innerText()).includes(current.kanji));
+    await page.keyboard.press('Escape');
+    await page.waitForSelector('.practice-rules-dialog', { state: 'detached' });
     await page.locator('#game-task input[value=forms]').check();
     assert.equal(await page.locator('#game-mode').isVisible(), true);
     assert.equal(await page.locator('#practice-rules').isVisible(), true);

@@ -10,7 +10,7 @@ export function answerFields() {
     <div class="practice-actions"><button class="primary" type="submit">Проверить</button>
       <button class="secondary" type="button" id="practice-reveal">Показать ответ</button>
       <button class="secondary" type="button" id="practice-rules">Правила</button></div>
-    <p id="practice-feedback" role="status" aria-live="polite" aria-atomic="true"></p>`;
+    <p id="practice-feedback" tabindex="0" role="status" aria-live="polite" aria-atomic="true"></p>`;
 }
 
 export function bindAnswer(root, getExercise, onResult = () => {}) {
@@ -22,6 +22,7 @@ export function bindAnswer(root, getExercise, onResult = () => {}) {
   bind(input, { IMEMode: 'toHiragana' });
   function clear() {
     feedback.textContent = '';
+    feedback.scrollTop = 0;
     delete feedback.dataset.status;
     delete input.dataset.status;
     input.removeAttribute('aria-invalid');

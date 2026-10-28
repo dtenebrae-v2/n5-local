@@ -1,3 +1,4 @@
+import { highlightRuleParagraphs } from './js/form-highlight.js';
 import { mountGame } from './js/game.js';
 import { getJSON } from './js/api.js';
 import { grammarPage, navigation, sectionPage } from './js/pages.js';
@@ -48,7 +49,10 @@ async function render() {
     } else if (route.type === 'grammar') {
       content.innerHTML = '<p class="loading">Открываем грамматику…</p>';
       const html = await grammarPage(catalog, route.item, signal);
-      if (!signal.aborted) content.innerHTML = html;
+      if (!signal.aborted) {
+        content.innerHTML = html;
+        if (route.item.id === 'grammar/verbs/forms') highlightRuleParagraphs(content.querySelector('.lesson'));
+      }
     } else {
       content.innerHTML = `<h1>Страница не найдена</h1><a href="${catalog.base}">Открыть словарь →</a>`;
     }

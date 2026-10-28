@@ -1,3 +1,4 @@
+import { highlightedForm, changed } from './form-highlight.js';
 import { verbForms, GODAN_ROWS, VERB_FORM_LABELS } from './verb-forms.js';
 import { readingOf } from './conjugation.js';
 import { escapeHTML as esc } from './ui.js';
@@ -14,14 +15,9 @@ export const verbSources = `<p class="practice-help">Источники:
   <a href="https://www.tofugu.com/japanese-grammar/verb-command-form-ro/" target="_blank" rel="noreferrer">Приказ</a> ·
   <a href="https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201603.html" target="_blank" rel="noreferrer">Japan Foundation: употребление приказа</a></p>`;
 
-function highlighted(value, reading) {
-  let common = 0;
-  while (common < value.length && value[common] === reading[common]) common++;
-  return esc(value.slice(0, common)) + `<strong>${esc(value.slice(common))}</strong>`;
-}
 function formRows(data, reading, practice = false) {
   return `<dl class="verb-form-list">${Object.entries(LABELS).map(([id, label]) => `<div>
-    <dt>${label}</dt><dd lang="ja">${data.forms[id].map(value => highlighted(value, reading)).join(' / ')}</dd>
+    <dt>${label}</dt><dd lang="ja">${data.forms[id].map(value => highlightedForm(value, reading)).join(' / ')}</dd>
     ${practice && !['dictionary', 'masu'].includes(id) ? `<button class="practice-launch" data-train-form="${id}">Практика</button>` : ''}
   </div>`).join('')}</dl>`;
 }
@@ -36,8 +32,8 @@ export function openVerbReference(entry, signal) {
     <h2 id="verb-reference-title">Спряжение: ${esc(entry.kanji)}</h2></div>
     <button class="practice-close" aria-label="Закрыть справку">×</button></div>
     <p class="practice-meaning">${esc(reading)} · ${esc(entry.meaning)}</p>
-    <p>Перед ます: <b lang="ja">${esc(data.masuStem)}</b>. Перед ない: <b lang="ja">${esc(data.naiStem)}</b>${reading === 'ある' ? ' (но отрицание ある — ない)' : ''}.</p>
-    <p class="practice-help">Изменённая часть выделена жирным. Приказ — прямая команда, не вежливая просьба. Варианты на よ / せよ — книжные.</p>
+    <p>Перед ます: <b lang="ja">${highlightedForm(data.masuStem, reading)}</b>. Перед ない: <b lang="ja">${highlightedForm(data.naiStem, reading)}</b>${reading === 'ある' ? ' (но отрицание ある — ない)' : ''}.</p>
+    <p class="practice-help">Изменённая часть выделена зелёным. Приказ — прямая команда, не вежливая просьба. Варианты на よ / せよ — книжные.</p>
     ${formRows(data, reading, true)}
     <a class="lesson-link" href="/jlpt/n5/grammar/verbs/forms#${data.group.toLowerCase()}">Основы и правила ${esc(data.group)} →</a>${verbSources}`;
   document.body.append(dialog);
@@ -65,7 +61,7 @@ export function verbReferenceLesson() {
     <h2 id="godan">Godan · 五段 · группа 1</h2>
     <p>Меняется последний слог. В таблице — соответствия рядов あ・い・う・え・お; перед ない конечное う переходит в わ.</p>
     <div class="table-scroll"><table><thead><tr><th>Словарное окончание</th><th>Перед ない</th><th>Перед ます</th><th>Перед ば / приказ</th><th>Перед う (намерение)</th></tr></thead>
-    <tbody>${Object.entries(GODAN_ROWS).map(([u, [a, i, e, o]]) => `<tr>${[u,a,i,e,o].map(x => `<td lang="ja">${x}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+    <tbody>${Object.entries(GODAN_ROWS).map(([u, [a, i, e, o]]) => `<tr>${[u,a,i,e,o].map(x => `<td lang="ja">${changed(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
     <p>Пример: かう → かわない・かいます・かえば・かえ・かおう. Отрицание ある — ない.</p>
     <h2 id="ichidan">Ichidan · 一段 · группа 2</h2>
     <p>Уберите конечное る: たべる → たべ. Добавьте ない, ます, た, て, れば или よう.
