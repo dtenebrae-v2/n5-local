@@ -1,3 +1,4 @@
+import { teReference } from './te-reference.js';
 import { exerciseFor, FORM_LABELS } from './conjugation.js';
 import { VERB_FORM_LABELS } from './verb-forms.js';
 import { escapeHTML as esc } from './ui.js';
@@ -14,6 +15,7 @@ export function openPracticeRules(kind, form, signal, onClose = () => {}) {
   dialog.setAttribute('aria-labelledby', 'rules-title');
   dialog.innerHTML = `<div class="practice-header"><h2 id="rules-title">Правила форм</h2>
     <button type="button" class="practice-close" aria-label="Закрыть правила">×</button></div>
+    ${kind === 'verb' && form === 'te' ? teReference() : ''}
     ${entries.map((entry, i) => `<p><b>${esc(examples[i][0])}${entry.type ? ' · ' + esc(entry.type) : ''}</b>: ${esc(exerciseFor(entry, kind, form).rule)}</p>`).join('')}
     <div class="table-scroll"><table class="rules-table"><thead><tr><th scope="col">Форма</th>
     ${examples.map(([kana]) => `<th scope="col" lang="ja">${esc(kana)}</th>`).join('')}</tr></thead><tbody>

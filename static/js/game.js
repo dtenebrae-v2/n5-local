@@ -43,6 +43,7 @@ export async function mountGame(root, catalog, signal) {
       <fieldset id="game-mode" class="practice-target"><legend>Формы</legend><div class="game-modes">
       <label class="form-choice"><input type="radio" name="game-mode" value="polite" checked><span>Вежливые · です / ます</span></label>
       <label class="form-choice"><input type="radio" name="game-mode" value="all"><span>Все формы</span></label>
+      <label class="form-choice"><input type="radio" name="game-mode" value="te"><span>Соединительная · て</span></label>
       </div></fieldset></div>
     <p id="game-score" aria-live="polite"></p>
     <section class="game-card" aria-label="Задание">
@@ -85,7 +86,7 @@ export async function mountGame(root, catalog, signal) {
     }
     const word = deck.pop();
     previous = word.entry.id;
-    const forms = [...Object.keys(FORM_LABELS), ...(word.kind === 'verb' && mode.querySelector('input:checked').value === 'all' ? Object.keys(VERB_FORM_LABELS) : [])];
+    const forms = mode.querySelector('input:checked').value === 'te' ? ['te'] : [...Object.keys(FORM_LABELS), ...(word.kind === 'verb' && mode.querySelector('input:checked').value === 'all' ? Object.keys(VERB_FORM_LABELS) : [])];
     const form = isVocabulary() ? 'vocabulary' : forms[Math.floor(Math.random() * forms.length)];
     exercise = isVocabulary() ? vocabularyExercises.get(word.entry.id) : exerciseFor(word.entry, word.kind, form);
     counted = false;
@@ -119,8 +120,16 @@ export async function mountGame(root, catalog, signal) {
     updateScore(); next();
   }
   task.addEventListener('change', restart, { signal });
-  kind.addEventListener('change', restart, { signal });
-  mode.addEventListener('change', restart, { signal });
+  kind.addEventListener('change', () => {
+    if (mode.querySelector('input:checked').value === 'te' && kind.querySelector('input:checked').value !== 'verbs') {
+      mode.querySelector('input[value="polite"]').checked = true;
+    }
+    restart();
+  }, { signal });
+  mode.addEventListener('change', () => {
+    if (mode.querySelector('input:checked').value === 'te') kind.querySelector('input[value="verbs"]').checked = true;
+    restart();
+  }, { signal });
   const advance = () => { if (!pool.length) return; record('skip'); next(); answer.focus(); };
   const rules = () => { if (exercise && !isVocabulary()) openPracticeRules(exercise.kind, exercise.form, signal, () => answer.focus()); };
   root.querySelector('#game-next').addEventListener('click', advance, { signal });

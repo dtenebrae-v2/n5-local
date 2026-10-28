@@ -66,6 +66,23 @@ module.exports = async function gameChecks(page, base) {
   await page.locator('#game-kind input[value="verbs"]').check();
   await page.locator('#game-mode input[value=all]').check();
   assert.equal(await score.innerText(), 'С первой попытки: 0 из 0');
+  await page.locator('#game-mode input[value=te]').check();
+  assert.equal(await page.locator('#game-kind input[value=verbs]').isChecked(), true);
+  for (let i = 0; i < 4; i++) {
+    assert.equal(await question.getAttribute('data-form'), 'te');
+    await input.press('Shift+Enter');
+  }
+  await page.locator('#practice-rules').click();
+  await page.waitForSelector('.practice-rules-dialog[open]');
+  assert.match(await page.locator('.practice-rules-dialog').innerText(), /ぐ → いで/);
+  assert.match(await page.locator('.practice-rules-dialog').innerText(), /いく → いって/);
+  await page.keyboard.press('Escape');
+  await page.waitForSelector('.practice-rules-dialog', { state: 'detached' });
+  await page.locator('#game-kind input[value=nouns]').check();
+  assert.equal(await page.locator('#game-mode input[value=polite]').isChecked(), true);
+  await page.locator('#game-mode input[value=te]').check();
+  assert.equal(await question.getAttribute('data-form'), 'te');
+  await page.locator('#game-mode input[value=all]').check();
   const seen = new Set();
   for (let i = 0; i < 12; i++) {
     const id = await question.getAttribute('data-word');
