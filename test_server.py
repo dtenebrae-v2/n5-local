@@ -46,6 +46,14 @@ class ServiceTests(unittest.TestCase):
         with urlopen(cls.base + path, timeout=3) as response:
             return json.load(response)
 
+    def test_grammar_practice(self):
+        data = self.get('/api/grammar-practice')
+        self.assertEqual(len(data['exercises']), 39)
+        rules = {r['id'] for r in data['rules']}
+        self.assertTrue(all(e['rule'] in rules for e in data['exercises']))
+        destination = next(e for e in data['exercises'] if e['id'] == 'grammar:school')
+        self.assertEqual({a['kana'] for a in destination['answers']}, {'に', 'へ'})
+
     def test_counts_and_pagination(self):
         self.assertEqual(self.get('/api/health')['entries'], 851)
         expected = {'complete': 772, 'verbs': 115, 'i-adjectives': 58, 'na-adjectives': 37, 'expressions': 21}

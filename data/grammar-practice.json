@@ -1,0 +1,758 @@
+{
+  "topics": [
+    {
+      "id": "particles",
+      "label": "Частицы"
+    },
+    {
+      "id": "requests",
+      "label": "Просьбы"
+    },
+    {
+      "id": "permission",
+      "label": "Разрешение и запрет"
+    },
+    {
+      "id": "adjectives",
+      "label": "Соединение прилагательных"
+    }
+  ],
+  "rules": [
+    {
+      "id": "topic",
+      "topic": "particles",
+      "label": "は — тема",
+      "explanation": "は обозначает тему сообщения. В этой модели: A は B です. Частица пишется は, хотя произносится «ва».",
+      "sources": [
+        "https://a1.marugotoweb.jp/en/assets/pdf/grammar/A1_note_2_3_1_en.pdf"
+      ]
+    },
+    {
+      "id": "also",
+      "topic": "particles",
+      "label": "も — тоже",
+      "explanation": "も заменяет は, когда сообщается «тоже»: A も B です.",
+      "sources": [
+        "https://a1.marugotoweb.jp/en/assets/pdf/grammar/A1_note_2_3_3_en.pdf"
+      ]
+    },
+    {
+      "id": "possessive",
+      "topic": "particles",
+      "label": "の — принадлежность",
+      "explanation": "В модели A の B частица の связывает владельца A с предметом B.",
+      "sources": [
+        "https://a1.marugotoweb.jp/en/assets/pdf/grammar/A1_note_2_4_3_en.pdf"
+      ]
+    },
+    {
+      "id": "question",
+      "topic": "particles",
+      "label": "か — вопрос",
+      "explanation": "か в конце вежливого предложения превращает сообщение в вопрос.",
+      "sources": [
+        "https://a1.marugotoweb.jp/en/assets/pdf/grammar/A1_note_2_3_1_en.pdf"
+      ]
+    },
+    {
+      "id": "object",
+      "topic": "particles",
+      "label": "を — объект",
+      "explanation": "を отмечает прямой объект действия: что читают, едят или пьют. Для ввода частицы を набирайте wo.",
+      "sources": [
+        "https://a2.marugotoweb.jp/en/grammar/reference/data/pdf/A2_appendix_05_en.pdf"
+      ]
+    },
+    {
+      "id": "destination",
+      "topic": "particles",
+      "label": "に / へ — направление",
+      "explanation": "С 行く направление можно обозначить に или へ. Здесь принимаются оба варианта. Частица へ пишется he, хотя произносится «э».",
+      "sources": [
+        "https://www.coelang.tufs.ac.jp/mt/ja/gmod/courses/c02/lesson15/step1/explanation/026.html"
+      ]
+    },
+    {
+      "id": "time",
+      "topic": "particles",
+      "label": "に — время",
+      "explanation": "に ставится после конкретного времени действия, например 七時に. После 今日 или 毎日 в обычном употреблении に не нужно.",
+      "sources": [
+        "https://a1.marugotoweb.jp/ja/grammar_topic2_4.php"
+      ]
+    },
+    {
+      "id": "location",
+      "topic": "particles",
+      "label": "で — место действия",
+      "explanation": "で обозначает место действия: 図書館で読みます. Это отличается от места нахождения с に: 図書館にいます.",
+      "sources": [
+        "https://a2.marugotoweb.jp/en/grammar/reference/data/pdf/A2_appendix_05_en.pdf"
+      ]
+    },
+    {
+      "id": "existence",
+      "topic": "particles",
+      "label": "に — место нахождения",
+      "explanation": "Место нахождения с あります / います отмечается に. Место совершения действия отмечается で.",
+      "sources": [
+        "https://a2.marugotoweb.jp/en/grammar/reference/data/pdf/A2_appendix_05_en.pdf"
+      ]
+    },
+    {
+      "id": "means",
+      "topic": "particles",
+      "label": "で — средство",
+      "explanation": "で обозначает средство или транспорт: バスで行きます, ペンで書きます.",
+      "sources": [
+        "https://a2.marugotoweb.jp/en/grammar/reference/data/pdf/A2_appendix_05_en.pdf"
+      ]
+    },
+    {
+      "id": "list",
+      "topic": "particles",
+      "label": "と / や — перечисление",
+      "explanation": "と связывает предметы в полном перечне. や используется для примеров неполного перечня; など значит «и прочее».",
+      "sources": [
+        "https://a2.marugotoweb.jp/en/grammar/reference/data/pdf/A2_appendix_05_en.pdf"
+      ]
+    },
+    {
+      "id": "range",
+      "topic": "particles",
+      "label": "から / まで — границы",
+      "explanation": "から обозначает начало, まで — конец промежутка: 九時から五時まで.",
+      "sources": [
+        "https://a1.marugotoweb.jp/ja/grammar_topic2_4.php"
+      ]
+    },
+    {
+      "id": "please",
+      "topic": "requests",
+      "label": "てください — просьба",
+      "explanation": "Поставьте глагол в て-форму и добавьте ください: 書く → 書いてください. После で-формы сохраняется で: 読む → 読んでください.",
+      "sources": [
+        "https://a2.marugotoweb.jp/ja/grammar/description/006.html"
+      ]
+    },
+    {
+      "id": "please-not",
+      "topic": "requests",
+      "label": "ないでください — просьба не делать",
+      "explanation": "Поставьте глагол в отрицательную простую форму на ない и добавьте でください: 飲む → 飲まないでください. Это не отрицание て-формы.",
+      "sources": [
+        "https://a2.marugotoweb.jp/ja/grammar/description/015.html"
+      ]
+    },
+    {
+      "id": "may",
+      "topic": "permission",
+      "label": "てもいいですか — спросить разрешение",
+      "explanation": "К て-форме добавьте もいいですか: 食べる → 食べてもいいですか. У форм на で получается でもいいですか.",
+      "sources": [
+        "https://a2.marugotoweb.jp/ja/grammar/description/014.html"
+      ]
+    },
+    {
+      "id": "allowed",
+      "topic": "permission",
+      "label": "てもいいです — разрешить",
+      "explanation": "К て-форме добавьте もいいです: 読む → 読んでもいいです. Это разрешение, а не просьба.",
+      "sources": [
+        "https://a2.marugotoweb.jp/ja/grammar/description/014.html"
+      ]
+    },
+    {
+      "id": "forbidden",
+      "topic": "permission",
+      "label": "てはいけません — запрет",
+      "explanation": "К て-форме добавьте はいけません: 入る → 入ってはいけません. У форм на で получается ではいけません.",
+      "sources": [
+        "https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201512.html"
+      ]
+    },
+    {
+      "id": "join-i",
+      "topic": "adjectives",
+      "label": "い → くて",
+      "explanation": "У い-прилагательного замените последнее い на くて: 安い → 安くて. Так соединяют признаки одного предмета.",
+      "sources": [
+        "https://a2.marugotoweb.jp/ja/grammar/description/005.html"
+      ]
+    },
+    {
+      "id": "join-na",
+      "topic": "adjectives",
+      "label": "な-прилагательное + で",
+      "explanation": "После основы な-прилагательного ставится で, без な: 静か → 静かで. きれい тоже な-прилагательное: きれいで.",
+      "sources": [
+        "https://a2.marugotoweb.jp/ja/grammar/description/005.html"
+      ]
+    },
+    {
+      "id": "join-ii",
+      "topic": "adjectives",
+      "label": "いい → よくて",
+      "explanation": "У いい используется основа よ: いい → よくて. Не образуйте いくて.",
+      "sources": [
+        "https://a2.marugotoweb.jp/ja/grammar/description/005.html"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "grammar:topic",
+      "rule": "topic",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "わたし［　］がくせいです。",
+      "reading": "わたし［　］がくせいです。",
+      "translation": "Что касается меня, я студент (обозначьте тему).",
+      "answers": [
+        {
+          "kana": "は",
+          "written": "は"
+        }
+      ]
+    },
+    {
+      "id": "grammar:also",
+      "rule": "also",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "たなかさんはがくせいです。わたし［　］がくせいです。",
+      "reading": "たなかさんはがくせいです。わたし［　］がくせいです。",
+      "translation": "Танака — студент. Я тоже студент.",
+      "answers": [
+        {
+          "kana": "も",
+          "written": "も"
+        }
+      ]
+    },
+    {
+      "id": "grammar:owner",
+      "rule": "possessive",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "これはわたし［　］ほんです。",
+      "reading": "これはわたし［　］ほんです。",
+      "translation": "Это моя книга.",
+      "answers": [
+        {
+          "kana": "の",
+          "written": "の"
+        }
+      ]
+    },
+    {
+      "id": "grammar:question",
+      "rule": "question",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "これはあなたのほんです［　］。",
+      "reading": "これはあなたのほんです［　］。",
+      "translation": "Это ваша книга? (Вежливый вопрос с вопросительной частицей.)",
+      "answers": [
+        {
+          "kana": "か",
+          "written": "か"
+        }
+      ]
+    },
+    {
+      "id": "grammar:book",
+      "rule": "object",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "ほん［　］よみます。",
+      "reading": "ほん［　］よみます。",
+      "translation": "Читаю книгу. Обозначьте прямой объект действия.",
+      "answers": [
+        {
+          "kana": "を",
+          "written": "を"
+        }
+      ]
+    },
+    {
+      "id": "grammar:water",
+      "rule": "object",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "みず［　］のみます。",
+      "reading": "みず［　］のみます。",
+      "translation": "Пью воду. Обозначьте прямой объект действия.",
+      "answers": [
+        {
+          "kana": "を",
+          "written": "を"
+        }
+      ]
+    },
+    {
+      "id": "grammar:school",
+      "rule": "destination",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "がっこう［　］いきます。",
+      "reading": "がっこう［　］いきます。",
+      "translation": "Иду в школу. Укажите направление.",
+      "answers": [
+        {
+          "kana": "に",
+          "written": "に"
+        },
+        {
+          "kana": "へ",
+          "written": "へ"
+        }
+      ]
+    },
+    {
+      "id": "grammar:japan",
+      "rule": "destination",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "にほん［　］いきます。",
+      "reading": "にほん［　］いきます。",
+      "translation": "Еду в Японию. Укажите направление.",
+      "answers": [
+        {
+          "kana": "に",
+          "written": "に"
+        },
+        {
+          "kana": "へ",
+          "written": "へ"
+        }
+      ]
+    },
+    {
+      "id": "grammar:seven",
+      "rule": "time",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "しちじ［　］おきます。",
+      "reading": "しちじ［　］おきます。",
+      "translation": "Встаю в семь часов.",
+      "answers": [
+        {
+          "kana": "に",
+          "written": "に"
+        }
+      ]
+    },
+    {
+      "id": "grammar:library",
+      "rule": "location",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "としょかん［　］ほんをよみます。",
+      "reading": "としょかん［　］ほんをよみます。",
+      "translation": "Читаю книгу в библиотеке.",
+      "answers": [
+        {
+          "kana": "で",
+          "written": "で"
+        }
+      ]
+    },
+    {
+      "id": "grammar:cat",
+      "rule": "existence",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "へや［　］ねこがいます。",
+      "reading": "へや［　］ねこがいます。",
+      "translation": "В комнате находится кошка.",
+      "answers": [
+        {
+          "kana": "に",
+          "written": "に"
+        }
+      ]
+    },
+    {
+      "id": "grammar:bus",
+      "rule": "means",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "バス［　］がっこうにいきます。",
+      "reading": "バス［　］がっこうにいきます。",
+      "translation": "Еду в школу на автобусе.",
+      "answers": [
+        {
+          "kana": "で",
+          "written": "で"
+        }
+      ]
+    },
+    {
+      "id": "grammar:pen",
+      "rule": "means",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "ペン［　］かきます。",
+      "reading": "ペン［　］かきます。",
+      "translation": "Пишу ручкой.",
+      "answers": [
+        {
+          "kana": "で",
+          "written": "で"
+        }
+      ]
+    },
+    {
+      "id": "grammar:complete-list",
+      "rule": "list",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "パン［　］たまごをかいます。",
+      "reading": "パン［　］たまごをかいます。",
+      "translation": "Покупаю хлеб и яйца: перечислены все покупки.",
+      "answers": [
+        {
+          "kana": "と",
+          "written": "と"
+        }
+      ]
+    },
+    {
+      "id": "grammar:examples-list",
+      "rule": "list",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "パン［　］たまごなどをかいます。",
+      "reading": "パン［　］たまごなどをかいます。",
+      "translation": "Покупаю, например, хлеб, яйца и прочее. Используйте частицу неполного перечня.",
+      "answers": [
+        {
+          "kana": "や",
+          "written": "や"
+        }
+      ]
+    },
+    {
+      "id": "grammar:from",
+      "rule": "range",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "くじ［　］ごじまではたらきます。",
+      "reading": "くじ［　］ごじまではたらきます。",
+      "translation": "Работаю с девяти до пяти.",
+      "answers": [
+        {
+          "kana": "から",
+          "written": "から"
+        }
+      ]
+    },
+    {
+      "id": "grammar:until",
+      "rule": "range",
+      "instruction": "Вставьте только частицу, сохранив указанный смысл.",
+      "sentence": "くじからごじ［　］はたらきます。",
+      "reading": "くじからごじ［　］はたらきます。",
+      "translation": "Работаю с девяти до пяти.",
+      "answers": [
+        {
+          "kana": "まで",
+          "written": "まで"
+        }
+      ]
+    },
+    {
+      "id": "grammar:write",
+      "rule": "please",
+      "instruction": "Напишите глагол целиком с конструкцией ～てください.",
+      "sentence": "書く（かく）",
+      "reading": "書く（かく）",
+      "translation": "Попросите написать.",
+      "answers": [
+        {
+          "kana": "かいてください",
+          "written": "書いてください"
+        }
+      ]
+    },
+    {
+      "id": "grammar:read",
+      "rule": "please",
+      "instruction": "Напишите глагол целиком с конструкцией ～てください.",
+      "sentence": "読む（よむ）",
+      "reading": "読む（よむ）",
+      "translation": "Попросите прочитать.",
+      "answers": [
+        {
+          "kana": "よんでください",
+          "written": "読んでください"
+        }
+      ]
+    },
+    {
+      "id": "grammar:wait",
+      "rule": "please",
+      "instruction": "Напишите глагол целиком с конструкцией ～てください.",
+      "sentence": "待つ（まつ）",
+      "reading": "待つ（まつ）",
+      "translation": "Попросите подождать.",
+      "answers": [
+        {
+          "kana": "まってください",
+          "written": "待ってください"
+        }
+      ]
+    },
+    {
+      "id": "grammar:come",
+      "rule": "please",
+      "instruction": "Напишите глагол целиком с конструкцией ～てください.",
+      "sentence": "来る（くる）",
+      "reading": "来る（くる）",
+      "translation": "Попросите прийти.",
+      "answers": [
+        {
+          "kana": "きてください",
+          "written": "来てください"
+        }
+      ]
+    },
+    {
+      "id": "grammar:dont-drink",
+      "rule": "please-not",
+      "instruction": "Напишите глагол целиком с конструкцией ～ないでください.",
+      "sentence": "飲む（のむ）",
+      "reading": "飲む（のむ）",
+      "translation": "Попросите не пить.",
+      "answers": [
+        {
+          "kana": "のまないでください",
+          "written": "飲まないでください"
+        }
+      ]
+    },
+    {
+      "id": "grammar:dont-enter",
+      "rule": "please-not",
+      "instruction": "Напишите глагол целиком с конструкцией ～ないでください.",
+      "sentence": "入る（はいる）",
+      "reading": "入る（はいる）",
+      "translation": "Попросите не входить.",
+      "answers": [
+        {
+          "kana": "はいらないでください",
+          "written": "入らないでください"
+        }
+      ]
+    },
+    {
+      "id": "grammar:dont-eat",
+      "rule": "please-not",
+      "instruction": "Напишите глагол целиком с конструкцией ～ないでください.",
+      "sentence": "食べる（たべる）",
+      "reading": "食べる（たべる）",
+      "translation": "Попросите не есть.",
+      "answers": [
+        {
+          "kana": "たべないでください",
+          "written": "食べないでください"
+        }
+      ]
+    },
+    {
+      "id": "grammar:dont-do",
+      "rule": "please-not",
+      "instruction": "Напишите глагол целиком с конструкцией ～ないでください.",
+      "sentence": "する",
+      "reading": "する",
+      "translation": "Попросите не делать.",
+      "answers": [
+        {
+          "kana": "しないでください",
+          "written": "しないでください"
+        }
+      ]
+    },
+    {
+      "id": "grammar:may-eat",
+      "rule": "may",
+      "instruction": "Напишите глагол целиком с конструкцией ～てもいいですか.",
+      "sentence": "食べる（たべる）",
+      "reading": "食べる（たべる）",
+      "translation": "Спросите разрешения поесть.",
+      "answers": [
+        {
+          "kana": "たべてもいいですか",
+          "written": "食べてもいいですか"
+        }
+      ]
+    },
+    {
+      "id": "grammar:may-read",
+      "rule": "may",
+      "instruction": "Напишите глагол целиком с конструкцией ～てもいいですか.",
+      "sentence": "読む（よむ）",
+      "reading": "読む（よむ）",
+      "translation": "Спросите разрешения прочитать.",
+      "answers": [
+        {
+          "kana": "よんでもいいですか",
+          "written": "読んでもいいですか"
+        }
+      ]
+    },
+    {
+      "id": "grammar:may-go",
+      "rule": "may",
+      "instruction": "Напишите глагол целиком с конструкцией ～てもいいですか.",
+      "sentence": "行く（いく）",
+      "reading": "行く（いく）",
+      "translation": "Спросите разрешения пойти.",
+      "answers": [
+        {
+          "kana": "いってもいいですか",
+          "written": "行ってもいいですか"
+        }
+      ]
+    },
+    {
+      "id": "grammar:allowed-read",
+      "rule": "allowed",
+      "instruction": "Напишите глагол целиком с конструкцией ～てもいいです.",
+      "sentence": "読む（よむ）",
+      "reading": "読む（よむ）",
+      "translation": "Разрешите читать.",
+      "answers": [
+        {
+          "kana": "よんでもいいです",
+          "written": "読んでもいいです"
+        }
+      ]
+    },
+    {
+      "id": "grammar:allowed-eat",
+      "rule": "allowed",
+      "instruction": "Напишите глагол целиком с конструкцией ～てもいいです.",
+      "sentence": "食べる（たべる）",
+      "reading": "食べる（たべる）",
+      "translation": "Разрешите есть.",
+      "answers": [
+        {
+          "kana": "たべてもいいです",
+          "written": "食べてもいいです"
+        }
+      ]
+    },
+    {
+      "id": "grammar:forbidden-enter",
+      "rule": "forbidden",
+      "instruction": "Напишите глагол целиком с конструкцией ～てはいけません.",
+      "sentence": "入る（はいる）",
+      "reading": "入る（はいる）",
+      "translation": "Сообщите, что входить запрещено.",
+      "answers": [
+        {
+          "kana": "はいってはいけません",
+          "written": "入ってはいけません"
+        }
+      ]
+    },
+    {
+      "id": "grammar:forbidden-drink",
+      "rule": "forbidden",
+      "instruction": "Напишите глагол целиком с конструкцией ～てはいけません.",
+      "sentence": "飲む（のむ）",
+      "reading": "飲む（のむ）",
+      "translation": "Сообщите, что пить запрещено.",
+      "answers": [
+        {
+          "kana": "のんではいけません",
+          "written": "飲んではいけません"
+        }
+      ]
+    },
+    {
+      "id": "grammar:forbidden-photo",
+      "rule": "forbidden",
+      "instruction": "Напишите глагол целиком с конструкцией ～てはいけません.",
+      "sentence": "撮る（とる）",
+      "reading": "撮る（とる）",
+      "translation": "Сообщите, что фотографировать запрещено.",
+      "answers": [
+        {
+          "kana": "とってはいけません",
+          "written": "撮ってはいけません"
+        }
+      ]
+    },
+    {
+      "id": "grammar:cheap",
+      "rule": "join-i",
+      "instruction": "Вставьте целиком первое прилагательное в соединительной форме.",
+      "sentence": "このみせは［　］、べんりです。",
+      "reading": "このみせは［　］、べんりです。",
+      "translation": "Этот магазин дешёвый и удобный. Исходное слово: 安い（やすい）.",
+      "answers": [
+        {
+          "kana": "やすくて",
+          "written": "安くて"
+        }
+      ]
+    },
+    {
+      "id": "grammar:big",
+      "rule": "join-i",
+      "instruction": "Вставьте целиком первое прилагательное в соединительной форме.",
+      "sentence": "このいえは［　］、あたらしいです。",
+      "reading": "このいえは［　］、あたらしいです。",
+      "translation": "Этот дом большой и новый. Исходное слово: 大きい（おおきい）.",
+      "answers": [
+        {
+          "kana": "おおきくて",
+          "written": "大きくて"
+        }
+      ]
+    },
+    {
+      "id": "grammar:delicious",
+      "rule": "join-i",
+      "instruction": "Вставьте целиком первое прилагательное в соединительной форме.",
+      "sentence": "このりょうりは［　］、やすいです。",
+      "reading": "このりょうりは［　］、やすいです。",
+      "translation": "Это блюдо вкусное и недорогое. Исходное слово: おいしい.",
+      "answers": [
+        {
+          "kana": "おいしくて",
+          "written": "おいしくて"
+        }
+      ]
+    },
+    {
+      "id": "grammar:quiet",
+      "rule": "join-na",
+      "instruction": "Вставьте целиком первое прилагательное в соединительной форме.",
+      "sentence": "このへやは［　］、ひろいです。",
+      "reading": "このへやは［　］、ひろいです。",
+      "translation": "Эта комната тихая и просторная. Исходное слово: 静か（しずか）.",
+      "answers": [
+        {
+          "kana": "しずかで",
+          "written": "静かで"
+        }
+      ]
+    },
+    {
+      "id": "grammar:clean",
+      "rule": "join-na",
+      "instruction": "Вставьте целиком первое прилагательное в соединительной форме.",
+      "sentence": "このへやは［　］、あかるいです。",
+      "reading": "このへやは［　］、あかるいです。",
+      "translation": "Эта комната чистая и светлая. Исходное слово: きれい.",
+      "answers": [
+        {
+          "kana": "きれいで",
+          "written": "きれいで"
+        }
+      ]
+    },
+    {
+      "id": "grammar:good",
+      "rule": "join-ii",
+      "instruction": "Вставьте целиком первое прилагательное в соединительной форме.",
+      "sentence": "このパソコンはせいのうが［　］、やすいです。",
+      "reading": "このパソコンはせいのうが［　］、やすいです。",
+      "translation": "У этого компьютера хорошие характеристики, и он недорогой. Исходное слово: いい.",
+      "answers": [
+        {
+          "kana": "よくて",
+          "written": "よくて"
+        }
+      ]
+    }
+  ]
+}

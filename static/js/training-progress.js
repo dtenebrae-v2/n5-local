@@ -4,7 +4,7 @@ export function loadProgress(storage) {
   try {
     const data = JSON.parse((storage || localStorage).getItem(KEY));
     if (data?.version === 1 && data.mistakes && typeof data.mistakes === 'object' && !Array.isArray(data.mistakes)) {
-      data.mistakes = Object.fromEntries(Object.entries(data.mistakes).filter(([, a]) => a && Number.isInteger(a.id) && typeof a.form === 'string'));
+      data.mistakes = Object.fromEntries(Object.entries(data.mistakes).filter(([, a]) => a && (Number.isInteger(a.id) || typeof a.id === 'string' && a.id.startsWith('grammar:')) && typeof a.form === 'string'));
       if (data.session && (!Array.isArray(data.session.deck) || !Array.isArray(data.session.retry) || !Array.isArray(data.session.attempts))) data.session = null;
       return data;
     }

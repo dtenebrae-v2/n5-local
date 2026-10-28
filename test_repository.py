@@ -6,6 +6,7 @@ import tempfile
 import unittest
 
 from server import REPOSITORY, CATALOG
+from n5.grammar_practice import load_grammar
 from n5.repository import VocabularyRepository
 from n5.vocabulary import load, validate, add_word, read_json
 
@@ -116,3 +117,24 @@ class VocabularyTests(unittest.TestCase):
         self.assertEqual(words[781]['readings'][0]['kana'], 'まじめ')
         self.assertEqual(words[65]['verb_type'], 'Godan')
         self.assertEqual(words[66]['verb_type'], 'Ichidan')
+
+
+class GrammarDataTests(unittest.TestCase):
+    def test_invalid_grammar_data_is_rejected(self):
+        original = read_json(DATA.parent / 'grammar-practice.json')
+        cases = []
+        invalid = copy.deepcopy(original)
+        invalid['exercises'][0]['rule'] = 'missing'
+        cases.append(invalid)
+        invalid = copy.deepcopy(original)
+        invalid['exercises'][0]['answers'][0]['kana'] = 'Latin'
+        cases.append(invalid)
+        invalid = copy.deepcopy(original)
+        invalid['exercises'].append(invalid['exercises'][0])
+        cases.append(invalid)
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'grammar.json'
+            for data in cases:
+                path.write_text(json.dumps(data, ensure_ascii=False))
+                with self.assertRaises(ValueError):
+                    load_grammar(path)

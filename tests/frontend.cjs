@@ -9,6 +9,7 @@ const addWordChecks = require('./add-word.cjs');
 const readline = require('node:readline');
 const { chromium } = require('playwright');
 const gameChecks = require('./game.cjs');
+const grammarGameChecks = require('./grammar-game.cjs');
 const trainingSessionChecks = require('./training-session.cjs');
 const vocabularyGameChecks = require('./vocabulary-game.cjs');
 const practiceChecks = require('./practice.cjs');
@@ -195,6 +196,7 @@ async function main() {
     await gameChecks(page, base);
     await vocabularyGameChecks(page, base);
     await trainingSessionChecks(page, base);
+    await grammarGameChecks(page, base);
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(base + '/jlpt/n5');

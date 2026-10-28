@@ -1320,3 +1320,7 @@ table {
 #game-keyboard .practice-actions { margin-top: 12px; flex-wrap: wrap; }
 #shortcut-status:empty { display: none; }
 #practice-feedback[data-status="unknown"] { color: #704712; background: #fff1d6; }
+.grammar-reference section { padding: 12px; border-bottom: 1px solid var(--line); }
+.grammar-reference .current-rule { background: var(--accent); border-radius: 8px; }
+.grammar-reference h3 { margin: 0 0 8px; }
+.grammar-reference a { font-size: 13px; }

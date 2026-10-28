@@ -1,3 +1,4 @@
+import { grammarWords, grammarQuestion, openGrammarRules } from './grammar-exercise.js';
 import { mountShortcuts } from './training-shortcuts.js';
 import { loadProgress, saveProgress, recordAttempt, TE_GROUPS, teGroup } from './training-progress.js';
 import { groupLabels } from './group-labels.js';
@@ -35,13 +36,16 @@ export async function mountGame(root, catalog, signal) {
   const collections = catalog.collections;
   const practiceCollections = collections.filter(item => item.practice_kind);
   const words = (await Promise.all(collections.map(item => loadCollection(item, signal)))).flat();
-  const groups = await getJSON('/api/groups', signal);
+  const [groups, grammar] = await Promise.all([getJSON('/api/groups', signal), getJSON('/api/grammar-practice', signal)]);
+  const grammarPool = grammarWords(grammar);
+  const grammarLabels = Object.fromEntries(grammar.rules.map(rule => [rule.id, rule.label]));
   if (signal.aborted) return;
   const progress = loadProgress();
   root.innerHTML = `<h1>Тренировка</h1>
     <div class="game-filters"><fieldset id="game-task" class="practice-target"><legend>Режим</legend><div class="game-modes">
       <label class="form-choice"><input type="radio" name="game-task" value="forms" checked><span>Формы</span></label>
       <label class="form-choice"><input type="radio" name="game-task" value="vocabulary"><span>Значение → слово</span></label>
+      <label class="form-choice"><input type="radio" name="game-task" value="grammar"><span>Грамматика</span></label>
       </div></fieldset><fieldset id="game-kind" class="practice-target"><legend>Часть речи</legend><div class="game-modes">
       <label class="form-choice"><input type="radio" name="game-kind" value="" checked><span>Все</span></label>
       ${collections.filter(item => item.id !== 'complete').map(item => `<label class="form-choice" ${item.practice_kind ? '' : 'data-vocabulary-only hidden'}><input type="radio" name="game-kind" value="${esc(item.id)}"><span>${esc(item.label)}</span></label>`).join('')}</div></fieldset>
@@ -54,7 +58,7 @@ export async function mountGame(root, catalog, signal) {
         <fieldset id="game-length" class="practice-target"><legend>Заданий</legend><div class="game-modes">
         ${[10,20,50,0].map(n => `<label class="form-choice"><input type="radio" name="game-length" value="${n}" ${n === 0 ? 'checked' : ''}><span>${n || 'Без ограничения'}</span></label>`).join('')}</div></fieldset>
         <fieldset id="game-source" class="practice-target"><legend>Материал</legend><div class="game-modes">
-          <label class="form-choice"><input type="radio" name="game-source" value="all" checked><span>Все слова</span></label>
+          <label class="form-choice"><input type="radio" name="game-source" value="all" checked><span>Все задания</span></label>
           <label class="form-choice"><input type="radio" name="game-source" value="mistakes"><span>Мои ошибки</span></label>
         </div></fieldset>
         <fieldset id="game-form" class="practice-target"><legend>Конкретная форма</legend><div class="game-modes"></div></fieldset>
@@ -74,6 +78,7 @@ export async function mountGame(root, catalog, signal) {
     <button type="button" class="secondary" id="game-finish">Завершить занятие</button>
     <p class="practice-help" id="game-shortcuts">Enter — проверить · Shift + Enter — дальше · F1 — правила</p></section>`;
   const task = root.querySelector('#game-task');
+  const isGrammar = () => task.querySelector('input:checked').value === 'grammar';
   const isVocabulary = () => task.querySelector('input:checked').value === 'vocabulary';
   const allEntries = [...new Map(words.map(word => [word.entry.id, word.entry])).values()];
   const vocabularyExercises = new Map(allEntries.map(entry => [entry.id, vocabularyExercise(entry)]));
@@ -95,12 +100,14 @@ export async function mountGame(root, catalog, signal) {
   const limit = () => Number(value('game-length'));
   const mistakesOnly = () => value('game-source') === 'mistakes';
   const formsFor = word => {
+    if (isGrammar()) return [word.exercise.form];
     if (isVocabulary()) return ['vocabulary'];
     const forms = value('game-mode') === 'te' ? ['te'] : [...Object.keys(FORM_LABELS),
       ...(word.kind === 'verb' && value('game-mode') === 'all' ? Object.keys(VERB_FORM_LABELS) : [])];
     const selected = value('game-form');
     return selected ? forms.filter(form => form === selected) : forms;
   };
+  const getExercise = (word, form) => isGrammar() ? (word.exercise.form === form ? word.exercise : null) : isVocabulary() ? vocabularyExercises.get(word.entry.id) : exerciseFor(word.entry, word.kind, form);
   const hasMistake = word => Object.values(progress.mistakes).some(a => a.id === word.entry.id && formsFor(word).includes(a.form));
   function save() {
     progress.settings = settings();
@@ -120,16 +127,16 @@ export async function mountGame(root, catalog, signal) {
       .map(([id,label]) => `<label class="form-choice"><input type="radio" name="game-form" value="${esc(id)}"><span>${esc(label)}</span></label>`).join('');
     const formChoices = [...root.querySelectorAll('#game-form input')];
     (formChoices.find(el => el.value === previousForm) || formChoices[0]).checked = true;
-    root.querySelector('#game-form').hidden = isVocabulary() || value('game-mode') === 'te';
+    root.querySelector('#game-form').hidden = isGrammar() || isVocabulary() || value('game-mode') === 'te';
     if (isVocabulary() || value('game-mode') === 'te') formChoices[0].checked = true;
     const previousTopic = value('game-topic');
-    const available = groups.filter(g => (!selected || g.collection === selected)
+    const available = isGrammar() ? grammar.topics.map(t => ({ id: t.id, name: t.label })) : groups.filter(g => (!selected || g.collection === selected)
       && (isVocabulary() || practiceCollections.some(c => c.id === g.collection)));
     root.querySelector('#game-topic .game-modes').innerHTML = [['', 'Все темы'], ...available.map(g => [g.id, groupLabels[g.name] || g.name])]
       .map(([id,label]) => `<label class="form-choice"><input type="radio" name="game-topic" value="${esc(id)}"><span>${esc(label)}</span></label>`).join('');
     const choice = [...root.querySelectorAll('#game-topic input')].find(el => el.value === previousTopic) || root.querySelector('#game-topic input');
     choice.checked = true;
-    root.querySelector('#game-te-group').hidden = isVocabulary() || value('game-mode') !== 'te';
+    root.querySelector('#game-te-group').hidden = isGrammar() || isVocabulary() || value('game-mode') !== 'te';
   }
   function finish() {
     finished = true;
@@ -140,8 +147,8 @@ export async function mountGame(root, catalog, signal) {
     const names = { correct: 'Верно', incorrect: 'Ошибка', answer: 'Подсмотрено', skip: 'Пропущено', unknown: 'Не знаю' };
     summary.innerHTML = `<h2>Занятие завершено</h2><p>С первой попытки: ${correct} из ${answered}</p>
       <div class="practice-actions"><button class="primary" id="game-repeat">Повторить ошибки</button><button class="secondary" id="game-new">Новое занятие</button></div>
-      <div class="table-scroll"><table class="training-results"><thead><tr><th>Слово / форма</th><th>Результат</th><th>Ваш ответ</th><th>Правильный ответ</th></tr></thead><tbody>
-      ${attempts.map(a => `<tr data-result="${esc(a.status)}"><td>${esc(a.word)}<br>${esc(FORM_LABELS[a.form] || VERB_FORM_LABELS[a.form] || 'Значение → слово')}</td><td class="result-status">${names[a.status] || esc(a.status)}</td><td class="result-answer">${esc(a.answer || '—')}</td><td class="result-expected">${esc(a.expected)}</td></tr>`).join('')}</tbody></table></div>`;
+      <div class="table-scroll"><table class="training-results"><thead><tr><th>Задание / форма</th><th>Результат</th><th>Ваш ответ</th><th>Правильный ответ</th></tr></thead><tbody>
+      ${attempts.map(a => `<tr data-result="${esc(a.status)}"><td>${esc(a.word)}<br>${esc(FORM_LABELS[a.form] || VERB_FORM_LABELS[a.form] || grammarLabels[a.form] || 'Значение → слово')}</td><td class="result-status">${names[a.status] || esc(a.status)}</td><td class="result-answer">${esc(a.answer || '—')}</td><td class="result-expected">${esc(a.expected)}</td></tr>`).join('')}</tbody></table></div>`;
     summary.querySelector('#game-new').addEventListener('click', () => restart());
     summary.querySelector('#game-repeat').disabled = !pool.some(hasMistake);
     summary.querySelector('#game-repeat').addEventListener('click', () => {
@@ -153,7 +160,7 @@ export async function mountGame(root, catalog, signal) {
   const updateScore = () => {
     score.textContent = `С первой попытки: ${correct} из ${answered}`;
     root.querySelector('#game-progress').textContent = limit() ? `Задание ${Math.min(answered + (counted ? 0 : 1), limit())} из ${limit()}` : '';
-    root.querySelector('#game-next').textContent = limit() && answered >= limit() ? `Итоги → · ${progress.shortcuts?.next || 'Shift+Enter'}` : `Следующее слово → · ${progress.shortcuts?.next || 'Shift+Enter'}`;
+    root.querySelector('#game-next').textContent = limit() && answered >= limit() ? `Итоги → · ${progress.shortcuts?.next || 'Shift+Enter'}` : `Следующее задание → · ${progress.shortcuts?.next || 'Shift+Enter'}`;
   };
   const record = status => {
     if (counted || status === 'incomplete') { save(); return; }
@@ -180,7 +187,7 @@ export async function mountGame(root, catalog, signal) {
       delete question.dataset.form;
       current = null;
       referenceButton.hidden = true;
-      question.textContent = mistakesOnly() ? 'Нет ошибок для выбранных настроек.' : 'Нет слов для тренировки.';
+      question.textContent = mistakesOnly() ? 'Нет ошибок для выбранных настроек.' : 'Нет заданий для тренировки.';
       save();
       root.querySelector('#practice-form').hidden = true;
       root.querySelector('#game-next').disabled = true;
@@ -204,9 +211,9 @@ export async function mountGame(root, catalog, signal) {
     const mistakes = Object.values(progress.mistakes).filter(a => a.id === word.entry.id && (isVocabulary() ? a.form === 'vocabulary' : forms.includes(a.form)));
     const form = prescribed?.form || (mistakesOnly() && mistakes.length ? mistakes[Math.floor(Math.random() * mistakes.length)].form : isVocabulary() ? 'vocabulary' : forms[Math.floor(Math.random() * forms.length)]);
     current = { word, form };
-    exercise = isVocabulary() ? vocabularyExercises.get(word.entry.id) : exerciseFor(word.entry, word.kind, form);
+    exercise = getExercise(word, form);
     counted = false;
-    question.innerHTML = isVocabulary() ? `<h2 class="game-target" lang="en">${esc(exercise.prompt)}</h2>` : `<p class="practice-word" lang="ja">${esc(word.entry.kanji)}
+    question.innerHTML = isGrammar() ? grammarQuestion(exercise) : isVocabulary() ? `<h2 class="game-target" lang="en">${esc(exercise.prompt)}</h2>` : `<p class="practice-word" lang="ja">${esc(word.entry.kanji)}
       <span class="practice-reading">${esc(exercise.reading)}</span></p>
       <p class="practice-meaning">${esc(word.entry.meaning)}</p>
       <h2 class="game-target">${esc(FORM_LABELS[form] || VERB_FORM_LABELS[form])}</h2>
@@ -222,10 +229,11 @@ export async function mountGame(root, catalog, signal) {
     root.querySelector('.game-card').hidden = false;
     root.querySelector('#game-summary').hidden = true;
     const vocabulary = isVocabulary();
-    mode.hidden = vocabulary;
-    root.querySelector('#practice-input-help').textContent = 'Ромадзи превращается в хирагану при вводе.' + (vocabulary ? '' : ' Для では набирайте deha, для じゃ — ja.');
+    mode.hidden = vocabulary || isGrammar();
+    kind.hidden = isGrammar();
+    root.querySelector('#practice-input-help').textContent = 'Ромадзи превращается в хирагану при вводе.' + (vocabulary ? '' : isGrammar() ? ' Частицы: は — ha, へ — he, を — wo.' : ' Для では набирайте deha, для じゃ — ja.');
     referenceButton.textContent = vocabulary ? 'Освежить слово' : 'Таблица правил';
-    root.querySelector('label[for="practice-answer"]').textContent = vocabulary ? 'Слово по-японски' : 'Форма целиком';
+    root.querySelector('label[for="practice-answer"]').textContent = isGrammar() ? 'Ответ на задание' : vocabulary ? 'Слово по-японски' : 'Форма целиком';
     updateShortcutLabels(progress.shortcuts);
     root.querySelectorAll('[data-vocabulary-only]').forEach(label => { label.hidden = !vocabulary; });
     let selected = kind.querySelector('input:checked');
@@ -235,12 +243,12 @@ export async function mountGame(root, catalog, signal) {
       selected.checked = true;
     }
     updateOptions();
-    const candidates = words.filter(word => (!selected.value || word.collection === selected.value)
+    const candidates = (isGrammar() ? grammarPool : words).filter(word => (isGrammar() || !selected.value || word.collection === selected.value)
       && (!value('game-topic') || word.entry.group_id === value('game-topic'))
-      && (vocabulary || value('game-mode') !== 'te' || value('game-te-group') === 'all' || teGroup(word) === value('game-te-group'))
+      && (isGrammar() || vocabulary || value('game-mode') !== 'te' || value('game-te-group') === 'all' || teGroup(word) === value('game-te-group'))
       && formsFor(word).length
       && (!mistakesOnly() || (resume?.counted && resume.current?.id === word.entry.id && resume.current?.collection === word.collection) || hasMistake(word))
-      && (vocabulary ? vocabularyExercises.get(word.entry.id) : exerciseFor(word.entry, word.kind, 'past')));
+      && (isGrammar() || (vocabulary ? vocabularyExercises.get(word.entry.id) : exerciseFor(word.entry, word.kind, 'past'))));
     pool = [...new Map(candidates.map(word => [word.entry.id, word])).values()];
     deck = []; correct = answered = 0; attempts = []; retry = []; counted = false;
     if (resume?.finished) {
@@ -248,7 +256,7 @@ export async function mountGame(root, catalog, signal) {
       updateScore(); finish(); return;
     }
     if (resume && resume.current && pool.some(w => w.entry.id === resume.current.id && w.collection === resume.current.collection)
-        && (resume.current.form === 'vocabulary' ? vocabulary : exerciseFor(pool.find(w => w.entry.id === resume.current.id).entry, pool.find(w => w.entry.id === resume.current.id).kind, resume.current.form))) {
+        && getExercise(pool.find(w => w.entry.id === resume.current.id), resume.current.form)) {
       next(resume.current);
       deck = (resume.deck || []).map(item => pool.find(w => w.entry.id === item.id && w.collection === item.collection)).filter(Boolean);
       attempts = resume.attempts || []; retry = resume.retry || [];
@@ -280,6 +288,7 @@ export async function mountGame(root, catalog, signal) {
   const rules = () => {
     if (!exercise || finished) return;
     record('answer');
+    if (isGrammar()) { openGrammarRules(exercise, grammar, signal, () => answer.focus()); return; }
     openPracticeRules(exercise.kind, exercise.form, signal, () => answer.focus(), isVocabulary()
       ? { meaning: question.textContent, answers: exercise.displayAnswers || exercise.answers } : null);
   };

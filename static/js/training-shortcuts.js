@@ -1,5 +1,5 @@
 export const DEFAULT_SHORTCUTS = { next: 'Shift+Enter', rules: 'F1', unknown: 'F2' };
-const labels = { next: 'Следующее слово', rules: 'Справка', unknown: 'Не знаю' };
+const labels = { next: 'Следующее задание', rules: 'Справка', unknown: 'Не знаю' };
 export function keyCombo(event) {
   if (['Control', 'Alt', 'Shift', 'Meta'].includes(event.key)) return null;
   return [event.ctrlKey && 'Ctrl', event.altKey && 'Alt', event.shiftKey && 'Shift', event.metaKey && 'Meta', event.key.length === 1 ? event.key.toUpperCase() : event.key].filter(Boolean).join('+');
