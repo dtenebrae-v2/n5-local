@@ -29,7 +29,7 @@ def required_text(value, label, maximum):
 
 def word_from_form(payload, catalog):
     required = {'kanji', 'readings', 'meanings', 'collection', 'group'}
-    if not isinstance(payload, dict) or not required <= payload.keys() <= required | {'context', 'source'}:
+    if not isinstance(payload, dict) or not required <= payload.keys() <= required | {'context', 'source', 'vocabulary_prompt', 'vocabulary_answers'}:
         raise WordError('Заполните написание, чтение, ромадзи, перевод, раздел и группу.')
     collection = payload['collection']
     if not isinstance(collection, str) or collection not in {c['id'] for c in catalog.public['collections']}:
@@ -73,7 +73,7 @@ def word_from_form(payload, catalog):
     source = payload.get('source', '')
     if not isinstance(context, str) or not isinstance(source, str):
         raise WordError('Пример и источник должны быть текстом.')
-    return {
+    word = {
         'kanji': required_text(payload['kanji'], 'Написание', 200),
         'readings': normalized_readings,
         'meanings': {'en': [required_text(m, 'Перевод', 500) for m in meanings]},
@@ -83,6 +83,21 @@ def word_from_form(payload, catalog):
         'sources': [required_text(source, 'Источник', 1000)] if source.strip() else [],
         'related_words': [], 'notes': [],
     }
+
+    prompt = payload.get('vocabulary_prompt', '')
+    answers = payload.get('vocabulary_answers', [])
+    if not isinstance(prompt, str) or not isinstance(answers, list) or len(answers) > 30:
+        raise WordError('Проверьте задание и допустимые ответы.')
+    if answers and not prompt.strip():
+        raise WordError('Для дополнительных ответов заполните задание на английском.')
+    if prompt.strip():
+        accepted = [{'kana': r['kana'], 'kanji': word['kanji']} for r in normalized_readings]
+        for answer in answers:
+            if not isinstance(answer, dict) or set(answer) != {'kana', 'kanji'}:
+                raise WordError('Для варианта ответа нужны кана и написание.')
+            accepted.append({k: required_text(answer[k], 'Вариант ответа', 200) for k in ['kana', 'kanji']})
+        word['vocabulary_task'] = {'prompt': required_text(prompt, 'Задание на английском', 500), 'answers': accepted}
+    return word
 
 
 class VocabularyStore:

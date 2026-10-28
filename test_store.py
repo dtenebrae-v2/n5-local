@@ -84,6 +84,26 @@ class StoreTests(unittest.TestCase):
             restarted.add(payloads[0])
         self.assertEqual(failure.exception.status, 409)
 
+    def test_vocabulary_tasks_survive_add_and_bundle_update(self):
+        task_payload = {**PAYLOAD, 'vocabulary_prompt': 'test term — alternate readings accepted',
+                        'vocabulary_answers': [{'kana': 'てすと', 'kanji': 'テスト'}]}
+        added = self.store.add(task_payload)
+        document = json.loads(self.path.read_text())
+        for word in document['words']:
+            if word['id'] != added['id']:
+                word.pop('vocabulary_task', None)
+        self.path.write_text(json.dumps(document, ensure_ascii=False))
+        restarted = VocabularyStore(DATA, self.path)
+        row = restarted.catalog.repository.words({'q': ['shikengo']})['entries'][0]
+        self.assertEqual(row['vocabulary_task']['answers'][1]['kana'], 'てすと')
+        words = json.loads(self.path.read_text())['words']
+        self.assertIn('upper-body', next(w for w in words if w['id'] == 207)['vocabulary_task']['prompt'])
+        before = self.path.read_bytes()
+        VocabularyStore(DATA, self.path)
+        self.assertEqual(self.path.read_bytes(), before)
+        with self.assertRaises(WordError):
+            self.store.add({**task_payload, 'kanji': '別', 'vocabulary_answers': [{'kana': 'invalid', 'kanji': '別'}]})
+
     def test_write_failure_keeps_file_and_snapshot(self):
         before = self.path.read_bytes()
         catalog = self.store.catalog

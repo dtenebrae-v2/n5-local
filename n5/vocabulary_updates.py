@@ -45,6 +45,12 @@ def apply_updates(data_directory, path):
         used_ids.add(word['id'])
         existing.add(identity(word))
         changed = True
+    bundled_tasks = {identity(w): w for w in bundled['words'] if 'vocabulary_task' in w}
+    for word in document['words']:
+        task = bundled_tasks.get(identity(word))
+        if task and task['meanings'] == word['meanings'] and 'vocabulary_task' not in word:
+            word['vocabulary_task'] = copy.deepcopy(task['vocabulary_task'])
+            changed = True
     if changed:
         validate(document, collections)
         write_document(path, document)

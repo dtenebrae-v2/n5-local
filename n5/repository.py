@@ -54,7 +54,7 @@ class VocabularyRepository:
             'kanji': word['kanji'], 'furigana': ' / '.join(r['kana'] for r in word['readings']),
             'romaji': ' / '.join(r['romaji'] for r in word['readings']),
             'meaning': '; '.join(word['meanings']['en']), 'type': word['verb_type'],
-            'context': word['context'],
+            'context': word['context'], 'vocabulary_task': word.get('vocabulary_task'),
             'source_url': next((s for s in word['sources'] if s.endswith('/' + collection)),
                                next(iter(word['sources']), '')),
             'readings': word['readings'], 'meanings': word['meanings'],

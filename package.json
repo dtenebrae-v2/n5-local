@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "test:ui": "node tests/frontend.cjs",
-    "test:forms": "node --test tests/conjugation.test.mjs tests/verb-forms.test.mjs"
+    "test:forms": "node --test tests/conjugation.test.mjs tests/verb-forms.test.mjs tests/training-progress.test.mjs"
   },
   "devDependencies": {
     "playwright": "1.62.1"

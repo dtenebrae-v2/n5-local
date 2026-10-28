@@ -21,6 +21,8 @@ export function openAddWord(catalog, pageSignal) {
         <div id="new-groups" class="game-modes">Сначала выберите раздел</div></fieldset>
       <details class="word-optional"><summary>Необязательные поля</summary>
         <label>Пример / пояснение<textarea name="context" maxlength="2000" rows="2"></textarea></label>
+        <label>Задание на английском<input name="vocabulary_prompt" maxlength="500" placeholder="to wear — upper-body clothing"></label>
+        <label>Другие допустимые ответы (кана | написание, по одному на строку)<textarea name="vocabulary_answers" rows="2" maxlength="4000"></textarea></label>
         <label>Источник<input name="source" type="url" maxlength="1000" placeholder="https://…"></label>
       </details>
       <p id="add-word-error" role="alert"></p>
@@ -94,6 +96,8 @@ export function openAddWord(catalog, pageSignal) {
       readings: [...readings.children].map(row => ({ kana: row.querySelector('[name=kana]').value.trim(), romaji: row.querySelector('[name=romaji]').value.trim() })),
       meanings: form.elements.meaning.value.split('\n').map(value => value.trim()).filter(Boolean),
       collection: selectedCollection(), group: selectedCollection() === 'complete' ? null : selectedGroup(),
+      vocabulary_prompt: form.elements.vocabulary_prompt.value.trim(),
+      vocabulary_answers: form.elements.vocabulary_answers.value.split('\n').map(s => s.trim()).filter(Boolean).map(line => { const [kana, written] = line.split('|').map(s => s.trim()); return { kana, kanji: written || kana }; }),
       context: form.elements.context.value.trim(), source: form.elements.source.value.trim(),
     };
     saving = true;

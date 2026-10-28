@@ -30,6 +30,15 @@ class RepositoryTests(unittest.TestCase):
         complete['readings'][0]['kana'] = 'broken'
         self.assertEqual(REPOSITORY.words({'collection': ['complete'], 'q': ['青い']})['entries'][0]['readings'][0]['kana'], 'あおい')
 
+    def test_vocabulary_tasks_distinguish_ambiguous_glosses(self):
+        rows = {w['id']: w for w in REPOSITORY.words({}, paginate=False)}
+        self.assertNotEqual(rows[8]['vocabulary_task']['prompt'], rows[789]['vocabulary_task']['prompt'])
+        self.assertEqual({a['kana'] for a in rows[336]['vocabulary_task']['answers']}, {'ゼロ', 'れい'})
+        data = load(DATA, COLLECTIONS)
+        data['words'][0]['vocabulary_task'] = {'prompt': 'test', 'answers': []}
+        with self.assertRaises(ValueError):
+            validate(data, COLLECTIONS)
+
     def test_export_does_not_paginate(self):
         self.assertEqual(len(REPOSITORY.words({'collection': ['nouns'], 'limit': ['1']}, paginate=False)), 439)
 

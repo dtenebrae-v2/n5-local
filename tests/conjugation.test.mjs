@@ -122,7 +122,7 @@ test('Loanword long vowels accept romaji vowels and the kana length mark', () =>
   assert.equal(checkAnswer(exerciseFor(adjective('コーヒー'), 'noun', 'past'), 'kohideshita').status, 'incorrect');
 });
 
-test('Vocabulary accepts alternate readings, optional phrases and matching translations', async () => {
+test('Vocabulary accepts readings and explicit alternatives, never matching translations', async () => {
   const { vocabularyExercise } = await import('../static/js/vocabulary-exercise.js');
   const japan = { meaning: 'Japan', readings: [{ kana: 'にほん' }, { kana: 'にっぽん' }] };
   assert.equal(checkAnswer(vocabularyExercise(japan), 'nippon').status, 'correct');
@@ -132,7 +132,9 @@ test('Vocabulary accepts alternate readings, optional phrases and matching trans
   assert.equal(checkAnswer(phrase, 'douitashimashite').status, 'correct');
   assert.equal(checkAnswer(phrase, 'iiedouitashimashite').status, 'correct');
   const same = [{ meaning: 'zero', readings: [{ kana: 'ゼロ' }] }, { meaning: 'zero', readings: [{ kana: 'れい' }] }];
-  assert.equal(checkAnswer(vocabularyExercise(same[0], same), 'rei').status, 'correct');
+  assert.equal(checkAnswer(vocabularyExercise(same[0], same), 'rei').status, 'incorrect');
+  same[0].vocabulary_task = { prompt: 'zero', answers: [{ kana: 'ゼロ', kanji: 'ゼロ' }, { kana: 'れい', kanji: '零' }] };
+  assert.equal(checkAnswer(vocabularyExercise(same[0]), 'rei').status, 'correct');
   assert.equal(checkAnswer(vocabularyExercise({ meaning: 'coffee', readings: [{ kana: 'コーヒー' }] }), 'koohii').status, 'correct');
 });
 
@@ -163,4 +165,14 @@ test('Closest answer follows the entered alternative without accepting errors', 
   assert.equal(closestAnswer(exercise, 'janadeshita'), '学生じゃなかったです（がくせいじゃなかったです）');
   assert.equal(closestAnswer(exercise, 'gakuseidehaarimasendeshita'), '学生ではありませんでした（がくせいではありませんでした）');
   assert.equal(checkAnswer(exercise, 'gakuseijanadeshita').status, 'incorrect');
+});
+
+test('Error hints use the selected rule and exceptions', () => {
+  const verb = (kana, type, form) => exerciseFor({ kanji: kana, readings: [{ kana }], type }, 'verb', form);
+  assert.match(verb('およぐ', 'Godan', 'te').hint, /ぐ заменяется на いで/);
+  assert.match(verb('いく', 'Godan', 'te').hint, /Исключение 行く/);
+  assert.match(verb('かう', 'Godan', 'plain_negative').hint, /う заменяется на わない/);
+  assert.match(verb('ある', 'Godan', 'plain_negative').hint, /Исключение/);
+  assert.match(verb('たべる', 'Ichidan', 'te').hint, /る заменяется на て/);
+  assert.match(verb('くる', 'Irregular', 'te').hint, /くる → きて/);
 });

@@ -39,7 +39,7 @@ module.exports = async function gameChecks(page, base) {
   await submit();
   assert.equal(await feedback.getAttribute('data-status'), 'correct');
   await submit();
-  assert.equal(await score.innerText(), 'С первой попытки: 1 из 1');
+  assert.equal(await score.innerText(), 'С первой попытки: 0 из 1');
   const first = await question.getAttribute('data-word');
   await input.press('Shift+Enter');
   assert.notEqual(await question.getAttribute('data-word'), first);
@@ -47,22 +47,22 @@ module.exports = async function gameChecks(page, base) {
   assert.equal(await input.evaluate(el => el === document.activeElement), true);
   await submit();
   assert.equal(await feedback.getAttribute('data-status'), 'incorrect');
-  assert.match(await feedback.innerText(), /Ответ:/);
-  assert.equal(await score.innerText(), 'С первой попытки: 1 из 2');
+  assert.match(await feedback.innerText(), /Правильный ответ:/);
+  assert.equal(await score.innerText(), 'С первой попытки: 0 из 2');
   await input.fill('でした');
   await submit();
   assert.equal(await feedback.getAttribute('data-status'), 'incorrect');
   await input.fill(await expected());
   await submit();
   assert.equal(await feedback.getAttribute('data-status'), 'correct');
-  assert.equal(await score.innerText(), 'С первой попытки: 1 из 2');
+  assert.equal(await score.innerText(), 'С первой попытки: 0 из 2');
   await page.locator('#game-next').click();
   await page.locator('#practice-reveal').click();
-  assert.match(await feedback.innerText(), /Ответ:/);
-  assert.equal(await score.innerText(), 'С первой попытки: 1 из 3');
+  assert.match(await feedback.innerText(), /Правильный ответ:/);
+  assert.equal(await score.innerText(), 'С первой попытки: 0 из 3');
   await page.locator('#game-next').click();
   await page.locator('#game-next').click();
-  assert.equal(await score.innerText(), 'С первой попытки: 1 из 4');
+  assert.equal(await score.innerText(), 'С первой попытки: 0 из 4');
   await page.locator('#game-kind input[value="verbs"]').check();
   await page.locator('#game-mode input[value=all]').check();
   assert.equal(await score.innerText(), 'С первой попытки: 0 из 0');
@@ -96,7 +96,7 @@ module.exports = async function gameChecks(page, base) {
   const seen = new Set();
   for (let i = 0; i < 12; i++) {
     const id = await question.getAttribute('data-word');
-    assert.ok(!seen.has(id), 'Words should not repeat within a round');
+    // Skipped words are deliberately repeated after several questions.
     seen.add(id);
     await page.locator('#game-next').click();
   }

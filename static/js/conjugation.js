@@ -1,3 +1,4 @@
+import { exerciseHint } from './exercise-hint.js';
 import { verbForms, VERB_FORM_LABELS } from './verb-forms.js';
 // Polite forms verified against Japan Foundation / TUFS; sources are linked in the practice view.
 import { toHiragana, toRomaji } from '../vendor/wanakana-5.3.1.js';
@@ -71,7 +72,7 @@ export function exerciseFor(entry, kind, form) {
     const written = writtenAnswer(entry, kind, reading, answer);
     return written !== answer ? `${written}（${answer}）` : answer;
   });
-  return { answers, displayAnswers, reading, rule, form, kind };
+  return { answers, displayAnswers, reading, rule, form, kind, hint: exerciseHint(entry, kind, form, reading, answers[0]) };
 }
 
 function writtenAnswer(entry, kind, reading, answer) {

@@ -34,14 +34,15 @@ module.exports = async function practiceChecks(page, base) {
   await input.press('Enter');
   assert.deepEqual(await page.locator('.practice-dialog').boundingBox(), beforeAnswer);
   assert.deepEqual(await input.boundingBox(), beforeInput);
-  assert.equal(await feedback.innerText(), 'Верно: 行きました（いきました）');
+  assert.equal(await feedback.locator('.feedback-expected [lang=ja]').innerText(), '行きました（いきました）');
   await answer('ました', 'incorrect');
-  assert.equal(await feedback.innerText(), 'Неверно: ました · Ближайший ответ: 行きました（いきました）');
+  assert.match(await feedback.innerText(), /Ваш ответ: ました/);
+  assert.match(await feedback.innerText(), /Godan/);
   assert.deepEqual(await page.locator('.practice-dialog').boundingBox(), beforeAnswer);
   assert.deepEqual(await input.boundingBox(), beforeInput);
   assert.equal(await input.getAttribute('aria-invalid'), 'true');
   assert.equal(await feedback.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(255, 235, 231)');
-  await answer('', 'incorrect', 'Ответ: 行きました');
+  await answer('', 'incorrect', 'Правильный ответ: 行きました');
   await answer('sh', 'incomplete');
   await answer('ＩＫＩＭＡＳＨＩＴＡ', 'correct', 'いきました');
   await input.evaluate((element) => { element.focus(); element.setSelectionRange(2, 3); });
@@ -53,7 +54,7 @@ module.exports = async function practiceChecks(page, base) {
   await input.pressSequentially('ikimasen');
   await input.press('Enter');
   assert.equal(await input.inputValue(), 'いきません');
-  assert.equal(await feedback.innerText(), 'Верно: 行きません（いきません）');
+  assert.equal(await feedback.locator('.feedback-expected [lang=ja]').innerText(), '行きません（いきません）');
   await page.locator('#practice-target input[value=\"past_negative\"]').check();
   await answer('ikimasendeshita', 'correct', 'いきませんでした');
   await page.keyboard.press('Escape');
@@ -67,10 +68,11 @@ module.exports = async function practiceChecks(page, base) {
   for (const ending of ['dehaarimasendeshita', 'jaarimasendeshita', 'dehanakattadesu', 'janakattadesu']) {
     await answer('gakusei' + ending, 'correct');
   }
-  await answer('gakuseijanadeshita', 'incorrect', 'Ближайший ответ: 学生じゃなかったです');
+  await answer('gakuseijanadeshita', 'incorrect', 'Правильный ответ: 学生じゃなかったです');
   await page.locator('#practice-reveal').click();
   assert.match(await feedback.innerText(), /がくせいじゃなかったです/);
-  assert.match(await feedback.innerText(), /がくせいではありませんでした/);
+  await page.locator('#practice-alternatives summary').click();
+  assert.match(await page.locator('#practice-alternatives').innerText(), /がくせいではありませんでした/);
   assert.equal(await feedback.evaluate(el => el.scrollWidth <= el.clientWidth), true);
   console.log('PASS noun endings and accepted negative alternatives');
 
@@ -142,7 +144,7 @@ module.exports = async function practiceChecks(page, base) {
     element.dispatchEvent(new CompositionEvent('compositionend', { data: 'たべました', bubbles: true }));
   });
   await input.press('Enter');
-  assert.equal(await feedback.innerText(), 'Верно: 食べました（たべました）');
+  assert.equal(await feedback.locator('.feedback-expected [lang=ja]').innerText(), '食べました（たべました）');
   console.log('PASS native kana composition guard');
 
   if (process.env.SCREENSHOT_DIR) {
@@ -163,9 +165,9 @@ module.exports = async function practiceChecks(page, base) {
   const fixedInput = await input.evaluate(el => el.getBoundingClientRect().top + window.scrollY);
   await page.locator('#practice-reveal').click();
   assert.equal(await input.evaluate(el => el.getBoundingClientRect().top + window.scrollY), fixedInput);
-  await feedback.evaluate(el => { el.scrollTop = el.scrollHeight; });
-  assert.ok(await feedback.evaluate(el => el.scrollTop > 0));
-  assert.equal(await feedback.evaluate(el => el.scrollWidth <= el.clientWidth && getComputedStyle(el).overflowY === 'auto'), true);
+  assert.equal(await feedback.evaluate(el => el.scrollWidth <= el.clientWidth && getComputedStyle(el).overflowY === 'visible'), true);
+  await page.locator('#practice-alternatives summary').click();
+  assert.ok(await page.locator('#practice-alternatives li').count() > 1);
   await page.locator('.practice-close').click();
   await page.setViewportSize({ width: 1440, height: 1000 });
   console.log('PASS mobile practice dialog');

@@ -71,7 +71,17 @@ def validate(document, collections):
     ids, fingerprints = set(), set()
     for i, word in enumerate(document['words']):
         path = f'words[{i}]'
-        keys(word, WORD_FIELDS, set(), path)
+        keys(word, WORD_FIELDS, {'vocabulary_task'}, path)
+        if 'vocabulary_task' in word:
+            task = word['vocabulary_task']
+            keys(task, {'prompt', 'answers'}, set(), path + '.vocabulary_task')
+            text(task['prompt'], path + '.vocabulary_task.prompt')
+            require(isinstance(task['answers'], list) and 1 <= len(task['answers']) <= 30, path, 'expected 1–30 explicit vocabulary answers')
+            for answer in task['answers']:
+                keys(answer, {'kana', 'kanji'}, set(), path + '.vocabulary_task.answers')
+                text(answer['kana'], path + '.vocabulary_task.answers.kana')
+                text(answer['kanji'], path + '.vocabulary_task.answers.kanji')
+                require(all('ぁ' <= ch <= 'ゖ' or 'ァ' <= ch <= 'ヶ' or ch == 'ー' for ch in answer['kana']), path, 'vocabulary answers must be kana')
         integer(word['id'], path + '.id')
         require(word['id'] not in ids, path, 'duplicate word ID')
         ids.add(word['id'])
