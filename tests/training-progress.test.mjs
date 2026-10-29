@@ -31,3 +31,13 @@ test('Te filters distinguish Godan endings, Ichidan and exceptions', () => {
   assert.equal(teGroup(word('たべる', 'Ichidan')), 'ichidan');
   assert.equal(teGroup(word('くる', 'Irregular')), 'irregular');
 });
+
+test('A correct answer with a hint is separate from errors', () => {
+  const progress = loadProgress({ getItem: () => null });
+  const card = { word: { entry: { id: 1, kanji: '行く' }, collection: 'verbs', kind: 'verb' }, form: 'te' };
+  recordAttempt(progress, card, 'incorrect', 'いきて', 'いって');
+  recordAttempt(progress, card, 'hinted', 'いって', 'いって');
+  assert.equal(Object.keys(progress.mistakes).length, 0);
+  assert.equal(progress.stats['1:te'].hinted, 1);
+  assert.equal(progress.stats['1:te'].correct, 0);
+});

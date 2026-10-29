@@ -11,6 +11,7 @@ from n5.vocabulary import load
 class VocabularyRepository:
     def __init__(self, vocabulary, collections):
         document = load(vocabulary, {item['id'] for item in collections})
+        self._practice_kinds = {item['id']: item.get('practice_kind') for item in collections}
         self._words = {word['id']: word for word in document['words']}
         self._groups = {group['id']: group for group in document['groups']}
         self._collections = {item['id']: [] for item in collections}
@@ -59,8 +60,17 @@ class VocabularyRepository:
                                next(iter(word['sources']), '')),
             'readings': word['readings'], 'meanings': word['meanings'],
             'related_groups': self._related_groups(word),
+            'practice_kind': next((self._practice_kinds.get(m['collection']) for m in word['memberships'] if self._practice_kinds.get(m['collection'])), None),
         }
         return row
+
+    def training_words(self):
+        entries = []
+        for word in self._words.values():
+            membership = next((m for m in word['memberships'] if self._practice_kinds.get(m['collection'])),
+                              next((m for m in word['memberships'] if m['collection'] != 'complete'), word['memberships'][0]))
+            entries.append(self._entry(word, membership))
+        return deepcopy(entries)
 
     def _matching(self, params):
         collection = params.get('collection', [''])[0]

@@ -104,6 +104,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.send(catalog.public)
         if path == '/api/groups':
             return self.send(repository.groups(params.get('collection', [None])[0]))
+        if path == '/api/training-words':
+            return self.send({'entries': repository.training_words()})
         if path == '/api/words':
             return self.send(repository.words(params))
         if path == '/api/export.csv':

@@ -1,13 +1,14 @@
+const { choose, openOptions } = require('./game-settings.cjs');
 const assert = require('node:assert/strict');
 module.exports = async (page, base) => {
   await page.evaluate(() => localStorage.removeItem('n5.training.v1'));
   await page.goto(base + '/jlpt/n5/practice');
   await page.waitForSelector('#game-question[data-word]');
-  await page.locator('#game-task input[value=grammar]').check();
-  assert.equal(await page.locator('#game-kind').isVisible(), false);
-  assert.equal(await page.locator('#game-mode').isVisible(), false);
-  await page.locator('#game-options > summary').click();
-  await page.locator('#game-topic input[value=particles]').check();
+  await choose(page, '#game-task input[value=grammar]');
+  assert.equal(await page.locator('#game-kind').evaluate(el => !el.hidden), false);
+  assert.equal(await page.locator('#game-mode').evaluate(el => !el.hidden), false);
+  await openOptions(page);
+  await choose(page, '#game-topic input[value=particles]');
   const data = await (await page.request.get(base + '/api/grammar-practice')).json();
   const input = page.locator('#practice-answer');
   const question = page.locator('#game-question');
@@ -23,7 +24,7 @@ module.exports = async (page, base) => {
     assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'), 'correct', task.id);
     await input.press('Shift+Enter');
   }
-  await page.locator('#game-topic input[value=requests]').check();
+  await choose(page, '#game-topic input[value=requests]');
   const id = await question.getAttribute('data-word');
   await input.fill('あ'); await input.press('Enter');
   assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'), 'incorrect');
@@ -45,14 +46,14 @@ module.exports = async (page, base) => {
   const task = data.exercises.find(e => e.id === id);
   await input.fill(task.answers[0].kana); await input.press('Enter'); await input.press('Shift+Enter');
   assert.match(await page.locator('#game-summary').innerText(), /С первой попытки: 1 из 1/);
-  await page.locator('#game-options > summary').click();
-  await page.locator('#game-source input[value=all]').check();
-  await page.locator('#game-task input[value=forms]').check();
-  assert.equal(await page.locator('#game-kind').isVisible(), true);
+  await openOptions(page);
+  await choose(page, '#game-source input[value=all]');
+  await choose(page, '#game-task input[value=forms]');
+  assert.equal(await page.locator('#game-kind').evaluate(el => !el.hidden), true);
   assert.ok(!(await question.getAttribute('data-word')).startsWith('grammar:'));
-  await page.locator('#game-task input[value=grammar]').check();
-  await page.locator('#game-source input[value=all]').check();
-  await page.locator('#game-topic input[value=adjectives]').check();
+  await choose(page, '#game-task input[value=grammar]');
+  await choose(page, '#game-source input[value=all]');
+  await choose(page, '#game-topic input[value=adjectives]');
   await input.fill('あ'); await input.press('Enter');
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: process.env.SCREENSHOT_DIR + '/n5-grammar-mobile.png', fullPage: true });

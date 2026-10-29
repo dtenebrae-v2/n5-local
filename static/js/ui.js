@@ -37,7 +37,8 @@ export function errorPage(base) {
   return `
     <div class="empty">
       <h1>Не удалось открыть страницу</h1>
-      <p>Проверьте соединение с локальным сервисом и обновите страницу.</p>
+      <p>Проверьте соединение с локальным сервисом и повторите загрузку.</p>
+      <button type="button" class="primary" id="retry-page">Повторить</button>
       <a href="${base}">Открыть словарь →</a>
     </div>
   `;

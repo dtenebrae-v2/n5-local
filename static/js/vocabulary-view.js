@@ -44,6 +44,7 @@ ${thematic ? '<div class="filter-heading">ГРУППЫ</div>' : ''}
 }
 
 function wordRow(entry, kind, showGroup = true) {
+  kind = entry.practice_kind || kind;
   const practice = exerciseFor(entry, kind, 'past');
   const names = entry.related_groups?.map(group => groupLabels[group.name] || group.name);
   const groupText = names ? (names.join(' · ') || '—') : (groupLabels[entry.group_name] || entry.group_name);
@@ -51,9 +52,9 @@ function wordRow(entry, kind, showGroup = true) {
     <tr>
       <td><span class="japanese-word" lang="ja">${esc(entry.kanji)}</span>
         ${practice || kind === 'verb' ? '<div class="word-actions">' : ''}
-        ${kind === 'verb' ? `<button type="button" class="practice-launch" data-conjugation="${entry.id}">Спряжение</button>` : ''}
+        ${kind === 'verb' ? `<button type="button" class="practice-launch" data-conjugation="${entry.id}">Таблица спряжения</button>` : ''}
         ${practice ? `<button type="button" class="practice-launch" data-practice="${entry.id}"
-          aria-label="Формы: ${esc(entry.kanji)}">Формы</button>` : ''}
+          aria-label="Формы: ${esc(entry.kanji)}">Практика форм</button>` : ''}
         ${practice || kind === 'verb' ? '</div>' : ''}
       </td>
       <td class="reading-col">

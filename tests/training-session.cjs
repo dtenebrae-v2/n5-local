@@ -1,10 +1,11 @@
+const { choose, openOptions } = require('./game-settings.cjs');
 const assert = require('node:assert/strict');
 
 module.exports = async function trainingSessionChecks(page, base) {
   await page.evaluate(() => localStorage.removeItem('n5.training.v1'));
   await page.goto(base + '/jlpt/n5/practice');
   await page.waitForSelector('#game-question[data-word]');
-  await page.locator('#game-mode input[value=te]').check();
+  await choose(page, '#game-mode input[value=te]');
   const input = page.locator('#practice-answer');
   const question = page.locator('#game-question');
   const first = await question.getAttribute('data-word');
@@ -13,9 +14,24 @@ module.exports = async function trainingSessionChecks(page, base) {
   }
   assert.equal(await question.getAttribute('data-word'), first, 'First error returns after three other questions');
   assert.equal(await question.getAttribute('data-form'), 'te');
-  await page.locator('#game-options > summary').click();
-  await page.locator('#game-te-group input[value=iku]').check();
-  await page.locator('#game-length input[value="10"]').check();
+  await choose(page, '#game-length input[value="10"]');
+  for (let i = 0; i < 4; i++) {
+    await input.fill('あ'); await input.press('Enter'); await input.press('Shift+Enter');
+  }
+  assert.match(await page.locator('#game-progress').innerText(), /Повтор ошибки · выполнено 4 из 10/);
+  await page.reload();
+  await page.waitForSelector('#game-question[data-word]');
+  assert.match(await page.locator('#game-progress').innerText(), /Повтор ошибки · выполнено 4 из 10/);
+  for (let i = 0; i < 40 && await page.locator('#game-summary').isHidden(); i++) await input.press('Shift+Enter');
+  await page.waitForSelector('#game-summary:not([hidden])');
+  const completed = await page.evaluate(() => JSON.parse(localStorage.getItem('n5.training.v1')).session.attempts);
+  const main = completed.filter(a => !a.repeat);
+  assert.equal(main.length, 10, 'Retries do not consume the question limit');
+  assert.equal(new Set(main.map(a => a.id)).size, 10, 'Main questions use distinct words when the pool is large enough');
+  assert.ok(completed.length > 10);
+  await openOptions(page);
+  await choose(page, '#game-te-group input[value=iku]');
+  await choose(page, '#game-length input[value="10"]');
   assert.equal(await question.getAttribute('data-word'), '44');
   await input.fill('いっ');
   await page.reload();
@@ -33,13 +49,15 @@ module.exports = async function trainingSessionChecks(page, base) {
   await input.press('Enter');
   assert.equal(await page.locator('#game-score').innerText(), 'С первой попытки: 1 из 1');
   await input.press('Shift+Enter');
-  for (let i = 1; i < 10; i++) await input.press('Shift+Enter');
+  for (let i = 0; i < 40 && await page.locator('#game-summary').isHidden(); i++) await input.press('Shift+Enter');
   await page.waitForSelector('#game-summary:not([hidden])');
-  assert.equal(await page.locator('.training-results tbody tr').count(), 10);
+  assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('n5.training.v1')).session.attempts.filter(a => !a.repeat).length), 10);
+  assert.ok(await page.locator('.training-results tbody tr').count() > 10);
   assert.match(await page.locator('#game-summary').innerText(), /Пропущено/);
   await page.reload();
   await page.waitForSelector('#game-summary:not([hidden])');
-  assert.equal(await page.locator('.training-results tbody tr').count(), 10);
+  assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('n5.training.v1')).session.attempts.filter(a => !a.repeat).length), 10);
+  assert.ok(await page.locator('.training-results tbody tr').count() > 10);
   await page.locator('#game-repeat').click();
   await page.waitForSelector('#game-question[data-word]');
   assert.equal(await question.getAttribute('data-word'), '44');
@@ -55,10 +73,10 @@ module.exports = async function trainingSessionChecks(page, base) {
   await page.evaluate(() => localStorage.removeItem('n5.training.v1'));
   await page.goto(base + '/jlpt/n5/practice');
   await page.waitForSelector('#game-question[data-word]');
-  await page.locator('#game-kind input[value=nouns]').check();
-  await page.locator('#game-options > summary').click();
-  await page.locator('#game-topic input[value="nouns:food"]').check();
-  await page.locator('#game-form input[value="past_negative"]').check();
+  await choose(page, '#game-kind input[value=nouns]');
+  await openOptions(page);
+  await choose(page, '#game-topic input[value="nouns:food"]');
+  await choose(page, '#game-form input[value="past_negative"]');
   assert.equal(await question.getAttribute('data-form'), 'past_negative');
   await input.fill('あ'); await input.press('Enter');
   await page.reload();
@@ -74,7 +92,7 @@ module.exports = async function trainingSessionChecks(page, base) {
   const food = await (await page.request.get(base + '/api/words?group=nouns:food&limit=200')).json();
   const foodId = await question.getAttribute('data-word');
   assert.ok(food.entries.some(entry => String(entry.id) === foodId));
-  await page.locator('#game-options > summary').click();
+  await openOptions(page);
   await page.locator('#game-keyboard > summary').click();
   await page.locator('[data-shortcut=next]').click();
   await page.keyboard.press('Control+ArrowRight');
@@ -82,6 +100,7 @@ module.exports = async function trainingSessionChecks(page, base) {
   await page.keyboard.press('Control+ArrowRight');
   assert.match(await page.locator('#shortcut-status').innerText(), /свободное сочетание/);
   await page.keyboard.press('Escape');
+  await page.locator('#settings-apply').click();
   await page.reload();
   await page.waitForSelector('#game-question[data-word]');
   assert.match(await page.locator('#game-shortcuts').innerText(), /Ctrl\+ArrowRight/);

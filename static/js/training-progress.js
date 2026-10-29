@@ -30,7 +30,7 @@ export function recordAttempt(progress, card, status, answer, expected) {
   const stats = progress.stats[key] ||= { correct: 0, incorrect: 0, answer: 0, skip: 0 };
   stats[status] = (stats[status] || 0) + 1;
   stats.lastReviewed = new Date().toISOString();
-  if (status === 'correct') delete progress.mistakes[key];
+  if (status === 'correct' || status === 'hinted') delete progress.mistakes[key];
   else progress.mistakes[key] = attempt;
   return attempt;
 }

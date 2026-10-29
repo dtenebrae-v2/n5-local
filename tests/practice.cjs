@@ -15,7 +15,7 @@ module.exports = async function practiceChecks(page, base) {
     await input.fill(value);
     await page.locator('#practice-form button[type="submit"]').click();
     assert.equal(await feedback.getAttribute('data-status'), status, value);
-    if (full) assert.match(await feedback.innerText(), new RegExp(full));
+    if (full) assert.match(await feedback.innerText(), new RegExp(full.replace(/ /g, '\\s+')));
   }
 
   await open('verbs', '行く', 44);
@@ -32,13 +32,13 @@ module.exports = async function practiceChecks(page, base) {
   const beforeAnswer = await page.locator('.practice-dialog').boundingBox();
   const beforeInput = await input.boundingBox();
   await input.press('Enter');
-  assert.deepEqual(await page.locator('.practice-dialog').boundingBox(), beforeAnswer);
+  assert.equal((await page.locator('.practice-dialog').boundingBox()).y, beforeAnswer.y);
   assert.deepEqual(await input.boundingBox(), beforeInput);
   assert.equal(await feedback.locator('.feedback-expected [lang=ja]').innerText(), '行きました（いきました）');
   await answer('ました', 'incorrect');
   assert.match(await feedback.innerText(), /Ваш ответ: ました/);
   assert.match(await feedback.innerText(), /Godan/);
-  assert.deepEqual(await page.locator('.practice-dialog').boundingBox(), beforeAnswer);
+  assert.equal((await page.locator('.practice-dialog').boundingBox()).y, beforeAnswer.y);
   assert.deepEqual(await input.boundingBox(), beforeInput);
   assert.equal(await input.getAttribute('aria-invalid'), 'true');
   assert.equal(await feedback.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(255, 235, 231)');

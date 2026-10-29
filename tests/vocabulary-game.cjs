@@ -1,3 +1,4 @@
+const { choose, openOptions } = require('./game-settings.cjs');
 const assert = require('node:assert/strict');
 
 module.exports = async function vocabularyGameChecks(page, base) {
@@ -6,18 +7,14 @@ module.exports = async function vocabularyGameChecks(page, base) {
     { id: 9002, kanji: 'コーヒー', meaning: 'coffee', readings: [{ kana: 'コーヒー' }] },
     { id: 9003, kanji: '試験語', meaning: 'user-added test word', readings: [{ kana: 'しけんご' }], vocabulary_task: { prompt: 'test term — an explicitly clarified task', answers: [{ kana: 'しけんご', kanji: '試験語' }, { kana: 'てすとご', kanji: '試験語' }] } },
   ];
-  const mock = route => {
-    const collection = new URL(route.request().url()).searchParams.get('collection');
-    const entries = collection === 'complete' ? words : collection === 'nouns' ? words.slice(0, 2) : [];
-    return route.fulfill({ json: { entries, total: entries.length } });
-  };
+  const mock = route => route.fulfill({ json: { entries: words.map(w => ({ ...w, collection: 'nouns', practice_kind: 'noun' })) } });
   await page.evaluate(() => localStorage.removeItem('n5.training.v1'));
-  await page.route('**/api/words?*', mock);
+  await page.route('**/api/training-words', mock);
   try {
     await page.goto(base + '/jlpt/n5/practice');
     await page.waitForSelector('#game-question[data-word]');
-    await page.locator('#game-task input[value=vocabulary]').check();
-    assert.equal(await page.locator('#game-mode').isVisible(), false);
+    await choose(page, '#game-task input[value=vocabulary]');
+    assert.equal(await page.locator('#game-mode').evaluate(el => !el.hidden), false);
     assert.equal(await page.locator('#practice-rules').isVisible(), true);
     const input = page.locator('#practice-answer');
     const question = page.locator('#game-question');
@@ -43,7 +40,7 @@ module.exports = async function vocabularyGameChecks(page, base) {
     await input.fill('あ'); await input.press('Enter');
     assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'), 'incorrect');
     assert.ok((await page.locator('#practice-feedback').innerText()).includes(current.kanji));
-    assert.match(await page.locator('#practice-feedback').innerText(), /Правильный ответ:.*[ぁ-ゖ]/);
+    assert.match(await page.locator('#practice-feedback').innerText(), /Правильный ответ:[\s\S]*[ぁ-ゖ]/);
     await page.locator('#practice-reveal').click();
     assert.match(await page.locator('#practice-feedback').innerText(), /Правильный ответ:/);
     await page.keyboard.press('F1');
@@ -51,13 +48,13 @@ module.exports = async function vocabularyGameChecks(page, base) {
     assert.ok((await page.locator('.practice-rules-dialog').innerText()).includes(current.kanji));
     await page.keyboard.press('Escape');
     await page.waitForSelector('.practice-rules-dialog', { state: 'detached' });
-    await page.locator('#game-task input[value=forms]').check();
-    assert.equal(await page.locator('#game-mode').isVisible(), true);
+    await choose(page, '#game-task input[value=forms]');
+    assert.equal(await page.locator('#game-mode').evaluate(el => !el.hidden), true);
     assert.equal(await page.locator('#practice-rules').isVisible(), true);
     assert.equal(await page.locator('#game-score').innerText(), 'С первой попытки: 0 из 0');
     assert.equal(await question.locator('.practice-reading').count(), 1);
   } finally {
-    await page.unroute('**/api/words?*', mock);
+    await page.unroute('**/api/training-words', mock);
   }
   console.log('PASS vocabulary game: hidden reading, all words, romaji, alternatives, score and mode switching');
 };

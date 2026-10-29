@@ -46,6 +46,14 @@ class ServiceTests(unittest.TestCase):
         with urlopen(cls.base + path, timeout=3) as response:
             return json.load(response)
 
+    def test_training_words_are_unique_and_include_practice_kind(self):
+        rows = self.get('/api/training-words')['entries']
+        self.assertEqual(len(rows), 851)
+        self.assertEqual(len({r['id'] for r in rows}), 851)
+        self.assertEqual(next(r for r in rows if r['id'] == 44)['practice_kind'], 'verb')
+        all_words = self.get('/api/words?collection=complete&q=ikimasu')['entries']
+        self.assertTrue(all(r.get('practice_kind') == 'verb' for r in all_words))
+
     def test_grammar_practice(self):
         data = self.get('/api/grammar-practice')
         self.assertEqual(len(data['exercises']), 39)

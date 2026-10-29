@@ -41,7 +41,7 @@ export async function mountVocabulary(content, catalog, collection, signal) {
     history.replaceState({}, '', location.pathname + (address.size ? '?' + address : ''));
   }
 
-  async function update() {
+  async function update(focusResults = false) {
     if (signal.aborted) return;
     const ownRevision = ++revision;
     const query = new URLSearchParams({ collection: collection.id, limit: PAGE_SIZE, offset: state.offset });
@@ -63,7 +63,7 @@ export async function mountVocabulary(content, catalog, collection, signal) {
       const lastOffset = Math.max(0, Math.ceil(data.total / PAGE_SIZE) - 1) * PAGE_SIZE;
       if (state.offset > lastOffset) {
         state.offset = lastOffset;
-        return update();
+        return update(focusResults);
       }
       resultCount.textContent = data.total
         ? `Найдено ${data.total} · показаны ${state.offset + 1}–${state.offset + data.entries.length}`
@@ -71,10 +71,11 @@ export async function mountVocabulary(content, catalog, collection, signal) {
       visibleEntries = data.entries;
       results.innerHTML = wordGroups(data.entries, collection, groups);
       pages.innerHTML = pagination(data.total, state.offset);
+      if (focusResults) { results.tabIndex = -1; results.focus({ preventScroll: true }); results.scrollIntoView({ block: 'start', behavior: 'instant' }); }
     } catch (error) {
       if (error.name === 'AbortError' || signal.aborted || ownRevision !== revision) return;
       resultCount.textContent = '';
-      results.innerHTML = '<p class="error">Не удалось загрузить слова. Проверьте, запущен ли сервис, и обновите страницу.</p>';
+      results.innerHTML = '<p class="error">Не удалось загрузить слова. Проверьте, запущен ли сервис, и повторите запрос.</p><button class="secondary" id="retry-words">Повторить</button>';
     } finally {
       if (!signal.aborted && ownRevision === revision) results.setAttribute('aria-busy', 'false');
     }
@@ -94,6 +95,7 @@ export async function mountVocabulary(content, catalog, collection, signal) {
   content.addEventListener('click', (event) => {
     const button = event.target.closest('button');
     if (!button || button.disabled) return;
+    if (button.id === 'retry-words') { update(true); return; }
     if (button.id === 'add-word') {
       openAddWord(catalog, signal);
       return;
@@ -105,7 +107,7 @@ export async function mountVocabulary(content, catalog, collection, signal) {
     }
     if (button.hasAttribute('data-practice')) {
       const entry = visibleEntries.find((item) => String(item.id) === button.dataset.practice);
-      if (entry) openPractice(entry, collection.practice_kind, signal);
+      if (entry) openPractice(entry, entry.practice_kind || collection.practice_kind, signal);
       return;
     }
     if (button.hasAttribute('data-group')) {
@@ -124,7 +126,7 @@ export async function mountVocabulary(content, catalog, collection, signal) {
       return;
     }
     clearTimeout(timer);
-    update();
+    update(button.id === 'next' || button.id === 'previous' || button.id === 'reset-search');
   }, { signal });
 
   await update();

@@ -1,3 +1,4 @@
+const { choose, openOptions } = require('./game-settings.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -6,7 +7,7 @@ module.exports = async function gameChecks(page, base) {
   await page.goto(base + '/jlpt/n5/practice');
   await page.waitForSelector('#game-question[data-word]');
   assert.equal(await page.locator('#navigation a.active').innerText(), 'Тренировка');
-  await page.locator('#game-kind input[value="nouns"]').check();
+  await choose(page, '#game-kind input[value="nouns"]');
   assert.equal(await page.locator('select').count(), 0);
   const input = page.locator('#practice-answer');
   const feedback = page.locator('#practice-feedback');
@@ -63,10 +64,10 @@ module.exports = async function gameChecks(page, base) {
   await page.locator('#game-next').click();
   await page.locator('#game-next').click();
   assert.equal(await score.innerText(), 'С первой попытки: 0 из 4');
-  await page.locator('#game-kind input[value="verbs"]').check();
-  await page.locator('#game-mode input[value=all]').check();
+  await choose(page, '#game-kind input[value="verbs"]');
+  await choose(page, '#game-mode input[value=all]');
   assert.equal(await score.innerText(), 'С первой попытки: 0 из 0');
-  await page.locator('#game-mode input[value=te]').check();
+  await choose(page, '#game-mode input[value=te]');
   assert.equal(await page.locator('#game-kind input[value=verbs]').isChecked(), true);
   for (let i = 0; i < 4; i++) {
     assert.equal(await question.getAttribute('data-form'), 'te');
@@ -88,11 +89,11 @@ module.exports = async function gameChecks(page, base) {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.keyboard.press('Escape');
   await page.waitForSelector('.practice-rules-dialog', { state: 'detached' });
-  await page.locator('#game-kind input[value=nouns]').check();
+  await choose(page, '#game-kind input[value=nouns]');
   assert.equal(await page.locator('#game-mode input[value=polite]').isChecked(), true);
-  await page.locator('#game-mode input[value=te]').check();
+  await choose(page, '#game-mode input[value=te]');
   assert.equal(await question.getAttribute('data-form'), 'te');
-  await page.locator('#game-mode input[value=all]').check();
+  await choose(page, '#game-mode input[value=all]');
   const seen = new Set();
   for (let i = 0; i < 12; i++) {
     const id = await question.getAttribute('data-word');

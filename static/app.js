@@ -21,11 +21,12 @@ function scrollToAnchor() {
   }
 }
 
-async function render() {
+async function render(focusPage = false) {
   pageController?.abort();
   pageController = new AbortController();
   const { signal } = pageController;
   const route = resolveRoute(location.pathname, catalog);
+  content.classList.toggle('practice-screen', route.type === 'game');
   if (route.canonical) history.replaceState({}, '', route.canonical + location.search + location.hash);
   document.title = `${route.title} · N5`;
   menu.classList.remove('open');
@@ -56,7 +57,10 @@ async function render() {
     } else {
       content.innerHTML = `<h1>Страница не найдена</h1><a href="${catalog.base}">Открыть словарь →</a>`;
     }
-    if (!signal.aborted) scrollToAnchor();
+    if (!signal.aborted) {
+      if (focusPage && !location.search.includes('search=1') && !document.activeElement.closest('#content')) content.focus({ preventScroll: true });
+      scrollToAnchor();
+    }
   } catch (error) {
     if (!signal.aborted && error.name !== 'AbortError') content.innerHTML = errorPage(catalog.base);
   }
@@ -65,7 +69,7 @@ async function render() {
 function navigate(url) {
   history.pushState({}, '', url);
   window.scrollTo(0, 0);
-  render();
+  render(true);
 }
 
 function bindNavigation() {
@@ -89,13 +93,14 @@ function bindNavigation() {
   document.addEventListener('keydown', (event) => {
     if (document.querySelector('dialog[open]')) return;
     const active = document.activeElement;
+    if (event.ctrlKey || event.altKey || event.metaKey || event.isComposing || event.defaultPrevented) return;
     if (event.key !== '/' || active.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(active.tagName)) return;
     event.preventDefault();
     const input = document.querySelector('#word-search');
     if (input) input.focus();
     else navigate(`${catalog.base}/vocabulary/complete?search=1`);
   });
-  window.addEventListener('popstate', render);
+  window.addEventListener('popstate', () => render(true));
   document.addEventListener('vocabulary-updated', event => {
     catalog = event.detail.catalog;
     menu.innerHTML = navigation(catalog);
@@ -115,3 +120,5 @@ async function start() {
 }
 
 start();
+
+content.addEventListener('click', event => { if (event.target.closest('#retry-page')) { if (catalog) render(true); else start(); } });
