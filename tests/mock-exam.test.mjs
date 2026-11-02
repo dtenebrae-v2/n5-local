@@ -34,7 +34,7 @@ test('section boundaries, persisted snapshots, unanswered and incorrect answers'
   const exam = createExam(bank,1,[],0), first = exam.sections[0];
   first.answers[first.questions[0].id] = first.questions[0].correct;
   first.answers[first.questions[1].id] = (first.questions[1].correct+1)%4;
-  assert.deepEqual(results(exam)[0],{label:first.label,total:20,correct:1,skipped:18});
+  assert.deepEqual(results(exam)[0],{label:first.label,total:20,correct:1,incorrect:1,skipped:0,unopened:18});
   completeSection(exam,true);
   assert.equal(exam.phase,'between'); assert.equal(exam.deadline,null);
   assert.ok(validSession(JSON.parse(JSON.stringify(exam))));

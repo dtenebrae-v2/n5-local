@@ -45,7 +45,7 @@ export function createExam(bank, seed, recent = [], now = Date.now()) {
       if (picked.length !== count) throw new Error(`Недостаточно заданий: ${type}`);
       for (const q of picked) {
         const options = shuffle(q.choices.map((text, i) => ({ text, correct: i === q.correct })), random);
-        questions.push({ ...q, passageText: passages.get(q.passage) || '', translation: bank.passages.find(p => p.id === q.passage)?.translation || '', choices: options.map(o => o.text), correct: options.findIndex(o => o.correct) });
+        questions.push({ ...q, passageText: passages.get(q.passage) || '', translation: bank.passages.find(p => p.id === q.passage)?.translation || '', wordRefs: bank.passages.find(p => p.id === q.passage)?.words || [], choices: options.map(o => o.text), correct: options.findIndex(o => o.correct) });
       }
     }
     return { label: section.label, minutes: section.minutes, questions, answers: {}, marked: [], timedOut: false, elapsed: {}, started: null };
@@ -69,7 +69,9 @@ export function startNextSection(exam, now = Date.now()) {
 export function results(exam) {
   return exam.sections.map(section => ({ label: section.label, total: section.questions.length,
     correct: section.questions.filter(q => section.answers[q.id] === q.correct).length,
-    skipped: section.questions.filter(q => !Number.isInteger(section.answers[q.id])).length }));
+    incorrect: section.questions.filter(q => Number.isInteger(section.answers[q.id]) && section.answers[q.id] !== q.correct).length,
+    skipped: section.questions.filter(q => !Number.isInteger(section.answers[q.id]) && section.viewed?.includes(q.id)).length,
+    unopened: section.questions.filter(q => !Number.isInteger(section.answers[q.id]) && !section.viewed?.includes(q.id)).length }));
 }
 export function validSession(exam) {
   return exam?.version === 1 && ['active','between','finished'].includes(exam.phase)

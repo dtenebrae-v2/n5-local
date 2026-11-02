@@ -22,15 +22,15 @@ module.exports=async function preparationChecks(page,base) {
  await page.reload();await page.waitForSelector('#prep-feedback[data-correct]');
  assert.equal((await read()).topics.dates.attempts,2,'Restoring feedback does not count another answer');
  await page.keyboard.press('Shift+Enter');await page.locator('[data-action=unknown]').click();
- assert.equal((await read()).topics.dates.skipped,1);
+ assert.equal((await read()).topics.dates.unknown,1);
  await page.keyboard.press('Shift+Enter');
  const current=(await read()).session.questions[(await read()).session.index].id;
  await page.goto(base+'/jlpt/n5/vocabulary/complete');await page.goto(base+'/jlpt/n5/preparation');await page.waitForSelector('#prep-heading');
  assert.equal((await read()).session.questions[(await read()).session.index].id,current);
  await page.locator('[data-action=home]').click();
- await page.locator('[data-start=weak]').click();
+ await page.locator('[data-start=mistakes]').click();
  saved=await read();assert.ok(saved.session.questions.every(v=>v.topic==='dates'));
- assert.ok(saved.session.questions[0].fresh,'Weak-topic practice prioritizes unseen examples');
+ assert.ok(saved.session.questions.every(q=>saved.skills[q.skill]?.needsPractice),'Only unresolved words and rules are practised');
  await page.locator('[data-action=home]').click();
  await page.setViewportSize({width:320,height:640});
  await page.locator('.prep-stats summary').first().click();
@@ -40,6 +40,40 @@ module.exports=async function preparationChecks(page,base) {
  await page.clock.fastForward(11*60000);
  await page.reload();await page.locator('[data-start=due]').click();
  assert.ok((await read()).session.questions.every(v=>v.topic==='dates'));
+ await page.locator('[data-action=home]').click();
+ await page.locator('.prep-topics summary').click();
+ await page.locator('[data-topic=reading]').click();
+ let reading=(await read()).session.questions[0];
+ while(!reading.wordRefs?.length) {
+  await page.locator('[data-action=unknown]').click();await page.keyboard.press('Shift+Enter');
+  const state=(await read()).session;reading=state.questions[state.index];
+ }
+ assert.equal(await page.locator('.reading-evidence').count(),0);
+ assert.equal(await page.locator('[data-reading-word]').count(),0);
+ await page.keyboard.press(String((reading.correct+1)%4+1));await page.keyboard.press('Enter');
+ assert.ok(await page.locator('.reading-evidence').count()>0);
+ assert.match(await page.locator('#prep-feedback').innerText(),/Почему ваш вариант не подходит/);
+ if(process.env.SCREENSHOT_DIR)await page.screenshot({path:process.env.SCREENSHOT_DIR+'/n5-reading-review-mobile.png',fullPage:true});
+ const word=page.locator('[data-reading-word]').first();
+ assert.ok(await word.count(),'Annotated words can be opened after review');
+ if(await word.count()) {
+  await word.click();
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+  if(process.env.SCREENSHOT_DIR)await page.screenshot({path:process.env.SCREENSHOT_DIR+'/n5-reading-word-mobile.png',fullPage:false});
+  await page.locator('[data-bookmark]').click();
+  assert.equal((await read()).bookmarks.length,1);
+  await page.locator('dialog .practice-close').click();
+ }
+ await page.locator('[data-action=home]').click();await page.locator('.prep-topics summary').click();
+ await page.locator('[data-topic=kanji]').click();
+ const plain=(await read()).session.questions[0];
+ await page.locator('[data-action=hint]').click();
+ assert.ok(!(await page.locator('#prep-feedback').innerText()).includes(plain.explanation),'Rule does not reuse the current answer');
+ await page.locator('[data-action=hint]').click();
+ assert.match(await page.locator('#prep-feedback').innerText(),/другой пример/);
+ await page.locator('[data-action=hint]').click();
+ assert.equal((await read()).session.submitted.status,'revealed');
+ assert.match(await page.locator('#prep-feedback').innerText(),/Ответ открыт/);
  await page.setViewportSize({width:1440,height:1000});
  await page.goto(base+'/jlpt/n5/vocabulary/complete');
  console.log('PASS preparation: new examples, hints, saved session, no result jumps, topic schedule and mobile stats');

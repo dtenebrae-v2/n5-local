@@ -1,7 +1,8 @@
 import { getJSON } from './api.js';
 import { escapeHTML as esc } from './ui.js';
-import { loadPreparation, savePreparation, archiveExam } from './preparation-progress.js';
+import { loadPreparation, savePreparation, hydrateSkills, archiveExam } from './preparation-progress.js';
 import { preparationStats } from './preparation-view.js';
+import { passageHTML, choiceExplanation, bindReading } from './reading-view.js';
 import { highlightedRule } from './form-highlight.js';
 import { MOCK_KEY, BLUEPRINT, createExam, completeSection, startNextSection, results, validSession } from './mock-engine.js';
 
@@ -12,6 +13,7 @@ export async function mountMockExam(root, signal) {
   if (signal.aborted) return;
   let exam = null, history = [], storageError = false, preparationError = false;
   const preparation = loadPreparation();
+  hydrateSkills(preparation,bank);
   let lastTick = Date.now(), ticks = 0;
   function tick() {
     const now = Date.now();
@@ -31,7 +33,15 @@ export async function mountMockExam(root, signal) {
   try {
     const saved = JSON.parse(localStorage.getItem(MOCK_KEY));
     history = Array.isArray(saved?.history) ? saved.history : [];
-    if (validSession(saved?.exam)) exam = saved.exam;
+    if (validSession(saved?.exam)) {
+      exam = saved.exam;
+      const byId = new Map(bank.items.map(q=>[q.id,q]));
+      for(const section of exam.sections) for(const q of section.questions) {
+        const item = byId.get(q.id);
+        if(item) for(const key of ['skill','hint','evidence','choiceNotes']) q[key]=item[key];
+        q.wordRefs ||= bank.passages.find(p=>p.id===q.passage)?.words || [];
+      }
+    }
   } catch { /* A damaged save should not prevent a new test. */ }
   let review = false;
   function save() {
@@ -68,17 +78,17 @@ export async function mountMockExam(root, signal) {
         return `<li>${esc(label)}: ${questions.filter(({q,answer}) => q.correct === answer).length} из ${questions.length}</li>`;
       }).join('');
       shell(`<h2 tabindex="-1" id="mock-heading">Результаты</h2><p>Вариант ${exam.seed} · ${new Date(exam.created).toLocaleDateString('ru-RU')}</p>
-      ${scores.map(s => `<p><strong>${esc(s.label)}: ${s.correct} из ${s.total} (${Math.round(s.correct / s.total * 100)}%)</strong> · Пропущено: ${s.skipped}</p>`).join('')}
+      ${scores.map(s => `<p><strong>${esc(s.label)}: ${s.correct} из ${s.total} (${Math.round(s.correct / s.total * 100)}%)</strong> · Ошибки: ${s.incorrect} · Открыто без ответа: ${s.skipped} · Не открыто: ${s.unopened}</p>`).join('')}
       <details><summary>Результат по типам заданий</summary><ul>${breakdown}</ul></details>
       ${preparationStats(preparation,bank)}
-      <p><a class="lesson-link" href="/jlpt/n5/preparation?mode=weak">Отработать слабые темы →</a></p>
+      <p><a class="lesson-link" href="/jlpt/n5/preparation?mode=mistakes">Отработать ошибки →</a></p>
       <p>Это доля правильных ответов, а не официальный балл JLPT.</p>
       <div class="practice-actions"><button class="secondary" data-action="review">${review ? 'Скрыть разбор' : 'Разобрать ответы'}</button><button class="primary" data-action="start">Новый вариант</button></div>
       ${review ? exam.sections.map(s => `<h3>${esc(s.label)}</h3>${s.questions.map((q,i) => {
         const a = s.answers[q.id], correct = a === q.correct;
-        return `<article class="mock-review" data-correct="${correct}"><h4>${i + 1}. ${esc(TYPES[q.type])} · ${correct ? 'Верно' : a === undefined ? 'Пропущено' : 'Ошибка'}</h4>
-        ${q.passageText ? `<p class="mock-passage" lang="ja">${esc(q.passageText)}</p>` : ''}<p lang="ja">${esc(q.prompt)}</p>
-        <p class="mock-user">Ваш ответ: <span lang="ja">${esc(q.choices[a] ?? '—')}</span></p><p class="mock-correct">Правильный ответ: <span lang="ja">${esc(q.choices[q.correct])}</span></p><p>${highlightedRule(q.explanation)}</p>${q.translation?`<details><summary>Перевод текста</summary><p>${esc(q.translation)}</p></details>`:''}</article>`;
+        return `<article class="mock-review" data-correct="${correct}"><h4>${i + 1}. ${esc(TYPES[q.type])} · ${correct ? 'Верно' : a === undefined ? (s.viewed?.includes(q.id)?'Открыто, без ответа':'Не открыто') : 'Ошибка'}</h4>
+        ${q.passageText ? `<p class="mock-passage" lang="ja">${passageHTML(q,true)}</p>` : ''}<p lang="ja">${esc(q.prompt)}</p>
+        <p class="mock-user">Ваш ответ: <span lang="ja">${esc(q.choices[a] ?? '—')}</span></p><p class="mock-correct">Правильный ответ: <span lang="ja">${esc(q.choices[q.correct])}</span></p>${choiceExplanation(q,a)}<p>${highlightedRule(q.explanation)}</p>${q.translation?`<details><summary>Перевод текста</summary><p>${esc(q.translation)}</p></details>`:''}</article>`;
       }).join('')}`).join('') : ''}`);
     } else {
       const section = exam.sections[exam.section], q = section.questions[exam.index];
@@ -110,6 +120,7 @@ export async function mountMockExam(root, signal) {
     const s = exam.sections[exam.section];
     exam.index = Math.max(0, Math.min(s.questions.length - 1, index)); save(); render();
   }
+  bindReading(root,signal,()=>exam?.phase==='finished'?exam.sections.flatMap(s=>s.questions):[],preparation,()=>{preparationError=!savePreparation(preparation);save();return !preparationError;});
   root.addEventListener('change', event => {
     if (!event.target.matches('[name="mock-choice"]') || exam?.phase !== 'active') return;
     if (Date.now() >= exam.deadline) return finishBlock(true);

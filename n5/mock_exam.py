@@ -8,6 +8,10 @@ def load_mock_exam(path):
     data = json.loads(path.read_text(encoding='utf-8'))
     passages = {p['id'] for p in data['passages']}
     topics = {t['id'] for t in data['topics']}
+    skills = {s['id']: s for s in data['skills']}
+    if len(skills) != len(data['skills']) or any(not s.get('label') or not s.get('rule') or not s.get('example') or s.get('topic') not in topics for s in skills.values()):
+        raise ValueError('Invalid preparation skill')
+    passage_text = {p['id']: p['text'] for p in data['passages']}
     if len(passages) != len(data['passages']) or len(topics) != len(data['topics']):
         raise ValueError('Duplicate mock metadata')
     if any(not p.get('text') or not p.get('translation') for p in data['passages']):
@@ -28,6 +32,13 @@ def load_mock_exam(path):
             raise ValueError('Unknown mock type or topic')
         if not item.get('sources') or any(type(i) is not int or not 0 <= i < len(data['sources']) for i in item['sources']):
             raise ValueError('Invalid mock source')
+        if item.get('skill') not in skills:
+            raise ValueError('Missing preparation rule or hint')
+        if item.get('type') in {'reading-text', 'text-grammar'}:
+            if not item.get('evidence') or any(not quote or quote not in passage_text[item['passage']] for quote in item['evidence']):
+                raise ValueError('Invalid reading evidence')
+            if set(item.get('choiceNotes', {})) != set(choices) or any(not note for note in item['choiceNotes'].values()):
+                raise ValueError('Incomplete reading explanation')
         signature = (item['prompt'], item.get('passage'), tuple(sorted(choices)))
         if signature in signatures:
             raise ValueError('Duplicate mock content')
