@@ -53,7 +53,7 @@ export function archiveExam(progress, exam, now = Date.now()) {
   return true;
 }
 export function weakTopics(progress) {
-  return Object.entries(progress.topics).filter(([,s]) => s.attempts && (s.correct / s.attempts < .8 || s.streak < 2)).map(([id]) => id);
+  return Object.entries(progress.topics).filter(([,s]) => s.attempts && s.correct / s.attempts < .8).map(([id]) => id);
 }
 export function dueTopics(progress, now = Date.now()) {
   return Object.entries(progress.topics).filter(([,s]) => s.due <= now).map(([id]) => id);

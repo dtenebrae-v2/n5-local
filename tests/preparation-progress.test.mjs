@@ -52,3 +52,22 @@ test('profile storage and practice session survive reload and blocked storage',(
  value='{bad';assert.deepEqual(loadPreparation(storage),emptyProgress());
  assert.equal(savePreparation(p,{setItem(){throw Error();}}),false);
 });
+
+test('perfect same-day results are not weak; scheduled review remains independent',()=>{
+ const p=emptyProgress(),questions=bank.items.filter(q=>q.topic==='kanji').slice(0,10);
+ for(const q of questions) noteAnswer(p,q,'correct',1000,now);
+ assert.equal(p.topics.kanji.streak,1);
+ assert.ok(!weakTopics(p).includes('kanji'));
+ assert.ok(!dueTopics(p,now).includes('kanji'));
+ assert.ok(dueTopics(p,now+DAY).includes('kanji'));
+ assert.equal(practicePlan(bank,p,{mode:'weak',now}).questions.length,0);
+ assert.ok(practicePlan(bank,p,{mode:'due',now:now+DAY}).questions.length>0);
+});
+test('weak threshold uses unassisted accuracy below 80 percent, including skips and hints',()=>{
+ const p=emptyProgress(),q=bank.items[0];
+ for(let i=0;i<4;i++) noteAnswer(p,q,'correct',1000,now);
+ noteAnswer(p,q,'skipped',1000,now);
+ assert.ok(!weakTopics(p).includes(q.topic));
+ noteAnswer(p,q,'hinted',1000,now);
+ assert.ok(weakTopics(p).includes(q.topic));
+});

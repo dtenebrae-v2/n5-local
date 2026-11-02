@@ -31,7 +31,7 @@ export async function mountPreparation(root, signal) {
       <div class="practice-actions"><button class="primary" data-start="all">Смешанная тренировка</button><button class="secondary" data-start="weak" ${weak.length?'':'disabled'}>Слабые темы</button><button class="secondary" data-start="due" ${due.length?'':'disabled'}>Повторить сегодня</button></div>
       <p class="practice-help">До 10 заданий за занятие. Сначала новые примеры; один вопрос из каждого семейства. Правило доступно при ответе, перевод — после него.</p>
       <details class="prep-topics"><summary>Выбрать тему (${bank.topics.length})</summary><div class="prep-topic-buttons">${bank.topics.map(t=>`<button class="secondary" data-topic="${esc(t.id)}">${esc(t.label)} <small>${bank.items.filter(q=>q.topic===t.id).length}</small></button>`).join('')}</div></details>
-      ${preparationStats(progress,bank)}<p><a href="/jlpt/n5/mock">Открыть пробный N5 →</a></p>`);
+      ${preparationStats(progress,bank)}`);
   }
   function render(focus=false) {
     if(!session)return home();
