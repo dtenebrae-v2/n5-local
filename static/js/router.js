@@ -7,6 +7,9 @@ export function resolveRoute(pathname, catalog) {
   if (path === `${catalog.base}/practice`) return { type: 'game', title: 'Тренировка' };
   if (path === `${catalog.base}/mock`) return { type: 'mock', title: 'Пробный N5' };
   if (path === `${catalog.base}/preparation`) return { type: 'preparation', title: 'Подготовка N5' };
+  if (path === `${catalog.base}/library`) return { type:'library',title:'Библиотека' };
+  const book = path.match(new RegExp(`^${catalog.base}/library/([0-9]+)$`));
+  if (book) return { type:'book',title:'Книга',bookId:book[1] };
   for (const [key, type] of [['collections', 'words'], ['sections', 'section'], ['lessons', 'grammar']]) {
     const item = catalog[key].find((entry) => entry.path === path);
     if (item) return { type, title: item.label, item };

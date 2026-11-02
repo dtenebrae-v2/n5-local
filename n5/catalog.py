@@ -31,5 +31,5 @@ class Catalog:
             'base': BASE, 'collections': collections,
             'sections': sections, 'lessons': lesson_metadata,
         }
-        self.routes = {'/', '/jlpt', BASE, f'{BASE}/vocabulary', f'{BASE}/practice', f'{BASE}/mock', f'{BASE}/preparation'}
+        self.routes = {'/', '/jlpt', BASE, f'{BASE}/vocabulary', f'{BASE}/practice', f'{BASE}/mock', f'{BASE}/preparation', f'{BASE}/library'}
         self.routes.update(item['path'] for item in collections + sections + lesson_metadata)

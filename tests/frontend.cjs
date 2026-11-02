@@ -9,6 +9,7 @@ const addWordChecks = require('./add-word.cjs');
 const readline = require('node:readline');
 const { chromium } = require('playwright');
 const gameChecks = require('./game.cjs');
+const libraryChecks = require('./library.cjs');
 const preparationChecks = require('./preparation.cjs');
 const mockChecks = require('./mock-exam.cjs');
 const uxChecks = require('./ux-refresh.cjs');
@@ -203,6 +204,7 @@ async function main() {
     await uxChecks(page, base);
     await mockChecks(page, base);
     await preparationChecks(page, base);
+    await libraryChecks(page, base);
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(base + '/jlpt/n5');

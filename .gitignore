@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 node_modules/
 test-results/
+
+data/library-files/

@@ -1,12 +1,14 @@
 """Offline N5 HTTP server; Python standard library only."""
 import json
 import os
+import re
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
 from n5.grammar_practice import load_grammar
 from n5.mock_exam import load_mock_exam
+from n5.library import Library, byte_range
 from n5.export import vocabulary_csv
 from n5.store import VocabularyStore, WordError
 from n5.vocabulary import unique_keys
@@ -15,6 +17,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / 'data'
 GRAMMAR_PRACTICE = load_grammar(DATA / 'grammar-practice.json')
 MOCK_EXAM = load_mock_exam(DATA / 'mock-exam.json')
+LIBRARY = Library(DATA / 'library.json', Path(os.environ.get('N5_LIBRARY_DIR', DATA / 'library-files')))
 STORE = VocabularyStore(DATA, Path(os.environ.get('N5_VOCABULARY', DATA / 'vocabulary.json')))
 CATALOG = STORE.catalog
 REPOSITORY = CATALOG.repository
@@ -24,9 +27,14 @@ ASSETS = {
 }
 # Serve only known static files; arbitrary request paths never become filesystem paths.
 ASSETS.update({
-    '/' + path.relative_to(ROOT / 'static').as_posix(): (path, 'text/javascript; charset=utf-8')
-    for path in (ROOT / 'static').rglob('*.js')
+    '/' + path.relative_to(ROOT / 'static').as_posix(): (path, {
+        '.js':'text/javascript; charset=utf-8', '.mjs':'text/javascript; charset=utf-8',
+        '.ttf':'font/ttf', '.txt':'text/plain; charset=utf-8',
+    }.get(path.suffix, 'application/octet-stream'))
+    for path in (ROOT / 'static').rglob('*')
+    if path.is_file() and path.suffix in {'.js','.mjs','.bcmap','.pfb','.ttf','.txt'}
 })
+
 CSP = (
     "default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; "
     "connect-src 'self'; frame-ancestors 'none'; base-uri 'none'"
@@ -59,7 +67,13 @@ class Handler(BaseHTTPRequestHandler):
         path = url.path.rstrip('/') or '/'
         params = parse_qs(url.query)
         try:
-            if path.startswith('/api/'):
+            media = re.fullmatch(r'/library-files/(\d+)/(pdf|print|audio)',path)
+            reader = re.fullmatch(r'/jlpt/n5/library/(\d+)',path)
+            if media:
+                self.serve_library_file(*media.groups(), attachment=params.get('download')==['1'])
+            elif reader and reader.group(1) in LIBRARY.books:
+                self.send((ROOT / 'static/index.html').read_bytes(), 'text/html; charset=utf-8')
+            elif path.startswith('/api/'):
                 self.serve_api(path, params)
             elif path in ASSETS:
                 filename, mime = ASSETS[path]
@@ -100,6 +114,8 @@ class Handler(BaseHTTPRequestHandler):
         repository = catalog.repository
         if path == '/api/health':
             return self.send({'status': 'ok', 'entries': repository.count()})
+        if path == '/api/library':
+            return self.send(LIBRARY.public())
         if path == '/api/mock-exam':
             return self.send(MOCK_EXAM)
         if path == '/api/grammar-practice':
@@ -127,6 +143,44 @@ class Handler(BaseHTTPRequestHandler):
             lesson = catalog.lessons.get(params.get('path', [''])[0])
             return self.send(lesson) if lesson else self.not_found()
         self.not_found()
+
+    def serve_library_file(self,bid,kind,attachment=False):
+        found=LIBRARY.asset(bid,kind)
+        if not found:
+            return self.not_found()
+        path,asset=found
+        size=path.stat().st_size
+        etag='"'+asset['sha256']+'"'
+        requested=self.headers.get('Range')
+        if self.headers.get('If-Range') not in {None,etag}:
+            requested=None
+        if not requested and self.headers.get('If-None-Match')==etag:
+            return self.send(b'', status=304, extra={'ETag':etag})
+        try:
+            start,end,partial=byte_range(requested,size)
+        except ValueError:
+            return self.send(b'', status=416, extra={'Content-Range':f'bytes */{size}'})
+        self.send_response(206 if partial else 200)
+        self.send_header('Content-Type','audio/mpeg' if kind=='audio' else 'application/pdf')
+        self.send_header('Content-Length',str(end-start+1))
+        self.send_header('Accept-Ranges','bytes')
+        self.send_header('ETag',etag)
+        self.send_header('Cache-Control','private, max-age=3600')
+        self.send_header('X-Content-Type-Options','nosniff')
+        self.send_header('Content-Disposition',f'{"attachment" if attachment else "inline"}; filename="{asset["filename"]}"')
+        if partial:
+            self.send_header('Content-Range',f'bytes {start}-{end}/{size}')
+        self.end_headers()
+        if self.command=='HEAD':
+            return
+        with path.open('rb') as stream:
+            stream.seek(start)
+            remaining=end-start+1
+            while remaining:
+                chunk=stream.read(min(65536,remaining))
+                if not chunk:break
+                self.wfile.write(chunk)
+                remaining-=len(chunk)
 
     def not_found(self):
         self.send({'error': 'Страница не найдена'}, status=404)

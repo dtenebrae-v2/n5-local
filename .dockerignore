@@ -11,3 +11,6 @@ test_repository.py
 package*.json
 
 test_store.py
+
+data/library-files
+test_library.py

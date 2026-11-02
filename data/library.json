@@ -1,0 +1,1551 @@
+{
+  "version": 1,
+  "usage": "personal-noncommercial",
+  "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/",
+  "books": [
+    {
+      "id": "61371",
+      "title": "鏡のない村",
+      "level": 2,
+      "credits": [
+        "再話：NPO多言語多読",
+        "絵：池田あきつ"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 14,
+      "source": "https://tadoku.org/japanese/book/61371/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/61371/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0018e-kagaminonaimura-v2.pdf",
+          "filename": "61371-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 4865948,
+          "sha256": "bf5aac2afe5bd727fee92d3a3bdf1840ead92c139452bffbee8fa377f3299fa8"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0018p-kagaminonaimura-v2.pdf",
+          "filename": "61371-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 4864596,
+          "sha256": "a8bdfcc2c6068a1090fa7de280ad9399ef5c61397da29e6ae2a46b5da52f42d0"
+        },
+        "audio": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0018a-kagaminonaimura.mp3",
+          "filename": "61371-audio.mp3",
+          "permission": "personal-learning-download",
+          "rights_holder": "NPO多言語多読",
+          "narrator": "髙橋 百合恵 Yurie Takahashi",
+          "evidence": "https://tadoku.org/japanese/audio-downloads/wtb/",
+          "bytes": 5862079,
+          "sha256": "7e811ae29480fb3ad712262fa952d33fb23fe5acfa875e9062b0c93ff66ad994"
+        }
+      }
+    },
+    {
+      "id": "5883",
+      "title": "これは何でしょう？",
+      "level": 1,
+      "credits": [
+        "作：粟野 真紀子"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 17,
+      "source": "https://tadoku.org/japanese/book/5883/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/5883/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0003e-korehanandesyou-v2.pdf",
+          "filename": "5883-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 4878197,
+          "sha256": "69a56175c0c1712293c620e9accc826ef9abf3770bc9139db54cdc0ca5911a6e"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0003p-korehanandesyou-v2.pdf",
+          "filename": "5883-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 6681793,
+          "sha256": "37c56cd2bf756edae336455e77174a9389bdcb3130779d2b8c19711259f9efeb"
+        },
+        "audio": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0003a-korehanandesyou.mp3",
+          "filename": "5883-audio.mp3",
+          "permission": "personal-learning-download",
+          "rights_holder": "NPO多言語多読",
+          "narrator": "ジョンソン 知亜紀 Chiaki Johnson",
+          "evidence": "https://tadoku.org/japanese/audio-downloads/wtb/",
+          "bytes": 3002160,
+          "sha256": "f855bca3cedf60094cadadbbdac61d49ca2396af180dbddf63fe6e329656734a"
+        }
+      }
+    },
+    {
+      "id": "64329",
+      "title": "金の斧銀の斧～イソップ物語より",
+      "level": 1,
+      "credits": [
+        "再話：NPO多言語多読",
+        "絵：太田 玲子"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 13,
+      "source": "https://tadoku.org/japanese/book/64329/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/64329/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0020e-kinnoonoginnoono.pdf",
+          "filename": "64329-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 5832701,
+          "sha256": "07ada7298b3983a3786cc79436a8f1327a56c94225130602b5459fb607f3782b"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0020p-kinnoonoginnoono.pdf",
+          "filename": "64329-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 5529444,
+          "sha256": "1ff1e7d390879089e045c99bbb9b6135cf6b3593e6fb305d48c5792fecade542"
+        },
+        "audio": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0020a-kinnoonoginnoono.mp3",
+          "filename": "64329-audio.mp3",
+          "permission": "personal-learning-download",
+          "rights_holder": "NPO多言語多読",
+          "narrator": "橋本 典子 Noriko Hashimoto",
+          "evidence": "https://tadoku.org/japanese/audio-downloads/wtb/",
+          "bytes": 2600554,
+          "sha256": "53d0b2a99cfaf84a11380bae8f24e2dea03ffb9f7278e020ce2eb16922d0bdc8"
+        }
+      }
+    },
+    {
+      "id": "48395",
+      "title": "おばあちゃんがいない",
+      "level": 1,
+      "credits": [
+        "作：くどうみさと、原千裕、Hao Wenyu",
+        "絵：くどうみさと"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 17,
+      "source": "https://tadoku.org/japanese/book/48395/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/48395/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0116e-obaachangainai.pdf",
+          "filename": "48395-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3084011,
+          "sha256": "9e0a364926ad38b7c7f170e224c7f45779596a49c8ee3201cc56b6376b6fbc6d"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0116p-obaachangainai.pdf",
+          "filename": "48395-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2778313,
+          "sha256": "1ffb9f0b6d5f110df18fb2c65363ff6ebbb2154ebaf05fb2ca80d32ff65b4bd6"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/48395/"
+    },
+    {
+      "id": "47659",
+      "title": "日下川の猿猴",
+      "level": 1,
+      "credits": [
+        "作：ケルビー咲野",
+        "絵：坂本直子"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 14,
+      "source": "https://tadoku.org/japanese/book/47659/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/47659/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0114e-enko.pdf",
+          "filename": "47659-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 5066025,
+          "sha256": "b1638174da6811686ad0f9f3eb5418ed67769f756e143977c4d5183504f611ea"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0114p-enko.pdf",
+          "filename": "47659-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 4974236,
+          "sha256": "373f15f5e93f6784308d5bfae9d7871996699b459b97b821d04ec7327fffe8e5"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/47659/"
+    },
+    {
+      "id": "43726",
+      "title": "チワワの花すけ～雪だるま",
+      "level": 1,
+      "credits": [
+        "作：丸山京子"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 17,
+      "source": "https://tadoku.org/japanese/book/43726/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/43726/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0109e-hanasukeyukidaruma-v2.pdf",
+          "filename": "43726-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3890269,
+          "sha256": "014b50406bbc8fc516c74d8a796835b4421a5c0b40d37d7f1d969b2c6d30d178"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0109p-hanasukeyukidaruma-v2.pdf",
+          "filename": "43726-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3909408,
+          "sha256": "6640848f672f76d65f51065753e13c68c1236ab00536721dc42fc970fc883a59"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/43726/"
+    },
+    {
+      "id": "42390",
+      "title": "ぼくのかぞく",
+      "level": 1,
+      "credits": [
+        "作：池田あきつ",
+        "絵：池田あきつ"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 17,
+      "source": "https://tadoku.org/japanese/book/42390/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/42390/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0103e-bokunokazoku.pdf",
+          "filename": "42390-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2765058,
+          "sha256": "8e9f0a8f25693f5192dbdb37f47e788747399fa42a666e15f3d5cfbdcab4e81f"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0103p-bokunokazoku.pdf",
+          "filename": "42390-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2523589,
+          "sha256": "bae76e703094585495d09b13980b9748a600e29cf09aa5e98062cde6fb6806e1"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/42390/"
+    },
+    {
+      "id": "41614",
+      "title": "しあわせ",
+      "level": 1,
+      "credits": [
+        "原作：島崎藤村",
+        "簡約：塚越紗衣、池田あきつ、田中るり子、黒田たちか",
+        "絵：塚越紗衣"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 19,
+      "source": "https://tadoku.org/japanese/book/41614/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/41614/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0101e-shiawase-v2.pdf",
+          "filename": "41614-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 4239811,
+          "sha256": "c29971ad2922095f7120b7441bb8604cb0c9477c40cb393bcce606b1289aaf0b"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0101p-shiawase-v2.pdf",
+          "filename": "41614-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 4004113,
+          "sha256": "28ce8a26de3dcce83a4256b3a98c5ea915cd39b682ba43760dd5649557d0a87e"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/41614/"
+    },
+    {
+      "id": "38533",
+      "title": "落花生はおもしろい！",
+      "level": 1,
+      "credits": [
+        "作：川本かず子、田中るり子、中越尚美、松田緑"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 17,
+      "source": "https://tadoku.org/japanese/book/38533/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/38533/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0090e-rakkasei-v2.pdf",
+          "filename": "38533-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3090346,
+          "sha256": "b3537fd6df5b7e7094cbae8d8375dc2ad86da7d7af3f658bdf74f90bfc695f1b"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0090p-rakkasei-v2.pdf",
+          "filename": "38533-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 6343031,
+          "sha256": "6cf980538f34e3445cb05c238db12d32fee959ab58f6f8c37637427da7e57c8d"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/38533/"
+    },
+    {
+      "id": "38370",
+      "title": "泣く女",
+      "level": 1,
+      "credits": [
+        "再話：ジェニングス榎本 早苗"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 12,
+      "source": "https://tadoku.org/japanese/book/38370/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/38370/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0089e-nakuonna-v2.pdf",
+          "filename": "38370-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3587963,
+          "sha256": "604f3d41a22a22c7cf0b8bb1d59f6a1d05382df69bc77655f3e39466b30521d6"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0089p-nakuonna-v2.pdf",
+          "filename": "38370-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 5860972,
+          "sha256": "d866a3982d3c541e4abfec8cf656a3ddb728fcbab9fe794c0b7e4554f39217c1"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/38370/"
+    },
+    {
+      "id": "9295",
+      "title": "山に行きました",
+      "level": 1,
+      "credits": [
+        "作：ディアナ・ボジャノバ",
+        "絵：ディアナ・ボジャノバ"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 10,
+      "source": "https://tadoku.org/japanese/book/9295/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/9295/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0086e-yamani-v4-1.pdf",
+          "filename": "9295-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1657366,
+          "sha256": "49e628ff0cd84120a08ab5ad4e55e8f77c98d0920363ba5cf4f9d6e06586fd42"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0086p-yamani-v4.pdf",
+          "filename": "9295-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2323064,
+          "sha256": "4606f185888f0faf2d7b885592696ba6b29e177e7ab7b4c192956b770cf3222d"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/9295/"
+    },
+    {
+      "id": "8964",
+      "title": "メキシコの犬",
+      "level": 1,
+      "credits": [
+        "作：フランシスコ・イバン・ロドリゲス・ビジャロボス"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 9,
+      "source": "https://tadoku.org/japanese/book/8964/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/8964/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0084e-mexico-v4.pdf",
+          "filename": "8964-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 775128,
+          "sha256": "c7b374918e999dcce436c2893e74bc198ad84b5a5c2cdbb3bdfba1891db125bc"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0084p-mexico-v4.pdf",
+          "filename": "8964-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1064741,
+          "sha256": "3443464e4eaaf16ba88e922e2b0080141597bb9ae97a3aeafc758db00eb93bd6"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/8964/"
+    },
+    {
+      "id": "8884",
+      "title": "ディアさんの冬休み",
+      "level": 1,
+      "credits": [
+        "作：井尾葵・遠藤和彦・黒田たちか",
+        "絵：井尾葵",
+        "写真：遠藤和彦・黒田たちか"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 13,
+      "source": "https://tadoku.org/japanese/book/8884/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/8884/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0083e-diasanno-v4.pdf",
+          "filename": "8884-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1756699,
+          "sha256": "0db86203205b7fe6cb5faa9c8d2ee2976e43341f60d9be54c408570b6ce68398"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0083p-diasanno-v4.pdf",
+          "filename": "8884-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1977002,
+          "sha256": "56cfc73e069b9e8fbc43f592cb2c8af1b7d06f8c796e8cd5bd9350a62621c3f3"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/8884/"
+    },
+    {
+      "id": "8688",
+      "title": "がんばっているみなさんへ",
+      "level": 1,
+      "credits": [
+        "作：グエン・ビック・ゴック",
+        "絵：グエン・フォン・ホア"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 8,
+      "source": "https://tadoku.org/japanese/book/8688/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/8688/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0081e-ganbatte-v4.pdf",
+          "filename": "8688-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2963411,
+          "sha256": "184ffb26476b8fed5003ca63ed3fad54cc062a1758e89a3b9af7103583694c4e"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0081p-ganbatte-v4.pdf",
+          "filename": "8688-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3758783,
+          "sha256": "b49de8e9da6bbb037f5f4d48cc5187f469f6a64e3fc4f0680e564d88fcaf922a"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/8688/"
+    },
+    {
+      "id": "8576",
+      "title": "ベトナムの生春巻き",
+      "level": 1,
+      "credits": [
+        "作：グェン・ティ・ガン",
+        "写真：グェン・ティ・ガン"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 14,
+      "source": "https://tadoku.org/japanese/book/8576/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/8576/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0078e-namaharumaki-v4.pdf",
+          "filename": "8576-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2710306,
+          "sha256": "5073bd90d629d7067d788c961dbba6007bdc4ad12f0a591703065905bbed0060"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0078p-namaharumaki-v4.pdf",
+          "filename": "8576-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2541492,
+          "sha256": "82d7f033227a2dd6a452e551fae4f5d6639f3d19614f460a4c24b9eb26897272"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/8576/"
+    },
+    {
+      "id": "7957",
+      "title": "ピーターラビット シリーズ②ベンジャミンバニーのお話",
+      "level": 1,
+      "credits": [
+        "原作：ベアトリクス・ポッター",
+        "簡約：井尾 藍"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 22,
+      "source": "https://tadoku.org/japanese/book/7957/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/7957/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0067e-thetaleofbenjaminbunny-v3.pdf",
+          "filename": "7957-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3787195,
+          "sha256": "3823d37e21c8f5cd246ca461a5a85b752957e89704fda2af62771a4bb140e639"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0067p-thetaleofbenjaminbunny-v3.pdf",
+          "filename": "7957-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 7124526,
+          "sha256": "2cf8b3b6c3e85ea2f8d05c7d2e664c7fa8ccb29386931624f92f1e5cef3bcfe8"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/7957/"
+    },
+    {
+      "id": "7787",
+      "title": "デカりんご",
+      "level": 1,
+      "credits": [
+        "作：中野 真由子 ／ 協力：徳永 由佳、松田 緑"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 14,
+      "source": "https://tadoku.org/japanese/book/7787/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/7787/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0065e-dekaringo-v2.pdf",
+          "filename": "7787-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2068817,
+          "sha256": "f183802cc82eff7a1ccda71659d1e67b64484eedd55944e80e74a3cc7e4d1928"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0065p-dekaringo-v2.pdf",
+          "filename": "7787-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3059678,
+          "sha256": "4106f8c666e882b25af9279c6d3f9e645fe43d3172a06267503a5b6e13da894a"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/7787/"
+    },
+    {
+      "id": "7348",
+      "title": "ピーターラビット シリーズ①ピーターラビットのお話",
+      "level": 1,
+      "credits": [
+        "原作：ベアトリクス・ポッター",
+        "簡約：井尾 藍"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 20,
+      "source": "https://tadoku.org/japanese/book/7348/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/7348/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0063e-peterrabbit-v5.pdf",
+          "filename": "7348-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2364353,
+          "sha256": "8bd29968ee33f65d7d8adb6673cc3927bf333fb1e3a4f19f2c8c0e5c782efae1"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0063p-peterrabbit-v5.pdf",
+          "filename": "7348-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2356242,
+          "sha256": "8a0aa4324ef68f1dd7b34d292f1a85eb0d8d350eaebcf40ad12c01fc095eefd7"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/7348/"
+    },
+    {
+      "id": "5371",
+      "title": "チワワの花すけ～帽子とマフラー",
+      "level": 1,
+      "credits": [
+        "作：丸山 京子"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 10,
+      "source": "https://tadoku.org/japanese/book/5371/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/5371/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0031e-chiwawanohanasuke2-v3.pdf",
+          "filename": "5371-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1255398,
+          "sha256": "05d362a04bbb3b17da008800032b82a758a4b75b9c398d21d53b9909f8be8124"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0031p-chiwawanohanasuke2-v3.pdf",
+          "filename": "5371-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1094793,
+          "sha256": "a8d072fb27ebeeef94a752962877bd24fbc330da8d2490c12bce29f6331126dc"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/5371/"
+    },
+    {
+      "id": "4644",
+      "title": "シュモーハウス",
+      "level": 1,
+      "credits": [
+        "作：平和の大切さを伝える日本語教材をつくる会",
+        "絵：山田 夢乃"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 13,
+      "source": "https://tadoku.org/japanese/book/4644/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/4644/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0018e-schmoehouse-v3.pdf",
+          "filename": "4644-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 4414333,
+          "sha256": "cb5aeaeb4ddc034e54e81495ef61d1038eddd429cb1dda58e4df20c0260eff7f"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0018p-schmoehouse-v3.pdf",
+          "filename": "4644-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 6177808,
+          "sha256": "ab050dc49b78e6dd5ad616b8e41fbdae9e66c9f36a76c606f68bfeffbb12b318"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/4644/"
+    },
+    {
+      "id": "4159",
+      "title": "かぼちゃん日本の秋へ",
+      "level": 1,
+      "credits": [
+        "作：リュウ、ナオミ、ササ",
+        "絵：ササ"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 5,
+      "source": "https://tadoku.org/japanese/book/4159/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/4159/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0011e-kabochan-v3.pdf",
+          "filename": "4159-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2361895,
+          "sha256": "144b525337c5e1e5b8304139a3716f0ed610a7d8988b1b1e5d5c1932dbfbda5a"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0011p-kabochan-v3.pdf",
+          "filename": "4159-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3536709,
+          "sha256": "016eb7f72e8e143c126f7cf8de4aea67c9570a31b72a9e4dd1c4b6397b4204bf"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/4159/"
+    },
+    {
+      "id": "4158",
+      "title": "柴犬ディナちゃん、秋の京都へ行く！",
+      "level": 1,
+      "credits": [
+        "作：ディナ、ちえ"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 12,
+      "source": "https://tadoku.org/japanese/book/4158/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/4158/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0010e-shibainudinachan-v3.pdf",
+          "filename": "4158-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2178253,
+          "sha256": "9f962856baff6ff2e5b19ecef74a9b8bd532a395992a8c6b1261fcae09923bf8"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0010p-shibainudinachan-v3.pdf",
+          "filename": "4158-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3751153,
+          "sha256": "20d8a55d05430f1c4f071395cebf903066d5c9d98de6647a7fe200f55adf4adf"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/4158/"
+    },
+    {
+      "id": "44313",
+      "title": "夜の図書館",
+      "level": 2,
+      "credits": [
+        "作：和田朋也、任群、門倉未来",
+        "写真：作田奈苗"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 10,
+      "source": "https://tadoku.org/japanese/book/44313/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/44313/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0110e-yorunotoshokan-v2.pdf",
+          "filename": "44313-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 15238620,
+          "sha256": "c1513c4dffb01dbb3616dac1e05d1858a8cf58d2727cda241032228788e4a343"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0110p-yorunotoshokan-v2.pdf",
+          "filename": "44313-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 15189829,
+          "sha256": "1319d7d79bc2c24433ea1be84092701a20d6d0a2db1bfedc5f433960d44f9983"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/44313/"
+    },
+    {
+      "id": "43311",
+      "title": "キャラメルとあめ玉",
+      "level": 2,
+      "credits": [
+        "原作：夢野久作",
+        "簡約：川名恭子、ジェニングス榎本早苗、塚越紗衣、丸山京子"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 17,
+      "source": "https://tadoku.org/japanese/book/43311/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/43311/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0107e-caramel.pdf",
+          "filename": "43311-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2805999,
+          "sha256": "7d48b8c9a617d3e12b8f871a7df0abebbf4bf6043efbbf7e524e6ecc26105e43"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0107p-caramel.pdf",
+          "filename": "43311-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2562315,
+          "sha256": "c1eece366645913569a27150efc29ab61d0b75f4a3f25f56910c061736a45231"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/43311/"
+    },
+    {
+      "id": "43170",
+      "title": "私の彼氏は油揚げが好き",
+      "level": 2,
+      "credits": [
+        "作：くどうみさと、原千裕、Hao Wenyu、林実幸",
+        "絵：くどうみさと"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 16,
+      "source": "https://tadoku.org/japanese/book/43170/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/43170/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0106e-watasinokaresi.pdf",
+          "filename": "43170-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3561880,
+          "sha256": "e36723674c6d3c0931954d2037a1ef382fb7b9875f0cce70b3ebacf4534ead89"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0106p-watasinokaresi.pdf",
+          "filename": "43170-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3313827,
+          "sha256": "8daa7d8413389206588297664163ae2f5da3e26ab37dcda898c51dbcf1484766"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/43170/"
+    },
+    {
+      "id": "38919",
+      "title": "山田さんの大問題",
+      "level": 2,
+      "credits": [
+        "作：池田あきつ"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 13,
+      "source": "https://tadoku.org/japanese/book/38919/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/38919/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0092e-yamadasan-v3.pdf",
+          "filename": "38919-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2399880,
+          "sha256": "ee63216dccde34aa3a416da228aadcc234833a1e25e7243e233d931acbd79298"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0092p-yamadasan-v3.pdf",
+          "filename": "38919-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3845534,
+          "sha256": "0118dcaedf6d4aa7eb90719aa18140b8ca9a3436ebc71afeb92d88407fdeaca2"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/38919/"
+    },
+    {
+      "id": "6987",
+      "title": "北海道",
+      "level": 2,
+      "credits": [
+        "作：遠藤 和彦"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 14,
+      "source": "https://tadoku.org/japanese/book/6987/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/6987/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0058e-hokkaido.pdf",
+          "filename": "6987-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2671561,
+          "sha256": "0527ecd7b4ca8f034e2e0ad6895d9461eb3f4f6272f68580c275eaad54960c07"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0058p-hokkaido.pdf",
+          "filename": "6987-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1551388,
+          "sha256": "4df096ecbcdb0101d970d5fbaa3f1414b06c94c791a56d6735dc4e6e9d30c28f"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/6987/"
+    },
+    {
+      "id": "5494",
+      "title": "ヴィトリアレジア ブラジル先住民のお話から",
+      "level": 2,
+      "credits": [
+        "再話：アントニオ",
+        "絵：作田 奈苗"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 9,
+      "source": "https://tadoku.org/japanese/book/5494/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/5494/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0035e-victoriaregia-v3-1.pdf",
+          "filename": "5494-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 913133,
+          "sha256": "e319bdc062cb2ca4ed7a1f543ad0f66efa36e3b74a50fb57c196d66c188e4d26"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0035p-victoriaregia-v3-1.pdf",
+          "filename": "5494-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1098330,
+          "sha256": "2c887d405c7302c1d27ca7470121ee7d0d54dc86a73213050b79144b184e554e"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/5494/"
+    },
+    {
+      "id": "5456",
+      "title": "丸メガネ寮母さん",
+      "level": 2,
+      "credits": [
+        "作：任"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 10,
+      "source": "https://tadoku.org/japanese/book/5456/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/5456/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0034e-marumegane-v3.pdf",
+          "filename": "5456-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 4266729,
+          "sha256": "7c58e503ceee6bc3232c8efa27a73c21016e6761c1d1c1d22afeae619b3bdcc1"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0034p-marumegane-v3.pdf",
+          "filename": "5456-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3988290,
+          "sha256": "49e433d07466310d297278cd1d624f9e2d847abe4e46ec97d95b63c5512febfe"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/5456/"
+    },
+    {
+      "id": "5451",
+      "title": "怠け者のフウアン",
+      "level": 2,
+      "credits": [
+        "再話：ゴンザレス・ダリル・ゲイ",
+        "絵：寺田 梨里子"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 10,
+      "source": "https://tadoku.org/japanese/book/5451/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/5451/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0033e-namakemono-v3.pdf",
+          "filename": "5451-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2947323,
+          "sha256": "6b0f964c131357800bef8917ca800a28477b69d9259442c5bfda809df8b1d2b4"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0033p-namakemono-v3.pdf",
+          "filename": "5451-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2710803,
+          "sha256": "350268904fef7658d075bae2a5610167d6732cf1dc397c1d9570d472610ffb06"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/5451/"
+    },
+    {
+      "id": "4914",
+      "title": "わたしとともだちのほしちゃんとねこのどのちゃん",
+      "level": 2,
+      "credits": [
+        "作：池 裕敬（監修：横浜デザイン学院）"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 10,
+      "source": "https://tadoku.org/japanese/book/4914/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/4914/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0022e-hoshichandonochan-v3.pdf",
+          "filename": "4914-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1632059,
+          "sha256": "598197c7984bf6be1d0e97f81ad0481b449d5fe724afb3923087c87a20240a77"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0022p-hoshichandonochan-v3.pdf",
+          "filename": "4914-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2087229,
+          "sha256": "8e036c406bf43415f23068aced941ae8b83604a0f50281266156357400318d1e"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/4914/"
+    },
+    {
+      "id": "3149",
+      "title": "ようこそ別府へ",
+      "level": 2,
+      "credits": [
+        "作：加藤 みゆき"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 18,
+      "source": "https://tadoku.org/japanese/book/3149/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/3149/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0003e-yokosobeppuhe-v2.pdf",
+          "filename": "3149-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2011174,
+          "sha256": "dbe169741b73ae225928385917a9a7a40c848144631e05fdb517a3dcaa8c73c7"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0003p-yokosobeppuhe-v2.pdf",
+          "filename": "3149-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2823597,
+          "sha256": "a71488999f88d3e9240e1d396968bd7503f1bbde2ac2224b605796be610a3a19"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/3149/"
+    },
+    {
+      "id": "3152",
+      "title": "やせうま",
+      "level": 2,
+      "credits": [
+        "作：香月 真由美"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 10,
+      "source": "https://tadoku.org/japanese/book/3152/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/3152/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0002e-yaseuma-v2.pdf",
+          "filename": "3152-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1339514,
+          "sha256": "d01572c6bb7884077be2d665659aba7fa5d260f85e8eafcb684e35cf35664732"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0002p-yaseuma-v2.pdf",
+          "filename": "3152-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1533161,
+          "sha256": "bf026a5f4b54abe5adbdaf52d4bd0941dca8fda56cc8b13f90c5c048051526dd"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/3152/"
+    },
+    {
+      "id": "3155",
+      "title": "吉四六さんの話 ～舟のお金～",
+      "level": 2,
+      "credits": [
+        "作：住田 環",
+        "絵：加藤 守弘"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 7,
+      "source": "https://tadoku.org/japanese/book/3155/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/3155/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0001e-kicchomu-v2.pdf",
+          "filename": "3155-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1107651,
+          "sha256": "e99a3bccd2afadb8c5970fbfa7682c3857712c58b5188b8b85f2313106f19e9b"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0001p-kicchomu-v2.pdf",
+          "filename": "3155-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 979789,
+          "sha256": "18e70e1878cdd229e247705a4d067cbd224ceb223af2f560d535ee1b463fc15f"
+        }
+      },
+      "audio_source": "https://tadoku.org/japanese/book/3155/"
+    },
+    {
+      "id": "65357",
+      "title": "おいしいおかゆ",
+      "level": 2,
+      "credits": [
+        "再話：芙蓉",
+        "絵：芙蓉"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 10,
+      "source": "https://tadoku.org/japanese/book/65357/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/65357/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0122e-oishiiokayu.pdf",
+          "filename": "65357-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1496305,
+          "sha256": "2052504222ca9c97ca1687781dcaa3d8243d7d53eb38f97d3d06d9052e347940"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0122p-oishiiokayu.pdf",
+          "filename": "65357-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1309236,
+          "sha256": "02728a7c4f8ec01dfbaf2651c926cde72deb53eab307f34790cca14a1a06232a"
+        }
+      }
+    },
+    {
+      "id": "64058",
+      "title": "赤い魚と子ども",
+      "level": 2,
+      "credits": [
+        "原作：小川未明",
+        "簡約：NPO多言語多読",
+        "絵：麦牛乳"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 12,
+      "source": "https://tadoku.org/japanese/book/64058/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/64058/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0019e-akaisakanatokodomo-v2.pdf",
+          "filename": "64058-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 7191072,
+          "sha256": "f69e20b2f0a0b2104ddf30bdd423abbad5b627f56bc25446842133e0d5745107"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0019p-akaisakanatokodomo-v2.pdf",
+          "filename": "64058-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 7179159,
+          "sha256": "eb145c5b071c51f7ef9782d0316f565ac2f523ff6309845acb61cba1501b54ed"
+        }
+      }
+    },
+    {
+      "id": "64041",
+      "title": "京都のかえると大阪のかえる",
+      "level": 1,
+      "credits": [
+        "再話：吉田裕美子"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 10,
+      "source": "https://tadoku.org/japanese/book/64041/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/64041/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0121e-kyotoosakakaeru.pdf",
+          "filename": "64041-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 5861408,
+          "sha256": "64248df4c5f22a607061f25b3d73c0444602c523405d475ae7204b53d977cd22"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0121p-kyotoosakakaeru.pdf",
+          "filename": "64041-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 4755319,
+          "sha256": "0cdcd6c8492290b847ddb1318c22e1cb2a8227481d041d75bc87a62819aa7e6c"
+        }
+      }
+    },
+    {
+      "id": "47818",
+      "title": "三まいのおふだ",
+      "level": 1,
+      "credits": [
+        "再話：水野文寿貴",
+        "絵：ユゴ・リカー＝タヴェルニエ"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 16,
+      "source": "https://tadoku.org/japanese/book/47818/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/47818/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0115e-sanmainoohuda.pdf",
+          "filename": "47818-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 6989485,
+          "sha256": "06d142e5b6fc3490fae2e5887cf3359d7922095dbbf904d40d610d048971ef66"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0115p-sanmainoohuda.pdf",
+          "filename": "47818-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 6648177,
+          "sha256": "6cbbfc3a144e64d901a1c16afc7a90233e29241b55791a2a0c3f6c13e13d0ff0"
+        }
+      }
+    },
+    {
+      "id": "41295",
+      "title": "母の日",
+      "level": 1,
+      "credits": [
+        "作：高橋温子、長畑恵子、宮城恵弥子、山田明日香",
+        "絵：高橋温子"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 16,
+      "source": "https://tadoku.org/japanese/book/41295/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/41295/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0100e-hahanohi.pdf",
+          "filename": "41295-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3556912,
+          "sha256": "13f244a4732f5504dc20c6ee1ed543abc7b95618ae7b9bde454a855f8eaf736b"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0100p-hahanohi.pdf",
+          "filename": "41295-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3259341,
+          "sha256": "5cffd409489d3da0dfea88d1800d4bdc4dc939c4619f098983c132d6e3fb0b29"
+        }
+      }
+    },
+    {
+      "id": "6873",
+      "title": "日本の城",
+      "level": 1,
+      "credits": [
+        "作：田中 るり子"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 27,
+      "source": "https://tadoku.org/japanese/book/6873/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/6873/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0057e-nihonnoshiro-v2.pdf",
+          "filename": "6873-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 5569298,
+          "sha256": "c6b760e7a5de10e687d7f5a50ee34ca37fd26cdc94b39127135e46b503a18770"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0057p-nihonnoshiro-v2-1.pdf",
+          "filename": "6873-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 10856393,
+          "sha256": "46743297a06de24d9bdd4fccdb511a864d6c7dae2ea33aac2f36e46471965fb3"
+        }
+      }
+    },
+    {
+      "id": "48618",
+      "title": "王様の耳はロバの耳",
+      "level": 2,
+      "credits": [
+        "再話：NPO多言語多読",
+        "絵：池田あきつ"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 14,
+      "source": "https://tadoku.org/japanese/book/48618/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/48618/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0017e-oosamanomimi.pdf",
+          "filename": "48618-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 3223339,
+          "sha256": "a99b279cb3755b583f1e26976d341be38f2c5bebe52af5bf01680bd02ad61573"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/w0017p-oosamanomimi.pdf",
+          "filename": "48618-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 2877519,
+          "sha256": "a8f38421259fc81c4249a81e6c2bc6a18de228b455d04c827881f86fb090be67"
+        }
+      }
+    },
+    {
+      "id": "42745",
+      "title": "つみっこ",
+      "level": 2,
+      "credits": [
+        "作：門倉未来、和田朋也、任群",
+        "写真：門倉未来"
+      ],
+      "publisher": "NPO多言語多読",
+      "pages": 17,
+      "source": "https://tadoku.org/japanese/book/42745/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/42745/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0104e-tumikko.pdf",
+          "filename": "42745-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 35897571,
+          "sha256": "2aefc0651fbd344a6b371bfc465a25fe607cbefefaa80be784e4e280984362e3"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0104p-tumikko-v2.pdf",
+          "filename": "42745-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 35555947,
+          "sha256": "eae307ac6feaaf90f7587989035a635bb17310ede8a41439aa1953743b7b1d8b"
+        }
+      }
+    },
+    {
+      "id": "6070",
+      "title": "お母さんヘンシン",
+      "level": 2,
+      "credits": [
+        "作：ジャボラNPO",
+        "絵：上ノ内 智之"
+      ],
+      "publisher": "ジャボラNPO",
+      "pages": 18,
+      "source": "https://tadoku.org/japanese/book/6070/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/6070/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0045e-okaasanhenshin.pdf",
+          "filename": "6070-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1700902,
+          "sha256": "f4f7f0f7d0b7941bfaf25c79fa0dfd34b1a25795af0690afd9bdf9c5ae987f52"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0045p-okaasanhenshin.pdf",
+          "filename": "6070-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1276711,
+          "sha256": "55f4d835e38e7c1c0e941b5cb005f4de8922d2965ebbbbf0366effed08abc7ea"
+        }
+      }
+    },
+    {
+      "id": "6069",
+      "title": "明日は遠足",
+      "level": 2,
+      "credits": [
+        "作：ジャボラNPO",
+        "絵：上ノ内 智之"
+      ],
+      "publisher": "ジャボラNPO",
+      "pages": 22,
+      "source": "https://tadoku.org/japanese/book/6069/",
+      "license": {
+        "id": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "evidence": "https://tadoku.org/japanese/book/6069/",
+        "terms": "https://tadoku.org/japanese/en/free-books-en/note-en/"
+      },
+      "assets": {
+        "pdf": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0043e-ashitahaensoku.pdf",
+          "filename": "6069-pdf.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 1408559,
+          "sha256": "02031691b7602073b047b2f9291e082157afa10c0a82e19170b77b8e75dc8e3d"
+        },
+        "print": {
+          "url": "https://tadoku.org/japanese/wp-content/uploads/f0043p-ashitahaensoku.pdf",
+          "filename": "6069-print.pdf",
+          "license": "CC-BY-NC-ND-4.0",
+          "bytes": 999699,
+          "sha256": "c2fb653953d09aaae43bcefa8b6a823259f6f35df314f3ff1ba74a6b9d862f08"
+        }
+      }
+    }
+  ]
+}

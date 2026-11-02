@@ -4,6 +4,7 @@ COPY --chown=10001:10001 server.py ./
 COPY --chown=10001:10001 n5 ./n5
 COPY --chown=10001:10001 static ./static
 COPY --chown=10001:10001 data ./data
+COPY --chown=10001:10001 scripts ./scripts
 RUN mkdir /app/storage && chown 10001:10001 /app/storage
 USER 10001:10001
 ENV N5_VOCABULARY=/app/storage/vocabulary.json HOST=0.0.0.0 PORT=8080 PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
