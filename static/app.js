@@ -1,4 +1,6 @@
 import { highlightRuleParagraphs } from './js/form-highlight.js';
+import { mountPreparation } from './js/preparation.js';
+import { mountMockExam } from './js/mock-exam.js';
 import { mountGame } from './js/game.js';
 import { getJSON } from './js/api.js';
 import { grammarPage, navigation, sectionPage } from './js/pages.js';
@@ -26,7 +28,7 @@ async function render(focusPage = false) {
   pageController = new AbortController();
   const { signal } = pageController;
   const route = resolveRoute(location.pathname, catalog);
-  content.classList.toggle('practice-screen', route.type === 'game');
+  content.classList.toggle('practice-screen', ['game', 'mock', 'preparation'].includes(route.type));
   if (route.canonical) history.replaceState({}, '', route.canonical + location.search + location.hash);
   document.title = `${route.title} · N5`;
   menu.classList.remove('open');
@@ -40,7 +42,11 @@ async function render(focusPage = false) {
     else link.removeAttribute('aria-current');
   });
   try {
-    if (route.type === 'game') {
+    if (route.type === 'preparation') {
+      await mountPreparation(content, signal);
+    } else if (route.type === 'mock') {
+      await mountMockExam(content, signal);
+    } else if (route.type === 'game') {
       await mountGame(content, catalog, signal);
     } else if (route.type === 'section') {
       content.innerHTML = sectionPage(catalog, route.item);

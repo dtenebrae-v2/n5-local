@@ -54,6 +54,13 @@ class ServiceTests(unittest.TestCase):
         all_words = self.get('/api/words?collection=complete&q=ikimasu')['entries']
         self.assertTrue(all(r.get('practice_kind') == 'verb' for r in all_words))
 
+    def test_mock_exam(self):
+        data = self.get('/api/mock-exam')
+        self.assertGreaterEqual(len(data['items']), 350)
+        with urlopen(self.base + '/jlpt/n5/mock', timeout=3) as response:
+            self.assertIn('text/html', response.headers['Content-Type'])
+            self.assertIn('app.js', response.read().decode())
+
     def test_grammar_practice(self):
         data = self.get('/api/grammar-practice')
         self.assertEqual(len(data['exercises']), 39)

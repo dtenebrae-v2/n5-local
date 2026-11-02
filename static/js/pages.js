@@ -20,6 +20,8 @@ export function navigation(catalog) {
     <p class="nav-caption">СЛОВАРЬ</p>
     ${vocabulary}
     <a href="${catalog.base}/practice">Тренировка</a>
+    <a href="${catalog.base}/preparation">Подготовка N5</a>
+    <a href="${catalog.base}/mock">Пробный N5</a>
     <p class="nav-caption">ГРАММАТИКА</p>
     ${grammar}
   `;

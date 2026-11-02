@@ -6,6 +6,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
 from n5.grammar_practice import load_grammar
+from n5.mock_exam import load_mock_exam
 from n5.export import vocabulary_csv
 from n5.store import VocabularyStore, WordError
 from n5.vocabulary import unique_keys
@@ -13,6 +14,7 @@ from n5.vocabulary import unique_keys
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / 'data'
 GRAMMAR_PRACTICE = load_grammar(DATA / 'grammar-practice.json')
+MOCK_EXAM = load_mock_exam(DATA / 'mock-exam.json')
 STORE = VocabularyStore(DATA, Path(os.environ.get('N5_VOCABULARY', DATA / 'vocabulary.json')))
 CATALOG = STORE.catalog
 REPOSITORY = CATALOG.repository
@@ -98,6 +100,8 @@ class Handler(BaseHTTPRequestHandler):
         repository = catalog.repository
         if path == '/api/health':
             return self.send({'status': 'ok', 'entries': repository.count()})
+        if path == '/api/mock-exam':
+            return self.send(MOCK_EXAM)
         if path == '/api/grammar-practice':
             return self.send(GRAMMAR_PRACTICE)
         if path == '/api/catalog':

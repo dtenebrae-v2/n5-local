@@ -1,0 +1,54 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {emptyProgress,noteAnswer,archiveExam,practicePlan,dueTopics,weakTopics,loadPreparation,savePreparation} from '../static/js/preparation-progress.js';
+import {createExam,completeSection,startNextSection} from '../static/js/mock-engine.js';
+const bank=JSON.parse(readFileSync(new URL('../data/mock-exam.json',import.meta.url)));
+const DAY=86400000, now=2000000000;
+test('repetition is spaced across days; hints and skips cannot establish mastery',()=>{
+ const p=emptyProgress(),q=bank.items[0];
+ assert.equal(noteAnswer(p,q,'correct',8000,now).fresh,true);
+ assert.equal(noteAnswer(p,q,'correct',4000,now+1000).fresh,false);
+ assert.equal(p.topics[q.topic].streak,1);
+ assert.equal(p.topics[q.topic].freshCorrect,1);assert.equal(p.topics[q.topic].repeatCorrect,1);
+ assert.deepEqual(dueTopics(p,now+2000),[]);
+ assert.ok(dueTopics(p,now+DAY+2000).includes(q.topic));
+ noteAnswer(p,q,'correct',5000,now+DAY+2000);
+ assert.equal(p.topics[q.topic].streak,2);assert.equal(p.topics[q.topic].due,now+4*DAY+2000);
+ assert.ok(!weakTopics(p).includes(q.topic));
+ noteAnswer(p,q,'hinted',2000,now+DAY+3000);
+ assert.equal(p.topics[q.topic].streak,0);assert.equal(p.topics[q.topic].hinted,1);
+ assert.ok(weakTopics(p).includes(q.topic));
+ noteAnswer(p,q,'skipped',0,now+DAY+4000);assert.equal(p.topics[q.topic].skipped,1);
+ assert.equal(p.topics[q.topic].timed,4);
+});
+test('weak-topic plan selects new examples rather than replaying known incorrect question',()=>{
+ const p=emptyProgress(),q=bank.items.find(q=>q.topic==='numbers');
+ noteAnswer(p,q,'incorrect',1000,now);
+ const plan=practicePlan(bank,p,{mode:'weak',seed:1,now});
+ assert.ok(plan.questions.length>0);
+ assert.ok(plan.questions.every(v=>v.topic==='numbers'));
+ assert.notEqual(plan.questions[0].id,q.id);
+ assert.ok(plan.questions[0].fresh);
+ assert.equal(new Set(plan.questions.map(q=>q.family)).size,plan.questions.length);
+ assert.equal(practicePlan(bank,p,{mode:'due',now}).questions.length,0);
+ assert.ok(practicePlan(bank,p,{mode:'due',now:now+600001}).questions.length);
+});
+test('exam import is idempotent and retains independent performance and unseen skips',()=>{
+ const p=emptyProgress(),exam=createExam(bank,3,[],now);
+ assert.equal(archiveExam(p,exam,now),false);
+ const s=exam.sections[0],q=s.questions[0];s.answers[q.id]=q.correct;s.viewed=[q.id];
+ completeSection(exam,false,now+10000);startNextSection(exam,now+20000);completeSection(exam,true,now+2400000);
+ assert.ok(archiveExam(p,exam,now+2400000));assert.equal(p.exams.length,1);
+ assert.equal(p.exams[0].correct,1);assert.equal(p.exams[0].total,49);assert.equal(p.exams[0].skipped,48);
+ assert.equal(Object.keys(p.questions).length,1);
+ assert.equal(archiveExam(p,exam),false);
+ exam.archived=true;p.exams=[];assert.equal(archiveExam(p,exam),false);
+});
+test('profile storage and practice session survive reload and blocked storage',()=>{
+ let value=null;const storage={getItem:()=>value,setItem:(k,v)=>{value=v;}};
+ const p=loadPreparation(storage);p.session=practicePlan(bank,p,{topic:'dates',seed:1,now});
+ assert.ok(savePreparation(p,storage));assert.deepEqual(loadPreparation(storage),p);
+ value='{bad';assert.deepEqual(loadPreparation(storage),emptyProgress());
+ assert.equal(savePreparation(p,{setItem(){throw Error();}}),false);
+});
