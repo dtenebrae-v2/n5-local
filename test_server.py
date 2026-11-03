@@ -67,6 +67,32 @@ class ServiceTests(unittest.TestCase):
         with urlopen(self.base + '/jlpt/n5/counters', timeout=3) as response:
             self.assertIn('text/html', response.headers['Content-Type'])
 
+    def test_workbooks_and_original_audio_seeking(self):
+        catalog = self.get('/api/workbooks')
+        book = next(b for b in catalog['books'] if b['id'] == 'somatome-n5-2017')
+        with urlopen(self.base + '/jlpt/n5/workbooks/somatome-n5-2017', timeout=3) as response:
+            self.assertIn('text/html', response.headers['Content-Type'])
+        if not book['available']:
+            return
+        data = self.get('/api/workbook?id=somatome-n5-2017')
+        self.assertEqual(len(data['items']), 239)
+        audio = data['assets']['Track001']
+        self.assertTrue(audio['available'])
+        request = Request(self.base + audio['url'], headers={'Range':'bytes=0-31'})
+        with urlopen(request, timeout=3) as response:
+            self.assertEqual(response.status, 206)
+            self.assertEqual(response.headers['Content-Type'], 'audio/mpeg')
+            self.assertEqual(len(response.read()), 32)
+            etag = response.headers['ETag']
+        request = Request(self.base + audio['url'], method='HEAD')
+        with urlopen(request, timeout=3) as response:
+            self.assertGreater(int(response.headers['Content-Length']), 32)
+            self.assertEqual(response.headers['ETag'], etag)
+            self.assertEqual(response.read(), b'')
+        with self.assertRaises(HTTPError) as error:
+            self.get('/material-files/somatome-n5-2017/workbook.json')
+        self.assertEqual(error.exception.code,404)
+
     def test_grammar_practice(self):
         data = self.get('/api/grammar-practice')
         self.assertEqual(len(data['exercises']), 39)

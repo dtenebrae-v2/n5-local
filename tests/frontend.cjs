@@ -11,6 +11,7 @@ const { chromium } = require('playwright');
 const gameChecks = require('./game.cjs');
 const libraryChecks = require('./library.cjs');
 const counterChecks = require('./counters.cjs');
+const workbookChecks = require('./workbooks.cjs');
 const preparationChecks = require('./preparation.cjs');
 const mockChecks = require('./mock-exam.cjs');
 const uxChecks = require('./ux-refresh.cjs');
@@ -60,6 +61,7 @@ async function main() {
     page.on('pageerror', (error) => errors.push(error.message));
     const base = `http://127.0.0.1:${port}`;
     await counterChecks(page, base);
+    await workbookChecks(page, base);
     const catalog = await (await page.request.get(base + '/api/catalog')).json();
 
     async function ready() {

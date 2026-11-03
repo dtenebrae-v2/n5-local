@@ -12,5 +12,9 @@ package*.json
 
 test_store.py
 
-data/library-files
+data/materials/tadoku/files
 test_library.py
+
+data/materials/somatome/
+
+test_workbooks.py

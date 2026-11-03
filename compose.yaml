@@ -5,9 +5,9 @@ services:
       - "${N5_HOST:-0.0.0.0}:${N5_PORT:-8095}:8080"
     volumes:
       - vocabulary:/app/storage
-      - ./data/library-files:/app/library:ro
+      - ./data/materials:/app/materials:ro
     environment:
-      N5_LIBRARY_DIR: /app/library
+      N5_MATERIALS_DIR: /app/materials
     restart: unless-stopped
     read_only: true
     cap_drop: [ALL]

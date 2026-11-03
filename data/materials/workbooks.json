@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "books": [
+    {
+      "id": "somatome-n5-2017",
+      "title": "Nihongo Sō-matome N5",
+      "isbn": "9784866390765",
+      "year": 2017,
+      "publisher": "ASK Publishing",
+      "authors": ["Hitoko Sasaki", "Noriko Matsumoto"],
+      "catalog": "somatome/n5-2017/workbook.json"
+    }
+  ]
+}

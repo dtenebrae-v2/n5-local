@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from n5.tadoku import approved_url, candidates, parse_book, parse_narrators, TERMS, AUDIO_SOURCE
 
+MATERIALS = Path(os.environ.get('N5_MATERIALS_DIR', ROOT/'data/materials'))
 CACHE = Path('/tmp/n5-tadoku-import')
 AGENT = 'N5Local-PersonalLibrary/1.0'
 
@@ -108,11 +109,11 @@ def main():
     selection=parser.add_mutually_exclusive_group()
     selection.add_argument('--limit',type=int,help='Optional balanced subset; by default import all eligible books')
     selection.add_argument('--all',action='store_true',help='Import every eligible level 1–2 book without quotas')
-    parser.add_argument('--directory',type=Path,default=Path(os.environ.get('N5_LIBRARY_DIR',ROOT/'data/library-files')))
+    parser.add_argument('--directory',type=Path,default=MATERIALS/'tadoku/files')
     args=parser.parse_args()
     if args.limit is not None and not 1<=args.limit<=100:
         parser.error('--limit must be between 1 and 100')
-    path=ROOT/'data/library.json'
+    path=MATERIALS/'tadoku/catalog.json'
     catalog=scan(args.limit) if args.scan else json.loads(path.read_text())
     if args.scan and path.exists():
         previous=json.loads(path.read_text())

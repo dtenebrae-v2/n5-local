@@ -10,16 +10,19 @@ from n5.grammar_practice import load_grammar
 from n5.counters import load_counters
 from n5.mock_exam import load_mock_exam
 from n5.library import Library, byte_range
+from n5.workbooks import Workbooks
 from n5.export import vocabulary_csv
 from n5.store import VocabularyStore, WordError
 from n5.vocabulary import unique_keys
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / 'data'
+MATERIALS = Path(os.environ.get('N5_MATERIALS_DIR', DATA / 'materials'))
 COUNTERS = load_counters(DATA / 'counters.json')
 GRAMMAR_PRACTICE = load_grammar(DATA / 'grammar-practice.json')
 MOCK_EXAM = load_mock_exam(DATA / 'mock-exam.json')
-LIBRARY = Library(DATA / 'library.json', Path(os.environ.get('N5_LIBRARY_DIR', DATA / 'library-files')))
+LIBRARY = Library(MATERIALS / 'tadoku/catalog.json', MATERIALS / 'tadoku/files')
+WORKBOOKS = Workbooks(MATERIALS)
 STORE = VocabularyStore(DATA, Path(os.environ.get('N5_VOCABULARY', DATA / 'vocabulary.json')))
 CATALOG = STORE.catalog
 REPOSITORY = CATALOG.repository
@@ -71,7 +74,17 @@ class Handler(BaseHTTPRequestHandler):
         try:
             media = re.fullmatch(r'/library-files/(\d+)/(pdf|print|audio)',path)
             reader = re.fullmatch(r'/jlpt/n5/library/(\d+)',path)
-            if media:
+            workbook = re.fullmatch(r'/jlpt/n5/workbooks/([a-z0-9-]+)', path)
+            material = re.fullmatch(r'/material-files/([a-z0-9-]+)/([a-zA-Z0-9-]+)', path)
+            if material:
+                found = WORKBOOKS.asset(*material.groups())
+                if found:
+                    self.serve_file(*found, found[1]['mime'])
+                else:
+                    self.not_found()
+            elif workbook and workbook.group(1) in WORKBOOKS.books:
+                self.send((ROOT / 'static/index.html').read_bytes(), 'text/html; charset=utf-8')
+            elif media:
                 self.serve_library_file(*media.groups(), attachment=params.get('download')==['1'])
             elif reader and reader.group(1) in LIBRARY.books:
                 self.send((ROOT / 'static/index.html').read_bytes(), 'text/html; charset=utf-8')
@@ -118,6 +131,11 @@ class Handler(BaseHTTPRequestHandler):
             return self.send({'status': 'ok', 'entries': repository.count()})
         if path == '/api/library':
             return self.send(LIBRARY.public())
+        if path == '/api/workbooks':
+            return self.send(WORKBOOKS.catalog())
+        if path == '/api/workbook':
+            data = WORKBOOKS.public(params.get('id', [''])[0])
+            return self.send(data) if data else self.not_found()
         if path == '/api/counters':
             return self.send(COUNTERS)
         if path == '/api/mock-exam':
@@ -153,6 +171,9 @@ class Handler(BaseHTTPRequestHandler):
         if not found:
             return self.not_found()
         path,asset=found
+        self.serve_file(path, asset, 'audio/mpeg' if kind == 'audio' else 'application/pdf', attachment)
+
+    def serve_file(self, path, asset, mime, attachment=False):
         size=path.stat().st_size
         etag='"'+asset['sha256']+'"'
         requested=self.headers.get('Range')
@@ -165,7 +186,7 @@ class Handler(BaseHTTPRequestHandler):
         except ValueError:
             return self.send(b'', status=416, extra={'Content-Range':f'bytes */{size}'})
         self.send_response(206 if partial else 200)
-        self.send_header('Content-Type','audio/mpeg' if kind=='audio' else 'application/pdf')
+        self.send_header('Content-Type',mime)
         self.send_header('Content-Length',str(end-start+1))
         self.send_header('Accept-Ranges','bytes')
         self.send_header('ETag',etag)

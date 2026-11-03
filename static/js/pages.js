@@ -23,6 +23,7 @@ export function navigation(catalog) {
     <a href="${catalog.base}/preparation">Подготовка N5</a>
     <a href="${catalog.base}/counters">Счётные суффиксы</a>
     <a href="${catalog.base}/library">Библиотека</a>
+    <a href="${catalog.base}/workbooks">Упражнения по книге</a>
     <a href="${catalog.base}/mock">Пробный N5</a>
     <p class="nav-caption">ГРАММАТИКА</p>
     ${grammar}

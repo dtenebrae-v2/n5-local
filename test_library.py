@@ -24,7 +24,7 @@ PAGE=f'''<div class="bd-title"><h1><ruby>鏡<rt>かがみ</rt></ruby>のない�
 
 class LibraryTests(unittest.TestCase):
     def test_current_catalogue_includes_all_reviewed_level_1_and_2_books(self):
-        data=validate_catalog(json.loads((ROOT/'data/library.json').read_text()))
+        data=validate_catalog(json.loads((ROOT/'data/materials/tadoku/catalog.json').read_text()))
         self.assertEqual(len(data['books']),44)
         for level,count in [(1,25),(2,19)]:self.assertEqual(sum(b['level']==level for b in data['books']),count)
         self.assertIn('61371',{b['id'] for b in data['books']})
@@ -49,7 +49,7 @@ class LibraryTests(unittest.TestCase):
         for url in ['http://tadoku.org/x','https://tadoku.org.evil.test/x','https://user@tadoku.org/x','https://tadoku.org:443/x']:
             self.assertRaises(ValueError,approved_url,url)
         self.assertRaises(ValueError,approved_url,'https://tadoku.org/private',True)
-        data=json.loads((ROOT/'data/library.json').read_text())
+        data=json.loads((ROOT/'data/materials/tadoku/catalog.json').read_text())
         for alteration in [{'level':0},{'credits':[]},{'id':'../private'},{'license':{'url':LICENSE,'evidence':'other'}}]:
             broken=copy.deepcopy(data);broken['books'][0].update(alteration)
             self.assertRaises(ValueError,validate_catalog,broken)
@@ -57,7 +57,7 @@ class LibraryTests(unittest.TestCase):
         self.assertRaises(ValueError,validate_catalog,broken)
 
     def test_integrity_cache_detects_changed_original_and_missing_files(self):
-        data=json.loads((ROOT/'data/library.json').read_text());data['books']=data['books'][:1]
+        data=json.loads((ROOT/'data/materials/tadoku/catalog.json').read_text());data['books']=data['books'][:1]
         content=b'%PDF-1.4\nfixture original bytes'
         asset=data['books'][0]['assets']['pdf'];asset.update(sha256=hashlib.sha256(content).hexdigest(),bytes=len(content))
         with tempfile.TemporaryDirectory() as folder:
