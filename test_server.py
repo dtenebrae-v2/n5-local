@@ -61,6 +61,12 @@ class ServiceTests(unittest.TestCase):
             self.assertIn('text/html', response.headers['Content-Type'])
             self.assertIn('app.js', response.read().decode())
 
+    def test_counters(self):
+        data = self.get('/api/counters')
+        self.assertEqual(len(data['counters']), 17)
+        with urlopen(self.base + '/jlpt/n5/counters', timeout=3) as response:
+            self.assertIn('text/html', response.headers['Content-Type'])
+
     def test_grammar_practice(self):
         data = self.get('/api/grammar-practice')
         self.assertEqual(len(data['exercises']), 39)

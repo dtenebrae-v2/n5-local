@@ -5,6 +5,7 @@ export function resolveRoute(pathname, catalog) {
     return { type: 'words', title: item.label, item, canonical: item.path };
   }
   if (path === `${catalog.base}/practice`) return { type: 'game', title: 'Тренировка' };
+  if (path === `${catalog.base}/counters`) return { type: 'counters', title: 'Счётные суффиксы' };
   if (path === `${catalog.base}/mock`) return { type: 'mock', title: 'Пробный N5' };
   if (path === `${catalog.base}/preparation`) return { type: 'preparation', title: 'Подготовка N5' };
   if (path === `${catalog.base}/library`) return { type:'library',title:'Библиотека' };

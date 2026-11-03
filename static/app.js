@@ -1,5 +1,6 @@
 import { highlightRuleParagraphs } from './js/form-highlight.js';
 import { mountLibrary } from './js/library.js';
+import { mountCounters } from './js/counters.js';
 import { mountPreparation } from './js/preparation.js';
 import { mountMockExam } from './js/mock-exam.js';
 import { mountGame } from './js/game.js';
@@ -29,7 +30,7 @@ async function render(focusPage = false) {
   pageController = new AbortController();
   const { signal } = pageController;
   const route = resolveRoute(location.pathname, catalog);
-  content.classList.toggle('practice-screen', ['game', 'mock', 'preparation', 'book'].includes(route.type));
+  content.classList.toggle('practice-screen', ['game', 'mock', 'preparation', 'book', 'counters'].includes(route.type));
   if (route.canonical) history.replaceState({}, '', route.canonical + location.search + location.hash);
   document.title = `${route.title} · N5`;
   menu.classList.remove('open');
@@ -43,7 +44,9 @@ async function render(focusPage = false) {
     else link.removeAttribute('aria-current');
   });
   try {
-    if (route.type === 'library' || route.type === 'book') {
+    if (route.type === 'counters') {
+      await mountCounters(content, signal);
+    } else if (route.type === 'library' || route.type === 'book') {
       await mountLibrary(content, signal, route.bookId);
     } else if (route.type === 'preparation') {
       await mountPreparation(content, signal);

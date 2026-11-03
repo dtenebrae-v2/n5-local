@@ -12,6 +12,14 @@
     {
       "title": "Japan Foundation: numbers and counters",
       "url": "https://a1.marugotoweb.jp/en/assets/pdf/grammar/A1_appendix_01_en.pdf"
+    },
+    {
+      "title": "Jyosuushi — 本 (long, thin objects)",
+      "url": "https://jyosuushi.com/explore/counter/%E6%9C%AC"
+    },
+    {
+      "title": "Jyosuushi — 冊 (books)",
+      "url": "https://jyosuushi.com/explore/counter/%E5%86%8A"
     }
   ],
   "passages": [
@@ -5846,7 +5854,8 @@
       "difficulty": 1,
       "sources": [
         0,
-        1
+        1,
+        3
       ],
       "skill": "numbers:long"
     },
@@ -10061,7 +10070,8 @@
       "difficulty": 1,
       "sources": [
         0,
-        1
+        1,
+        3
       ],
       "skill": "numbers:long"
     },
@@ -12518,9 +12528,10 @@
       "difficulty": 1,
       "sources": [
         0,
-        1
+        1,
+        4
       ],
-      "skill": "numbers:long"
+      "skill": "numbers:books"
     },
     {
       "id": "balance:4",
@@ -14815,6 +14826,13 @@
       "label": "Глагольные основы и формы: む → んだ",
       "rule": "Для Godan окончание зависит от последней каны; Ichidan теряют る. する・来る и отдельные формы 行く требуют особого правила.",
       "example": "急ぐ → 急いで。 — У Godan ぐ заменяется на いで."
+    },
+    {
+      "id": "numbers:books",
+      "topic": "numbers",
+      "label": "Счёт книг: 〜冊",
+      "rule": "Книги, журналы и тетради считают с 冊. 本 как название книги и 本 как счётный суффикс — разные употребления.",
+      "example": "本が 一冊（いっさつ）あります。 — Есть одна книга."
     }
   ]
 }

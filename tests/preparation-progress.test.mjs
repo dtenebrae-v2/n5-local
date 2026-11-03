@@ -103,3 +103,14 @@ test('profile storage and study session survive reload and blocked storage',()=>
  value='{bad';assert.deepEqual(loadPreparation(storage),emptyProgress());
  assert.equal(savePreparation(p,{setItem(){throw Error();}}),false);
 });
+
+test('book counter 冊 does not share the long-object 本 schedule',()=>{
+ const books=bank.items.find(q=>q.id==='balance:3');
+ const pencils=bank.items.find(q=>q.id==='prep:144');
+ const progress=emptyProgress();
+ noteAnswer(progress,pencils,'incorrect',1000,now);
+ noteAnswer(progress,books,'correct',1000,now+1000);
+ assert.notEqual(skillKey(books),skillKey(pencils));
+ assert.ok(troubleSkills(progress).includes(skillKey(pencils)));
+ assert.equal(progress.skills[skillKey(pencils)].due,now+600000);
+});

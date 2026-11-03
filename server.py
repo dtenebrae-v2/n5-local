@@ -7,6 +7,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
 from n5.grammar_practice import load_grammar
+from n5.counters import load_counters
 from n5.mock_exam import load_mock_exam
 from n5.library import Library, byte_range
 from n5.export import vocabulary_csv
@@ -15,6 +16,7 @@ from n5.vocabulary import unique_keys
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / 'data'
+COUNTERS = load_counters(DATA / 'counters.json')
 GRAMMAR_PRACTICE = load_grammar(DATA / 'grammar-practice.json')
 MOCK_EXAM = load_mock_exam(DATA / 'mock-exam.json')
 LIBRARY = Library(DATA / 'library.json', Path(os.environ.get('N5_LIBRARY_DIR', DATA / 'library-files')))
@@ -116,6 +118,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.send({'status': 'ok', 'entries': repository.count()})
         if path == '/api/library':
             return self.send(LIBRARY.public())
+        if path == '/api/counters':
+            return self.send(COUNTERS)
         if path == '/api/mock-exam':
             return self.send(MOCK_EXAM)
         if path == '/api/grammar-practice':

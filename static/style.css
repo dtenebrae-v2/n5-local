@@ -1452,3 +1452,28 @@ table {
 .book-audio { margin:20px 0; }
 .book-audio audio { display:block; width:100%; max-width:620px; }
 @media(max-width:700px) { .library-grid { grid-template-columns:1fr; } .library-card { padding:16px; } .book-controls button { padding:10px; } .book-viewer:fullscreen { padding:10px; } }
+
+.counter-choices { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0; }
+.counter-choices .chip { white-space:normal; text-align:left; min-height:44px; }
+#counter-storage:empty { display:none; }
+.counter-card { max-width:720px; }
+.counter-card .game-target { min-height:2.8em; margin:0 0 8px; overflow-wrap:anywhere; }
+.counter-instruction { margin:0 0 16px; }
+.counter-progress { font-variant-numeric:tabular-nums; }
+.counter-table { width:100%; table-layout:fixed; max-width:680px; border-collapse:collapse; }
+.counter-table th, .counter-table td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; overflow-wrap:anywhere; }
+.counter-table th:first-child { width:30%; }
+.counter-table td { font-size:18px; line-height:1.7; }
+.counter-table .current-rule { background:var(--accent); outline:2px solid var(--green); outline-offset:-2px; }
+.counter-sources { margin:18px 0; }
+.counter-sources a { overflow-wrap:anywhere; }
+.counter-dialog .practice-header { position:sticky; top:-28px; background:var(--paper); z-index:1; }
+.counter-dialog h3 { overflow-wrap:anywhere; }
+.counter-results { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:14px; margin-top:20px; }
+.counter-result { border:1px solid var(--line); border-radius:10px; padding:16px; min-width:0; overflow-wrap:anywhere; }
+.counter-result h3 { margin:0 0 10px; }
+.counter-result .counter-correct { color:#18552e; font-weight:700; }
+.counter-result[data-result="incorrect"] .counter-user, .counter-result[data-result="incorrect"] .counter-result-status { color:#922323; }
+.counter-result[data-result="correct"] .counter-result-status { color:#18552e; }
+.counter-result-status { font-weight:700; }
+@media(max-width:600px) { .counter-table td, .counter-table th { padding:8px; } }

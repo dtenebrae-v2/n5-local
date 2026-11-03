@@ -1,0 +1,68 @@
+const assert = require('node:assert/strict');
+module.exports = async function counterChecks(page, base) {
+  await page.goto(base + '/jlpt/n5/counters');
+  await page.locator('#practice-answer').waitFor();
+  const catalog = await (await page.request.get(base + '/api/counters')).json();
+  assert.equal(await page.locator('[data-counter]').count(),17);
+  assert.equal(await page.locator('select').count(),0);
+  const readState = () => page.evaluate(() => JSON.parse(localStorage.getItem('n5.counters.v1')));
+  let saved = await readState();
+  const key = saved.session.keys[0];
+  const [id, number] = key.split(':');
+  const counter = catalog.counters.find(c => c.id === id);
+  const form = counter.forms.find(f => f.number === Number(number));
+  await page.locator('#practice-answer').fill('ああ');
+  const before = await page.locator('#counter-next').boundingBox();
+  await page.locator('#practice-answer').press('Enter');
+  assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'),'incorrect');
+  const after = await page.locator('#counter-next').boundingBox();
+  assert.equal(before.y,after.y);
+  await page.locator('#practice-answer').fill(form.readings[0]);
+  await page.locator('#practice-answer').press('Enter');
+  assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'),'correct');
+  assert.ok((await page.locator('#practice-feedback').innerText()).includes(form.written));
+  saved = await readState();
+  assert.equal(saved.session.answers[key].first,'incorrect');
+  await page.locator('#practice-answer').press('Shift+Enter');
+  saved = await readState();
+  assert.equal(saved.session.position,1);
+  assert.equal(new Set(saved.session.keys).size,10);
+  await page.reload();
+  await page.locator('#practice-answer').waitFor();
+  assert.ok((await page.locator('.counter-progress').innerText()).includes('2 из 10'));
+  await page.locator('#practice-answer').press('F1');
+  await page.locator('dialog[open]').waitFor();
+  assert.equal(await page.locator('dialog .counter-table tr[aria-current]').count(),1);
+  await page.keyboard.press('Escape');
+  assert.equal(await page.locator('dialog[open]').count(),0);
+  await page.locator('#practice-answer').press('F2');
+  assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'),'unknown');
+  for(let i=1;i<10;i++) await page.locator('#counter-next').click();
+  assert.ok((await page.locator('#counter-summary').innerText()).includes('из 10'));
+  assert.equal(await page.locator('.counter-result').count(),10);
+  await page.locator('[data-counter-mode="reference"]').click();
+  await page.locator('[data-counter-reference="dates"]').click();
+  assert.equal(await page.locator('#counter-table tbody tr').count(),31);
+  await page.locator('[data-counter-reference="age"]').click();
+  assert.ok((await page.locator('#counter-table').innerText()).includes('はたち'));
+  for(const width of [375,320,1440]) {
+    await page.setViewportSize({width,height:900});
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Overflow at ${width}`);
+  }
+  await page.locator('[data-counter-mode="practice"]').click();
+  await page.locator('#game-options > summary').click();
+  for(const button of await page.locator('[data-counter]').all()) {
+    if(await button.getAttribute('data-counter') !== 'books') await button.click();
+  }
+  await page.locator('#counter-start').click();
+  assert.ok((await readState()).session.keys.every(key=>key.startsWith('books:')));
+  let state = await readState();
+  const n = Number(state.session.keys[0].split(':')[1]);
+  const reading = catalog.counters.find(c=>c.id==='books').forms.find(f=>f.number===n).readings[0];
+  const {toRomaji} = await import('../static/vendor/wanakana-5.3.1.js');
+  await page.locator('#practice-answer').pressSequentially(toRomaji(reading));
+  assert.equal(await page.locator('#practice-answer').inputValue(),reading);
+  await page.locator('#practice-answer').press('Enter');
+  assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'),'correct');
+  if(process.env.SCREENSHOT_DIR) await page.screenshot({path:process.env.SCREENSHOT_DIR+'/counters.png',fullPage:true});
+};

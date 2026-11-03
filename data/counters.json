@@ -1,0 +1,1954 @@
+{
+  "version": 1,
+  "collection": {
+    "name": "Essential",
+    "url": "https://jyosuushi.com/explore/collection/essential"
+  },
+  "counters": [
+    {
+      "id": "age",
+      "symbol": "歳",
+      "label": "Возраст",
+      "rule": "Возраст человека или животного в годах. Для двадцати лет обычно используют はたち.",
+      "reading": "さい",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一歳",
+          "readings": [
+            "いっさい"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二歳",
+          "readings": [
+            "にさい"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三歳",
+          "readings": [
+            "さんさい"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四歳",
+          "readings": [
+            "よんさい"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五歳",
+          "readings": [
+            "ごさい"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六歳",
+          "readings": [
+            "ろくさい"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七歳",
+          "readings": [
+            "ななさい"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八歳",
+          "readings": [
+            "はっさい"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九歳",
+          "readings": [
+            "きゅうさい"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十歳",
+          "readings": [
+            "じゅっさい",
+            "じっさい"
+          ],
+          "base": "じゅう"
+        },
+        {
+          "number": 20,
+          "written": "二十歳",
+          "readings": [
+            "はたち",
+            "にじゅっさい",
+            "にじっさい"
+          ],
+          "base": "にじゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 歳",
+          "url": "https://jyosuushi.com/explore/counter/%E6%AD%B3"
+        },
+        {
+          "title": "Japan Foundation · Marugoto A1",
+          "url": "https://a1.marugotoweb.jp/en/assets/pdf/grammar/A1_appendix_01_en.pdf"
+        }
+      ]
+    },
+    {
+      "id": "birds",
+      "symbol": "羽",
+      "label": "Птицы и кролики",
+      "rule": "Птицы; также традиционный счёт кроликов. У 羽 есть несколько допустимых вариантов произношения.",
+      "reading": "わ",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一羽",
+          "readings": [
+            "いちわ"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二羽",
+          "readings": [
+            "にわ"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三羽",
+          "readings": [
+            "さんわ",
+            "さんば"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四羽",
+          "readings": [
+            "よんわ",
+            "よんば",
+            "よわ"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五羽",
+          "readings": [
+            "ごわ"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六羽",
+          "readings": [
+            "ろくわ",
+            "ろっぱ"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七羽",
+          "readings": [
+            "ななわ",
+            "しちわ"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八羽",
+          "readings": [
+            "はちわ",
+            "はっぱ"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九羽",
+          "readings": [
+            "きゅうわ"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十羽",
+          "readings": [
+            "じゅうわ",
+            "じゅっぱ",
+            "じっぱ"
+          ],
+          "base": "じゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 羽",
+          "url": "https://jyosuushi.com/explore/counter/%E7%BE%BD"
+        },
+        {
+          "title": "Tofugu · 羽",
+          "url": "https://www.tofugu.com/japanese/japanese-counter-wa/"
+        }
+      ]
+    },
+    {
+      "id": "books",
+      "symbol": "冊",
+      "label": "Книги",
+      "rule": "Книги, журналы и тетради. Книга — 本, но счётный суффикс для книг — 冊.",
+      "reading": "さつ",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一冊",
+          "readings": [
+            "いっさつ"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二冊",
+          "readings": [
+            "にさつ"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三冊",
+          "readings": [
+            "さんさつ"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四冊",
+          "readings": [
+            "よんさつ"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五冊",
+          "readings": [
+            "ごさつ"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六冊",
+          "readings": [
+            "ろくさつ"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七冊",
+          "readings": [
+            "ななさつ",
+            "しちさつ"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八冊",
+          "readings": [
+            "はっさつ"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九冊",
+          "readings": [
+            "きゅうさつ"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十冊",
+          "readings": [
+            "じゅっさつ",
+            "じっさつ"
+          ],
+          "base": "じゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 冊",
+          "url": "https://jyosuushi.com/explore/counter/%E5%86%8A"
+        },
+        {
+          "title": "Japan Foundation · Marugoto A1",
+          "url": "https://a1.marugotoweb.jp/en/assets/pdf/grammar/A1_appendix_01_en.pdf"
+        }
+      ]
+    },
+    {
+      "id": "cups",
+      "symbol": "杯",
+      "label": "Чашки и стаканы",
+      "rule": "Порции напитка в чашках, стаканах или бокалах. Считаем содержимое, а не пустую посуду.",
+      "reading": "はい",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一杯",
+          "readings": [
+            "いっぱい"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二杯",
+          "readings": [
+            "にはい"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三杯",
+          "readings": [
+            "さんばい"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四杯",
+          "readings": [
+            "よんはい",
+            "よんぱい"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五杯",
+          "readings": [
+            "ごはい"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六杯",
+          "readings": [
+            "ろっぱい"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七杯",
+          "readings": [
+            "ななはい"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八杯",
+          "readings": [
+            "はっぱい"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九杯",
+          "readings": [
+            "きゅうはい"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十杯",
+          "readings": [
+            "じゅっぱい",
+            "じっぱい"
+          ],
+          "base": "じゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 杯",
+          "url": "https://jyosuushi.com/explore/counter/%E6%9D%AF"
+        }
+      ]
+    },
+    {
+      "id": "dates",
+      "symbol": "日",
+      "label": "Даты",
+      "rule": "День месяца. 一日 здесь читается ついたち; длительность «один день» читается いちにち и в эту тренировку не входит.",
+      "reading": "にち",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一日",
+          "readings": [
+            "ついたち"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二日",
+          "readings": [
+            "ふつか"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三日",
+          "readings": [
+            "みっか"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四日",
+          "readings": [
+            "よっか"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五日",
+          "readings": [
+            "いつか"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六日",
+          "readings": [
+            "むいか"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七日",
+          "readings": [
+            "なのか"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八日",
+          "readings": [
+            "ようか"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九日",
+          "readings": [
+            "ここのか"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十日",
+          "readings": [
+            "とおか"
+          ],
+          "base": "じゅう"
+        },
+        {
+          "number": 11,
+          "written": "十一日",
+          "readings": [
+            "じゅういちにち"
+          ],
+          "base": "じゅういち"
+        },
+        {
+          "number": 12,
+          "written": "十二日",
+          "readings": [
+            "じゅうににち"
+          ],
+          "base": "じゅうに"
+        },
+        {
+          "number": 13,
+          "written": "十三日",
+          "readings": [
+            "じゅうさんにち"
+          ],
+          "base": "じゅうさん"
+        },
+        {
+          "number": 14,
+          "written": "十四日",
+          "readings": [
+            "じゅうよっか",
+            "じゅうよんにち"
+          ],
+          "base": "じゅうよん"
+        },
+        {
+          "number": 15,
+          "written": "十五日",
+          "readings": [
+            "じゅうごにち"
+          ],
+          "base": "じゅうご"
+        },
+        {
+          "number": 16,
+          "written": "十六日",
+          "readings": [
+            "じゅうろくにち"
+          ],
+          "base": "じゅうろく"
+        },
+        {
+          "number": 17,
+          "written": "十七日",
+          "readings": [
+            "じゅうしちにち",
+            "じゅうななにち"
+          ],
+          "base": "じゅうなな"
+        },
+        {
+          "number": 18,
+          "written": "十八日",
+          "readings": [
+            "じゅうはちにち"
+          ],
+          "base": "じゅうはち"
+        },
+        {
+          "number": 19,
+          "written": "十九日",
+          "readings": [
+            "じゅうくにち"
+          ],
+          "base": "じゅうきゅう"
+        },
+        {
+          "number": 20,
+          "written": "二十日",
+          "readings": [
+            "はつか",
+            "にじゅうにち"
+          ],
+          "base": "にじゅう"
+        },
+        {
+          "number": 21,
+          "written": "二十一日",
+          "readings": [
+            "にじゅういちにち"
+          ],
+          "base": "にじゅういち"
+        },
+        {
+          "number": 22,
+          "written": "二十二日",
+          "readings": [
+            "にじゅうににち"
+          ],
+          "base": "にじゅうに"
+        },
+        {
+          "number": 23,
+          "written": "二十三日",
+          "readings": [
+            "にじゅうさんにち"
+          ],
+          "base": "にじゅうさん"
+        },
+        {
+          "number": 24,
+          "written": "二十四日",
+          "readings": [
+            "にじゅうよっか",
+            "にじゅうよんにち"
+          ],
+          "base": "にじゅうよん"
+        },
+        {
+          "number": 25,
+          "written": "二十五日",
+          "readings": [
+            "にじゅうごにち"
+          ],
+          "base": "にじゅうご"
+        },
+        {
+          "number": 26,
+          "written": "二十六日",
+          "readings": [
+            "にじゅうろくにち"
+          ],
+          "base": "にじゅうろく"
+        },
+        {
+          "number": 27,
+          "written": "二十七日",
+          "readings": [
+            "にじゅうしちにち",
+            "にじゅうななにち"
+          ],
+          "base": "にじゅうなな"
+        },
+        {
+          "number": 28,
+          "written": "二十八日",
+          "readings": [
+            "にじゅうはちにち"
+          ],
+          "base": "にじゅうはち"
+        },
+        {
+          "number": 29,
+          "written": "二十九日",
+          "readings": [
+            "にじゅうくにち"
+          ],
+          "base": "にじゅうきゅう"
+        },
+        {
+          "number": 30,
+          "written": "三十日",
+          "readings": [
+            "さんじゅうにち"
+          ],
+          "base": "さんじゅう"
+        },
+        {
+          "number": 31,
+          "written": "三十一日",
+          "readings": [
+            "さんじゅういちにち"
+          ],
+          "base": "さんじゅういち"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 日",
+          "url": "https://jyosuushi.com/explore/counter/%E6%97%A5"
+        },
+        {
+          "title": "Tae Kim · Dates",
+          "url": "https://guidetojapanese.org/learn/grammar/numbers"
+        }
+      ]
+    },
+    {
+      "id": "flat",
+      "symbol": "枚",
+      "label": "Плоские предметы",
+      "rule": "Листы бумаги, тарелки, рубашки и другие тонкие плоские предметы.",
+      "reading": "まい",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一枚",
+          "readings": [
+            "いちまい"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二枚",
+          "readings": [
+            "にまい"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三枚",
+          "readings": [
+            "さんまい"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四枚",
+          "readings": [
+            "よんまい"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五枚",
+          "readings": [
+            "ごまい"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六枚",
+          "readings": [
+            "ろくまい"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七枚",
+          "readings": [
+            "ななまい",
+            "しちまい"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八枚",
+          "readings": [
+            "はちまい"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九枚",
+          "readings": [
+            "きゅうまい"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十枚",
+          "readings": [
+            "じゅうまい"
+          ],
+          "base": "じゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 枚",
+          "url": "https://jyosuushi.com/explore/counter/%E6%9E%9A"
+        },
+        {
+          "title": "Japan Foundation · Marugoto A1",
+          "url": "https://a1.marugotoweb.jp/en/assets/pdf/grammar/A1_appendix_01_en.pdf"
+        }
+      ]
+    },
+    {
+      "id": "floors",
+      "symbol": "階",
+      "label": "Этажи",
+      "rule": "Номер этажа. 三階 допускает さんがい и さんかい. Не путайте с 回 — количеством повторений.",
+      "reading": "かい",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一階",
+          "readings": [
+            "いっかい"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二階",
+          "readings": [
+            "にかい"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三階",
+          "readings": [
+            "さんがい",
+            "さんかい"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四階",
+          "readings": [
+            "よんかい"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五階",
+          "readings": [
+            "ごかい"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六階",
+          "readings": [
+            "ろっかい"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七階",
+          "readings": [
+            "ななかい",
+            "しちかい"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八階",
+          "readings": [
+            "はっかい",
+            "はちかい"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九階",
+          "readings": [
+            "きゅうかい"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十階",
+          "readings": [
+            "じゅっかい",
+            "じっかい"
+          ],
+          "base": "じゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 階",
+          "url": "https://jyosuushi.com/explore/counter/%E9%9A%8E"
+        },
+        {
+          "title": "Tofugu · 階",
+          "url": "https://www.tofugu.com/japanese/japanese-counter-kai-floors/"
+        }
+      ]
+    },
+    {
+      "id": "hours",
+      "symbol": "時",
+      "label": "Время: часы",
+      "rule": "Час на циферблате, а не длительность в часах. Обратите внимание на 四時 よじ и 九時 くじ.",
+      "reading": "じ",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一時",
+          "readings": [
+            "いちじ"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二時",
+          "readings": [
+            "にじ"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三時",
+          "readings": [
+            "さんじ"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四時",
+          "readings": [
+            "よじ"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五時",
+          "readings": [
+            "ごじ"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六時",
+          "readings": [
+            "ろくじ"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七時",
+          "readings": [
+            "しちじ",
+            "ななじ"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八時",
+          "readings": [
+            "はちじ"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九時",
+          "readings": [
+            "くじ"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十時",
+          "readings": [
+            "じゅうじ"
+          ],
+          "base": "じゅう"
+        },
+        {
+          "number": 11,
+          "written": "十一時",
+          "readings": [
+            "じゅういちじ"
+          ],
+          "base": "じゅういち"
+        },
+        {
+          "number": 12,
+          "written": "十二時",
+          "readings": [
+            "じゅうにじ"
+          ],
+          "base": "じゅうに"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 時",
+          "url": "https://jyosuushi.com/explore/counter/%E6%99%82"
+        }
+      ]
+    },
+    {
+      "id": "large-animals",
+      "symbol": "頭",
+      "label": "Крупные животные",
+      "rule": "Крупные животные, например лошади, коровы и слоны.",
+      "reading": "とう",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一頭",
+          "readings": [
+            "いっとう"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二頭",
+          "readings": [
+            "にとう"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三頭",
+          "readings": [
+            "さんとう"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四頭",
+          "readings": [
+            "よんとう"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五頭",
+          "readings": [
+            "ごとう"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六頭",
+          "readings": [
+            "ろくとう"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七頭",
+          "readings": [
+            "ななとう",
+            "しちとう"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八頭",
+          "readings": [
+            "はっとう"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九頭",
+          "readings": [
+            "きゅうとう"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十頭",
+          "readings": [
+            "じゅっとう",
+            "じっとう"
+          ],
+          "base": "じゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 頭",
+          "url": "https://jyosuushi.com/explore/counter/%E9%A0%AD"
+        }
+      ]
+    },
+    {
+      "id": "long",
+      "symbol": "本",
+      "label": "Длинные предметы",
+      "rule": "Карандаши, зонты, бутылки и другие длинные предметы. Не используется для подсчёта книг.",
+      "reading": "ほん",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一本",
+          "readings": [
+            "いっぽん"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二本",
+          "readings": [
+            "にほん"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三本",
+          "readings": [
+            "さんぼん"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四本",
+          "readings": [
+            "よんほん",
+            "よんぽん"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五本",
+          "readings": [
+            "ごほん"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六本",
+          "readings": [
+            "ろっぽん"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七本",
+          "readings": [
+            "ななほん",
+            "しちほん"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八本",
+          "readings": [
+            "はっぽん"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九本",
+          "readings": [
+            "きゅうほん"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十本",
+          "readings": [
+            "じゅっぽん",
+            "じっぽん"
+          ],
+          "base": "じゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 本",
+          "url": "https://jyosuushi.com/explore/counter/%E6%9C%AC"
+        },
+        {
+          "title": "Japan Foundation · Marugoto A1",
+          "url": "https://a1.marugotoweb.jp/en/assets/pdf/grammar/A1_appendix_01_en.pdf"
+        }
+      ]
+    },
+    {
+      "id": "machines",
+      "symbol": "台",
+      "label": "Машины и техника",
+      "rule": "Автомобили, велосипеды, компьютеры и другая техника.",
+      "reading": "だい",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一台",
+          "readings": [
+            "いちだい"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二台",
+          "readings": [
+            "にだい"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三台",
+          "readings": [
+            "さんだい"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四台",
+          "readings": [
+            "よんだい"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五台",
+          "readings": [
+            "ごだい"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六台",
+          "readings": [
+            "ろくだい"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七台",
+          "readings": [
+            "ななだい",
+            "しちだい"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八台",
+          "readings": [
+            "はちだい"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九台",
+          "readings": [
+            "きゅうだい"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十台",
+          "readings": [
+            "じゅうだい"
+          ],
+          "base": "じゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 台",
+          "url": "https://jyosuushi.com/explore/counter/%E5%8F%B0"
+        }
+      ]
+    },
+    {
+      "id": "minutes",
+      "symbol": "分",
+      "label": "Минуты",
+      "rule": "Минуты времени или длительности. Чтение меняется между ふん и ぷん.",
+      "reading": "ふん",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一分",
+          "readings": [
+            "いっぷん"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二分",
+          "readings": [
+            "にふん"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三分",
+          "readings": [
+            "さんぷん"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四分",
+          "readings": [
+            "よんぷん",
+            "よんふん"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五分",
+          "readings": [
+            "ごふん"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六分",
+          "readings": [
+            "ろっぷん"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七分",
+          "readings": [
+            "ななふん",
+            "しちふん"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八分",
+          "readings": [
+            "はっぷん"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九分",
+          "readings": [
+            "きゅうふん"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十分",
+          "readings": [
+            "じゅっぷん",
+            "じっぷん"
+          ],
+          "base": "じゅう"
+        },
+        {
+          "number": 15,
+          "written": "十五分",
+          "readings": [
+            "じゅうごふん"
+          ],
+          "base": "じゅうご"
+        },
+        {
+          "number": 20,
+          "written": "二十分",
+          "readings": [
+            "にじゅっぷん",
+            "にじっぷん"
+          ],
+          "base": "にじゅう"
+        },
+        {
+          "number": 30,
+          "written": "三十分",
+          "readings": [
+            "さんじゅっぷん",
+            "さんじっぷん"
+          ],
+          "base": "さんじゅう"
+        },
+        {
+          "number": 45,
+          "written": "四十五分",
+          "readings": [
+            "よんじゅうごふん"
+          ],
+          "base": "よんじゅうご"
+        },
+        {
+          "number": 60,
+          "written": "六十分",
+          "readings": [
+            "ろくじゅっぷん",
+            "ろくじっぷん"
+          ],
+          "base": "ろくじゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 分",
+          "url": "https://jyosuushi.com/explore/counter/%E5%88%86"
+        }
+      ]
+    },
+    {
+      "id": "months",
+      "symbol": "ヶ月",
+      "label": "Длительность: месяцы",
+      "rule": "Количество месяцев, а не название календарного месяца. ヶ читается か. Также пишут か月 и 箇月.",
+      "reading": "かげつ",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一ヶ月",
+          "readings": [
+            "いっかげつ"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二ヶ月",
+          "readings": [
+            "にかげつ"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三ヶ月",
+          "readings": [
+            "さんかげつ"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四ヶ月",
+          "readings": [
+            "よんかげつ"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五ヶ月",
+          "readings": [
+            "ごかげつ"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六ヶ月",
+          "readings": [
+            "ろっかげつ"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七ヶ月",
+          "readings": [
+            "ななかげつ"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八ヶ月",
+          "readings": [
+            "はっかげつ",
+            "はちかげつ"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九ヶ月",
+          "readings": [
+            "きゅうかげつ"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十ヶ月",
+          "readings": [
+            "じゅっかげつ",
+            "じっかげつ"
+          ],
+          "base": "じゅう"
+        },
+        {
+          "number": 11,
+          "written": "十一ヶ月",
+          "readings": [
+            "じゅういっかげつ"
+          ],
+          "base": "じゅういち"
+        },
+        {
+          "number": 12,
+          "written": "十二ヶ月",
+          "readings": [
+            "じゅうにかげつ"
+          ],
+          "base": "じゅうに"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · ヶ月",
+          "url": "https://jyosuushi.com/explore/counter/%E3%83%B6%E6%9C%88"
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "symbol": "人",
+      "label": "Люди",
+      "rule": "ひとり и ふたり — особые чтения. 四人 читается よにん.",
+      "reading": "にん",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一人",
+          "readings": [
+            "ひとり"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二人",
+          "readings": [
+            "ふたり"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三人",
+          "readings": [
+            "さんにん"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四人",
+          "readings": [
+            "よにん"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五人",
+          "readings": [
+            "ごにん"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六人",
+          "readings": [
+            "ろくにん"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七人",
+          "readings": [
+            "しちにん",
+            "ななにん"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八人",
+          "readings": [
+            "はちにん"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九人",
+          "readings": [
+            "きゅうにん",
+            "くにん"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十人",
+          "readings": [
+            "じゅうにん"
+          ],
+          "base": "じゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 人",
+          "url": "https://jyosuushi.com/explore/counter/%E4%BA%BA"
+        },
+        {
+          "title": "Japan Foundation · Marugoto A1",
+          "url": "https://a1.marugotoweb.jp/en/assets/pdf/grammar/A1_appendix_01_en.pdf"
+        }
+      ]
+    },
+    {
+      "id": "small-animals",
+      "symbol": "匹",
+      "label": "Небольшие животные",
+      "rule": "Кошки, собаки, рыбы и другие небольшие животные. Птиц обычно считают с 羽.",
+      "reading": "ひき",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一匹",
+          "readings": [
+            "いっぴき"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二匹",
+          "readings": [
+            "にひき"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三匹",
+          "readings": [
+            "さんびき"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四匹",
+          "readings": [
+            "よんひき",
+            "よんぴき"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五匹",
+          "readings": [
+            "ごひき"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六匹",
+          "readings": [
+            "ろっぴき"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七匹",
+          "readings": [
+            "ななひき",
+            "しちひき"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八匹",
+          "readings": [
+            "はっぴき"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九匹",
+          "readings": [
+            "きゅうひき"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十匹",
+          "readings": [
+            "じゅっぴき",
+            "じっぴき"
+          ],
+          "base": "じゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 匹",
+          "url": "https://jyosuushi.com/explore/counter/%E5%8C%B9"
+        }
+      ]
+    },
+    {
+      "id": "times",
+      "symbol": "回",
+      "label": "Повторения",
+      "rule": "Количество раз: сколько раз произошло действие. 三回 — さんかい, без озвончения до がい.",
+      "reading": "かい",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一回",
+          "readings": [
+            "いっかい"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二回",
+          "readings": [
+            "にかい"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三回",
+          "readings": [
+            "さんかい"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四回",
+          "readings": [
+            "よんかい"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五回",
+          "readings": [
+            "ごかい"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六回",
+          "readings": [
+            "ろっかい"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七回",
+          "readings": [
+            "ななかい",
+            "しちかい"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八回",
+          "readings": [
+            "はっかい",
+            "はちかい"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九回",
+          "readings": [
+            "きゅうかい"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十回",
+          "readings": [
+            "じゅっかい",
+            "じっかい"
+          ],
+          "base": "じゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 回",
+          "url": "https://jyosuushi.com/explore/counter/%E5%9B%9E"
+        }
+      ]
+    },
+    {
+      "id": "years",
+      "symbol": "年",
+      "label": "Годы",
+      "rule": "Количество лет. Для возраста используется 歳. 四年 читается よねん.",
+      "reading": "ねん",
+      "forms": [
+        {
+          "number": 1,
+          "written": "一年",
+          "readings": [
+            "いちねん"
+          ],
+          "base": "いち"
+        },
+        {
+          "number": 2,
+          "written": "二年",
+          "readings": [
+            "にねん"
+          ],
+          "base": "に"
+        },
+        {
+          "number": 3,
+          "written": "三年",
+          "readings": [
+            "さんねん"
+          ],
+          "base": "さん"
+        },
+        {
+          "number": 4,
+          "written": "四年",
+          "readings": [
+            "よねん"
+          ],
+          "base": "よん"
+        },
+        {
+          "number": 5,
+          "written": "五年",
+          "readings": [
+            "ごねん"
+          ],
+          "base": "ご"
+        },
+        {
+          "number": 6,
+          "written": "六年",
+          "readings": [
+            "ろくねん"
+          ],
+          "base": "ろく"
+        },
+        {
+          "number": 7,
+          "written": "七年",
+          "readings": [
+            "ななねん",
+            "しちねん"
+          ],
+          "base": "なな"
+        },
+        {
+          "number": 8,
+          "written": "八年",
+          "readings": [
+            "はちねん"
+          ],
+          "base": "はち"
+        },
+        {
+          "number": 9,
+          "written": "九年",
+          "readings": [
+            "きゅうねん",
+            "くねん"
+          ],
+          "base": "きゅう"
+        },
+        {
+          "number": 10,
+          "written": "十年",
+          "readings": [
+            "じゅうねん"
+          ],
+          "base": "じゅう"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jyosuushi · 年",
+          "url": "https://jyosuushi.com/explore/counter/%E5%B9%B4"
+        }
+      ]
+    }
+  ]
+}
