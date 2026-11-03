@@ -16,17 +16,18 @@ export function navigation(catalog) {
   const grammar = catalog.lessons.filter((lesson) => lesson.sidebar).map((lesson) =>
     `<a href="${lesson.path}">${escapeHTML(lesson.label)}</a>`
   ).join('');
+  const group = (id,title,links) => `<section class="nav-group" aria-labelledby="nav-${id}"><h2 id="nav-${id}" class="nav-caption">${title}</h2>${links}</section>`;
   return `
-    <p class="nav-caption">СЛОВАРЬ</p>
-    ${vocabulary}
-    <a href="${catalog.base}/practice">Тренировка</a>
+    ${group('words','Словарь',vocabulary)}
+    ${group('practice','Практика',`<a href="${catalog.base}/practice">Слова и формы</a>
     <a href="${catalog.base}/preparation">Подготовка N5</a>
-    <a href="${catalog.base}/counters">Счётные суффиксы</a>
-    <a href="${catalog.base}/library">Библиотека</a>
-    <a href="${catalog.base}/workbooks">Упражнения по книге</a>
+    <a href="${catalog.base}/counters">Счётные суффиксы</a>`)}
+    ${group('exams','Экзамены N5',`
     <a href="${catalog.base}/mock">Пробный N5</a>
-    <p class="nav-caption">ГРАММАТИКА</p>
-    ${grammar}
+    <a href="${catalog.base}/exams">Экзаменационные варианты</a>`)}
+    ${group('grammar','Грамматика',grammar)}
+    ${group('materials','Чтение и учебники',`<a href="${catalog.base}/library">Библиотека Tadoku</a>
+    <a href="${catalog.base}/workbooks">Упражнения по книге</a>`)}
   `;
 }
 

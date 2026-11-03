@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "sets": [
+    {
+      "id": "n5-2010-2011",
+      "title": "N5 · 2010–2011",
+      "catalog": "jlpt/n5-2010-2011/exam.json"
+    },
+    {
+      "id": "n5-2012",
+      "title": "N5 · 2012",
+      "catalog": "jlpt/n5-2012/exam.json"
+    },
+    {
+      "id": "n5-2013",
+      "title": "N5 · 2013",
+      "catalog": "jlpt/n5-2013/exam.json"
+    },
+    {
+      "id": "n5-2017",
+      "title": "N5 · 2017",
+      "catalog": "jlpt/n5-2017/exam.json"
+    },
+    {
+      "id": "n5-2018",
+      "title": "N5 · 2018",
+      "catalog": "jlpt/n5-2018/exam.json"
+    },
+    {
+      "id": "n5-2021-12",
+      "title": "N5 · декабрь 2021",
+      "catalog": "jlpt/n5-2021-12/exam.json"
+    }
+  ]
+}

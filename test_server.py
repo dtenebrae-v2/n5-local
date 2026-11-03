@@ -101,6 +101,23 @@ class ServiceTests(unittest.TestCase):
         destination = next(e for e in data['exercises'] if e['id'] == 'grammar:school')
         self.assertEqual({a['kana'] for a in destination['answers']}, {'に', 'へ'})
 
+    def test_private_exam_catalog_and_opus_seeking(self):
+        sets=self.get('/api/exams')['sets']
+        self.assertEqual(len(sets),6)
+        with urlopen(self.base+'/jlpt/n5/exams',timeout=3) as response:
+            self.assertIn('text/html',response.headers['Content-Type'])
+        if next(s for s in sets if s['id']=='n5-2017')['available']:
+            data=self.get('/api/exam?id=n5-2017')
+            self.assertNotIn('sources',data)
+            request=Request(self.base+data['assets']['recording']['url'],headers={'Range':'bytes=0-31'})
+            with urlopen(request,timeout=3) as response:
+                self.assertEqual(response.status,206)
+                self.assertEqual(response.headers['Content-Type'],'audio/ogg')
+                self.assertTrue(response.read().startswith(b'OggS'))
+        for path in ['/api/exam?id=unknown','/exam-files/n5-2017/exam.json','/exam-files/n5-2017/../server.py']:
+            with self.assertRaises(HTTPError) as error:self.get(path)
+            self.assertEqual(error.exception.code,404)
+
     def test_counts_and_pagination(self):
         self.assertEqual(self.get('/api/health')['entries'], 851)
         expected = {'complete': 772, 'verbs': 115, 'i-adjectives': 58, 'na-adjectives': 37, 'expressions': 21}

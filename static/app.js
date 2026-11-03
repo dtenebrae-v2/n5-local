@@ -2,6 +2,7 @@ import { highlightRuleParagraphs } from './js/form-highlight.js';
 import { mountLibrary } from './js/library.js';
 import { mountCounters } from './js/counters.js';
 import { mountWorkbooks } from './js/workbooks.js';
+import { mountExamSets } from './js/exam-sets.js';
 import { mountPreparation } from './js/preparation.js';
 import { mountMockExam } from './js/mock-exam.js';
 import { mountGame } from './js/game.js';
@@ -31,7 +32,7 @@ async function render(focusPage = false) {
   pageController = new AbortController();
   const { signal } = pageController;
   const route = resolveRoute(location.pathname, catalog);
-  content.classList.toggle('practice-screen', ['game', 'mock', 'preparation', 'book', 'counters', 'workbook'].includes(route.type));
+  content.classList.toggle('practice-screen', ['game', 'mock', 'preparation', 'book', 'counters', 'workbook', 'exam-sets', 'exam-set'].includes(route.type));
   if (route.canonical) history.replaceState({}, '', route.canonical + location.search + location.hash);
   document.title = `${route.title} · N5`;
   menu.classList.remove('open');
@@ -45,7 +46,9 @@ async function render(focusPage = false) {
     else link.removeAttribute('aria-current');
   });
   try {
-    if (route.type === 'workbooks' || route.type === 'workbook') {
+    if (route.type === 'exam-sets' || route.type === 'exam-set') {
+      await mountExamSets(content, signal, route.examId);
+    } else if (route.type === 'workbooks' || route.type === 'workbook') {
       await mountWorkbooks(content, signal, route.workbookId);
     } else if (route.type === 'counters') {
       await mountCounters(content, signal);

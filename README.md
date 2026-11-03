@@ -45,3 +45,5 @@ python scripts/import_tadoku.py --download
 PDF сохраняются без изменений с авторством и CC BY-NC-ND 4.0. У аудио отдельно записаны источник, чтец и правообладатель; официальные загрузки предназначены для личного учебного прослушивания, а не для публичного переиздания. Файлы книг и записей не включаются в Git и Docker-образ.
 
 Материалы разделены по источникам: `data/materials/tadoku/` и `data/materials/somatome/n5-2017/`. В Docker вся папка подключается только для чтения; `N5_MATERIALS_DIR` меняет её путь. Личный набор Sō-matome (`workbook.json`, `images/`, `audio/`) исключён из Git и образа: сохраняйте его отдельной резервной копией. Аудио восстанавливается командой `python scripts/import_somatome.py --download`.
+
+Экзаменационные варианты находятся в `data/materials/jlpt/<набор>/` (`exam.json`, `images/`, `audio/`), также вне Git и образа. Сохраняйте всю папку отдельно. Из резервной копии проверенного манифеста и исходных PDF/OPUS набор восстанавливается через `python scripts/import_exams.py --source <исходники> --manifest <exam.json> --destination data/materials/jlpt/<набор>`; нужны Poppler и ffprobe.

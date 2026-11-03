@@ -16,5 +16,8 @@ data/materials/tadoku/files
 test_library.py
 
 data/materials/somatome/
+data/materials/jlpt/
 
 test_workbooks.py
+
+test_exam_sets.py

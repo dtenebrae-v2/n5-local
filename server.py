@@ -11,6 +11,7 @@ from n5.counters import load_counters
 from n5.mock_exam import load_mock_exam
 from n5.library import Library, byte_range
 from n5.workbooks import Workbooks
+from n5.exam_sets import ExamSets
 from n5.export import vocabulary_csv
 from n5.store import VocabularyStore, WordError
 from n5.vocabulary import unique_keys
@@ -23,6 +24,7 @@ GRAMMAR_PRACTICE = load_grammar(DATA / 'grammar-practice.json')
 MOCK_EXAM = load_mock_exam(DATA / 'mock-exam.json')
 LIBRARY = Library(MATERIALS / 'tadoku/catalog.json', MATERIALS / 'tadoku/files')
 WORKBOOKS = Workbooks(MATERIALS)
+EXAM_SETS = ExamSets(MATERIALS)
 STORE = VocabularyStore(DATA, Path(os.environ.get('N5_VOCABULARY', DATA / 'vocabulary.json')))
 CATALOG = STORE.catalog
 REPOSITORY = CATALOG.repository
@@ -76,7 +78,17 @@ class Handler(BaseHTTPRequestHandler):
             reader = re.fullmatch(r'/jlpt/n5/library/(\d+)',path)
             workbook = re.fullmatch(r'/jlpt/n5/workbooks/([a-z0-9-]+)', path)
             material = re.fullmatch(r'/material-files/([a-z0-9-]+)/([a-zA-Z0-9-]+)', path)
-            if material:
+            exam = re.fullmatch(r'/jlpt/n5/exams/([a-z0-9-]+)', path)
+            exam_media = re.fullmatch(r'/exam-files/([a-z0-9-]+)/([a-zA-Z0-9-]+)', path)
+            if exam_media:
+                found = EXAM_SETS.asset(*exam_media.groups())
+                if found:
+                    self.serve_file(*found, found[1]['mime'])
+                else:
+                    self.not_found()
+            elif exam and exam.group(1) in EXAM_SETS.sets:
+                self.send((ROOT / 'static/index.html').read_bytes(), 'text/html; charset=utf-8')
+            elif material:
                 found = WORKBOOKS.asset(*material.groups())
                 if found:
                     self.serve_file(*found, found[1]['mime'])
@@ -133,6 +145,11 @@ class Handler(BaseHTTPRequestHandler):
             return self.send(LIBRARY.public())
         if path == '/api/workbooks':
             return self.send(WORKBOOKS.catalog())
+        if path == '/api/exams':
+            return self.send(EXAM_SETS.catalog())
+        if path == '/api/exam':
+            data = EXAM_SETS.public(params.get('id', [''])[0])
+            return self.send(data) if data else self.not_found()
         if path == '/api/workbook':
             data = WORKBOOKS.public(params.get('id', [''])[0])
             return self.send(data) if data else self.not_found()

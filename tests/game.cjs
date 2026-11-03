@@ -6,7 +6,7 @@ const path = require('node:path');
 module.exports = async function gameChecks(page, base) {
   await page.goto(base + '/jlpt/n5/practice');
   await page.waitForSelector('#game-question[data-word]');
-  assert.equal(await page.locator('#navigation a.active').innerText(), 'Тренировка');
+  assert.equal(await page.locator('#navigation a.active').innerText(), 'Слова и формы');
   await choose(page, '#game-kind input[value="nouns"]');
   assert.equal(await page.locator('select').count(), 0);
   const input = page.locator('#practice-answer');

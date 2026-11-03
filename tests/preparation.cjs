@@ -2,10 +2,30 @@ const assert=require('node:assert/strict');
 module.exports=async function preparationChecks(page,base) {
  await page.evaluate(()=>localStorage.removeItem('n5.preparation.v1'));
  await page.goto(base+'/jlpt/n5/preparation');
- await page.locator('.prep-topics summary').click();
+ assert.equal(await page.locator('#navigation .nav-group').count(),5);
+ assert.equal(await page.locator('#nav-words').locator('..').locator('a[href$="/practice"]').count(),0);
+ assert.equal(await page.locator('#nav-exams').locator('..').locator('a').count(),2);
+ assert.ok(await page.locator('.nav-caption').first().evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=parseFloat(getComputedStyle(document.querySelector('#navigation a')).fontSize)));
+ assert.ok(await page.locator('[data-topic=dates]').isVisible());
+ await page.locator('#prep-topic-query').fill('част');
+ assert.equal(await page.locator('.prep-topic-card').count(),1);
+ assert.ok(await page.locator('[data-topic=particles]').isVisible(),'Search includes topics outside the current group');
+ assert.ok(await page.locator('#prep-topic-query').evaluate(el=>el===document.activeElement));
+ await page.locator('#prep-topic-query').fill('несуществующая тема');
+ assert.equal(await page.locator('.prep-topic-card').count(),0);
+ await page.locator('[data-action=clear-search]').click();
  await page.locator('[data-topic=dates]').click();
+ assert.equal(await page.locator('#prep-heading').count(),0,'Selecting a topic does not start the session');
+ await page.locator('[data-action=launch]').click();
  const read=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('n5.preparation.v1')));
  let saved=await read();const q=saved.session.questions[0];
+ const original=saved.session.questions.map(q=>q.id);
+ await page.locator('[data-action=home]').click();
+ assert.deepEqual((await read()).session.questions.map(q=>q.id),original,'Changing setup preserves the unfinished session');
+ await page.locator('[data-prep-count="5"]').click();
+ assert.match(await page.locator('#prep-plan-summary').innerText(),/5 заданий/);
+ await page.locator('[data-action=resume]').click();
+ assert.deepEqual((await read()).session.questions.map(q=>q.id),original);
  assert.equal(q.topic,'dates');
  await page.keyboard.press(String(q.correct+1));
  const before=await page.locator('[data-action=next]').boundingBox();
@@ -28,7 +48,7 @@ module.exports=async function preparationChecks(page,base) {
  await page.goto(base+'/jlpt/n5/vocabulary/complete');await page.goto(base+'/jlpt/n5/preparation');await page.waitForSelector('#prep-heading');
  assert.equal((await read()).session.questions[(await read()).session.index].id,current);
  await page.locator('[data-action=home]').click();
- await page.locator('[data-start=mistakes]').click();
+ await page.locator('[data-start=mistakes]').click();await page.locator('[data-action=launch]').click();
  saved=await read();assert.ok(saved.session.questions.every(v=>v.topic==='dates'));
  assert.ok(saved.session.questions.every(q=>saved.skills[q.skill]?.needsPractice),'Only unresolved words and rules are practised');
  await page.locator('[data-action=home]').click();
@@ -38,11 +58,11 @@ module.exports=async function preparationChecks(page,base) {
  assert.ok(await page.locator('.prep-stats .table-scroll').first().evaluate(el=>el.scrollWidth<=el.clientWidth+1));
  if(process.env.SCREENSHOT_DIR)await page.screenshot({path:process.env.SCREENSHOT_DIR+'/n5-preparation-stats-mobile.png',fullPage:false});
  await page.clock.fastForward(11*60000);
- await page.reload();await page.locator('[data-start=due]').click();
+ await page.reload();await page.locator('[data-start=due]').click();await page.locator('[data-action=launch]').click();
  assert.ok((await read()).session.questions.every(v=>v.topic==='dates'));
  await page.locator('[data-action=home]').click();
- await page.locator('.prep-topics summary').click();
- await page.locator('[data-topic=reading]').click();
+ await page.locator('[data-start=all]').click();await page.locator('[data-prep-category=texts]').click();
+ await page.locator('[data-topic=reading]').click();await page.locator('[data-action=launch]').click();
  let reading=(await read()).session.questions[0];
  while(!reading.wordRefs?.length) {
   await page.locator('[data-action=unknown]').click();await page.keyboard.press('Shift+Enter');
@@ -64,8 +84,8 @@ module.exports=async function preparationChecks(page,base) {
   assert.equal((await read()).bookmarks.length,1);
   await page.locator('dialog .practice-close').click();
  }
- await page.locator('[data-action=home]').click();await page.locator('.prep-topics summary').click();
- await page.locator('[data-topic=kanji]').click();
+ await page.locator('[data-action=home]').click();await page.locator('[data-start=all]').click();await page.locator('[data-prep-category=words]').click();
+ await page.locator('[data-topic=kanji]').click();await page.locator('[data-action=launch]').click();
  const plain=(await read()).session.questions[0];
  await page.locator('[data-action=hint]').click();
  assert.ok(!(await page.locator('#prep-feedback').innerText()).includes(plain.explanation),'Rule does not reuse the current answer');
