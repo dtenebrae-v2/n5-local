@@ -20,3 +20,12 @@ test('library and known book-shaped routes are independent of the vocabulary rou
  assert.equal(resolveRoute('/jlpt/n5/library/61371',catalog).bookId,'61371');
  assert.equal(resolveRoute('/jlpt/n5/library/../server.py',catalog).type,'missing');
 });
+test('PDF coordinates, custom scale and fit mode survive storage without losing old progress',()=>{
+ const state=readingState({books:{x:{page:3,audioTime:12,zoom:1.5,scale:2.25,fit:null,position:{page:3,left:72,top:381},totalPages:18}}},'x');
+ assert.deepEqual(state.position,{page:3,left:72,top:381});
+ assert.equal(state.scale,2.25);assert.equal(state.fit,null);assert.equal(state.totalPages,18);
+ assert.equal(readingState({books:{x:{page:5,zoom:1.5}}},'x').page,5);
+ assert.equal(readingState({books:{x:{fit:'page-fit',scale:.5}}},'x').fit,'page-fit');
+ const damaged=readingState({books:{x:{position:{page:0,left:Infinity,top:1},scale:99,totalPages:-1}}},'x');
+ assert.equal(damaged.position,null);assert.equal(damaged.scale,4);assert.equal(damaged.totalPages,null);
+});

@@ -32,6 +32,7 @@ async function render(focusPage = false) {
   pageController = new AbortController();
   const { signal } = pageController;
   const route = resolveRoute(location.pathname, catalog);
+  content.classList.toggle('book-screen', route.type === 'book');
   content.classList.toggle('practice-screen', ['game', 'mock', 'preparation', 'book', 'counters', 'workbook', 'exam-sets', 'exam-set'].includes(route.type));
   if (route.canonical) history.replaceState({}, '', route.canonical + location.search + location.hash);
   document.title = `${route.title} · N5`;
@@ -91,6 +92,24 @@ function navigate(url) {
 }
 
 function bindNavigation() {
+  const closeMenu = (restoreFocus = false) => {
+    if (!menu.classList.contains('open')) return;
+    menu.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    if (restoreFocus) menuToggle.focus({ preventScroll: true });
+  };
+  document.addEventListener('pointerdown', event => {
+    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
+  });
+  document.addEventListener('focusin', event => {
+    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menu.classList.contains('open') && !document.querySelector('dialog[open]')) {
+      event.preventDefault();
+      closeMenu(true);
+    }
+  });
   document.addEventListener('click', (event) => {
     const link = event.target.closest('a');
     if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey

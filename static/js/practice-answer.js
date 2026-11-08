@@ -6,7 +6,7 @@ import { checkAnswer, closestAnswer, normalizeAnswer } from './conjugation.js';
 export function answerFields() {
   return `<label class="practice-label" for="practice-answer">Форма целиком</label>
     <div class="practice-answer-line"><input id="practice-answer" type="text" lang="ja" maxlength="160"
-      aria-describedby="practice-input-help" autocomplete="off" autocapitalize="off" spellcheck="false"
+      aria-describedby="practice-input-help" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done"
       placeholder="Ромадзи или хирагана"></div>
     <p class="practice-help" id="practice-input-help">Ромадзи превращается в хирагану при вводе. Для では набирайте deha, для じゃ — ja.</p>
     <div class="practice-actions"><button class="primary" type="submit">Проверить</button>

@@ -90,6 +90,7 @@ export async function mountGame(root, catalog, signal) {
   const actions = root.querySelector('#practice-form .practice-actions');
   actions.insertBefore(root.querySelector('#game-next'), root.querySelector('#practice-reveal'));
   actions.append(root.querySelector('#game-unknown'));
+  actions.after(root.querySelector('#practice-input-help'));
   root.querySelector('.game-card').append(root.querySelector('#game-finish'));
   root.querySelector('#game-next').classList.add('game-advance');
   const input = root.querySelector('#practice-answer');
@@ -110,6 +111,7 @@ export async function mountGame(root, catalog, signal) {
   const getExercise = (word, form) => isGrammar() ? (word.exercise.form === form ? word.exercise : null) : isVocabulary() ? vocabularyExercises.get(word.entry.id) : exerciseFor(word.entry, word.kind, form);
   const hasMistake = word => Object.values(progress.mistakes).some(a => a.id === word.entry.id && formsFor(word).includes(a.form));
   function save() {
+    updateActions();
     progress.settings = appliedSettings || settings();
     progress.session = current || finished ? {
       settings: appliedSettings || settings(), current: current ? { id: current.word.entry.id, collection: current.word.collection, form: current.form, repeat: !!current.repeat } : null,
@@ -118,6 +120,15 @@ export async function mountGame(root, catalog, signal) {
       result: answer.result, input: input.value, feedback: feedback.textContent, status: feedback.dataset.status || '',
     } : null;
     root.querySelector('#game-storage').textContent = saveProgress(progress) ? '' : 'Не удалось сохранить прогресс в браузере.';
+  }
+  function updateActions() {
+    const hasAnswer = ['correct', 'incorrect', 'answer', 'unknown'].includes(feedback.dataset.status);
+    const submit = root.querySelector('#practice-form [type="submit"]');
+    const nextButton = root.querySelector('#game-next');
+    submit.classList.toggle('primary', !hasAnswer);
+    submit.classList.toggle('secondary', hasAnswer);
+    nextButton.classList.toggle('primary', hasAnswer);
+    nextButton.classList.toggle('secondary', !hasAnswer);
   }
   function updateOptions() {
     mode.hidden = isVocabulary() || isGrammar();

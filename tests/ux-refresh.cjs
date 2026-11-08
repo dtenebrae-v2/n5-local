@@ -9,6 +9,18 @@ module.exports = async function uxChecks(page, base) {
   await page.goto(base + '/jlpt/n5/practice');
   await page.waitForSelector('#game-question[data-word]');
   page.off('request', track);
+  const menuToggle = page.locator('.menu-toggle');
+  await menuToggle.click();
+  assert.equal(await menuToggle.getAttribute('aria-expanded'), 'true');
+  await page.keyboard.press('Escape');
+  assert.equal(await menuToggle.getAttribute('aria-expanded'), 'false');
+  assert.equal(await menuToggle.evaluate(el => el === document.activeElement), true);
+  await menuToggle.click();
+  await page.locator('.sidebar').click({ position: { x: 180, y: 10 } });
+  assert.equal(await menuToggle.getAttribute('aria-expanded'), 'false');
+  await menuToggle.click();
+  await page.locator('#game-configure').focus();
+  assert.equal(await menuToggle.getAttribute('aria-expanded'), 'false');
   assert.equal(requests.filter(url => url.includes('/api/training-words')).length, 1);
   assert.equal(requests.filter(url => url.includes('/api/words?')).length, 0);
   const input = page.locator('#practice-answer');
@@ -36,7 +48,9 @@ module.exports = async function uxChecks(page, base) {
   await input.fill(reading + { past: 'でした', negative: 'じゃないです', past_negative: 'じゃなかったです' }[form]);
   const top = () => page.locator('#game-next').evaluate(el => el.getBoundingClientRect().top + scrollY);
   const before = await top();
+  assert.equal(await page.locator('#practice-form [type=submit]').evaluate(el => el.classList.contains('primary')), true);
   await input.press('Enter');
+  assert.equal(await page.locator('#game-next').evaluate(el => el.classList.contains('primary')), true);
   assert.equal(await top(), before, 'Feedback must not move the next button');
   await page.locator('#game-finish').click();
   assert.equal(await page.evaluate(() => document.activeElement.id), 'game-summary-title');

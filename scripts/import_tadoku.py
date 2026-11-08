@@ -6,6 +6,8 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import shutil
+import subprocess
 import sys
 import time
 from urllib.request import Request, urlopen, build_opener, HTTPRedirectHandler
@@ -102,6 +104,22 @@ def write_catalog(path,catalog):
     temporary.replace(path)
 
 
+def record_pdf_pages(catalog, directory):
+    """Keep physical PDF page counts separate from the source's story-page counts."""
+    if not shutil.which('pdfinfo'):
+        return
+    for book in catalog['books']:
+        path = directory / book['assets']['pdf']['filename']
+        if not path.is_file():
+            continue
+        result = subprocess.run(['pdfinfo', str(path)], capture_output=True, text=True)
+        if result.returncode == 0:
+            for line in result.stdout.splitlines():
+                if line.startswith('Pages:'):
+                    book['pdf_pages'] = int(line.split(':', 1)[1].strip())
+                    break
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--scan',action='store_true',help='Refresh the reviewed level 1–2 catalogue')
@@ -126,6 +144,7 @@ def main():
     from n5.library import validate_catalog
     validate_catalog(catalog)
     if args.scan:
+        record_pdf_pages(catalog,args.directory)
         write_catalog(path,catalog)
     if args.download:
         assets=[(book,kind,asset) for book in catalog['books'] for kind,asset in book['assets'].items()]
@@ -139,6 +158,7 @@ def main():
                     print(f"SAVED {book['id']} {kind}: {info['bytes']} bytes",flush=True)
                 except Exception as exc:
                     failed=True;print(f"FAILED {book['id']} {kind}: {exc}",file=sys.stderr,flush=True)
+        record_pdf_pages(catalog,args.directory)
         write_catalog(path,catalog)
         if failed:
             raise SystemExit(1)

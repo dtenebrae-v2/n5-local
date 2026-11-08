@@ -26,6 +26,8 @@ def validate_catalog(data):
         if not re.fullmatch(r'\d+',bid) or bid in ids or book.get('level') not in {1,2}:
             raise ValueError('Invalid book ID or level')
         ids.add(bid)
+        if 'pdf_pages' in book and (type(book['pdf_pages']) is not int or book['pdf_pages'] < 1):
+            raise ValueError('Invalid PDF page count')
         if not book.get('title') or not book.get('credits') or book.get('license',{}).get('url') != LICENSE:
             raise ValueError('Missing attribution or license')
         approved_url(book['source'])

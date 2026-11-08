@@ -37,9 +37,10 @@ ASSETS.update({
     '/' + path.relative_to(ROOT / 'static').as_posix(): (path, {
         '.js':'text/javascript; charset=utf-8', '.mjs':'text/javascript; charset=utf-8',
         '.ttf':'font/ttf', '.txt':'text/plain; charset=utf-8',
+        '.css':'text/css; charset=utf-8', '.svg':'image/svg+xml', '.gif':'image/gif',
     }.get(path.suffix, 'application/octet-stream'))
     for path in (ROOT / 'static').rglob('*')
-    if path.is_file() and path.suffix in {'.js','.mjs','.bcmap','.pfb','.ttf','.txt'}
+    if path.is_file() and path.suffix in {'.js','.mjs','.bcmap','.pfb','.ttf','.txt','.css','.svg','.gif'}
 })
 
 CSP = (

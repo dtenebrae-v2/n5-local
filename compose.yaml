@@ -1,5 +1,6 @@
 services:
   n5:
+    image: n5-local:${N5_IMAGE_TAG:-latest}
     build: .
     ports:
       - "${N5_HOST:-0.0.0.0}:${N5_PORT:-8095}:8080"

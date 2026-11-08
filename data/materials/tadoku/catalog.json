@@ -45,7 +45,8 @@
           "bytes": 5862079,
           "sha256": "7e811ae29480fb3ad712262fa952d33fb23fe5acfa875e9062b0c93ff66ad994"
         }
-      }
+      },
+      "pdf_pages": 18
     },
     {
       "id": "5883",
@@ -88,7 +89,8 @@
           "bytes": 3002160,
           "sha256": "f855bca3cedf60094cadadbbdac61d49ca2396af180dbddf63fe6e329656734a"
         }
-      }
+      },
+      "pdf_pages": 22
     },
     {
       "id": "64329",
@@ -132,7 +134,8 @@
           "bytes": 2600554,
           "sha256": "53d0b2a99cfaf84a11380bae8f24e2dea03ffb9f7278e020ce2eb16922d0bdc8"
         }
-      }
+      },
+      "pdf_pages": 17
     },
     {
       "id": "48395",
@@ -167,7 +170,8 @@
           "sha256": "1ffb9f0b6d5f110df18fb2c65363ff6ebbb2154ebaf05fb2ca80d32ff65b4bd6"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/48395/"
+      "audio_source": "https://tadoku.org/japanese/book/48395/",
+      "pdf_pages": 21
     },
     {
       "id": "47659",
@@ -202,7 +206,8 @@
           "sha256": "373f15f5e93f6784308d5bfae9d7871996699b459b97b821d04ec7327fffe8e5"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/47659/"
+      "audio_source": "https://tadoku.org/japanese/book/47659/",
+      "pdf_pages": 18
     },
     {
       "id": "43726",
@@ -236,7 +241,8 @@
           "sha256": "6640848f672f76d65f51065753e13c68c1236ab00536721dc42fc970fc883a59"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/43726/"
+      "audio_source": "https://tadoku.org/japanese/book/43726/",
+      "pdf_pages": 22
     },
     {
       "id": "42390",
@@ -271,7 +277,8 @@
           "sha256": "bae76e703094585495d09b13980b9748a600e29cf09aa5e98062cde6fb6806e1"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/42390/"
+      "audio_source": "https://tadoku.org/japanese/book/42390/",
+      "pdf_pages": 21
     },
     {
       "id": "41614",
@@ -307,7 +314,8 @@
           "sha256": "28ce8a26de3dcce83a4256b3a98c5ea915cd39b682ba43760dd5649557d0a87e"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/41614/"
+      "audio_source": "https://tadoku.org/japanese/book/41614/",
+      "pdf_pages": 24
     },
     {
       "id": "38533",
@@ -341,7 +349,8 @@
           "sha256": "6cf980538f34e3445cb05c238db12d32fee959ab58f6f8c37637427da7e57c8d"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/38533/"
+      "audio_source": "https://tadoku.org/japanese/book/38533/",
+      "pdf_pages": 22
     },
     {
       "id": "38370",
@@ -375,7 +384,8 @@
           "sha256": "d866a3982d3c541e4abfec8cf656a3ddb728fcbab9fe794c0b7e4554f39217c1"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/38370/"
+      "audio_source": "https://tadoku.org/japanese/book/38370/",
+      "pdf_pages": 18
     },
     {
       "id": "9295",
@@ -410,7 +420,8 @@
           "sha256": "4606f185888f0faf2d7b885592696ba6b29e177e7ab7b4c192956b770cf3222d"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/9295/"
+      "audio_source": "https://tadoku.org/japanese/book/9295/",
+      "pdf_pages": 14
     },
     {
       "id": "8964",
@@ -444,7 +455,8 @@
           "sha256": "3443464e4eaaf16ba88e922e2b0080141597bb9ae97a3aeafc758db00eb93bd6"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/8964/"
+      "audio_source": "https://tadoku.org/japanese/book/8964/",
+      "pdf_pages": 14
     },
     {
       "id": "8884",
@@ -480,7 +492,8 @@
           "sha256": "56cfc73e069b9e8fbc43f592cb2c8af1b7d06f8c796e8cd5bd9350a62621c3f3"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/8884/"
+      "audio_source": "https://tadoku.org/japanese/book/8884/",
+      "pdf_pages": 18
     },
     {
       "id": "8688",
@@ -515,7 +528,8 @@
           "sha256": "b49de8e9da6bbb037f5f4d48cc5187f469f6a64e3fc4f0680e564d88fcaf922a"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/8688/"
+      "audio_source": "https://tadoku.org/japanese/book/8688/",
+      "pdf_pages": 12
     },
     {
       "id": "8576",
@@ -550,7 +564,8 @@
           "sha256": "82d7f033227a2dd6a452e551fae4f5d6639f3d19614f460a4c24b9eb26897272"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/8576/"
+      "audio_source": "https://tadoku.org/japanese/book/8576/",
+      "pdf_pages": 18
     },
     {
       "id": "7957",
@@ -585,7 +600,8 @@
           "sha256": "2cf8b3b6c3e85ea2f8d05c7d2e664c7fa8ccb29386931624f92f1e5cef3bcfe8"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/7957/"
+      "audio_source": "https://tadoku.org/japanese/book/7957/",
+      "pdf_pages": 26
     },
     {
       "id": "7787",
@@ -619,7 +635,8 @@
           "sha256": "4106f8c666e882b25af9279c6d3f9e645fe43d3172a06267503a5b6e13da894a"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/7787/"
+      "audio_source": "https://tadoku.org/japanese/book/7787/",
+      "pdf_pages": 18
     },
     {
       "id": "7348",
@@ -654,7 +671,8 @@
           "sha256": "8a0aa4324ef68f1dd7b34d292f1a85eb0d8d350eaebcf40ad12c01fc095eefd7"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/7348/"
+      "audio_source": "https://tadoku.org/japanese/book/7348/",
+      "pdf_pages": 24
     },
     {
       "id": "5371",
@@ -688,7 +706,8 @@
           "sha256": "a8d072fb27ebeeef94a752962877bd24fbc330da8d2490c12bce29f6331126dc"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/5371/"
+      "audio_source": "https://tadoku.org/japanese/book/5371/",
+      "pdf_pages": 16
     },
     {
       "id": "4644",
@@ -723,7 +742,8 @@
           "sha256": "ab050dc49b78e6dd5ad616b8e41fbdae9e66c9f36a76c606f68bfeffbb12b318"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/4644/"
+      "audio_source": "https://tadoku.org/japanese/book/4644/",
+      "pdf_pages": 18
     },
     {
       "id": "4159",
@@ -758,7 +778,8 @@
           "sha256": "016eb7f72e8e143c126f7cf8de4aea67c9570a31b72a9e4dd1c4b6397b4204bf"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/4159/"
+      "audio_source": "https://tadoku.org/japanese/book/4159/",
+      "pdf_pages": 10
     },
     {
       "id": "4158",
@@ -792,7 +813,8 @@
           "sha256": "20d8a55d05430f1c4f071395cebf903066d5c9d98de6647a7fe200f55adf4adf"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/4158/"
+      "audio_source": "https://tadoku.org/japanese/book/4158/",
+      "pdf_pages": 18
     },
     {
       "id": "44313",
@@ -827,7 +849,8 @@
           "sha256": "1319d7d79bc2c24433ea1be84092701a20d6d0a2db1bfedc5f433960d44f9983"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/44313/"
+      "audio_source": "https://tadoku.org/japanese/book/44313/",
+      "pdf_pages": 15
     },
     {
       "id": "43311",
@@ -862,7 +885,8 @@
           "sha256": "c1eece366645913569a27150efc29ab61d0b75f4a3f25f56910c061736a45231"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/43311/"
+      "audio_source": "https://tadoku.org/japanese/book/43311/",
+      "pdf_pages": 21
     },
     {
       "id": "43170",
@@ -897,7 +921,8 @@
           "sha256": "8daa7d8413389206588297664163ae2f5da3e26ab37dcda898c51dbcf1484766"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/43170/"
+      "audio_source": "https://tadoku.org/japanese/book/43170/",
+      "pdf_pages": 20
     },
     {
       "id": "38919",
@@ -931,7 +956,8 @@
           "sha256": "0118dcaedf6d4aa7eb90719aa18140b8ca9a3436ebc71afeb92d88407fdeaca2"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/38919/"
+      "audio_source": "https://tadoku.org/japanese/book/38919/",
+      "pdf_pages": 18
     },
     {
       "id": "6987",
@@ -965,7 +991,8 @@
           "sha256": "4df096ecbcdb0101d970d5fbaa3f1414b06c94c791a56d6735dc4e6e9d30c28f"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/6987/"
+      "audio_source": "https://tadoku.org/japanese/book/6987/",
+      "pdf_pages": 16
     },
     {
       "id": "5494",
@@ -1000,7 +1027,8 @@
           "sha256": "2c887d405c7302c1d27ca7470121ee7d0d54dc86a73213050b79144b184e554e"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/5494/"
+      "audio_source": "https://tadoku.org/japanese/book/5494/",
+      "pdf_pages": 14
     },
     {
       "id": "5456",
@@ -1034,7 +1062,8 @@
           "sha256": "49e433d07466310d297278cd1d624f9e2d847abe4e46ec97d95b63c5512febfe"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/5456/"
+      "audio_source": "https://tadoku.org/japanese/book/5456/",
+      "pdf_pages": 14
     },
     {
       "id": "5451",
@@ -1069,7 +1098,8 @@
           "sha256": "350268904fef7658d075bae2a5610167d6732cf1dc397c1d9570d472610ffb06"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/5451/"
+      "audio_source": "https://tadoku.org/japanese/book/5451/",
+      "pdf_pages": 14
     },
     {
       "id": "4914",
@@ -1103,7 +1133,8 @@
           "sha256": "8e036c406bf43415f23068aced941ae8b83604a0f50281266156357400318d1e"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/4914/"
+      "audio_source": "https://tadoku.org/japanese/book/4914/",
+      "pdf_pages": 14
     },
     {
       "id": "3149",
@@ -1137,7 +1168,8 @@
           "sha256": "a71488999f88d3e9240e1d396968bd7503f1bbde2ac2224b605796be610a3a19"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/3149/"
+      "audio_source": "https://tadoku.org/japanese/book/3149/",
+      "pdf_pages": 22
     },
     {
       "id": "3152",
@@ -1171,7 +1203,8 @@
           "sha256": "bf026a5f4b54abe5adbdaf52d4bd0941dca8fda56cc8b13f90c5c048051526dd"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/3152/"
+      "audio_source": "https://tadoku.org/japanese/book/3152/",
+      "pdf_pages": 14
     },
     {
       "id": "3155",
@@ -1206,7 +1239,8 @@
           "sha256": "18e70e1878cdd229e247705a4d067cbd224ceb223af2f560d535ee1b463fc15f"
         }
       },
-      "audio_source": "https://tadoku.org/japanese/book/3155/"
+      "audio_source": "https://tadoku.org/japanese/book/3155/",
+      "pdf_pages": 12
     },
     {
       "id": "65357",
@@ -1240,7 +1274,8 @@
           "bytes": 1309236,
           "sha256": "02728a7c4f8ec01dfbaf2651c926cde72deb53eab307f34790cca14a1a06232a"
         }
-      }
+      },
+      "pdf_pages": 14
     },
     {
       "id": "64058",
@@ -1275,7 +1310,8 @@
           "bytes": 7179159,
           "sha256": "eb145c5b071c51f7ef9782d0316f565ac2f523ff6309845acb61cba1501b54ed"
         }
-      }
+      },
+      "pdf_pages": 16
     },
     {
       "id": "64041",
@@ -1308,7 +1344,8 @@
           "bytes": 4755319,
           "sha256": "0cdcd6c8492290b847ddb1318c22e1cb2a8227481d041d75bc87a62819aa7e6c"
         }
-      }
+      },
+      "pdf_pages": 14
     },
     {
       "id": "47818",
@@ -1342,7 +1379,8 @@
           "bytes": 6648177,
           "sha256": "6cbbfc3a144e64d901a1c16afc7a90233e29241b55791a2a0c3f6c13e13d0ff0"
         }
-      }
+      },
+      "pdf_pages": 20
     },
     {
       "id": "41295",
@@ -1376,7 +1414,8 @@
           "bytes": 3259341,
           "sha256": "5cffd409489d3da0dfea88d1800d4bdc4dc939c4619f098983c132d6e3fb0b29"
         }
-      }
+      },
+      "pdf_pages": 20
     },
     {
       "id": "6873",
@@ -1409,7 +1448,8 @@
           "bytes": 10856393,
           "sha256": "46743297a06de24d9bdd4fccdb511a864d6c7dae2ea33aac2f36e46471965fb3"
         }
-      }
+      },
+      "pdf_pages": 32
     },
     {
       "id": "48618",
@@ -1443,7 +1483,8 @@
           "bytes": 2877519,
           "sha256": "a8f38421259fc81c4249a81e6c2bc6a18de228b455d04c827881f86fb090be67"
         }
-      }
+      },
+      "pdf_pages": 18
     },
     {
       "id": "42745",
@@ -1477,7 +1518,8 @@
           "bytes": 35555947,
           "sha256": "eae307ac6feaaf90f7587989035a635bb17310ede8a41439aa1953743b7b1d8b"
         }
-      }
+      },
+      "pdf_pages": 21
     },
     {
       "id": "6070",
@@ -1511,7 +1553,8 @@
           "bytes": 1276711,
           "sha256": "55f4d835e38e7c1c0e941b5cb005f4de8922d2965ebbbbf0366effed08abc7ea"
         }
-      }
+      },
+      "pdf_pages": 24
     },
     {
       "id": "6069",
@@ -1545,7 +1588,8 @@
           "bytes": 999699,
           "sha256": "c2fb653953d09aaae43bcefa8b6a823259f6f35df314f3ff1ba74a6b9d862f08"
         }
-      }
+      },
+      "pdf_pages": 26
     }
   ]
 }

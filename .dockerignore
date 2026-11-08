@@ -1,6 +1,17 @@
 __pycache__
 *.pyc
 .git
+.github
+.agents
+.aws
+.codex
+.build-tools
+.automation
+android
+dist
+.env
+*.jks
+*.keystore
 test_server.py
 README.md
 
