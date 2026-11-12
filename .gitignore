@@ -9,8 +9,3 @@ android/*.jks
 dist/
 .build-tools/
 .automation/
-
-data/materials/tadoku/files/
-
-data/materials/somatome/
-data/materials/jlpt/

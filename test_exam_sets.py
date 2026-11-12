@@ -49,6 +49,10 @@ class ExamSetTests(unittest.TestCase):
                    lambda d:d['sections'][0]['groups'][0]['items'][0].update(clip=[5,20]),
                    lambda d:d['sections'][0]['groups'][0]['items'][0].update(clip=[float('nan'),8]),
                    lambda d:d['sections'][0]['groups'][0]['items'][0].update(pages=['missing']),
+                   lambda d:d['assets']['p1'].update(crop=[0,0,0,20]),
+                   lambda d:d['assets']['p1'].update(crop=[0,-1,20,20]),
+                   lambda d:d['sections'][0]['groups'][0]['items'][0].update(media=[{'asset':'missing','role':'question'}]),
+                   lambda d:d['sections'][0]['groups'][0]['items'][0].update(media=[{'asset':'p1','role':'unknown'}]),
                    lambda d:d['sections'][0]['groups'][0]['items'][0].update(answer_source=None)]
         for change in mutations:
             data=copy.deepcopy(original);change(data)
@@ -67,5 +71,14 @@ class ExamSetTests(unittest.TestCase):
                 for group in section['groups']:
                     for q in group['items']:
                         if section.get('audio'):self.assertIn('clip',q)
+                        self.assertIn('media',q)
+                        if not q['media']:
+                            self.assertEqual(section['id'],'listening')
+                            self.assertEqual(group['number'],4)
+                        for part in q['media']:
+                            asset=data['assets'][part['asset']]
+                            self.assertIn('crop',asset)
+                            self.assertEqual(asset['width'],asset['crop'][2]-asset['crop'][0])
+                            self.assertEqual(asset['height'],asset['crop'][3]-asset['crop'][1])
         self.assertNotIn('listening',[s['id'] for s in exams.sets['n5-2012'][1]['sections']])
         self.assertTrue(all(q['correct'] is None for s in exams.sets['n5-2021-12'][1]['sections'] for g in s['groups'] for q in g['items']))

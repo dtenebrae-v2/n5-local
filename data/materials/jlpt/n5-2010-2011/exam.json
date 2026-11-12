@@ -1,0 +1,3487 @@
+{
+  "version": 1,
+  "id": "n5-2010-2011",
+  "title": "N5 · 2010–2011",
+  "revision": "6277e9ba5b18e43a572ec93a6b7cadced911b8744c5605ff661632a0247cf6a6",
+  "sources": {
+    "pdf": {
+      "filename": "N5-2010-2011х╣┤.pdf",
+      "sha256": "6277e9ba5b18e43a572ec93a6b7cadced911b8744c5605ff661632a0247cf6a6"
+    },
+    "audio": {
+      "filename": "N5-2010-2011х╣┤.opus",
+      "sha256": "1b9f83b182be8239f4c0f72a041aeb66814439ae598e99c5e907177dbb8d794e"
+    }
+  },
+  "sourceNote": "Год указан по маркировке исходного файла. Происхождение варианта не подтверждено организаторами JLPT.",
+  "notes": [
+    "Задания существенно пересекаются с набором 2017.",
+    "В исходном PDF отсутствуют задания аудирования: блок 1 № 5–7 и блок 2 № 1–6. Они исключены из оценивания."
+  ],
+  "sections": [
+    {
+      "id": "vocabulary",
+      "title": "Лексика",
+      "seconds": 1500,
+      "pages": [
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "groups": [
+        {
+          "number": 1,
+          "title": "Чтение кандзи",
+          "items": [
+            {
+              "id": "n5-2010-2011-vocabulary-g1-q1",
+              "number": 1,
+              "family": "shared-2010-2017-vocabulary-g1-q1",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g1-q1-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g1-q2",
+              "number": 2,
+              "family": "shared-2010-2017-vocabulary-g1-q2",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g1-q2-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g1-q3",
+              "number": 3,
+              "family": "shared-2010-2017-vocabulary-g1-q3",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g1-q3-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g1-q4",
+              "number": 4,
+              "family": "shared-2010-2017-vocabulary-g1-q4",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g1-q4-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g1-q5",
+              "number": 5,
+              "family": "shared-2010-2017-vocabulary-g1-q5",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g1-q5-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g1-q6",
+              "number": 6,
+              "family": "shared-2010-2017-vocabulary-g1-q6",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g1-q6-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g1-q7",
+              "number": 7,
+              "family": "shared-2010-2017-vocabulary-g1-q7",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g1-q7-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g1-q8",
+              "number": 8,
+              "family": "shared-2010-2017-vocabulary-g1-q8",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g1-q8-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g1-q9",
+              "number": 9,
+              "family": "shared-2010-2017-vocabulary-g1-q9",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g1-q9-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g1-q10",
+              "number": 10,
+              "family": "shared-2010-2017-vocabulary-g1-q10",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g1-q10-1",
+                  "role": "question"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Написание слов",
+          "items": [
+            {
+              "id": "n5-2010-2011-vocabulary-g2-q11",
+              "number": 11,
+              "family": "shared-2010-2017-vocabulary-g2-q11",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g2-q11-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g2-q12",
+              "number": 12,
+              "family": "shared-2010-2017-vocabulary-g2-q12",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g2-q12-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g2-q13",
+              "number": 13,
+              "family": "shared-2010-2017-vocabulary-g2-q13",
+              "choices": 4,
+              "pages": [
+                "p2"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g2-q13-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g2-q14",
+              "number": 14,
+              "family": "shared-2010-2017-vocabulary-g2-q14",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g2-q14-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g2-q15",
+              "number": 15,
+              "family": "shared-2010-2017-vocabulary-g2-q15",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g2-q15-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g2-q16",
+              "number": 16,
+              "family": "shared-2010-2017-vocabulary-g2-q16",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g2-q16-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g2-q17",
+              "number": 17,
+              "family": "shared-2010-2017-vocabulary-g2-q17",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g2-q17-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g2-q18",
+              "number": 18,
+              "family": "shared-2010-2017-vocabulary-g2-q18",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g2-q18-1",
+                  "role": "question"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Лексика в контексте",
+          "items": [
+            {
+              "id": "n5-2010-2011-vocabulary-g3-q19",
+              "number": 19,
+              "family": "shared-2010-2017-vocabulary-g3-q19",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g3-q19-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g3-q20",
+              "number": 20,
+              "family": "shared-2010-2017-vocabulary-g3-q20",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g3-q20-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g3-q21",
+              "number": 21,
+              "family": "shared-2010-2017-vocabulary-g3-q21",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g3-q21-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g3-q22",
+              "number": 22,
+              "family": "shared-2010-2017-vocabulary-g3-q22",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g3-q22-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g3-q23",
+              "number": 23,
+              "family": "shared-2010-2017-vocabulary-g3-q23",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g3-q23-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g3-q24",
+              "number": 24,
+              "family": "shared-2010-2017-vocabulary-g3-q24",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g3-q24-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g3-q25",
+              "number": 25,
+              "family": "shared-2010-2017-vocabulary-g3-q25",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g3-q25-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g3-q26",
+              "number": 26,
+              "family": "shared-2010-2017-vocabulary-g3-q26",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g3-q26-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g3-q27",
+              "number": 27,
+              "family": "shared-2010-2017-vocabulary-g3-q27",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g3-q27-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g3-q28",
+              "number": 28,
+              "family": "shared-2010-2017-vocabulary-g3-q28",
+              "choices": 4,
+              "pages": [
+                "p3"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g3-q28-1",
+                  "role": "question"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Близкие значения",
+          "items": [
+            {
+              "id": "n5-2010-2011-vocabulary-g4-q29",
+              "number": 29,
+              "family": "shared-2010-2017-vocabulary-g4-q29",
+              "choices": 4,
+              "pages": [
+                "p4"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g4-q29-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g4-q30",
+              "number": 30,
+              "family": "shared-2010-2017-vocabulary-g4-q30",
+              "choices": 4,
+              "pages": [
+                "p4"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g4-q30-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g4-q31",
+              "number": 31,
+              "family": "shared-2010-2017-vocabulary-g4-q31",
+              "choices": 4,
+              "pages": [
+                "p4"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g4-q31-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g4-q32",
+              "number": 32,
+              "family": "shared-2010-2017-vocabulary-g4-q32",
+              "choices": 4,
+              "pages": [
+                "p4"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g4-q32-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-vocabulary-g4-q33",
+              "number": 33,
+              "family": "shared-2010-2017-vocabulary-g4-q33",
+              "choices": 4,
+              "pages": [
+                "p4"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-vocabulary-g4-q33-1",
+                  "role": "question"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "reference": [],
+      "missing": []
+    },
+    {
+      "id": "grammar-reading",
+      "title": "Грамматика и чтение",
+      "seconds": 3000,
+      "pages": [
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "groups": [
+        {
+          "number": 1,
+          "title": "Грамматика",
+          "items": [
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q1",
+              "number": 1,
+              "family": "shared-2010-2017-grammar-reading-g1-q1",
+              "choices": 4,
+              "pages": [
+                "p5"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q1-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q2",
+              "number": 2,
+              "family": "shared-2010-2017-grammar-reading-g1-q2",
+              "choices": 4,
+              "pages": [
+                "p5"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q2-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q3",
+              "number": 3,
+              "family": "shared-2010-2017-grammar-reading-g1-q3",
+              "choices": 4,
+              "pages": [
+                "p5"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q3-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q4",
+              "number": 4,
+              "family": "shared-2010-2017-grammar-reading-g1-q4",
+              "choices": 4,
+              "pages": [
+                "p5"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q4-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q5",
+              "number": 5,
+              "family": "shared-2010-2017-grammar-reading-g1-q5",
+              "choices": 4,
+              "pages": [
+                "p5"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q5-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q6",
+              "number": 6,
+              "family": "shared-2010-2017-grammar-reading-g1-q6",
+              "choices": 4,
+              "pages": [
+                "p5"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q6-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q7",
+              "number": 7,
+              "family": "shared-2010-2017-grammar-reading-g1-q7",
+              "choices": 4,
+              "pages": [
+                "p5"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q7-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q8",
+              "number": 8,
+              "family": "shared-2010-2017-grammar-reading-g1-q8",
+              "choices": 4,
+              "pages": [
+                "p5"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q8-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q9",
+              "number": 9,
+              "family": "shared-2010-2017-grammar-reading-g1-q9",
+              "choices": 4,
+              "pages": [
+                "p5"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q9-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q10",
+              "number": 10,
+              "family": "shared-2010-2017-grammar-reading-g1-q10",
+              "choices": 4,
+              "pages": [
+                "p5"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q10-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q11",
+              "number": 11,
+              "family": "shared-2010-2017-grammar-reading-g1-q11",
+              "choices": 4,
+              "pages": [
+                "p5"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q11-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q12",
+              "number": 12,
+              "family": "shared-2010-2017-grammar-reading-g1-q12",
+              "choices": 4,
+              "pages": [
+                "p5"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q12-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q13",
+              "number": 13,
+              "family": "shared-2010-2017-grammar-reading-g1-q13",
+              "choices": 4,
+              "pages": [
+                "p6"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q13-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q14",
+              "number": 14,
+              "family": "shared-2010-2017-grammar-reading-g1-q14",
+              "choices": 4,
+              "pages": [
+                "p6"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q14-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q15",
+              "number": 15,
+              "family": "shared-2010-2017-grammar-reading-g1-q15",
+              "choices": 4,
+              "pages": [
+                "p6"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q15-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g1-q16",
+              "number": 16,
+              "family": "shared-2010-2017-grammar-reading-g1-q16",
+              "choices": 4,
+              "pages": [
+                "p6"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g1-q16-1",
+                  "role": "question"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Порядок слов: ответ под ★",
+          "items": [
+            {
+              "id": "n5-2010-2011-grammar-reading-g2-q17",
+              "number": 17,
+              "family": "shared-2010-2017-grammar-reading-g2-q17",
+              "choices": 4,
+              "pages": [
+                "p6"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g2-q17-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g2-q18",
+              "number": 18,
+              "family": "shared-2010-2017-grammar-reading-g2-q18",
+              "choices": 4,
+              "pages": [
+                "p6"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g2-q18-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g2-q19",
+              "number": 19,
+              "family": "shared-2010-2017-grammar-reading-g2-q19",
+              "choices": 4,
+              "pages": [
+                "p6"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g2-q19-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g2-q20",
+              "number": 20,
+              "family": "shared-2010-2017-grammar-reading-g2-q20",
+              "choices": 4,
+              "pages": [
+                "p6"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g2-q20-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g2-q21",
+              "number": 21,
+              "family": "shared-2010-2017-grammar-reading-g2-q21",
+              "choices": 4,
+              "pages": [
+                "p6"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g2-q21-1",
+                  "role": "question"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Грамматика текста",
+          "items": [
+            {
+              "id": "n5-2010-2011-grammar-reading-g3-q22",
+              "number": 22,
+              "family": "shared-2010-2017-grammar-reading-g3-q22",
+              "choices": 4,
+              "pages": [
+                "p7"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g3-q22-1",
+                  "role": "context"
+                },
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g3-q22-2",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g3-q23",
+              "number": 23,
+              "family": "shared-2010-2017-grammar-reading-g3-q23",
+              "choices": 4,
+              "pages": [
+                "p7"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g3-q23-1",
+                  "role": "context"
+                },
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g3-q23-2",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g3-q24",
+              "number": 24,
+              "family": "shared-2010-2017-grammar-reading-g3-q24",
+              "choices": 4,
+              "pages": [
+                "p7"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g3-q24-1",
+                  "role": "context"
+                },
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g3-q24-2",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g3-q25",
+              "number": 25,
+              "family": "shared-2010-2017-grammar-reading-g3-q25",
+              "choices": 4,
+              "pages": [
+                "p7"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g3-q25-1",
+                  "role": "context"
+                },
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g3-q25-2",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g3-q26",
+              "number": 26,
+              "family": "shared-2010-2017-grammar-reading-g3-q26",
+              "choices": 4,
+              "pages": [
+                "p7"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g3-q26-1",
+                  "role": "context"
+                },
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g3-q26-2",
+                  "role": "question"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Короткие тексты",
+          "items": [
+            {
+              "id": "n5-2010-2011-grammar-reading-g4-q27",
+              "number": 27,
+              "family": "shared-2010-2017-grammar-reading-g4-q27",
+              "choices": 4,
+              "pages": [
+                "p7"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g4-q27-1",
+                  "role": "context"
+                },
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g4-q27-2",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g4-q28",
+              "number": 28,
+              "family": "shared-2010-2017-grammar-reading-g4-q28",
+              "choices": 4,
+              "pages": [
+                "p7"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g4-q28-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g4-q29",
+              "number": 29,
+              "family": "shared-2010-2017-grammar-reading-g4-q29",
+              "choices": 4,
+              "pages": [
+                "p8"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g4-q29-1",
+                  "role": "context"
+                },
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g4-q29-2",
+                  "role": "question"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Чтение текста",
+          "items": [
+            {
+              "id": "n5-2010-2011-grammar-reading-g5-q30",
+              "number": 30,
+              "family": "shared-2010-2017-grammar-reading-g5-q30",
+              "choices": 4,
+              "pages": [
+                "p8"
+              ],
+              "correct": 3,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g5-q30-1",
+                  "role": "context"
+                },
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g5-q30-2",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-grammar-reading-g5-q31",
+              "number": 31,
+              "family": "shared-2010-2017-grammar-reading-g5-q31",
+              "choices": 4,
+              "pages": [
+                "p8"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g5-q31-1",
+                  "role": "context"
+                },
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g5-q31-2",
+                  "role": "question"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Поиск информации",
+          "items": [
+            {
+              "id": "n5-2010-2011-grammar-reading-g6-q32",
+              "number": 32,
+              "family": "shared-2010-2017-grammar-reading-g6-q32",
+              "choices": 4,
+              "pages": [
+                "p9"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "media": [
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g6-q32-1",
+                  "role": "context"
+                },
+                {
+                  "asset": "crop-2010-2011-grammar-reading-g6-q32-2",
+                  "role": "question"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "reference": [],
+      "missing": []
+    },
+    {
+      "id": "listening",
+      "title": "Аудирование",
+      "seconds": 1766,
+      "pages": [
+        "p10",
+        "p11",
+        "p12"
+      ],
+      "groups": [
+        {
+          "number": 1,
+          "title": "Задача по диалогу",
+          "items": [
+            {
+              "id": "n5-2010-2011-listening-g1-q1",
+              "number": 1,
+              "family": "shared-2010-2017-listening-g1-q1",
+              "choices": 4,
+              "pages": [
+                "p10"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                172.93,
+                236.07
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": [
+                {
+                  "asset": "crop-2010-2011-listening-g1-q1-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-listening-g1-q2",
+              "number": 2,
+              "family": "shared-2010-2017-listening-g1-q2",
+              "choices": 4,
+              "pages": [
+                "p10"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                236.12,
+                293.6
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": [
+                {
+                  "asset": "crop-2010-2011-listening-g1-q2-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-listening-g1-q3",
+              "number": 3,
+              "family": "shared-2010-2017-listening-g1-q3",
+              "choices": 4,
+              "pages": [
+                "p10"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                293.65,
+                347.04
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": [
+                {
+                  "asset": "crop-2010-2011-listening-g1-q3-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-listening-g1-q4",
+              "number": 4,
+              "family": "shared-2010-2017-listening-g1-q4",
+              "choices": 4,
+              "pages": [
+                "p10"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                347.09,
+                397.36
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": [
+                {
+                  "asset": "crop-2010-2011-listening-g1-q4-1",
+                  "role": "question"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Реплика по ситуации",
+          "items": [
+            {
+              "id": "n5-2010-2011-listening-g3-q1",
+              "number": 1,
+              "family": "shared-2010-2017-listening-g3-q1",
+              "choices": 3,
+              "pages": [
+                "p11"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                1260.01,
+                1293.16
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": [
+                {
+                  "asset": "crop-2010-2011-listening-g3-q1-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-listening-g3-q2",
+              "number": 2,
+              "family": "shared-2010-2017-listening-g3-q2",
+              "choices": 3,
+              "pages": [
+                "p11"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                1293.21,
+                1328.84
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": [
+                {
+                  "asset": "crop-2010-2011-listening-g3-q2-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-listening-g3-q3",
+              "number": 3,
+              "family": "shared-2010-2017-listening-g3-q3",
+              "choices": 3,
+              "pages": [
+                "p11"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                1328.89,
+                1362.12
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": [
+                {
+                  "asset": "crop-2010-2011-listening-g3-q3-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-listening-g3-q4",
+              "number": 4,
+              "family": "shared-2010-2017-listening-g3-q4",
+              "choices": 3,
+              "pages": [
+                "p11"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                1362.17,
+                1383.71
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": [
+                {
+                  "asset": "crop-2010-2011-listening-g3-q4-1",
+                  "role": "question"
+                }
+              ]
+            },
+            {
+              "id": "n5-2010-2011-listening-g3-q5",
+              "number": 5,
+              "family": "shared-2010-2017-listening-g3-q5",
+              "choices": 3,
+              "pages": [
+                "p12"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                1383.76,
+                1436.54
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": [
+                {
+                  "asset": "crop-2010-2011-listening-g3-q5-1",
+                  "role": "question"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Быстрый ответ",
+          "items": [
+            {
+              "id": "n5-2010-2011-listening-g4-q1",
+              "number": 1,
+              "family": "shared-2010-2017-listening-g4-q1",
+              "choices": 3,
+              "pages": [
+                "p12"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                1518.92,
+                1547.25
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": []
+            },
+            {
+              "id": "n5-2010-2011-listening-g4-q2",
+              "number": 2,
+              "family": "shared-2010-2017-listening-g4-q2",
+              "choices": 3,
+              "pages": [
+                "p12"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                1547.3,
+                1566.04
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": []
+            },
+            {
+              "id": "n5-2010-2011-listening-g4-q3",
+              "number": 3,
+              "family": "shared-2010-2017-listening-g4-q3",
+              "choices": 3,
+              "pages": [
+                "p12"
+              ],
+              "correct": 1,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                1566.09,
+                1607.58
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": []
+            },
+            {
+              "id": "n5-2010-2011-listening-g4-q4",
+              "number": 4,
+              "family": "shared-2010-2017-listening-g4-q4",
+              "choices": 3,
+              "pages": [
+                "p12"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                1607.63,
+                1637.84
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": []
+            },
+            {
+              "id": "n5-2010-2011-listening-g4-q5",
+              "number": 5,
+              "family": "shared-2010-2017-listening-g4-q5",
+              "choices": 3,
+              "pages": [
+                "p12"
+              ],
+              "correct": 2,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                1637.89,
+                1666.09
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": []
+            },
+            {
+              "id": "n5-2010-2011-listening-g4-q6",
+              "number": 6,
+              "family": "shared-2010-2017-listening-g4-q6",
+              "choices": 3,
+              "pages": [
+                "p12"
+              ],
+              "correct": 0,
+              "answer_source": {
+                "kind": "printed-key",
+                "pages": [
+                  "p13"
+                ]
+              },
+              "clip": [
+                1666.14,
+                1697.7
+              ],
+              "audio_source": "source-recording-question-boundary-review",
+              "media": []
+            }
+          ]
+        }
+      ],
+      "reference": [
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21"
+      ],
+      "missing": [
+        {
+          "group": 1,
+          "number": 5
+        },
+        {
+          "group": 1,
+          "number": 6
+        },
+        {
+          "group": 1,
+          "number": 7
+        },
+        {
+          "group": 2,
+          "number": 1
+        },
+        {
+          "group": 2,
+          "number": 2
+        },
+        {
+          "group": 2,
+          "number": 3
+        },
+        {
+          "group": 2,
+          "number": 4
+        },
+        {
+          "group": 2,
+          "number": 5
+        },
+        {
+          "group": 2,
+          "number": 6
+        }
+      ],
+      "audio": "recording"
+    }
+  ],
+  "assets": {
+    "p2": {
+      "filename": "images/page-002.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "sha256": "fae0734320c6589d10521bb9630b6c2d8c5e2cef1348c715fc2e4a4d74f888c0",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 790123
+    },
+    "p3": {
+      "filename": "images/page-003.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "sha256": "b7340916b7427069f9566fb1ba5a20ef069b4da463c496d41cd4b2ea6f2825b3",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 868943
+    },
+    "p4": {
+      "filename": "images/page-004.png",
+      "mime": "image/png",
+      "source_page": 4,
+      "sha256": "ad4fb009ca44d78bb0b7a5b12a97d514c7e82a74480bbb24182cbc10afafd3d5",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 758733
+    },
+    "p5": {
+      "filename": "images/page-005.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "sha256": "2f35067967f31c4104a8df34752a479147f020f0fb523e802a212fe1015cb32d",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 830940
+    },
+    "p6": {
+      "filename": "images/page-006.png",
+      "mime": "image/png",
+      "source_page": 6,
+      "sha256": "b61ba3ecd0831bfa765d7409b0457b39830bda7035661ba58e9bc1c8170f883d",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 857825
+    },
+    "p7": {
+      "filename": "images/page-007.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "sha256": "8a6076bb38215dbfaffc2f7ff222ecbf632a0b59f0b651b2d5b24c15d574e4e5",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 1202314
+    },
+    "p8": {
+      "filename": "images/page-008.png",
+      "mime": "image/png",
+      "source_page": 8,
+      "sha256": "353a529c0d8c11c8561a1beae7777ab30f3672fd3daae9cee98ab029be712564",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 937311
+    },
+    "p9": {
+      "filename": "images/page-009.png",
+      "mime": "image/png",
+      "source_page": 9,
+      "sha256": "e355000b15cc9ebb5eb94704101d623c08d84e0655c221c682155b618ddd7f7c",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 673991
+    },
+    "p10": {
+      "filename": "images/page-010.png",
+      "mime": "image/png",
+      "source_page": 10,
+      "sha256": "c1d01154da94e9e65a7696194858b29d50f1299a1f7cf1dddadeaa02fd158c55",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 665566
+    },
+    "p11": {
+      "filename": "images/page-011.png",
+      "mime": "image/png",
+      "source_page": 11,
+      "sha256": "d634af7ae04e6a0b3a93a0a0342dddcb78c28975ff55d4dc37afd1847e47e145",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 885762
+    },
+    "p12": {
+      "filename": "images/page-012.png",
+      "mime": "image/png",
+      "source_page": 12,
+      "sha256": "6c445ab612ef3eda0f1f388e69b481c4cfeeac34b671437eb1642f04a079a4fe",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 363558
+    },
+    "p13": {
+      "filename": "images/page-013.png",
+      "mime": "image/png",
+      "source_page": 13,
+      "sha256": "5696e4128489b68dbf261d84c4e5db4c6d99cb4547db90f39a569154cc3a7c8a",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 844183
+    },
+    "p14": {
+      "filename": "images/page-014.png",
+      "mime": "image/png",
+      "source_page": 14,
+      "sha256": "36192f9e68932d37c323d7ee678197fd7e0f8559b5832c3bb89a63d42c4f82f4",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 1030315
+    },
+    "p15": {
+      "filename": "images/page-015.png",
+      "mime": "image/png",
+      "source_page": 15,
+      "sha256": "a7c26f4e69e4025f1e8f20d8934cf365c85ce1e06da94d252dd253605c922048",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 1028431
+    },
+    "p16": {
+      "filename": "images/page-016.png",
+      "mime": "image/png",
+      "source_page": 16,
+      "sha256": "62e9cb7cc71f4bc75b8f56a5c8eae5294efe78bcbacbed87b891daf0b985ad88",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 1010266
+    },
+    "p17": {
+      "filename": "images/page-017.png",
+      "mime": "image/png",
+      "source_page": 17,
+      "sha256": "1d9bbc54693d66b37e294eaf47f37e8945fa6b7c9f75aa9bb12ace7e8142873d",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 1119991
+    },
+    "p18": {
+      "filename": "images/page-018.png",
+      "mime": "image/png",
+      "source_page": 18,
+      "sha256": "e9d7feab78faf115eb33953d75734a49a56057d0d46f6ca7da4a4161f6095296",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 804503
+    },
+    "p19": {
+      "filename": "images/page-019.png",
+      "mime": "image/png",
+      "source_page": 19,
+      "sha256": "6827f8b087fea9a0e770f24e0e313f0c8ac6debe58a05a8b48b61ad3d0f3f92f",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 1274796
+    },
+    "p20": {
+      "filename": "images/page-020.png",
+      "mime": "image/png",
+      "source_page": 20,
+      "sha256": "e0b27db8c12f4fb7af1771b4eb65f50fb0b2a37a337a8443d8913f92d15fcabd",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 1363915
+    },
+    "p21": {
+      "filename": "images/page-021.png",
+      "mime": "image/png",
+      "source_page": 21,
+      "sha256": "0b959ee86a66cf045e5869d78705930d57f7a5d7e2558b04abf5fb40e0b54794",
+      "width": 1556,
+      "height": 2200,
+      "bytes": 902015
+    },
+    "recording": {
+      "filename": "audio/listening.opus",
+      "mime": "audio/ogg",
+      "sha256": "1b9f83b182be8239f4c0f72a041aeb66814439ae598e99c5e907177dbb8d794e",
+      "duration": 1750.9275,
+      "matched": true,
+      "bytes": 23537057
+    },
+    "crop-2010-2011-vocabulary-g1-q1-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g1-q1-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        494,
+        1509,
+        614
+      ],
+      "sha256": "4d1892614b5f0905007360cb64e646c45de1f245e563cf1639f4993691f8830c",
+      "bytes": 54390,
+      "width": 1408,
+      "height": 120
+    },
+    "crop-2010-2011-vocabulary-g1-q2-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g1-q2-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        616,
+        1509,
+        726
+      ],
+      "sha256": "055904d7dff28160d70ae98610c0c3aeda0056f49924a3fab67bc883fe0b7e4c",
+      "bytes": 42072,
+      "width": 1408,
+      "height": 110
+    },
+    "crop-2010-2011-vocabulary-g1-q3-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g1-q3-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        716,
+        1509,
+        836
+      ],
+      "sha256": "39c0385bef00e330d431e3e3448c013fa2da01c3203026dadde6c535a4adb64e",
+      "bytes": 40971,
+      "width": 1408,
+      "height": 120
+    },
+    "crop-2010-2011-vocabulary-g1-q4-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g1-q4-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        834,
+        1509,
+        946
+      ],
+      "sha256": "a6d018c21d6e8214cf6dc8b9fa8b2444af0f9a9a440924afe4fc8858fb1a6e39",
+      "bytes": 36637,
+      "width": 1408,
+      "height": 112
+    },
+    "crop-2010-2011-vocabulary-g1-q5-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g1-q5-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        936,
+        1509,
+        1056
+      ],
+      "sha256": "6e86dd3e768ade2623e724795324cc85da9c9bb6ccc9c29e9aa2203656f33e77",
+      "bytes": 43320,
+      "width": 1408,
+      "height": 120
+    },
+    "crop-2010-2011-vocabulary-g1-q6-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g1-q6-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        1046,
+        1509,
+        1162
+      ],
+      "sha256": "b047a7aad2d5a86b35fdf9716c151d62e70055050b7ed241bb0daba221a9e269",
+      "bytes": 44534,
+      "width": 1408,
+      "height": 116
+    },
+    "crop-2010-2011-vocabulary-g1-q7-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g1-q7-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        1165,
+        1509,
+        1276
+      ],
+      "sha256": "9ba4a4daad979a31ae906cbcd1917533a11ba40a3c408d5ba6015d595f3651b1",
+      "bytes": 41331,
+      "width": 1408,
+      "height": 111
+    },
+    "crop-2010-2011-vocabulary-g1-q8-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g1-q8-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        1266,
+        1509,
+        1385
+      ],
+      "sha256": "c8bb4be85667c57b781f8bbc662a931aeb23aee97446cf31e258591cfcfc3be8",
+      "bytes": 36460,
+      "width": 1408,
+      "height": 119
+    },
+    "crop-2010-2011-vocabulary-g1-q9-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g1-q9-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        1385,
+        1509,
+        1499
+      ],
+      "sha256": "cd8584f06128988eddc044e8a93a8e2b700b7c716488e8ce5cded4ab95432413",
+      "bytes": 35768,
+      "width": 1408,
+      "height": 114
+    },
+    "crop-2010-2011-vocabulary-g1-q10-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g1-q10-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        1489,
+        1509,
+        1655
+      ],
+      "sha256": "76bfc8805a74d932c5f48956815e7cad6ec6ab71d491701040fa31752452f2d6",
+      "bytes": 32318,
+      "width": 1408,
+      "height": 166
+    },
+    "crop-2010-2011-vocabulary-g2-q11-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g2-q11-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        1753,
+        1509,
+        1867
+      ],
+      "sha256": "482024cc35eb3bd43dc6041261079769303fdb4a6e8c34f3ed7604049cdadf8c",
+      "bytes": 37358,
+      "width": 1408,
+      "height": 114
+    },
+    "crop-2010-2011-vocabulary-g2-q12-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g2-q12-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        1869,
+        1509,
+        1972
+      ],
+      "sha256": "f953197d6a365a1128e644cfdc6cc2fa3d99bac020908baee4801bbac80119cb",
+      "bytes": 44504,
+      "width": 1408,
+      "height": 103
+    },
+    "crop-2010-2011-vocabulary-g2-q13-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g2-q13-1.png",
+      "mime": "image/png",
+      "source_page": 2,
+      "crop": [
+        101,
+        1975,
+        1509,
+        2082
+      ],
+      "sha256": "b040b38ed4e58936d987f639cefa5da9e3189024fe5dd96bc9b39ce32c791d04",
+      "bytes": 30616,
+      "width": 1408,
+      "height": 107
+    },
+    "crop-2010-2011-vocabulary-g2-q14-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g2-q14-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        100,
+        1509,
+        226
+      ],
+      "sha256": "0a93b989f037a3c948e785e6fe56bb6b274863434637695f83e63c109f12c491",
+      "bytes": 40558,
+      "width": 1408,
+      "height": 126
+    },
+    "crop-2010-2011-vocabulary-g2-q15-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g2-q15-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        216,
+        1509,
+        344
+      ],
+      "sha256": "aad9e5525e5e138a62b58e1b4428d7fa47eac275e03a1c7c3464d5a66f7218a1",
+      "bytes": 43673,
+      "width": 1408,
+      "height": 128
+    },
+    "crop-2010-2011-vocabulary-g2-q16-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g2-q16-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        334,
+        1509,
+        460
+      ],
+      "sha256": "af104b34d8d89f4b26fdab68eaf8fd2ec60f0bafe1c528c2efe43b7ac953503a",
+      "bytes": 52123,
+      "width": 1408,
+      "height": 126
+    },
+    "crop-2010-2011-vocabulary-g2-q17-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g2-q17-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        457,
+        1509,
+        576
+      ],
+      "sha256": "33da009b16e4ef76be93baa1c25249ce7fd242f7bfe989880d07910711427b88",
+      "bytes": 53519,
+      "width": 1408,
+      "height": 119
+    },
+    "crop-2010-2011-vocabulary-g2-q18-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g2-q18-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        575,
+        1509,
+        739
+      ],
+      "sha256": "a8a5786624e643aace392c178a9ce59daa97f119bbb079ccd287779611bb10f9",
+      "bytes": 48932,
+      "width": 1408,
+      "height": 164
+    },
+    "crop-2010-2011-vocabulary-g3-q19-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g3-q19-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        797,
+        1509,
+        928
+      ],
+      "sha256": "8d032b5f65956dae462ab8e35a37b18504dbfc8f41ece69e9a00c2228400fe84",
+      "bytes": 47753,
+      "width": 1408,
+      "height": 131
+    },
+    "crop-2010-2011-vocabulary-g3-q20-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g3-q20-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        918,
+        1509,
+        1041
+      ],
+      "sha256": "addd1a6893dbd575c96ba95039eb15b5c673fd9bd0c41c4ab7e92512cce02227",
+      "bytes": 52583,
+      "width": 1408,
+      "height": 123
+    },
+    "crop-2010-2011-vocabulary-g3-q21-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g3-q21-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        1039,
+        1509,
+        1159
+      ],
+      "sha256": "f2a19e235faf73403da3ef908c30c16207773d47f5f95bce8e1641a3db4bcee9",
+      "bytes": 44217,
+      "width": 1408,
+      "height": 120
+    },
+    "crop-2010-2011-vocabulary-g3-q22-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g3-q22-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        1158,
+        1509,
+        1280
+      ],
+      "sha256": "daf5b0bfa03de88c88e65865764ff47e0980111e755e88e45570b9006c06343f",
+      "bytes": 44431,
+      "width": 1408,
+      "height": 122
+    },
+    "crop-2010-2011-vocabulary-g3-q23-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g3-q23-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        1270,
+        1509,
+        1390
+      ],
+      "sha256": "94f522bd17d57ecf0581ab9c4d81c31530e7c5ed89d723a27814f514c38cff47",
+      "bytes": 35926,
+      "width": 1408,
+      "height": 120
+    },
+    "crop-2010-2011-vocabulary-g3-q24-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g3-q24-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        1380,
+        1509,
+        1511
+      ],
+      "sha256": "0495f653578ddffadf6badfaabf00407b8c75ea86be38af79beb4c3827b3c402",
+      "bytes": 47242,
+      "width": 1408,
+      "height": 131
+    },
+    "crop-2010-2011-vocabulary-g3-q25-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g3-q25-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        1501,
+        1509,
+        1627
+      ],
+      "sha256": "76caffa3772f158f9aeeb9ff528169f8a1ade2852e2ec77e309c56d4ae8499f9",
+      "bytes": 39321,
+      "width": 1408,
+      "height": 126
+    },
+    "crop-2010-2011-vocabulary-g3-q26-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g3-q26-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        1617,
+        1509,
+        1748
+      ],
+      "sha256": "bb01f64e2746afe50647790bad4db044758b6ebeeb028a171aeaf22ddad421af",
+      "bytes": 36106,
+      "width": 1408,
+      "height": 131
+    },
+    "crop-2010-2011-vocabulary-g3-q27-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g3-q27-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        1745,
+        1509,
+        1918
+      ],
+      "sha256": "9febcee221fc9a71363e489863cafb64e9517a9ca6e0abf3dd4f7d5900155884",
+      "bytes": 60558,
+      "width": 1408,
+      "height": 173
+    },
+    "crop-2010-2011-vocabulary-g3-q28-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g3-q28-1.png",
+      "mime": "image/png",
+      "source_page": 3,
+      "crop": [
+        101,
+        1908,
+        1509,
+        2095
+      ],
+      "sha256": "9df4ee56649aeb0bb641b5dd70cebcdabc79df9834e35f2184956f618aa74942",
+      "bytes": 64408,
+      "width": 1408,
+      "height": 187
+    },
+    "crop-2010-2011-vocabulary-g4-q29-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g4-q29-1.png",
+      "mime": "image/png",
+      "source_page": 4,
+      "crop": [
+        101,
+        220,
+        1509,
+        545
+      ],
+      "sha256": "40bd3b973d29edfa95f8fe97846a37ffa7dd808ef8f2e8adfea46563cf999b31",
+      "bytes": 135844,
+      "width": 1408,
+      "height": 325
+    },
+    "crop-2010-2011-vocabulary-g4-q30-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g4-q30-1.png",
+      "mime": "image/png",
+      "source_page": 4,
+      "crop": [
+        101,
+        535,
+        1509,
+        859
+      ],
+      "sha256": "1bd701963f5e4f8056ef885a9ec2298378a28fc6b56516805003a92e0b03872f",
+      "bytes": 146799,
+      "width": 1408,
+      "height": 324
+    },
+    "crop-2010-2011-vocabulary-g4-q31-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g4-q31-1.png",
+      "mime": "image/png",
+      "source_page": 4,
+      "crop": [
+        101,
+        849,
+        1509,
+        1172
+      ],
+      "sha256": "ca47e9e218cbb05767a0315e372215796a5c40d73928d14a83fdf350ecc5c51d",
+      "bytes": 113583,
+      "width": 1408,
+      "height": 323
+    },
+    "crop-2010-2011-vocabulary-g4-q32-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g4-q32-1.png",
+      "mime": "image/png",
+      "source_page": 4,
+      "crop": [
+        101,
+        1162,
+        1509,
+        1487
+      ],
+      "sha256": "6a6d0fddd3e07abec5353a1c48d33f96c7c8f21f75af81634aeb1f90456d3f9a",
+      "bytes": 103360,
+      "width": 1408,
+      "height": 325
+    },
+    "crop-2010-2011-vocabulary-g4-q33-1": {
+      "filename": "images/questions/n5-2010-2011-vocabulary-g4-q33-1.png",
+      "mime": "image/png",
+      "source_page": 4,
+      "crop": [
+        101,
+        1477,
+        1509,
+        1807
+      ],
+      "sha256": "6267e624716d478906632c42b915f7660ba29994e158d3127e3d2ab06883c2db",
+      "bytes": 93822,
+      "width": 1408,
+      "height": 330
+    },
+    "crop-2010-2011-grammar-reading-g1-q1-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q1-1.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "crop": [
+        101,
+        347,
+        1509,
+        452
+      ],
+      "sha256": "0124d5d88ec2c7311a300a9901458300857c397f34ffbe5b35b8795a2ad45ec5",
+      "bytes": 32457,
+      "width": 1408,
+      "height": 105
+    },
+    "crop-2010-2011-grammar-reading-g1-q2-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q2-1.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "crop": [
+        101,
+        442,
+        1509,
+        563
+      ],
+      "sha256": "2593c6a2c2173a20909a38a27583481bf0a53d802aa3af262be4f8bd8af0fd81",
+      "bytes": 48920,
+      "width": 1408,
+      "height": 121
+    },
+    "crop-2010-2011-grammar-reading-g1-q3-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q3-1.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "crop": [
+        101,
+        553,
+        1509,
+        735
+      ],
+      "sha256": "f0e2e30ed73a41967154b29d635782bcad435619ee3d0641e854bb4665b0ff64",
+      "bytes": 68844,
+      "width": 1408,
+      "height": 182
+    },
+    "crop-2010-2011-grammar-reading-g1-q4-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q4-1.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "crop": [
+        101,
+        725,
+        1509,
+        945
+      ],
+      "sha256": "a056f84dff3d4bd9e2d36a67546008f6a94e94d2eecfd2138d82e70f41a7a794",
+      "bytes": 67533,
+      "width": 1408,
+      "height": 220
+    },
+    "crop-2010-2011-grammar-reading-g1-q5-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q5-1.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "crop": [
+        101,
+        935,
+        1509,
+        1051
+      ],
+      "sha256": "e8adaf0412057aeac9d641aad1c9e0748d1c13659db430d549777c8aea80bbb9",
+      "bytes": 45612,
+      "width": 1408,
+      "height": 116
+    },
+    "crop-2010-2011-grammar-reading-g1-q6-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q6-1.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "crop": [
+        101,
+        1041,
+        1509,
+        1220
+      ],
+      "sha256": "c53baa4932ff5e476ce6cb3bcddbcc32ea18ab877f2d2ba717f9aae3cb094d28",
+      "bytes": 64726,
+      "width": 1408,
+      "height": 179
+    },
+    "crop-2010-2011-grammar-reading-g1-q7-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q7-1.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "crop": [
+        101,
+        1210,
+        1509,
+        1389
+      ],
+      "sha256": "4e85aeb83f20922e43943bf7fdcd438ab1ada44c35a0000de54f29ae662fe33a",
+      "bytes": 43608,
+      "width": 1408,
+      "height": 179
+    },
+    "crop-2010-2011-grammar-reading-g1-q8-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q8-1.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "crop": [
+        101,
+        1379,
+        1509,
+        1503
+      ],
+      "sha256": "8effbd5b3b5e3dd2783d99f2763a4891f09ffa76ec7cec9aa5500b2984dfa621",
+      "bytes": 36806,
+      "width": 1408,
+      "height": 124
+    },
+    "crop-2010-2011-grammar-reading-g1-q9-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q9-1.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "crop": [
+        101,
+        1502,
+        1509,
+        1657
+      ],
+      "sha256": "5e3fe15687d56cc09bb05169847b23f99a0648f028daf3433fb89a3d419bf97c",
+      "bytes": 42660,
+      "width": 1408,
+      "height": 155
+    },
+    "crop-2010-2011-grammar-reading-g1-q10-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q10-1.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "crop": [
+        101,
+        1652,
+        1509,
+        1775
+      ],
+      "sha256": "884d6073627e58101c1041820c2d16f33b373d8c05339582a88fbef2a082e84c",
+      "bytes": 59657,
+      "width": 1408,
+      "height": 123
+    },
+    "crop-2010-2011-grammar-reading-g1-q11-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q11-1.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "crop": [
+        101,
+        1765,
+        1509,
+        1937
+      ],
+      "sha256": "f70953c57a5586c93bf00d0b202da0ead1c319aac72f3715efc0261269423270",
+      "bytes": 58416,
+      "width": 1408,
+      "height": 172
+    },
+    "crop-2010-2011-grammar-reading-g1-q12-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q12-1.png",
+      "mime": "image/png",
+      "source_page": 5,
+      "crop": [
+        101,
+        1935,
+        1509,
+        2101
+      ],
+      "sha256": "5ececddeb1dbffd2575d445762b8a69abe2f1f99521bb0533bf7e39249a5f80d",
+      "bytes": 74828,
+      "width": 1408,
+      "height": 166
+    },
+    "crop-2010-2011-grammar-reading-g1-q13-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q13-1.png",
+      "mime": "image/png",
+      "source_page": 6,
+      "crop": [
+        101,
+        102,
+        1509,
+        391
+      ],
+      "sha256": "f92a50fedd619d1830c1e0da62c6624340f1681cc9fd314e82b154261a597def",
+      "bytes": 97159,
+      "width": 1408,
+      "height": 289
+    },
+    "crop-2010-2011-grammar-reading-g1-q14-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q14-1.png",
+      "mime": "image/png",
+      "source_page": 6,
+      "crop": [
+        101,
+        381,
+        1509,
+        560
+      ],
+      "sha256": "627f6ac87f057c0d12922fdae7981f72795e092834ada90798a96f8e386a130b",
+      "bytes": 84816,
+      "width": 1408,
+      "height": 179
+    },
+    "crop-2010-2011-grammar-reading-g1-q15-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q15-1.png",
+      "mime": "image/png",
+      "source_page": 6,
+      "crop": [
+        101,
+        559,
+        1509,
+        673
+      ],
+      "sha256": "a56d56ec0265dc75a764298216c86e0cb23822a0fa5767be12bea989429b97bd",
+      "bytes": 55441,
+      "width": 1408,
+      "height": 114
+    },
+    "crop-2010-2011-grammar-reading-g1-q16-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g1-q16-1.png",
+      "mime": "image/png",
+      "source_page": 6,
+      "crop": [
+        101,
+        674,
+        1509,
+        1066
+      ],
+      "sha256": "51d7f0a6d0e35b2462f41dc4e3c7e38064d1e694a1657df982fd4964f0e29e5f",
+      "bytes": 143456,
+      "width": 1408,
+      "height": 392
+    },
+    "crop-2010-2011-grammar-reading-g2-q17-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g2-q17-1.png",
+      "mime": "image/png",
+      "source_page": 6,
+      "crop": [
+        101,
+        1125,
+        1509,
+        1357
+      ],
+      "sha256": "e2730b33e2b68ab8c9612d13ad6895480f941aa455f0d7635b6f48bc22607737",
+      "bytes": 55720,
+      "width": 1408,
+      "height": 232
+    },
+    "crop-2010-2011-grammar-reading-g2-q18-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g2-q18-1.png",
+      "mime": "image/png",
+      "source_page": 6,
+      "crop": [
+        101,
+        1347,
+        1509,
+        1522
+      ],
+      "sha256": "e23260f5b921a7a332c7a08e6efc31448d5f7e6202e5a6cdf794a806b9db9d65",
+      "bytes": 47370,
+      "width": 1408,
+      "height": 175
+    },
+    "crop-2010-2011-grammar-reading-g2-q19-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g2-q19-1.png",
+      "mime": "image/png",
+      "source_page": 6,
+      "crop": [
+        101,
+        1512,
+        1509,
+        1693
+      ],
+      "sha256": "eadb97c7fcf41ad3f850006e67924c94800b978c94c817d8ab846f7076aef4bb",
+      "bytes": 50190,
+      "width": 1408,
+      "height": 181
+    },
+    "crop-2010-2011-grammar-reading-g2-q20-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g2-q20-1.png",
+      "mime": "image/png",
+      "source_page": 6,
+      "crop": [
+        101,
+        1683,
+        1509,
+        1863
+      ],
+      "sha256": "d5ee99dde0351541b970ff76e217bcb9ba7ce7917a13668bd3c8968f77d8a73a",
+      "bytes": 83013,
+      "width": 1408,
+      "height": 180
+    },
+    "crop-2010-2011-grammar-reading-g2-q21-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g2-q21-1.png",
+      "mime": "image/png",
+      "source_page": 6,
+      "crop": [
+        101,
+        1861,
+        1509,
+        2098
+      ],
+      "sha256": "81d8a1809d611996aaef6cbaea3cb519967e791b83ffab95adb40ff0ed5bc5a4",
+      "bytes": 85808,
+      "width": 1408,
+      "height": 237
+    },
+    "crop-2010-2011-grammar-reading-g3-q22-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g3-q22-1.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        260,
+        1509,
+        785
+      ],
+      "width": 1424,
+      "height": 525,
+      "bytes": 349003,
+      "sha256": "607a72a88b792440fc338a4849a29a5152cbebab577828d528a5384ecae1be8f"
+    },
+    "crop-2010-2011-grammar-reading-g3-q22-2": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g3-q22-2.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        805,
+        1509,
+        865
+      ],
+      "width": 1424,
+      "height": 60,
+      "bytes": 31057,
+      "sha256": "a91be13edf0d7add904cae367c8c54874454a04cb034747bdd391e1b946544fa"
+    },
+    "crop-2010-2011-grammar-reading-g3-q23-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g3-q23-1.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        260,
+        1509,
+        785
+      ],
+      "width": 1424,
+      "height": 525,
+      "bytes": 349003,
+      "sha256": "607a72a88b792440fc338a4849a29a5152cbebab577828d528a5384ecae1be8f"
+    },
+    "crop-2010-2011-grammar-reading-g3-q23-2": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g3-q23-2.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        864,
+        1509,
+        925
+      ],
+      "width": 1424,
+      "height": 61,
+      "bytes": 40787,
+      "sha256": "bd629989705dd3893bbb08f80ea4df6671ce6d8613301e487ed4aff7a4b2884b"
+    },
+    "crop-2010-2011-grammar-reading-g3-q24-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g3-q24-1.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        260,
+        1509,
+        785
+      ],
+      "width": 1424,
+      "height": 525,
+      "bytes": 349003,
+      "sha256": "607a72a88b792440fc338a4849a29a5152cbebab577828d528a5384ecae1be8f"
+    },
+    "crop-2010-2011-grammar-reading-g3-q24-2": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g3-q24-2.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        915,
+        1509,
+        975
+      ],
+      "width": 1424,
+      "height": 60,
+      "bytes": 14806,
+      "sha256": "773c64962119e03ee6720457ec2542e4c3dbf117aba8e31c07550873b7cd71ad"
+    },
+    "crop-2010-2011-grammar-reading-g3-q25-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g3-q25-1.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        260,
+        1509,
+        785
+      ],
+      "width": 1424,
+      "height": 525,
+      "bytes": 349003,
+      "sha256": "607a72a88b792440fc338a4849a29a5152cbebab577828d528a5384ecae1be8f"
+    },
+    "crop-2010-2011-grammar-reading-g3-q25-2": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g3-q25-2.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        965,
+        1509,
+        1027
+      ],
+      "width": 1424,
+      "height": 62,
+      "bytes": 27215,
+      "sha256": "711ce44cdd628df563f3e825e1de22dc3584e7e742c219c5146a9ecc4e3c88d8"
+    },
+    "crop-2010-2011-grammar-reading-g3-q26-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g3-q26-1.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        260,
+        1509,
+        785
+      ],
+      "width": 1424,
+      "height": 525,
+      "bytes": 349003,
+      "sha256": "607a72a88b792440fc338a4849a29a5152cbebab577828d528a5384ecae1be8f"
+    },
+    "crop-2010-2011-grammar-reading-g3-q26-2": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g3-q26-2.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        1020,
+        1509,
+        1100
+      ],
+      "width": 1424,
+      "height": 80,
+      "bytes": 25495,
+      "sha256": "8d6c5822dfcdb92657a383de8aaf4be05881c1999be89ad72ba0fe9345c7ea3e"
+    },
+    "crop-2010-2011-grammar-reading-g4-q27-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g4-q27-1.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        1233,
+        1509,
+        1382
+      ],
+      "width": 1424,
+      "height": 149,
+      "bytes": 78718,
+      "sha256": "abba27ce9dcc00fa945e5a2712d2d007891c66cb98b766512716f2333d69d0bc"
+    },
+    "crop-2010-2011-grammar-reading-g4-q27-2": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g4-q27-2.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        1382,
+        1509,
+        1540
+      ],
+      "width": 1424,
+      "height": 158,
+      "bytes": 95903,
+      "sha256": "d45f0d9b9bdb6ba061f8c91873ed896bad15a03da322f73a4da2f9c7b2ef40f9"
+    },
+    "crop-2010-2011-grammar-reading-g4-q28-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g4-q28-1.png",
+      "mime": "image/png",
+      "source_page": 7,
+      "crop": [
+        85,
+        1545,
+        1509,
+        2090
+      ],
+      "width": 1424,
+      "height": 545,
+      "bytes": 230992,
+      "sha256": "c68a079309b6d161212539292aa66bbc766253b1c6c3d4f7aabae23208664f06"
+    },
+    "crop-2010-2011-grammar-reading-g4-q29-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g4-q29-1.png",
+      "mime": "image/png",
+      "source_page": 8,
+      "crop": [
+        85,
+        100,
+        1509,
+        560
+      ],
+      "width": 1424,
+      "height": 460,
+      "bytes": 177268,
+      "sha256": "18a0c69d238f130ab848f4150df3acf3c7d31b69c08719461a21e41ec5c23ceb"
+    },
+    "crop-2010-2011-grammar-reading-g4-q29-2": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g4-q29-2.png",
+      "mime": "image/png",
+      "source_page": 8,
+      "crop": [
+        85,
+        560,
+        1509,
+        870
+      ],
+      "width": 1424,
+      "height": 310,
+      "bytes": 108633,
+      "sha256": "5bfcbf1595cc84983de21160f764bd2779b03b2ffd702852e87f0f5b6e943db4"
+    },
+    "crop-2010-2011-grammar-reading-g5-q30-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g5-q30-1.png",
+      "mime": "image/png",
+      "source_page": 8,
+      "crop": [
+        85,
+        1032,
+        1509,
+        1500
+      ],
+      "width": 1424,
+      "height": 468,
+      "bytes": 277601,
+      "sha256": "a2f326570a1fb578d30d64cf1b9da845db3ce8fa0cdae2556354d0c4e6ef0027"
+    },
+    "crop-2010-2011-grammar-reading-g5-q30-2": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g5-q30-2.png",
+      "mime": "image/png",
+      "source_page": 8,
+      "crop": [
+        85,
+        1500,
+        1509,
+        1800
+      ],
+      "width": 1424,
+      "height": 300,
+      "bytes": 79367,
+      "sha256": "f42bc8990f011b0e64d3afc66fea1c908f0172f0b3dfc46d2aca4654253992e9"
+    },
+    "crop-2010-2011-grammar-reading-g5-q31-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g5-q31-1.png",
+      "mime": "image/png",
+      "source_page": 8,
+      "crop": [
+        85,
+        1032,
+        1509,
+        1500
+      ],
+      "width": 1424,
+      "height": 468,
+      "bytes": 277601,
+      "sha256": "a2f326570a1fb578d30d64cf1b9da845db3ce8fa0cdae2556354d0c4e6ef0027"
+    },
+    "crop-2010-2011-grammar-reading-g5-q31-2": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g5-q31-2.png",
+      "mime": "image/png",
+      "source_page": 8,
+      "crop": [
+        85,
+        1800,
+        1509,
+        2090
+      ],
+      "width": 1424,
+      "height": 290,
+      "bytes": 92268,
+      "sha256": "a651e9ac039922f47f39de7404e23e3014764d4587d9121394e75f35e83a8533"
+    },
+    "crop-2010-2011-grammar-reading-g6-q32-1": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g6-q32-1.png",
+      "mime": "image/png",
+      "source_page": 9,
+      "crop": [
+        85,
+        500,
+        1509,
+        1900
+      ],
+      "width": 1424,
+      "height": 1400,
+      "bytes": 384035,
+      "sha256": "e1cd35951be995f8afe4f9588d94e6ac6475338ad094af85a2af13bc9420275c"
+    },
+    "crop-2010-2011-grammar-reading-g6-q32-2": {
+      "filename": "images/questions/n5-2010-2011-grammar-reading-g6-q32-2.png",
+      "mime": "image/png",
+      "source_page": 9,
+      "crop": [
+        85,
+        215,
+        1509,
+        390
+      ],
+      "width": 1424,
+      "height": 175,
+      "bytes": 106279,
+      "sha256": "e018345cc8892e54f22fb8f9be85fc1293aec744f5b2d6586c2aea3e503d7cda"
+    },
+    "crop-2010-2011-listening-g1-q1-1": {
+      "filename": "images/questions/n5-2010-2011-listening-g1-q1-1.png",
+      "mime": "image/png",
+      "source_page": 10,
+      "crop": [
+        85,
+        485,
+        824,
+        920
+      ],
+      "width": 739,
+      "height": 435,
+      "bytes": 102792,
+      "sha256": "fdd989c5557e5592b07d1331653149119d5a848e0e027d92b560d957ebcfc4df"
+    },
+    "crop-2010-2011-listening-g1-q2-1": {
+      "filename": "images/questions/n5-2010-2011-listening-g1-q2-1.png",
+      "mime": "image/png",
+      "source_page": 10,
+      "crop": [
+        85,
+        945,
+        1509,
+        1095
+      ],
+      "width": 1424,
+      "height": 150,
+      "bytes": 29273,
+      "sha256": "e557f5df0587972a70ac9b259b3d18acd9e7f37717c356b1df866a57982fe92a"
+    },
+    "crop-2010-2011-listening-g1-q3-1": {
+      "filename": "images/questions/n5-2010-2011-listening-g1-q3-1.png",
+      "mime": "image/png",
+      "source_page": 10,
+      "crop": [
+        85,
+        1115,
+        840,
+        1555
+      ],
+      "width": 755,
+      "height": 440,
+      "bytes": 125413,
+      "sha256": "d37fd43ae3a85bd0207d9d201baa8fbe32a53c306a3934d4ec22170019d0933f"
+    },
+    "crop-2010-2011-listening-g1-q4-1": {
+      "filename": "images/questions/n5-2010-2011-listening-g1-q4-1.png",
+      "mime": "image/png",
+      "source_page": 10,
+      "crop": [
+        85,
+        1575,
+        840,
+        2000
+      ],
+      "width": 755,
+      "height": 425,
+      "bytes": 88829,
+      "sha256": "cf5aff132fb0ed70e25ae41e8c89e9ad0e248777d434f7b8440da180a4d9117b"
+    },
+    "crop-2010-2011-listening-g3-q1-1": {
+      "filename": "images/questions/n5-2010-2011-listening-g3-q1-1.png",
+      "mime": "image/png",
+      "source_page": 11,
+      "crop": [
+        85,
+        240,
+        840,
+        685
+      ],
+      "width": 755,
+      "height": 445,
+      "bytes": 158643,
+      "sha256": "17238fe7a9f45962fe8c627bb48d13765926343b7d72c013b8c50b917fbd9e72"
+    },
+    "crop-2010-2011-listening-g3-q2-1": {
+      "filename": "images/questions/n5-2010-2011-listening-g3-q2-1.png",
+      "mime": "image/png",
+      "source_page": 11,
+      "crop": [
+        85,
+        700,
+        840,
+        1145
+      ],
+      "width": 755,
+      "height": 445,
+      "bytes": 187642,
+      "sha256": "2bf8a2271b5a0f01b8dbaaf6d7c63360d1d5cf7efe8314da88db124856ace078"
+    },
+    "crop-2010-2011-listening-g3-q3-1": {
+      "filename": "images/questions/n5-2010-2011-listening-g3-q3-1.png",
+      "mime": "image/png",
+      "source_page": 11,
+      "crop": [
+        85,
+        1160,
+        840,
+        1605
+      ],
+      "width": 755,
+      "height": 445,
+      "bytes": 163024,
+      "sha256": "5c87481194fbdd6802a5d4e984e9e7412e71bee54a0647cdbda59596a5fbfb06"
+    },
+    "crop-2010-2011-listening-g3-q4-1": {
+      "filename": "images/questions/n5-2010-2011-listening-g3-q4-1.png",
+      "mime": "image/png",
+      "source_page": 11,
+      "crop": [
+        85,
+        1635,
+        840,
+        2070
+      ],
+      "width": 755,
+      "height": 435,
+      "bytes": 123118,
+      "sha256": "40400954c5ae7f66ad846225d51db4c17f5b882502cfb6912bfe1a43a7e74fbd"
+    },
+    "crop-2010-2011-listening-g3-q5-1": {
+      "filename": "images/questions/n5-2010-2011-listening-g3-q5-1.png",
+      "mime": "image/png",
+      "source_page": 12,
+      "crop": [
+        85,
+        100,
+        840,
+        535
+      ],
+      "width": 755,
+      "height": 435,
+      "bytes": 124809,
+      "sha256": "9e914f0d7b6f2977001e1c66d52841b9bfe6d30cd857b18f96ece4153f99a692"
+    }
+  }
+}

@@ -13,7 +13,10 @@ module.exports = async function examSetChecks(page,base) {
   assert.equal(session.keys.length,10);
   assert.equal(new Set(session.keys.map(id=>all.find(q=>q.id===id).family)).size,10);
   let q=all.find(q=>q.id===session.keys[0]);
-  await page.waitForFunction(()=>[...document.querySelectorAll('.exam-document img')].every(i=>i.complete&&i.naturalWidth>0));
+  await page.waitForFunction(()=>[...document.querySelectorAll('.exam-fragment img')].every(i=>i.complete&&i.naturalWidth>0));
+  assert.equal(await page.locator('.exam-document').count(),0);
+  assert.equal(await page.locator('.exam-fragment').count(),q.media.length);
+  assert.match(await page.locator('.exam-answer-panel').innerText(),new RegExp(`Ответ на вопрос №\\s*${q.number}`));
   assert.equal(await page.locator('select,input[type=radio]').count(),0);
   await page.keyboard.press(String(((q.correct+1)%q.choices)+1));
   const before=await page.locator('#exam-next').boundingBox();
@@ -46,8 +49,17 @@ module.exports = async function examSetChecks(page,base) {
   await page.keyboard.press('F3');assert.ok(await page.locator('audio').evaluate(a=>a.paused));
   await page.locator('audio').evaluate((a,end)=>{a.currentTime=end-.15;a.play();},q.clip[1]);
   await page.waitForFunction(()=>document.querySelector('audio').paused);
-  await page.locator('[data-exam-zoom="large"]').click();
-  assert.ok(await page.locator('.exam-document').evaluate(e=>e.scrollWidth>e.clientWidth));
+  while (!q.media.length) {
+    await page.locator('#exam-next').click();
+    session=(await state()).sessions['n5-2017'];q=all.find(q=>q.id===session.keys[session.index]);
+  }
+  await page.locator('.exam-fragment').first().click();
+  await page.locator('[data-image-zoom="2"]').click();
+  assert.ok(await page.locator('.exam-image-viewport').evaluate(e=>e.scrollWidth>e.clientWidth));
+  await page.keyboard.press('Escape');
+  await page.locator('#exam-source-pages').click();
+  assert.equal(await page.locator('dialog img').count(),q.pages.length);
+  await page.keyboard.press('Escape');
   for(const width of [320,390,1440]) {
     await page.setViewportSize({width,height:1000});
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Exam overflow ${width}`);

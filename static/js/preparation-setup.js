@@ -2,10 +2,10 @@ import { escapeHTML as esc } from './ui.js';
 import { topicAssessment, dueSkills, troubleSkills, weakTopics } from './preparation-progress.js';
 
 export const TOPIC_GROUPS = [
-  {id:'words',label:'Слова и кандзи',topics:['kanji','vocabulary','numbers','dates','demonstratives']},
-  {id:'forms',label:'Формы слов',topics:['verb-forms','tense','plain','adjectives','adverbs','ongoing','change']},
+  {id:'words',label:'Слова и кандзи',topics:['kana','kanji','vocabulary','numbers','dates','demonstratives']},
+  {id:'forms',label:'Формы слов',topics:['copula','verb-forms','tense','plain','adjectives','adverbs','ongoing','change']},
   {id:'constructions',label:'Конструкции',topics:['particles','permission','requests','desire','ability','sequence','invitation','comparison','existence','giving','reasons','preferences','purpose','listing','obligation','experience','opinion','quantity','already','when','indefinite','ending']},
-  {id:'texts',label:'Работа с текстом',topics:['word-order','text-grammar','reading']},
+  {id:'texts',label:'Работа с текстом',topics:['word-order','text-grammar','reading','conversation']},
 ];
 export const MODE_LABELS = {all:'По темам',mistakes:'Ошибки',weak:'Слабые темы',due:'Повторить сегодня'};
 export function taskCount(number) {

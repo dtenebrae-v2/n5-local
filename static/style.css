@@ -1453,7 +1453,12 @@ body:has(.book-screen) { overflow:hidden; }
 body:has(.book-screen) .sidebar, .workspace:has(.book-screen) .topbar { display:none; }
 .workspace:has(.book-screen) { margin:0; }
 #content.book-screen { padding:0; margin:0; max-width:none; min-height:0; height:100dvh; }
-.book-shell { height:100%; min-width:0; display:flex; flex-direction:column; background:var(--paper); }
+.book-shell { height:100%; min-width:0; display:flex; flex-direction:column; background:var(--paper); position:relative; }
+.book-chrome {flex-shrink:0;}
+.book-chrome-hidden .book-chrome {display:none;}
+.book-show-controls {position:absolute; top:max(8px,env(safe-area-inset-top)); right:12px; z-index:5; min-height:44px; background:var(--paper); box-shadow:0 2px 12px #263c3526;}
+#book-hide-controls {display:none;}
+@media(max-width:800px), (pointer:coarse) { #book-hide-controls {display:block;} }
 .book-header { display:flex; align-items:center; gap:12px; padding:6px 16px; border-bottom:1px solid var(--line); }
 .book-header h1 { flex:1; min-width:0; font-size:18px; margin:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
 .book-header .library-back { display:grid; place-items:center; width:44px; min-height:44px; margin:0; font-size:24px; border-radius:6px; }
@@ -1686,4 +1691,25 @@ body:has(.book-screen) .sidebar, .workspace:has(.book-screen) .topbar { display:
   .prep-mode-card {padding:14px;}
   .prep-topic-search > div {flex-wrap:wrap;}
   .prep-topic-search input {flex:1 1 180px;}
+}
+
+/* A single numbered task and its shared context; the page itself scrolls normally. */
+.exam-individual {display:block; max-width:900px; margin-inline:auto;}
+.exam-fragment-caption {display:block; padding:8px 12px; color:var(--green); font-size:.9rem; text-align:right; background:var(--soft);}
+.exam-individual .exam-answer-panel {position:static; max-width:620px; margin:20px auto 0;}
+.exam-fragment-group h3 {font-size:1rem; margin:12px 0;}
+.exam-fragment {display:block; width:100%; padding:0; margin:0 0 12px; border:1px solid var(--line); border-radius:8px; overflow:hidden; background:white; cursor:zoom-in;}
+.exam-fragment img {display:block; width:100%; height:auto;}
+.exam-fragment:focus-visible {outline:3px solid var(--green); outline-offset:3px;}
+.exam-answer-label {font-size:1.05rem; margin:16px 0 10px;}
+.exam-spoken-task {padding:18px; background:var(--soft); border-radius:10px;}
+.exam-image-dialog {width:min(1100px,96vw);max-width:1100px;}
+.exam-image-dialog h2 {font-size:1.2rem;}
+.exam-image-viewport {max-height:70dvh; overflow:auto; touch-action:pan-x pan-y; background:white; overscroll-behavior:contain;}
+.exam-image-viewport img {display:block; width:100%; max-width:none; height:auto;}
+.book-show-controls[hidden] {display:none;}
+.prep-listening {padding-top:24px; margin-top:24px; border-top:1px solid var(--line);}
+@media(max-width:480px) {
+ .exam-image-dialog {padding:12px;}
+ .exam-individual .exam-answer-panel {width:100%;}
 }

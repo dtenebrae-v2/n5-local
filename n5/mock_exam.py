@@ -45,4 +45,12 @@ def load_mock_exam(path):
         signatures.add(signature)
     if topics != {q['topic'] for q in data['items']}:
         raise ValueError('Empty preparation topic')
+    coverage = data.get('coverage')
+    if coverage:
+        if set(coverage['topics']) != topics or coverage['minimumIndependentExamples'] < 24:
+            raise ValueError('Incomplete N5 teaching scope')
+        for topic in topics:
+            families = {q['family'] for q in data['items'] if q['topic'] == topic}
+            if len(families) < coverage['minimumIndependentExamples']:
+                raise ValueError(f'Insufficient independent examples: {topic}')
     return data

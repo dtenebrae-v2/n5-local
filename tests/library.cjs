@@ -15,7 +15,7 @@ module.exports=async function libraryChecks(page,base) {
  await page.locator('#library-search').fill('鏡');assert.equal(await page.locator('.library-card').count(),1);
  await page.locator('.library-card .primary').click();
  await page.waitForSelector('#book-stage[aria-busy="false"]',{timeout:60000});
- assert.ok(await page.locator('#book-stage canvas').evaluate(c=>c.width>200&&c.height>200));
+ assert.ok(await page.locator('#book-stage canvas').first().evaluate(c=>c.width>200&&c.height>200));
  assert.equal(book.pdf_pages,18);
  assert.equal(await page.locator('.pdfViewer .page').count(),18);
  assert.ok(await page.locator('#book-stage canvas').count()<10,'Only nearby pages are rendered');
@@ -46,9 +46,22 @@ module.exports=async function libraryChecks(page,base) {
  await page.waitForFunction(()=>document.querySelector('#book-page')?.value==='3');
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  assert.ok(await page.locator('#book-stage').evaluate(el=>el.clientHeight>innerHeight*.6),'Book uses most of the mobile screen');
+ await page.waitForTimeout(500); // PDF.js finishes refitting and restoring its anchor after resize.
  // Continuous scrolling moves the page counter without pressing navigation buttons.
  await page.locator('#book-stage').evaluate(stage=>{stage.scrollTop=stage.querySelector('[data-page-number="5"]').offsetTop+40;});
  await page.waitForFunction(()=>document.querySelector('#book-page')?.value==='5');
+ assert.equal(await page.locator('.book-chrome-hidden').count(),0,'Programmatic page changes keep controls visible');
+ const stageHeight=await page.locator('#book-stage').evaluate(el=>el.clientHeight);
+ await page.locator('#book-stage').focus();
+ await page.locator('#book-stage').hover();await page.mouse.wheel(0,250);
+ await page.waitForSelector('.book-chrome-hidden');
+ assert.ok(await page.locator('#book-stage').evaluate(el=>el.clientHeight)>stageHeight+50);
+ assert.equal(await page.locator('.book-chrome').evaluate(el=>el.inert),true);
+ await page.waitForTimeout(500);await page.mouse.wheel(0,-180);
+ await page.waitForFunction(()=>!document.querySelector('.book-chrome-hidden'));
+ await page.locator('#book-hide-controls').click();
+ await page.locator('#book-show-controls').click();
+ assert.equal(await page.locator('.book-chrome').evaluate(el=>el.inert),false);
  await page.locator('#book-thumbnails-open').click();
  assert.equal(await page.locator('.book-thumbnail').count(),18);
  await page.waitForSelector('.book-thumbnail canvas');
@@ -69,6 +82,14 @@ module.exports=async function libraryChecks(page,base) {
  await page.waitForFunction(before=>parseInt(document.querySelector('#book-scale').textContent)>before,scaleBefore);
  const after=await page.locator('.page[data-page-number="3"]').evaluate((el,a)=>{const r=el.getBoundingClientRect();return {x:r.left+a.x*r.width,y:r.top+a.y*r.height};},anchor);
  assert.ok(Math.abs(after.x-x)<8&&Math.abs(after.y-y)<8,'Pinch keeps the point under the fingers');
+ assert.equal(await page.locator('.book-chrome-hidden').count(),0,'Pinching does not hide reader controls');
+ await page.waitForTimeout(500);
+ await touch.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y:y+200,id:0}]});
+ await touch.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x,y:y+100,id:0}]});
+ await touch.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x,y:y-30,id:0}]});
+ await touch.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+ await page.waitForSelector('.book-chrome-hidden');
+ await page.locator('#book-show-controls').click();
  await touch.send('Emulation.setTouchEmulationEnabled',{enabled:false});await touch.detach();
  await page.locator('#book-zoom-in').click();
  await page.locator('#book-stage').evaluate(el=>{el.scrollLeft=100;el.scrollTop+=90;});

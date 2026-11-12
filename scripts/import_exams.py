@@ -31,6 +31,7 @@ def import_exam(source, destination, manifest):
     # Build and validate everything before replacing any of the existing assets.
     with tempfile.TemporaryDirectory(prefix='exam-import-', dir=destination) as temporary:
         stage = Path(temporary)
+        rendered = {}
         for key, asset in data['assets'].items():
             relative = Path(asset['filename'])
             if relative.is_absolute() or '..' in relative.parts:
@@ -39,8 +40,20 @@ def import_exam(source, destination, manifest):
             target.parent.mkdir(parents=True, exist_ok=True)
             if asset['mime'] == 'image/png':
                 page = str(asset['source_page'])
-                subprocess.run(['/usr/bin/pdftoppm', '-f', page, '-l', page, '-scale-to', '2200',
-                                '-singlefile', '-png', str(files['pdf']), str(target.with_suffix(''))], check=True)
+                if page not in rendered:
+                    source_image = stage / ('source-' + page + '.png')
+                    subprocess.run(['/usr/bin/pdftoppm', '-f', page, '-l', page, '-scale-to', '2200',
+                                    '-singlefile', '-png', str(files['pdf']), str(source_image.with_suffix(''))], check=True)
+                    rendered[page] = source_image
+                if asset.get('crop'):
+                    from PIL import Image
+                    with Image.open(rendered[page]) as image:
+                        box = asset['crop']
+                        if not (0 <= box[0] < box[2] <= image.width and 0 <= box[1] < box[3] <= image.height):
+                            raise ValueError('Fragment outside source page')
+                        image.crop(tuple(box)).save(target, optimize=True)
+                else:
+                    shutil.copyfile(rendered[page], target)
                 import struct
                 width, height = struct.unpack('>II', target.read_bytes()[16:24])
                 asset.update(width=width, height=height)

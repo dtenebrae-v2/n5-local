@@ -33,15 +33,16 @@ python3 scripts/release.py
 
 ## Инструменты
 
-На этой машине JDK, Android SDK и Gradle уже подготовлены в `.build-tools/`.
-Скрипт находит их автоматически. Переменные `JAVA_HOME`, `ANDROID_HOME`,
+Если JDK, Android SDK и Gradle установлены в `.build-tools/`, скрипт находит
+их автоматически. Переменные `JAVA_HOME`, `ANDROID_HOME`,
 `GRADLE_USER_HOME` и `N5_GRADLE`, заданные вручную, имеют приоритет.
 
 Для другой машины нужны Docker Compose с поддержкой `up --wait`, Git, Node.js/npm,
-Python 3.14 и Playwright (`npm install`, Chromium либо `BROWSER_PATH`). Для Android:
-JDK 17, SDK platform 35, build-tools 35.0.0 и Gradle 8.11.1.
+Python 3.11+ и Playwright (`npm install`, Chromium либо `BROWSER_PATH`). Для Android:
+JDK 17, SDK platform 35 и build-tools 35.0.0. Gradle 8.11.1 загружает wrapper.
+Python 3.14 рекомендуется для предварительной компиляции кода Chaquopy.
 
-Весь локальный каталог `data/materials` нужно перенести вместе с книгами и аудио.
+Весь каталог `data/materials` с книгами и аудио входит в Git и переносится при клонировании.
 Сохрани также ключ подписи `~/.android/debug.keystore`: он нужен для установки
 новых APK поверх старых с сохранением данных. Номер Android-версии генерируется
-по времени выпуска. Материалы и готовые APK остаются локальными.
+по времени выпуска. Готовые APK исключены из Git.

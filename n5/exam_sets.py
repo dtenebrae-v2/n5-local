@@ -16,6 +16,11 @@ def validate_exam(data):
                 or asset['mime'] not in {'image/png', 'audio/ogg'}
                 or not re.fullmatch(r'[a-f0-9]{64}', asset['sha256'])):
             raise ValueError('Invalid exam asset')
+        box = asset.get('crop')
+        if box is not None and (len(box) != 4 or any(type(n) is not int for n in box)
+                or not 0 <= box[0] < box[2] or not 0 <= box[1] < box[3]
+                or asset['mime'] != 'image/png'):
+            raise ValueError('Invalid exam fragment')
     ids, families, sections = set(), set(), set()
     for section in data['sections']:
         if section['id'] in sections or not section['pages'] or not section['groups']:
@@ -47,6 +52,13 @@ def validate_exam(data):
                     raise ValueError('Invalid exam key')
                 if item['correct'] is not None and not item.get('answer_source'):
                     raise ValueError('Unverified exam key')
+                if 'media' in item:
+                    for part in item['media']:
+                        if (part['asset'] not in assets or assets[part['asset']]['mime'] != 'image/png'
+                                or part['role'] not in {'question', 'context'}):
+                            raise ValueError('Unknown question fragment')
+                    if not item['media'] and not audio:
+                        raise ValueError('Question has neither a fragment nor audio')
                 if item.get('clip') is not None:
                     clip = item['clip']
                     if (not audio or len(clip) != 2 or any(type(n) not in {int, float} or not math.isfinite(n) for n in clip)

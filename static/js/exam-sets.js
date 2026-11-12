@@ -1,6 +1,7 @@
 import { getJSON } from './api.js';
 import { escapeHTML as esc } from './ui.js';
 import { mountShortcuts } from './training-shortcuts.js';
+import { questionFragments, imageZoomDialog } from './exam-fragments.js';
 import { examItems, practiceItems, newExamSession, restoreExamSession, answerRecord,
   checkPractice, beginExamSection, finishExamSection, expireExamSection, examSummary } from './exam-session.js';
 
@@ -48,7 +49,8 @@ function mountPlayer(root,signal,exam,sets,mixed) {
   const progress = readProgress();
   for (const key of ['sessions','records','settings']) if (!progress[key] || typeof progress[key] !== 'object' || Array.isArray(progress[key])) progress[key] = {};
   let session = restoreExamSession(progress.sessions[exam.id],exam,byId);
-  let filter = ['all','vocabulary','grammar-reading','listening'].includes(progress.settings.filter) ? progress.settings.filter : 'all';
+  const requested=new URLSearchParams(location.search).get('section');
+  let filter = ['vocabulary','grammar-reading','listening'].includes(requested) ? requested : ['all','vocabulary','grammar-reading','listening'].includes(progress.settings.filter) ? progress.settings.filter : 'all';
   let limit = [10,20,50].includes(progress.settings.limit) ? progress.settings.limit : 10;
   let player = null, playerEvents = null, dialog = null, lastAudioSave = 0, reviewId = null;
   root.innerHTML = `<a class="library-back" href="/jlpt/n5/exams">← Варианты N5</a><h1>${esc(exam.title)}</h1>
@@ -195,8 +197,8 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     const section = sets.flatMap(s => s.sections).find(s => s.id === q.sectionId && s.groups.some(g => g.items.some(item => item.id === q.id)));
     study.innerHTML = `<div class="exam-statusbar"><p>${esc(sources.get(q.examId).title)} · ${esc(q.sectionTitle)}</p>${session.mode === 'exam' && !isReview() ? '<strong id="exam-clock" role="timer"></strong>' : `<span>${session.index+1} / ${session.keys.length}</span>`}</div>
       <h2 class="exam-question-title" tabindex="-1">Блок ${q.group}: ${esc(q.groupTitle)} · № ${q.number}</h2>
-      <div class="exam-layout"><div class="exam-paper"><div class="exam-page-tools"><span>Страницы ${q.pages.map(k => k.slice(1)).join(', ')}</span><div class="practice-actions"><button class="secondary" data-exam-zoom="fit">По ширине</button><button class="secondary" data-exam-zoom="large">Увеличить</button></div></div><div class="exam-document" tabindex="0" aria-label="Страницы задания">${q.pages.map(key => pageHTML(q,key)).join('')}</div></div>
-      <div class="exam-answer-panel">${audioHTML(q)}<div class="exam-answer-choices" role="group" aria-label="Ответ на задание ${q.number}">${Array.from({length:q.choices},(_,i) => `<button class="secondary" data-exam-choice="${i}" aria-pressed="${a.choice === i}" ${isReview() ? 'disabled' : ''}>${i+1}</button>`).join('')}</div>
+      <div class="exam-layout exam-individual"><div class="exam-paper">${questionFragments(q,sources.get(q.examId).assets)}<div class="exam-page-tools"><button class="secondary" id="exam-source-pages">Исходные страницы</button></div></div>
+      <div class="exam-answer-panel">${audioHTML(q)}<h3 class="exam-answer-label">Ответ на вопрос № ${q.number}</h3><div class="exam-answer-choices" role="group" aria-label="Ответ на задание ${q.number}">${Array.from({length:q.choices},(_,i) => `<button class="secondary" data-exam-choice="${i}" aria-pressed="${a.choice === i}" ${isReview() ? 'disabled' : ''}>${i+1}</button>`).join('')}</div>
       <p id="exam-selection" role="status"></p><div class="exam-command-grid">${isReview() ? '<button class="primary" id="exam-results">К результатам</button>' : `${isPractice() ? '<button class="primary" id="exam-check">Проверить</button><button class="secondary" id="exam-unknown">Не знаю</button>' : ''}<button class="secondary" id="exam-next">Дальше</button>${isPractice() ? '<button class="secondary" id="exam-reveal">Показать ответ</button>' : '<button class="secondary" id="exam-finish-section">Сдать раздел</button>'}`}<button class="secondary" id="exam-rules">Справка</button></div>
       <div id="exam-feedback" role="status" aria-live="polite"></div>
       <div class="exam-reference-slot">${(q.reference?.length || q.answer_source?.pages?.length) ? '<button class="secondary" id="exam-reference" hidden>Ключ и расшифровка</button>' : ''}</div>
@@ -306,7 +308,17 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     if (b.dataset.examJump) { session.index=session.keys.indexOf(b.dataset.examJump); render(); }
     if (b.dataset.examReview) { reviewId=b.dataset.examReview; render(); }
     if (b.id === 'exam-results') { reviewId=null; render(); }
-    if (b.dataset.examZoom) root.querySelector('.exam-document').classList.toggle('exam-enlarged',b.dataset.examZoom === 'large');
+    if (b.dataset.examImage && !dialog?.open) {
+      const a=asset(current(),b.dataset.examImage);
+      if(a) dialog=imageZoomDialog(a,`Задание № ${current().number}`,signal,()=>{if(b.isConnected)b.focus({preventScroll:true});});
+    }
+    if (b.id==='exam-source-pages' && !dialog?.open) {
+      const q=current();dialog=document.createElement('dialog');dialog.className='practice-dialog exam-reference-dialog';
+      dialog.setAttribute('aria-labelledby','exam-source-title');
+      dialog.innerHTML=`<div class="practice-header"><h2 id="exam-source-title">Исходные страницы</h2><button class="practice-close" aria-label="Закрыть исходные страницы">×</button></div>${q.pages.map(k=>pageHTML(q,k)).join('')}`;
+      dialog.querySelector('button').onclick=()=>dialog.close();
+      dialog.addEventListener('close',()=>{dialog.remove();if(b.isConnected)b.focus({preventScroll:true});},{once:true});document.body.append(dialog);dialog.showModal();
+    }
     if (b.id === 'exam-play' && player) {
       if (player.paused) playAudio(); else if (isPractice() || isReview()) player.pause();
     }

@@ -1,6 +1,7 @@
 import { escapeHTML as esc } from './ui.js';
 import { saveReading, readingState } from './library-progress.js';
 import { bindBookGestures, clampScale, zoomAround } from './book-gestures.js';
+import { bindReaderChrome } from './book-chrome.js';
 
 const clock = seconds => {
   const value = Math.max(0, Math.floor(Number.isFinite(seconds) ? seconds : 0));
@@ -12,7 +13,7 @@ export async function mountBookReader(root, book, progress, signal, credits) {
   document.title = `${book.title} · N5`;
   const state = readingState(progress, book.id), pdf = book.assets.pdf, audio = book.assets.audio;
   root.innerHTML = `<section class="book-shell book-viewer" aria-label="Чтение книги">
-    <header class="book-header"><a class="library-back" href="/jlpt/n5/library" aria-label="Вернуться в библиотеку">←</a>
+    <div class="book-chrome"><header class="book-header"><a class="library-back" href="/jlpt/n5/library" aria-label="Вернуться в библиотеку">←</a>
       <h1 lang="ja">${esc(book.title)}</h1><button class="secondary" id="book-info-open">О книге</button></header>
     <div class="book-controls" aria-label="Управление чтением">
       <div class="book-page-controls"><button class="secondary" id="book-thumbnails-open" aria-label="Миниатюры страниц">Страницы</button>
@@ -22,8 +23,9 @@ export async function mountBookReader(root, book, progress, signal, credits) {
       <div class="book-zoom-controls"><button class="secondary" id="book-zoom-out" aria-label="Уменьшить">−</button>
       <output id="book-scale" aria-label="Масштаб">—</output><button class="secondary" id="book-zoom-in" aria-label="Увеличить">+</button>
       <label><span class="sr-only">Режим масштаба</span><select id="book-fit" aria-label="Режим масштаба"><option value="page-width">По ширине</option><option value="page-fit">Страница целиком</option><option value="custom" hidden>Свой масштаб</option></select></label>
-      <button class="secondary" id="book-fullscreen" aria-label="Полноэкранное чтение">⛶</button></div>
-    </div>
+      <button class="secondary" id="book-fullscreen" aria-label="Полноэкранное чтение">⛶</button><button class="secondary" id="book-hide-controls" aria-label="Скрыть панели чтения" title="Скрыть панели чтения">⌃</button></div>
+    </div></div>
+    <button class="secondary book-show-controls" id="book-show-controls" aria-label="Показать панели чтения" hidden>Панели</button>
     <p id="book-loading" role="status">Загружаем PDF…</p><p id="book-error" role="alert"></p><p id="reading-storage" role="status"></p>
     <div class="book-viewport"><div id="book-stage" class="book-stage" tabindex="0" role="region" aria-label="Страницы книги: прокрутка, увеличение двумя пальцами" aria-busy="true"><div class="pdfViewer" lang="ja"></div></div></div>
     ${audio?.available ? `<footer class="book-audio" aria-label="Аудиокнига"><audio id="book-audio" preload="metadata" src="${esc(audio.local_url)}"></audio>
@@ -206,6 +208,7 @@ export async function mountBookReader(root, book, progress, signal, credits) {
       stage.focus({ preventScroll: true });
     }
     bindBookGestures(stage, viewer, manualZoom, signal);
+    bindReaderChrome(shell, stage, signal);
     let width = stage.clientWidth, height = stage.clientHeight;
     resize = new ResizeObserver(() => {
       if (!ready || restoring || (width === stage.clientWidth && height === stage.clientHeight)) return;
