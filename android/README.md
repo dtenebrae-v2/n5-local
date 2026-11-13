@@ -35,6 +35,39 @@ Gradle 8.11.1 загружается автоматически через wrapp
 (`~/.android/debug.keystore` для стандартной debug-сборки). Сохрани его резервную
 копию. Для долговременной версии рекомендуется отдельный постоянный release-ключ.
 
+## GitHub Actions
+
+Workflow собирает `assembleRelease lintRelease` и требует постоянный ключ подписи.
+Ошибка `Configure GitHub Actions secrets: ...` означает, что Secrets не настроены;
+она возникает до запуска Gradle. Настрой их в репозитории: **Settings → Secrets
+and variables → Actions → Repository secrets**.
+
+| Secret | Значение |
+| --- | --- |
+| `N5_KEYSTORE_BASE64` | Содержимое прежнего keystore в Base64 без переносов строк |
+| `N5_STORE_PASSWORD` | Пароль keystore |
+| `N5_KEY_ALIAS` | Alias ключа внутри keystore |
+| `N5_KEY_PASSWORD` | Пароль ключа |
+
+Для APK, ранее собранных стандартным `assembleDebug` на этом компьютере,
+используй существующий `~/.android/debug.keystore`. Стандартные параметры:
+пароли `android`, alias `androiddebugkey`. Загрузить их через GitHub CLI из
+корня репозитория можно так (команды передают приватный ключ в GitHub Secrets):
+
+```sh
+python3 -c 'import base64; from pathlib import Path; print(base64.b64encode((Path.home() / ".android/debug.keystore").read_bytes()).decode())' | gh secret set N5_KEYSTORE_BASE64
+printf %s android | gh secret set N5_STORE_PASSWORD
+printf %s androiddebugkey | gh secret set N5_KEY_ALIAS
+printf %s android | gh secret set N5_KEY_PASSWORD
+```
+
+Если установленный APK подписан другим ключом, используй именно его и его
+параметры. Не создавай новый ключ для каждого запуска CI: Android не разрешит
+обновить приложение с другой подписью. После настройки Secrets повтори упавшие
+jobs через **Actions → Release builds → Re-run failed jobs**.
+
+## Проверка сборки
+
 Проверка упакованного приложения на машине сборки:
 
 ```sh
