@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import subprocess
 import sys
 import threading
 from urllib.request import ProxyHandler, build_opener
@@ -30,22 +31,28 @@ def existing_instance(origin, identity):
 
 
 def open_browser(origin):
+    url = origin + '/jlpt/n5'
+    if not sys.platform.startswith('linux'):
+        webbrowser.open(url)
+        return
     # Frozen Linux applications inherit bundled library paths. External browsers
     # must use their own system libraries, not PyInstaller's copies.
-    previous = os.environ.get('LD_LIBRARY_PATH')
-    if getattr(sys, 'frozen', False) and sys.platform.startswith('linux'):
+    environment = os.environ.copy()
+    if getattr(sys, 'frozen', False):
         original = os.environ.get('LD_LIBRARY_PATH_ORIG')
         if original is None:
-            os.environ.pop('LD_LIBRARY_PATH', None)
+            environment.pop('LD_LIBRARY_PATH', None)
         else:
-            os.environ['LD_LIBRARY_PATH'] = original
+            environment['LD_LIBRARY_PATH'] = original
+    # Browser diagnostics (including Chromium's existing-session handoff) belong
+    # to the browser, not the local server's console. Never redirect server FDs:
+    # this function also runs in a thread while the server handles requests.
     try:
-        webbrowser.open(origin + '/jlpt/n5')
-    finally:
-        if previous is None:
-            os.environ.pop('LD_LIBRARY_PATH', None)
-        else:
-            os.environ['LD_LIBRARY_PATH'] = previous
+        subprocess.Popen(['xdg-open', url], env=environment,
+                         stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
+                         stderr=subprocess.DEVNULL, start_new_session=True)
+    except OSError:
+        print(f'Не удалось открыть браузер. Откройте {url} вручную.', file=sys.stderr, flush=True)
 
 
 def main():

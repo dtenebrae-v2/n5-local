@@ -17,6 +17,38 @@ ROOT = Path(__file__).parent
 
 
 class DesktopTests(unittest.TestCase):
+    def test_linux_browser_is_detached_and_uses_system_libraries(self):
+        for original in (None, '/system/lib'):
+            with self.subTest(original=original), patch.object(desktop.sys, 'platform', 'linux'), \
+                    patch.object(desktop.sys, 'frozen', True, create=True), \
+                    patch.dict(os.environ, {'LD_LIBRARY_PATH': '/bundle/lib'}, clear=True), \
+                    patch.object(desktop.subprocess, 'Popen') as launch:
+                if original is not None:
+                    os.environ['LD_LIBRARY_PATH_ORIG'] = original
+                before = os.environ.copy()
+                desktop.open_browser('http://127.0.0.1:8095')
+                args, options = launch.call_args
+                self.assertEqual(args[0], ['xdg-open', 'http://127.0.0.1:8095/jlpt/n5'])
+                self.assertEqual(options['env'].get('LD_LIBRARY_PATH'), original)
+                for stream in ('stdin', 'stdout', 'stderr'):
+                    self.assertEqual(options[stream], subprocess.DEVNULL)
+                self.assertTrue(options['start_new_session'])
+                self.assertEqual(dict(os.environ), before)
+
+    def test_missing_linux_opener_prints_manual_url(self):
+        with patch.object(desktop.sys, 'platform', 'linux'), \
+                patch.object(desktop.subprocess, 'Popen', side_effect=FileNotFoundError), \
+                patch.object(desktop.sys, 'stderr') as errors:
+            desktop.open_browser('http://127.0.0.1:8095')
+            self.assertIn('http://127.0.0.1:8095/jlpt/n5',
+                          ''.join(call.args[0] for call in errors.write.call_args_list))
+
+    def test_windows_browser_uses_default_controller(self):
+        with patch.object(desktop.sys, 'platform', 'win32'), \
+                patch.object(desktop.webbrowser, 'open') as launch:
+            desktop.open_browser('http://127.0.0.1:8095')
+            launch.assert_called_once_with('http://127.0.0.1:8095/jlpt/n5')
+
     def test_user_profile_paths_and_stable_identity(self):
         with patch.object(desktop.sys, 'platform', 'linux'), patch.dict(os.environ, {'XDG_DATA_HOME': '/tmp/n5-profile'}):
             self.assertEqual(desktop.profile_directory(), Path('/tmp/n5-profile/n5-local'))
