@@ -27,6 +27,20 @@ python server.py
 
 ## Проверки
 
+GitHub Actions → **Release builds** собирает Android ARM64, Linux x86-64/ARM64 и
+Windows x86-64. Ручной запуск сохраняет файлы в Artifacts; отправка тега `v…`
+собирает все платформы и прикладывает архивы, APK и SHA-256 к GitHub Release.
+Для APK один раз задай Secrets: `N5_KEYSTORE_BASE64`, `N5_STORE_PASSWORD`,
+`N5_KEY_ALIAS`, `N5_KEY_PASSWORD`. Используй прежний ключ подписи, чтобы APK
+устанавливался поверх существующего приложения. Ключ в Git не добавляется.
+
+Настольный архив нужно распаковать целиком и запустить `n5-local` или
+`n5-local.exe`. Интерфейс откроется в браузере, Python устанавливать не нужно.
+Окно запуска остаётся открытым до завершения работы (Ctrl+C). Словарь хранится
+отдельно: `%LOCALAPPDATA%/N5Local` в Windows и
+`${XDG_DATA_HOME:-~/.local/share}/n5-local` в Linux. Адрес остаётся
+`http://127.0.0.1:8095`, поэтому прогресс браузера сохраняется при обновлении.
+
 Ручное обновление Docker и сборка APK одной командой описаны в
 [docs/automation.md](docs/automation.md).
 

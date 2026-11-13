@@ -1,0 +1,162 @@
+name: Release builds
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Platform'
+        type: choice
+        default: all
+        options: [all, android, linux, linux-arm64, windows]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}-${{ github.event.inputs.target || 'all' }}
+  cancel-in-progress: false
+
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      desktop-matrix: ${{ steps.targets.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+      - run: python -m n5.vocabulary validate
+      - run: python -m unittest discover -q
+      - run: npm run test:forms
+      - run: npm install --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:ui
+      - name: Select desktop targets
+        id: targets
+        env:
+          REQUESTED_TARGET: ${{ inputs.target || 'all' }}
+        run: |
+          python - <<'PY'
+          import json, os
+          rows = [
+              dict(target='linux', os='ubuntu-22.04', label='linux-x86_64', extension='tar.gz'),
+              dict(target='linux-arm64', os='ubuntu-22.04-arm', label='linux-arm64', extension='tar.gz'),
+              dict(target='windows', os='windows-2022', label='windows-x86_64', extension='zip'),
+          ]
+          selected = [r for r in rows if os.environ['REQUESTED_TARGET'] in ('all', 'android', r['target'])]
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
+              output.write('matrix=' + json.dumps({'include': selected}) + '\n')
+          PY
+
+  desktop:
+    needs: checks
+    if: github.event_name == 'push' || inputs.target != 'android'
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.checks.outputs.desktop-matrix) }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Build and check portable archive
+        run: |
+          python -m pip install -r requirements-build.txt
+          python scripts/package_desktop.py --output dist
+          python scripts/check_desktop_bundle.py dist/n5-local-${{ matrix.label }}.${{ matrix.extension }}
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: n5-local-${{ matrix.label }}
+          path: dist/n5-local-${{ matrix.label }}.*
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+
+  android:
+    needs: checks
+    if: github.event_name == 'push' || inputs.target == 'all' || inputs.target == 'android'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      N5_STORE_PASSWORD: ${{ secrets.N5_STORE_PASSWORD }}
+      N5_KEY_ALIAS: ${{ secrets.N5_KEY_ALIAS }}
+      N5_KEY_PASSWORD: ${{ secrets.N5_KEY_PASSWORD }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14'
+      - name: Restore permanent signing key
+        env:
+          N5_KEYSTORE_BASE64: ${{ secrets.N5_KEYSTORE_BASE64 }}
+        run: python scripts/prepare_android_signing.py
+      - name: Install SDK components
+        run: '"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-35" "build-tools;35.0.0"'
+      - name: Build APK
+        working-directory: android
+        run: ./gradlew --no-daemon --console=plain assembleRelease lintRelease
+      - name: Check offline content and APK
+        run: |
+          python scripts/check_android_bundle.py android/app/build/generated/n5-assets
+          python -c "from pathlib import Path; from scripts.release import verify_apk; verify_apk(Path('android/app/build/outputs/apk/release/app-release.apk'), Path('android/app/build/generated/n5-assets'))"
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify android/app/build/outputs/apk/release/app-release.apk
+          "$ANDROID_HOME/build-tools/35.0.0/zipalign" -c -P 16 4 android/app/build/outputs/apk/release/app-release.apk
+          mkdir -p dist
+          cp android/app/build/outputs/apk/release/app-release.apk dist/n5-local-android-arm64.apk
+          cd dist
+          sha256sum n5-local-android-arm64.apk > n5-local-android-arm64.apk.sha256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: n5-local-android-arm64
+          path: dist/n5-local-android-arm64.*
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+      - name: Remove signing key
+        if: always()
+        run: rm -f "$RUNNER_TEMP/n5-release.keystore"
+
+  publish:
+    needs: [checks, desktop, android]
+    if: github.event_name == 'push'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5
+        with:
+          pattern: n5-local-*
+          merge-multiple: true
+          path: release
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          cd release
+          sha256sum -c *.sha256
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" ./* --clobber
+          else
+            gh release create "$RELEASE_TAG" ./* --verify-tag --title "N5 Local $RELEASE_TAG" --generate-notes
+          fi

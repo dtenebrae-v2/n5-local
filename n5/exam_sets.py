@@ -74,11 +74,11 @@ class ExamSets:
         index = self.root / 'exams.json'
         if not index.exists():
             return
-        for entry in json.loads(index.read_text())['sets']:
+        for entry in json.loads(index.read_text(encoding='utf-8'))['sets']:
             path = (self.root / entry['catalog']).resolve()
             if not path.is_relative_to(self.root) or entry['id'] in self.sets:
                 raise ValueError('Invalid exam catalog')
-            content = validate_exam(json.loads(path.read_text())) if path.is_file() else None
+            content = validate_exam(json.loads(path.read_text(encoding='utf-8'))) if path.is_file() else None
             if content and content['id'] != entry['id']:
                 raise ValueError('Exam catalog identity mismatch')
             self.sets[entry['id']] = (entry, content, path.parent)

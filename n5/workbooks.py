@@ -59,11 +59,11 @@ class Workbooks:
         self.root = Path(root).resolve()
         self.books = {}
         self._verified = {}
-        for book in json.loads((self.root / 'workbooks.json').read_text())['books']:
+        for book in json.loads((self.root / 'workbooks.json').read_text(encoding='utf-8'))['books']:
             path = (self.root / book['catalog']).resolve()
             if not path.is_relative_to(self.root):
                 raise ValueError('Workbook catalog outside materials root')
-            content = validate_workbook(json.loads(path.read_text())) if path.is_file() else None
+            content = validate_workbook(json.loads(path.read_text(encoding='utf-8'))) if path.is_file() else None
             if content and (content['id'] != book['id'] or content['isbn'] != book['isbn']):
                 raise ValueError('Workbook metadata does not match content')
             self.books[book['id']] = (book, content, path.parent)
