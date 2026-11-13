@@ -91,6 +91,16 @@ module.exports=async function libraryChecks(page,base) {
  await page.locator('.book-thumbnail[data-page="3"]').click();
  await page.waitForFunction(()=>document.querySelector('#book-page')?.value==='3');
  assert.equal(await page.locator('#book-thumbnails').evaluate(el=>el.open),false);
+ // Wait for navigation and the thumbnail dialog's focus restoration to settle.
+ await page.locator('.page[data-page-number="3"]').evaluate(el=>new Promise(resolve=>{
+  let previous='',stable=0;
+  const check=()=>{
+   const r=el.getBoundingClientRect(),position=JSON.stringify([r.x,r.y,r.width,r.height]);
+   stable=position===previous?stable+1:0;previous=position;
+   if(stable>=3)resolve();else requestAnimationFrame(check);
+  };
+  requestAnimationFrame(check);
+ }));
  // A real two-finger input sequence exercises the custom zoom path, not the +/- buttons.
  const touch=await page.context().newCDPSession(page);
  await touch.send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:2});
@@ -103,8 +113,13 @@ module.exports=async function libraryChecks(page,base) {
  await touch.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:points(70)});
  await touch.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
  await page.waitForFunction(before=>parseInt(document.querySelector('#book-scale').textContent)>before,scaleBefore);
+ // The scale label can update before PDF.js finishes positioning the pages.
+ await page.waitForFunction(({anchor,x,y})=>{
+  const r=document.querySelector('.page[data-page-number="3"]').getBoundingClientRect();
+  return Math.abs(r.left+anchor.x*r.width-x)<8&&Math.abs(r.top+anchor.y*r.height-y)<8;
+ },{anchor,x,y});
  const after=await page.locator('.page[data-page-number="3"]').evaluate((el,a)=>{const r=el.getBoundingClientRect();return {x:r.left+a.x*r.width,y:r.top+a.y*r.height};},anchor);
- assert.ok(Math.abs(after.x-x)<8&&Math.abs(after.y-y)<8,'Pinch keeps the point under the fingers');
+ assert.ok(Math.abs(after.x-x)<8&&Math.abs(after.y-y)<8,`Pinch keeps the point under the fingers: expected (${x}, ${y}), got (${after.x}, ${after.y})`);
  assert.equal(await page.locator('.book-chrome-hidden').count(),0,'Pinching does not hide reader controls');
  await page.waitForTimeout(500);
  await touch.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y:y+200,id:0}]});
