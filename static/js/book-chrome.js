@@ -1,7 +1,11 @@
 // Reader scrolling happens inside PDF.js, not in window. React to user scrolls only.
-export function bindReaderChrome(shell, stage, signal) {
+export function bindReaderChrome(shell, stage, signal, {autoReveal=true,onAutoReveal=()=>{}}={}) {
   const chrome=shell.querySelector('.book-chrome'), restore=shell.querySelector('#book-show-controls');
   const mobile=matchMedia('(max-width: 800px), (pointer: coarse)');
+  const automatic=shell.querySelector('#book-auto-controls');
+  const measure=()=>shell.style.setProperty('--book-chrome-height',`${chrome.offsetHeight}px`);
+  const resize=new ResizeObserver(measure);resize.observe(chrome);measure();
+  signal.addEventListener('abort',()=>resize.disconnect(),{once:true});
   let last=stage.scrollTop, distance=0, direction=0, intent=0, settling=0, moved=0, touch=null;
   function show(hidden) {
     if (hidden && (!mobile.matches || document.querySelector('dialog[open]'))) return;
@@ -10,9 +14,18 @@ export function bindReaderChrome(shell, stage, signal) {
     distance=0;settling=performance.now()+350;
   }
   restore.addEventListener('click',()=>show(false),{signal});
+  function updateSwitch() {
+    automatic.setAttribute('aria-checked',String(autoReveal));
+    automatic.querySelector('span').textContent=autoReveal?'Вкл':'Выкл';
+  }
+  automatic.addEventListener('click',()=>{
+    autoReveal=!autoReveal;updateSwitch();onAutoReveal(autoReveal);
+    if(!autoReveal){stage.focus({preventScroll:true});show(true);}
+  },{signal});
+  updateSwitch();show(!autoReveal);
   shell.querySelector('#book-hide-controls').addEventListener('click',()=>{stage.focus({preventScroll:true});show(true);},{signal});
   chrome.addEventListener('focusin',()=>show(false),{signal});
-  mobile.addEventListener('change',()=>{if(!mobile.matches)show(false);},{signal});
+  mobile.addEventListener('change',()=>{show(mobile.matches&&!autoReveal);measure();},{signal});
   stage.addEventListener('wheel',event=>{if(!event.ctrlKey&&!event.metaKey)intent=performance.now()+1000;},{signal,passive:true});
   stage.addEventListener('touchstart',event=>{
     if(event.touches.length!==1){touch=null;intent=0;return;}
@@ -32,11 +45,14 @@ export function bindReaderChrome(shell, stage, signal) {
     if(!mobile.matches||now>intent||now<settling||Math.abs(delta)<1)return;
     moved=now;intent=now+700;
     const sign=Math.sign(delta);distance=sign===direction?distance+Math.abs(delta):Math.abs(delta);direction=sign;
-    if(top<8||sign<0&&distance>24)show(false);
+    if(!autoReveal) {
+      if(distance>24&&!chrome.contains(document.activeElement))show(true);
+    }
+    else if(top<8||sign<0&&distance>24)show(false);
     else if(sign>0&&distance>48&&!chrome.contains(document.activeElement))show(true);
   },{signal,passive:true});
   stage.addEventListener('click',event=>{
-    if(!mobile.matches||performance.now()-moved<400||event.target.closest('a,button,input,select'))return;
+    if(!mobile.matches||!autoReveal||performance.now()-moved<400||event.target.closest('a,button,input,select'))return;
     show(!shell.classList.contains('book-chrome-hidden'));
   },{signal});
 }

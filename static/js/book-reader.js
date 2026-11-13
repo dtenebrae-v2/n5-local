@@ -24,6 +24,7 @@ export async function mountBookReader(root, book, progress, signal, credits) {
       <output id="book-scale" aria-label="Масштаб">—</output><button class="secondary" id="book-zoom-in" aria-label="Увеличить">+</button>
       <label><span class="sr-only">Режим масштаба</span><select id="book-fit" aria-label="Режим масштаба"><option value="page-width">По ширине</option><option value="page-fit">Страница целиком</option><option value="custom" hidden>Свой масштаб</option></select></label>
       <button class="secondary" id="book-fullscreen" aria-label="Полноэкранное чтение">⛶</button><button class="secondary" id="book-hide-controls" aria-label="Скрыть панели чтения" title="Скрыть панели чтения">⌃</button></div>
+      <div class="book-auto-controls"><button class="secondary" id="book-auto-controls" role="switch" aria-checked="true">Показывать при прокрутке: <span>Вкл</span></button></div>
     </div></div>
     <button class="secondary book-show-controls" id="book-show-controls" aria-label="Показать панели чтения" hidden>Панели</button>
     <p id="book-loading" role="status">Загружаем PDF…</p><p id="book-error" role="alert"></p><p id="reading-storage" role="status"></p>
@@ -43,6 +44,10 @@ export async function mountBookReader(root, book, progress, signal, credits) {
     <dialog id="book-thumbnails" class="practice-dialog book-thumbnails-dialog" aria-labelledby="book-thumbnails-title"><div class="practice-header"><h2 id="book-thumbnails-title">Страницы PDF</h2><button class="practice-close" aria-label="Закрыть миниатюры">×</button></div><div class="book-thumbnail-grid"></div></dialog>
     </section>`;
   const shell = root.querySelector('.book-shell'), stage = root.querySelector('#book-stage');
+  bindReaderChrome(shell, stage, signal, {
+    autoReveal: progress.readerAutoPanel !== false,
+    onAutoReveal(value) { progress.readerAutoPanel=value; saveReading(progress); },
+  });
   const pageInput = root.querySelector('#book-page'), fit = root.querySelector('#book-fit');
   const player = root.querySelector('#book-audio'), info = root.querySelector('#book-info'), thumbnails = root.querySelector('#book-thumbnails');
   let loadingTask, documentPDF, viewer, bus, resize, ready = false, restoring = true, audioReady = false;
@@ -208,7 +213,6 @@ export async function mountBookReader(root, book, progress, signal, credits) {
       stage.focus({ preventScroll: true });
     }
     bindBookGestures(stage, viewer, manualZoom, signal);
-    bindReaderChrome(shell, stage, signal);
     let width = stage.clientWidth, height = stage.clientHeight;
     resize = new ResizeObserver(() => {
       if (!ready || restoring || (width === stage.clientWidth && height === stage.clientHeight)) return;
