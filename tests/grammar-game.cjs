@@ -9,6 +9,7 @@ module.exports = async (page, base) => {
   assert.equal(await page.locator('#game-mode').evaluate(el => !el.hidden), false);
   await openOptions(page);
   await choose(page, '#game-topic input[value=particles]');
+  await choose(page, '#game-length input[value="20"]');
   const data = await (await page.request.get(base + '/api/grammar-practice')).json();
   const input = page.locator('#practice-answer');
   const question = page.locator('#game-question');

@@ -29,7 +29,7 @@ def required_text(value, label, maximum):
 
 def word_from_form(payload, catalog):
     required = {'kanji', 'readings', 'meanings', 'collection', 'group'}
-    if not isinstance(payload, dict) or not required <= payload.keys() <= required | {'context', 'source', 'vocabulary_prompt', 'vocabulary_answers'}:
+    if not isinstance(payload, dict) or not required <= payload.keys() <= required | {'context', 'source', 'vocabulary_prompt', 'vocabulary_answers', 'meanings_ru'}:
         raise WordError('Заполните написание, чтение, ромадзи, перевод, раздел и группу.')
     collection = payload['collection']
     if not isinstance(collection, str) or collection not in {c['id'] for c in catalog.public['collections']}:
@@ -83,6 +83,11 @@ def word_from_form(payload, catalog):
         'sources': [required_text(source, 'Источник', 1000)] if source.strip() else [],
         'related_words': [], 'notes': [],
     }
+    russian = payload.get('meanings_ru', [])
+    if not isinstance(russian, list) or len(russian) > 20:
+        raise WordError('Добавьте не более 20 значений на русском.')
+    if russian:
+        word['meanings']['ru'] = [required_text(m, 'Перевод на русский', 500) for m in russian]
 
     prompt = payload.get('vocabulary_prompt', '')
     answers = payload.get('vocabulary_answers', [])

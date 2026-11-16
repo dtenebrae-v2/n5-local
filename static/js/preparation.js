@@ -16,6 +16,7 @@ export async function mountPreparation(root, signal) {
   const settings = preparationSettings(progress.setup,bank);
   let showingHome = progress.screen === 'home';
   let modeSignature = '';
+  let setupOpen = false;
   let session = progress.session, storageError = false;
   if (!session?.questions?.length || !Number.isInteger(session.index) || session.index < 0
       || session.index > session.questions.length || !Array.isArray(session.results)) session = null;
@@ -29,10 +30,21 @@ export async function mountPreparation(root, signal) {
     session.hintLevel ||= session.hinted ? 1 : 0;
     delete session.hinted;
   }
-  const requested = new URLSearchParams(location.search).get('mode');
-  if (['weak','mistakes'].includes(requested)) {
-    session = practicePlan(bank, progress, { mode:requested });
-    history.replaceState({}, '', location.pathname);
+  const params = new URLSearchParams(location.search);
+  const requested = params.get('mode');
+  const quick = params.get('quick') === '1';
+  if (quick || ['weak','mistakes','due'].includes(requested)) {
+    const mode = quick ? 'all' : requested;
+    Object.assign(settings, {mode, topic:'', count:10});
+    // A dashboard shortcut must keep an unfinished lesson available to resume.
+    if (session && session.index < session.questions.length) showingHome = true;
+    else {
+      session = practicePlan(bank, progress, {mode, count:10});
+      showingHome = false;
+    }
+    params.delete('quick'); params.delete('mode');
+    const query = params.toString();
+    history.replaceState({}, '', location.pathname + (query ? '?' + query : ''));
   }
   let lastTick = Date.now(), ticks = 0;
   function tick() {
@@ -59,16 +71,18 @@ export async function mountPreparation(root, signal) {
     save();
     const ongoing=session && session.index<session.questions.length;
     shell(`<div class="prep-home">${ongoing ? `<section class="prep-resume" aria-labelledby="prep-resume-title"><div><h2 id="prep-resume-title">Незавершённое занятие</h2><p>${esc(bank.topics.find(t=>t.id===session.topic)?.label || (session.mode==='all'?'Все темы':MODE_LABELS[session.mode]))} · задание ${session.index+1} из ${session.questions.length}</p></div><button class="primary" data-action="resume">Продолжить</button></section>` : ''}
-      <div class="prep-config"><section aria-labelledby="prep-mode-title"><h2 id="prep-mode-title">Режим занятия</h2><div id="prep-mode-options">${preparationModes(progress,settings.mode)}</div></section>
+      <div class="prep-launch prep-launch-first"><div><p id="prep-plan-summary" role="status"></p><p class="prep-launch-help">Короткое занятие с разбором каждого ответа.</p></div><button class="primary" data-action="launch">${ongoing ? 'Начать новое занятие' : 'Начать тренировку'}</button></div>
+      <details class="prep-settings" ${setupOpen ? 'open' : ''}><summary>Настроить темы и длительность</summary><div class="prep-config"><section aria-labelledby="prep-mode-title"><h2 id="prep-mode-title">Режим занятия</h2><div id="prep-mode-options">${preparationModes(progress,settings.mode)}</div></section>
       <section class="prep-topic-picker" aria-labelledby="prep-topics-title" ${settings.mode==='all'?'':'hidden'}><h2 id="prep-topics-title">Темы</h2>
       <button class="secondary prep-all-topics" data-topic="" aria-pressed="${!settings.topic}">Все темы · смешанное занятие</button>
       <div class="library-filters prep-topic-categories" role="group" aria-label="Группа тем">${TOPIC_GROUPS.map(g=>`<button class="chip" data-prep-category="${g.id}" aria-pressed="${settings.category===g.id}">${g.label}</button>`).join('')}</div>
       <div class="prep-topic-search"><label for="prep-topic-query">Найти тему</label><div><input id="prep-topic-query" type="search" value="${esc(settings.query)}" placeholder="Например, частицы" maxlength="100" autocomplete="off"><button class="secondary" data-action="clear-search">Очистить</button></div></div>
       <div id="prep-topic-options">${preparationTopicChoices(bank,progress,settings)}</div></section>
       <fieldset class="prep-count"><legend>Количество заданий</legend><div class="library-filters">${[5,10,20].map(n=>`<button type="button" class="chip" data-prep-count="${n}" aria-pressed="${settings.count===n}">${n}</button>`).join('')}</div></fieldset>
-      <div class="prep-launch"><p id="prep-plan-summary" role="status"></p><button class="primary" data-action="launch">${ongoing ? 'Начать новое занятие' : 'Начать тренировку'}</button></div></div>
+      </div></details>
       <section class="prep-listening"><h2>Аудирование</h2><p>Отдельные вопросы с записью из экзаменационных вариантов.</p><a class="secondary" href="/jlpt/n5/exams?section=listening">Тренировать аудирование</a></section>
       <section class="prep-progress-section" aria-labelledby="prep-progress-title"><h2 id="prep-progress-title">Прогресс</h2>${preparationStats(progress,bank)}${readingBookmarks(progress)}</section></div>`);
+    root.querySelector('.prep-settings').addEventListener('toggle', event => { setupOpen = event.target.open; }, {signal});
     updateSetup();
   }
   function updateSetup() {
@@ -76,7 +90,9 @@ export async function mountPreparation(root, signal) {
     const plan=practicePlan(bank,progress,{mode:settings.mode,topic:settings.mode==='all'?settings.topic:'',count:settings.count,seed:0});
     const topic=settings.mode==='all' ? bank.topics.find(t=>t.id===settings.topic)?.label || 'Все темы' : MODE_LABELS[settings.mode];
     root.querySelector('#prep-plan-summary').textContent=`${topic} · ${taskCount(plan.questions.length)}`;
-    root.querySelector('[data-action="launch"]').disabled=!plan.questions.length;
+    const launch=root.querySelector('[data-action="launch"]');
+    launch.disabled=!plan.questions.length;
+    launch.textContent=`${session && session.index<session.questions.length ? 'Начать новое занятие' : 'Начать'} · ${taskCount(plan.questions.length)}`;
     save();
   }
   function refreshModes() {
@@ -221,5 +237,5 @@ export async function mountPreparation(root, signal) {
     }
   },1000);
   signal.addEventListener('abort',()=>{clearInterval(interval);tick();save();root.querySelectorAll('dialog[open]').forEach(d=>d.close());},{once:true});
-  if (showingHome && !requested) home(); else { render();save(); }
+  if (showingHome) home(); else { render();save(); }
 }

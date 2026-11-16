@@ -51,7 +51,7 @@ async function main() {
     });
     clearTimeout(startupTimer);
     lines.close();
-    const systemBrowser = ['/usr/bin/chromium-browser', '/usr/bin/chromium', '/usr/bin/google-chrome']
+    const systemBrowser = ['/usr/bin/chromium-browser', '/usr/bin/chromium', '/usr/bin/google-chrome', '/opt/google/chrome/chrome']
       .find((candidate) => fs.existsSync(candidate));
     browser = await chromium.launch({
       executablePath: process.env.BROWSER_PATH || systemBrowser,
@@ -84,6 +84,11 @@ async function main() {
     }
 
     await page.goto(base + '/jlpt/n5');
+    await page.waitForSelector('.home-screen');
+    assert.equal(await page.title(), 'Моё обучение · N5');
+    assert.equal(new URL(page.url()).pathname, '/jlpt/n5');
+    assert.equal(await page.getByRole('link', { name: 'Начать · 10 заданий', exact: true }).count(), 1);
+    await page.getByRole('link', { name: 'Открыть словарь →', exact: true }).click();
     await ready();
     assert.equal(await page.title(), 'Все слова · N5');
     assert.equal(new URL(page.url()).pathname, '/jlpt/n5/vocabulary/complete');
@@ -214,7 +219,7 @@ async function main() {
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(base + '/jlpt/n5');
-    await ready();
+    await page.waitForSelector('.home-intro');
     await page.locator('.menu-toggle').click();
     assert.equal(await page.locator('.menu-toggle').getAttribute('aria-expanded'), 'true');
     await page.locator('#navigation a[href$="/vocabulary/nouns"]').click();
@@ -226,7 +231,7 @@ async function main() {
       await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, 'n5-mobile.png'), fullPage: true });
       await page.setViewportSize({ width: 1440, height: 1000 });
       await page.goto(base + '/jlpt/n5');
-      await ready();
+      await page.waitForSelector('.home-intro');
       await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, 'n5-home.png'), fullPage: true });
     }
     await addWordChecks(page, base);

@@ -41,7 +41,7 @@ module.exports = async function vocabularyGameChecks(page, base) {
     assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'), 'incorrect');
     assert.ok((await page.locator('#practice-feedback').innerText()).includes(current.kanji));
     assert.match(await page.locator('#practice-feedback').innerText(), /Правильный ответ:[\s\S]*[ぁ-ゖ]/);
-    await page.locator('#practice-reveal').click();
+    assert.equal(await page.locator('#practice-reveal').isHidden(), true);
     assert.match(await page.locator('#practice-feedback').innerText(), /Правильный ответ:/);
     await page.keyboard.press('F1');
     await page.waitForSelector('.practice-rules-dialog[open]');

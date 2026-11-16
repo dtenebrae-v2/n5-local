@@ -30,7 +30,7 @@ export function preparationModes(progress, mode) {
     ['mistakes',mistakes ? `Слова и правила с ошибками: ${mistakes}` : 'Пока нет ошибок для повторения',!!mistakes],
     ['weak',weak ? `Темы, которым нужна практика: ${weak}` : 'Пока нет слабых тем',!!weak],
     ['due',due ? `К повторению по расписанию: ${due}` : 'На сегодня повторений нет',!!due],
-  ].map(([id,description,available])=>`<button type="button" class="prep-mode-card" data-start="${id}" aria-pressed="${mode===id}" ${available?'':'disabled'}><strong>${MODE_LABELS[id]}</strong><span>${description}</span></button>`).join('')}</div>`;
+  ].map(([id,description,available])=>`<button type="button" class="prep-mode-card ${available?'':'prep-mode-unavailable'}" data-start="${id}" aria-pressed="${mode===id}" ${available?'':'disabled'}><strong>${MODE_LABELS[id]}</strong><span>${description}</span></button>`).join('')}</div>`;
 }
 
 export function preparationTopicChoices(bank,progress,settings) {

@@ -1,6 +1,7 @@
 import { getJSON } from './api.js';
 import { escapeHTML as esc } from './ui.js';
 import { groupLabels } from './group-labels.js';
+import { toRomaji } from '../vendor/wanakana-5.3.1.js';
 
 export function openAddWord(catalog, pageSignal) {
   if (pageSignal.aborted || document.querySelector('.add-word-dialog')) return;
@@ -10,10 +11,11 @@ export function openAddWord(catalog, pageSignal) {
   dialog.innerHTML = `<div class="practice-header"><h2 id="add-word-title">Добавить слово</h2>
     <button type="button" class="practice-close" aria-label="Закрыть добавление">×</button></div>
     <form id="add-word-form">
-      <label>Написание *<input name="kanji" required maxlength="200" autocomplete="off" lang="ja"></label>
+      <label>Написание *<input name="kanji" required maxlength="200" autocomplete="off" lang="ja" placeholder="例: 食べる"></label>
       <fieldset class="word-readings"><legend>Чтения *</legend><div id="new-readings"></div>
         <button type="button" class="secondary" id="add-reading">Ещё чтение</button></fieldset>
-      <label>Перевод на английский *<textarea name="meaning" required maxlength="4000" rows="2"></textarea></label>
+      <label>Перевод на русский<textarea name="meaning_ru" maxlength="4000" rows="2" placeholder="Например: есть, кушать"></textarea></label>
+      <label>Перевод на английский *<textarea name="meaning" required maxlength="4000" rows="2" placeholder="Например: to eat"></textarea></label>
       <fieldset id="new-collection" class="practice-target"><legend>Раздел *</legend><div class="game-modes">
         ${catalog.collections.map(c => `<label class="form-choice"><input type="radio" name="collection" value="${esc(c.id)}" required><span>${c.id === 'complete' ? 'Только общий словарь' : esc(c.label)}</span></label>`).join('')}
       </div></fieldset>
@@ -26,7 +28,7 @@ export function openAddWord(catalog, pageSignal) {
         <label>Источник<input name="source" type="url" maxlength="1000" placeholder="https://…"></label>
       </details>
       <p id="add-word-error" role="alert"></p>
-      <div class="practice-actions"><button type="submit" class="primary">Добавить</button>
+      <div class="practice-actions add-word-footer"><button type="submit" class="primary">Добавить</button>
         <button type="button" class="secondary" id="cancel-add-word">Отмена</button></div>
     </form>`;
   document.body.append(dialog);
@@ -49,9 +51,19 @@ export function openAddWord(catalog, pageSignal) {
     if (readings.children.length >= 10) return;
     const row = document.createElement('div');
     row.className = 'new-reading';
-    row.innerHTML = `<label>Кана *<input name="kana" required maxlength="200" autocomplete="off" lang="ja"></label>
-      <label>Ромадзи *<input name="romaji" required maxlength="200" autocomplete="off" pattern=".*[A-Za-z].*" title="Используйте латиницу"></label>
+    row.innerHTML = `<label>Кана *<input name="kana" required maxlength="200" autocomplete="off" lang="ja" placeholder="Например: たべる"></label>
+      <label>Ромадзи *<input name="romaji" required maxlength="200" autocomplete="off" pattern=".*[A-Za-z].*" title="Используйте латиницу" placeholder="Например: taberu"><small>Заполняется из кана; можно исправить.</small></label>
       <button type="button" class="remove-reading" aria-label="Удалить чтение">×</button>`;
+    const kana = row.querySelector('[name=kana]');
+    const romaji = row.querySelector('[name=romaji]');
+    let manualRomaji = false;
+    kana.addEventListener('input', () => {
+      if (!manualRomaji) romaji.value = toRomaji(kana.value);
+    });
+    romaji.addEventListener('input', () => {
+      manualRomaji = romaji.value.trim() !== '';
+      if (!manualRomaji) romaji.value = toRomaji(kana.value);
+    });
     row.querySelector('button').addEventListener('click', () => {
       if (readings.children.length <= 1) return;
       row.remove(); updateReadingButtons();
@@ -94,6 +106,7 @@ export function openAddWord(catalog, pageSignal) {
     const payload = {
       kanji: form.elements.kanji.value.trim(),
       readings: [...readings.children].map(row => ({ kana: row.querySelector('[name=kana]').value.trim(), romaji: row.querySelector('[name=romaji]').value.trim() })),
+      meanings_ru: form.elements.meaning_ru.value.split('\n').map(value => value.trim()).filter(Boolean),
       meanings: form.elements.meaning.value.split('\n').map(value => value.trim()).filter(Boolean),
       collection: selectedCollection(), group: selectedCollection() === 'complete' ? null : selectedGroup(),
       vocabulary_prompt: form.elements.vocabulary_prompt.value.trim(),

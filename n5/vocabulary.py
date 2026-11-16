@@ -110,7 +110,8 @@ def validate(document, collections):
             for meaning in meanings:
                 text(meaning, path + '.meanings.' + language)
             require(len(meanings) == len(set(meanings)), path, 'duplicate meanings')
-        fingerprint = (word['kanji'], tuple(sorted(readings)), json.dumps(word['meanings'], sort_keys=True))
+        # Optional translations enrich a record; they do not make it a new word.
+        fingerprint = (word['kanji'], tuple(sorted(readings)), json.dumps(word['meanings']['en']))
         require(fingerprint not in fingerprints, path, 'duplicate word: add memberships to the existing record')
         fingerprints.add(fingerprint)
         require(bool(word['memberships']), path, 'at least one membership is required')

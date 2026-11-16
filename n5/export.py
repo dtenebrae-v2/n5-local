@@ -4,7 +4,7 @@ import io
 
 FIELDS = [
     'kanji', 'furigana', 'romaji', 'meaning', 'collection',
-    'group_name', 'type', 'context', 'source_url',
+    'group_name', 'type', 'context', 'source_url', 'meaning_ru',
 ]
 
 

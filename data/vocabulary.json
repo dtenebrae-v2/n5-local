@@ -365,6 +365,9 @@
       "meanings": {
         "en": [
           "Ah!"
+        ],
+        "ru": [
+          "ах!"
         ]
       },
       "verb_type": null,
@@ -393,6 +396,10 @@
       "meanings": {
         "en": [
           "to meet"
+        ],
+        "ru": [
+          "встречаться",
+          "встретить"
         ]
       },
       "verb_type": "Godan",
@@ -426,6 +433,10 @@
       "meanings": {
         "en": [
           "blue"
+        ],
+        "ru": [
+          "синий",
+          "голубой"
         ]
       },
       "verb_type": null,
@@ -459,6 +470,9 @@
       "meanings": {
         "en": [
           "red"
+        ],
+        "ru": [
+          "красный"
         ]
       },
       "verb_type": null,
@@ -492,6 +506,10 @@
       "meanings": {
         "en": [
           "light, bright"
+        ],
+        "ru": [
+          "светлый",
+          "яркий"
         ]
       },
       "verb_type": null,
@@ -525,6 +543,9 @@
       "meanings": {
         "en": [
           "autumn, fall"
+        ],
+        "ru": [
+          "осень"
         ]
       },
       "verb_type": null,
@@ -557,6 +578,9 @@
       "meanings": {
         "en": [
           "open"
+        ],
+        "ru": [
+          "открываться"
         ]
       },
       "verb_type": null,
@@ -587,6 +611,9 @@
       "meanings": {
         "en": [
           "to open"
+        ],
+        "ru": [
+          "открывать"
         ]
       },
       "verb_type": "Ichidan",
@@ -631,6 +658,11 @@
           "to give",
           "to raise",
           "to increase"
+        ],
+        "ru": [
+          "давать",
+          "поднимать",
+          "увеличивать"
         ]
       },
       "verb_type": "Ichidan",
@@ -665,6 +697,9 @@
       "meanings": {
         "en": [
           "morning"
+        ],
+        "ru": [
+          "утро"
         ]
       },
       "verb_type": null,
@@ -697,6 +732,9 @@
       "meanings": {
         "en": [
           "breakfast"
+        ],
+        "ru": [
+          "завтрак"
         ]
       },
       "verb_type": null,
@@ -729,6 +767,9 @@
       "meanings": {
         "en": [
           "the day after tomorrow"
+        ],
+        "ru": [
+          "послезавтра"
         ]
       },
       "verb_type": null,
@@ -761,6 +802,10 @@
       "meanings": {
         "en": [
           "leg, foot"
+        ],
+        "ru": [
+          "нога",
+          "ступня"
         ]
       },
       "verb_type": null,
@@ -793,6 +838,9 @@
       "meanings": {
         "en": [
           "tomorrow"
+        ],
+        "ru": [
+          "завтра"
         ]
       },
       "verb_type": null,
@@ -825,6 +873,9 @@
       "meanings": {
         "en": [
           "over there"
+        ],
+        "ru": [
+          "вон там"
         ]
       },
       "verb_type": null,
@@ -862,6 +913,9 @@
       "meanings": {
         "en": [
           "to play"
+        ],
+        "ru": [
+          "играть"
         ]
       },
       "verb_type": "Godan",
@@ -895,6 +949,9 @@
       "meanings": {
         "en": [
           "warm"
+        ],
+        "ru": [
+          "тёплый"
         ]
       },
       "verb_type": null,
@@ -928,6 +985,9 @@
       "meanings": {
         "en": [
           "head"
+        ],
+        "ru": [
+          "голова"
         ]
       },
       "verb_type": null,
@@ -960,6 +1020,9 @@
       "meanings": {
         "en": [
           "new"
+        ],
+        "ru": [
+          "новый"
         ]
       },
       "verb_type": null,
@@ -993,6 +1056,9 @@
       "meanings": {
         "en": [
           "over there (polite)"
+        ],
+        "ru": [
+          "вон там (вежливо)"
         ]
       },
       "verb_type": null,
@@ -1021,6 +1087,9 @@
       "meanings": {
         "en": [
           "hot (air)"
+        ],
+        "ru": [
+          "жаркий (о погоде)"
         ]
       },
       "verb_type": null,
@@ -1051,6 +1120,9 @@
       "meanings": {
         "en": [
           "thick"
+        ],
+        "ru": [
+          "толстый (о толщине)"
         ]
       },
       "verb_type": null,
@@ -1084,6 +1156,10 @@
       "meanings": {
         "en": [
           "later, after"
+        ],
+        "ru": [
+          "позже",
+          "после"
         ]
       },
       "verb_type": null,
@@ -1116,6 +1192,10 @@
       "meanings": {
         "en": [
           "you"
+        ],
+        "ru": [
+          "вы",
+          "ты"
         ]
       },
       "verb_type": null,
@@ -1144,6 +1224,9 @@
       "meanings": {
         "en": [
           "older brother"
+        ],
+        "ru": [
+          "старший брат (свой)"
         ]
       },
       "verb_type": null,
@@ -1176,6 +1259,9 @@
       "meanings": {
         "en": [
           "older sister"
+        ],
+        "ru": [
+          "старшая сестра (своя)"
         ]
       },
       "verb_type": null,
@@ -1208,6 +1294,9 @@
       "meanings": {
         "en": [
           "that (over there)"
+        ],
+        "ru": [
+          "тот (перед существительным)"
         ]
       },
       "verb_type": null,
@@ -1236,6 +1325,10 @@
       "meanings": {
         "en": [
           "well, then"
+        ],
+        "ru": [
+          "э-э",
+          "ну… (заминка в речи)"
         ]
       },
       "verb_type": null,
@@ -1273,6 +1366,9 @@
       "meanings": {
         "en": [
           "apartment"
+        ],
+        "ru": [
+          "квартира"
         ]
       },
       "verb_type": null,
@@ -1305,6 +1401,9 @@
       "meanings": {
         "en": [
           "to take a shower"
+        ],
+        "ru": [
+          "принимать душ"
         ]
       },
       "verb_type": "Ichidan",
@@ -1338,6 +1437,9 @@
       "meanings": {
         "en": [
           "dangerous"
+        ],
+        "ru": [
+          "опасный"
         ]
       },
       "verb_type": null,
@@ -1380,6 +1482,9 @@
       "meanings": {
         "en": [
           "sweet"
+        ],
+        "ru": [
+          "сладкий"
         ]
       },
       "verb_type": null,
@@ -1413,6 +1518,9 @@
       "meanings": {
         "en": [
           "not so"
+        ],
+        "ru": [
+          "не очень (с отрицанием)"
         ]
       },
       "verb_type": null,
@@ -1441,6 +1549,9 @@
       "meanings": {
         "en": [
           "rain"
+        ],
+        "ru": [
+          "дождь"
         ]
       },
       "verb_type": null,
@@ -1473,6 +1584,10 @@
       "meanings": {
         "en": [
           "to wash"
+        ],
+        "ru": [
+          "мыть",
+          "стирать"
         ]
       },
       "verb_type": "Godan",
@@ -1506,6 +1621,10 @@
       "meanings": {
         "en": [
           "to be, to exist"
+        ],
+        "ru": [
+          "быть",
+          "существовать (о неодушевлённых предметах)"
         ]
       },
       "verb_type": "Godan",
@@ -1539,6 +1658,10 @@
       "meanings": {
         "en": [
           "to possess"
+        ],
+        "ru": [
+          "иметь",
+          "обладать"
         ]
       },
       "verb_type": "Godan",
@@ -1572,6 +1695,9 @@
       "meanings": {
         "en": [
           "to walk"
+        ],
+        "ru": [
+          "ходить пешком"
         ]
       },
       "verb_type": "Godan",
@@ -1605,6 +1731,10 @@
       "meanings": {
         "en": [
           "that one"
+        ],
+        "ru": [
+          "то",
+          "тот предмет"
         ]
       },
       "verb_type": null,
@@ -1637,6 +1767,9 @@
       "meanings": {
         "en": [
           "good"
+        ],
+        "ru": [
+          "хороший"
         ]
       },
       "verb_type": null,
@@ -1670,6 +1803,9 @@
       "meanings": {
         "en": [
           "no"
+        ],
+        "ru": [
+          "нет"
         ]
       },
       "verb_type": null,
@@ -1698,6 +1834,10 @@
       "meanings": {
         "en": [
           "to say, to tell"
+        ],
+        "ru": [
+          "говорить",
+          "сказать"
         ]
       },
       "verb_type": "Godan",
@@ -1731,6 +1871,9 @@
       "meanings": {
         "en": [
           "house, home"
+        ],
+        "ru": [
+          "дом"
         ]
       },
       "verb_type": null,
@@ -1763,6 +1906,10 @@
       "meanings": {
         "en": [
           "to go"
+        ],
+        "ru": [
+          "идти",
+          "ехать"
         ]
       },
       "verb_type": "Godan",
@@ -1796,6 +1943,10 @@
       "meanings": {
         "en": [
           "how many, how old"
+        ],
+        "ru": [
+          "сколько",
+          "сколько лет"
         ]
       },
       "verb_type": null,
@@ -1824,6 +1975,9 @@
       "meanings": {
         "en": [
           "how much"
+        ],
+        "ru": [
+          "сколько стоит"
         ]
       },
       "verb_type": null,
@@ -1852,6 +2006,9 @@
       "meanings": {
         "en": [
           "pond"
+        ],
+        "ru": [
+          "пруд"
         ]
       },
       "verb_type": null,
@@ -1884,6 +2041,10 @@
       "meanings": {
         "en": [
           "doctor"
+        ],
+        "ru": [
+          "врач",
+          "доктор"
         ]
       },
       "verb_type": null,
@@ -1916,6 +2077,9 @@
       "meanings": {
         "en": [
           "chair"
+        ],
+        "ru": [
+          "стул"
         ]
       },
       "verb_type": null,
@@ -1948,6 +2112,9 @@
       "meanings": {
         "en": [
           "to be busy"
+        ],
+        "ru": [
+          "занятый"
         ]
       },
       "verb_type": null,
@@ -1978,6 +2145,10 @@
       "meanings": {
         "en": [
           "to be painful"
+        ],
+        "ru": [
+          "болезненный",
+          "больно"
         ]
       },
       "verb_type": null,
@@ -2008,6 +2179,9 @@
       "meanings": {
         "en": [
           "one"
+        ],
+        "ru": [
+          "один"
         ]
       },
       "verb_type": null,
@@ -2045,6 +2219,9 @@
       "meanings": {
         "en": [
           "one day"
+        ],
+        "ru": [
+          "один день"
         ]
       },
       "verb_type": null,
@@ -2077,6 +2254,11 @@
       "meanings": {
         "en": [
           "No. 1, the best, the first"
+        ],
+        "ru": [
+          "первый",
+          "номер один",
+          "самый лучший"
         ]
       },
       "verb_type": null,
@@ -2105,6 +2287,9 @@
       "meanings": {
         "en": [
           "when"
+        ],
+        "ru": [
+          "когда"
         ]
       },
       "verb_type": null,
@@ -2133,6 +2318,10 @@
       "meanings": {
         "en": [
           "the 5th day of the month, 5 days"
+        ],
+        "ru": [
+          "пятое число месяца",
+          "пять дней"
         ]
       },
       "verb_type": null,
@@ -2165,6 +2354,9 @@
       "meanings": {
         "en": [
           "together"
+        ],
+        "ru": [
+          "вместе"
         ]
       },
       "verb_type": null,
@@ -2193,6 +2385,9 @@
       "meanings": {
         "en": [
           "five"
+        ],
+        "ru": [
+          "пять (предметов)"
         ]
       },
       "verb_type": null,
@@ -2230,6 +2425,9 @@
       "meanings": {
         "en": [
           "always"
+        ],
+        "ru": [
+          "всегда"
         ]
       },
       "verb_type": null,
@@ -2258,6 +2456,9 @@
       "meanings": {
         "en": [
           "now"
+        ],
+        "ru": [
+          "сейчас"
         ]
       },
       "verb_type": null,
@@ -2290,6 +2491,10 @@
       "meanings": {
         "en": [
           "meaning"
+        ],
+        "ru": [
+          "значение",
+          "смысл"
         ]
       },
       "verb_type": null,
@@ -2322,6 +2527,9 @@
       "meanings": {
         "en": [
           "someone's younger sister"
+        ],
+        "ru": [
+          "младшая сестра"
         ]
       },
       "verb_type": null,
@@ -2354,6 +2562,10 @@
       "meanings": {
         "en": [
           "not likable, unpleasant"
+        ],
+        "ru": [
+          "неприятный",
+          "нежелательный"
         ]
       },
       "verb_type": null,
@@ -2384,6 +2596,9 @@
       "meanings": {
         "en": [
           "entrance"
+        ],
+        "ru": [
+          "вход"
         ]
       },
       "verb_type": null,
@@ -2416,6 +2631,10 @@
       "meanings": {
         "en": [
           "need, must have, be required"
+        ],
+        "ru": [
+          "нуждаться",
+          "требоваться"
         ]
       },
       "verb_type": "Godan",
@@ -2451,6 +2670,10 @@
       "meanings": {
         "en": [
           "to exist"
+        ],
+        "ru": [
+          "быть",
+          "существовать (о людях и животных)"
         ]
       },
       "verb_type": "Ichidan",
@@ -2484,6 +2707,10 @@
       "meanings": {
         "en": [
           "to insert, to put in"
+        ],
+        "ru": [
+          "вкладывать",
+          "класть внутрь"
         ]
       },
       "verb_type": "Ichidan",
@@ -2517,6 +2744,9 @@
       "meanings": {
         "en": [
           "color"
+        ],
+        "ru": [
+          "цвет"
         ]
       },
       "verb_type": null,
@@ -2549,6 +2779,10 @@
       "meanings": {
         "en": [
           "various"
+        ],
+        "ru": [
+          "разный",
+          "разнообразный"
         ]
       },
       "verb_type": null,
@@ -2579,6 +2813,11 @@
       "meanings": {
         "en": [
           "top, on, above"
+        ],
+        "ru": [
+          "верх",
+          "наверху",
+          "над"
         ]
       },
       "verb_type": null,
@@ -2611,6 +2850,11 @@
       "meanings": {
         "en": [
           "back, rear, behind"
+        ],
+        "ru": [
+          "сзади",
+          "позади",
+          "задняя сторона"
         ]
       },
       "verb_type": null,
@@ -2643,6 +2887,9 @@
       "meanings": {
         "en": [
           "thin"
+        ],
+        "ru": [
+          "тонкий"
         ]
       },
       "verb_type": null,
@@ -2676,6 +2923,9 @@
       "meanings": {
         "en": [
           "song"
+        ],
+        "ru": [
+          "песня"
         ]
       },
       "verb_type": null,
@@ -2708,6 +2958,9 @@
       "meanings": {
         "en": [
           "to sing"
+        ],
+        "ru": [
+          "петь"
         ]
       },
       "verb_type": "Godan",
@@ -2741,6 +2994,10 @@
       "meanings": {
         "en": [
           "home"
+        ],
+        "ru": [
+          "дом",
+          "у себя дома"
         ]
       },
       "verb_type": null,
@@ -2773,6 +3030,9 @@
       "meanings": {
         "en": [
           "to be born"
+        ],
+        "ru": [
+          "рождаться"
         ]
       },
       "verb_type": "Ichidan",
@@ -2806,6 +3066,9 @@
       "meanings": {
         "en": [
           "sea"
+        ],
+        "ru": [
+          "море"
         ]
       },
       "verb_type": null,
@@ -2838,6 +3101,9 @@
       "meanings": {
         "en": [
           "to sell"
+        ],
+        "ru": [
+          "продавать"
         ]
       },
       "verb_type": "Godan",
@@ -2871,6 +3137,11 @@
       "meanings": {
         "en": [
           "coat, jacket"
+        ],
+        "ru": [
+          "куртка",
+          "пиджак",
+          "верхняя одежда"
         ]
       },
       "verb_type": null,
@@ -2903,6 +3174,10 @@
       "meanings": {
         "en": [
           "picture"
+        ],
+        "ru": [
+          "картина",
+          "рисунок"
         ]
       },
       "verb_type": null,
@@ -2935,6 +3210,10 @@
       "meanings": {
         "en": [
           "movie"
+        ],
+        "ru": [
+          "фильм",
+          "кино"
         ]
       },
       "verb_type": null,
@@ -2967,6 +3246,9 @@
       "meanings": {
         "en": [
           "cinema"
+        ],
+        "ru": [
+          "кинотеатр"
         ]
       },
       "verb_type": null,
@@ -2999,6 +3281,9 @@
       "meanings": {
         "en": [
           "English language"
+        ],
+        "ru": [
+          "английский язык"
         ]
       },
       "verb_type": null,
@@ -3031,6 +3316,10 @@
       "meanings": {
         "en": [
           "Yes, I see"
+        ],
+        "ru": [
+          "да",
+          "понимаю"
         ]
       },
       "verb_type": null,
@@ -3059,6 +3348,10 @@
       "meanings": {
         "en": [
           "station"
+        ],
+        "ru": [
+          "станция",
+          "вокзал"
         ]
       },
       "verb_type": null,
@@ -3091,6 +3384,9 @@
       "meanings": {
         "en": [
           "elevator"
+        ],
+        "ru": [
+          "лифт"
         ]
       },
       "verb_type": null,
@@ -3123,6 +3419,9 @@
       "meanings": {
         "en": [
           "Yen"
+        ],
+        "ru": [
+          "иена"
         ]
       },
       "verb_type": null,
@@ -3155,6 +3454,9 @@
       "meanings": {
         "en": [
           "pencil"
+        ],
+        "ru": [
+          "карандаш"
         ]
       },
       "verb_type": null,
@@ -3187,6 +3489,9 @@
       "meanings": {
         "en": [
           "honorific prefix"
+        ],
+        "ru": [
+          "вежливая приставка о-"
         ]
       },
       "verb_type": null,
@@ -3215,6 +3520,9 @@
       "meanings": {
         "en": [
           "tasty, delicious"
+        ],
+        "ru": [
+          "вкусный"
         ]
       },
       "verb_type": null,
@@ -3248,6 +3556,9 @@
       "meanings": {
         "en": [
           "big"
+        ],
+        "ru": [
+          "большой"
         ]
       },
       "verb_type": null,
@@ -3281,6 +3592,9 @@
       "meanings": {
         "en": [
           "many people"
+        ],
+        "ru": [
+          "много людей"
         ]
       },
       "verb_type": null,
@@ -3313,6 +3627,10 @@
       "meanings": {
         "en": [
           "my own mother"
+        ],
+        "ru": [
+          "мама",
+          "мать (вежливо)"
         ]
       },
       "verb_type": null,
@@ -3345,6 +3663,10 @@
       "meanings": {
         "en": [
           "confectionary, cake"
+        ],
+        "ru": [
+          "сладости",
+          "кондитерские изделия"
         ]
       },
       "verb_type": null,
@@ -3377,6 +3699,9 @@
       "meanings": {
         "en": [
           "money"
+        ],
+        "ru": [
+          "деньги"
         ]
       },
       "verb_type": null,
@@ -3409,6 +3734,10 @@
       "meanings": {
         "en": [
           "to get up, to stand up"
+        ],
+        "ru": [
+          "вставать",
+          "просыпаться"
         ]
       },
       "verb_type": "Ichidan",
@@ -3442,6 +3771,10 @@
       "meanings": {
         "en": [
           "to put, to place"
+        ],
+        "ru": [
+          "класть",
+          "ставить"
         ]
       },
       "verb_type": null,
@@ -3470,6 +3803,9 @@
       "meanings": {
         "en": [
           "someone's wife"
+        ],
+        "ru": [
+          "жена (другого человека)"
         ]
       },
       "verb_type": null,
@@ -3502,6 +3838,10 @@
       "meanings": {
         "en": [
           "to send"
+        ],
+        "ru": [
+          "отправлять",
+          "посылать"
         ]
       },
       "verb_type": "Godan",
@@ -3535,6 +3875,10 @@
       "meanings": {
         "en": [
           "alcohol, sake"
+        ],
+        "ru": [
+          "алкоголь",
+          "саке"
         ]
       },
       "verb_type": null,
@@ -3567,6 +3911,9 @@
       "meanings": {
         "en": [
           "plate"
+        ],
+        "ru": [
+          "тарелка"
         ]
       },
       "verb_type": null,
@@ -3599,6 +3946,9 @@
       "meanings": {
         "en": [
           "uncle"
+        ],
+        "ru": [
+          "дядя"
         ]
       },
       "verb_type": null,
@@ -3631,6 +3981,9 @@
       "meanings": {
         "en": [
           "grand father"
+        ],
+        "ru": [
+          "дедушка"
         ]
       },
       "verb_type": null,
@@ -3663,6 +4016,10 @@
       "meanings": {
         "en": [
           "to push"
+        ],
+        "ru": [
+          "толкать",
+          "нажимать"
         ]
       },
       "verb_type": "Godan",
@@ -3696,6 +4053,10 @@
       "meanings": {
         "en": [
           "late, slow"
+        ],
+        "ru": [
+          "поздний",
+          "медленный"
         ]
       },
       "verb_type": null,
@@ -3729,6 +4090,9 @@
       "meanings": {
         "en": [
           "tea"
+        ],
+        "ru": [
+          "чай"
         ]
       },
       "verb_type": null,
@@ -3761,6 +4125,10 @@
       "meanings": {
         "en": [
           "toilet, lavatory"
+        ],
+        "ru": [
+          "туалет",
+          "уборная"
         ]
       },
       "verb_type": null,
@@ -3806,6 +4174,10 @@
       "meanings": {
         "en": [
           "father"
+        ],
+        "ru": [
+          "папа",
+          "отец (вежливо)"
         ]
       },
       "verb_type": null,
@@ -3838,6 +4210,9 @@
       "meanings": {
         "en": [
           "someone's younger brother"
+        ],
+        "ru": [
+          "младший брат"
         ]
       },
       "verb_type": null,
@@ -3870,6 +4245,9 @@
       "meanings": {
         "en": [
           "man"
+        ],
+        "ru": [
+          "мужчина"
         ]
       },
       "verb_type": null,
@@ -3902,6 +4280,9 @@
       "meanings": {
         "en": [
           "boy"
+        ],
+        "ru": [
+          "мальчик"
         ]
       },
       "verb_type": null,
@@ -3934,6 +4315,9 @@
       "meanings": {
         "en": [
           "the day before yesterday"
+        ],
+        "ru": [
+          "позавчера"
         ]
       },
       "verb_type": null,
@@ -3966,6 +4350,9 @@
       "meanings": {
         "en": [
           "the year before last"
+        ],
+        "ru": [
+          "позапрошлый год"
         ]
       },
       "verb_type": null,
@@ -3998,6 +4385,9 @@
       "meanings": {
         "en": [
           "adult"
+        ],
+        "ru": [
+          "взрослый"
         ]
       },
       "verb_type": null,
@@ -4030,6 +4420,9 @@
       "meanings": {
         "en": [
           "stomach"
+        ],
+        "ru": [
+          "живот"
         ]
       },
       "verb_type": null,
@@ -4062,6 +4455,10 @@
       "meanings": {
         "en": [
           "same"
+        ],
+        "ru": [
+          "одинаковый",
+          "тот же самый"
         ]
       },
       "verb_type": null,
@@ -4090,6 +4487,9 @@
       "meanings": {
         "en": [
           "someone's elder brother"
+        ],
+        "ru": [
+          "старший брат (вежливо)"
         ]
       },
       "verb_type": null,
@@ -4122,6 +4522,9 @@
       "meanings": {
         "en": [
           "someone's elder sister"
+        ],
+        "ru": [
+          "старшая сестра (вежливо)"
         ]
       },
       "verb_type": null,
@@ -4154,6 +4557,9 @@
       "meanings": {
         "en": [
           "aunt"
+        ],
+        "ru": [
+          "тётя"
         ]
       },
       "verb_type": null,
@@ -4186,6 +4592,9 @@
       "meanings": {
         "en": [
           "grandmother"
+        ],
+        "ru": [
+          "бабушка"
         ]
       },
       "verb_type": null,
@@ -4218,6 +4627,10 @@
       "meanings": {
         "en": [
           "lunchbox"
+        ],
+        "ru": [
+          "бэнто",
+          "обед в коробке"
         ]
       },
       "verb_type": null,
@@ -4250,6 +4663,10 @@
       "meanings": {
         "en": [
           "to memorize, to remember"
+        ],
+        "ru": [
+          "запоминать",
+          "помнить"
         ]
       },
       "verb_type": "Ichidan",
@@ -4283,6 +4700,9 @@
       "meanings": {
         "en": [
           "heavy"
+        ],
+        "ru": [
+          "тяжёлый"
         ]
       },
       "verb_type": null,
@@ -4316,6 +4736,10 @@
       "meanings": {
         "en": [
           "interesting, funny"
+        ],
+        "ru": [
+          "интересный",
+          "забавный"
         ]
       },
       "verb_type": null,
@@ -4349,6 +4773,9 @@
       "meanings": {
         "en": [
           "to swim"
+        ],
+        "ru": [
+          "плавать"
         ]
       },
       "verb_type": "Godan",
@@ -4382,6 +4809,10 @@
       "meanings": {
         "en": [
           "to get off"
+        ],
+        "ru": [
+          "выходить (из транспорта)",
+          "сходить"
         ]
       },
       "verb_type": "Ichidan",
@@ -4415,6 +4846,9 @@
       "meanings": {
         "en": [
           "to end"
+        ],
+        "ru": [
+          "заканчиваться"
         ]
       },
       "verb_type": "Godan",
@@ -4448,6 +4882,9 @@
       "meanings": {
         "en": [
           "music"
+        ],
+        "ru": [
+          "музыка"
         ]
       },
       "verb_type": null,
@@ -4480,6 +4917,9 @@
       "meanings": {
         "en": [
           "woman"
+        ],
+        "ru": [
+          "женщина"
         ]
       },
       "verb_type": null,
@@ -4512,6 +4952,9 @@
       "meanings": {
         "en": [
           "girl"
+        ],
+        "ru": [
+          "девочка"
         ]
       },
       "verb_type": null,
@@ -4544,6 +4987,9 @@
       "meanings": {
         "en": [
           "~times"
+        ],
+        "ru": [
+          "раз (счёт повторений)"
         ]
       },
       "verb_type": null,
@@ -4572,6 +5018,9 @@
       "meanings": {
         "en": [
           "~floor"
+        ],
+        "ru": [
+          "этаж"
         ]
       },
       "verb_type": null,
@@ -4600,6 +5049,10 @@
       "meanings": {
         "en": [
           "foreign country"
+        ],
+        "ru": [
+          "иностранная страна",
+          "зарубежье"
         ]
       },
       "verb_type": null,
@@ -4632,6 +5085,9 @@
       "meanings": {
         "en": [
           "foreigner"
+        ],
+        "ru": [
+          "иностранец"
         ]
       },
       "verb_type": null,
@@ -4664,6 +5120,10 @@
       "meanings": {
         "en": [
           "company, enterprise"
+        ],
+        "ru": [
+          "компания",
+          "предприятие"
         ]
       },
       "verb_type": null,
@@ -4696,6 +5156,9 @@
       "meanings": {
         "en": [
           "stairs"
+        ],
+        "ru": [
+          "лестница"
         ]
       },
       "verb_type": null,
@@ -4728,6 +5191,10 @@
       "meanings": {
         "en": [
           "shopping"
+        ],
+        "ru": [
+          "покупки",
+          "поход за покупками"
         ]
       },
       "verb_type": null,
@@ -4760,6 +5227,9 @@
       "meanings": {
         "en": [
           "to buy"
+        ],
+        "ru": [
+          "покупать"
         ]
       },
       "verb_type": "Godan",
@@ -4793,6 +5263,9 @@
       "meanings": {
         "en": [
           "to return an object"
+        ],
+        "ru": [
+          "возвращать (предмет)"
         ]
       },
       "verb_type": "Godan",
@@ -4826,6 +5299,9 @@
       "meanings": {
         "en": [
           "to return home"
+        ],
+        "ru": [
+          "возвращаться домой"
         ]
       },
       "verb_type": "Godan",
@@ -4859,6 +5335,9 @@
       "meanings": {
         "en": [
           "face"
+        ],
+        "ru": [
+          "лицо"
         ]
       },
       "verb_type": null,
@@ -4891,6 +5370,10 @@
       "meanings": {
         "en": [
           "to take time, money"
+        ],
+        "ru": [
+          "занимать (время)",
+          "стоить (денег)"
         ]
       },
       "verb_type": null,
@@ -4921,6 +5404,9 @@
       "meanings": {
         "en": [
           "key"
+        ],
+        "ru": [
+          "ключ"
         ]
       },
       "verb_type": null,
@@ -4953,6 +5439,9 @@
       "meanings": {
         "en": [
           "to write"
+        ],
+        "ru": [
+          "писать"
         ]
       },
       "verb_type": "Godan",
@@ -4986,6 +5475,10 @@
       "meanings": {
         "en": [
           "student"
+        ],
+        "ru": [
+          "студент",
+          "учащийся"
         ]
       },
       "verb_type": null,
@@ -5027,6 +5520,9 @@
       "meanings": {
         "en": [
           "~ number of months"
+        ],
+        "ru": [
+          "месяцев (длительность)"
         ]
       },
       "verb_type": null,
@@ -5057,6 +5553,10 @@
           "to wear (glasses)",
           "to hang",
           "to put on"
+        ],
+        "ru": [
+          "надевать (очки)",
+          "вешать"
         ]
       },
       "verb_type": "Ichidan",
@@ -5101,6 +5601,9 @@
       "meanings": {
         "en": [
           "to make a phone call"
+        ],
+        "ru": [
+          "звонить по телефону"
         ]
       },
       "verb_type": "Ichidan",
@@ -5135,6 +5638,9 @@
       "meanings": {
         "en": [
           "umbrella"
+        ],
+        "ru": [
+          "зонт"
         ]
       },
       "verb_type": null,
@@ -5167,6 +5673,10 @@
       "meanings": {
         "en": [
           "to lend"
+        ],
+        "ru": [
+          "давать взаймы",
+          "одалживать кому-либо"
         ]
       },
       "verb_type": "Godan",
@@ -5200,6 +5710,9 @@
       "meanings": {
         "en": [
           "wind"
+        ],
+        "ru": [
+          "ветер"
         ]
       },
       "verb_type": null,
@@ -5232,6 +5745,9 @@
       "meanings": {
         "en": [
           "a cold"
+        ],
+        "ru": [
+          "простуда"
         ]
       },
       "verb_type": null,
@@ -5264,6 +5780,9 @@
       "meanings": {
         "en": [
           "family"
+        ],
+        "ru": [
+          "семья"
         ]
       },
       "verb_type": null,
@@ -5296,6 +5815,9 @@
       "meanings": {
         "en": [
           "person (polite)"
+        ],
+        "ru": [
+          "человек (вежливо)"
         ]
       },
       "verb_type": null,
@@ -5328,6 +5850,9 @@
       "meanings": {
         "en": [
           "Katakana"
+        ],
+        "ru": [
+          "катакана"
         ]
       },
       "verb_type": null,
@@ -5360,6 +5885,9 @@
       "meanings": {
         "en": [
           "January"
+        ],
+        "ru": [
+          "январь"
         ]
       },
       "verb_type": null,
@@ -5392,6 +5920,9 @@
       "meanings": {
         "en": [
           "February"
+        ],
+        "ru": [
+          "февраль"
         ]
       },
       "verb_type": null,
@@ -5424,6 +5955,9 @@
       "meanings": {
         "en": [
           "March"
+        ],
+        "ru": [
+          "март"
         ]
       },
       "verb_type": null,
@@ -5456,6 +5990,9 @@
       "meanings": {
         "en": [
           "April"
+        ],
+        "ru": [
+          "апрель"
         ]
       },
       "verb_type": null,
@@ -5488,6 +6025,9 @@
       "meanings": {
         "en": [
           "May"
+        ],
+        "ru": [
+          "май"
         ]
       },
       "verb_type": null,
@@ -5520,6 +6060,9 @@
       "meanings": {
         "en": [
           "June"
+        ],
+        "ru": [
+          "июнь"
         ]
       },
       "verb_type": null,
@@ -5552,6 +6095,9 @@
       "meanings": {
         "en": [
           "July"
+        ],
+        "ru": [
+          "июль"
         ]
       },
       "verb_type": null,
@@ -5584,6 +6130,9 @@
       "meanings": {
         "en": [
           "August"
+        ],
+        "ru": [
+          "август"
         ]
       },
       "verb_type": null,
@@ -5616,6 +6165,9 @@
       "meanings": {
         "en": [
           "September"
+        ],
+        "ru": [
+          "сентябрь"
         ]
       },
       "verb_type": null,
@@ -5648,6 +6200,9 @@
       "meanings": {
         "en": [
           "October"
+        ],
+        "ru": [
+          "октябрь"
         ]
       },
       "verb_type": null,
@@ -5680,6 +6235,9 @@
       "meanings": {
         "en": [
           "November"
+        ],
+        "ru": [
+          "ноябрь"
         ]
       },
       "verb_type": null,
@@ -5712,6 +6270,9 @@
       "meanings": {
         "en": [
           "December"
+        ],
+        "ru": [
+          "декабрь"
         ]
       },
       "verb_type": null,
@@ -5744,6 +6305,9 @@
       "meanings": {
         "en": [
           "school"
+        ],
+        "ru": [
+          "школа"
         ]
       },
       "verb_type": null,
@@ -5776,6 +6340,9 @@
       "meanings": {
         "en": [
           "corner"
+        ],
+        "ru": [
+          "угол"
         ]
       },
       "verb_type": null,
@@ -5808,6 +6375,9 @@
       "meanings": {
         "en": [
           "my wife"
+        ],
+        "ru": [
+          "моя жена"
         ]
       },
       "verb_type": null,
@@ -5840,6 +6410,10 @@
       "meanings": {
         "en": [
           "bag"
+        ],
+        "ru": [
+          "сумка",
+          "портфель"
         ]
       },
       "verb_type": null,
@@ -5872,6 +6446,9 @@
       "meanings": {
         "en": [
           "vase"
+        ],
+        "ru": [
+          "ваза"
         ]
       },
       "verb_type": null,
@@ -5904,6 +6481,9 @@
       "meanings": {
         "en": [
           "to put on a hat"
+        ],
+        "ru": [
+          "надевать (головной убор)"
         ]
       },
       "verb_type": "Godan",
@@ -5947,6 +6527,9 @@
       "meanings": {
         "en": [
           "paper"
+        ],
+        "ru": [
+          "бумага"
         ]
       },
       "verb_type": null,
@@ -5979,6 +6562,10 @@
       "meanings": {
         "en": [
           "camera"
+        ],
+        "ru": [
+          "фотоаппарат",
+          "камера"
         ]
       },
       "verb_type": null,
@@ -6011,6 +6598,9 @@
       "meanings": {
         "en": [
           "Tuesday"
+        ],
+        "ru": [
+          "вторник"
         ]
       },
       "verb_type": null,
@@ -6043,6 +6633,9 @@
       "meanings": {
         "en": [
           "hot, spicy"
+        ],
+        "ru": [
+          "острый (о вкусе)"
         ]
       },
       "verb_type": null,
@@ -6076,6 +6669,9 @@
       "meanings": {
         "en": [
           "body"
+        ],
+        "ru": [
+          "тело"
         ]
       },
       "verb_type": null,
@@ -6108,6 +6704,10 @@
       "meanings": {
         "en": [
           "to borrow"
+        ],
+        "ru": [
+          "брать взаймы",
+          "одалживать у кого-либо"
         ]
       },
       "verb_type": "Ichidan",
@@ -6141,6 +6741,9 @@
       "meanings": {
         "en": [
           "3rd person wants to"
+        ],
+        "ru": [
+          "хочет (о третьем лице)"
         ]
       },
       "verb_type": null,
@@ -6169,6 +6772,9 @@
       "meanings": {
         "en": [
           "light (not heavy)"
+        ],
+        "ru": [
+          "лёгкий (по весу)"
         ]
       },
       "verb_type": null,
@@ -6202,6 +6808,9 @@
       "meanings": {
         "en": [
           "calendar"
+        ],
+        "ru": [
+          "календарь"
         ]
       },
       "verb_type": null,
@@ -6234,6 +6843,9 @@
       "meanings": {
         "en": [
           "river"
+        ],
+        "ru": [
+          "река"
         ]
       },
       "verb_type": null,
@@ -6266,6 +6878,9 @@
       "meanings": {
         "en": [
           "~side"
+        ],
+        "ru": [
+          "сторона"
         ]
       },
       "verb_type": null,
@@ -6294,6 +6909,10 @@
       "meanings": {
         "en": [
           "cute, pretty"
+        ],
+        "ru": [
+          "милый",
+          "симпатичный"
         ]
       },
       "verb_type": null,
@@ -6327,6 +6946,10 @@
       "meanings": {
         "en": [
           "Kanji character"
+        ],
+        "ru": [
+          "кандзи",
+          "иероглиф"
         ]
       },
       "verb_type": null,
@@ -6359,6 +6982,9 @@
       "meanings": {
         "en": [
           "tree"
+        ],
+        "ru": [
+          "дерево"
         ]
       },
       "verb_type": null,
@@ -6391,6 +7017,9 @@
       "meanings": {
         "en": [
           "yellow"
+        ],
+        "ru": [
+          "жёлтый"
         ]
       },
       "verb_type": null,
@@ -6424,6 +7053,10 @@
       "meanings": {
         "en": [
           "to go out, to vanish"
+        ],
+        "ru": [
+          "гаснуть",
+          "исчезать"
         ]
       },
       "verb_type": "Ichidan",
@@ -6457,6 +7090,11 @@
       "meanings": {
         "en": [
           "to hear, to listen, to ask"
+        ],
+        "ru": [
+          "слышать",
+          "слушать",
+          "спрашивать"
         ]
       },
       "verb_type": null,
@@ -6487,6 +7125,9 @@
       "meanings": {
         "en": [
           "north"
+        ],
+        "ru": [
+          "север"
         ]
       },
       "verb_type": null,
@@ -6519,6 +7160,9 @@
       "meanings": {
         "en": [
           "guitar"
+        ],
+        "ru": [
+          "гитара"
         ]
       },
       "verb_type": null,
@@ -6551,6 +7195,9 @@
       "meanings": {
         "en": [
           "dirty"
+        ],
+        "ru": [
+          "грязный"
         ]
       },
       "verb_type": null,
@@ -6584,6 +7231,10 @@
       "meanings": {
         "en": [
           "coffee shop"
+        ],
+        "ru": [
+          "кафе",
+          "кофейня"
         ]
       },
       "verb_type": null,
@@ -6616,6 +7267,9 @@
       "meanings": {
         "en": [
           "stamp"
+        ],
+        "ru": [
+          "почтовая марка"
         ]
       },
       "verb_type": null,
@@ -6648,6 +7302,9 @@
       "meanings": {
         "en": [
           "ticket"
+        ],
+        "ru": [
+          "билет"
         ]
       },
       "verb_type": null,
@@ -6680,6 +7337,9 @@
       "meanings": {
         "en": [
           "yesterday"
+        ],
+        "ru": [
+          "вчера"
         ]
       },
       "verb_type": null,
@@ -6712,6 +7372,9 @@
       "meanings": {
         "en": [
           "nine"
+        ],
+        "ru": [
+          "девять"
         ]
       },
       "verb_type": null,
@@ -6753,6 +7416,9 @@
       "meanings": {
         "en": [
           "beef"
+        ],
+        "ru": [
+          "говядина"
         ]
       },
       "verb_type": null,
@@ -6785,6 +7451,9 @@
       "meanings": {
         "en": [
           "milk"
+        ],
+        "ru": [
+          "молоко"
         ]
       },
       "verb_type": null,
@@ -6817,6 +7486,9 @@
       "meanings": {
         "en": [
           "today"
+        ],
+        "ru": [
+          "сегодня"
         ]
       },
       "verb_type": null,
@@ -6849,6 +7521,10 @@
       "meanings": {
         "en": [
           "class room"
+        ],
+        "ru": [
+          "класс",
+          "учебная аудитория"
         ]
       },
       "verb_type": null,
@@ -6881,6 +7557,9 @@
       "meanings": {
         "en": [
           "siblings"
+        ],
+        "ru": [
+          "братья и сёстры"
         ]
       },
       "verb_type": null,
@@ -6913,6 +7592,9 @@
       "meanings": {
         "en": [
           "last year"
+        ],
+        "ru": [
+          "прошлый год"
         ]
       },
       "verb_type": null,
@@ -6945,6 +7627,10 @@
       "meanings": {
         "en": [
           "unpleasant, not likable"
+        ],
+        "ru": [
+          "нелюбимый",
+          "не нравиться"
         ]
       },
       "verb_type": null,
@@ -6975,6 +7661,9 @@
       "meanings": {
         "en": [
           "to cut"
+        ],
+        "ru": [
+          "резать"
         ]
       },
       "verb_type": "Godan",
@@ -7008,6 +7697,10 @@
       "meanings": {
         "en": [
           "to wear, to put on"
+        ],
+        "ru": [
+          "надевать",
+          "носить (одежду)"
         ]
       },
       "verb_type": "Ichidan",
@@ -7051,6 +7744,10 @@
       "meanings": {
         "en": [
           "to come"
+        ],
+        "ru": [
+          "приходить",
+          "приезжать"
         ]
       },
       "verb_type": "Irregular",
@@ -7084,6 +7781,10 @@
       "meanings": {
         "en": [
           "beautiful, clean"
+        ],
+        "ru": [
+          "красивый",
+          "чистый"
         ]
       },
       "verb_type": null,
@@ -7114,6 +7815,9 @@
       "meanings": {
         "en": [
           "kg"
+        ],
+        "ru": [
+          "килограмм"
         ]
       },
       "verb_type": null,
@@ -7146,6 +7850,9 @@
       "meanings": {
         "en": [
           "km"
+        ],
+        "ru": [
+          "километр"
         ]
       },
       "verb_type": null,
@@ -7178,6 +7885,9 @@
       "meanings": {
         "en": [
           "bank"
+        ],
+        "ru": [
+          "банк"
         ]
       },
       "verb_type": null,
@@ -7210,6 +7920,9 @@
       "meanings": {
         "en": [
           "Friday"
+        ],
+        "ru": [
+          "пятница"
         ]
       },
       "verb_type": null,
@@ -7242,6 +7955,9 @@
       "meanings": {
         "en": [
           "nine"
+        ],
+        "ru": [
+          "девять"
         ]
       },
       "verb_type": null,
@@ -7283,6 +7999,9 @@
       "meanings": {
         "en": [
           "medicine"
+        ],
+        "ru": [
+          "лекарство"
         ]
       },
       "verb_type": null,
@@ -7315,6 +8034,9 @@
       "meanings": {
         "en": [
           "give me…"
+        ],
+        "ru": [
+          "дайте, пожалуйста"
         ]
       },
       "verb_type": null,
@@ -7343,6 +8065,9 @@
       "meanings": {
         "en": [
           "fruit"
+        ],
+        "ru": [
+          "фрукты"
         ]
       },
       "verb_type": null,
@@ -7375,6 +8100,9 @@
       "meanings": {
         "en": [
           "mouth"
+        ],
+        "ru": [
+          "рот"
         ]
       },
       "verb_type": null,
@@ -7407,6 +8135,10 @@
       "meanings": {
         "en": [
           "shoe"
+        ],
+        "ru": [
+          "обувь",
+          "ботинок"
         ]
       },
       "verb_type": null,
@@ -7439,6 +8171,9 @@
       "meanings": {
         "en": [
           "socks"
+        ],
+        "ru": [
+          "носки"
         ]
       },
       "verb_type": null,
@@ -7471,6 +8206,9 @@
       "meanings": {
         "en": [
           "country"
+        ],
+        "ru": [
+          "страна"
         ]
       },
       "verb_type": null,
@@ -7503,6 +8241,10 @@
       "meanings": {
         "en": [
           "cloudy weather"
+        ],
+        "ru": [
+          "облачная погода",
+          "облачность"
         ]
       },
       "verb_type": null,
@@ -7535,6 +8277,9 @@
       "meanings": {
         "en": [
           "dark"
+        ],
+        "ru": [
+          "тёмный"
         ]
       },
       "verb_type": null,
@@ -7568,6 +8313,10 @@
       "meanings": {
         "en": [
           "about"
+        ],
+        "ru": [
+          "примерно",
+          "около (о количестве)"
         ]
       },
       "verb_type": null,
@@ -7596,6 +8345,10 @@
       "meanings": {
         "en": [
           "class"
+        ],
+        "ru": [
+          "класс",
+          "учебная группа"
         ]
       },
       "verb_type": null,
@@ -7628,6 +8381,9 @@
       "meanings": {
         "en": [
           "gram"
+        ],
+        "ru": [
+          "грамм"
         ]
       },
       "verb_type": null,
@@ -7660,6 +8416,10 @@
       "meanings": {
         "en": [
           "car"
+        ],
+        "ru": [
+          "машина",
+          "автомобиль"
         ]
       },
       "verb_type": null,
@@ -7692,6 +8452,9 @@
       "meanings": {
         "en": [
           "black"
+        ],
+        "ru": [
+          "чёрный"
         ]
       },
       "verb_type": null,
@@ -7725,6 +8488,9 @@
       "meanings": {
         "en": [
           "this morning"
+        ],
+        "ru": [
+          "сегодня утром"
         ]
       },
       "verb_type": null,
@@ -7757,6 +8523,10 @@
       "meanings": {
         "en": [
           "to turn off, switch off"
+        ],
+        "ru": [
+          "выключать",
+          "гасить"
         ]
       },
       "verb_type": null,
@@ -7787,6 +8557,10 @@
       "meanings": {
         "en": [
           "fine, all right"
+        ],
+        "ru": [
+          "хорошо",
+          "вполне достаточно"
         ]
       },
       "verb_type": null,
@@ -7815,6 +8589,10 @@
       "meanings": {
         "en": [
           "marriage"
+        ],
+        "ru": [
+          "брак",
+          "свадьба"
         ]
       },
       "verb_type": null,
@@ -7847,6 +8625,9 @@
       "meanings": {
         "en": [
           "Monday"
+        ],
+        "ru": [
+          "понедельник"
         ]
       },
       "verb_type": null,
@@ -7879,6 +8660,10 @@
       "meanings": {
         "en": [
           "entrance of a house"
+        ],
+        "ru": [
+          "прихожая",
+          "вход в дом"
         ]
       },
       "verb_type": null,
@@ -7911,6 +8696,11 @@
       "meanings": {
         "en": [
           "vigor, health, vitality"
+        ],
+        "ru": [
+          "бодрый",
+          "здоровый",
+          "полный сил"
         ]
       },
       "verb_type": null,
@@ -7945,6 +8735,9 @@
       "meanings": {
         "en": [
           "counter for small objects"
+        ],
+        "ru": [
+          "счётный суффикс для небольших предметов"
         ]
       },
       "verb_type": null,
@@ -7973,6 +8766,9 @@
       "meanings": {
         "en": [
           "five"
+        ],
+        "ru": [
+          "пять"
         ]
       },
       "verb_type": null,
@@ -8010,6 +8806,9 @@
       "meanings": {
         "en": [
           "~ language"
+        ],
+        "ru": [
+          "язык (суффикс названия языка)"
         ]
       },
       "verb_type": null,
@@ -8038,6 +8837,10 @@
       "meanings": {
         "en": [
           "park, large garden"
+        ],
+        "ru": [
+          "парк",
+          "большой сад"
         ]
       },
       "verb_type": null,
@@ -8070,6 +8873,9 @@
       "meanings": {
         "en": [
           "police box"
+        ],
+        "ru": [
+          "полицейский пост"
         ]
       },
       "verb_type": null,
@@ -8102,6 +8908,9 @@
       "meanings": {
         "en": [
           "voice"
+        ],
+        "ru": [
+          "голос"
         ]
       },
       "verb_type": null,
@@ -8134,6 +8943,9 @@
       "meanings": {
         "en": [
           "coat"
+        ],
+        "ru": [
+          "пальто"
         ]
       },
       "verb_type": null,
@@ -8166,6 +8978,9 @@
       "meanings": {
         "en": [
           "here"
+        ],
+        "ru": [
+          "здесь"
         ]
       },
       "verb_type": null,
@@ -8194,6 +9009,10 @@
       "meanings": {
         "en": [
           "afternoon"
+        ],
+        "ru": [
+          "после полудня",
+          "вторая половина дня"
         ]
       },
       "verb_type": null,
@@ -8226,6 +9045,10 @@
       "meanings": {
         "en": [
           "9th day of a month, 9 days"
+        ],
+        "ru": [
+          "девятое число месяца",
+          "девять дней"
         ]
       },
       "verb_type": null,
@@ -8258,6 +9081,9 @@
       "meanings": {
         "en": [
           "nine"
+        ],
+        "ru": [
+          "девять (предметов)"
         ]
       },
       "verb_type": null,
@@ -8295,6 +9121,9 @@
       "meanings": {
         "en": [
           "someone else's husband"
+        ],
+        "ru": [
+          "муж (другого человека)"
         ]
       },
       "verb_type": null,
@@ -8327,6 +9156,10 @@
       "meanings": {
         "en": [
           "morning, a.m."
+        ],
+        "ru": [
+          "до полудня",
+          "первая половина дня"
         ]
       },
       "verb_type": null,
@@ -8359,6 +9192,9 @@
       "meanings": {
         "en": [
           "to answer"
+        ],
+        "ru": [
+          "отвечать"
         ]
       },
       "verb_type": "Ichidan",
@@ -8392,6 +9228,10 @@
       "meanings": {
         "en": [
           "this side, this place"
+        ],
+        "ru": [
+          "эта сторона",
+          "здесь (вежливо)"
         ]
       },
       "verb_type": null,
@@ -8420,6 +9260,10 @@
       "meanings": {
         "en": [
           "cup, glass"
+        ],
+        "ru": [
+          "стакан",
+          "чашка"
         ]
       },
       "verb_type": null,
@@ -8452,6 +9296,9 @@
       "meanings": {
         "en": [
           "this year"
+        ],
+        "ru": [
+          "этот год"
         ]
       },
       "verb_type": null,
@@ -8484,6 +9331,11 @@
       "meanings": {
         "en": [
           "phrase, language"
+        ],
+        "ru": [
+          "слово",
+          "выражение",
+          "язык"
         ]
       },
       "verb_type": null,
@@ -8516,6 +9368,9 @@
       "meanings": {
         "en": [
           "child"
+        ],
+        "ru": [
+          "ребёнок"
         ]
       },
       "verb_type": null,
@@ -8548,6 +9403,9 @@
       "meanings": {
         "en": [
           "this…"
+        ],
+        "ru": [
+          "этот (перед существительным)"
         ]
       },
       "verb_type": null,
@@ -8576,6 +9434,10 @@
       "meanings": {
         "en": [
           "meal, cooked rice"
+        ],
+        "ru": [
+          "еда",
+          "варёный рис"
         ]
       },
       "verb_type": null,
@@ -8608,6 +9470,10 @@
       "meanings": {
         "en": [
           "to be in trouble"
+        ],
+        "ru": [
+          "оказаться в затруднении",
+          "испытывать трудности"
         ]
       },
       "verb_type": "Godan",
@@ -8641,6 +9507,10 @@
       "meanings": {
         "en": [
           "this"
+        ],
+        "ru": [
+          "это",
+          "этот предмет"
         ]
       },
       "verb_type": null,
@@ -8669,6 +9539,9 @@
       "meanings": {
         "en": [
           "around…"
+        ],
+        "ru": [
+          "около (о времени)"
         ]
       },
       "verb_type": null,
@@ -8697,6 +9570,9 @@
       "meanings": {
         "en": [
           "this month"
+        ],
+        "ru": [
+          "этот месяц"
         ]
       },
       "verb_type": null,
@@ -8729,6 +9605,9 @@
       "meanings": {
         "en": [
           "this week"
+        ],
+        "ru": [
+          "эта неделя"
         ]
       },
       "verb_type": null,
@@ -8761,6 +9640,10 @@
       "meanings": {
         "en": [
           "this sort of, this kind of"
+        ],
+        "ru": [
+          "такой",
+          "такого рода"
         ]
       },
       "verb_type": null,
@@ -8789,6 +9672,9 @@
       "meanings": {
         "en": [
           "this evening"
+        ],
+        "ru": [
+          "сегодня вечером"
         ]
       },
       "verb_type": null,
@@ -8821,6 +9707,10 @@
       "meanings": {
         "en": [
           "well…"
+        ],
+        "ru": [
+          "ну…",
+          "ну же"
         ]
       },
       "verb_type": null,
@@ -8849,6 +9739,9 @@
       "meanings": {
         "en": [
           "years old"
+        ],
+        "ru": [
+          "лет (о возрасте)"
         ]
       },
       "verb_type": null,
@@ -8877,6 +9770,9 @@
       "meanings": {
         "en": [
           "fish"
+        ],
+        "ru": [
+          "рыба"
         ]
       },
       "verb_type": null,
@@ -8909,6 +9805,11 @@
       "meanings": {
         "en": [
           "earlier, former"
+        ],
+        "ru": [
+          "раньше",
+          "прежде",
+          "впереди"
         ]
       },
       "verb_type": null,
@@ -8941,6 +9842,10 @@
       "meanings": {
         "en": [
           "to blossom"
+        ],
+        "ru": [
+          "цвести",
+          "распускаться"
         ]
       },
       "verb_type": "Godan",
@@ -8974,6 +9879,9 @@
       "meanings": {
         "en": [
           "composition"
+        ],
+        "ru": [
+          "сочинение"
         ]
       },
       "verb_type": null,
@@ -9006,6 +9914,9 @@
       "meanings": {
         "en": [
           "to open an umbrella"
+        ],
+        "ru": [
+          "раскрывать зонт"
         ]
       },
       "verb_type": "Godan",
@@ -9039,6 +9950,9 @@
       "meanings": {
         "en": [
           "counter for books"
+        ],
+        "ru": [
+          "счётный суффикс для книг"
         ]
       },
       "verb_type": null,
@@ -9067,6 +9981,9 @@
       "meanings": {
         "en": [
           "magazine"
+        ],
+        "ru": [
+          "журнал"
         ]
       },
       "verb_type": null,
@@ -9099,6 +10016,9 @@
       "meanings": {
         "en": [
           "sugar"
+        ],
+        "ru": [
+          "сахар"
         ]
       },
       "verb_type": null,
@@ -9131,6 +10051,9 @@
       "meanings": {
         "en": [
           "cold"
+        ],
+        "ru": [
+          "холодный (о погоде)"
         ]
       },
       "verb_type": null,
@@ -9170,6 +10093,10 @@
       "meanings": {
         "en": [
           "the year after next year"
+        ],
+        "ru": [
+          "через два года",
+          "год после следующего"
         ]
       },
       "verb_type": null,
@@ -9202,6 +10129,9 @@
       "meanings": {
         "en": [
           "three"
+        ],
+        "ru": [
+          "три"
         ]
       },
       "verb_type": null,
@@ -9239,6 +10169,11 @@
       "meanings": {
         "en": [
           "Mr., Mrs."
+        ],
+        "ru": [
+          "господин",
+          "госпожа",
+          "вежливый суффикс после имени"
         ]
       },
       "verb_type": null,
@@ -9267,6 +10202,9 @@
       "meanings": {
         "en": [
           "to take a walk"
+        ],
+        "ru": [
+          "прогулка"
         ]
       },
       "verb_type": null,
@@ -9299,6 +10237,9 @@
       "meanings": {
         "en": [
           "four"
+        ],
+        "ru": [
+          "четыре"
         ]
       },
       "verb_type": null,
@@ -9336,6 +10277,9 @@
       "meanings": {
         "en": [
           "o'clock"
+        ],
+        "ru": [
+          "часов (время суток)"
         ]
       },
       "verb_type": null,
@@ -9364,6 +10308,9 @@
       "meanings": {
         "en": [
           "salt"
+        ],
+        "ru": [
+          "соль"
         ]
       },
       "verb_type": null,
@@ -9396,6 +10343,10 @@
       "meanings": {
         "en": [
           "however, but"
+        ],
+        "ru": [
+          "однако",
+          "но"
         ]
       },
       "verb_type": null,
@@ -9424,6 +10375,9 @@
       "meanings": {
         "en": [
           "time"
+        ],
+        "ru": [
+          "время"
         ]
       },
       "verb_type": null,
@@ -9456,6 +10410,9 @@
       "meanings": {
         "en": [
           "~hours (classificator)"
+        ],
+        "ru": [
+          "часов (длительность)"
         ]
       },
       "verb_type": null,
@@ -9484,6 +10441,9 @@
       "meanings": {
         "en": [
           "work"
+        ],
+        "ru": [
+          "работа"
         ]
       },
       "verb_type": null,
@@ -9516,6 +10476,9 @@
       "meanings": {
         "en": [
           "dictionary"
+        ],
+        "ru": [
+          "словарь"
         ]
       },
       "verb_type": null,
@@ -9561,6 +10524,10 @@
       "meanings": {
         "en": [
           "quiet"
+        ],
+        "ru": [
+          "тихий",
+          "спокойный"
         ]
       },
       "verb_type": null,
@@ -9594,6 +10561,11 @@
       "meanings": {
         "en": [
           "under, below"
+        ],
+        "ru": [
+          "внизу",
+          "под",
+          "низ"
         ]
       },
       "verb_type": null,
@@ -9626,6 +10598,9 @@
       "meanings": {
         "en": [
           "question"
+        ],
+        "ru": [
+          "вопрос"
         ]
       },
       "verb_type": null,
@@ -9658,6 +10633,9 @@
       "meanings": {
         "en": [
           "bicycle"
+        ],
+        "ru": [
+          "велосипед"
         ]
       },
       "verb_type": null,
@@ -9690,6 +10668,10 @@
       "meanings": {
         "en": [
           "car, vehicle"
+        ],
+        "ru": [
+          "автомобиль",
+          "транспортное средство"
         ]
       },
       "verb_type": null,
@@ -9722,6 +10704,9 @@
       "meanings": {
         "en": [
           "to die, to pas away"
+        ],
+        "ru": [
+          "умирать"
         ]
       },
       "verb_type": null,
@@ -9752,6 +10737,9 @@
       "meanings": {
         "en": [
           "dictionary"
+        ],
+        "ru": [
+          "словарь"
         ]
       },
       "verb_type": null,
@@ -9797,6 +10785,10 @@
       "meanings": {
         "en": [
           "oneself"
+        ],
+        "ru": [
+          "сам",
+          "себя"
         ]
       },
       "verb_type": null,
@@ -9825,6 +10817,9 @@
       "meanings": {
         "en": [
           "to close"
+        ],
+        "ru": [
+          "закрываться"
         ]
       },
       "verb_type": "Godan",
@@ -9867,6 +10862,9 @@
       "meanings": {
         "en": [
           "to close"
+        ],
+        "ru": [
+          "закрывать"
         ]
       },
       "verb_type": "Ichidan",
@@ -9909,6 +10907,9 @@
       "meanings": {
         "en": [
           "to fasten a seatbelt"
+        ],
+        "ru": [
+          "застёгивать (ремень безопасности)"
         ]
       },
       "verb_type": null,
@@ -9939,6 +10940,10 @@
       "meanings": {
         "en": [
           "well, then"
+        ],
+        "ru": [
+          "ну тогда",
+          "тогда (разговорное)"
         ]
       },
       "verb_type": null,
@@ -9976,6 +10981,9 @@
       "meanings": {
         "en": [
           "photo"
+        ],
+        "ru": [
+          "фотография"
         ]
       },
       "verb_type": null,
@@ -10008,6 +11016,9 @@
       "meanings": {
         "en": [
           "shirt"
+        ],
+        "ru": [
+          "рубашка"
         ]
       },
       "verb_type": null,
@@ -10040,6 +11051,9 @@
       "meanings": {
         "en": [
           "ten"
+        ],
+        "ru": [
+          "десять"
         ]
       },
       "verb_type": null,
@@ -10081,6 +11095,10 @@
       "meanings": {
         "en": [
           "… weeks"
+        ],
+        "ru": [
+          "недель",
+          "счётный суффикс недель"
         ]
       },
       "verb_type": null,
@@ -10109,6 +11127,10 @@
       "meanings": {
         "en": [
           "lesson, class"
+        ],
+        "ru": [
+          "урок",
+          "занятие"
         ]
       },
       "verb_type": null,
@@ -10141,6 +11163,9 @@
       "meanings": {
         "en": [
           "homework"
+        ],
+        "ru": [
+          "домашнее задание"
         ]
       },
       "verb_type": null,
@@ -10173,6 +11198,10 @@
       "meanings": {
         "en": [
           "to be good at something"
+        ],
+        "ru": [
+          "умелый",
+          "хорошо уметь"
         ]
       },
       "verb_type": null,
@@ -10203,6 +11232,10 @@
       "meanings": {
         "en": [
           "to be strong, durable"
+        ],
+        "ru": [
+          "прочный",
+          "крепкий"
         ]
       },
       "verb_type": null,
@@ -10233,6 +11266,9 @@
       "meanings": {
         "en": [
           "soy sauce"
+        ],
+        "ru": [
+          "соевый соус"
         ]
       },
       "verb_type": null,
@@ -10265,6 +11301,9 @@
       "meanings": {
         "en": [
           "dining room, canteen"
+        ],
+        "ru": [
+          "столовая"
         ]
       },
       "verb_type": null,
@@ -10297,6 +11336,9 @@
       "meanings": {
         "en": [
           "to know"
+        ],
+        "ru": [
+          "знать"
         ]
       },
       "verb_type": "Godan",
@@ -10330,6 +11372,9 @@
       "meanings": {
         "en": [
           "white"
+        ],
+        "ru": [
+          "белый"
         ]
       },
       "verb_type": null,
@@ -10363,6 +11408,9 @@
       "meanings": {
         "en": [
           "~an, ~ese (nationality)"
+        ],
+        "ru": [
+          "суффикс национальности"
         ]
       },
       "verb_type": null,
@@ -10391,6 +11439,9 @@
       "meanings": {
         "en": [
           "newspaper"
+        ],
+        "ru": [
+          "газета"
         ]
       },
       "verb_type": null,
@@ -10423,6 +11474,9 @@
       "meanings": {
         "en": [
           "Wednesday"
+        ],
+        "ru": [
+          "среда"
         ]
       },
       "verb_type": null,
@@ -10455,6 +11509,10 @@
       "meanings": {
         "en": [
           "to breathe, to smoke"
+        ],
+        "ru": [
+          "вдыхать",
+          "курить"
         ]
       },
       "verb_type": "Godan",
@@ -10488,6 +11546,9 @@
       "meanings": {
         "en": [
           "skirt"
+        ],
+        "ru": [
+          "юбка"
         ]
       },
       "verb_type": null,
@@ -10520,6 +11581,10 @@
       "meanings": {
         "en": [
           "to like"
+        ],
+        "ru": [
+          "любимый",
+          "нравиться"
         ]
       },
       "verb_type": null,
@@ -10550,6 +11615,10 @@
       "meanings": {
         "en": [
           "past, over"
+        ],
+        "ru": [
+          "после",
+          "сверх"
         ]
       },
       "verb_type": null,
@@ -10578,6 +11647,10 @@
       "meanings": {
         "en": [
           "at once"
+        ],
+        "ru": [
+          "сразу",
+          "немедленно"
         ]
       },
       "verb_type": null,
@@ -10606,6 +11679,9 @@
       "meanings": {
         "en": [
           "a little"
+        ],
+        "ru": [
+          "немного"
         ]
       },
       "verb_type": null,
@@ -10647,6 +11723,9 @@
       "meanings": {
         "en": [
           "cool"
+        ],
+        "ru": [
+          "прохладный"
         ]
       },
       "verb_type": null,
@@ -10680,6 +11759,10 @@
       "meanings": {
         "en": [
           "each"
+        ],
+        "ru": [
+          "по",
+          "каждому поровну"
         ]
       },
       "verb_type": null,
@@ -10708,6 +11791,10 @@
       "meanings": {
         "en": [
           "stove, heater"
+        ],
+        "ru": [
+          "печь",
+          "обогреватель"
         ]
       },
       "verb_type": null,
@@ -10740,6 +11827,9 @@
       "meanings": {
         "en": [
           "spoon"
+        ],
+        "ru": [
+          "ложка"
         ]
       },
       "verb_type": null,
@@ -10772,6 +11862,9 @@
       "meanings": {
         "en": [
           "sports"
+        ],
+        "ru": [
+          "спорт"
         ]
       },
       "verb_type": null,
@@ -10804,6 +11897,9 @@
       "meanings": {
         "en": [
           "trousers"
+        ],
+        "ru": [
+          "брюки"
         ]
       },
       "verb_type": null,
@@ -10836,6 +11932,10 @@
       "meanings": {
         "en": [
           "to live, to reside somewhere"
+        ],
+        "ru": [
+          "жить",
+          "проживать"
         ]
       },
       "verb_type": "Godan",
@@ -10869,6 +11969,9 @@
       "meanings": {
         "en": [
           "slipper"
+        ],
+        "ru": [
+          "тапочки"
         ]
       },
       "verb_type": null,
@@ -10901,6 +12004,9 @@
       "meanings": {
         "en": [
           "to do"
+        ],
+        "ru": [
+          "делать"
         ]
       },
       "verb_type": "Irregular",
@@ -10943,6 +12049,10 @@
       "meanings": {
         "en": [
           "to sit"
+        ],
+        "ru": [
+          "сидеть",
+          "садиться"
         ]
       },
       "verb_type": "Godan",
@@ -10976,6 +12086,9 @@
       "meanings": {
         "en": [
           "height"
+        ],
+        "ru": [
+          "рост"
         ]
       },
       "verb_type": null,
@@ -11008,6 +12121,9 @@
       "meanings": {
         "en": [
           "student"
+        ],
+        "ru": [
+          "ученик"
         ]
       },
       "verb_type": null,
@@ -11049,6 +12165,9 @@
       "meanings": {
         "en": [
           "sweater"
+        ],
+        "ru": [
+          "свитер"
         ]
       },
       "verb_type": null,
@@ -11081,6 +12200,9 @@
       "meanings": {
         "en": [
           "soap"
+        ],
+        "ru": [
+          "мыло"
         ]
       },
       "verb_type": null,
@@ -11113,6 +12235,10 @@
       "meanings": {
         "en": [
           "jacket, suit"
+        ],
+        "ru": [
+          "мужской костюм",
+          "пиджак"
         ]
       },
       "verb_type": null,
@@ -11145,6 +12271,10 @@
       "meanings": {
         "en": [
           "narrow"
+        ],
+        "ru": [
+          "узкий",
+          "тесный"
         ]
       },
       "verb_type": null,
@@ -11178,6 +12308,9 @@
       "meanings": {
         "en": [
           "zero"
+        ],
+        "ru": [
+          "ноль"
         ]
       },
       "verb_type": null,
@@ -11219,6 +12352,9 @@
       "meanings": {
         "en": [
           "1,000, thousand"
+        ],
+        "ru": [
+          "тысяча"
         ]
       },
       "verb_type": null,
@@ -11247,6 +12383,9 @@
       "meanings": {
         "en": [
           "last month"
+        ],
+        "ru": [
+          "прошлый месяц"
         ]
       },
       "verb_type": null,
@@ -11279,6 +12418,9 @@
       "meanings": {
         "en": [
           "last week"
+        ],
+        "ru": [
+          "прошлая неделя"
         ]
       },
       "verb_type": null,
@@ -11311,6 +12453,10 @@
       "meanings": {
         "en": [
           "teacher"
+        ],
+        "ru": [
+          "учитель",
+          "преподаватель"
         ]
       },
       "verb_type": null,
@@ -11343,6 +12489,9 @@
       "meanings": {
         "en": [
           "washing, to wash"
+        ],
+        "ru": [
+          "стирка"
         ]
       },
       "verb_type": null,
@@ -11375,6 +12524,10 @@
       "meanings": {
         "en": [
           "all"
+        ],
+        "ru": [
+          "всё",
+          "целиком"
         ]
       },
       "verb_type": null,
@@ -11403,6 +12556,9 @@
       "meanings": {
         "en": [
           "so"
+        ],
+        "ru": [
+          "так"
         ]
       },
       "verb_type": null,
@@ -11431,6 +12587,9 @@
       "meanings": {
         "en": [
           "to clean"
+        ],
+        "ru": [
+          "уборка"
         ]
       },
       "verb_type": null,
@@ -11463,6 +12622,9 @@
       "meanings": {
         "en": [
           "and then"
+        ],
+        "ru": [
+          "и затем"
         ]
       },
       "verb_type": null,
@@ -11491,6 +12653,9 @@
       "meanings": {
         "en": [
           "there"
+        ],
+        "ru": [
+          "там"
         ]
       },
       "verb_type": null,
@@ -11519,6 +12684,10 @@
       "meanings": {
         "en": [
           "there (polite)"
+        ],
+        "ru": [
+          "там",
+          "в той стороне (вежливо)"
         ]
       },
       "verb_type": null,
@@ -11547,6 +12716,10 @@
       "meanings": {
         "en": [
           "outside"
+        ],
+        "ru": [
+          "снаружи",
+          "улица"
         ]
       },
       "verb_type": null,
@@ -11579,6 +12752,10 @@
       "meanings": {
         "en": [
           "that…"
+        ],
+        "ru": [
+          "тот",
+          "этот (рядом с собеседником)"
         ]
       },
       "verb_type": null,
@@ -11607,6 +12784,10 @@
       "meanings": {
         "en": [
           "next to"
+        ],
+        "ru": [
+          "рядом",
+          "возле"
         ]
       },
       "verb_type": null,
@@ -11648,6 +12829,9 @@
       "meanings": {
         "en": [
           "sky"
+        ],
+        "ru": [
+          "небо"
         ]
       },
       "verb_type": null,
@@ -11680,6 +12864,10 @@
       "meanings": {
         "en": [
           "that"
+        ],
+        "ru": [
+          "то",
+          "это (у собеседника)"
         ]
       },
       "verb_type": null,
@@ -11708,6 +12896,10 @@
       "meanings": {
         "en": [
           "after that"
+        ],
+        "ru": [
+          "после этого",
+          "затем"
         ]
       },
       "verb_type": null,
@@ -11736,6 +12928,10 @@
       "meanings": {
         "en": [
           "then, well"
+        ],
+        "ru": [
+          "тогда",
+          "ну что ж"
         ]
       },
       "verb_type": null,
@@ -11777,6 +12973,9 @@
       "meanings": {
         "en": [
           "counter for machines"
+        ],
+        "ru": [
+          "счётный суффикс машин и техники"
         ]
       },
       "verb_type": null,
@@ -11805,6 +13004,9 @@
       "meanings": {
         "en": [
           "university"
+        ],
+        "ru": [
+          "университет"
         ]
       },
       "verb_type": null,
@@ -11837,6 +13039,9 @@
       "meanings": {
         "en": [
           "embassy"
+        ],
+        "ru": [
+          "посольство"
         ]
       },
       "verb_type": null,
@@ -11869,6 +13074,10 @@
       "meanings": {
         "en": [
           "OK"
+        ],
+        "ru": [
+          "всё в порядке",
+          "безопасный"
         ]
       },
       "verb_type": null,
@@ -11899,6 +13108,10 @@
       "meanings": {
         "en": [
           "to be very fond of"
+        ],
+        "ru": [
+          "очень любимый",
+          "очень нравиться"
         ]
       },
       "verb_type": null,
@@ -11929,6 +13142,10 @@
       "meanings": {
         "en": [
           "very important"
+        ],
+        "ru": [
+          "важный",
+          "ценный"
         ]
       },
       "verb_type": null,
@@ -11959,6 +13176,10 @@
       "meanings": {
         "en": [
           "mostly, usually"
+        ],
+        "ru": [
+          "обычно",
+          "большей частью"
         ]
       },
       "verb_type": null,
@@ -11987,6 +13208,9 @@
       "meanings": {
         "en": [
           "kitchen"
+        ],
+        "ru": [
+          "кухня"
         ]
       },
       "verb_type": null,
@@ -12019,6 +13243,11 @@
       "meanings": {
         "en": [
           "very, serious"
+        ],
+        "ru": [
+          "тяжёлый",
+          "серьёзный",
+          "очень"
         ]
       },
       "verb_type": null,
@@ -12049,6 +13278,10 @@
       "meanings": {
         "en": [
           "high, expensive"
+        ],
+        "ru": [
+          "высокий",
+          "дорогой"
         ]
       },
       "verb_type": null,
@@ -12079,6 +13312,9 @@
       "meanings": {
         "en": [
           "many, much"
+        ],
+        "ru": [
+          "много"
         ]
       },
       "verb_type": null,
@@ -12116,6 +13352,9 @@
       "meanings": {
         "en": [
           "taxi"
+        ],
+        "ru": [
+          "такси"
         ]
       },
       "verb_type": null,
@@ -12148,6 +13387,10 @@
       "meanings": {
         "en": [
           "to take out, hand in"
+        ],
+        "ru": [
+          "вынимать",
+          "сдавать"
         ]
       },
       "verb_type": "Godan",
@@ -12181,6 +13424,9 @@
       "meanings": {
         "en": [
           "more than one, and others"
+        ],
+        "ru": [
+          "суффикс множественного числа людей"
         ]
       },
       "verb_type": null,
@@ -12209,6 +13455,10 @@
       "meanings": {
         "en": [
           "to stand"
+        ],
+        "ru": [
+          "стоять",
+          "вставать"
         ]
       },
       "verb_type": "Godan",
@@ -12242,6 +13492,9 @@
       "meanings": {
         "en": [
           "building"
+        ],
+        "ru": [
+          "здание"
         ]
       },
       "verb_type": null,
@@ -12274,6 +13527,10 @@
       "meanings": {
         "en": [
           "pleasant, enjoyable"
+        ],
+        "ru": [
+          "весёлый",
+          "приятный"
         ]
       },
       "verb_type": null,
@@ -12304,6 +13561,10 @@
       "meanings": {
         "en": [
           "to ask, to request"
+        ],
+        "ru": [
+          "просить",
+          "заказывать"
         ]
       },
       "verb_type": "Godan",
@@ -12337,6 +13598,10 @@
       "meanings": {
         "en": [
           "cigarette"
+        ],
+        "ru": [
+          "сигарета",
+          "табак"
         ]
       },
       "verb_type": null,
@@ -12369,6 +13634,10 @@
       "meanings": {
         "en": [
           "perhaps, probably"
+        ],
+        "ru": [
+          "наверное",
+          "возможно"
         ]
       },
       "verb_type": null,
@@ -12397,6 +13666,10 @@
       "meanings": {
         "en": [
           "food"
+        ],
+        "ru": [
+          "еда",
+          "продукты"
         ]
       },
       "verb_type": null,
@@ -12429,6 +13702,10 @@
       "meanings": {
         "en": [
           "to eat"
+        ],
+        "ru": [
+          "есть",
+          "кушать"
         ]
       },
       "verb_type": "Ichidan",
@@ -12462,6 +13739,9 @@
       "meanings": {
         "en": [
           "egg"
+        ],
+        "ru": [
+          "яйцо"
         ]
       },
       "verb_type": null,
@@ -12494,6 +13774,9 @@
       "meanings": {
         "en": [
           "who?"
+        ],
+        "ru": [
+          "кто"
         ]
       },
       "verb_type": null,
@@ -12522,6 +13805,9 @@
       "meanings": {
         "en": [
           "birthday"
+        ],
+        "ru": [
+          "день рождения"
         ]
       },
       "verb_type": null,
@@ -12554,6 +13840,9 @@
       "meanings": {
         "en": [
           "gradually"
+        ],
+        "ru": [
+          "постепенно"
         ]
       },
       "verb_type": null,
@@ -12582,6 +13871,9 @@
       "meanings": {
         "en": [
           "small"
+        ],
+        "ru": [
+          "маленький"
         ]
       },
       "verb_type": null,
@@ -12615,6 +13907,10 @@
       "meanings": {
         "en": [
           "near, close"
+        ],
+        "ru": [
+          "близкий",
+          "близко"
         ]
       },
       "verb_type": null,
@@ -12648,6 +13944,10 @@
       "meanings": {
         "en": [
           "different"
+        ],
+        "ru": [
+          "отличаться",
+          "быть неверным"
         ]
       },
       "verb_type": null,
@@ -12678,6 +13978,9 @@
       "meanings": {
         "en": [
           "subway"
+        ],
+        "ru": [
+          "метро"
         ]
       },
       "verb_type": null,
@@ -12710,6 +14013,9 @@
       "meanings": {
         "en": [
           "map"
+        ],
+        "ru": [
+          "карта"
         ]
       },
       "verb_type": null,
@@ -12742,6 +14048,9 @@
       "meanings": {
         "en": [
           "my father"
+        ],
+        "ru": [
+          "мой отец"
         ]
       },
       "verb_type": null,
@@ -12774,6 +14083,9 @@
       "meanings": {
         "en": [
           "brown"
+        ],
+        "ru": [
+          "коричневый цвет"
         ]
       },
       "verb_type": null,
@@ -12806,6 +14118,10 @@
       "meanings": {
         "en": [
           "rice bowl"
+        ],
+        "ru": [
+          "чашка для риса",
+          "пиала"
         ]
       },
       "verb_type": null,
@@ -12838,6 +14154,10 @@
       "meanings": {
         "en": [
           "in the middle of"
+        ],
+        "ru": [
+          "в течение",
+          "в середине"
         ]
       },
       "verb_type": null,
@@ -12866,6 +14186,10 @@
       "meanings": {
         "en": [
           "just"
+        ],
+        "ru": [
+          "ровно",
+          "как раз"
         ]
       },
       "verb_type": null,
@@ -12894,6 +14218,10 @@
       "meanings": {
         "en": [
           "a little"
+        ],
+        "ru": [
+          "немного",
+          "минутку"
         ]
       },
       "verb_type": null,
@@ -12935,6 +14263,9 @@
       "meanings": {
         "en": [
           "the 1st day of a month"
+        ],
+        "ru": [
+          "первое число месяца"
         ]
       },
       "verb_type": null,
@@ -12967,6 +14298,9 @@
       "meanings": {
         "en": [
           "to use"
+        ],
+        "ru": [
+          "использовать"
         ]
       },
       "verb_type": "Godan",
@@ -13000,6 +14334,9 @@
       "meanings": {
         "en": [
           "to get tired"
+        ],
+        "ru": [
+          "уставать"
         ]
       },
       "verb_type": "Ichidan",
@@ -13033,6 +14370,10 @@
       "meanings": {
         "en": [
           "next"
+        ],
+        "ru": [
+          "следующий",
+          "затем"
         ]
       },
       "verb_type": null,
@@ -13065,6 +14406,9 @@
       "meanings": {
         "en": [
           "to arrive"
+        ],
+        "ru": [
+          "прибывать"
         ]
       },
       "verb_type": "Godan",
@@ -13098,6 +14442,9 @@
       "meanings": {
         "en": [
           "table"
+        ],
+        "ru": [
+          "письменный стол"
         ]
       },
       "verb_type": null,
@@ -13139,6 +14486,10 @@
       "meanings": {
         "en": [
           "to make, to produce"
+        ],
+        "ru": [
+          "делать",
+          "создавать"
         ]
       },
       "verb_type": "Godan",
@@ -13172,6 +14523,9 @@
       "meanings": {
         "en": [
           "to turn on"
+        ],
+        "ru": [
+          "включать свет"
         ]
       },
       "verb_type": "Ichidan",
@@ -13205,6 +14559,10 @@
       "meanings": {
         "en": [
           "to work for someone"
+        ],
+        "ru": [
+          "работать в организации",
+          "служить"
         ]
       },
       "verb_type": "Ichidan",
@@ -13238,6 +14596,10 @@
       "meanings": {
         "en": [
           "uninteresting"
+        ],
+        "ru": [
+          "скучный",
+          "неинтересный"
         ]
       },
       "verb_type": null,
@@ -13268,6 +14630,9 @@
       "meanings": {
         "en": [
           "cold"
+        ],
+        "ru": [
+          "холодный (на ощупь)"
         ]
       },
       "verb_type": null,
@@ -13307,6 +14672,9 @@
       "meanings": {
         "en": [
           "strong"
+        ],
+        "ru": [
+          "сильный"
         ]
       },
       "verb_type": null,
@@ -13340,6 +14708,10 @@
       "meanings": {
         "en": [
           "hand"
+        ],
+        "ru": [
+          "рука",
+          "кисть"
         ]
       },
       "verb_type": null,
@@ -13372,6 +14744,10 @@
       "meanings": {
         "en": [
           "tape"
+        ],
+        "ru": [
+          "лента",
+          "аудиокассета"
         ]
       },
       "verb_type": null,
@@ -13404,6 +14780,9 @@
       "meanings": {
         "en": [
           "tape recorder"
+        ],
+        "ru": [
+          "магнитофон"
         ]
       },
       "verb_type": null,
@@ -13436,6 +14815,9 @@
       "meanings": {
         "en": [
           "table"
+        ],
+        "ru": [
+          "стол"
         ]
       },
       "verb_type": null,
@@ -13477,6 +14859,9 @@
       "meanings": {
         "en": [
           "to go out"
+        ],
+        "ru": [
+          "выходить из дома"
         ]
       },
       "verb_type": "Ichidan",
@@ -13510,6 +14895,9 @@
       "meanings": {
         "en": [
           "letter"
+        ],
+        "ru": [
+          "письмо"
         ]
       },
       "verb_type": null,
@@ -13542,6 +14930,11 @@
       "meanings": {
         "en": [
           "can"
+        ],
+        "ru": [
+          "мочь",
+          "уметь",
+          "получаться"
         ]
       },
       "verb_type": null,
@@ -13572,6 +14965,9 @@
       "meanings": {
         "en": [
           "exit"
+        ],
+        "ru": [
+          "выход"
         ]
       },
       "verb_type": null,
@@ -13604,6 +15000,10 @@
       "meanings": {
         "en": [
           "test"
+        ],
+        "ru": [
+          "тест",
+          "контрольная"
         ]
       },
       "verb_type": null,
@@ -13636,6 +15036,10 @@
       "meanings": {
         "en": [
           "then, well"
+        ],
+        "ru": [
+          "тогда",
+          "ну что ж"
         ]
       },
       "verb_type": null,
@@ -13677,6 +15081,9 @@
       "meanings": {
         "en": [
           "department store"
+        ],
+        "ru": [
+          "универмаг"
         ]
       },
       "verb_type": null,
@@ -13709,6 +15116,10 @@
       "meanings": {
         "en": [
           "but"
+        ],
+        "ru": [
+          "но",
+          "однако"
         ]
       },
       "verb_type": null,
@@ -13737,6 +15148,10 @@
       "meanings": {
         "en": [
           "to leave"
+        ],
+        "ru": [
+          "выходить",
+          "уходить (вежливая форма)"
         ]
       },
       "verb_type": null,
@@ -13774,6 +15189,10 @@
       "meanings": {
         "en": [
           "TV"
+        ],
+        "ru": [
+          "телевизор",
+          "телевидение"
         ]
       },
       "verb_type": null,
@@ -13806,6 +15225,9 @@
       "meanings": {
         "en": [
           "weather"
+        ],
+        "ru": [
+          "погода"
         ]
       },
       "verb_type": null,
@@ -13838,6 +15260,10 @@
       "meanings": {
         "en": [
           "electricity"
+        ],
+        "ru": [
+          "электричество",
+          "свет"
         ]
       },
       "verb_type": null,
@@ -13870,6 +15296,10 @@
       "meanings": {
         "en": [
           "train"
+        ],
+        "ru": [
+          "поезд",
+          "электричка"
         ]
       },
       "verb_type": null,
@@ -13902,6 +15332,9 @@
       "meanings": {
         "en": [
           "phone"
+        ],
+        "ru": [
+          "телефон"
         ]
       },
       "verb_type": null,
@@ -13934,6 +15367,9 @@
       "meanings": {
         "en": [
           "door"
+        ],
+        "ru": [
+          "дверь"
         ]
       },
       "verb_type": null,
@@ -13979,6 +15415,10 @@
       "meanings": {
         "en": [
           "~times, ~degree"
+        ],
+        "ru": [
+          "раз",
+          "градус"
         ]
       },
       "verb_type": null,
@@ -14007,6 +15447,9 @@
       "meanings": {
         "en": [
           "door"
+        ],
+        "ru": [
+          "дверь"
         ]
       },
       "verb_type": null,
@@ -14052,6 +15495,9 @@
       "meanings": {
         "en": [
           "toilet, lavatory"
+        ],
+        "ru": [
+          "туалет"
         ]
       },
       "verb_type": null,
@@ -14097,6 +15543,9 @@
       "meanings": {
         "en": [
           "how?"
+        ],
+        "ru": [
+          "как"
         ]
       },
       "verb_type": null,
@@ -14125,6 +15574,9 @@
       "meanings": {
         "en": [
           "why?"
+        ],
+        "ru": [
+          "почему"
         ]
       },
       "verb_type": null,
@@ -14153,6 +15605,10 @@
       "meanings": {
         "en": [
           "please, here you are"
+        ],
+        "ru": [
+          "пожалуйста",
+          "вот, возьмите"
         ]
       },
       "verb_type": null,
@@ -14181,6 +15637,9 @@
       "meanings": {
         "en": [
           "animal"
+        ],
+        "ru": [
+          "животное"
         ]
       },
       "verb_type": null,
@@ -14213,6 +15672,9 @@
       "meanings": {
         "en": [
           "thanks"
+        ],
+        "ru": [
+          "спасибо"
         ]
       },
       "verb_type": null,
@@ -14241,6 +15703,9 @@
       "meanings": {
         "en": [
           "ten"
+        ],
+        "ru": [
+          "десять"
         ]
       },
       "verb_type": null,
@@ -14282,6 +15747,10 @@
       "meanings": {
         "en": [
           "far"
+        ],
+        "ru": [
+          "далёкий",
+          "далеко"
         ]
       },
       "verb_type": null,
@@ -14315,6 +15784,10 @@
       "meanings": {
         "en": [
           "the 10th day of a month, 10 days"
+        ],
+        "ru": [
+          "десятое число месяца",
+          "десять дней"
         ]
       },
       "verb_type": null,
@@ -14347,6 +15820,9 @@
       "meanings": {
         "en": [
           "sometimes"
+        ],
+        "ru": [
+          "иногда"
         ]
       },
       "verb_type": null,
@@ -14375,6 +15851,9 @@
       "meanings": {
         "en": [
           "watch, clock"
+        ],
+        "ru": [
+          "часы"
         ]
       },
       "verb_type": null,
@@ -14407,6 +15886,9 @@
       "meanings": {
         "en": [
           "where?"
+        ],
+        "ru": [
+          "где"
         ]
       },
       "verb_type": null,
@@ -14435,6 +15917,9 @@
       "meanings": {
         "en": [
           "place"
+        ],
+        "ru": [
+          "место"
         ]
       },
       "verb_type": null,
@@ -14467,6 +15952,9 @@
       "meanings": {
         "en": [
           "library"
+        ],
+        "ru": [
+          "библиотека"
         ]
       },
       "verb_type": null,
@@ -14499,6 +15987,10 @@
       "meanings": {
         "en": [
           "which, where (polite)"
+        ],
+        "ru": [
+          "который",
+          "где (вежливо)"
         ]
       },
       "verb_type": null,
@@ -14527,6 +16019,9 @@
       "meanings": {
         "en": [
           "very much, quiet"
+        ],
+        "ru": [
+          "очень"
         ]
       },
       "verb_type": null,
@@ -14555,6 +16050,9 @@
       "meanings": {
         "en": [
           "who (polite)"
+        ],
+        "ru": [
+          "кто (вежливо)"
         ]
       },
       "verb_type": null,
@@ -14583,6 +16081,10 @@
       "meanings": {
         "en": [
           "next to"
+        ],
+        "ru": [
+          "соседний",
+          "по соседству"
         ]
       },
       "verb_type": null,
@@ -14624,6 +16126,10 @@
       "meanings": {
         "en": [
           "which?"
+        ],
+        "ru": [
+          "который",
+          "какой"
         ]
       },
       "verb_type": null,
@@ -14661,6 +16167,10 @@
       "meanings": {
         "en": [
           "to fly"
+        ],
+        "ru": [
+          "летать",
+          "прыгать"
         ]
       },
       "verb_type": "Godan",
@@ -14694,6 +16204,9 @@
       "meanings": {
         "en": [
           "to stop"
+        ],
+        "ru": [
+          "останавливаться"
         ]
       },
       "verb_type": "Godan",
@@ -14727,6 +16240,9 @@
       "meanings": {
         "en": [
           "friend"
+        ],
+        "ru": [
+          "друг"
         ]
       },
       "verb_type": null,
@@ -14759,6 +16275,9 @@
       "meanings": {
         "en": [
           "Saturday"
+        ],
+        "ru": [
+          "суббота"
         ]
       },
       "verb_type": null,
@@ -14791,6 +16310,9 @@
       "meanings": {
         "en": [
           "bird"
+        ],
+        "ru": [
+          "птица"
         ]
       },
       "verb_type": null,
@@ -14823,6 +16345,10 @@
       "meanings": {
         "en": [
           "chicken meat"
+        ],
+        "ru": [
+          "курятина",
+          "куриное мясо"
         ]
       },
       "verb_type": null,
@@ -14855,6 +16381,9 @@
       "meanings": {
         "en": [
           "to take"
+        ],
+        "ru": [
+          "брать"
         ]
       },
       "verb_type": "Godan",
@@ -14888,6 +16417,9 @@
       "meanings": {
         "en": [
           "to take a photo"
+        ],
+        "ru": [
+          "фотографировать"
         ]
       },
       "verb_type": "Godan",
@@ -14921,6 +16453,9 @@
       "meanings": {
         "en": [
           "which?"
+        ],
+        "ru": [
+          "который из"
         ]
       },
       "verb_type": null,
@@ -14958,6 +16493,10 @@
       "meanings": {
         "en": [
           "what kind of?"
+        ],
+        "ru": [
+          "какой",
+          "какого рода"
         ]
       },
       "verb_type": null,
@@ -14986,6 +16525,9 @@
       "meanings": {
         "en": [
           "knife"
+        ],
+        "ru": [
+          "нож"
         ]
       },
       "verb_type": null,
@@ -15018,6 +16560,10 @@
       "meanings": {
         "en": [
           "inside"
+        ],
+        "ru": [
+          "внутри",
+          "середина"
         ]
       },
       "verb_type": null,
@@ -15050,6 +16596,9 @@
       "meanings": {
         "en": [
           "long"
+        ],
+        "ru": [
+          "длинный"
         ]
       },
       "verb_type": null,
@@ -15083,6 +16632,10 @@
       "meanings": {
         "en": [
           "to sing, mew, moo"
+        ],
+        "ru": [
+          "издавать звуки (о животных)",
+          "петь (о птицах)"
         ]
       },
       "verb_type": "Godan",
@@ -15116,6 +16669,9 @@
       "meanings": {
         "en": [
           "summer"
+        ],
+        "ru": [
+          "лето"
         ]
       },
       "verb_type": null,
@@ -15148,6 +16704,10 @@
       "meanings": {
         "en": [
           "summer vacation"
+        ],
+        "ru": [
+          "летние каникулы",
+          "летний отпуск"
         ]
       },
       "verb_type": null,
@@ -15180,6 +16740,10 @@
       "meanings": {
         "en": [
           "and so on"
+        ],
+        "ru": [
+          "и так далее",
+          "и прочее"
         ]
       },
       "verb_type": null,
@@ -15208,6 +16772,9 @@
       "meanings": {
         "en": [
           "seven"
+        ],
+        "ru": [
+          "семь предметов"
         ]
       },
       "verb_type": null,
@@ -15236,6 +16803,9 @@
       "meanings": {
         "en": [
           "what?"
+        ],
+        "ru": [
+          "что"
         ]
       },
       "verb_type": null,
@@ -15264,6 +16834,10 @@
       "meanings": {
         "en": [
           "the 7th of a month, 7 days"
+        ],
+        "ru": [
+          "седьмое число месяца",
+          "семь дней"
         ]
       },
       "verb_type": null,
@@ -15296,6 +16870,9 @@
       "meanings": {
         "en": [
           "name"
+        ],
+        "ru": [
+          "имя"
         ]
       },
       "verb_type": null,
@@ -15328,6 +16905,10 @@
       "meanings": {
         "en": [
           "to learn"
+        ],
+        "ru": [
+          "учиться",
+          "обучаться"
         ]
       },
       "verb_type": null,
@@ -15356,6 +16937,10 @@
       "meanings": {
         "en": [
           "to form a line"
+        ],
+        "ru": [
+          "выстраиваться в ряд",
+          "стоять в очереди"
         ]
       },
       "verb_type": "Godan",
@@ -15389,6 +16974,9 @@
       "meanings": {
         "en": [
           "to line up"
+        ],
+        "ru": [
+          "расставлять в ряд"
         ]
       },
       "verb_type": "Ichidan",
@@ -15422,6 +17010,9 @@
       "meanings": {
         "en": [
           "to become"
+        ],
+        "ru": [
+          "становиться"
         ]
       },
       "verb_type": "Godan",
@@ -15455,6 +17046,9 @@
       "meanings": {
         "en": [
           "two"
+        ],
+        "ru": [
+          "два"
         ]
       },
       "verb_type": null,
@@ -15492,6 +17086,10 @@
       "meanings": {
         "en": [
           "lively"
+        ],
+        "ru": [
+          "оживлённый",
+          "шумный"
         ]
       },
       "verb_type": null,
@@ -15525,6 +17123,9 @@
       "meanings": {
         "en": [
           "meat"
+        ],
+        "ru": [
+          "мясо"
         ]
       },
       "verb_type": null,
@@ -15557,6 +17158,9 @@
       "meanings": {
         "en": [
           "west"
+        ],
+        "ru": [
+          "запад"
         ]
       },
       "verb_type": null,
@@ -15589,6 +17193,10 @@
       "meanings": {
         "en": [
           "…st, ..nd, ..th"
+        ],
+        "ru": [
+          "число месяца",
+          "день"
         ]
       },
       "verb_type": null,
@@ -15617,6 +17225,9 @@
       "meanings": {
         "en": [
           "Sunday"
+        ],
+        "ru": [
+          "воскресенье"
         ]
       },
       "verb_type": null,
@@ -15649,6 +17260,10 @@
       "meanings": {
         "en": [
           "luggage"
+        ],
+        "ru": [
+          "багаж",
+          "вещи"
         ]
       },
       "verb_type": null,
@@ -15681,6 +17296,9 @@
       "meanings": {
         "en": [
           "news"
+        ],
+        "ru": [
+          "новости"
         ]
       },
       "verb_type": null,
@@ -15713,6 +17331,9 @@
       "meanings": {
         "en": [
           "garden"
+        ],
+        "ru": [
+          "сад"
         ]
       },
       "verb_type": null,
@@ -15745,6 +17366,10 @@
       "meanings": {
         "en": [
           "… people"
+        ],
+        "ru": [
+          "человек",
+          "счётный суффикс людей"
         ]
       },
       "verb_type": null,
@@ -15773,6 +17398,9 @@
       "meanings": {
         "en": [
           "to take off clothes"
+        ],
+        "ru": [
+          "снимать одежду"
         ]
       },
       "verb_type": "Godan",
@@ -15806,6 +17434,9 @@
       "meanings": {
         "en": [
           "necktie"
+        ],
+        "ru": [
+          "галстук"
         ]
       },
       "verb_type": null,
@@ -15838,6 +17469,10 @@
       "meanings": {
         "en": [
           "to go to bed"
+        ],
+        "ru": [
+          "ложиться спать",
+          "спать"
         ]
       },
       "verb_type": null,
@@ -15868,6 +17503,10 @@
       "meanings": {
         "en": [
           "~years"
+        ],
+        "ru": [
+          "год",
+          "лет"
         ]
       },
       "verb_type": null,
@@ -15896,6 +17535,10 @@
       "meanings": {
         "en": [
           "notebook"
+        ],
+        "ru": [
+          "тетрадь",
+          "блокнот"
         ]
       },
       "verb_type": null,
@@ -15928,6 +17571,10 @@
       "meanings": {
         "en": [
           "to climb up"
+        ],
+        "ru": [
+          "подниматься",
+          "взбираться"
         ]
       },
       "verb_type": "Godan",
@@ -15961,6 +17608,9 @@
       "meanings": {
         "en": [
           "drinks"
+        ],
+        "ru": [
+          "напитки"
         ]
       },
       "verb_type": null,
@@ -15993,6 +17643,9 @@
       "meanings": {
         "en": [
           "to drink"
+        ],
+        "ru": [
+          "пить"
         ]
       },
       "verb_type": "Godan",
@@ -16026,6 +17679,10 @@
       "meanings": {
         "en": [
           "to take, to ride"
+        ],
+        "ru": [
+          "садиться в транспорт",
+          "ехать верхом"
         ]
       },
       "verb_type": "Godan",
@@ -16059,6 +17716,10 @@
       "meanings": {
         "en": [
           "teeth"
+        ],
+        "ru": [
+          "зуб",
+          "зубы"
         ]
       },
       "verb_type": null,
@@ -16091,6 +17752,9 @@
       "meanings": {
         "en": [
           "party"
+        ],
+        "ru": [
+          "вечеринка"
         ]
       },
       "verb_type": null,
@@ -16124,6 +17788,9 @@
       "meanings": {
         "en": [
           "yes"
+        ],
+        "ru": [
+          "да"
         ]
       },
       "verb_type": null,
@@ -16152,6 +17819,9 @@
       "meanings": {
         "en": [
           "cups of ~"
+        ],
+        "ru": [
+          "счётный суффикс чашек и стаканов"
         ]
       },
       "verb_type": null,
@@ -16180,6 +17850,9 @@
       "meanings": {
         "en": [
           "ashtray"
+        ],
+        "ru": [
+          "пепельница"
         ]
       },
       "verb_type": null,
@@ -16212,6 +17885,9 @@
       "meanings": {
         "en": [
           "to enter"
+        ],
+        "ru": [
+          "входить"
         ]
       },
       "verb_type": "Godan",
@@ -16245,6 +17921,9 @@
       "meanings": {
         "en": [
           "postcard"
+        ],
+        "ru": [
+          "почтовая открытка"
         ]
       },
       "verb_type": null,
@@ -16277,6 +17956,9 @@
       "meanings": {
         "en": [
           "to put on shoes"
+        ],
+        "ru": [
+          "надевать обувь или одежду на нижнюю часть тела"
         ]
       },
       "verb_type": "Godan",
@@ -16320,6 +18002,9 @@
       "meanings": {
         "en": [
           "box"
+        ],
+        "ru": [
+          "коробка"
         ]
       },
       "verb_type": null,
@@ -16352,6 +18037,9 @@
       "meanings": {
         "en": [
           "bridge"
+        ],
+        "ru": [
+          "мост"
         ]
       },
       "verb_type": null,
@@ -16384,6 +18072,9 @@
       "meanings": {
         "en": [
           "chopsticks"
+        ],
+        "ru": [
+          "палочки для еды"
         ]
       },
       "verb_type": null,
@@ -16416,6 +18107,9 @@
       "meanings": {
         "en": [
           "to begin, to start"
+        ],
+        "ru": [
+          "начинаться"
         ]
       },
       "verb_type": "Godan",
@@ -16449,6 +18143,9 @@
       "meanings": {
         "en": [
           "start, the beginning"
+        ],
+        "ru": [
+          "начало"
         ]
       },
       "verb_type": null,
@@ -16481,6 +18178,9 @@
       "meanings": {
         "en": [
           "for the first time"
+        ],
+        "ru": [
+          "впервые"
         ]
       },
       "verb_type": null,
@@ -16509,6 +18209,9 @@
       "meanings": {
         "en": [
           "to run"
+        ],
+        "ru": [
+          "бежать"
         ]
       },
       "verb_type": "Godan",
@@ -16542,6 +18245,9 @@
       "meanings": {
         "en": [
           "bus"
+        ],
+        "ru": [
+          "автобус"
         ]
       },
       "verb_type": null,
@@ -16574,6 +18280,9 @@
       "meanings": {
         "en": [
           "butter"
+        ],
+        "ru": [
+          "сливочное масло"
         ]
       },
       "verb_type": null,
@@ -16606,6 +18315,9 @@
       "meanings": {
         "en": [
           "20 years old"
+        ],
+        "ru": [
+          "двадцать лет (возраст)"
         ]
       },
       "verb_type": null,
@@ -16638,6 +18350,9 @@
       "meanings": {
         "en": [
           "to work"
+        ],
+        "ru": [
+          "работать"
         ]
       },
       "verb_type": "Godan",
@@ -16671,6 +18386,9 @@
       "meanings": {
         "en": [
           "eight"
+        ],
+        "ru": [
+          "восемь"
         ]
       },
       "verb_type": null,
@@ -16708,6 +18426,10 @@
       "meanings": {
         "en": [
           "the 20th of the month, 20 days"
+        ],
+        "ru": [
+          "двадцатое число месяца",
+          "двадцать дней"
         ]
       },
       "verb_type": null,
@@ -16740,6 +18462,9 @@
       "meanings": {
         "en": [
           "flower"
+        ],
+        "ru": [
+          "цветок"
         ]
       },
       "verb_type": null,
@@ -16772,6 +18497,9 @@
       "meanings": {
         "en": [
           "nose"
+        ],
+        "ru": [
+          "нос"
         ]
       },
       "verb_type": null,
@@ -16804,6 +18532,10 @@
       "meanings": {
         "en": [
           "conversation, tale"
+        ],
+        "ru": [
+          "разговор",
+          "рассказ"
         ]
       },
       "verb_type": null,
@@ -16836,6 +18568,10 @@
       "meanings": {
         "en": [
           "to talk, to speak, to tell"
+        ],
+        "ru": [
+          "говорить",
+          "рассказывать"
         ]
       },
       "verb_type": "Godan",
@@ -16869,6 +18605,9 @@
       "meanings": {
         "en": [
           "my mother"
+        ],
+        "ru": [
+          "моя мать"
         ]
       },
       "verb_type": null,
@@ -16901,6 +18640,9 @@
       "meanings": {
         "en": [
           "early"
+        ],
+        "ru": [
+          "ранний"
         ]
       },
       "verb_type": null,
@@ -16934,6 +18676,9 @@
       "meanings": {
         "en": [
           "fast, quick"
+        ],
+        "ru": [
+          "быстрый"
         ]
       },
       "verb_type": null,
@@ -16967,6 +18712,9 @@
       "meanings": {
         "en": [
           "spring"
+        ],
+        "ru": [
+          "весна"
         ]
       },
       "verb_type": null,
@@ -16999,6 +18747,10 @@
       "meanings": {
         "en": [
           "to put something on, to stick"
+        ],
+        "ru": [
+          "натягивать",
+          "наклеивать"
         ]
       },
       "verb_type": "Godan",
@@ -17032,6 +18784,9 @@
       "meanings": {
         "en": [
           "to clear up"
+        ],
+        "ru": [
+          "проясняться (о погоде)"
         ]
       },
       "verb_type": "Ichidan",
@@ -17065,6 +18820,9 @@
       "meanings": {
         "en": [
           "Half~"
+        ],
+        "ru": [
+          "половина"
         ]
       },
       "verb_type": null,
@@ -17093,6 +18851,9 @@
       "meanings": {
         "en": [
           "evening"
+        ],
+        "ru": [
+          "вечер"
         ]
       },
       "verb_type": null,
@@ -17125,6 +18886,10 @@
       "meanings": {
         "en": [
           "No.~, ranking"
+        ],
+        "ru": [
+          "номер",
+          "порядковый номер"
         ]
       },
       "verb_type": null,
@@ -17153,6 +18918,9 @@
       "meanings": {
         "en": [
           "bread"
+        ],
+        "ru": [
+          "хлеб"
         ]
       },
       "verb_type": null,
@@ -17185,6 +18953,9 @@
       "meanings": {
         "en": [
           "handkerchief"
+        ],
+        "ru": [
+          "носовой платок"
         ]
       },
       "verb_type": null,
@@ -17217,6 +18988,9 @@
       "meanings": {
         "en": [
           "number"
+        ],
+        "ru": [
+          "номер"
         ]
       },
       "verb_type": null,
@@ -17249,6 +19023,9 @@
       "meanings": {
         "en": [
           "dinner"
+        ],
+        "ru": [
+          "ужин"
         ]
       },
       "verb_type": null,
@@ -17281,6 +19058,9 @@
       "meanings": {
         "en": [
           "half"
+        ],
+        "ru": [
+          "половина"
         ]
       },
       "verb_type": null,
@@ -17313,6 +19093,9 @@
       "meanings": {
         "en": [
           "east"
+        ],
+        "ru": [
+          "восток"
         ]
       },
       "verb_type": null,
@@ -17345,6 +19128,9 @@
       "meanings": {
         "en": [
           "counter for animals"
+        ],
+        "ru": [
+          "счётный суффикс небольших животных"
         ]
       },
       "verb_type": null,
@@ -17373,6 +19159,9 @@
       "meanings": {
         "en": [
           "to pull"
+        ],
+        "ru": [
+          "тянуть"
         ]
       },
       "verb_type": "Godan",
@@ -17406,6 +19195,9 @@
       "meanings": {
         "en": [
           "to play (an instrument)"
+        ],
+        "ru": [
+          "играть на музыкальном инструменте"
         ]
       },
       "verb_type": null,
@@ -17436,6 +19228,9 @@
       "meanings": {
         "en": [
           "low"
+        ],
+        "ru": [
+          "низкий"
         ]
       },
       "verb_type": null,
@@ -17469,6 +19264,9 @@
       "meanings": {
         "en": [
           "plane"
+        ],
+        "ru": [
+          "самолёт"
         ]
       },
       "verb_type": null,
@@ -17501,6 +19299,10 @@
       "meanings": {
         "en": [
           "left"
+        ],
+        "ru": [
+          "левая сторона",
+          "налево"
         ]
       },
       "verb_type": null,
@@ -17533,6 +19335,9 @@
       "meanings": {
         "en": [
           "person"
+        ],
+        "ru": [
+          "человек"
         ]
       },
       "verb_type": null,
@@ -17565,6 +19370,9 @@
       "meanings": {
         "en": [
           "one"
+        ],
+        "ru": [
+          "один предмет"
         ]
       },
       "verb_type": null,
@@ -17602,6 +19410,9 @@
       "meanings": {
         "en": [
           "one month"
+        ],
+        "ru": [
+          "один месяц"
         ]
       },
       "verb_type": null,
@@ -17634,6 +19445,9 @@
       "meanings": {
         "en": [
           "one person"
+        ],
+        "ru": [
+          "один человек"
         ]
       },
       "verb_type": null,
@@ -17662,6 +19476,10 @@
       "meanings": {
         "en": [
           "free time, leisure"
+        ],
+        "ru": [
+          "свободное время",
+          "досуг"
         ]
       },
       "verb_type": null,
@@ -17696,6 +19514,9 @@
       "meanings": {
         "en": [
           "hundred"
+        ],
+        "ru": [
+          "сто"
         ]
       },
       "verb_type": null,
@@ -17724,6 +19545,9 @@
       "meanings": {
         "en": [
           "hospital"
+        ],
+        "ru": [
+          "больница"
         ]
       },
       "verb_type": null,
@@ -17756,6 +19580,9 @@
       "meanings": {
         "en": [
           "ill, sick"
+        ],
+        "ru": [
+          "болезнь"
         ]
       },
       "verb_type": null,
@@ -17788,6 +19615,9 @@
       "meanings": {
         "en": [
           "hiragana characters"
+        ],
+        "ru": [
+          "хирагана"
         ]
       },
       "verb_type": null,
@@ -17820,6 +19650,10 @@
       "meanings": {
         "en": [
           "noon"
+        ],
+        "ru": [
+          "полдень",
+          "дневное время"
         ]
       },
       "verb_type": null,
@@ -17852,6 +19686,9 @@
       "meanings": {
         "en": [
           "lunch"
+        ],
+        "ru": [
+          "обед"
         ]
       },
       "verb_type": null,
@@ -17884,6 +19721,10 @@
       "meanings": {
         "en": [
           "wide, spacious"
+        ],
+        "ru": [
+          "широкий",
+          "просторный"
         ]
       },
       "verb_type": null,
@@ -17917,6 +19758,9 @@
       "meanings": {
         "en": [
           "film"
+        ],
+        "ru": [
+          "фотоплёнка"
         ]
       },
       "verb_type": null,
@@ -17949,6 +19793,9 @@
       "meanings": {
         "en": [
           "envelope"
+        ],
+        "ru": [
+          "конверт"
         ]
       },
       "verb_type": null,
@@ -17981,6 +19828,9 @@
       "meanings": {
         "en": [
           "pool"
+        ],
+        "ru": [
+          "бассейн"
         ]
       },
       "verb_type": null,
@@ -18013,6 +19863,9 @@
       "meanings": {
         "en": [
           "fork"
+        ],
+        "ru": [
+          "вилка"
         ]
       },
       "verb_type": null,
@@ -18045,6 +19898,9 @@
       "meanings": {
         "en": [
           "to blow (wind)"
+        ],
+        "ru": [
+          "дуть (о ветре)"
         ]
       },
       "verb_type": "Godan",
@@ -18078,6 +19934,9 @@
       "meanings": {
         "en": [
           "clothes"
+        ],
+        "ru": [
+          "одежда"
         ]
       },
       "verb_type": null,
@@ -18110,6 +19969,9 @@
       "meanings": {
         "en": [
           "two"
+        ],
+        "ru": [
+          "два предмета"
         ]
       },
       "verb_type": null,
@@ -18147,6 +20009,9 @@
       "meanings": {
         "en": [
           "pork"
+        ],
+        "ru": [
+          "свинина"
         ]
       },
       "verb_type": null,
@@ -18179,6 +20044,9 @@
       "meanings": {
         "en": [
           "two people"
+        ],
+        "ru": [
+          "два человека"
         ]
       },
       "verb_type": null,
@@ -18207,6 +20075,10 @@
       "meanings": {
         "en": [
           "2nd day of the month, 2 days"
+        ],
+        "ru": [
+          "второе число месяца",
+          "два дня"
         ]
       },
       "verb_type": null,
@@ -18239,6 +20111,9 @@
       "meanings": {
         "en": [
           "thick, fat"
+        ],
+        "ru": [
+          "толстый"
         ]
       },
       "verb_type": null,
@@ -18272,6 +20147,9 @@
       "meanings": {
         "en": [
           "to fall (rain, snow)"
+        ],
+        "ru": [
+          "идти (о дожде или снеге)"
         ]
       },
       "verb_type": "Godan",
@@ -18305,6 +20183,9 @@
       "meanings": {
         "en": [
           "old"
+        ],
+        "ru": [
+          "старый"
         ]
       },
       "verb_type": null,
@@ -18338,6 +20219,10 @@
       "meanings": {
         "en": [
           "bath"
+        ],
+        "ru": [
+          "ванна",
+          "купание"
         ]
       },
       "verb_type": null,
@@ -18370,6 +20255,10 @@
       "meanings": {
         "en": [
           "~minutes"
+        ],
+        "ru": [
+          "минута",
+          "минут"
         ]
       },
       "verb_type": null,
@@ -18398,6 +20287,9 @@
       "meanings": {
         "en": [
           "page"
+        ],
+        "ru": [
+          "страница"
         ]
       },
       "verb_type": null,
@@ -18430,6 +20322,10 @@
       "meanings": {
         "en": [
           "not good at something"
+        ],
+        "ru": [
+          "неумелый",
+          "плохо уметь"
         ]
       },
       "verb_type": null,
@@ -18460,6 +20356,9 @@
       "meanings": {
         "en": [
           "bed"
+        ],
+        "ru": [
+          "кровать"
         ]
       },
       "verb_type": null,
@@ -18492,6 +20391,9 @@
       "meanings": {
         "en": [
           "room"
+        ],
+        "ru": [
+          "комната"
         ]
       },
       "verb_type": null,
@@ -18524,6 +20426,11 @@
       "meanings": {
         "en": [
           "side, part, area"
+        ],
+        "ru": [
+          "район",
+          "окрестность",
+          "сторона"
         ]
       },
       "verb_type": null,
@@ -18556,6 +20463,9 @@
       "meanings": {
         "en": [
           "pen"
+        ],
+        "ru": [
+          "ручка"
         ]
       },
       "verb_type": null,
@@ -18588,6 +20498,9 @@
       "meanings": {
         "en": [
           "to study"
+        ],
+        "ru": [
+          "учёба"
         ]
       },
       "verb_type": null,
@@ -18620,6 +20533,9 @@
       "meanings": {
         "en": [
           "convenient"
+        ],
+        "ru": [
+          "удобный"
         ]
       },
       "verb_type": null,
@@ -18650,6 +20566,10 @@
       "meanings": {
         "en": [
           "〜より〜のほうが〜"
+        ],
+        "ru": [
+          "сторона",
+          "вариант при сравнении"
         ]
       },
       "verb_type": null,
@@ -18678,6 +20598,10 @@
       "meanings": {
         "en": [
           "hat"
+        ],
+        "ru": [
+          "шляпа",
+          "головной убор"
         ]
       },
       "verb_type": null,
@@ -18710,6 +20634,9 @@
       "meanings": {
         "en": [
           "ballpen"
+        ],
+        "ru": [
+          "шариковая ручка"
         ]
       },
       "verb_type": null,
@@ -18742,6 +20669,10 @@
       "meanings": {
         "en": [
           "another, other"
+        ],
+        "ru": [
+          "другой",
+          "прочий"
         ]
       },
       "verb_type": null,
@@ -18774,6 +20705,9 @@
       "meanings": {
         "en": [
           "pocket"
+        ],
+        "ru": [
+          "карман"
         ]
       },
       "verb_type": null,
@@ -18806,6 +20740,10 @@
       "meanings": {
         "en": [
           "to want something"
+        ],
+        "ru": [
+          "желаемый",
+          "хотеть иметь"
         ]
       },
       "verb_type": null,
@@ -18839,6 +20777,10 @@
       "meanings": {
         "en": [
           "thin, fine"
+        ],
+        "ru": [
+          "тонкий",
+          "узкий"
         ]
       },
       "verb_type": null,
@@ -18872,6 +20814,10 @@
       "meanings": {
         "en": [
           "button"
+        ],
+        "ru": [
+          "пуговица",
+          "кнопка"
         ]
       },
       "verb_type": null,
@@ -18904,6 +20850,10 @@
       "meanings": {
         "en": [
           "hotel"
+        ],
+        "ru": [
+          "гостиница",
+          "отель"
         ]
       },
       "verb_type": null,
@@ -18936,6 +20886,9 @@
       "meanings": {
         "en": [
           "book"
+        ],
+        "ru": [
+          "книга"
         ]
       },
       "verb_type": null,
@@ -18968,6 +20921,9 @@
       "meanings": {
         "en": [
           "counter for long objects"
+        ],
+        "ru": [
+          "счётный суффикс длинных предметов"
         ]
       },
       "verb_type": null,
@@ -18996,6 +20952,9 @@
       "meanings": {
         "en": [
           "bookshelf"
+        ],
+        "ru": [
+          "книжная полка"
         ]
       },
       "verb_type": null,
@@ -19028,6 +20987,10 @@
       "meanings": {
         "en": [
           "really"
+        ],
+        "ru": [
+          "действительно",
+          "правда"
         ]
       },
       "verb_type": null,
@@ -19056,6 +21019,9 @@
       "meanings": {
         "en": [
           "counter for thin objects"
+        ],
+        "ru": [
+          "счётный суффикс плоских предметов"
         ]
       },
       "verb_type": null,
@@ -19084,6 +21050,9 @@
       "meanings": {
         "en": [
           "every morning"
+        ],
+        "ru": [
+          "каждое утро"
         ]
       },
       "verb_type": null,
@@ -19120,6 +21089,9 @@
       "meanings": {
         "en": [
           "every month"
+        ],
+        "ru": [
+          "каждый месяц"
         ]
       },
       "verb_type": null,
@@ -19152,6 +21124,9 @@
       "meanings": {
         "en": [
           "every week"
+        ],
+        "ru": [
+          "каждую неделю"
         ]
       },
       "verb_type": null,
@@ -19184,6 +21159,9 @@
       "meanings": {
         "en": [
           "every day"
+        ],
+        "ru": [
+          "каждый день"
         ]
       },
       "verb_type": null,
@@ -19220,6 +21198,9 @@
       "meanings": {
         "en": [
           "every year"
+        ],
+        "ru": [
+          "каждый год"
         ]
       },
       "verb_type": null,
@@ -19252,6 +21233,9 @@
       "meanings": {
         "en": [
           "every evening"
+        ],
+        "ru": [
+          "каждый вечер"
         ]
       },
       "verb_type": null,
@@ -19284,6 +21268,10 @@
       "meanings": {
         "en": [
           "front"
+        ],
+        "ru": [
+          "передняя сторона",
+          "впереди"
         ]
       },
       "verb_type": null,
@@ -19316,6 +21304,10 @@
       "meanings": {
         "en": [
           "before, in front of"
+        ],
+        "ru": [
+          "до",
+          "перед"
         ]
       },
       "verb_type": null,
@@ -19344,6 +21336,10 @@
       "meanings": {
         "en": [
           "to turn"
+        ],
+        "ru": [
+          "поворачивать",
+          "изгибаться"
         ]
       },
       "verb_type": "Godan",
@@ -19377,6 +21373,9 @@
       "meanings": {
         "en": [
           "bad tasting"
+        ],
+        "ru": [
+          "невкусный"
         ]
       },
       "verb_type": null,
@@ -19410,6 +21409,10 @@
       "meanings": {
         "en": [
           "also, again"
+        ],
+        "ru": [
+          "снова",
+          "также"
         ]
       },
       "verb_type": null,
@@ -19438,6 +21441,10 @@
       "meanings": {
         "en": [
           "not yet"
+        ],
+        "ru": [
+          "ещё",
+          "ещё не"
         ]
       },
       "verb_type": null,
@@ -19466,6 +21473,10 @@
       "meanings": {
         "en": [
           "city, town"
+        ],
+        "ru": [
+          "город",
+          "городок"
         ]
       },
       "verb_type": null,
@@ -19498,6 +21509,9 @@
       "meanings": {
         "en": [
           "to wait"
+        ],
+        "ru": [
+          "ждать"
         ]
       },
       "verb_type": "Godan",
@@ -19531,6 +21545,9 @@
       "meanings": {
         "en": [
           "straight ahead"
+        ],
+        "ru": [
+          "прямо"
         ]
       },
       "verb_type": null,
@@ -19559,6 +21576,9 @@
       "meanings": {
         "en": [
           "matches"
+        ],
+        "ru": [
+          "спички"
         ]
       },
       "verb_type": null,
@@ -19591,6 +21611,9 @@
       "meanings": {
         "en": [
           "window"
+        ],
+        "ru": [
+          "окно"
         ]
       },
       "verb_type": null,
@@ -19623,6 +21646,9 @@
       "meanings": {
         "en": [
           "round"
+        ],
+        "ru": [
+          "круглый"
         ]
       },
       "verb_type": null,
@@ -19656,6 +21682,9 @@
       "meanings": {
         "en": [
           "ten thousand"
+        ],
+        "ru": [
+          "десять тысяч"
         ]
       },
       "verb_type": null,
@@ -19684,6 +21713,9 @@
       "meanings": {
         "en": [
           "fountain pen"
+        ],
+        "ru": [
+          "перьевая ручка"
         ]
       },
       "verb_type": null,
@@ -19716,6 +21748,9 @@
       "meanings": {
         "en": [
           "to polish, to brush"
+        ],
+        "ru": [
+          "чистить, полировать"
         ]
       },
       "verb_type": "Godan",
@@ -19749,6 +21784,9 @@
       "meanings": {
         "en": [
           "right"
+        ],
+        "ru": [
+          "право, правый"
         ]
       },
       "verb_type": null,
@@ -19781,6 +21819,9 @@
       "meanings": {
         "en": [
           "short"
+        ],
+        "ru": [
+          "короткий"
         ]
       },
       "verb_type": null,
@@ -19814,6 +21855,9 @@
       "meanings": {
         "en": [
           "water"
+        ],
+        "ru": [
+          "вода"
         ]
       },
       "verb_type": null,
@@ -19846,6 +21890,9 @@
       "meanings": {
         "en": [
           "shop"
+        ],
+        "ru": [
+          "магазин"
         ]
       },
       "verb_type": null,
@@ -19878,6 +21925,9 @@
       "meanings": {
         "en": [
           "to look, to watch"
+        ],
+        "ru": [
+          "показывать"
         ]
       },
       "verb_type": null,
@@ -19908,6 +21958,9 @@
       "meanings": {
         "en": [
           "road"
+        ],
+        "ru": [
+          "дорога"
         ]
       },
       "verb_type": null,
@@ -19940,6 +21993,9 @@
       "meanings": {
         "en": [
           "3rd day of a month, 3 days"
+        ],
+        "ru": [
+          "третье число, три дня"
         ]
       },
       "verb_type": null,
@@ -19972,6 +22028,9 @@
       "meanings": {
         "en": [
           "three"
+        ],
+        "ru": [
+          "три предмета"
         ]
       },
       "verb_type": null,
@@ -20009,6 +22068,9 @@
       "meanings": {
         "en": [
           "everyone"
+        ],
+        "ru": [
+          "все, уважаемые присутствующие"
         ]
       },
       "verb_type": null,
@@ -20037,6 +22099,9 @@
       "meanings": {
         "en": [
           "south"
+        ],
+        "ru": [
+          "юг"
         ]
       },
       "verb_type": null,
@@ -20069,6 +22134,9 @@
       "meanings": {
         "en": [
           "ear"
+        ],
+        "ru": [
+          "ухо"
         ]
       },
       "verb_type": null,
@@ -20101,6 +22169,9 @@
       "meanings": {
         "en": [
           "to see, to watch"
+        ],
+        "ru": [
+          "смотреть, видеть"
         ]
       },
       "verb_type": "Ichidan",
@@ -20134,6 +22205,9 @@
       "meanings": {
         "en": [
           "all, everyone"
+        ],
+        "ru": [
+          "все"
         ]
       },
       "verb_type": null,
@@ -20162,6 +22236,9 @@
       "meanings": {
         "en": [
           "the 6th day of a month, 6 days"
+        ],
+        "ru": [
+          "шестое число, шесть дней"
         ]
       },
       "verb_type": null,
@@ -20194,6 +22271,9 @@
       "meanings": {
         "en": [
           "over there"
+        ],
+        "ru": [
+          "там, на той стороне"
         ]
       },
       "verb_type": null,
@@ -20235,6 +22315,9 @@
       "meanings": {
         "en": [
           "difficult"
+        ],
+        "ru": [
+          "трудный"
         ]
       },
       "verb_type": null,
@@ -20268,6 +22351,9 @@
       "meanings": {
         "en": [
           "six"
+        ],
+        "ru": [
+          "шесть предметов"
         ]
       },
       "verb_type": null,
@@ -20305,6 +22391,9 @@
       "meanings": {
         "en": [
           "eye"
+        ],
+        "ru": [
+          "глаз"
         ]
       },
       "verb_type": null,
@@ -20337,6 +22426,9 @@
       "meanings": {
         "en": [
           "meter"
+        ],
+        "ru": [
+          "метр"
         ]
       },
       "verb_type": null,
@@ -20369,6 +22461,9 @@
       "meanings": {
         "en": [
           "a pair of glasses"
+        ],
+        "ru": [
+          "очки"
         ]
       },
       "verb_type": null,
@@ -20401,6 +22496,9 @@
       "meanings": {
         "en": [
           "already, yet"
+        ],
+        "ru": [
+          "уже"
         ]
       },
       "verb_type": null,
@@ -20429,6 +22527,9 @@
       "meanings": {
         "en": [
           "(one) more"
+        ],
+        "ru": [
+          "ещё один"
         ]
       },
       "verb_type": null,
@@ -20457,6 +22558,9 @@
       "meanings": {
         "en": [
           "Thursday"
+        ],
+        "ru": [
+          "четверг"
         ]
       },
       "verb_type": null,
@@ -20489,6 +22593,9 @@
       "meanings": {
         "en": [
           "hello on the phone"
+        ],
+        "ru": [
+          "алло"
         ]
       },
       "verb_type": null,
@@ -20517,6 +22624,9 @@
       "meanings": {
         "en": [
           "of course"
+        ],
+        "ru": [
+          "конечно"
         ]
       },
       "verb_type": null,
@@ -20545,6 +22655,9 @@
       "meanings": {
         "en": [
           "to have, to own"
+        ],
+        "ru": [
+          "держать, иметь"
         ]
       },
       "verb_type": "Godan",
@@ -20578,6 +22691,9 @@
       "meanings": {
         "en": [
           "more"
+        ],
+        "ru": [
+          "больше, ещё"
         ]
       },
       "verb_type": null,
@@ -20606,6 +22722,9 @@
       "meanings": {
         "en": [
           "thing"
+        ],
+        "ru": [
+          "вещь"
         ]
       },
       "verb_type": null,
@@ -20638,6 +22757,9 @@
       "meanings": {
         "en": [
           "gate"
+        ],
+        "ru": [
+          "ворота"
         ]
       },
       "verb_type": null,
@@ -20670,6 +22792,9 @@
       "meanings": {
         "en": [
           "problem, question"
+        ],
+        "ru": [
+          "вопрос, задача, проблема"
         ]
       },
       "verb_type": null,
@@ -20702,6 +22827,9 @@
       "meanings": {
         "en": [
           "shop. store"
+        ],
+        "ru": [
+          "магазин, лавка"
         ]
       },
       "verb_type": null,
@@ -20730,6 +22858,9 @@
       "meanings": {
         "en": [
           "vegetable shop"
+        ],
+        "ru": [
+          "овощной магазин"
         ]
       },
       "verb_type": null,
@@ -20762,6 +22893,9 @@
       "meanings": {
         "en": [
           "vegetable"
+        ],
+        "ru": [
+          "овощи"
         ]
       },
       "verb_type": null,
@@ -20794,6 +22928,9 @@
       "meanings": {
         "en": [
           "gentle"
+        ],
+        "ru": [
+          "добрый, мягкий"
         ]
       },
       "verb_type": null,
@@ -20824,6 +22961,9 @@
       "meanings": {
         "en": [
           "cheap, inexpensive"
+        ],
+        "ru": [
+          "дешёвый, недорогой"
         ]
       },
       "verb_type": null,
@@ -20854,6 +22994,9 @@
       "meanings": {
         "en": [
           "holiday, vacation"
+        ],
+        "ru": [
+          "отдых, выходной, каникулы"
         ]
       },
       "verb_type": null,
@@ -20886,6 +23029,9 @@
       "meanings": {
         "en": [
           "to rest"
+        ],
+        "ru": [
+          "отдыхать"
         ]
       },
       "verb_type": "Godan",
@@ -20919,6 +23065,9 @@
       "meanings": {
         "en": [
           "eight"
+        ],
+        "ru": [
+          "восемь предметов"
         ]
       },
       "verb_type": null,
@@ -20956,6 +23105,9 @@
       "meanings": {
         "en": [
           "mountain"
+        ],
+        "ru": [
+          "гора"
         ]
       },
       "verb_type": null,
@@ -20988,6 +23140,9 @@
       "meanings": {
         "en": [
           "to do"
+        ],
+        "ru": [
+          "делать"
         ]
       },
       "verb_type": "Godan",
@@ -21030,6 +23185,9 @@
       "meanings": {
         "en": [
           "8th day of the month, 8 days"
+        ],
+        "ru": [
+          "восьмое число, восемь дней"
         ]
       },
       "verb_type": null,
@@ -21062,6 +23220,9 @@
       "meanings": {
         "en": [
           "western style clothing"
+        ],
+        "ru": [
+          "европейская одежда"
         ]
       },
       "verb_type": null,
@@ -21094,6 +23255,9 @@
       "meanings": {
         "en": [
           "often"
+        ],
+        "ru": [
+          "часто, хорошо"
         ]
       },
       "verb_type": null,
@@ -21122,6 +23286,11 @@
       "meanings": {
         "en": [
           "horizontal"
+        ],
+        "ru": [
+          "бок",
+          "сбоку",
+          "горизонталь"
         ]
       },
       "verb_type": null,
@@ -21154,6 +23323,9 @@
       "meanings": {
         "en": [
           "4th day of the month, 4 days"
+        ],
+        "ru": [
+          "четвёртое число, четыре дня"
         ]
       },
       "verb_type": null,
@@ -21186,6 +23358,9 @@
       "meanings": {
         "en": [
           "four"
+        ],
+        "ru": [
+          "четыре предмета"
         ]
       },
       "verb_type": null,
@@ -21223,6 +23398,9 @@
       "meanings": {
         "en": [
           "to call"
+        ],
+        "ru": [
+          "звать"
         ]
       },
       "verb_type": "Godan",
@@ -21256,6 +23434,9 @@
       "meanings": {
         "en": [
           "to read"
+        ],
+        "ru": [
+          "читать"
         ]
       },
       "verb_type": "Godan",
@@ -21289,6 +23470,9 @@
       "meanings": {
         "en": [
           "night"
+        ],
+        "ru": [
+          "ночь"
         ]
       },
       "verb_type": null,
@@ -21321,6 +23505,9 @@
       "meanings": {
         "en": [
           "next month"
+        ],
+        "ru": [
+          "следующий месяц"
         ]
       },
       "verb_type": null,
@@ -21353,6 +23540,9 @@
       "meanings": {
         "en": [
           "next week"
+        ],
+        "ru": [
+          "следующая неделя"
         ]
       },
       "verb_type": null,
@@ -21385,6 +23575,9 @@
       "meanings": {
         "en": [
           "next year"
+        ],
+        "ru": [
+          "следующий год"
         ]
       },
       "verb_type": null,
@@ -21417,6 +23610,9 @@
       "meanings": {
         "en": [
           "radio"
+        ],
+        "ru": [
+          "радио"
         ]
       },
       "verb_type": null,
@@ -21449,6 +23645,9 @@
       "meanings": {
         "en": [
           "splendid"
+        ],
+        "ru": [
+          "великолепный"
         ]
       },
       "verb_type": null,
@@ -21479,6 +23678,9 @@
       "meanings": {
         "en": [
           "foreign student"
+        ],
+        "ru": [
+          "иностранный студент"
         ]
       },
       "verb_type": null,
@@ -21511,6 +23713,9 @@
       "meanings": {
         "en": [
           "parents"
+        ],
+        "ru": [
+          "родители"
         ]
       },
       "verb_type": null,
@@ -21543,6 +23748,9 @@
       "meanings": {
         "en": [
           "cooking"
+        ],
+        "ru": [
+          "готовка, блюдо"
         ]
       },
       "verb_type": null,
@@ -21575,6 +23783,9 @@
       "meanings": {
         "en": [
           "travel"
+        ],
+        "ru": [
+          "путешествие"
         ]
       },
       "verb_type": null,
@@ -21607,6 +23818,9 @@
       "meanings": {
         "en": [
           "zero"
+        ],
+        "ru": [
+          "ноль"
         ]
       },
       "verb_type": null,
@@ -21648,6 +23862,9 @@
       "meanings": {
         "en": [
           "refrigerator"
+        ],
+        "ru": [
+          "холодильник"
         ]
       },
       "verb_type": null,
@@ -21680,6 +23897,9 @@
       "meanings": {
         "en": [
           "record"
+        ],
+        "ru": [
+          "грампластинка"
         ]
       },
       "verb_type": null,
@@ -21712,6 +23932,9 @@
       "meanings": {
         "en": [
           "restaurant"
+        ],
+        "ru": [
+          "ресторан"
         ]
       },
       "verb_type": null,
@@ -21744,6 +23967,9 @@
       "meanings": {
         "en": [
           "practice"
+        ],
+        "ru": [
+          "практика, упражнение"
         ]
       },
       "verb_type": null,
@@ -21776,6 +24002,9 @@
       "meanings": {
         "en": [
           "six"
+        ],
+        "ru": [
+          "шесть"
         ]
       },
       "verb_type": null,
@@ -21813,6 +24042,9 @@
       "meanings": {
         "en": [
           "white shirt"
+        ],
+        "ru": [
+          "рубашка"
         ]
       },
       "verb_type": null,
@@ -21845,6 +24077,9 @@
       "meanings": {
         "en": [
           "young"
+        ],
+        "ru": [
+          "молодой"
         ]
       },
       "verb_type": null,
@@ -21878,6 +24113,9 @@
       "meanings": {
         "en": [
           "to know, to understand"
+        ],
+        "ru": [
+          "понимать, знать"
         ]
       },
       "verb_type": "Godan",
@@ -21911,6 +24149,9 @@
       "meanings": {
         "en": [
           "to forget"
+        ],
+        "ru": [
+          "забывать"
         ]
       },
       "verb_type": "Ichidan",
@@ -21944,6 +24185,9 @@
       "meanings": {
         "en": [
           "me, I"
+        ],
+        "ru": [
+          "я"
         ]
       },
       "verb_type": null,
@@ -21972,6 +24216,9 @@
       "meanings": {
         "en": [
           "to hand over"
+        ],
+        "ru": [
+          "передавать"
         ]
       },
       "verb_type": "Godan",
@@ -22005,6 +24252,9 @@
       "meanings": {
         "en": [
           "to cross"
+        ],
+        "ru": [
+          "переходить"
         ]
       },
       "verb_type": "Godan",
@@ -22038,6 +24288,9 @@
       "meanings": {
         "en": [
           "bad"
+        ],
+        "ru": [
+          "плохой"
         ]
       },
       "verb_type": null,
@@ -22071,6 +24324,9 @@
       "meanings": {
         "en": [
           "Good morning."
+        ],
+        "ru": [
+          "Доброе утро."
         ]
       },
       "verb_type": null,
@@ -22099,6 +24355,9 @@
       "meanings": {
         "en": [
           "Hello, have a good day."
+        ],
+        "ru": [
+          "Здравствуйте. Добрый день."
         ]
       },
       "verb_type": null,
@@ -22127,6 +24386,9 @@
       "meanings": {
         "en": [
           "Good evening."
+        ],
+        "ru": [
+          "Добрый вечер."
         ]
       },
       "verb_type": null,
@@ -22155,6 +24417,9 @@
       "meanings": {
         "en": [
           "Good night."
+        ],
+        "ru": [
+          "Спокойной ночи."
         ]
       },
       "verb_type": null,
@@ -22183,6 +24448,9 @@
       "meanings": {
         "en": [
           "Good bye. (farewell)"
+        ],
+        "ru": [
+          "До свидания."
         ]
       },
       "verb_type": null,
@@ -22211,6 +24479,9 @@
       "meanings": {
         "en": [
           "See you later."
+        ],
+        "ru": [
+          "До встречи."
         ]
       },
       "verb_type": null,
@@ -22239,6 +24510,9 @@
       "meanings": {
         "en": [
           "Stay healthy."
+        ],
+        "ru": [
+          "Будьте здоровы. Берегите себя."
         ]
       },
       "verb_type": null,
@@ -22267,6 +24541,9 @@
       "meanings": {
         "en": [
           "I humbly receive (this food)."
+        ],
+        "ru": [
+          "Приятного аппетита (перед едой)."
         ]
       },
       "verb_type": null,
@@ -22295,6 +24572,9 @@
       "meanings": {
         "en": [
           "Thank you for the food."
+        ],
+        "ru": [
+          "Спасибо за угощение."
         ]
       },
       "verb_type": null,
@@ -22323,6 +24603,9 @@
       "meanings": {
         "en": [
           "Nice to meet you."
+        ],
+        "ru": [
+          "Рад знакомству."
         ]
       },
       "verb_type": null,
@@ -22351,6 +24634,9 @@
       "meanings": {
         "en": [
           "Pleased to meet you."
+        ],
+        "ru": [
+          "Очень приятно. Прошу любить и жаловать."
         ]
       },
       "verb_type": null,
@@ -22379,6 +24665,9 @@
       "meanings": {
         "en": [
           "I am sorry."
+        ],
+        "ru": [
+          "Извините."
         ]
       },
       "verb_type": null,
@@ -22407,6 +24696,9 @@
       "meanings": {
         "en": [
           "Excuse me."
+        ],
+        "ru": [
+          "Извините. Простите."
         ]
       },
       "verb_type": null,
@@ -22435,6 +24727,9 @@
       "meanings": {
         "en": [
           "Excuse me (formal)."
+        ],
+        "ru": [
+          "Прошу прощения (вежливо)."
         ]
       },
       "verb_type": null,
@@ -22463,6 +24758,9 @@
       "meanings": {
         "en": [
           "Please (do this for me)."
+        ],
+        "ru": [
+          "Пожалуйста. Прошу вас."
         ]
       },
       "verb_type": null,
@@ -22491,6 +24789,9 @@
       "meanings": {
         "en": [
           "Thank you very much."
+        ],
+        "ru": [
+          "Большое спасибо."
         ]
       },
       "verb_type": null,
@@ -22519,6 +24820,9 @@
       "meanings": {
         "en": [
           "(Not at all), it&apos;s my pleasure."
+        ],
+        "ru": [
+          "Не за что."
         ]
       },
       "verb_type": null,
@@ -22547,6 +24851,9 @@
       "meanings": {
         "en": [
           "It is I who should say so."
+        ],
+        "ru": [
+          "Взаимно."
         ]
       },
       "verb_type": null,
@@ -22575,6 +24882,9 @@
       "meanings": {
         "en": [
           "Welcome (to our shop)."
+        ],
+        "ru": [
+          "Добро пожаловать (в магазин)."
         ]
       },
       "verb_type": null,
@@ -22603,6 +24913,9 @@
       "meanings": {
         "en": [
           "high, tall, expensive"
+        ],
+        "ru": [
+          "высокий, дорогой"
         ]
       },
       "verb_type": null,
@@ -22631,6 +24944,9 @@
       "meanings": {
         "en": [
           "hot (air, weather)"
+        ],
+        "ru": [
+          "жаркий (о погоде)"
         ]
       },
       "verb_type": null,
@@ -22659,6 +24975,9 @@
       "meanings": {
         "en": [
           "cold (weather)"
+        ],
+        "ru": [
+          "холодный (о погоде)"
         ]
       },
       "verb_type": null,
@@ -22687,6 +25006,9 @@
       "meanings": {
         "en": [
           "cold (to touch)"
+        ],
+        "ru": [
+          "холодный (на ощупь)"
         ]
       },
       "verb_type": null,
@@ -22715,6 +25037,9 @@
       "meanings": {
         "en": [
           "pleasant, enjoyable, fun"
+        ],
+        "ru": [
+          "весёлый, приятный"
         ]
       },
       "verb_type": null,
@@ -22743,6 +25068,9 @@
       "meanings": {
         "en": [
           "uninteresting, boring"
+        ],
+        "ru": [
+          "скучный"
         ]
       },
       "verb_type": null,
@@ -22771,6 +25099,9 @@
       "meanings": {
         "en": [
           "painful"
+        ],
+        "ru": [
+          "болезненный, болит"
         ]
       },
       "verb_type": null,
@@ -22799,6 +25130,9 @@
       "meanings": {
         "en": [
           "sleepy"
+        ],
+        "ru": [
+          "сонный"
         ]
       },
       "verb_type": null,
@@ -22827,6 +25161,9 @@
       "meanings": {
         "en": [
           "cheap"
+        ],
+        "ru": [
+          "дешёвый"
         ]
       },
       "verb_type": null,
@@ -22855,6 +25192,9 @@
       "meanings": {
         "en": [
           "weak"
+        ],
+        "ru": [
+          "слабый"
         ]
       },
       "verb_type": null,
@@ -22883,6 +25223,9 @@
       "meanings": {
         "en": [
           "gentle, kind"
+        ],
+        "ru": [
+          "добрый, нежный"
         ]
       },
       "verb_type": null,
@@ -22911,6 +25254,9 @@
       "meanings": {
         "en": [
           "busy"
+        ],
+        "ru": [
+          "занятой"
         ]
       },
       "verb_type": null,
@@ -22939,6 +25285,9 @@
       "meanings": {
         "en": [
           "many, much"
+        ],
+        "ru": [
+          "много, многочисленный"
         ]
       },
       "verb_type": null,
@@ -22976,6 +25325,9 @@
       "meanings": {
         "en": [
           "few, little"
+        ],
+        "ru": [
+          "мало, немногочисленный"
         ]
       },
       "verb_type": null,
@@ -23004,6 +25356,9 @@
       "meanings": {
         "en": [
           "like, love"
+        ],
+        "ru": [
+          "любимый, нравиться"
         ]
       },
       "verb_type": null,
@@ -23032,6 +25387,9 @@
       "meanings": {
         "en": [
           "to not like"
+        ],
+        "ru": [
+          "нелюбимый, не нравиться"
         ]
       },
       "verb_type": null,
@@ -23060,6 +25418,9 @@
       "meanings": {
         "en": [
           "passionate, love very much"
+        ],
+        "ru": [
+          "очень любимый, обожать"
         ]
       },
       "verb_type": null,
@@ -23088,6 +25449,9 @@
       "meanings": {
         "en": [
           "unpleasant"
+        ],
+        "ru": [
+          "неприятный"
         ]
       },
       "verb_type": null,
@@ -23118,6 +25482,9 @@
       "meanings": {
         "en": [
           "healthy, energetic"
+        ],
+        "ru": [
+          "здоровый, бодрый"
         ]
       },
       "verb_type": null,
@@ -23146,6 +25513,9 @@
       "meanings": {
         "en": [
           "healthy, robust"
+        ],
+        "ru": [
+          "крепкий, прочный"
         ]
       },
       "verb_type": null,
@@ -23174,6 +25544,9 @@
       "meanings": {
         "en": [
           "free (time)"
+        ],
+        "ru": [
+          "свободный (о времени)"
         ]
       },
       "verb_type": null,
@@ -23202,6 +25575,9 @@
       "meanings": {
         "en": [
           "good at, skilled"
+        ],
+        "ru": [
+          "умелый"
         ]
       },
       "verb_type": null,
@@ -23230,6 +25606,9 @@
       "meanings": {
         "en": [
           "bad at, unskilled"
+        ],
+        "ru": [
+          "неумелый"
         ]
       },
       "verb_type": null,
@@ -23258,6 +25637,9 @@
       "meanings": {
         "en": [
           "with utmost effort"
+        ],
+        "ru": [
+          "изо всех сил"
         ]
       },
       "verb_type": null,
@@ -23286,6 +25668,9 @@
       "meanings": {
         "en": [
           "eager, enthusiastic"
+        ],
+        "ru": [
+          "усердный, увлечённый"
         ]
       },
       "verb_type": null,
@@ -23314,6 +25699,9 @@
       "meanings": {
         "en": [
           "pretty, beautiful"
+        ],
+        "ru": [
+          "красивый, чистый"
         ]
       },
       "verb_type": null,
@@ -23342,6 +25730,9 @@
       "meanings": {
         "en": [
           "famous"
+        ],
+        "ru": [
+          "известный"
         ]
       },
       "verb_type": null,
@@ -23370,6 +25761,9 @@
       "meanings": {
         "en": [
           "excellent, splendid, fine"
+        ],
+        "ru": [
+          "прекрасный, великолепный"
         ]
       },
       "verb_type": null,
@@ -23398,6 +25792,9 @@
       "meanings": {
         "en": [
           "polite"
+        ],
+        "ru": [
+          "вежливый"
         ]
       },
       "verb_type": null,
@@ -23426,6 +25823,9 @@
       "meanings": {
         "en": [
           "wonderful, enviable"
+        ],
+        "ru": [
+          "прекрасный, достаточный"
         ]
       },
       "verb_type": null,
@@ -23454,6 +25854,9 @@
       "meanings": {
         "en": [
           "special"
+        ],
+        "ru": [
+          "особый"
         ]
       },
       "verb_type": null,
@@ -23482,6 +25885,9 @@
       "meanings": {
         "en": [
           "proper, suitable"
+        ],
+        "ru": [
+          "подходящий"
         ]
       },
       "verb_type": null,
@@ -23510,6 +25916,9 @@
       "meanings": {
         "en": [
           "useful, convenient"
+        ],
+        "ru": [
+          "удобный, полезный"
         ]
       },
       "verb_type": null,
@@ -23538,6 +25947,9 @@
       "meanings": {
         "en": [
           "comfortable, easy"
+        ],
+        "ru": [
+          "лёгкий, удобный"
         ]
       },
       "verb_type": null,
@@ -23566,6 +25978,9 @@
       "meanings": {
         "en": [
           "terrible, difficult"
+        ],
+        "ru": [
+          "тяжёлый, трудный"
         ]
       },
       "verb_type": null,
@@ -23594,6 +26009,9 @@
       "meanings": {
         "en": [
           "dangerous"
+        ],
+        "ru": [
+          "опасный"
         ]
       },
       "verb_type": null,
@@ -23631,6 +26049,9 @@
       "meanings": {
         "en": [
           "unreasonable, impossible"
+        ],
+        "ru": [
+          "невозможный, неразумный"
         ]
       },
       "verb_type": null,
@@ -23659,6 +26080,9 @@
       "meanings": {
         "en": [
           "important, precious"
+        ],
+        "ru": [
+          "важный, ценный"
         ]
       },
       "verb_type": null,
@@ -23687,6 +26111,9 @@
       "meanings": {
         "en": [
           "necessary"
+        ],
+        "ru": [
+          "необходимый"
         ]
       },
       "verb_type": null,
@@ -23715,6 +26142,9 @@
       "meanings": {
         "en": [
           "sufficient"
+        ],
+        "ru": [
+          "достаточный"
         ]
       },
       "verb_type": null,
@@ -23743,6 +26173,9 @@
       "meanings": {
         "en": [
           "serious, earnest"
+        ],
+        "ru": [
+          "серьёзный, добросовестный"
         ]
       },
       "verb_type": null,
@@ -23773,6 +26206,9 @@
       "meanings": {
         "en": [
           "free, unrestrained"
+        ],
+        "ru": [
+          "свободный"
         ]
       },
       "verb_type": null,
@@ -23801,6 +26237,9 @@
       "meanings": {
         "en": [
           "straight"
+        ],
+        "ru": [
+          "прямой, прямо"
         ]
       },
       "verb_type": null,
@@ -23829,6 +26268,9 @@
       "meanings": {
         "en": [
           "OK, fine"
+        ],
+        "ru": [
+          "в порядке, всё хорошо"
         ]
       },
       "verb_type": null,
@@ -23857,6 +26299,9 @@
       "meanings": {
         "en": [
           "regrettable, disappointing"
+        ],
+        "ru": [
+          "досадный, жаль"
         ]
       },
       "verb_type": null,
@@ -23885,6 +26330,9 @@
       "meanings": {
         "en": [
           "worry, concern"
+        ],
+        "ru": [
+          "беспокойство"
         ]
       },
       "verb_type": null,
@@ -23913,6 +26361,9 @@
       "meanings": {
         "en": [
           "various, different"
+        ],
+        "ru": [
+          "разный, разнообразный"
         ]
       },
       "verb_type": null,
@@ -23941,6 +26392,9 @@
       "meanings": {
         "en": [
           "to open"
+        ],
+        "ru": [
+          "открываться"
         ]
       },
       "verb_type": "Godan",
@@ -23978,6 +26432,9 @@
       "meanings": {
         "en": [
           "to put"
+        ],
+        "ru": [
+          "класть"
         ]
       },
       "verb_type": "Godan",
@@ -24006,6 +26463,9 @@
       "meanings": {
         "en": [
           "to take time or money"
+        ],
+        "ru": [
+          "занимать (время), стоить (денег)"
         ]
       },
       "verb_type": "Godan",
@@ -24034,6 +26494,9 @@
       "meanings": {
         "en": [
           "to listen"
+        ],
+        "ru": [
+          "слушать, спрашивать"
         ]
       },
       "verb_type": "Godan",
@@ -24062,6 +26525,9 @@
       "meanings": {
         "en": [
           "to turn off, to switch off"
+        ],
+        "ru": [
+          "выключать, стирать"
         ]
       },
       "verb_type": "Godan",
@@ -24090,6 +26556,9 @@
       "meanings": {
         "en": [
           "to die, to pass away"
+        ],
+        "ru": [
+          "умирать"
         ]
       },
       "verb_type": "Godan",
@@ -24118,6 +26587,9 @@
       "meanings": {
         "en": [
           "to be different"
+        ],
+        "ru": [
+          "отличаться, быть неверным"
         ]
       },
       "verb_type": "Godan",
@@ -24146,6 +26618,9 @@
       "meanings": {
         "en": [
           "to play an instrument"
+        ],
+        "ru": [
+          "играть на музыкальном инструменте"
         ]
       },
       "verb_type": "Godan",
@@ -24174,6 +26649,9 @@
       "meanings": {
         "en": [
           "to fasten a belt"
+        ],
+        "ru": [
+          "застёгивать, затягивать"
         ]
       },
       "verb_type": "Ichidan",
@@ -24202,6 +26680,9 @@
       "meanings": {
         "en": [
           "can do"
+        ],
+        "ru": [
+          "уметь, мочь"
         ]
       },
       "verb_type": "Ichidan",
@@ -24230,6 +26711,9 @@
       "meanings": {
         "en": [
           "to leave"
+        ],
+        "ru": [
+          "выходить"
         ]
       },
       "verb_type": "Ichidan",
@@ -24267,6 +26751,9 @@
       "meanings": {
         "en": [
           "to sleep"
+        ],
+        "ru": [
+          "спать"
         ]
       },
       "verb_type": "Ichidan",
@@ -24295,6 +26782,9 @@
       "meanings": {
         "en": [
           "to show"
+        ],
+        "ru": [
+          "показывать"
         ]
       },
       "verb_type": "Ichidan",
@@ -24324,6 +26814,9 @@
         "en": [
           "we",
           "us"
+        ],
+        "ru": [
+          "мы, нас"
         ]
       },
       "verb_type": null,
@@ -24360,6 +26853,9 @@
           "that person",
           "he",
           "she"
+        ],
+        "ru": [
+          "тот человек, он, она"
         ]
       },
       "verb_type": null,
@@ -24394,6 +26890,9 @@
       "meanings": {
         "en": [
           "that person (polite)"
+        ],
+        "ru": [
+          "тот человек (вежливо)"
         ]
       },
       "verb_type": null,
@@ -24429,6 +26928,9 @@
         "en": [
           "Mr.",
           "suffix used after the name of a boy or a male of equal or lower status"
+        ],
+        "ru": [
+          "кун (обращение к мальчику или младшему мужчине)"
         ]
       },
       "verb_type": null,
@@ -24463,6 +26965,9 @@
       "meanings": {
         "en": [
           "Japan"
+        ],
+        "ru": [
+          "Япония"
         ]
       },
       "verb_type": null,
@@ -24497,6 +27002,9 @@
       "meanings": {
         "en": [
           "Japanese language"
+        ],
+        "ru": [
+          "японский язык"
         ]
       },
       "verb_type": null,
@@ -24532,6 +27040,9 @@
         "en": [
           "teacher",
           "instructor"
+        ],
+        "ru": [
+          "учитель, преподаватель"
         ]
       },
       "verb_type": null,
@@ -24567,6 +27078,9 @@
         "en": [
           "company employee",
           "office worker"
+        ],
+        "ru": [
+          "служащий компании"
         ]
       },
       "verb_type": null,
@@ -24602,6 +27116,9 @@
         "en": [
           "simple",
           "easy"
+        ],
+        "ru": [
+          "простой, лёгкий"
         ]
       },
       "verb_type": null,
@@ -24636,6 +27153,9 @@
       "meanings": {
         "en": [
           "handsome"
+        ],
+        "ru": [
+          "красивый (о мужчине)"
         ]
       },
       "verb_type": null,
@@ -24670,6 +27190,9 @@
       "meanings": {
         "en": [
           "business card"
+        ],
+        "ru": [
+          "визитная карточка"
         ]
       },
       "verb_type": null,
@@ -24704,6 +27227,9 @@
       "meanings": {
         "en": [
           "computer"
+        ],
+        "ru": [
+          "компьютер"
         ]
       },
       "verb_type": null,
@@ -24738,6 +27264,9 @@
       "meanings": {
         "en": [
           "smartphone"
+        ],
+        "ru": [
+          "смартфон"
         ]
       },
       "verb_type": null,
@@ -24773,6 +27302,9 @@
         "en": [
           "personal computer",
           "PC"
+        ],
+        "ru": [
+          "персональный компьютер"
         ]
       },
       "verb_type": null,
@@ -24809,6 +27341,9 @@
           "video",
           "videotape",
           "video recorder"
+        ],
+        "ru": [
+          "видео, видеозапись, видеомагнитофон"
         ]
       },
       "verb_type": null,
@@ -24843,6 +27378,9 @@
       "meanings": {
         "en": [
           "what time?"
+        ],
+        "ru": [
+          "который час?"
         ]
       },
       "verb_type": null,
@@ -24881,6 +27419,12 @@
           "please",
           "some",
           "a certain amount"
+        ],
+        "ru": [
+          "так или иначе",
+          "всё-таки",
+          "пожалуйста",
+          "некоторое количество"
         ]
       },
       "verb_type": null,
@@ -24913,6 +27457,9 @@
         "en": [
           "every",
           "each (prefix)"
+        ],
+        "ru": [
+          "каждый (приставка)"
         ]
       },
       "verb_type": null,
@@ -24943,6 +27490,9 @@
       "meanings": {
         "en": [
           "office"
+        ],
+        "ru": [
+          "офис"
         ]
       },
       "verb_type": null,
@@ -24978,6 +27528,9 @@
         "en": [
           "meeting room",
           "conference room"
+        ],
+        "ru": [
+          "переговорная, конференц-зал"
         ]
       },
       "verb_type": null,
@@ -25013,6 +27566,9 @@
         "en": [
           "reception",
           "reception desk"
+        ],
+        "ru": [
+          "приёмная, стойка регистрации"
         ]
       },
       "verb_type": null,
@@ -25047,6 +27603,9 @@
       "meanings": {
         "en": [
           "lobby"
+        ],
+        "ru": [
+          "вестибюль, холл"
         ]
       },
       "verb_type": null,
@@ -25082,6 +27641,10 @@
         "en": [
           "underground",
           "basement"
+        ],
+        "ru": [
+          "под землёй",
+          "подвал"
         ]
       },
       "verb_type": null,
@@ -25117,6 +27680,9 @@
         "en": [
           "sales floor",
           "sales counter"
+        ],
+        "ru": [
+          "отдел магазина, прилавок"
         ]
       },
       "verb_type": null,
@@ -25151,6 +27717,9 @@
       "meanings": {
         "en": [
           "to be (very polite form of desu)"
+        ],
+        "ru": [
+          "быть (очень вежливая форма です)"
         ]
       },
       "verb_type": null,
@@ -25186,6 +27755,9 @@
         "en": [
           "United Kingdom",
           "Great Britain"
+        ],
+        "ru": [
+          "Великобритания"
         ]
       },
       "verb_type": null,
@@ -25220,6 +27792,9 @@
       "meanings": {
         "en": [
           "Italy"
+        ],
+        "ru": [
+          "Италия"
         ]
       },
       "verb_type": null,
@@ -25254,6 +27829,9 @@
       "meanings": {
         "en": [
           "China"
+        ],
+        "ru": [
+          "Китай"
         ]
       },
       "verb_type": null,
@@ -25288,6 +27866,9 @@
       "meanings": {
         "en": [
           "South Korea"
+        ],
+        "ru": [
+          "Южная Корея"
         ]
       },
       "verb_type": null,
@@ -25323,6 +27904,9 @@
         "en": [
           "to be",
           "to exist (animate, humble)"
+        ],
+        "ru": [
+          "быть, находиться (о живом)"
         ]
       },
       "verb_type": "Godan",
@@ -25360,6 +27944,9 @@
           "to get",
           "to obtain",
           "to acquire"
+        ],
+        "ru": [
+          "получать, приобретать"
         ]
       },
       "verb_type": "Ichidan",
@@ -25394,6 +27981,9 @@
       "meanings": {
         "en": [
           "to hurry"
+        ],
+        "ru": [
+          "спешить"
         ]
       },
       "verb_type": "Godan",
@@ -25429,6 +28019,9 @@
         "en": [
           "to teach",
           "to tell"
+        ],
+        "ru": [
+          "учить, объяснять, сообщать"
         ]
       },
       "verb_type": "Ichidan",
@@ -25464,6 +28057,9 @@
         "en": [
           "to learn",
           "to study"
+        ],
+        "ru": [
+          "учиться, изучать"
         ]
       },
       "verb_type": "Godan",
@@ -25498,6 +28094,9 @@
       "meanings": {
         "en": [
           "supermarket"
+        ],
+        "ru": [
+          "супермаркет"
         ]
       },
       "verb_type": null,
@@ -25532,6 +28131,9 @@
       "meanings": {
         "en": [
           "convenience store"
+        ],
+        "ru": [
+          "круглосуточный магазин"
         ]
       },
       "verb_type": null,
@@ -25566,6 +28168,9 @@
       "meanings": {
         "en": [
           "post office"
+        ],
+        "ru": [
+          "почта"
         ]
       },
       "verb_type": null,
@@ -25601,6 +28206,9 @@
         "en": [
           "art museum",
           "art gallery"
+        ],
+        "ru": [
+          "художественный музей"
         ]
       },
       "verb_type": null,
@@ -25636,6 +28244,9 @@
         "en": [
           "Shinkansen",
           "bullet train"
+        ],
+        "ru": [
+          "синкансэн, скоростной поезд"
         ]
       },
       "verb_type": null,
@@ -25671,6 +28282,9 @@
         "en": [
           "ship",
           "boat"
+        ],
+        "ru": [
+          "корабль, лодка"
         ]
       },
       "verb_type": null,
@@ -25705,6 +28319,9 @@
       "meanings": {
         "en": [
           "uncooked rice"
+        ],
+        "ru": [
+          "рис (сырой)"
         ]
       },
       "verb_type": null,
@@ -25739,6 +28356,9 @@
       "meanings": {
         "en": [
           "black tea"
+        ],
+        "ru": [
+          "чёрный чай"
         ]
       },
       "verb_type": null,
@@ -25773,6 +28393,9 @@
       "meanings": {
         "en": [
           "coffee"
+        ],
+        "ru": [
+          "кофе"
         ]
       },
       "verb_type": null,
@@ -25808,6 +28431,9 @@
         "en": [
           "juice",
           "soft drink"
+        ],
+        "ru": [
+          "сок, безалкогольный напиток"
         ]
       },
       "verb_type": null,
@@ -25842,6 +28468,9 @@
       "meanings": {
         "en": [
           "beer"
+        ],
+        "ru": [
+          "пиво"
         ]
       },
       "verb_type": null,
@@ -25876,6 +28505,9 @@
       "meanings": {
         "en": [
           "scissors"
+        ],
+        "ru": [
+          "ножницы"
         ]
       },
       "verb_type": null,
@@ -25911,6 +28543,9 @@
         "en": [
           "fax",
           "fax machine"
+        ],
+        "ru": [
+          "факс"
         ]
       },
       "verb_type": null,
@@ -25945,6 +28580,9 @@
       "meanings": {
         "en": [
           "word processor"
+        ],
+        "ru": [
+          "текстовый процессор"
         ]
       },
       "verb_type": null,
@@ -25980,6 +28618,9 @@
         "en": [
           "hole punch",
           "punch (with the fist)"
+        ],
+        "ru": [
+          "дырокол, удар кулаком"
         ]
       },
       "verb_type": null,
@@ -26014,6 +28655,9 @@
       "meanings": {
         "en": [
           "stapler"
+        ],
+        "ru": [
+          "степлер"
         ]
       },
       "verb_type": null,
@@ -26049,6 +28693,9 @@
         "en": [
           "cellophane tape",
           "adhesive tape"
+        ],
+        "ru": [
+          "скотч, клейкая лента"
         ]
       },
       "verb_type": null,
@@ -26083,6 +28730,9 @@
       "meanings": {
         "en": [
           "eraser"
+        ],
+        "ru": [
+          "ластик"
         ]
       },
       "verb_type": null,
@@ -26118,6 +28768,9 @@
         "en": [
           "pocket notebook",
           "personal organizer"
+        ],
+        "ru": [
+          "записная книжка, ежедневник"
         ]
       },
       "verb_type": null,
@@ -26152,6 +28805,9 @@
       "meanings": {
         "en": [
           "card"
+        ],
+        "ru": [
+          "карточка"
         ]
       },
       "verb_type": null,
@@ -26187,6 +28843,9 @@
         "en": [
           "present",
           "gift"
+        ],
+        "ru": [
+          "подарок"
         ]
       },
       "verb_type": null,
@@ -26221,6 +28880,9 @@
       "meanings": {
         "en": [
           "Christmas"
+        ],
+        "ru": [
+          "Рождество"
         ]
       },
       "verb_type": null,
@@ -26255,6 +28917,9 @@
       "meanings": {
         "en": [
           "New Year (especially the first three days)"
+        ],
+        "ru": [
+          "Новый год"
         ]
       },
       "verb_type": null,
@@ -26292,6 +28957,9 @@
           "to list",
           "to raise",
           "to hold an event"
+        ],
+        "ru": [
+          "приводить пример, перечислять, поднимать, проводить мероприятие"
         ]
       },
       "verb_type": "Ichidan",
@@ -26327,6 +28995,9 @@
         "en": [
           "to receive",
           "to be given"
+        ],
+        "ru": [
+          "получать"
         ]
       },
       "verb_type": "Godan",
@@ -26361,6 +29032,9 @@
       "meanings": {
         "en": [
           "cucumber"
+        ],
+        "ru": [
+          "огурец"
         ]
       },
       "verb_type": null,
@@ -26395,6 +29069,9 @@
       "meanings": {
         "en": [
           "tomato"
+        ],
+        "ru": [
+          "помидор"
         ]
       },
       "verb_type": null,
@@ -26430,6 +29107,9 @@
         "en": [
           "bean",
           "pea"
+        ],
+        "ru": [
+          "бобы, горох"
         ]
       },
       "verb_type": null,
@@ -26464,6 +29144,9 @@
       "meanings": {
         "en": [
           "cabbage"
+        ],
+        "ru": [
+          "капуста"
         ]
       },
       "verb_type": null,
@@ -26499,6 +29182,9 @@
         "en": [
           "green onion",
           "spring onion"
+        ],
+        "ru": [
+          "зелёный лук"
         ]
       },
       "verb_type": null,
@@ -26533,6 +29219,9 @@
       "meanings": {
         "en": [
           "onion"
+        ],
+        "ru": [
+          "репчатый лук"
         ]
       },
       "verb_type": null,
@@ -26567,6 +29256,9 @@
       "meanings": {
         "en": [
           "potato"
+        ],
+        "ru": [
+          "картофель"
         ]
       },
       "verb_type": null,
@@ -26602,6 +29294,9 @@
         "en": [
           "daikon",
           "Japanese white radish"
+        ],
+        "ru": [
+          "дайкон, японская редька"
         ]
       },
       "verb_type": null,
@@ -26636,6 +29331,9 @@
       "meanings": {
         "en": [
           "carrot"
+        ],
+        "ru": [
+          "морковь"
         ]
       },
       "verb_type": null,
@@ -26670,6 +29368,9 @@
       "meanings": {
         "en": [
           "strawberry"
+        ],
+        "ru": [
+          "клубника"
         ]
       },
       "verb_type": null,
@@ -26704,6 +29405,9 @@
       "meanings": {
         "en": [
           "peach"
+        ],
+        "ru": [
+          "персик"
         ]
       },
       "verb_type": null,
@@ -26738,6 +29442,9 @@
       "meanings": {
         "en": [
           "watermelon"
+        ],
+        "ru": [
+          "арбуз"
         ]
       },
       "verb_type": null,
@@ -26772,6 +29479,9 @@
       "meanings": {
         "en": [
           "grape"
+        ],
+        "ru": [
+          "виноград"
         ]
       },
       "verb_type": null,
@@ -26806,6 +29516,9 @@
       "meanings": {
         "en": [
           "persimmon"
+        ],
+        "ru": [
+          "хурма"
         ]
       },
       "verb_type": null,
@@ -26840,6 +29553,9 @@
       "meanings": {
         "en": [
           "mandarin orange"
+        ],
+        "ru": [
+          "мандарин"
         ]
       },
       "verb_type": null,
@@ -26874,6 +29590,9 @@
       "meanings": {
         "en": [
           "apple"
+        ],
+        "ru": [
+          "яблоко"
         ]
       },
       "verb_type": null,
@@ -26908,6 +29627,9 @@
       "meanings": {
         "en": [
           "banana"
+        ],
+        "ru": [
+          "банан"
         ]
       },
       "verb_type": null,
@@ -26942,6 +29664,9 @@
       "meanings": {
         "en": [
           "sausage"
+        ],
+        "ru": [
+          "сосиска, колбаса"
         ]
       },
       "verb_type": null,
@@ -26976,6 +29701,9 @@
       "meanings": {
         "en": [
           "ham"
+        ],
+        "ru": [
+          "ветчина"
         ]
       },
       "verb_type": null,
@@ -27010,6 +29738,9 @@
       "meanings": {
         "en": [
           "salmon"
+        ],
+        "ru": [
+          "лосось"
         ]
       },
       "verb_type": null,
@@ -27044,6 +29775,9 @@
       "meanings": {
         "en": [
           "tuna"
+        ],
+        "ru": [
+          "тунец"
         ]
       },
       "verb_type": null,
@@ -27079,6 +29813,9 @@
         "en": [
           "shrimp",
           "prawn"
+        ],
+        "ru": [
+          "креветка"
         ]
       },
       "verb_type": null,
@@ -27114,6 +29851,9 @@
       "meanings": {
         "en": [
           "crab"
+        ],
+        "ru": [
+          "краб"
         ]
       },
       "verb_type": null,
@@ -27148,6 +29888,9 @@
       "meanings": {
         "en": [
           "squid"
+        ],
+        "ru": [
+          "кальмар"
         ]
       },
       "verb_type": null,
@@ -27182,6 +29925,9 @@
       "meanings": {
         "en": [
           "octopus"
+        ],
+        "ru": [
+          "осьминог"
         ]
       },
       "verb_type": null,
@@ -27217,6 +29963,9 @@
         "en": [
           "shellfish",
           "shell"
+        ],
+        "ru": [
+          "моллюск, раковина"
         ]
       },
       "verb_type": null,
@@ -27252,6 +30001,9 @@
         "en": [
           "seasoning",
           "condiment"
+        ],
+        "ru": [
+          "приправа"
         ]
       },
       "verb_type": null,
@@ -27286,6 +30038,9 @@
       "meanings": {
         "en": [
           "pepper (spice)"
+        ],
+        "ru": [
+          "перец (приправа)"
         ]
       },
       "verb_type": null,
@@ -27321,6 +30076,9 @@
         "en": [
           "miso",
           "fermented soybean paste"
+        ],
+        "ru": [
+          "мисо, паста из ферментированных соевых бобов"
         ]
       },
       "verb_type": null,
@@ -27355,6 +30113,9 @@
       "meanings": {
         "en": [
           "oil"
+        ],
+        "ru": [
+          "масло"
         ]
       },
       "verb_type": null,
@@ -27389,6 +30150,9 @@
       "meanings": {
         "en": [
           "sauce"
+        ],
+        "ru": [
+          "соус"
         ]
       },
       "verb_type": null,
@@ -27423,6 +30187,9 @@
       "meanings": {
         "en": [
           "mayonnaise"
+        ],
+        "ru": [
+          "майонез"
         ]
       },
       "verb_type": null,
@@ -27457,6 +30224,9 @@
       "meanings": {
         "en": [
           "ketchup"
+        ],
+        "ru": [
+          "кетчуп"
         ]
       },
       "verb_type": null,
@@ -27492,6 +30262,9 @@
         "en": [
           "wasabi",
           "Japanese horseradish"
+        ],
+        "ru": [
+          "васаби"
         ]
       },
       "verb_type": null,
@@ -27527,6 +30300,9 @@
         "en": [
           "meal",
           "dining"
+        ],
+        "ru": [
+          "еда, приём пищи"
         ]
       },
       "verb_type": null,
@@ -27561,6 +30337,9 @@
       "meanings": {
         "en": [
           "cup"
+        ],
+        "ru": [
+          "чашка"
         ]
       },
       "verb_type": null,
@@ -27595,6 +30374,9 @@
       "meanings": {
         "en": [
           "thank you"
+        ],
+        "ru": [
+          "спасибо"
         ]
       },
       "verb_type": null,
@@ -27631,6 +30413,9 @@
           "word",
           "term",
           "language"
+        ],
+        "ru": [
+          "слово, термин, язык"
         ]
       },
       "verb_type": null,

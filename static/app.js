@@ -11,6 +11,7 @@ import { grammarPage, navigation, sectionPage } from './js/pages.js';
 import { resolveRoute } from './js/router.js';
 import { errorPage } from './js/ui.js';
 import { mountVocabulary } from './js/vocabulary.js';
+import { homePage } from './js/home.js';
 
 const content = document.querySelector('#content');
 const menu = document.querySelector('#navigation');
@@ -32,6 +33,7 @@ async function render(focusPage = false) {
   pageController = new AbortController();
   const { signal } = pageController;
   const route = resolveRoute(location.pathname, catalog);
+  content.classList.toggle('home-screen', route.type === 'home');
   content.classList.toggle('book-screen', route.type === 'book');
   content.classList.toggle('practice-screen', ['game', 'mock', 'preparation', 'book', 'counters', 'workbook', 'exam-sets', 'exam-set'].includes(route.type));
   if (route.canonical) history.replaceState({}, '', route.canonical + location.search + location.hash);
@@ -47,7 +49,9 @@ async function render(focusPage = false) {
     else link.removeAttribute('aria-current');
   });
   try {
-    if (route.type === 'exam-sets' || route.type === 'exam-set') {
+    if (route.type === 'home') {
+      content.innerHTML = homePage(catalog);
+    } else if (route.type === 'exam-sets' || route.type === 'exam-set') {
       await mountExamSets(content, signal, route.examId);
     } else if (route.type === 'workbooks' || route.type === 'workbook') {
       await mountWorkbooks(content, signal, route.workbookId);

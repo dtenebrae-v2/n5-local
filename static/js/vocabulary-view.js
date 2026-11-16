@@ -24,12 +24,13 @@ export function vocabularyPage(base, collection, groups, query) {
         <label class="search-box">
           <span aria-hidden="true">⌕</span>
           <input id="word-search" type="search" maxlength="200" value="${esc(query)}"
-            placeholder="Слово, чтение или значение на английском…" aria-label="Поиск слов">
+            placeholder="Слово, чтение или перевод…" aria-label="Поиск слов" aria-describedby="word-search-hint">
           <kbd>/</kbd>
         </label>
         <button id="add-word" type="button" class="primary">Добавить слово</button>
-        <a id="download" class="download" href="/api/export.csv?collection=${collection.id}">Скачать CSV ↓</a>
+        <details class="vocabulary-more"><summary>Ещё</summary><a id="download" class="download" href="/api/export.csv?collection=${collection.id}">Скачать CSV ↓</a></details>
       </div>
+      <p class="word-search-hint" id="word-search-hint">Кана, ромадзи, русский или английский перевод.</p>
 ${thematic ? '<div class="filter-heading">ГРУППЫ</div>' : ''}
       ${thematic ? `<div class="group-tiles" role="group" aria-label="Фильтр по группам">
         <button data-group="" class="group-tile"><span>Все</span> <small>${collection.count} записей</small></button>${chips}
@@ -61,7 +62,7 @@ function wordRow(entry, kind, showGroup = true) {
         <span class="kana" lang="ja">${esc(entry.furigana || entry.kanji)}</span>
         <span class="romaji">${esc(entry.romaji)}</span>
       </td>
-      <td class="word-meaning">${esc(entry.meaning)}
+      <td class="word-meaning">${esc(entry.meaning_ru || entry.meaning)}${entry.meaning_ru ? `<small class="meaning-english" lang="en">${esc(entry.meaning)}</small>` : ''}
         ${entry.context ? `<small class="usage">${esc(entry.context)}</small>` : ''}
       </td>
       ${showGroup ? `<td><span class="word-group">${esc(groupText)}</span></td>` : ''}
@@ -73,7 +74,7 @@ export function wordTable(entries, kind, showGroup = true) {
   if (!entries.length) return `
     <div class="empty">
       <span lang="ja">探</span><h2>Пока ничего не нашлось</h2>
-      <p>Попробуйте другое чтение или английское значение.</p>
+      <p>Попробуйте другое чтение, русский или английский перевод.</p>
       <button class="secondary" id="reset-search">Сбросить фильтры</button>
     </div>
   `;

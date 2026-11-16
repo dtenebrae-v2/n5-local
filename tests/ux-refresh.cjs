@@ -24,6 +24,10 @@ module.exports = async function uxChecks(page, base) {
   assert.equal(requests.filter(url => url.includes('/api/training-words')).length, 1);
   assert.equal(requests.filter(url => url.includes('/api/words?')).length, 0);
   const input = page.locator('#practice-answer');
+  assert.equal(await page.locator('#game-length input[value="10"]').isChecked(), true);
+  assert.match(await page.locator('#game-goal').innerText(), /10 заданий/);
+  assert.equal(await page.locator('#game-next').isHidden(), true);
+  assert.equal(await page.locator('#practice-reveal').isVisible(), true);
   assert.ok((await input.boundingBox()).y < 844, 'Answer is on the first mobile screen');
   await choose(page, '#game-kind input[value=nouns]');
   const originalId = await page.locator('#game-question').getAttribute('data-word');
@@ -46,12 +50,13 @@ module.exports = async function uxChecks(page, base) {
   const reading = await page.locator('.practice-reading').innerText();
   const form = await page.locator('#game-question').getAttribute('data-form');
   await input.fill(reading + { past: 'でした', negative: 'じゃないです', past_negative: 'じゃなかったです' }[form]);
-  const top = () => page.locator('#game-next').evaluate(el => el.getBoundingClientRect().top + scrollY);
-  const before = await top();
+  const before = await page.locator('#practice-form [type=submit]').evaluate(el => el.getBoundingClientRect().top + scrollY);
   assert.equal(await page.locator('#practice-form [type=submit]').evaluate(el => el.classList.contains('primary')), true);
   await input.press('Enter');
   assert.equal(await page.locator('#game-next').evaluate(el => el.classList.contains('primary')), true);
-  assert.equal(await top(), before, 'Feedback must not move the next button');
+  assert.equal(await page.locator('#game-next').evaluate(el => el.getBoundingClientRect().top + scrollY), before, 'Next replaces Check in the same action position');
+  assert.equal(await page.locator('#practice-form [type=submit]').isHidden(), true);
+  assert.equal(await page.locator('#practice-reveal').isHidden(), true);
   await page.locator('#game-finish').click();
   assert.equal(await page.evaluate(() => document.activeElement.id), 'game-summary-title');
   assert.equal(await page.locator('[data-result=hinted]').count(), 1);

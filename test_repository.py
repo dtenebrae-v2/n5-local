@@ -15,6 +15,13 @@ COLLECTIONS = {item['id'] for item in CATALOG.public['collections']}
 
 
 class RepositoryTests(unittest.TestCase):
+    def test_russian_and_english_search_find_same_water(self):
+        russian = REPOSITORY.words({'collection': ['complete'], 'q': ['вода']})['entries']
+        self.assertTrue(any(row['kanji'] == 'お水' for row in russian))
+        water = next(row for row in russian if row['kanji'] == 'お水')
+        self.assertIn('water', water['meaning'])
+        self.assertIn('вода', water['meaning_ru'])
+
     def test_related_groups_preserve_homonyms(self):
         rows = REPOSITORY.words({'collection': ['complete']}, paginate=False)
         by_id = {row['id']: row for row in rows}

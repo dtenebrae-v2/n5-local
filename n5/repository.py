@@ -55,6 +55,7 @@ class VocabularyRepository:
             'kanji': word['kanji'], 'furigana': ' / '.join(r['kana'] for r in word['readings']),
             'romaji': ' / '.join(r['romaji'] for r in word['readings']),
             'meaning': '; '.join(word['meanings']['en']), 'type': word['verb_type'],
+            'meaning_ru': '; '.join(word['meanings'].get('ru', [])),
             'context': word['context'], 'vocabulary_task': word.get('vocabulary_task'),
             'source_url': next((s for s in word['sources'] if s.endswith('/' + collection)),
                                next(iter(word['sources']), '')),
@@ -88,7 +89,7 @@ class VocabularyRepository:
         query = params.get('q', [''])[0].strip()[:200].casefold()
         if query:
             return [row for row in candidates if any(query in str(row[field]).casefold()
-                    for field in ['kanji', 'furigana', 'romaji', 'meaning'])]
+                    for field in ['kanji', 'furigana', 'romaji', 'meaning', 'meaning_ru'])]
         return candidates
 
     def count(self, collection=None):

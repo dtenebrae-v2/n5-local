@@ -14,6 +14,7 @@ module.exports = async function trainingSessionChecks(page, base) {
   }
   assert.equal(await question.getAttribute('data-word'), first, 'First error returns after three other questions');
   assert.equal(await question.getAttribute('data-form'), 'te');
+  await choose(page, '#game-length input[value="20"]');
   await choose(page, '#game-length input[value="10"]');
   for (let i = 0; i < 4; i++) {
     await input.fill('あ'); await input.press('Enter'); await input.press('Shift+Enter');

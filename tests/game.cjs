@@ -39,7 +39,8 @@ module.exports = async function gameChecks(page, base) {
   await input.fill(await expected());
   await submit();
   assert.equal(await feedback.getAttribute('data-status'), 'correct');
-  await submit();
+  assert.equal(await page.locator('#practice-form [type=submit]').isHidden(), true);
+  assert.equal(await page.locator('#game-next').isVisible(), true);
   assert.equal(await score.innerText(), 'С первой попытки: 0 из 1');
   const first = await question.getAttribute('data-word');
   await input.press('Shift+Enter');
@@ -62,7 +63,7 @@ module.exports = async function gameChecks(page, base) {
   assert.match(await feedback.innerText(), /Правильный ответ:/);
   assert.equal(await score.innerText(), 'С первой попытки: 0 из 3');
   await page.locator('#game-next').click();
-  await page.locator('#game-next').click();
+  await input.press('Shift+Enter');
   assert.equal(await score.innerText(), 'С первой попытки: 0 из 4');
   await choose(page, '#game-kind input[value="verbs"]');
   await choose(page, '#game-mode input[value=all]');
@@ -94,12 +95,13 @@ module.exports = async function gameChecks(page, base) {
   await choose(page, '#game-mode input[value=te]');
   assert.equal(await question.getAttribute('data-form'), 'te');
   await choose(page, '#game-mode input[value=all]');
+  await choose(page, '#game-length input[value="0"]');
   const seen = new Set();
   for (let i = 0; i < 12; i++) {
     const id = await question.getAttribute('data-word');
     // Skipped words are deliberately repeated after several questions.
     seen.add(id);
-    await page.locator('#game-next').click();
+    await input.press('Shift+Enter');
   }
   await page.locator('#practice-rules').click();
   await page.waitForSelector('.practice-rules-dialog[open]');

@@ -46,7 +46,15 @@ def apply_updates(data_directory, path):
         existing.add(identity(word))
         changed = True
     bundled_tasks = {identity(w): w for w in bundled['words'] if 'vocabulary_task' in w}
+    bundled_words = {identity(w): w for w in bundled['words']}
     for word in document['words']:
+        original = bundled_words.get(identity(word))
+        # Match content, not numeric IDs: user dictionaries can assign IDs differently.
+        # Never overwrite a user's translation or attach a gloss to an edited meaning.
+        if (original and original['meanings'].get('ru') and not word['meanings'].get('ru')
+                and original['meanings']['en'] == word['meanings']['en']):
+            word['meanings']['ru'] = copy.deepcopy(original['meanings']['ru'])
+            changed = True
         task = bundled_tasks.get(identity(word))
         if task and task['meanings'] == word['meanings'] and 'vocabulary_task' not in word:
             word['vocabulary_task'] = copy.deepcopy(task['vocabulary_task'])

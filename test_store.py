@@ -14,6 +14,32 @@ PAYLOAD = {'kanji': '試験語', 'readings': [{'kana': 'しけんご', 'romaji':
 
 
 class StoreTests(unittest.TestCase):
+    def test_russian_meanings_survive_add_and_restart(self):
+        self.store.add({**PAYLOAD, 'meanings_ru': ['тестовое слово']})
+        with self.assertRaises(WordError) as duplicate:
+            self.store.add(PAYLOAD)
+        self.assertEqual(duplicate.exception.status, 409)
+        restarted = VocabularyStore(DATA, self.path)
+        rows = restarted.catalog.repository.words({'q': ['тестовое слово']})['entries']
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]['meaning_ru'], 'тестовое слово')
+
+    def test_translation_migration_preserves_user_edits(self):
+        document = json.loads((DATA / 'vocabulary.json').read_text())
+        for word in document['words']:
+            word['meanings'].pop('ru', None)
+        document['words'][0]['meanings']['ru'] = ['свой перевод']
+        document['words'][1]['meanings']['en'] = ['custom gloss']
+        self.path.write_text(json.dumps(document, ensure_ascii=False))
+        VocabularyStore(DATA, self.path)
+        words = json.loads(self.path.read_text())['words']
+        self.assertEqual(words[0]['meanings']['ru'], ['свой перевод'])
+        self.assertNotIn('ru', words[1]['meanings'])
+        self.assertIn('ru', words[2]['meanings'])
+        before = self.path.read_bytes()
+        VocabularyStore(DATA, self.path)
+        self.assertEqual(self.path.read_bytes(), before)
+
     def setUp(self):
         self.directory = tempfile.TemporaryDirectory()
         self.addCleanup(self.directory.cleanup)

@@ -14,6 +14,11 @@ module.exports = async function addWordChecks(page, base) {
   assert.equal((await (await page.request.get(base + '/api/health')).json()).entries, before.entries);
   await form.locator('[name=kanji]').fill('試験語');
   await form.locator('[name=kana]').fill('しけんご');
+  assert.equal(await form.locator('[name=romaji]').inputValue(), 'shikengo');
+  await form.locator('[name=romaji]').fill('shikengo-custom');
+  await form.locator('[name=kana]').fill('しけん');
+  assert.equal(await form.locator('[name=romaji]').inputValue(), 'shikengo-custom');
+  await form.locator('[name=kana]').fill('しけんご');
   await form.locator('[name=romaji]').fill('shikengo');
   await form.locator('[name=meaning]').fill('test vocabulary item');
   await form.locator('[name=collection][value="nouns"]').check();
@@ -23,6 +28,8 @@ module.exports = async function addWordChecks(page, base) {
   assert.equal(await form.evaluate(el => el.checkValidity()), true);
   await page.setViewportSize({ width: 390, height: 844 });
   assert.equal(await page.locator('.add-word-dialog').evaluate(el => el.scrollWidth <= el.clientWidth), true);
+  const saveBounds = await form.locator('[type=submit]').boundingBox();
+  assert.ok(saveBounds.y >= 0 && saveBounds.y + saveBounds.height <= 844, 'save remains visible at mobile height');
   if (process.env.SCREENSHOT_DIR) {
     fs.mkdirSync(process.env.SCREENSHOT_DIR, { recursive: true });
     await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, 'n5-add-word-mobile.png') });

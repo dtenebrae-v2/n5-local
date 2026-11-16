@@ -47,7 +47,7 @@ export async function mountGame(root, catalog, signal) {
       </div></fieldset>
       <details id="game-options"><summary>Материал и длительность</summary>
         <fieldset id="game-length" class="practice-target"><legend>Заданий</legend><div class="game-modes">
-        ${[10,20,50,0].map(n => `<label class="form-choice"><input type="radio" name="game-length" value="${n}" ${n === 0 ? 'checked' : ''}><span>${n || 'Без ограничения'}</span></label>`).join('')}</div></fieldset>
+        ${[10,20,50,0].map(n => `<label class="form-choice"><input type="radio" name="game-length" value="${n}" ${n === 10 ? 'checked' : ''}><span>${n || 'Без ограничения'}</span></label>`).join('')}</div></fieldset>
         <fieldset id="game-source" class="practice-target"><legend>Материал</legend><div class="game-modes">
           <label class="form-choice"><input type="radio" name="game-source" value="all" checked><span>Все задания</span></label>
           <label class="form-choice"><input type="radio" name="game-source" value="mistakes"><span>Мои ошибки</span></label>
@@ -60,7 +60,7 @@ export async function mountGame(root, catalog, signal) {
       </details></div>
     <p class="practice-help"><span id="settings-effect">Изменения начнут новое занятие. Отмена сохранит текущее.</span></p>
     <div class="practice-actions"><button class="primary" id="settings-apply">Начать новое занятие</button><button class="secondary" id="settings-cancel">Отмена</button></div></dialog>
-    <p id="game-progress" aria-live="polite"></p>
+    <p id="game-goal" class="practice-help"></p><p id="game-progress" aria-live="polite"></p>
     <p id="game-storage" class="practice-help" role="status"></p>
     <p id="game-score" aria-live="polite"></p><p id="game-hint-status" role="status"></p>
     <section id="game-summary" hidden></section>
@@ -90,6 +90,9 @@ export async function mountGame(root, catalog, signal) {
   const actions = root.querySelector('#practice-form .practice-actions');
   actions.insertBefore(root.querySelector('#game-next'), root.querySelector('#practice-reveal'));
   actions.append(root.querySelector('#game-unknown'));
+  actions.insertAdjacentHTML('beforeend', '<p class="practice-help" id="practice-action-help">«Показать ответ» — посмотреть решение; «Не знаю» — отметить затруднение и посмотреть решение. Оба варианта попадут в повтор ошибок.</p>');
+  root.querySelector('#practice-reveal').setAttribute('aria-describedby', 'practice-action-help');
+  root.querySelector('#game-unknown').setAttribute('aria-describedby', 'practice-action-help');
   actions.after(root.querySelector('#practice-input-help'));
   root.querySelector('.game-card').append(root.querySelector('#game-finish'));
   root.querySelector('#game-next').classList.add('game-advance');
@@ -125,6 +128,11 @@ export async function mountGame(root, catalog, signal) {
     const hasAnswer = ['correct', 'incorrect', 'answer', 'unknown'].includes(feedback.dataset.status);
     const submit = root.querySelector('#practice-form [type="submit"]');
     const nextButton = root.querySelector('#game-next');
+    submit.hidden = hasAnswer;
+    nextButton.hidden = !hasAnswer;
+    root.querySelector('#practice-reveal').hidden = hasAnswer;
+    root.querySelector('#game-unknown').hidden = hasAnswer;
+    root.querySelector('#practice-action-help').hidden = hasAnswer;
     submit.classList.toggle('primary', !hasAnswer);
     submit.classList.toggle('secondary', hasAnswer);
     nextButton.classList.toggle('primary', hasAnswer);
@@ -279,6 +287,7 @@ export async function mountGame(root, catalog, signal) {
     }
     updateOptions();
     appliedSettings = settings();
+    root.querySelector('#game-goal').textContent = limit() ? `Цель: ${limit()} заданий, затем итоги. Ошибки повторятся по ходу занятия.` : 'Свободная практика без ограничения. Завершите занятие, когда будете готовы.';
     root.querySelector('#game-settings-summary').textContent = ['game-task', 'game-kind', 'game-mode', 'game-topic'].filter(id => !root.querySelector('#' + id).hidden).map(id => root.querySelector(`#${id} input:checked`)?.closest('label').querySelector('span').textContent).filter(Boolean).join(' · ') + ` · ${limit() || '∞'} заданий`;
     const candidates = (isGrammar() ? grammarPool : words).filter(word => (isGrammar() || !selected.value || word.collection === selected.value)
       && (!value('game-topic') || word.entry.group_id === value('game-topic'))
@@ -335,7 +344,7 @@ export async function mountGame(root, catalog, signal) {
   root.querySelector('#practice-rules').addEventListener('click', rules, { signal });
   function updateShortcutLabels(keys) {
     if (!keys) return;
-    root.querySelector('#game-shortcuts').textContent = `Enter — проверить · ${keys.next} — дальше · ${keys.rules} — справка · ${keys.unknown} — не знаю`;
+    root.querySelector('#game-shortcuts').textContent = `Enter — проверить · ${keys.next} — дальше / пропустить · ${keys.rules} — справка · ${keys.unknown} — не знаю`;
     for (const [id, action] of [['game-next','next'], ['practice-rules','rules'], ['game-unknown','unknown']]) {
       root.querySelector('#' + id).setAttribute('aria-keyshortcuts', keys[action].replace('Ctrl', 'Control'));
     }
