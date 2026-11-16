@@ -7,6 +7,7 @@ import unittest
 
 from server import REPOSITORY, CATALOG
 from n5.grammar_practice import load_grammar
+from n5.mock_exam import load_mock_exam
 from n5.repository import VocabularyRepository
 from n5.vocabulary import load, validate, add_word, read_json
 
@@ -127,6 +128,32 @@ class VocabularyTests(unittest.TestCase):
 
 
 class GrammarDataTests(unittest.TestCase):
+    def test_preparation_curriculum_rejects_missing_rules_or_targeted_examples(self):
+        original = read_json(DATA.parent / 'mock-exam.json')
+        self.assertEqual(len(load_mock_exam(DATA.parent / 'mock-exam.json')['curriculum']['lessons']), 25)
+        cases = []
+        missing = copy.deepcopy(original)
+        missing['curriculum']['lessons'].pop()
+        cases.append(missing)
+        missing = copy.deepcopy(original)
+        missing['curriculum']['lessons'][4]['objectives'][0]['rule'] = ''
+        cases.append(missing)
+        missing = copy.deepcopy(original)
+        missing['items'] = [q for q in missing['items'] if q['skill'] != 'foundations:destination']
+        cases.append(missing)
+        missing = copy.deepcopy(original)
+        missing['curriculum']['lessons'][0]['objectives'][0]['minimumExamples'] = 1
+        cases.append(missing)
+        missing = copy.deepcopy(original)
+        missing['curriculum']['reviews'][0]['lessonNumbers'] = [1, 2, 3, 4, 6]
+        cases.append(missing)
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'mock.json'
+            for data in cases:
+                path.write_text(json.dumps(data, ensure_ascii=False))
+                with self.assertRaises(ValueError):
+                    load_mock_exam(path)
+
     def test_invalid_grammar_data_is_rejected(self):
         original = read_json(DATA.parent / 'grammar-practice.json')
         cases = []

@@ -1,4 +1,5 @@
 import { randomFromSeed } from './mock-engine.js';
+import { lessonItems, reviewFor } from './preparation-curriculum.js';
 export const PREPARATION_KEY = 'n5.preparation.v1';
 const DAY = 86400000;
 const REVIEW_INTERVALS = [1, 3, 7, 14, 30];
@@ -12,6 +13,12 @@ export function loadPreparation(storage = localStorage) {
     if (data?.version === 1 && data.questions && !Array.isArray(data.questions)
         && data.topics && !Array.isArray(data.topics) && Array.isArray(data.exams)) {
       data.skills ||= {};
+      if (data.reviewRuns !== undefined) data.reviewRuns = Array.isArray(data.reviewRuns) ? data.reviewRuns.filter(run =>
+        run && typeof run.id==='string' && typeof run.review==='string' && Number.isFinite(run.at)
+        && Number.isInteger(run.total) && run.total>0 && Number.isInteger(run.correct) && run.correct>=0 && run.correct<=run.total
+        && Array.isArray(run.lessons) && run.lessons.length===5 && run.lessons.every(l=>l
+          && Number.isInteger(l.number) && l.number>=1 && l.number<=25 && Number.isInteger(l.total) && l.total>0
+          && Number.isInteger(l.correct) && l.correct>=0 && l.correct<=l.total)).slice(-30) : [];
       return data;
     }
   } catch { /* Storage must not prevent practice. */ }
@@ -140,26 +147,35 @@ export function dueSkills(progress, now = Date.now()) {
 export function dueTopics(progress, now = Date.now()) {
   return [...new Set(dueSkills(progress, now).map(key => progress.skills[key].topic))];
 }
-export function practicePlan(bank, progress, { topic = '', mode = 'all', count = 10, seed = Date.now(), now = Date.now() } = {}) {
+export function practicePlan(bank, progress, { topic = '', lesson = '', mode = 'all', count = 10, seed = Date.now(), now = Date.now() } = {}) {
   const weak = weakTopics(progress);
   const keys = mode === 'mistakes' ? troubleSkills(progress) : mode === 'due' ? dueSkills(progress,now) : null;
   const random = randomFromSeed(seed), used = new Set(), skillCounts = new Map();
+  const review = reviewFor(bank, lesson), lessonCounts = new Map();
+  const reviewPools = review ? new Map(review.lessonNumbers.map(number=>[number,new Set(lessonItems(bank,number).map(q=>q.id))])) : null;
+  const lessonIds = lesson ? new Set(lessonItems(bank, lesson).map(q => q.id)) : null;
   const candidates = bank.items.filter(q => (!topic || q.topic === topic)
+    && (!lessonIds || lessonIds.has(q.id))
     && (!keys || keys.includes(skillKey(q))) && (mode !== 'weak' || weak.includes(q.topic)))
     .map(q => ({ q, random: random() }));
   const questions = [];
   while (questions.length < count) {
-    const eligible = candidates.filter(({q}) => !used.has(q.family || q.passage || q.id));
+    let eligible = candidates.filter(({q}) => !used.has(q.family || q.passage || q.id));
+    const reviewLesson = review ? [...review.lessonNumbers]
+      .filter(number=>eligible.some(({q})=>reviewPools.get(number).has(q.id)))
+      .sort((a,b)=>(lessonCounts.get(a)||0)-(lessonCounts.get(b)||0) || a-b)[0] : null;
+    if (reviewLesson) eligible = eligible.filter(({q})=>reviewPools.get(reviewLesson).has(q.id));
     eligible.sort((a,b) => (skillCounts.get(skillKey(a.q)) || 0) - (skillCounts.get(skillKey(b.q)) || 0)
       || (progress.questions[a.q.id]?.attempts || 0) - (progress.questions[b.q.id]?.attempts || 0) || a.random-b.random);
     if (!eligible.length) break;
     const { q } = eligible[0], key = skillKey(q);
     used.add(q.family || q.passage || q.id);
     skillCounts.set(key, (skillCounts.get(key) || 0)+1);
+    if (reviewLesson) lessonCounts.set(reviewLesson,(lessonCounts.get(reviewLesson)||0)+1);
     const choices = q.choices.map((text,i) => ({ text, correct:i===q.correct, random:random() })).sort((a,b)=>a.random-b.random);
     const passage = bank.passages.find(p => p.id === q.passage);
-    questions.push({ ...q, choices:choices.map(c=>c.text), correct:choices.findIndex(c=>c.correct),
+    questions.push({ ...q, ...(reviewLesson?{reviewLesson}:{}), choices:choices.map(c=>c.text), correct:choices.findIndex(c=>c.correct),
       hint:bank.skills.find(s=>s.id===q.skill) || {}, passageText:passage?.text || '', translation:passage?.translation || '', wordRefs:passage?.words || [], fresh:!progress.questions[q.id] });
   }
-  return { questions, index:0, results:[], hintLevel:0, started:now, topic, mode };
+  return { questions, index:0, results:[], hintLevel:0, started:now, topic, lesson, mode };
 }

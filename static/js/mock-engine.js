@@ -23,7 +23,7 @@ export function createExam(bank, seed, recent = [], now = Date.now()) {
   const sections = BLUEPRINT.map(section => {
     const questions = [];
     for (const [type, count] of Object.entries(section.quotas)) {
-      const candidates = bank.items.filter(q => q.type === type);
+      const candidates = bank.items.filter(q => q.type === type && !q.practiceOnly);
       const groups = new Map();
       for (const q of candidates) {
         const family = q.passage || q.family || q.id;

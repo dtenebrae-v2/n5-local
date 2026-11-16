@@ -211,6 +211,9 @@ class ServiceTests(unittest.TestCase):
 
     def test_catalog_counts_routes_and_modules(self):
         catalog = self.get('/api/catalog')
+        for path in ['/jlpt/n5/course', '/jlpt/n5/course/reviews']:
+            with urlopen(self.base + path) as response:
+                self.assertEqual(response.status, 200)
         for collection in catalog['collections']:
             data = self.get('/api/words?' + urlencode({'collection': collection['id']}))
             self.assertEqual(collection['count'], data['total'])

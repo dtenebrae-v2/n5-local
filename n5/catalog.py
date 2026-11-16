@@ -35,4 +35,5 @@ class Catalog:
         self.routes.add(f'{BASE}/counters')
         self.routes.add(f'{BASE}/workbooks')
         self.routes.add(f'{BASE}/exams')
+        self.routes.update({f'{BASE}/course', f'{BASE}/course/reviews'})
         self.routes.update(item['path'] for item in collections + sections + lesson_metadata)

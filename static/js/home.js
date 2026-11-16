@@ -5,10 +5,11 @@ export function homePage(catalog, storage = localStorage) {
   const base = catalog.base;
   const training = loadProgress(storage), preparation = loadPreparation(storage);
   const prep = preparation.session;
+  const prepPath = prep?.lesson ? (String(prep.lesson).startsWith('review-') ? `${base}/course/reviews` : `${base}/course`) : `${base}/preparation`;
   const prepOngoing = Array.isArray(prep?.questions) && prep.questions.length && Number.isInteger(prep.index) && prep.index >= 0 && prep.index < prep.questions.length;
   const formsOngoing = training.session?.current && !training.session.finished;
   const resume = prepOngoing
-    ? `<a class="primary home-cta" href="${base}/preparation">Продолжить · задание ${prep.index + 1} из ${prep.questions.length}</a>`
+    ? `<a class="primary home-cta" href="${prepPath}">Продолжить · задание ${prep.index + 1} из ${prep.questions.length}</a>`
     : formsOngoing ? `<a class="primary home-cta" href="${base}/practice">Продолжить слова и формы</a>` : '';
   const mistakes = troubleSkills(preparation).length;
   const due = dueSkills(preparation).length;
@@ -18,6 +19,7 @@ export function homePage(catalog, storage = localStorage) {
     <a class="${resume ? 'secondary' : 'primary'} home-cta" href="${base}/preparation?quick=1">Начать · 10 заданий</a>
     <p class="home-help">Смешанное занятие по темам N5. Ответы и объяснения после каждого вопроса.</p></section>
     <div class="home-grid">
+      <section class="home-card"><h2>Курс N5</h2><p>25 уроков с правилами и заданиями. Повторение после каждых пяти уроков.</p><a href="${base}/course">Уроки 1–25 →</a><a href="${base}/course/reviews">Повторение по урокам →</a></section>
       <section class="home-card"><h2>Повторение</h2><p>${mistakes ? `Правил с ошибками: ${mistakes}.` : 'Ошибки для повторения появятся после занятий.'} ${due ? `К повторению сегодня: ${due}.` : ''}</p>
         ${mistakes ? `<a class="secondary home-cta" href="${base}/preparation?mode=mistakes">Повторить ошибки</a>` : ''}
         ${due ? `<a class="secondary home-cta" href="${base}/preparation?mode=due">Повторить сегодня</a>` : ''}

@@ -35,7 +35,7 @@ async function render(focusPage = false) {
   const route = resolveRoute(location.pathname, catalog);
   content.classList.toggle('home-screen', route.type === 'home');
   content.classList.toggle('book-screen', route.type === 'book');
-  content.classList.toggle('practice-screen', ['game', 'mock', 'preparation', 'book', 'counters', 'workbook', 'exam-sets', 'exam-set'].includes(route.type));
+  content.classList.toggle('practice-screen', ['game', 'mock', 'preparation', 'course', 'book', 'counters', 'workbook', 'exam-sets', 'exam-set'].includes(route.type));
   if (route.canonical) history.replaceState({}, '', route.canonical + location.search + location.hash);
   document.title = `${route.title} · N5`;
   menu.classList.remove('open');
@@ -43,7 +43,7 @@ async function render(focusPage = false) {
   menu.querySelectorAll('a').forEach((link) => {
     const path = location.pathname.replace(/\/$/, '');
     const active = path === link.pathname
-      || (link.pathname !== catalog.base && path.startsWith(link.pathname + '/'));
+      || (![catalog.base, `${catalog.base}/course`].includes(link.pathname) && path.startsWith(link.pathname + '/'));
     link.classList.toggle('active', active);
     if (active) link.setAttribute('aria-current', 'page');
     else link.removeAttribute('aria-current');
@@ -61,6 +61,8 @@ async function render(focusPage = false) {
       await mountLibrary(content, signal, route.bookId);
     } else if (route.type === 'preparation') {
       await mountPreparation(content, signal);
+    } else if (route.type === 'course') {
+      await mountPreparation(content, signal, { view: route.view });
     } else if (route.type === 'mock') {
       await mountMockExam(content, signal);
     } else if (route.type === 'game') {

@@ -23,6 +23,8 @@ export function navigation(catalog) {
     ${group('practice','Тренировки',`<a href="${catalog.base}/practice">Слова и формы</a>
     <a href="${catalog.base}/counters">Счётные суффиксы</a>`)}
     ${group('grammar','Грамматика',grammar)}
+    ${group('course','Курс N5',`<a href="${catalog.base}/course">Уроки 1–25</a>
+    <a href="${catalog.base}/course/reviews">Повторение по урокам</a>`)}
     ${group('exams','Подготовка и экзамены N5',`
     <a href="${catalog.base}/preparation">Задания по темам</a>
     <a href="${catalog.base}/workbooks">Учебник Sō-matome N5</a>

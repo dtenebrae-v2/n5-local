@@ -12,6 +12,8 @@ export function resolveRoute(pathname, catalog) {
   const exam = path.match(new RegExp(`^${catalog.base}/exams/([a-z0-9-]+)$`));
   if (exam) return { type:'exam-set', title:'Вариант N5', examId:exam[1] };
   if (path === `${catalog.base}/preparation`) return { type: 'preparation', title: 'Подготовка N5' };
+  if (path === `${catalog.base}/course`) return { type: 'course', view: 'lessons', title: 'Уроки N5' };
+  if (path === `${catalog.base}/course/reviews`) return { type: 'course', view: 'reviews', title: 'Повторение по урокам' };
   if (path === `${catalog.base}/library`) return { type:'library',title:'Библиотека' };
   if (path === `${catalog.base}/workbooks`) return { type:'workbooks', title:'Упражнения по книге' };
   const workbook = path.match(new RegExp(`^${catalog.base}/workbooks/([a-z0-9-]+)$`));

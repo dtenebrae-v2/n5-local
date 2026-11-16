@@ -6,6 +6,17 @@
 .prep-mode-unavailable {padding:10px 12px; gap:3px;}
 .prep-mode-unavailable strong {font-size:.9rem;}
 .prep-mode-unavailable span {font-size:.8rem;}
+.prep-lessons {margin-bottom:20px;}
+.prep-lessons label {display:block; margin-bottom:6px;}
+.prep-lessons select {width:100%; max-width:100%; min-height:48px; padding:10px; font:inherit; border:1px solid var(--line); border-radius:6px; background:var(--paper); color:var(--ink);}
+.prep-lesson-rules {margin-top:16px;}
+.prep-lesson-rules summary {min-height:44px; cursor:pointer; font-weight:650;}
+.prep-lesson-rules article {border-top:1px solid var(--line); padding:12px 0;}
+.prep-lesson-rules h3 {font-size:1rem; margin:0 0 8px;}
+.prep-lesson-rules p {overflow-wrap:anywhere;}
+.prep-rule-sources a {display:block; padding:8px 0; text-decoration:underline;}
+.prep-review-rules > summary, .prep-review-history > summary {min-height:44px; padding:10px 0; cursor:pointer;}
+.prep-review-results, .prep-review-history article {padding:16px 0; border-top:1px solid var(--line);}
 @media (max-width:480px) {
   .prep-settings .prep-mode-grid {grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px;}
   .prep-settings .prep-mode-card {padding:10px;}

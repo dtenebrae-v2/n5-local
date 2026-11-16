@@ -1,4 +1,5 @@
 import json
+from urllib.parse import urlparse
 
 TYPES = {'reading-kanji', 'orthography', 'context', 'paraphrase', 'grammar-choice',
          'sentence-order', 'text-grammar', 'reading-text'}
@@ -53,4 +54,51 @@ def load_mock_exam(path):
             families = {q['family'] for q in data['items'] if q['topic'] == topic}
             if len(families) < coverage['minimumIndependentExamples']:
                 raise ValueError(f'Insufficient independent examples: {topic}')
+        for requirement in coverage.get('requirements', []):
+            validate_requirement(requirement, data, skills)
+    curriculum = data.get('curriculum')
+    if curriculum:
+        if [lesson['number'] for lesson in curriculum['lessons']] != list(range(1, 26)):
+            raise ValueError('Preparation curriculum must contain lessons 1–25 in order')
+        if not curriculum.get('sources') or any(
+            urlparse(source.get('url', '')).scheme != 'https'
+            for source in curriculum['sources']
+        ):
+            raise ValueError('Missing curriculum sources')
+        objective_ids = set()
+        if curriculum.get('minimumExamplesPerObjective', 0) < 8:
+            raise ValueError('Each lesson objective requires at least eight independent examples')
+        for lesson in curriculum['lessons']:
+            if not lesson.get('title') or not lesson.get('objectives'):
+                raise ValueError('Empty preparation lesson')
+            for objective in lesson['objectives']:
+                if objective.get('minimumExamples', 0) < curriculum['minimumExamplesPerObjective']:
+                    raise ValueError('Lesson objective below the curriculum coverage floor')
+                if objective['id'] in objective_ids or not objective.get('rule') or not objective.get('example'):
+                    raise ValueError('Incomplete or repeated lesson objective')
+                objective_ids.add(objective['id'])
+                validate_requirement(objective, data, skills)
+        reviews = curriculum.get('reviews', [])
+        if [review.get('afterLesson') for review in reviews] != [5, 10, 15, 20, 25]:
+            raise ValueError('Missing five-lesson preparation reviews')
+        for review in reviews:
+            end = review['afterLesson']
+            if (review.get('id') != f'review-{end}' or not review.get('title')
+                    or review.get('lessonNumbers') != list(range(end - 4, end + 1))):
+                raise ValueError('Invalid preparation review lesson range')
     return data
+
+
+def validate_requirement(requirement, data, skills):
+    """Count targeted independent questions, never incidental text occurrences."""
+    skill_ids = set(requirement.get('skillIds', []))
+    item_ids = set(requirement.get('itemIds', []))
+    known_items = {q['id'] for q in data['items']}
+    minimum = requirement.get('minimumExamples')
+    if (not requirement.get('id') or not requirement.get('label')
+            or not skill_ids <= skills.keys() or not item_ids <= known_items
+            or type(minimum) is not int or minimum < 1 or not (skill_ids or item_ids)):
+        raise ValueError('Invalid preparation coverage requirement')
+    families = {q['family'] for q in data['items'] if q['skill'] in skill_ids or q['id'] in item_ids}
+    if len(families) < minimum:
+        raise ValueError(f'Insufficient targeted examples: {requirement["id"]}')

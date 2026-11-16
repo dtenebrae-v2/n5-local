@@ -1,5 +1,6 @@
 import { escapeHTML as esc } from './ui.js';
 import { topicAssessment, dueSkills, troubleSkills, weakTopics } from './preparation-progress.js';
+import { lessonFor, reviewFor } from './preparation-curriculum.js';
 
 export const TOPIC_GROUPS = [
   {id:'words',label:'Слова и кандзи',topics:['kana','kanji','vocabulary','numbers','dates','demonstratives']},
@@ -17,6 +18,7 @@ export function preparationSettings(saved, bank) {
   return {
     mode:Object.hasOwn(MODE_LABELS,saved?.mode) ? saved.mode : 'all',
     topic:bank.topics.some(t=>t.id===saved?.topic) ? saved.topic : '',
+    lesson:lessonFor(bank,saved?.lesson) || reviewFor(bank,saved?.lesson) ? String(saved.lesson) : '',
     category:TOPIC_GROUPS.some(g=>g.id===saved?.category) ? saved.category : 'words',
     count:[5,10,20].includes(saved?.count) ? saved.count : 10,
     query:typeof saved?.query === 'string' ? saved.query.slice(0,100) : '',
@@ -26,7 +28,7 @@ export function preparationSettings(saved, bank) {
 export function preparationModes(progress, mode) {
   const mistakes=troubleSkills(progress).length, weak=weakTopics(progress).length, due=dueSkills(progress).length;
   return `<div class="prep-mode-grid" role="group" aria-label="Режим занятия">${[
-    ['all','Одна тема или смешанное занятие',true],
+    ['all','Тема или смешанное занятие',true],
     ['mistakes',mistakes ? `Слова и правила с ошибками: ${mistakes}` : 'Пока нет ошибок для повторения',!!mistakes],
     ['weak',weak ? `Темы, которым нужна практика: ${weak}` : 'Пока нет слабых тем',!!weak],
     ['due',due ? `К повторению по расписанию: ${due}` : 'На сегодня повторений нет',!!due],

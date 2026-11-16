@@ -19,6 +19,16 @@ const trainingSession = finished => ({
   session:{current:{id:1}, finished, deck:[], retry:[], attempts:[]},
 });
 
+test('course links and saved lesson sessions open their dedicated sections', () => {
+  assert.deepEqual(resolveRoute('/jlpt/n5/course',catalog),{type:'course',title:'Уроки N5',view:'lessons'});
+  assert.deepEqual(resolveRoute('/jlpt/n5/course/reviews',catalog),{type:'course',title:'Повторение по урокам',view:'reviews'});
+  const preparation=emptyProgress();
+  preparation.session={questions:[{id:'q'}],index:0,lesson:'17'};
+  assert.match(homePage(catalog,storage({preparation})),/href="\/jlpt\/n5\/course">Продолжить/);
+  preparation.session.lesson='review-20';
+  assert.match(homePage(catalog,storage({preparation})),/href="\/jlpt\/n5\/course\/reviews">Продолжить/);
+});
+
 test('empty home offers a ten-question lesson and useful destinations', () => {
   const html = homePage(catalog, storage());
   assert.match(html, /href="\/jlpt\/n5\/preparation\?quick=1">Начать · 10 заданий/);

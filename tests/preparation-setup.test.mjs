@@ -18,5 +18,5 @@ test('topic search crosses groups and retains the selected topic',()=>{
 });
 test('invalid saved setup falls back to available choices',()=>{
   assert.deepEqual(preparationSettings({mode:'__proto__',topic:'missing',category:'old',count:999,query:[]},bank),
-    {mode:'all',topic:'',category:'words',count:10,query:''});
+    {mode:'all',topic:'',lesson:'',category:'words',count:10,query:''});
 });
