@@ -14,6 +14,7 @@ export function resolveRoute(pathname, catalog) {
   if (path === `${catalog.base}/preparation`) return { type: 'preparation', title: 'Подготовка N5' };
   if (path === `${catalog.base}/course`) return { type: 'course', view: 'lessons', title: 'Уроки N5' };
   if (path === `${catalog.base}/course/reviews`) return { type: 'course', view: 'reviews', title: 'Повторение по урокам' };
+  if (path === `${catalog.base}/course/workbook`) return { type: 'course-workbook', title: 'Практика по тетради' };
   if (path === `${catalog.base}/library`) return { type:'library',title:'Библиотека' };
   if (path === `${catalog.base}/workbooks`) return { type:'workbooks', title:'Упражнения по книге' };
   const workbook = path.match(new RegExp(`^${catalog.base}/workbooks/([a-z0-9-]+)$`));

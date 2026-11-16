@@ -42,6 +42,10 @@ def check(assets):
 
         try:
             assert get('/api/health')['status'] == 'ok'
+            course = get('/api/course-workbook')
+            assert course['available'] and len(course['items']) == manifest['courseCards']
+            for asset in course['assets'].values():
+                media(asset['url'])
             library = get('/api/library')['books']
             assert len(library) == manifest['books']
             media_count = 0

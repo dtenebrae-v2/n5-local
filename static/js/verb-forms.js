@@ -17,6 +17,21 @@ const EXCEPTIONS = {
 };
 
 export function verbForms(reading, group) {
+  // Compound verbs retain their prefix: 勉強する → 勉強した, 人気がある → 人気がない.
+  const compound = group === 'Irregular' && reading.endsWith('する') && reading !== 'する'
+    ? 'する' : group === 'Godan' && reading.endsWith('ある') && reading !== 'ある' ? 'ある' : null;
+  if (compound) {
+    const prefix = reading.slice(0, -compound.length);
+    const base = verbForms(compound, group);
+    return {
+      ...base,
+      forms: Object.fromEntries(Object.entries(base.forms).map(([key, values]) =>
+        [key, values.map(value => prefix + value)])),
+      naiStem: prefix + base.naiStem,
+      masuStem: prefix + base.masuStem,
+      baStem: prefix + base.baStem,
+    };
+  }
   let naiStem, masuStem, baStem, volitional, imperative, te;
   const root = reading.slice(0, -1);
   if (group === 'Godan' && GODAN_ROWS[reading.at(-1)]) {

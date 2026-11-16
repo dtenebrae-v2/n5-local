@@ -41,6 +41,7 @@ export function lessonPicker(bank, selected = '', {view='all', allowTopics=true}
       ${review ? review.lessonNumbers.map(number=>{const l=lessonFor(bank,number);return `<details class="prep-review-rules"><summary>Урок ${number}. ${esc(l.title)}</summary>${objectives(l)}</details>`;}).join('') : objectives(lesson)}
       <p class="practice-help">Учебная последовательность приложения. Нумерация уроков не является официальной программой JLPT.</p>
       <div class="prep-rule-sources">${source.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a>`).join('')}</div></details>` : '<p class="practice-help">Для каждого урока доступны правила, примеры и задания. Урок 4 посвящён кандзи.</p>'}
+    <p><a href="/jlpt/n5/course/workbook?lesson=${encodeURIComponent(selected || '0')}">Практика по тетради →</a></p>
     </section>`;
 }
 

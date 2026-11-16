@@ -110,7 +110,7 @@ print(json.dumps([{ 'kind': c['practice_kind'], 'entries': REPOSITORY.words({'co
       count++;
     }
   }
-  assert.equal(count, 649);
+  assert.equal(count, 862);
 });
 
 test('Loanword long vowels accept romaji vowels and the kana length mark', () => {

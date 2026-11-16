@@ -48,8 +48,8 @@ class ServiceTests(unittest.TestCase):
 
     def test_training_words_are_unique_and_include_practice_kind(self):
         rows = self.get('/api/training-words')['entries']
-        self.assertEqual(len(rows), 851)
-        self.assertEqual(len({r['id'] for r in rows}), 851)
+        self.assertEqual(len(rows), 1092)
+        self.assertEqual(len({r['id'] for r in rows}), 1092)
         self.assertEqual(next(r for r in rows if r['id'] == 44)['practice_kind'], 'verb')
         all_words = self.get('/api/words?collection=complete&q=ikimasu')['entries']
         self.assertTrue(all(r.get('practice_kind') == 'verb' for r in all_words))
@@ -119,8 +119,8 @@ class ServiceTests(unittest.TestCase):
             self.assertEqual(error.exception.code,404)
 
     def test_counts_and_pagination(self):
-        self.assertEqual(self.get('/api/health')['entries'], 851)
-        expected = {'complete': 772, 'verbs': 115, 'i-adjectives': 58, 'na-adjectives': 37, 'expressions': 21}
+        self.assertEqual(self.get('/api/health')['entries'], 1092)
+        expected = {'complete': 1013, 'verbs': 170, 'i-adjectives': 67, 'na-adjectives': 39, 'expressions': 30}
         for collection, count in expected.items():
             data = self.get('/api/words?' + urlencode({'collection': collection, 'limit': 7, 'offset': 2}))
             self.assertEqual(data['total'], count)
@@ -159,8 +159,8 @@ class ServiceTests(unittest.TestCase):
         data = self.get('/api/words?collection=nouns&limit=200')
         rest = self.get('/api/words?collection=nouns&limit=200&offset=200')
         entries = data['entries'] + rest['entries'] + self.get('/api/words?collection=nouns&limit=200&offset=400')['entries']
-        self.assertEqual(data['total'], 439)
-        self.assertEqual(len({e['id'] for e in entries}), 439)
+        self.assertEqual(data['total'], 586)
+        self.assertEqual(len({e['id'] for e in entries}), 586)
         words = {e['kanji'] for e in entries}
         self.assertTrue({'学校', 'お水', '勉強', '明日'} <= words)
         self.assertFalse({'会う', '青い', 'しかし', '同じ', '私'} & words)
@@ -199,11 +199,11 @@ class ServiceTests(unittest.TestCase):
                 self.assertEqual(entry['collection'], 'nouns')
             if group['id'] in expected:
                 self.assertIn(expected[group['id']], {entry['kanji'] for entry in data['entries']})
-        self.assertEqual(len(seen), 439)
+        self.assertEqual(len(seen), 586)
         for collection in ['nouns', 'verbs']:
             params = urlencode({'collection': collection, 'group': 'nouns:food', 'q': 'milk'})
             data = self.get('/api/words?' + params)
-            self.assertEqual(data['total'], 1 if collection == 'nouns' else 0)
+            self.assertEqual(data['total'], 2 if collection == 'nouns' else 0)
         params = urlencode({'collection': 'nouns', 'group': 'nouns:food', 'q': 'milk'})
         with urlopen(self.base + '/api/export.csv?' + params) as response:
             rows = list(csv.DictReader(io.StringIO(response.read().decode('utf-8-sig'))))
@@ -279,7 +279,7 @@ class ServiceTests(unittest.TestCase):
         post(payload, 403, Origin='http://another-site.test')
         result = post(payload, 201)
         self.assertEqual(self.get('/api/health')['entries'], before + 1)
-        self.assertEqual(next(c['count'] for c in result['catalog']['collections'] if c['id'] == 'nouns'), 440)
+        self.assertEqual(next(c['count'] for c in result['catalog']['collections'] if c['id'] == 'nouns'), 587)
         data = self.get('/api/words?collection=nouns&q=shikengo')
         self.assertEqual(data['entries'][0]['id'], result['id'])
         self.assertEqual(self.get('/api/words?collection=complete&q=shikengo')['total'], 1)

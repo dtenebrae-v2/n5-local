@@ -1866,6 +1866,10 @@
         {
           "kana": "いえ",
           "romaji": "ie"
+        },
+        {
+          "kana": "うち",
+          "romaji": "uchi"
         }
       ],
       "meanings": {
@@ -16798,6 +16802,10 @@
         {
           "kana": "なに",
           "romaji": "nani"
+        },
+        {
+          "kana": "なん",
+          "romaji": "nan"
         }
       ],
       "meanings": {
@@ -30436,6 +30444,8543 @@
       ],
       "notes": [
         "Imported from Yomitan.txt (Anki export; Jitendex / JMdict)."
+      ]
+    },
+    {
+      "id": 989,
+      "kanji": "皿",
+      "readings": [
+        {
+          "kana": "さら",
+          "romaji": "sara"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "plate",
+          "dish"
+        ],
+        "ru": [
+          "тарелка"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:kitchen"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第10課.pdf, стр. 1, № 291."
+      ]
+    },
+    {
+      "id": 990,
+      "kanji": "苦い",
+      "readings": [
+        {
+          "kana": "にがい",
+          "romaji": "nigai"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "bitter"
+        ],
+        "ru": [
+          "горький"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "i-adjectives",
+          "group": "i-adjectives:59"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第11課.pdf, стр. 1, № 301."
+      ]
+    },
+    {
+      "id": 991,
+      "kanji": "熱い",
+      "readings": [
+        {
+          "kana": "あつい",
+          "romaji": "atsui"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "hot (to the touch, food or liquid)"
+        ],
+        "ru": [
+          "горячий (о жидкостях, предметах)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "i-adjectives",
+          "group": "i-adjectives:52"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第11課.pdf, стр. 1, № 304."
+      ]
+    },
+    {
+      "id": 992,
+      "kanji": "暖かい",
+      "readings": [
+        {
+          "kana": "あたたかい",
+          "romaji": "atatakai"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "warm (weather)"
+        ],
+        "ru": [
+          "тёплый (о погоде)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "i-adjectives",
+          "group": "i-adjectives:52"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第11課.pdf, стр. 1, № 306."
+      ]
+    },
+    {
+      "id": 993,
+      "kanji": "易しい",
+      "readings": [
+        {
+          "kana": "やさしい",
+          "romaji": "yasashii"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "easy",
+          "simple"
+        ],
+        "ru": [
+          "лёгкий, простой"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "i-adjectives",
+          "group": "i-adjectives:55"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第11課.pdf, стр. 1, № 310."
+      ]
+    },
+    {
+      "id": 994,
+      "kanji": "悲しい",
+      "readings": [
+        {
+          "kana": "かなしい",
+          "romaji": "kanashii"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "sad"
+        ],
+        "ru": [
+          "грустный, печальный"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "i-adjectives",
+          "group": "i-adjectives:53"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第11課.pdf, стр. 1, № 316."
+      ]
+    },
+    {
+      "id": 995,
+      "kanji": "寂しい",
+      "readings": [
+        {
+          "kana": "さびしい",
+          "romaji": "sabishii"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "lonely",
+          "sad"
+        ],
+        "ru": [
+          "одинокий, грустный"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "i-adjectives",
+          "group": "i-adjectives:53"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第11課.pdf, стр. 1, № 317."
+      ]
+    },
+    {
+      "id": 996,
+      "kanji": "緑",
+      "readings": [
+        {
+          "kana": "みどり",
+          "romaji": "midori"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "green",
+          "greenery",
+          "foliage"
+        ],
+        "ru": [
+          "зелёный, зелень, листва"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:nature"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第13課.pdf, стр. 1, № 355."
+      ]
+    },
+    {
+      "id": 997,
+      "kanji": "運転する",
+      "readings": [
+        {
+          "kana": "うんてんする",
+          "romaji": "untensuru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to drive (a vehicle)"
+        ],
+        "ru": [
+          "водить (транспорт)"
+        ]
+      },
+      "verb_type": "Irregular",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:72"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第13課.pdf, стр. 1, № 360."
+      ]
+    },
+    {
+      "id": 998,
+      "kanji": "財布",
+      "readings": [
+        {
+          "kana": "さいふ",
+          "romaji": "saifu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "wallet",
+          "purse"
+        ],
+        "ru": [
+          "кошелёк, бумажник"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:shopping"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第13課.pdf, стр. 1, № 367."
+      ]
+    },
+    {
+      "id": 999,
+      "kanji": "シャワー",
+      "readings": [
+        {
+          "kana": "シャワー",
+          "romaji": "shawaa"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "shower"
+        ],
+        "ru": [
+          "душ"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:home"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第13課.pdf, стр. 1, № 369."
+      ]
+    },
+    {
+      "id": 1000,
+      "kanji": "お風呂に入る",
+      "readings": [
+        {
+          "kana": "おふろにはいる",
+          "romaji": "ofuronihairu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to take a bath"
+        ],
+        "ru": [
+          "принимать ванну"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第13課.pdf, стр. 1, № 371."
+      ]
+    },
+    {
+      "id": 1001,
+      "kanji": "サッカー",
+      "readings": [
+        {
+          "kana": "サッカー",
+          "romaji": "sakkaa"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "soccer",
+          "football"
+        ],
+        "ru": [
+          "футбол"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第13課.pdf, стр. 1, № 372."
+      ]
+    },
+    {
+      "id": 1002,
+      "kanji": "テニス",
+      "readings": [
+        {
+          "kana": "テニス",
+          "romaji": "tenisu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "tennis"
+        ],
+        "ru": [
+          "теннис"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第13課.pdf, стр. 1, № 373."
+      ]
+    },
+    {
+      "id": 1003,
+      "kanji": "一人で",
+      "readings": [
+        {
+          "kana": "ひとりで",
+          "romaji": "hitoride"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "alone",
+          "by oneself"
+        ],
+        "ru": [
+          "один"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第13課.pdf, стр. 2, № 374."
+      ]
+    },
+    {
+      "id": 1004,
+      "kanji": "一緒に",
+      "readings": [
+        {
+          "kana": "いっしょに",
+          "romaji": "isshoni"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "together"
+        ],
+        "ru": [
+          "вместе"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第13課.pdf, стр. 2, № 375."
+      ]
+    },
+    {
+      "id": 1005,
+      "kanji": "親切",
+      "readings": [
+        {
+          "kana": "しんせつ",
+          "romaji": "shinsetsu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "kind",
+          "helpful"
+        ],
+        "ru": [
+          "добрый, любезный"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "na-adjectives",
+          "group": "na-adjectives:68"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第14課.pdf, стр. 1, № 378."
+      ]
+    },
+    {
+      "id": 1006,
+      "kanji": "素敵",
+      "readings": [
+        {
+          "kana": "すてき",
+          "romaji": "suteki"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "lovely",
+          "wonderful"
+        ],
+        "ru": [
+          "замечательный, чудесный"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "na-adjectives",
+          "group": "na-adjectives:63"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第14課.pdf, стр. 1, № 379."
+      ]
+    },
+    {
+      "id": 1007,
+      "kanji": "桜",
+      "readings": [
+        {
+          "kana": "さくら",
+          "romaji": "sakura"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "cherry tree",
+          "cherry blossom"
+        ],
+        "ru": [
+          "сакура"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:nature"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第14課.pdf, стр. 1, № 380."
+      ]
+    },
+    {
+      "id": 1008,
+      "kanji": "花見",
+      "readings": [
+        {
+          "kana": "はなみ",
+          "romaji": "hanami"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "cherry-blossom viewing"
+        ],
+        "ru": [
+          "любование цветами сакуры"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第14課.pdf, стр. 1, № 381."
+      ]
+    },
+    {
+      "id": 1009,
+      "kanji": "寮",
+      "readings": [
+        {
+          "kana": "りょう",
+          "romaji": "ryou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "dormitory"
+        ],
+        "ru": [
+          "общежитие"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:home"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第14課.pdf, стр. 1, № 384."
+      ]
+    },
+    {
+      "id": 1010,
+      "kanji": "生活",
+      "readings": [
+        {
+          "kana": "せいかつ",
+          "romaji": "seikatsu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "life",
+          "daily living"
+        ],
+        "ru": [
+          "жизнь, быт"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第14課.pdf, стр. 1, № 387."
+      ]
+    },
+    {
+      "id": 1011,
+      "kanji": "そして",
+      "readings": [
+        {
+          "kana": "そして",
+          "romaji": "soshite"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "and",
+          "and then",
+          "moreover"
+        ],
+        "ru": [
+          "и к тому же, также"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第14課.pdf, стр. 1, № 394."
+      ]
+    },
+    {
+      "id": 1012,
+      "kanji": "お陰様で",
+      "readings": [
+        {
+          "kana": "おかげさまで",
+          "romaji": "okagesamade"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "thanks to you",
+          "thanks to your help"
+        ],
+        "ru": [
+          "благодаря вам; спасибо за заботу"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "expressions",
+          "group": "expressions:48"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第14課.pdf, стр. 1, № 396.",
+        "Перевод источника уточнён: благодаря вашим молитвам"
+      ]
+    },
+    {
+      "id": 1013,
+      "kanji": "全然",
+      "readings": [
+        {
+          "kana": "ぜんぜん",
+          "romaji": "zenzen"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "not at all (with a negative)"
+        ],
+        "ru": [
+          "совершенно, совсем"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第15課.pdf, стр. 1, № 400."
+      ]
+    },
+    {
+      "id": 1014,
+      "kanji": "偶に",
+      "readings": [
+        {
+          "kana": "たまに",
+          "romaji": "tamani"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "occasionally",
+          "once in a while"
+        ],
+        "ru": [
+          "редко, иногда"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第15課.pdf, стр. 1, № 402."
+      ]
+    },
+    {
+      "id": 1015,
+      "kanji": "大体",
+      "readings": [
+        {
+          "kana": "だいたい",
+          "romaji": "daitai"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "generally",
+          "roughly",
+          "mostly"
+        ],
+        "ru": [
+          "в общем, в основном"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第15課.pdf, стр. 1, № 403."
+      ]
+    },
+    {
+      "id": 1016,
+      "kanji": "まだです",
+      "readings": [
+        {
+          "kana": "まだです",
+          "romaji": "madadesu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "not yet"
+        ],
+        "ru": [
+          "ещё не"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "expressions",
+          "group": "expressions:46"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第15課.pdf, стр. 1, № 406."
+      ]
+    },
+    {
+      "id": 1017,
+      "kanji": "ゆっくり",
+      "readings": [
+        {
+          "kana": "ゆっくり",
+          "romaji": "yukkuri"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "slowly",
+          "at leisure"
+        ],
+        "ru": [
+          "не спеша, постепенно, потихоньку"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第15課.pdf, стр. 1, № 408."
+      ]
+    },
+    {
+      "id": 1018,
+      "kanji": "早く",
+      "readings": [
+        {
+          "kana": "はやく",
+          "romaji": "hayaku"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "early",
+          "quickly"
+        ],
+        "ru": [
+          "быстро, рано"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第15課.pdf, стр. 1, № 409."
+      ]
+    },
+    {
+      "id": 1019,
+      "kanji": "お土産",
+      "readings": [
+        {
+          "kana": "おみやげ",
+          "romaji": "omiyage"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "souvenir",
+          "gift brought from a trip"
+        ],
+        "ru": [
+          "подарок, сувенир"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:shopping"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第15課.pdf, стр. 1, № 412."
+      ]
+    },
+    {
+      "id": 1020,
+      "kanji": "直す",
+      "readings": [
+        {
+          "kana": "なおす",
+          "romaji": "naosu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to repair",
+          "to correct"
+        ],
+        "ru": [
+          "исправлять, чинить"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第15課.pdf, стр. 1, № 415."
+      ]
+    },
+    {
+      "id": 1021,
+      "kanji": "動物園",
+      "readings": [
+        {
+          "kana": "どうぶつえん",
+          "romaji": "doubutsuen"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "zoo"
+        ],
+        "ru": [
+          "зоопарк"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第16課.pdf, стр. 1, № 419."
+      ]
+    },
+    {
+      "id": 1022,
+      "kanji": "ペット",
+      "readings": [
+        {
+          "kana": "ペット",
+          "romaji": "petto"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "pet"
+        ],
+        "ru": [
+          "домашнее животное"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:nature"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第16課.pdf, стр. 1, № 420."
+      ]
+    },
+    {
+      "id": 1023,
+      "kanji": "猫",
+      "readings": [
+        {
+          "kana": "ねこ",
+          "romaji": "neko"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "cat"
+        ],
+        "ru": [
+          "кот, кошка"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:nature"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第16課.pdf, стр. 1, № 421."
+      ]
+    },
+    {
+      "id": 1024,
+      "kanji": "犬",
+      "readings": [
+        {
+          "kana": "いぬ",
+          "romaji": "inu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "dog"
+        ],
+        "ru": [
+          "собака, пёс"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:nature"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第16課.pdf, стр. 1, № 422."
+      ]
+    },
+    {
+      "id": 1025,
+      "kanji": "本屋",
+      "readings": [
+        {
+          "kana": "ほんや",
+          "romaji": "hon'ya"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "bookshop",
+          "bookstore"
+        ],
+        "ru": [
+          "книжный магазин"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第16課.pdf, стр. 1, № 425."
+      ]
+    },
+    {
+      "id": 1026,
+      "kanji": "鏡",
+      "readings": [
+        {
+          "kana": "かがみ",
+          "romaji": "kagami"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "mirror"
+        ],
+        "ru": [
+          "зеркало"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:home"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第16課.pdf, стр. 1, № 431."
+      ]
+    },
+    {
+      "id": 1027,
+      "kanji": "棚",
+      "readings": [
+        {
+          "kana": "たな",
+          "romaji": "tana"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "shelf"
+        ],
+        "ru": [
+          "полка"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:home"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第16課.pdf, стр. 1, № 432."
+      ]
+    },
+    {
+      "id": 1028,
+      "kanji": "冬休み",
+      "readings": [
+        {
+          "kana": "ふゆやすみ",
+          "romaji": "fuyuyasumi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "winter vacation"
+        ],
+        "ru": [
+          "зимние каникулы"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:calendar"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 441."
+      ]
+    },
+    {
+      "id": 1029,
+      "kanji": "用事",
+      "readings": [
+        {
+          "kana": "ようじ",
+          "romaji": "youji"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "errand",
+          "business to attend to"
+        ],
+        "ru": [
+          "дело"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 443."
+      ]
+    },
+    {
+      "id": 1030,
+      "kanji": "準備",
+      "readings": [
+        {
+          "kana": "じゅんび",
+          "romaji": "junbi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "preparation"
+        ],
+        "ru": [
+          "подготовка, приготовление"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 444."
+      ]
+    },
+    {
+      "id": 1031,
+      "kanji": "細かい",
+      "readings": [
+        {
+          "kana": "こまかい",
+          "romaji": "komakai"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "small",
+          "fine",
+          "detailed"
+        ],
+        "ru": [
+          "мелкий, подробный, детальный"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "i-adjectives",
+          "group": "i-adjectives:51"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 445."
+      ]
+    },
+    {
+      "id": 1032,
+      "kanji": "残念ですが",
+      "readings": [
+        {
+          "kana": "ざんねんですが",
+          "romaji": "zannendesuga"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "I'm sorry, but",
+          "unfortunately"
+        ],
+        "ru": [
+          "мне очень жаль, но…"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "expressions",
+          "group": "expressions:47"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 447."
+      ]
+    },
+    {
+      "id": 1033,
+      "kanji": "約束",
+      "readings": [
+        {
+          "kana": "やくそく",
+          "romaji": "yakusoku"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "promise",
+          "appointment",
+          "agreement"
+        ],
+        "ru": [
+          "обещание, договорённость"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 448."
+      ]
+    },
+    {
+      "id": 1034,
+      "kanji": "趣味",
+      "readings": [
+        {
+          "kana": "しゅみ",
+          "romaji": "shumi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "hobby",
+          "interest"
+        ],
+        "ru": [
+          "хобби, увлечение"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 449."
+      ]
+    },
+    {
+      "id": 1035,
+      "kanji": "集める",
+      "readings": [
+        {
+          "kana": "あつめる",
+          "romaji": "atsumeru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to collect",
+          "to gather"
+        ],
+        "ru": [
+          "собирать, коллекционировать"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 450."
+      ]
+    },
+    {
+      "id": 1036,
+      "kanji": "美術",
+      "readings": [
+        {
+          "kana": "びじゅつ",
+          "romaji": "bijutsu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "fine arts",
+          "art"
+        ],
+        "ru": [
+          "искусство"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 451."
+      ]
+    },
+    {
+      "id": 1037,
+      "kanji": "漫画",
+      "readings": [
+        {
+          "kana": "まんが",
+          "romaji": "manga"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "manga",
+          "comics"
+        ],
+        "ru": [
+          "манга, комиксы"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 453."
+      ]
+    },
+    {
+      "id": 1038,
+      "kanji": "ダンス",
+      "readings": [
+        {
+          "kana": "ダンス",
+          "romaji": "dansu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "dance",
+          "dancing"
+        ],
+        "ru": [
+          "танец"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 454."
+      ]
+    },
+    {
+      "id": 1039,
+      "kanji": "カラオケ",
+      "readings": [
+        {
+          "kana": "カラオケ",
+          "romaji": "karaoke"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "karaoke"
+        ],
+        "ru": [
+          "караоке"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 457."
+      ]
+    },
+    {
+      "id": 1040,
+      "kanji": "音",
+      "readings": [
+        {
+          "kana": "おと",
+          "romaji": "oto"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "sound"
+        ],
+        "ru": [
+          "звук"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 458."
+      ]
+    },
+    {
+      "id": 1041,
+      "kanji": "ドラム",
+      "readings": [
+        {
+          "kana": "ドラム",
+          "romaji": "doramu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "drums"
+        ],
+        "ru": [
+          "барабаны"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 460."
+      ]
+    },
+    {
+      "id": 1042,
+      "kanji": "ピアノ",
+      "readings": [
+        {
+          "kana": "ピアノ",
+          "romaji": "piano"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "piano"
+        ],
+        "ru": [
+          "пианино"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 1, № 461."
+      ]
+    },
+    {
+      "id": 1043,
+      "kanji": "クラシック",
+      "readings": [
+        {
+          "kana": "クラシック",
+          "romaji": "kurashikku"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "classical music"
+        ],
+        "ru": [
+          "классическая музыка"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 2, № 464."
+      ]
+    },
+    {
+      "id": 1044,
+      "kanji": "コンサート",
+      "readings": [
+        {
+          "kana": "コンサート",
+          "romaji": "konsaato"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "concert"
+        ],
+        "ru": [
+          "концерт"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 2, № 465."
+      ]
+    },
+    {
+      "id": 1045,
+      "kanji": "ミュージカル",
+      "readings": [
+        {
+          "kana": "ミュージカル",
+          "romaji": "myuujikaru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "musical (theatre)"
+        ],
+        "ru": [
+          "мюзикл"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 2, № 466."
+      ]
+    },
+    {
+      "id": 1046,
+      "kanji": "チケット",
+      "readings": [
+        {
+          "kana": "チケット",
+          "romaji": "chiketto"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "ticket"
+        ],
+        "ru": [
+          "билет"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第17課.pdf, стр. 2, № 467."
+      ]
+    },
+    {
+      "id": 1047,
+      "kanji": "歌舞伎",
+      "readings": [
+        {
+          "kana": "かぶき",
+          "romaji": "kabuki"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "kabuki (traditional Japanese theatre)"
+        ],
+        "ru": [
+          "кабуки (жанр японского традиционного театрального искусства)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第18課.pdf, стр. 1, № 468."
+      ]
+    },
+    {
+      "id": 1048,
+      "kanji": "字",
+      "readings": [
+        {
+          "kana": "じ",
+          "romaji": "ji"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "letter",
+          "character"
+        ],
+        "ru": [
+          "буква, знак"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第18課.pdf, стр. 1, № 469."
+      ]
+    },
+    {
+      "id": 1049,
+      "kanji": "ローマ字",
+      "readings": [
+        {
+          "kana": "ローマじ",
+          "romaji": "roomaji"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Roman letters",
+          "romanized Japanese"
+        ],
+        "ru": [
+          "латинские буквы"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第18課.pdf, стр. 1, № 470."
+      ]
+    },
+    {
+      "id": 1050,
+      "kanji": "野球",
+      "readings": [
+        {
+          "kana": "やきゅう",
+          "romaji": "yakyuu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "baseball"
+        ],
+        "ru": [
+          "бейсбол"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第18課.pdf, стр. 1, № 475."
+      ]
+    },
+    {
+      "id": 1051,
+      "kanji": "スキー",
+      "readings": [
+        {
+          "kana": "スキー",
+          "romaji": "sukii"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "skiing",
+          "skis"
+        ],
+        "ru": [
+          "лыжи"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第18課.pdf, стр. 1, № 476."
+      ]
+    },
+    {
+      "id": 1052,
+      "kanji": "週末",
+      "readings": [
+        {
+          "kana": "しゅうまつ",
+          "romaji": "shuumatsu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "weekend"
+        ],
+        "ru": [
+          "конец недели, выходные"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:calendar"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第18課.pdf, стр. 1, № 479."
+      ]
+    },
+    {
+      "id": 1053,
+      "kanji": "温泉",
+      "readings": [
+        {
+          "kana": "おんせん",
+          "romaji": "onsen"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "hot spring"
+        ],
+        "ru": [
+          "горячий источник"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:nature"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第18課.pdf, стр. 1, № 480."
+      ]
+    },
+    {
+      "id": 1054,
+      "kanji": "見学",
+      "readings": [
+        {
+          "kana": "けんがく",
+          "romaji": "kengaku"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "observation visit",
+          "study tour"
+        ],
+        "ru": [
+          "практическое изучение, практика, наблюдение и изучение"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第19課.pdf, стр. 1, № 489."
+      ]
+    },
+    {
+      "id": 1055,
+      "kanji": "試験",
+      "readings": [
+        {
+          "kana": "しけん",
+          "romaji": "shiken"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "examination",
+          "test"
+        ],
+        "ru": [
+          "экзамен"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第19課.pdf, стр. 1, № 490."
+      ]
+    },
+    {
+      "id": 1056,
+      "kanji": "世界",
+      "readings": [
+        {
+          "kana": "せかい",
+          "romaji": "sekai"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "world"
+        ],
+        "ru": [
+          "мир"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第19課.pdf, стр. 1, № 492."
+      ]
+    },
+    {
+      "id": 1057,
+      "kanji": "祭り",
+      "readings": [
+        {
+          "kana": "まつり",
+          "romaji": "matsuri"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "festival"
+        ],
+        "ru": [
+          "фестиваль, праздник"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第19課.pdf, стр. 1, № 494."
+      ]
+    },
+    {
+      "id": 1058,
+      "kanji": "花火",
+      "readings": [
+        {
+          "kana": "はなび",
+          "romaji": "hanabi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "fireworks"
+        ],
+        "ru": [
+          "фейерверк"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第19課.pdf, стр. 1, № 495."
+      ]
+    },
+    {
+      "id": 1059,
+      "kanji": "季節",
+      "readings": [
+        {
+          "kana": "きせつ",
+          "romaji": "kisetsu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "season"
+        ],
+        "ru": [
+          "время года, сезон"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:calendar"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第19課.pdf, стр. 1, № 498."
+      ]
+    },
+    {
+      "id": 1060,
+      "kanji": "冬",
+      "readings": [
+        {
+          "kana": "ふゆ",
+          "romaji": "fuyu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "winter"
+        ],
+        "ru": [
+          "зима"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:calendar"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第19課.pdf, стр. 1, № 500."
+      ]
+    },
+    {
+      "id": 1061,
+      "kanji": "空港",
+      "readings": [
+        {
+          "kana": "くうこう",
+          "romaji": "kuukou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "airport"
+        ],
+        "ru": [
+          "аэропорт"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:transport"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第19課.pdf, стр. 1, № 503."
+      ]
+    },
+    {
+      "id": 1062,
+      "kanji": "迎える",
+      "readings": [
+        {
+          "kana": "むかえる",
+          "romaji": "mukaeru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to meet",
+          "to welcome (someone arriving)"
+        ],
+        "ru": [
+          "встречать кого-л."
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第19課.pdf, стр. 1, № 504."
+      ]
+    },
+    {
+      "id": 1063,
+      "kanji": "〜ちゃん",
+      "readings": [
+        {
+          "kana": "~ちゃん",
+          "romaji": "~chan"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "diminutive name suffix (especially for children)"
+        ],
+        "ru": [
+          "уменьшительно-ласкательный суффикс, обычно прибавляется к именам детей"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第1課.pdf, стр. 1, № 9."
+      ]
+    },
+    {
+      "id": 1064,
+      "kanji": "アメリカ",
+      "readings": [
+        {
+          "kana": "アメリカ",
+          "romaji": "amerika"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "United States of America"
+        ],
+        "ru": [
+          "США"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第1課.pdf, стр. 1, № 13."
+      ]
+    },
+    {
+      "id": 1065,
+      "kanji": "ロシア",
+      "readings": [
+        {
+          "kana": "ロシア",
+          "romaji": "roshia"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Russia"
+        ],
+        "ru": [
+          "Россия"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第1課.pdf, стр. 1, № 14."
+      ]
+    },
+    {
+      "id": 1066,
+      "kanji": "ケーキ",
+      "readings": [
+        {
+          "kana": "ケーキ",
+          "romaji": "keeki"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "cake"
+        ],
+        "ru": [
+          "торт, пирожное"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 509."
+      ]
+    },
+    {
+      "id": 1067,
+      "kanji": "袋",
+      "readings": [
+        {
+          "kana": "ふくろ",
+          "romaji": "fukuro"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "bag",
+          "sack"
+        ],
+        "ru": [
+          "пакет"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:shopping"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 510."
+      ]
+    },
+    {
+      "id": 1068,
+      "kanji": "練習する",
+      "readings": [
+        {
+          "kana": "れんしゅうする",
+          "romaji": "renshuusuru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to practise",
+          "to train"
+        ],
+        "ru": [
+          "тренироваться, упражняться"
+        ]
+      },
+      "verb_type": "Irregular",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:72"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 512."
+      ]
+    },
+    {
+      "id": 1069,
+      "kanji": "会議",
+      "readings": [
+        {
+          "kana": "かいぎ",
+          "romaji": "kaigi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "meeting",
+          "conference"
+        ],
+        "ru": [
+          "совещание, собрание"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 518."
+      ]
+    },
+    {
+      "id": 1070,
+      "kanji": "残業",
+      "readings": [
+        {
+          "kana": "ざんぎょう",
+          "romaji": "zangyou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "overtime work"
+        ],
+        "ru": [
+          "сверхурочная работа, переработка"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 519."
+      ]
+    },
+    {
+      "id": 1071,
+      "kanji": "レポート",
+      "readings": [
+        {
+          "kana": "レポート",
+          "romaji": "repooto"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "report"
+        ],
+        "ru": [
+          "доклад, сообщение, отчёт"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 520."
+      ]
+    },
+    {
+      "id": 1072,
+      "kanji": "資料",
+      "readings": [
+        {
+          "kana": "しりょう",
+          "romaji": "shiryou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "materials",
+          "documents",
+          "data"
+        ],
+        "ru": [
+          "материалы, данные"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 521."
+      ]
+    },
+    {
+      "id": 1073,
+      "kanji": "スピーチ",
+      "readings": [
+        {
+          "kana": "スピーチ",
+          "romaji": "supiichi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "speech"
+        ],
+        "ru": [
+          "речь"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 522."
+      ]
+    },
+    {
+      "id": 1074,
+      "kanji": "出張",
+      "readings": [
+        {
+          "kana": "しゅっちょう",
+          "romaji": "shutchou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "business trip"
+        ],
+        "ru": [
+          "командировка"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 523."
+      ]
+    },
+    {
+      "id": 1075,
+      "kanji": "パスポート",
+      "readings": [
+        {
+          "kana": "パスポート",
+          "romaji": "pasupooto"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "passport"
+        ],
+        "ru": [
+          "паспорт"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:transport"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 524."
+      ]
+    },
+    {
+      "id": 1076,
+      "kanji": "払う",
+      "readings": [
+        {
+          "kana": "はらう",
+          "romaji": "harau"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to pay"
+        ],
+        "ru": [
+          "платить"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 527."
+      ]
+    },
+    {
+      "id": 1077,
+      "kanji": "予約する",
+      "readings": [
+        {
+          "kana": "よやくする",
+          "romaji": "yoyakusuru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to reserve",
+          "to book"
+        ],
+        "ru": [
+          "бронировать"
+        ]
+      },
+      "verb_type": "Irregular",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:72"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 528."
+      ]
+    },
+    {
+      "id": 1078,
+      "kanji": "止める",
+      "readings": [
+        {
+          "kana": "とめる",
+          "romaji": "tomeru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to stop (something)"
+        ],
+        "ru": [
+          "останавливать"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第20課.pdf, стр. 1, № 529."
+      ]
+    },
+    {
+      "id": 1079,
+      "kanji": "気持ち",
+      "readings": [
+        {
+          "kana": "きもち",
+          "romaji": "kimochi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "feeling",
+          "mood"
+        ],
+        "ru": [
+          "чувство, ощущение, настроение"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第21課.pdf, стр. 1, № 530."
+      ]
+    },
+    {
+      "id": 1080,
+      "kanji": "手伝う",
+      "readings": [
+        {
+          "kana": "てつだう",
+          "romaji": "tetsudau"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to help",
+          "to assist"
+        ],
+        "ru": [
+          "помогать"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第21課.pdf, стр. 1, № 533."
+      ]
+    },
+    {
+      "id": 1081,
+      "kanji": "下着",
+      "readings": [
+        {
+          "kana": "したぎ",
+          "romaji": "shitagi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "underwear"
+        ],
+        "ru": [
+          "нижнее бельё"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:clothing"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第21課.pdf, стр. 1, № 535."
+      ]
+    },
+    {
+      "id": 1082,
+      "kanji": "答え",
+      "readings": [
+        {
+          "kana": "こたえ",
+          "romaji": "kotae"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "answer"
+        ],
+        "ru": [
+          "ответ"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第21課.pdf, стр. 1, № 537."
+      ]
+    },
+    {
+      "id": 1083,
+      "kanji": "住所",
+      "readings": [
+        {
+          "kana": "じゅうしょ",
+          "romaji": "juusho"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "address"
+        ],
+        "ru": [
+          "местожительство, адрес"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:home"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第21課.pdf, стр. 1, № 538."
+      ]
+    },
+    {
+      "id": 1084,
+      "kanji": "喉",
+      "readings": [
+        {
+          "kana": "のど",
+          "romaji": "nodo"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "throat"
+        ],
+        "ru": [
+          "горло"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:health"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第21課.pdf, стр. 1, № 551."
+      ]
+    },
+    {
+      "id": 1085,
+      "kanji": "熱",
+      "readings": [
+        {
+          "kana": "ねつ",
+          "romaji": "netsu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "fever",
+          "heat"
+        ],
+        "ru": [
+          "жар, температура"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:health"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第21課.pdf, стр. 1, № 552."
+      ]
+    },
+    {
+      "id": 1086,
+      "kanji": "怪我",
+      "readings": [
+        {
+          "kana": "けが",
+          "romaji": "kega"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "injury",
+          "wound"
+        ],
+        "ru": [
+          "рана"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:health"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第21課.pdf, стр. 1, № 555."
+      ]
+    },
+    {
+      "id": 1087,
+      "kanji": "お大事に",
+      "readings": [
+        {
+          "kana": "おだいじに",
+          "romaji": "odaijini"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "get well soon",
+          "take care of yourself (to someone ill)"
+        ],
+        "ru": [
+          "выздоравливайте; берегите себя (больному)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "expressions",
+          "group": "expressions:44"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第21課.pdf, стр. 2, № 558.",
+        "Перевод источника уточнён: берегите себя! счастливого пути! выздоравливайте!"
+      ]
+    },
+    {
+      "id": 1088,
+      "kanji": "先に",
+      "readings": [
+        {
+          "kana": "さきに",
+          "romaji": "sakini"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "ahead",
+          "before",
+          "earlier"
+        ],
+        "ru": [
+          "вперёд, раньше, прежде (кого-л.)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第22課.pdf, стр. 1, № 559."
+      ]
+    },
+    {
+      "id": 1089,
+      "kanji": "気を付ける",
+      "readings": [
+        {
+          "kana": "きをつける",
+          "romaji": "kiwotsukeru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to be careful",
+          "to pay attention"
+        ],
+        "ru": [
+          "быть внимательным, быть осторожным"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第22課.pdf, стр. 1, № 563."
+      ]
+    },
+    {
+      "id": 1090,
+      "kanji": "電話番号",
+      "readings": [
+        {
+          "kana": "でんわばんごう",
+          "romaji": "denwabangou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "telephone number"
+        ],
+        "ru": [
+          "телефонный номер"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第22課.pdf, стр. 1, № 572."
+      ]
+    },
+    {
+      "id": 1091,
+      "kanji": "人気がある",
+      "readings": [
+        {
+          "kana": "にんきがある",
+          "romaji": "ninkigaaru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to be popular"
+        ],
+        "ru": [
+          "быть популярным"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第22課.pdf, стр. 1, № 574."
+      ]
+    },
+    {
+      "id": 1092,
+      "kanji": "小学校",
+      "readings": [
+        {
+          "kana": "しょうがっこう",
+          "romaji": "shougakkou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "elementary school"
+        ],
+        "ru": [
+          "младшая школа"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第22課.pdf, стр. 1, № 575."
+      ]
+    },
+    {
+      "id": 1093,
+      "kanji": "中学校",
+      "readings": [
+        {
+          "kana": "ちゅうがっこう",
+          "romaji": "chuugakkou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "junior high school"
+        ],
+        "ru": [
+          "средняя школа"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第22課.pdf, стр. 1, № 576."
+      ]
+    },
+    {
+      "id": 1094,
+      "kanji": "高校",
+      "readings": [
+        {
+          "kana": "こうこう",
+          "romaji": "koukou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "senior high school"
+        ],
+        "ru": [
+          "старшая школа"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第22課.pdf, стр. 1, № 577."
+      ]
+    },
+    {
+      "id": 1095,
+      "kanji": "一日中",
+      "readings": [
+        {
+          "kana": "いちにちじゅう",
+          "romaji": "ichinichijuu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "all day long"
+        ],
+        "ru": [
+          "весь день, на протяжении всего дня"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第22課.pdf, стр. 1, № 578."
+      ]
+    },
+    {
+      "id": 1096,
+      "kanji": "納豆",
+      "readings": [
+        {
+          "kana": "なっとう",
+          "romaji": "nattou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "natto",
+          "fermented soybeans"
+        ],
+        "ru": [
+          "натто (перебродившие соевые бобы)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 579."
+      ]
+    },
+    {
+      "id": 1097,
+      "kanji": "経験",
+      "readings": [
+        {
+          "kana": "けいけん",
+          "romaji": "keiken"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "experience"
+        ],
+        "ru": [
+          "опыт"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 581."
+      ]
+    },
+    {
+      "id": 1098,
+      "kanji": "雪",
+      "readings": [
+        {
+          "kana": "ゆき",
+          "romaji": "yuki"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "snow"
+        ],
+        "ru": [
+          "снег"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:nature"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 583."
+      ]
+    },
+    {
+      "id": 1099,
+      "kanji": "携帯電話",
+      "readings": [
+        {
+          "kana": "けいたいでんわ",
+          "romaji": "keitaidenwa"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "mobile phone",
+          "cell phone"
+        ],
+        "ru": [
+          "мобильный телефон"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 585."
+      ]
+    },
+    {
+      "id": 1100,
+      "kanji": "県",
+      "readings": [
+        {
+          "kana": "けん",
+          "romaji": "ken"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "prefecture"
+        ],
+        "ru": [
+          "префектура"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 586."
+      ]
+    },
+    {
+      "id": 1101,
+      "kanji": "寺",
+      "readings": [
+        {
+          "kana": "てら",
+          "romaji": "tera"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Buddhist temple"
+        ],
+        "ru": [
+          "буддийский храм"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 587."
+      ]
+    },
+    {
+      "id": 1102,
+      "kanji": "お寺",
+      "readings": [
+        {
+          "kana": "おてら",
+          "romaji": "otera"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Buddhist temple (polite)"
+        ],
+        "ru": [
+          "буддийский храм"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 587."
+      ]
+    },
+    {
+      "id": 1103,
+      "kanji": "神社",
+      "readings": [
+        {
+          "kana": "じんじゃ",
+          "romaji": "jinja"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Shinto shrine"
+        ],
+        "ru": [
+          "синтоистский храм"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 588."
+      ]
+    },
+    {
+      "id": 1104,
+      "kanji": "旅館",
+      "readings": [
+        {
+          "kana": "りょかん",
+          "romaji": "ryokan"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Japanese-style inn"
+        ],
+        "ru": [
+          "гостиница (в японском стиле)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:transport"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 589."
+      ]
+    },
+    {
+      "id": 1105,
+      "kanji": "泊まる",
+      "readings": [
+        {
+          "kana": "とまる",
+          "romaji": "tomaru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to stay overnight",
+          "to stay at a hotel"
+        ],
+        "ru": [
+          "ночевать, останавливаться в гостинице / отеле（に）"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 590."
+      ]
+    },
+    {
+      "id": 1106,
+      "kanji": "工場",
+      "readings": [
+        {
+          "kana": "こうじょう",
+          "romaji": "koujou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "factory"
+        ],
+        "ru": [
+          "завод, фабрика"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 591."
+      ]
+    },
+    {
+      "id": 1107,
+      "kanji": "注文する",
+      "readings": [
+        {
+          "kana": "ちゅうもんする",
+          "romaji": "chuumonsuru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to order (goods or food)"
+        ],
+        "ru": [
+          "заказывать, делать заказ"
+        ]
+      },
+      "verb_type": "Irregular",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:72"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 594."
+      ]
+    },
+    {
+      "id": 1108,
+      "kanji": "特に",
+      "readings": [
+        {
+          "kana": "とくに",
+          "romaji": "tokuni"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "especially",
+          "particularly"
+        ],
+        "ru": [
+          "в особенности, особенно"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 595."
+      ]
+    },
+    {
+      "id": 1109,
+      "kanji": "なかなか",
+      "readings": [
+        {
+          "kana": "なかなか",
+          "romaji": "nakanaka"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "not easily",
+          "not readily (with a negative)"
+        ],
+        "ru": [
+          "с отриц. никак, не легко"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 596."
+      ]
+    },
+    {
+      "id": 1110,
+      "kanji": "是非",
+      "readings": [
+        {
+          "kana": "ぜひ",
+          "romaji": "zehi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "by all means",
+          "definitely"
+        ],
+        "ru": [
+          "непременно, обязательно"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 597."
+      ]
+    },
+    {
+      "id": 1111,
+      "kanji": "だけ",
+      "readings": [
+        {
+          "kana": "だけ",
+          "romaji": "dake"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "only",
+          "just"
+        ],
+        "ru": [
+          "только"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 1, № 598."
+      ]
+    },
+    {
+      "id": 1112,
+      "kanji": "眠る",
+      "readings": [
+        {
+          "kana": "ねむる",
+          "romaji": "nemuru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to sleep"
+        ],
+        "ru": [
+          "спать"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第23課.pdf, стр. 2, № 604."
+      ]
+    },
+    {
+      "id": 1113,
+      "kanji": "僕",
+      "readings": [
+        {
+          "kana": "ぼく",
+          "romaji": "boku"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "I",
+          "me (informal, usually male)"
+        ],
+        "ru": [
+          "разг. я (в мужской речи)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 605."
+      ]
+    },
+    {
+      "id": 1114,
+      "kanji": "俺",
+      "readings": [
+        {
+          "kana": "おれ",
+          "romaji": "ore"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "I",
+          "me (rough or very informal, usually male)"
+        ],
+        "ru": [
+          "разг. я (в мужской речи, только с равными и нижестоящими)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 606."
+      ]
+    },
+    {
+      "id": 1115,
+      "kanji": "うん",
+      "readings": [
+        {
+          "kana": "うん",
+          "romaji": "un"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "yeah",
+          "yes (informal)"
+        ],
+        "ru": [
+          "разг. да, ага"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "expressions",
+          "group": "expressions:46"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 607."
+      ]
+    },
+    {
+      "id": 1116,
+      "kanji": "ううん",
+      "readings": [
+        {
+          "kana": "ううん",
+          "romaji": "uun"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "no",
+          "nope (informal)"
+        ],
+        "ru": [
+          "разг. нет"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "expressions",
+          "group": "expressions:46"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 608."
+      ]
+    },
+    {
+      "id": 1117,
+      "kanji": "彼",
+      "readings": [
+        {
+          "kana": "かれ",
+          "romaji": "kare"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "he",
+          "boyfriend"
+        ],
+        "ru": [
+          "он"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 609."
+      ]
+    },
+    {
+      "id": 1118,
+      "kanji": "彼女",
+      "readings": [
+        {
+          "kana": "かのじょ",
+          "romaji": "kanojo"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "she",
+          "girlfriend"
+        ],
+        "ru": [
+          "она"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 610."
+      ]
+    },
+    {
+      "id": 1119,
+      "kanji": "足りる",
+      "readings": [
+        {
+          "kana": "たりる",
+          "romaji": "tariru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to be enough",
+          "to suffice"
+        ],
+        "ru": [
+          "быть достаточным, хватать"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 611."
+      ]
+    },
+    {
+      "id": 1120,
+      "kanji": "足す",
+      "readings": [
+        {
+          "kana": "たす",
+          "romaji": "tasu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to add"
+        ],
+        "ru": [
+          "добавлять, прибавлять"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 612."
+      ]
+    },
+    {
+      "id": 1121,
+      "kanji": "捜す",
+      "readings": [
+        {
+          "kana": "さがす",
+          "romaji": "sagasu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to search for",
+          "to look for"
+        ],
+        "ru": [
+          "искать"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 613."
+      ]
+    },
+    {
+      "id": 1122,
+      "kanji": "見つける",
+      "readings": [
+        {
+          "kana": "みつける",
+          "romaji": "mitsukeru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to find"
+        ],
+        "ru": [
+          "находить"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 614."
+      ]
+    },
+    {
+      "id": 1123,
+      "kanji": "調べる",
+      "readings": [
+        {
+          "kana": "しらべる",
+          "romaji": "shiraberu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to investigate",
+          "to look up",
+          "to check"
+        ],
+        "ru": [
+          "исследовать, выяснять, справляться (в справочнике и т.п.)"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 615."
+      ]
+    },
+    {
+      "id": 1124,
+      "kanji": "インターネット",
+      "readings": [
+        {
+          "kana": "インターネット",
+          "romaji": "intaanetto"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Internet"
+        ],
+        "ru": [
+          "Интернет"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 616."
+      ]
+    },
+    {
+      "id": 1125,
+      "kanji": "日記",
+      "readings": [
+        {
+          "kana": "にっき",
+          "romaji": "nikki"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "diary"
+        ],
+        "ru": [
+          "дневник"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 617."
+      ]
+    },
+    {
+      "id": 1126,
+      "kanji": "専門",
+      "readings": [
+        {
+          "kana": "せんもん",
+          "romaji": "senmon"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "specialty",
+          "field of study"
+        ],
+        "ru": [
+          "специальность, специализация"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:study"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 618."
+      ]
+    },
+    {
+      "id": 1127,
+      "kanji": "修理",
+      "readings": [
+        {
+          "kana": "しゅうり",
+          "romaji": "shuuri"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "repair"
+        ],
+        "ru": [
+          "ремонт, починка"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 619."
+      ]
+    },
+    {
+      "id": 1128,
+      "kanji": "地球",
+      "readings": [
+        {
+          "kana": "ちきゅう",
+          "romaji": "chikyuu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "Earth (the planet)"
+        ],
+        "ru": [
+          "Земля (планета)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:nature"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 622."
+      ]
+    },
+    {
+      "id": 1129,
+      "kanji": "素晴らしい",
+      "readings": [
+        {
+          "kana": "すばらしい",
+          "romaji": "subarashii"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "wonderful",
+          "splendid"
+        ],
+        "ru": [
+          "замечательный, великолепный"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "i-adjectives",
+          "group": "i-adjectives:54"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 623."
+      ]
+    },
+    {
+      "id": 1130,
+      "kanji": "珍しい",
+      "readings": [
+        {
+          "kana": "めずらしい",
+          "romaji": "mezurashii"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "rare",
+          "unusual"
+        ],
+        "ru": [
+          "редкий, необычный, удивительный"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "i-adjectives",
+          "group": "i-adjectives:54"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第24課.pdf, стр. 1, № 624."
+      ]
+    },
+    {
+      "id": 1131,
+      "kanji": "役に立つ",
+      "readings": [
+        {
+          "kana": "やくにたつ",
+          "romaji": "yakunitatsu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to be useful",
+          "to be of help"
+        ],
+        "ru": [
+          "годиться, быть полезным, полезный"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 625."
+      ]
+    },
+    {
+      "id": 1132,
+      "kanji": "辞める",
+      "readings": [
+        {
+          "kana": "やめる",
+          "romaji": "yameru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to quit (a job)",
+          "to resign"
+        ],
+        "ru": [
+          "уйти с работы, уволиться"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 626."
+      ]
+    },
+    {
+      "id": 1133,
+      "kanji": "確認する",
+      "readings": [
+        {
+          "kana": "かくにんする",
+          "romaji": "kakuninsuru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to check",
+          "to confirm"
+        ],
+        "ru": [
+          "проверять, убеждаться, уточнять"
+        ]
+      },
+      "verb_type": "Irregular",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:72"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 627."
+      ]
+    },
+    {
+      "id": 1134,
+      "kanji": "思う",
+      "readings": [
+        {
+          "kana": "おもう",
+          "romaji": "omou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to think",
+          "to believe"
+        ],
+        "ru": [
+          "думать, считать"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 628."
+      ]
+    },
+    {
+      "id": 1135,
+      "kanji": "考える",
+      "readings": [
+        {
+          "kana": "かんがえる",
+          "romaji": "kangaeru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to think",
+          "to consider"
+        ],
+        "ru": [
+          "думать, обдумывать, размышлять"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 629."
+      ]
+    },
+    {
+      "id": 1136,
+      "kanji": "勝つ",
+      "readings": [
+        {
+          "kana": "かつ",
+          "romaji": "katsu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to win"
+        ],
+        "ru": [
+          "побеждать"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 630."
+      ]
+    },
+    {
+      "id": 1137,
+      "kanji": "負ける",
+      "readings": [
+        {
+          "kana": "まける",
+          "romaji": "makeru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to lose",
+          "to be defeated"
+        ],
+        "ru": [
+          "проигрывать"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 631."
+      ]
+    },
+    {
+      "id": 1138,
+      "kanji": "動く",
+      "readings": [
+        {
+          "kana": "うごく",
+          "romaji": "ugoku"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to move"
+        ],
+        "ru": [
+          "двигаться"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 632."
+      ]
+    },
+    {
+      "id": 1139,
+      "kanji": "慣れる",
+      "readings": [
+        {
+          "kana": "なれる",
+          "romaji": "nareru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to get used to"
+        ],
+        "ru": [
+          "привыкать"
+        ]
+      },
+      "verb_type": "Ichidan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:71"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 633."
+      ]
+    },
+    {
+      "id": 1140,
+      "kanji": "本当",
+      "readings": [
+        {
+          "kana": "ほんとう",
+          "romaji": "hontou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "truth",
+          "reality"
+        ],
+        "ru": [
+          "действительность, правда"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 634."
+      ]
+    },
+    {
+      "id": 1141,
+      "kanji": "製品",
+      "readings": [
+        {
+          "kana": "せいひん",
+          "romaji": "seihin"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "manufactured product",
+          "goods"
+        ],
+        "ru": [
+          "продукция, товары"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:work"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 635."
+      ]
+    },
+    {
+      "id": 1142,
+      "kanji": "釣り",
+      "readings": [
+        {
+          "kana": "つり",
+          "romaji": "tsuri"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "fishing"
+        ],
+        "ru": [
+          "рыбалка"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 636."
+      ]
+    },
+    {
+      "id": 1143,
+      "kanji": "ゴルフ",
+      "readings": [
+        {
+          "kana": "ゴルフ",
+          "romaji": "gorufu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "golf"
+        ],
+        "ru": [
+          "гольф"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 637."
+      ]
+    },
+    {
+      "id": 1144,
+      "kanji": "夢",
+      "readings": [
+        {
+          "kana": "ゆめ",
+          "romaji": "yume"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "dream"
+        ],
+        "ru": [
+          "сон, мечта"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 638."
+      ]
+    },
+    {
+      "id": 1145,
+      "kanji": "天才",
+      "readings": [
+        {
+          "kana": "てんさい",
+          "romaji": "tensai"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "genius"
+        ],
+        "ru": [
+          "гений"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 639."
+      ]
+    },
+    {
+      "id": 1146,
+      "kanji": "久しぶり",
+      "readings": [
+        {
+          "kana": "ひさしぶり",
+          "romaji": "hisashiburi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "long time no see",
+          "for the first time in a long while"
+        ],
+        "ru": [
+          "давно не виделись! сколько лет сколько зим!"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "expressions",
+          "group": "expressions:43"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 640."
+      ]
+    },
+    {
+      "id": 1147,
+      "kanji": "クラブ",
+      "readings": [
+        {
+          "kana": "クラブ",
+          "romaji": "kurabu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "club",
+          "interest group"
+        ],
+        "ru": [
+          "кружок по интересам, секция"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 642."
+      ]
+    },
+    {
+      "id": 1148,
+      "kanji": "柔道",
+      "readings": [
+        {
+          "kana": "じゅうどう",
+          "romaji": "juudou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "judo"
+        ],
+        "ru": [
+          "дзюдо"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 643."
+      ]
+    },
+    {
+      "id": 1149,
+      "kanji": "相撲",
+      "readings": [
+        {
+          "kana": "すもう",
+          "romaji": "sumou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "sumo wrestling"
+        ],
+        "ru": [
+          "сумо"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 644."
+      ]
+    },
+    {
+      "id": 1150,
+      "kanji": "茶道",
+      "readings": [
+        {
+          "kana": "さどう",
+          "romaji": "sadou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "tea ceremony"
+        ],
+        "ru": [
+          "чайная церемония"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 645."
+      ]
+    },
+    {
+      "id": 1151,
+      "kanji": "書道",
+      "readings": [
+        {
+          "kana": "しょどう",
+          "romaji": "shodou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "calligraphy"
+        ],
+        "ru": [
+          "каллиграфия"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 646."
+      ]
+    },
+    {
+      "id": 1152,
+      "kanji": "生け花",
+      "readings": [
+        {
+          "kana": "いけばな",
+          "romaji": "ikebana"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "ikebana",
+          "flower arrangement"
+        ],
+        "ru": [
+          "икэбана (составление композиций из цветов)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:leisure"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 1, № 647."
+      ]
+    },
+    {
+      "id": 1153,
+      "kanji": "畳",
+      "readings": [
+        {
+          "kana": "たたみ",
+          "romaji": "tatami"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "tatami mat"
+        ],
+        "ru": [
+          "татами (соломенный мат стандартного размера ок. 1,5 кв.м.)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:home"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 2, № 648."
+      ]
+    },
+    {
+      "id": 1154,
+      "kanji": "予定",
+      "readings": [
+        {
+          "kana": "よてい",
+          "romaji": "yotei"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "plan",
+          "schedule"
+        ],
+        "ru": [
+          "планы, дела, расчёт"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 2, № 649."
+      ]
+    },
+    {
+      "id": 1155,
+      "kanji": "成功",
+      "readings": [
+        {
+          "kana": "せいこう",
+          "romaji": "seikou"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "success"
+        ],
+        "ru": [
+          "успех, удача"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:concepts"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第25課.pdf, стр. 2, № 650."
+      ]
+    },
+    {
+      "id": 1156,
+      "kanji": "時",
+      "readings": [
+        {
+          "kana": "じ",
+          "romaji": "ji"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "o'clock",
+          "hour (time suffix)"
+        ],
+        "ru": [
+          "час"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:time"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第3課.pdf, стр. 1, № 74."
+      ]
+    },
+    {
+      "id": 1157,
+      "kanji": "半",
+      "readings": [
+        {
+          "kana": "はん",
+          "romaji": "han"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "half",
+          "half past"
+        ],
+        "ru": [
+          "половина"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:quantity"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第3課.pdf, стр. 1, № 75."
+      ]
+    },
+    {
+      "id": 1158,
+      "kanji": "分",
+      "readings": [
+        {
+          "kana": "ふん",
+          "romaji": "fun"
+        },
+        {
+          "kana": "ぷん",
+          "romaji": "pun"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "minute (counter)"
+        ],
+        "ru": [
+          "минута"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:time"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第3課.pdf, стр. 1, № 76."
+      ]
+    },
+    {
+      "id": 1159,
+      "kanji": "何分",
+      "readings": [
+        {
+          "kana": "なんぷん",
+          "romaji": "nanpun"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "how many minutes?"
+        ],
+        "ru": [
+          "сколько минут?"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第3課.pdf, стр. 1, № 79."
+      ]
+    },
+    {
+      "id": 1160,
+      "kanji": "毎〜",
+      "readings": [
+        {
+          "kana": "まい~",
+          "romaji": "mai~"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "every",
+          "each (prefix)"
+        ],
+        "ru": [
+          "каждый (напр. 毎日 каждый день)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第3課.pdf, стр. 1, № 80."
+      ]
+    },
+    {
+      "id": 1161,
+      "kanji": "すみません",
+      "readings": [
+        {
+          "kana": "すみません",
+          "romaji": "sumimasen"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "excuse me",
+          "sorry"
+        ],
+        "ru": [
+          "извините"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "expressions",
+          "group": "expressions:47"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第3課.pdf, стр. 2, № 98."
+      ]
+    },
+    {
+      "id": 1162,
+      "kanji": "どういたしまして",
+      "readings": [
+        {
+          "kana": "どういたしまして",
+          "romaji": "douitashimashite"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "you're welcome"
+        ],
+        "ru": [
+          "не за что, пожалуйста"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "expressions",
+          "group": "expressions:48"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第3課.pdf, стр. 2, № 99."
+      ]
+    },
+    {
+      "id": 1163,
+      "kanji": "エレベーター",
+      "readings": [
+        {
+          "kana": "エレベーター",
+          "romaji": "erebeetaa"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "elevator",
+          "lift"
+        ],
+        "ru": [
+          "лифт"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第4課.pdf, стр. 1, № 113."
+      ]
+    },
+    {
+      "id": 1164,
+      "kanji": "エスカレーター",
+      "readings": [
+        {
+          "kana": "エスカレーター",
+          "romaji": "esukareetaa"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "escalator"
+        ],
+        "ru": [
+          "эскалатор"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第4課.pdf, стр. 1, № 114."
+      ]
+    },
+    {
+      "id": 1165,
+      "kanji": "ワイン",
+      "readings": [
+        {
+          "kana": "ワイン",
+          "romaji": "wain"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "wine"
+        ],
+        "ru": [
+          "вино"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第4課.pdf, стр. 1, № 120."
+      ]
+    },
+    {
+      "id": 1166,
+      "kanji": "お国",
+      "readings": [
+        {
+          "kana": "おくに",
+          "romaji": "okuni"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "country (polite)"
+        ],
+        "ru": [
+          "страна"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:city"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第4課.pdf, стр. 2, № 126."
+      ]
+    },
+    {
+      "id": 1167,
+      "kanji": "勉強する",
+      "readings": [
+        {
+          "kana": "べんきょうする",
+          "romaji": "benkyousuru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to study"
+        ],
+        "ru": [
+          "учиться, заниматься"
+        ]
+      },
+      "verb_type": "Irregular",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:72"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課.pdf, стр. 2, № 157."
+      ]
+    },
+    {
+      "id": 1168,
+      "kanji": "嘲る",
+      "readings": [
+        {
+          "kana": "あざける",
+          "romaji": "azakeru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to mock",
+          "to ridicule"
+        ],
+        "ru": [
+          "насмехаться, высмеивать"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 1.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1169,
+      "kanji": "焦る",
+      "readings": [
+        {
+          "kana": "あせる",
+          "romaji": "aseru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to be impatient",
+          "to feel flustered",
+          "to hurry"
+        ],
+        "ru": [
+          "нервничать, спешить"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 2.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1170,
+      "kanji": "弄る",
+      "readings": [
+        {
+          "kana": "いじる",
+          "romaji": "ijiru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to fiddle with",
+          "to tamper with"
+        ],
+        "ru": [
+          "вертеть в руках, прикасаться"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 3.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1171,
+      "kanji": "入る",
+      "readings": [
+        {
+          "kana": "いる",
+          "romaji": "iru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to enter (iru, chiefly in compounds)"
+        ],
+        "ru": [
+          "входить (используется гл. обр. в словосочетаниях)"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://www.bunka.go.jp/seisaku/bunkashingikai/kokugo/shoiinkai/iinkai_02/pdf/sanko_2.pdf"
+      ],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 4.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1172,
+      "kanji": "限る",
+      "readings": [
+        {
+          "kana": "かぎる",
+          "romaji": "kagiru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to limit",
+          "to be limited to"
+        ],
+        "ru": [
+          "ограничивать, ограничиваться"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 7.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1173,
+      "kanji": "噛る",
+      "readings": [
+        {
+          "kana": "かじる",
+          "romaji": "kajiru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to gnaw",
+          "to nibble"
+        ],
+        "ru": [
+          "грызть"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 8.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1174,
+      "kanji": "軋る",
+      "readings": [
+        {
+          "kana": "きしる",
+          "romaji": "kishiru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to creak",
+          "to squeak"
+        ],
+        "ru": [
+          "скрипеть"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 9.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1175,
+      "kanji": "蹴る",
+      "readings": [
+        {
+          "kana": "ける",
+          "romaji": "keru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to kick"
+        ],
+        "ru": [
+          "пинать, ударять ногой"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 11.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1176,
+      "kanji": "茂る",
+      "readings": [
+        {
+          "kana": "しげる",
+          "romaji": "shigeru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to grow thickly",
+          "to become overgrown"
+        ],
+        "ru": [
+          "густо расти, разрастись"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 12.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1177,
+      "kanji": "湿る",
+      "readings": [
+        {
+          "kana": "しめる",
+          "romaji": "shimeru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to become damp"
+        ],
+        "ru": [
+          "отсыревать, становиться влажным"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 13.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1178,
+      "kanji": "喋る",
+      "readings": [
+        {
+          "kana": "しゃべる",
+          "romaji": "shaberu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to chat",
+          "to chatter"
+        ],
+        "ru": [
+          "болтать"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 14.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1179,
+      "kanji": "滑る",
+      "readings": [
+        {
+          "kana": "すべる",
+          "romaji": "suberu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to slide",
+          "to slip"
+        ],
+        "ru": [
+          "скользить"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 16.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1180,
+      "kanji": "誹る",
+      "readings": [
+        {
+          "kana": "そしる",
+          "romaji": "soshiru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to slander",
+          "to speak ill of"
+        ],
+        "ru": [
+          "клеветать, порочить"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 17.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1181,
+      "kanji": "散る",
+      "readings": [
+        {
+          "kana": "ちる",
+          "romaji": "chiru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to scatter",
+          "to fall (flowers or leaves)"
+        ],
+        "ru": [
+          "осыпаться, опадать, рассыпаться"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 18.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1182,
+      "kanji": "照る",
+      "readings": [
+        {
+          "kana": "てる",
+          "romaji": "teru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to shine (sun or moon)"
+        ],
+        "ru": [
+          "сиять, светить"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 19.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1183,
+      "kanji": "詰る",
+      "readings": [
+        {
+          "kana": "なじる",
+          "romaji": "najiru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to reproach",
+          "to rebuke"
+        ],
+        "ru": [
+          "упрекать, укорять, порицать"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 20.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1184,
+      "kanji": "握る",
+      "readings": [
+        {
+          "kana": "にぎる",
+          "romaji": "nigiru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to grip",
+          "to hold in one's hand"
+        ],
+        "ru": [
+          "держать в руке"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 21.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1185,
+      "kanji": "練る",
+      "readings": [
+        {
+          "kana": "ねる",
+          "romaji": "neru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to knead"
+        ],
+        "ru": [
+          "месить"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 22.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1186,
+      "kanji": "罵る",
+      "readings": [
+        {
+          "kana": "ののしる",
+          "romaji": "nonoshiru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to abuse verbally",
+          "to curse at"
+        ],
+        "ru": [
+          "ругать, бранить, поносить"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 1, № 23.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1187,
+      "kanji": "捻る",
+      "readings": [
+        {
+          "kana": "ひねる",
+          "romaji": "hineru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to twist",
+          "to turn"
+        ],
+        "ru": [
+          "крутить, вертеть"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 2, № 26.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1188,
+      "kanji": "耽る",
+      "readings": [
+        {
+          "kana": "ふける",
+          "romaji": "fukeru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to be absorbed in",
+          "to indulge in"
+        ],
+        "ru": [
+          "предаваться чему-л., пристраститься к чему-л., погружаться, уходить с головой во что-л."
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 2, № 27.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1189,
+      "kanji": "減る",
+      "readings": [
+        {
+          "kana": "へる",
+          "romaji": "heru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to decrease",
+          "to diminish"
+        ],
+        "ru": [
+          "уменьшаться, сокращаться"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 2, № 28.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1190,
+      "kanji": "参る",
+      "readings": [
+        {
+          "kana": "まいる",
+          "romaji": "mairu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to go",
+          "to come (humble)"
+        ],
+        "ru": [
+          "идти, приходить"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 2, № 29.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1191,
+      "kanji": "混じる",
+      "readings": [
+        {
+          "kana": "まじる",
+          "romaji": "majiru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to be mixed",
+          "to mingle"
+        ],
+        "ru": [
+          "смешиваться, перемешиваться (непереходный глагол)"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [
+        "https://www.tanoshiijapanese.com/dictionary/entry_details.cfm?entry_id=58299"
+      ],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 2, № 30.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5.",
+        "Перевод источника уточнён: мешать, перемешивать"
+      ]
+    },
+    {
+      "id": 1192,
+      "kanji": "毟る",
+      "readings": [
+        {
+          "kana": "むしる",
+          "romaji": "mushiru"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "to pluck",
+          "to tear off"
+        ],
+        "ru": [
+          "рвать, срывать, вырывать"
+        ]
+      },
+      "verb_type": "Godan",
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "verbs",
+          "group": "verbs:70"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第5課_Глаголы_исключения_1_го_спряжения.pdf, стр. 2, № 31.",
+        "Дополнительный список глаголов-исключений; содержит лексику за пределами базового N5."
+      ]
+    },
+    {
+      "id": 1193,
+      "kanji": "歩いて",
+      "readings": [
+        {
+          "kana": "あるいて",
+          "romaji": "aruite"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "on foot"
+        ],
+        "ru": [
+          "пешком"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第6課.pdf, стр. 1, № 178."
+      ]
+    },
+    {
+      "id": 1194,
+      "kanji": "次の",
+      "readings": [
+        {
+          "kana": "つぎの",
+          "romaji": "tsugino"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "next",
+          "following"
+        ],
+        "ru": [
+          "следующий"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第6課.pdf, стр. 2, № 189."
+      ]
+    },
+    {
+      "id": 1195,
+      "kanji": "お米",
+      "readings": [
+        {
+          "kana": "おこめ",
+          "romaji": "okome"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "uncooked rice (polite)"
+        ],
+        "ru": [
+          "рис (крупа)"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第7課.pdf, стр. 1, № 203."
+      ]
+    },
+    {
+      "id": 1196,
+      "kanji": "肉",
+      "readings": [
+        {
+          "kana": "にく",
+          "romaji": "niku"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "meat"
+        ],
+        "ru": [
+          "мясо"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第7課.pdf, стр. 1, № 205."
+      ]
+    },
+    {
+      "id": 1197,
+      "kanji": "水",
+      "readings": [
+        {
+          "kana": "みず",
+          "romaji": "mizu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "water"
+        ],
+        "ru": [
+          "вода"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第7課.pdf, стр. 1, № 210."
+      ]
+    },
+    {
+      "id": 1198,
+      "kanji": "ミルク",
+      "readings": [
+        {
+          "kana": "ミルク",
+          "romaji": "miruku"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "milk"
+        ],
+        "ru": [
+          "молоко"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第7課.pdf, стр. 1, № 214."
+      ]
+    },
+    {
+      "id": 1199,
+      "kanji": "酒",
+      "readings": [
+        {
+          "kana": "さけ",
+          "romaji": "sake"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "alcohol",
+          "sake"
+        ],
+        "ru": [
+          "алкоголь, крепкое спиртное, сакэ"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:food"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第7課.pdf, стр. 2, № 217."
+      ]
+    },
+    {
+      "id": 1200,
+      "kanji": "女の人",
+      "readings": [
+        {
+          "kana": "おんなのひと",
+          "romaji": "onnanohito"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "woman"
+        ],
+        "ru": [
+          "женщина"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第7課.pdf, стр. 2, № 218."
+      ]
+    },
+    {
+      "id": 1201,
+      "kanji": "男の人",
+      "readings": [
+        {
+          "kana": "おとこのひと",
+          "romaji": "otokonohito"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "man"
+        ],
+        "ru": [
+          "мужчина"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第7課.pdf, стр. 2, № 219."
+      ]
+    },
+    {
+      "id": 1202,
+      "kanji": "金",
+      "readings": [
+        {
+          "kana": "かね",
+          "romaji": "kane"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "money"
+        ],
+        "ru": [
+          "деньги"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:shopping"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第8課.pdf, стр. 1, № 236."
+      ]
+    },
+    {
+      "id": 1203,
+      "kanji": "ご家族",
+      "readings": [
+        {
+          "kana": "ごかぞく",
+          "romaji": "gokazoku"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "family (polite, someone else's)"
+        ],
+        "ru": [
+          "семья"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 326.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1204,
+      "kanji": "お名前",
+      "readings": [
+        {
+          "kana": "おなまえ",
+          "romaji": "onamae"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "name (polite)"
+        ],
+        "ru": [
+          "имя"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 327.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1205,
+      "kanji": "祖母",
+      "readings": [
+        {
+          "kana": "そぼ",
+          "romaji": "sobo"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "grandmother (one's own)"
+        ],
+        "ru": [
+          "бабушка"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 328.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1206,
+      "kanji": "祖父",
+      "readings": [
+        {
+          "kana": "そふ",
+          "romaji": "sofu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "grandfather (one's own)"
+        ],
+        "ru": [
+          "дедушка"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 329.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1207,
+      "kanji": "ご両親",
+      "readings": [
+        {
+          "kana": "ごりょうしん",
+          "romaji": "goryoushin"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "parents (polite, someone else's)"
+        ],
+        "ru": [
+          "родители"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 330.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1208,
+      "kanji": "おじ",
+      "readings": [
+        {
+          "kana": "おじ",
+          "romaji": "oji"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "uncle (one's own)"
+        ],
+        "ru": [
+          "дядя"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 333.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1209,
+      "kanji": "おば",
+      "readings": [
+        {
+          "kana": "おば",
+          "romaji": "oba"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "aunt (one's own)"
+        ],
+        "ru": [
+          "тётя"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 334.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1210,
+      "kanji": "ご兄弟",
+      "readings": [
+        {
+          "kana": "ごきょうだい",
+          "romaji": "gokyoudai"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "siblings (polite, someone else's)"
+        ],
+        "ru": [
+          "братья и сёстры"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 335.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1211,
+      "kanji": "姉妹",
+      "readings": [
+        {
+          "kana": "しまい",
+          "romaji": "shimai"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "sisters"
+        ],
+        "ru": [
+          "сёстры"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 336.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1212,
+      "kanji": "ご姉妹",
+      "readings": [
+        {
+          "kana": "ごしまい",
+          "romaji": "goshimai"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "sisters (polite, someone else's)"
+        ],
+        "ru": [
+          "сёстры"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 336.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1213,
+      "kanji": "弟さん",
+      "readings": [
+        {
+          "kana": "おとうとさん",
+          "romaji": "otoutosan"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "younger brother (polite, someone else's)"
+        ],
+        "ru": [
+          "младший брат"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 338.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1214,
+      "kanji": "妹さん",
+      "readings": [
+        {
+          "kana": "いもうとさん",
+          "romaji": "imoutosan"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "younger sister (polite, someone else's)"
+        ],
+        "ru": [
+          "младшая сестра"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 340.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1215,
+      "kanji": "夫婦",
+      "readings": [
+        {
+          "kana": "ふうふ",
+          "romaji": "fuufu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "married couple",
+          "husband and wife"
+        ],
+        "ru": [
+          "супруги"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 341.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1216,
+      "kanji": "ご夫婦",
+      "readings": [
+        {
+          "kana": "ごふうふ",
+          "romaji": "gofuufu"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "married couple (polite)"
+        ],
+        "ru": [
+          "супруги"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 341.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1217,
+      "kanji": "夫",
+      "readings": [
+        {
+          "kana": "おっと",
+          "romaji": "otto"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "husband (one's own)"
+        ],
+        "ru": [
+          "муж"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 342.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1218,
+      "kanji": "妻",
+      "readings": [
+        {
+          "kana": "つま",
+          "romaji": "tsuma"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "wife (one's own)"
+        ],
+        "ru": [
+          "жена"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 343.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1219,
+      "kanji": "お子さん",
+      "readings": [
+        {
+          "kana": "おこさん",
+          "romaji": "okosan"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "child (polite, someone else's)"
+        ],
+        "ru": [
+          "ребёнок, дети"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 344.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1220,
+      "kanji": "息子",
+      "readings": [
+        {
+          "kana": "むすこ",
+          "romaji": "musuko"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "son (one's own)"
+        ],
+        "ru": [
+          "сын"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 345.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1221,
+      "kanji": "息子さん",
+      "readings": [
+        {
+          "kana": "むすこさん",
+          "romaji": "musukosan"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "son (polite, someone else's)"
+        ],
+        "ru": [
+          "сын"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 345.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1222,
+      "kanji": "娘",
+      "readings": [
+        {
+          "kana": "むすめ",
+          "romaji": "musume"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "daughter (one's own)"
+        ],
+        "ru": [
+          "дочь"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 346.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1223,
+      "kanji": "お嬢さん",
+      "readings": [
+        {
+          "kana": "おじょうさん",
+          "romaji": "ojousan"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "daughter (polite, someone else's)"
+        ],
+        "ru": [
+          "дочь"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 346.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1224,
+      "kanji": "孫",
+      "readings": [
+        {
+          "kana": "まご",
+          "romaji": "mago"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "grandchild"
+        ],
+        "ru": [
+          "внук, внучка"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 347.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1225,
+      "kanji": "お孫さん",
+      "readings": [
+        {
+          "kana": "おまごさん",
+          "romaji": "omagosan"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "grandchild (polite, someone else's)"
+        ],
+        "ru": [
+          "внук, внучка"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 347.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1226,
+      "kanji": "甥",
+      "readings": [
+        {
+          "kana": "おい",
+          "romaji": "oi"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "nephew"
+        ],
+        "ru": [
+          "племянник"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 348.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1227,
+      "kanji": "甥御",
+      "readings": [
+        {
+          "kana": "おいご",
+          "romaji": "oigo"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "nephew (polite, someone else's)"
+        ],
+        "ru": [
+          "племянник"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 1, № 348.",
+        "Вежливая форма, главным образом о чужой семье."
+      ]
+    },
+    {
+      "id": 1228,
+      "kanji": "姪",
+      "readings": [
+        {
+          "kana": "めい",
+          "romaji": "mei"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "niece"
+        ],
+        "ru": [
+          "племянница"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 2, № 349.",
+        "Своя семья (нейтрально)."
+      ]
+    },
+    {
+      "id": 1229,
+      "kanji": "姪御",
+      "readings": [
+        {
+          "kana": "めいご",
+          "romaji": "meigo"
+        }
+      ],
+      "meanings": {
+        "en": [
+          "niece (polite, someone else's)"
+        ],
+        "ru": [
+          "племянница"
+        ]
+      },
+      "verb_type": null,
+      "context": null,
+      "memberships": [
+        {
+          "collection": "complete",
+          "group": null
+        },
+        {
+          "collection": "nouns",
+          "group": "nouns:people"
+        }
+      ],
+      "related_words": [],
+      "sources": [],
+      "notes": [
+        "Материалы курса N5: 第12課.pdf, стр. 2, № 349.",
+        "Вежливая форма, главным образом о чужой семье."
       ]
     }
   ]

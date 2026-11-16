@@ -15,11 +15,19 @@ def verify_materials():
     from n5.library import Library
     from n5.workbooks import Workbooks
     from n5.exam_sets import ExamSets
+    from n5.course_workbook import CourseWorkbook
     materials = ROOT / 'data/materials'
     library = Library(materials / 'tadoku/catalog.json', materials / 'tadoku/files')
     workbooks = Workbooks(materials)
     exams = ExamSets(materials)
+    course = CourseWorkbook(materials / 'course/n5')
     missing = []
+    if course.data is None:
+        missing.append('course/n5/workbook.json')
+    else:
+        for key in course.data['assets']:
+            if course.asset(key) is None:
+                missing.append(f'course/n5/{key}')
     for book in library.books.values():
         for kind in book['assets']:
             if library.asset(book['id'], kind) is None:
@@ -34,7 +42,8 @@ def verify_materials():
                     missing.append(f'{label}/{key}/{asset}')
     if missing:
         raise ValueError('Missing or damaged materials: ' + ', '.join(missing))
-    return {'books': len(library.books), 'workbooks': len(workbooks.books), 'examSets': len(exams.sets)}
+    return {'books': len(library.books), 'workbooks': len(workbooks.books), 'examSets': len(exams.sets),
+            'courseCards': len(course.data['items'])}
 
 
 def package(output):

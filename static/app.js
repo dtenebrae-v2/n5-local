@@ -4,6 +4,7 @@ import { mountCounters } from './js/counters.js';
 import { mountWorkbooks } from './js/workbooks.js';
 import { mountExamSets } from './js/exam-sets.js';
 import { mountPreparation } from './js/preparation.js';
+import { mountCourseWorkbook } from './js/course-workbook.js';
 import { mountMockExam } from './js/mock-exam.js';
 import { mountGame } from './js/game.js';
 import { getJSON } from './js/api.js';
@@ -35,7 +36,7 @@ async function render(focusPage = false) {
   const route = resolveRoute(location.pathname, catalog);
   content.classList.toggle('home-screen', route.type === 'home');
   content.classList.toggle('book-screen', route.type === 'book');
-  content.classList.toggle('practice-screen', ['game', 'mock', 'preparation', 'course', 'book', 'counters', 'workbook', 'exam-sets', 'exam-set'].includes(route.type));
+  content.classList.toggle('practice-screen', ['game', 'mock', 'preparation', 'course', 'course-workbook', 'book', 'counters', 'workbook', 'exam-sets', 'exam-set'].includes(route.type));
   if (route.canonical) history.replaceState({}, '', route.canonical + location.search + location.hash);
   document.title = `${route.title} · N5`;
   menu.classList.remove('open');
@@ -63,6 +64,8 @@ async function render(focusPage = false) {
       await mountPreparation(content, signal);
     } else if (route.type === 'course') {
       await mountPreparation(content, signal, { view: route.view });
+    } else if (route.type === 'course-workbook') {
+      await mountCourseWorkbook(content, signal);
     } else if (route.type === 'mock') {
       await mountMockExam(content, signal);
     } else if (route.type === 'game') {

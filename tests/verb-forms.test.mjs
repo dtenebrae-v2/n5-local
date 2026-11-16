@@ -39,3 +39,13 @@ test('Practice shares reference forms and rejects conditional stem as a command'
   assert.equal(checkAnswer(exercise, 'tabeyo').status, 'correct');
   assert.equal(exerciseFor(entry, 'noun', 'imperative'), null);
 });
+
+test('Imported compound verbs keep their prefix and exceptional endings', () => {
+  const study = { kanji: '勉強する', readings: [{ kana: 'べんきょうする' }], type: 'Irregular' };
+  assert.equal(checkAnswer(exerciseFor(study, 'verb', 'plain_past'), 'べんきょうした').status, 'correct');
+  assert.deepEqual(verbForms('かくにんする', 'Irregular').forms.plain_negative, ['かくにんしない']);
+  assert.deepEqual(verbForms('にんきがある', 'Godan').forms.plain_negative, ['にんきがない']);
+  assert.deepEqual(verbForms('にんきがある', 'Godan').forms.past, ['にんきがありました']);
+  assert.deepEqual(verbForms('おふろにはいる', 'Godan').forms.te, ['おふろにはいって']);
+  assert.deepEqual(verbForms('まいる', 'Godan').forms.plain_negative, ['まいらない']);
+});

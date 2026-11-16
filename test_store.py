@@ -63,11 +63,13 @@ class StoreTests(unittest.TestCase):
         self.path.write_text(json.dumps(document, ensure_ascii=False))
         migrated = VocabularyStore(DATA, self.path)
         words = json.loads(self.path.read_text())['words']
-        self.assertEqual(len(words), 852)
+        self.assertEqual(len(words), len(json.loads((DATA / 'vocabulary.json').read_text())['words']) + 1)
         self.assertEqual(next(w for w in words if w['id'] == custom['id']), custom)
         self.assertEqual(len({w['id'] for w in words}), len(words))
         self.assertEqual(next(w for w in words if w['id'] == 489)['kanji'], 'パーティー')
         self.assertEqual(next(w for w in words if w['kanji'] == '居る')['verb_type'], 'Godan')
+        self.assertEqual({r['kana'] for r in next(w for w in words if w['id'] == 43)['readings']}, {'いえ', 'うち'})
+        self.assertEqual({r['kana'] for r in next(w for w in words if w['id'] == 462)['readings']}, {'なに', 'なん'})
         self.assertEqual(migrated.catalog.repository.words({'q': ['私たち']})['total'], 1)
         before = self.path.read_bytes()
         VocabularyStore(DATA, self.path)
@@ -105,7 +107,7 @@ class StoreTests(unittest.TestCase):
         restarted = VocabularyStore(DATA, self.path)
         self.assertEqual(restarted.catalog.repository.count(), before + 4)
         self.assertEqual(restarted.catalog.repository.words({'q': ['shikengo']})['total'], 4)
-        self.assertEqual(next(c['count'] for c in restarted.catalog.public['collections'] if c['id'] == 'nouns'), 443)
+        self.assertEqual(next(c['count'] for c in restarted.catalog.public['collections'] if c['id'] == 'nouns'), 590)
         with self.assertRaises(WordError) as failure:
             restarted.add(payloads[0])
         self.assertEqual(failure.exception.status, 409)

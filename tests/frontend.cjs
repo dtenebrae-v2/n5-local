@@ -20,6 +20,8 @@ const grammarGameChecks = require('./grammar-game.cjs');
 const trainingSessionChecks = require('./training-session.cjs');
 const vocabularyGameChecks = require('./vocabulary-game.cjs');
 const practiceChecks = require('./practice.cjs');
+const courseWorkbookChecks = require('./course-workbook.cjs');
+const controlStyleChecks = require('./control-style.cjs');
 
 const root = path.resolve(__dirname, '..');
 const serverCode = `
@@ -61,6 +63,8 @@ async function main() {
     const errors = [];
     page.on('pageerror', (error) => errors.push(error.message));
     const base = `http://127.0.0.1:${port}`;
+    await controlStyleChecks(page, base);
+    await courseWorkbookChecks(page, base);
     await counterChecks(page, base);
     await workbookChecks(page, base);
     await examSetChecks(page, base);
@@ -95,7 +99,7 @@ async function main() {
     assert.equal(await page.locator('.hero, footer, .sidebar-note').count(), 0);
     assert.doesNotMatch(await page.locator('#navigation').innerText(), /Обзор курса/);
     assert.equal(await page.locator('tbody tr').count(), 60);
-    assert.match(await page.locator('#navigation').innerText(), /Существительные\s+439/);
+    assert.match(await page.locator('#navigation').innerText(), /Существительные\s+586/);
     console.log('PASS home, catalog navigation and titles');
 
     await page.keyboard.press('/');
@@ -104,7 +108,7 @@ async function main() {
     await page.locator('#navigation a[href$="/vocabulary/nouns"]').click();
     await ready();
     assert.equal(await page.title(), 'Существительные · N5');
-    assert.match(await page.locator('#result-count').innerText(), /Найдено 439/);
+    assert.match(await page.locator('#result-count').innerText(), /Найдено 586/);
     assert.equal(await page.locator('tbody tr').count(), 60);
     const first = await page.locator('.japanese-word').first().innerText();
     await page.locator('#next').click();
@@ -148,7 +152,8 @@ async function main() {
     }
     await open('/jlpt/n5/vocabulary/i-adjectives');
     assert.equal(await page.locator('.group-tile').count(), 11);
-    assert.equal(await page.locator('.word-group-card').count(), 10);
+    // The enlarged adjective list spans two pages; all topic tiles remain visible.
+    assert.equal(await page.locator('.word-group-card').count(), 8);
     assert.equal(await page.locator('.word-group-header h2').first().innerText(), 'Цвета');
     if (process.env.SCREENSHOT_DIR) {
       fs.mkdirSync(process.env.SCREENSHOT_DIR, { recursive: true });
@@ -159,7 +164,7 @@ async function main() {
     assert.equal(await page.locator('.word-group-card').count(), 1);
     assert.equal(await page.locator('tbody tr').count(), 5);
     await open('/jlpt/n5/vocabulary/nouns?offset=999999');
-    assert.match(await page.locator('#result-count').innerText(), /421–439/);
+    assert.match(await page.locator('#result-count').innerText(), /541–586/);
     await open('/jlpt/n5/vocabulary/nouns?offset=Infinity');
     assert.match(await page.locator('#result-count').innerText(), /1–60/);
     console.log('PASS all collection/grammar routes and invalid offsets');

@@ -11,6 +11,7 @@ from n5.counters import load_counters
 from n5.mock_exam import load_mock_exam
 from n5.library import Library, byte_range
 from n5.workbooks import Workbooks
+from n5.course_workbook import CourseWorkbook
 from n5.exam_sets import ExamSets
 from n5.export import vocabulary_csv
 from n5.store import VocabularyStore, WordError
@@ -24,6 +25,7 @@ GRAMMAR_PRACTICE = load_grammar(DATA / 'grammar-practice.json')
 MOCK_EXAM = load_mock_exam(DATA / 'mock-exam.json')
 LIBRARY = Library(MATERIALS / 'tadoku/catalog.json', MATERIALS / 'tadoku/files')
 WORKBOOKS = Workbooks(MATERIALS)
+COURSE_WORKBOOK = CourseWorkbook(MATERIALS / 'course/n5')
 EXAM_SETS = ExamSets(MATERIALS)
 STORE = VocabularyStore(DATA, Path(os.environ.get('N5_VOCABULARY', DATA / 'vocabulary.json')))
 CATALOG = STORE.catalog
@@ -81,7 +83,14 @@ class Handler(BaseHTTPRequestHandler):
             material = re.fullmatch(r'/material-files/([a-z0-9-]+)/([a-zA-Z0-9-]+)', path)
             exam = re.fullmatch(r'/jlpt/n5/exams/([a-z0-9-]+)', path)
             exam_media = re.fullmatch(r'/exam-files/([a-z0-9-]+)/([a-zA-Z0-9-]+)', path)
-            if exam_media:
+            course_image = re.fullmatch(r'/course-workbook-files/([a-zA-Z0-9-]+)', path)
+            if course_image:
+                found = COURSE_WORKBOOK.asset(course_image.group(1))
+                if found:
+                    self.serve_file(*found, 'image/png')
+                else:
+                    self.not_found()
+            elif exam_media:
                 found = EXAM_SETS.asset(*exam_media.groups())
                 if found:
                     self.serve_file(*found, found[1]['mime'])
@@ -146,6 +155,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.send(LIBRARY.public())
         if path == '/api/workbooks':
             return self.send(WORKBOOKS.catalog())
+        if path == '/api/course-workbook':
+            return self.send(COURSE_WORKBOOK.public())
         if path == '/api/exams':
             return self.send(EXAM_SETS.catalog())
         if path == '/api/exam':

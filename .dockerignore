@@ -32,3 +32,6 @@ data/materials/jlpt/
 test_workbooks.py
 
 test_exam_sets.py
+
+# Original source PDFs are not needed in the image.
+tmp/

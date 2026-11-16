@@ -9,3 +9,5 @@ android/*.jks
 dist/
 .build-tools/
 .automation/
+# Source PDFs are not needed by the application.
+/tmp/

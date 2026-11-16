@@ -50,6 +50,10 @@ def check(archive):
                     assert response.status == 206 and len(response.read()) == 64
 
             assert get('/api/health')['status'] == 'ok'
+            course = get('/api/course-workbook')
+            assert course['available'] and len(course['items']) == 777
+            for asset in course['assets'].values():
+                media(asset['url'])
             assert get('/api/desktop')['application'] == 'n5-local'
             media_count = 0
             books = get('/api/library')['books']
