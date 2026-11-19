@@ -9,8 +9,9 @@ module.exports=async function preparationChecks(page,base) {
  await page.evaluate(()=>localStorage.removeItem('n5.preparation.v1'));
  await page.goto(base+'/jlpt/n5/preparation');
  assert.equal(await page.locator('#navigation .nav-group').count(),6);
+ assert.equal(await page.locator('#nav-course').locator('..').locator('a[href$="/course/workbook"]').count(),1);
  assert.equal(await page.locator('#nav-words').locator('..').locator('a[href$="/practice"]').count(),0);
- assert.equal(await page.locator('#nav-exams').locator('..').locator('a').count(),4);
+ assert.equal(await page.locator('#nav-exams').locator('..').locator('a').count(),3);
  assert.ok(await page.locator('.nav-caption').first().evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=parseFloat(getComputedStyle(document.querySelector('#navigation a')).fontSize)));
  assert.equal(await page.locator('.prep-settings').getAttribute('open'),null);
  assert.match(await page.locator('[data-action=launch]').innerText(),/10 заданий/);
@@ -128,7 +129,7 @@ module.exports=async function preparationChecks(page,base) {
  assert.equal(await page.locator('#prep-lesson option').count(),25);
  await page.locator('#prep-lesson').selectOption('5');
  assert.equal(await page.locator('#prep-topic-controls').count(),0);
- await page.locator('.prep-lesson-rules > summary').click();
+ if(await page.locator('.prep-lesson-rules').getAttribute('open')===null) await page.locator('.prep-lesson-rules > summary').click();
  assert.match(await page.locator('.prep-lesson-rules').innerText(),/Godan|Ichidan/);
  assert.match(await page.locator('#prep-plan-summary').innerText(),/Урок 5/);
  assert.deepEqual((await read()).session.questions.map(q=>q.id),quickIds,'Selecting a lesson preserves the current session');
@@ -162,7 +163,7 @@ module.exports=async function preparationChecks(page,base) {
  await page.locator('#prep-lesson').selectOption('review-5');
  await page.locator('[data-prep-count="5"]').click();
  assert.match(await page.locator('#prep-plan-summary').innerText(),/Повторение уроков 1–5/);
- await page.locator('.prep-lesson-rules > summary').click();
+ if(await page.locator('.prep-lesson-rules').getAttribute('open')===null) await page.locator('.prep-lesson-rules > summary').click();
  assert.equal(await page.locator('.prep-review-rules').count(),5);
  await page.locator('[data-action=launch]').click();
  const reviewSession=(await read()).session;

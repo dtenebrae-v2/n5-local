@@ -14,7 +14,6 @@ export function breadcrumbs(base, items = []) {
 export function heading(kicker, title, description) {
   return `
     <div class="page-heading">
-      <p class="eyebrow">${escapeHTML(kicker)}</p>
       <h1>${escapeHTML(title)}</h1>
       <p>${escapeHTML(description)}</p>
     </div>

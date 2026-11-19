@@ -96,9 +96,21 @@ import json
 from server import CATALOG, REPOSITORY
 print(json.dumps([{ 'kind': c['practice_kind'], 'entries': REPOSITORY.words({'collection': [c['id']]}, paginate=False)} for c in CATALOG.public['collections'] if 'practice_kind' in c], ensure_ascii=False))
 `;
-  const collections = JSON.parse(execFileSync(process.env.PYTHON || 'python3', ['-c', source], {
+  let dictionaryJSON;
+  try {
+    dictionaryJSON = execFileSync(process.env.PYTHON || 'python3', ['-c', source], {
     cwd: new URL('..', import.meta.url), env: { ...process.env, PYTHONDONTWRITEBYTECODE: '1' }, encoding: 'utf8',
-  }));
+    });
+  } catch (error) {
+    // Avoid dumping the full dictionary attached to child_process errors.
+    throw new Error([
+      'Cannot load bundled dictionary through Python',
+      `command=${process.env.PYTHON || 'python3'}`,
+      `code=${error.code ?? 'none'} status=${error.status} signal=${error.signal ?? 'none'}`,
+      `stderr=${String(error.stderr || '').slice(-2000) || '(empty)'}`,
+    ].join('\n'));
+  }
+  const collections = JSON.parse(dictionaryJSON);
   let count = 0;
   for (const collection of collections) {
     for (const entry of collection.entries) {

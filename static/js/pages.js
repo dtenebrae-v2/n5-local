@@ -19,18 +19,19 @@ export function navigation(catalog) {
   const group = (id,title,links) => `<section class="nav-group" aria-labelledby="nav-${id}"><h2 id="nav-${id}" class="nav-caption">${title}</h2>${links}</section>`;
   return `
     <a class="nav-home" href="${catalog.base}">Моё обучение</a>
-    ${group('words','Словарь',vocabulary)}
-    ${group('practice','Тренировки',`<a href="${catalog.base}/practice">Слова и формы</a>
-    <a href="${catalog.base}/counters">Счётные суффиксы</a>`)}
-    ${group('grammar','Грамматика',grammar)}
     ${group('course','Курс N5',`<a href="${catalog.base}/course">Уроки 1–25</a>
+    <a href="${catalog.base}/course/workbook">Практика по тетради</a>
     <a href="${catalog.base}/course/reviews">Повторение по урокам</a>`)}
-    ${group('exams','Подготовка и экзамены N5',`
-    <a href="${catalog.base}/preparation">Задания по темам</a>
-    <a href="${catalog.base}/workbooks">Учебник Sō-matome N5</a>
-    <a href="${catalog.base}/mock">Пробный экзамен</a>
-    <a href="${catalog.base}/exams">Экзаменационные варианты</a>`)}
+    ${group('practice','Тренировки',`<a href="${catalog.base}/preparation">Задания по темам</a>
+    <a href="${catalog.base}/practice">Слова и формы</a>
+    <a href="${catalog.base}/counters">Счётные суффиксы</a>`)}
+    ${group('exams','Экзамены и учебник',`
+    <a href="${catalog.base}/mock">Письменный пробник</a>
+    <a href="${catalog.base}/exams">Варианты и аудирование</a>
+    <a href="${catalog.base}/workbooks">Учебник Sō-matome N5</a>`)}
     ${group('materials','Чтение',`<a href="${catalog.base}/library">Книги Tadoku</a>`)}
+    ${group('words','Словарь',vocabulary)}
+    ${group('grammar','Грамматика',grammar)}
   `;
 }
 

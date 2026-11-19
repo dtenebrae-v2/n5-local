@@ -51,7 +51,7 @@ export async function mountMockExam(root, signal) {
     if (status) status.textContent = storageError || preparationError ? 'Не удалось сохранить тест. При закрытии страницы прогресс может потеряться.' : '';
   }
   function shell(body) {
-    root.innerHTML = `<h1>Пробный N5 · письменная часть</h1><p id="mock-storage" role="status"></p>${body}`;
+    root.innerHTML = `<h1>Письменный пробник N5</h1><p id="mock-storage" role="status"></p>${body}`;
     if (storageError || preparationError) root.querySelector('#mock-storage').textContent = 'Не удалось сохранить тест. При закрытии страницы прогресс может потеряться.';
   }
   function intro() {

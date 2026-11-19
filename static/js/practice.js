@@ -19,7 +19,7 @@ export function openPractice(entry, kind, pageSignal, initialForm = 'past') {
   dialog.setAttribute('aria-labelledby', 'practice-title');
   dialog.innerHTML = `
     <div class="practice-header">
-      <div><p class="eyebrow">${kind === 'verb' ? 'ФОРМЫ ГЛАГОЛА' : 'ВЕЖЛИВЫЕ ФОРМЫ · です / ます'}</p><h2 id="practice-title">Проверка форм</h2></div>
+      <div><h2 id="practice-title">Проверка форм</h2></div>
       <button type="button" class="practice-close" aria-label="Закрыть проверку">×</button>
     </div>
     <p class="practice-word"><span lang="ja">${esc(entry.kanji)}</span>

@@ -74,7 +74,7 @@ export async function mountCourseWorkbook(root, signal) {
     const done = allItems().filter(i => answerFor(i.id).status).length;
     const kinds = [...new Set(allItems().map(i => i.kind))];
     const checked = record?.status === 'correct' || record?.status === 'review';
-    root.innerHTML = `<div class="cw-page"><p><a href="/jlpt/n5/course${unit.startsWith('review')?'/reviews':''}">← К урокам</a></p><h1>Практика по тетради</h1>
+    root.innerHTML = `<div class="cw-page"><p><a href="/jlpt/n5/course${unit.startsWith('review')?'/reviews':''}?lesson=${encodeURIComponent(unit)}">← К правилам урока</a></p><h1>Практика по тетради</h1>
       <p id="cw-storage" role="status">${storageError?'Не удалось сохранить прогресс на устройстве.':''}</p>
       <div class="cw-selectors"><label>Урок<select id="cw-unit">${book.units.map(u=>`<option value="${esc(u.id)}" ${u.id===unit?'selected':''}>${esc(u.title)}</option>`).join('')}</select></label>
       <label>Задания<select id="cw-kind"><option value="all">Все задания</option>${kinds.map(k=>`<option value="${esc(k)}" ${filter===k?'selected':''}>${esc(LABELS[k] || k)}</option>`).join('')}</select></label></div>

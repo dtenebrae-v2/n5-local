@@ -3,7 +3,7 @@
 .vocabulary-more summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; padding: 8px 14px; border: 1px solid var(--line); border-radius: 6px; }
 .vocabulary-more[open] .download { position: absolute; right: 0; top: 100%; z-index: 3; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 16px; box-shadow: 0 4px 15px #183a3520; }
 .word-search-hint { color: var(--muted); font-size: 13px; line-height: 1.5; margin: -14px 0 20px; }
-.word-meaning .meaning-english { display: block; color: var(--muted); font-size: 12px; margin-top: 5px; }
+.word-meaning .meaning-english { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
 .add-word-dialog { padding: 0; overflow: hidden; }
 .add-word-dialog[open] { display: flex; flex-direction: column; }
 .add-word-dialog .practice-header { padding: 20px 24px 0; flex-shrink: 0; }
@@ -13,16 +13,16 @@
 @media (max-width: 700px) {
   .workspace:has(.vocabulary-panel) > .topbar { display: none; }
   #content:has(.vocabulary-panel) { padding-top: 14px; }
-  #content:has(.vocabulary-panel) > .breadcrumbs { margin-bottom: 10px; font-size: 12px; }
+  #content:has(.vocabulary-panel) > .breadcrumbs { margin-bottom: 8px; font-size: 12px; }
   #content:has(.vocabulary-panel) > .page-heading { margin-bottom: 16px; }
   #content:has(.vocabulary-panel) > .page-heading .eyebrow { display: none; }
-  #content:has(.vocabulary-panel) > .page-heading h1 { font-size: 30px; margin-bottom: 6px; }
+  #content:has(.vocabulary-panel) > .page-heading h1 { font-size: 30px; margin-bottom: 4px; }
   #content:has(.vocabulary-panel) > .page-heading > p:last-child { display: none; }
-  .vocabulary-panel .search-toolbar { margin-bottom: 22px; }
+  .vocabulary-panel .search-toolbar { margin-bottom: 20px; }
   .vocabulary-panel .results-heading { margin-top: 12px; }
-  .add-word-dialog .practice-header { padding: 16px 18px 0; }
-  .add-word-dialog #add-word-form { padding: 0 18px; }
-  .add-word-dialog .add-word-footer { display: flex; gap: 10px; }
+  .add-word-dialog .practice-header { padding: 16px 16px 0; }
+  .add-word-dialog #add-word-form { padding: 0 16px; }
+  .add-word-dialog .add-word-footer { display: flex; gap: 8px; }
   .add-word-dialog .add-word-footer > button { flex: 1; }
 }
 

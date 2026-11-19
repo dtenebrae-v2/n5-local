@@ -44,6 +44,15 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
     delete session.hinted;
   }
   const params = new URLSearchParams(location.search);
+  const requestedLesson = params.get('lesson');
+  if (courseView && lessonFor(bank, requestedLesson)) { settings.lesson=requestedLesson; showingHome=true; }
+  const requestedTopic = params.get('topic');
+  if (!courseView && bank.topics.some(topic => topic.id === requestedTopic)) {
+    Object.assign(settings, {mode:'all',topic:requestedTopic,lesson:'',query:''});
+    settings.category = TOPIC_GROUPS.find(group => group.topics.includes(requestedTopic))?.id || 'words';
+    showingHome = true;
+    setupOpen = true;
+  }
   const requested = params.get('mode');
   const quick = params.get('quick') === '1';
   if (!courseView && (quick || ['weak','mistakes','due'].includes(requested))) {
@@ -101,7 +110,8 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
     }
     shell(`<div class="prep-home">${ongoing ? `<section class="prep-resume" aria-labelledby="prep-resume-title"><div><h2 id="prep-resume-title">Незавершённое занятие</h2><p>${esc(planLabel(session))} · задание ${session.index+1} из ${session.questions.length}</p></div><button class="primary" data-action="resume">Продолжить</button></section>` : ''}
       <div class="prep-launch prep-launch-first"><div><p id="prep-plan-summary" role="status"></p><p class="prep-launch-help">Короткое занятие с разбором каждого ответа.</p></div><button class="primary" data-action="launch">${ongoing ? 'Начать новое занятие' : 'Начать тренировку'}</button></div>
-      <details class="prep-settings" ${setupOpen ? 'open' : ''}><summary>Настроить темы и длительность</summary><div class="prep-config"><section aria-labelledby="prep-mode-title"><h2 id="prep-mode-title">Режим занятия</h2><div id="prep-mode-options">${preparationModes(progress,settings.mode)}</div></section>
+      <button class="secondary" data-action="choose-topic" aria-controls="prep-settings">Выбрать тему и длительность</button>
+      <details id="prep-settings" class="prep-settings" ${setupOpen ? 'open' : ''}><summary>Настроить темы и длительность</summary><div class="prep-config"><section aria-labelledby="prep-mode-title"><h2 id="prep-mode-title">Режим занятия</h2><div id="prep-mode-options">${preparationModes(progress,settings.mode)}</div></section>
       <section class="prep-topic-picker" aria-labelledby="prep-topics-title" ${settings.mode==='all'?'':'hidden'}><h2 id="prep-topics-title">Материал занятия</h2>
       <div id="prep-topic-controls" ${settings.lesson?'hidden':''}>
       <button class="secondary prep-all-topics" data-topic="" aria-pressed="${!settings.topic}">Все темы · смешанное занятие</button>
@@ -112,6 +122,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
       </div></details>
       <section class="prep-listening"><h2>Аудирование</h2><p>Отдельные вопросы с записью из экзаменационных вариантов.</p><a class="secondary" href="/jlpt/n5/exams?section=listening">Тренировать аудирование</a></section>
       <section class="prep-progress-section" aria-labelledby="prep-progress-title"><h2 id="prep-progress-title">Прогресс</h2>${preparationStats(progress,bank)}${reviewHistory(bank,progress)}${readingBookmarks(progress)}</section></div>`);
+    root.querySelector('[data-action=choose-topic]')?.addEventListener('click', () => { const panel=root.querySelector('.prep-settings'); panel.open=true; panel.querySelector('button')?.focus(); }, {signal});
     root.querySelector('.prep-settings').addEventListener('toggle', event => { setupOpen = event.target.open; }, {signal});
     updateSetup();
   }

@@ -90,3 +90,43 @@ test('root aliases resolve to home while vocabulary aliases retain the complete 
   assert.equal(resolveRoute('/jlpt/n5/vocabulary/complete', catalog).type, 'words');
   assert.equal(resolveRoute('/missing', catalog).type, 'missing');
 });
+
+
+test('home recommends due review before mistakes and preserves resume priority', () => {
+  const preparation = emptyProgress();
+  preparation.skills = {a:{needsPractice:true,due:1}};
+  let html = homePage(catalog, storage({preparation}));
+  assert.match(html, /<h2>Повторение на сегодня<\/h2>/);
+  preparation.session = {questions:[{id:1}],index:0};
+  html = homePage(catalog, storage({preparation}));
+  assert.doesNotMatch(html, /<h2>Повторение на сегодня<\/h2>/);
+  assert.match(html, /Продолжить · задание 1 из 1/);
+});
+
+test('home distinguishes listening from written practice and reports actual results', () => {
+  const preparation = emptyProgress();
+  preparation.exams = [{total:49,correct:31}];
+  const html = homePage(catalog, storage({preparation}));
+  assert.match(html, /Последний письменный пробник: 31 из 49/);
+  assert.match(html, /<h2>Аудирование<\/h2>/);
+  assert.match(html, />Письменный пробник →/);
+});
+
+test('saved reading and workbook links appear only for unfinished work', () => {
+  const values = {
+    'n5.library.v1': {version:1,books:{reader:{updated:123,page:2},finished:{updated:124,completed:true}}},
+    'n5.workbooks.v1': {books:{textbook:{session:{keys:['a','b'],index:1}}}},
+  };
+  const html = homePage(catalog,{getItem:key => JSON.stringify(values[key] ?? null)});
+  assert.match(html, /href="\/jlpt\/n5\/library\/reader">Продолжить чтение/);
+  assert.match(html, /href="\/jlpt\/n5\/workbooks\/textbook">Продолжить упражнения/);
+  assert.doesNotMatch(html, /library\/finished/);
+});
+
+test('learning home includes progress summary and a single detailed results link', () => {
+  const html = homePage(catalog,storage());
+  assert.match(html, /Прогресс и повторение/);
+  assert.match(html, /После первых занятий/);
+  assert.equal((html.match(/href="\/jlpt\/n5\/progress"/g)||[]).length,1);
+  assert.match(html, />Подробные результаты →/);
+});

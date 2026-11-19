@@ -1,3 +1,4 @@
+import { mountProgress } from './js/progress-view.js';
 import { highlightRuleParagraphs } from './js/form-highlight.js';
 import { mountLibrary } from './js/library.js';
 import { mountCounters } from './js/counters.js';
@@ -43,7 +44,7 @@ async function render(focusPage = false) {
   menuToggle.setAttribute('aria-expanded', 'false');
   menu.querySelectorAll('a').forEach((link) => {
     const path = location.pathname.replace(/\/$/, '');
-    const active = path === link.pathname
+    const active = (route.type === 'progress' && link.pathname === catalog.base) || path === link.pathname
       || (![catalog.base, `${catalog.base}/course`].includes(link.pathname) && path.startsWith(link.pathname + '/'));
     link.classList.toggle('active', active);
     if (active) link.setAttribute('aria-current', 'page');
@@ -52,6 +53,8 @@ async function render(focusPage = false) {
   try {
     if (route.type === 'home') {
       content.innerHTML = homePage(catalog);
+    } else if (route.type === 'progress') {
+      await mountProgress(content, signal);
     } else if (route.type === 'exam-sets' || route.type === 'exam-set') {
       await mountExamSets(content, signal, route.examId);
     } else if (route.type === 'workbooks' || route.type === 'workbook') {
