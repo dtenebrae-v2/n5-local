@@ -1,3 +1,4 @@
+const baseText = require('./base-text.cjs');
 const assert = require('node:assert/strict');
 module.exports = async function workbookChecks(page, base) {
   await page.goto(base+'/jlpt/n5/workbooks');
@@ -10,7 +11,7 @@ module.exports = async function workbookChecks(page, base) {
   await page.locator('[data-unit="w1d1"]').click();
   assert.equal(await page.locator('select').count(),0);
   const question=()=>page.locator('.workbook-prompt');
-  assert.ok((await question().innerText()).includes('一人'));
+  assert.ok((await baseText(question())).includes('一人'));
   await page.keyboard.press('2');
   const before=await page.locator('#workbook-next').boundingBox();
   await page.keyboard.press('Enter');
@@ -23,7 +24,7 @@ module.exports = async function workbookChecks(page, base) {
   assert.equal((await state()).books['somatome-n5-2017'].session.index,1);
   await page.reload();
   await page.locator('#workbook-resume').click();
-  assert.ok((await question().innerText()).includes('お父さん'));
+  assert.ok((await baseText(question())).includes('お父さん'));
   await page.keyboard.press('F1');
   await page.locator('dialog[open]').waitFor();
   assert.ok((await page.locator('dialog').innerText()).includes('ひとり'));
@@ -71,7 +72,7 @@ module.exports = async function workbookChecks(page, base) {
   await page.locator('#workbook-contents').click();
   await page.locator('[data-unit="w1d7"]').click();
   for(let i=0;i<12;i++)await page.locator('#workbook-next').click();
-  assert.ok((await question().innerText()).includes('えあこん'));
+  assert.ok((await baseText(question())).includes('えあこん'));
   await page.keyboard.press('4');await page.keyboard.press('Enter');
   assert.equal(await page.locator('#workbook-feedback').getAttribute('data-status'),'correct');
   await page.locator('#workbook-contents').click();await page.locator('#workbook-random').click();

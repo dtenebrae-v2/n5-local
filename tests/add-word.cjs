@@ -1,3 +1,4 @@
+const baseText = require('./base-text.cjs');
 const assert = require('node:assert/strict');
 const path = require('node:path');
 const fs = require('node:fs');
@@ -38,11 +39,11 @@ module.exports = async function addWordChecks(page, base) {
   await page.waitForSelector('.add-word-dialog', { state: 'detached' });
   await page.waitForURL(/vocabulary\/nouns\?q=/);
   await page.waitForSelector('#results[aria-busy="false"]');
-  assert.equal(await page.locator('.japanese-word').innerText(), '試験語');
+  assert.equal(await baseText(page.locator('.japanese-word')), '試験語');
   assert.match(await page.locator('#navigation a[href="/jlpt/n5/vocabulary/nouns"]').innerText(), /587/);
   await page.reload();
   await page.waitForSelector('#results[aria-busy="false"]');
-  assert.equal(await page.locator('.japanese-word').innerText(), '試験語');
+  assert.equal(await baseText(page.locator('.japanese-word')), '試験語');
   await page.locator('#add-word').click();
   await form.locator('[name=kanji]').fill('試験語');
   await form.locator('[name=kana]').fill('しけんご');

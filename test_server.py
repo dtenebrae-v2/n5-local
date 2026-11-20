@@ -61,6 +61,21 @@ class ServiceTests(unittest.TestCase):
             self.assertIn('text/html', response.headers['Content-Type'])
             self.assertIn('app.js', response.read().decode())
 
+    def test_word_relations(self):
+        data = self.get('/api/word-relations')
+        self.assertEqual(len(data['relations']), 76)
+        self.assertEqual(data['unavailable'], 0)
+        with urlopen(self.base + '/jlpt/n5/word-relations', timeout=3) as response:
+            self.assertIn('text/html', response.headers['Content-Type'])
+
+    def test_verb_phrases(self):
+        data = self.get('/api/verb-phrases')
+        self.assertEqual(len(data['phrases']), data['total_verbs'])
+        self.assertEqual(data['uncovered'], [])
+        self.assertGreaterEqual(len(data['phrases']), 170)
+        with urlopen(self.base + '/jlpt/n5/verb-phrases', timeout=3) as response:
+            self.assertIn('text/html', response.headers['Content-Type'])
+
     def test_counters(self):
         data = self.get('/api/counters')
         self.assertEqual(len(data['counters']), 17)

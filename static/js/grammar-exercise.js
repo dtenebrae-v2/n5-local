@@ -1,3 +1,4 @@
+import { rubyText } from './furigana-core.js';
 import { escapeHTML as esc } from './ui.js';
 import { highlightedRule } from './form-highlight.js';
 
@@ -18,7 +19,7 @@ export function grammarWords(data) {
 export function grammarQuestion(exercise) {
   const { task } = exercise;
   return `<p class="practice-help">${esc(task.instruction)}</p>
-    <h2 class="game-target" lang="ja">${esc(task.sentence)}</h2>
+    <h2 class="game-target" lang="ja">${rubyText(task.sentence, task.reading)}</h2>
     ${task.reading !== task.sentence ? `<p lang="ja">${esc(task.reading)}</p>` : ''}
     <p>${esc(task.translation)}</p>`;
 }

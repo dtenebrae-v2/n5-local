@@ -1,3 +1,4 @@
+import { rubyText } from './furigana-core.js';
 import { breadcrumbs, escapeHTML as esc, heading } from './ui.js';
 import { exerciseFor } from './conjugation.js';
 import { groupLabels } from './group-labels.js';
@@ -51,9 +52,9 @@ function wordRow(entry, kind, showGroup = true) {
   const groupText = names ? (names.join(' · ') || '—') : (groupLabels[entry.group_name] || entry.group_name);
   return `
     <tr>
-      <td><span class="japanese-word" lang="ja">${esc(entry.kanji)}</span>
+      <td><span class="japanese-word" lang="ja">${rubyText(entry.kanji, entry.readings?.[0]?.kana || entry.furigana)}</span>
         ${practice || kind === 'verb' ? '<div class="word-actions">' : ''}
-        ${kind === 'verb' ? `<button type="button" class="practice-launch" data-conjugation="${entry.id}">Таблица спряжения</button>` : ''}
+        ${kind === 'verb' ? `<button type="button" class="practice-launch" data-conjugation="${entry.id}">Таблица спряжения</button><a class="practice-launch" href="/jlpt/n5/verb-phrases?word=${entry.id}">Учить в сочетаниях</a>` : ''}
         ${practice ? `<button type="button" class="practice-launch" data-practice="${entry.id}"
           aria-label="Формы: ${esc(entry.kanji)}">Практика форм</button>` : ''}
         ${practice || kind === 'verb' ? '</div>' : ''}

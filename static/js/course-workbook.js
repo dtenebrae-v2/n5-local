@@ -80,7 +80,7 @@ export async function mountCourseWorkbook(root, signal) {
       <label>Задания<select id="cw-kind"><option value="all">Все задания</option>${kinds.map(k=>`<option value="${esc(k)}" ${filter===k?'selected':''}>${esc(LABELS[k] || k)}</option>`).join('')}</select></label></div>
       <p class="cw-progress">В этом уроке отмечено ${done} из ${allItems().length}. ${item?`Карточка ${position+1} из ${list.length}.`:''}</p>
       ${item ? `<article class="cw-card" data-item="${esc(item.id)}"><p class="cw-kind">${esc(LABELS[item.kind] || item.kind)} · № ${item.source.number || position+1}</p>
-      <h2>${esc(item.prompt)}</h2>${pictures(item.images)}
+      <h2 ${['kana','number','clock','written-number','written-clock'].includes(item.kind) && !record.revealed ? 'data-furigana="off"' : ''}>${esc(item.prompt)}</h2>${pictures(item.images)}
       ${item.kind==='worksheet'&&item.note?`<p class="cw-note">${esc(item.note)}</p>`:''}
       <label class="practice-label" for="cw-answer">Ваш ответ${item.kind==='worksheet'?' или заметки (можно выполнить в тетради)':''}</label>
       <div class="practice-answer-line">${item.answers

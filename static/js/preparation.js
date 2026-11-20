@@ -163,7 +163,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
       const level = session.hintLevel || 0;
       const title = submitted?.status === 'revealed' ? 'Ответ открыт' : submitted?.status === 'unknown' ? 'Не знаю' : submitted?.correct ? 'Верно' : 'Неверно';
       shell(`${session.lesson?`<p class="practice-help">${esc(planLabel(session))}</p>`:''}<p>${esc(topic)} · ${session.index+1} из ${session.questions.length} · ${q.fresh ? 'Новое задание' : 'Повторное задание'}</p>
-        <section class="mock-question"><h2 id="prep-heading" tabindex="-1" lang="ja">${esc(q.prompt)}</h2>
+        <section class="mock-question" ${!submitted && ['reading-kanji','orthography'].includes(q.type) ? 'data-furigana="off"' : ''}><h2 id="prep-heading" tabindex="-1" lang="ja">${esc(q.prompt)}</h2>
         ${q.passageText ? `<p class="mock-passage" lang="ja">${passageHTML(q,!!submitted)}</p>` : ''}
         <fieldset ${submitted ? 'disabled' : ''}><legend class="sr-only">Выберите ответ</legend><div class="mock-choices">${q.choices.map((choice,i)=>`<label class="form-choice"><input type="radio" name="prep-choice" value="${i}" ${selected===i?'checked':''}><span lang="ja">${i+1}. ${esc(choice)}</span></label>`).join('')}</div></fieldset></section>
         <div class="practice-actions prep-actions"><button class="primary" data-action="check" ${submitted || selected===undefined ? 'disabled' : ''}>Проверить · Enter</button>

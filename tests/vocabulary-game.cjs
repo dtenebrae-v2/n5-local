@@ -1,3 +1,4 @@
+const baseText = require('./base-text.cjs');
 const { choose, openOptions } = require('./game-settings.cjs');
 const assert = require('node:assert/strict');
 
@@ -30,7 +31,7 @@ module.exports = async function vocabularyGameChecks(page, base) {
       await input.press('Enter');
       assert.match(await input.inputValue(), /^[ぁ-ゖー]+$/);
       assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'), 'correct');
-      assert.ok((await page.locator('#practice-feedback').innerText()).includes(word.kanji));
+      assert.ok((await baseText(page.locator('#practice-feedback'))).includes(word.kanji));
       assert.equal(await page.locator('#game-score').innerText(), `С первой попытки: ${i + 1} из ${i + 1}`);
       await input.press('Shift+Enter');
     }
@@ -39,13 +40,13 @@ module.exports = async function vocabularyGameChecks(page, base) {
     const current = words.find(word => String(word.id) === currentId);
     await input.fill('あ'); await input.press('Enter');
     assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'), 'incorrect');
-    assert.ok((await page.locator('#practice-feedback').innerText()).includes(current.kanji));
-    assert.match(await page.locator('#practice-feedback').innerText(), /Правильный ответ:[\s\S]*[ぁ-ゖ]/);
+    assert.ok((await baseText(page.locator('#practice-feedback'))).includes(current.kanji));
+    assert.match(await baseText(page.locator('#practice-feedback')), /Правильный ответ:[\s\S]*[ぁ-ゖ]/);
     assert.equal(await page.locator('#practice-reveal').isHidden(), true);
-    assert.match(await page.locator('#practice-feedback').innerText(), /Правильный ответ:/);
+    assert.match(await baseText(page.locator('#practice-feedback')), /Правильный ответ:/);
     await page.keyboard.press('F1');
     await page.waitForSelector('.practice-rules-dialog[open]');
-    assert.ok((await page.locator('.practice-rules-dialog').innerText()).includes(current.kanji));
+    assert.ok((await baseText(page.locator('.practice-rules-dialog'))).includes(current.kanji));
     await page.keyboard.press('Escape');
     await page.waitForSelector('.practice-rules-dialog', { state: 'detached' });
     await choose(page, '#game-task input[value=forms]');

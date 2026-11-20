@@ -1,0 +1,1741 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "title": "TUFS: отрицание и степень признака",
+      "url": "https://www.coelang.tufs.ac.jp/mt/ja/gmod/courses/c01/lesson09/step4/explanation/034.html"
+    },
+    {
+      "title": "NINJAL: 暗い и его значения",
+      "url": "https://www2.ninjal.ac.jp/dictionaries/IPALBA/pdf_dir/%E3%81%8F%E3%82%89%E3%81%84.pdf"
+    }
+  ],
+  "relations": [
+    {
+      "id": "antonym-5-223",
+      "kind": "antonym",
+      "context": "Освещённость комнаты",
+      "left": {
+        "word_id": 5,
+        "word": "明るい",
+        "word_reading": "あかるい",
+        "written": "明るい",
+        "reading": "あかるい",
+        "meaning": "светлый"
+      },
+      "right": {
+        "word_id": 223,
+        "word": "暗い",
+        "word_reading": "くらい",
+        "written": "暗い",
+        "reading": "くらい",
+        "meaning": "тёмный"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-19-558",
+      "kind": "antonym",
+      "context": "Возраст вещи",
+      "left": {
+        "word_id": 19,
+        "word": "新しい",
+        "word_reading": "あたらしい",
+        "written": "新しい",
+        "reading": "あたらしい",
+        "meaning": "новый"
+      },
+      "right": {
+        "word_id": 558,
+        "word": "古い",
+        "word_reading": "ふるい",
+        "written": "古い",
+        "reading": "ふるい",
+        "meaning": "старый"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-22-72",
+      "kind": "antonym",
+      "context": "Толщина книги",
+      "left": {
+        "word_id": 22,
+        "word": "厚い",
+        "word_reading": "あつい",
+        "written": "厚い",
+        "reading": "あつい",
+        "meaning": "толстый"
+      },
+      "right": {
+        "word_id": 72,
+        "word": "薄い",
+        "word_reading": "うすい",
+        "written": "薄い",
+        "reading": "うすい",
+        "meaning": "тонкий"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-91-381",
+      "kind": "antonym",
+      "context": "Размер предмета",
+      "left": {
+        "word_id": 91,
+        "word": "大きい",
+        "word_reading": "おおきい",
+        "written": "大きい",
+        "reading": "おおきい",
+        "meaning": "большой"
+      },
+      "right": {
+        "word_id": 381,
+        "word": "小さい",
+        "word_reading": "ちいさい",
+        "written": "小さい",
+        "reading": "ちいさい",
+        "meaning": "маленький"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-123-181",
+      "kind": "antonym",
+      "context": "Вес сумки",
+      "left": {
+        "word_id": 123,
+        "word": "重い",
+        "word_reading": "おもい",
+        "written": "重い",
+        "reading": "おもい",
+        "meaning": "тяжёлый"
+      },
+      "right": {
+        "word_id": 181,
+        "word": "軽い",
+        "word_reading": "かるい",
+        "written": "軽い",
+        "reading": "かるい",
+        "meaning": "лёгкий"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-105-514",
+      "kind": "antonym",
+      "context": "Время прихода",
+      "left": {
+        "word_id": 105,
+        "word": "遅い",
+        "word_reading": "おそい",
+        "written": "遅い",
+        "reading": "おそい",
+        "meaning": "поздний"
+      },
+      "right": {
+        "word_id": 514,
+        "word": "早い",
+        "word_reading": "はやい",
+        "written": "早い",
+        "reading": "はやい",
+        "meaning": "ранний"
+      },
+      "note": "遅い означает и «поздний», и «медленный». Ранний — 早い, быстрый — 速い."
+    },
+    {
+      "id": "antonym-105-515",
+      "kind": "antonym",
+      "context": "Скорость движения",
+      "left": {
+        "word_id": 105,
+        "word": "遅い",
+        "word_reading": "おそい",
+        "written": "遅い",
+        "reading": "おそい",
+        "meaning": "медленный"
+      },
+      "right": {
+        "word_id": 515,
+        "word": "速い",
+        "word_reading": "はやい",
+        "written": "速い",
+        "reading": "はやい",
+        "meaning": "быстрый"
+      },
+      "note": "遅い означает и «поздний», и «медленный». Ранний — 早い, быстрый — 速い."
+    },
+    {
+      "id": "antonym-124-722",
+      "kind": "antonym",
+      "context": "Впечатление от фильма",
+      "left": {
+        "word_id": 124,
+        "word": "面白い",
+        "word_reading": "おもしろい",
+        "written": "面白い",
+        "reading": "おもしろい",
+        "meaning": "интересный"
+      },
+      "right": {
+        "word_id": 722,
+        "word": "詰らない",
+        "word_reading": "つまらない",
+        "written": "詰らない",
+        "reading": "つまらない",
+        "meaning": "скучный"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-90-592",
+      "kind": "antonym",
+      "context": "Вкус блюда",
+      "left": {
+        "word_id": 90,
+        "word": "美味しい",
+        "word_reading": "おいしい",
+        "written": "美味しい",
+        "reading": "おいしい",
+        "meaning": "вкусный"
+      },
+      "right": {
+        "word_id": 592,
+        "word": "不味い",
+        "word_reading": "まずい",
+        "written": "不味い",
+        "reading": "まずい",
+        "meaning": "невкусный"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-335-545",
+      "kind": "antonym",
+      "context": "Размер комнаты",
+      "left": {
+        "word_id": 335,
+        "word": "狭い",
+        "word_reading": "せまい",
+        "written": "狭い",
+        "reading": "せまい",
+        "meaning": "тесный"
+      },
+      "right": {
+        "word_id": 545,
+        "word": "広い",
+        "word_reading": "ひろい",
+        "written": "広い",
+        "reading": "ひろい",
+        "meaning": "просторный"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-382-432",
+      "kind": "antonym",
+      "context": "Расстояние до станции",
+      "left": {
+        "word_id": 382,
+        "word": "近い",
+        "word_reading": "ちかい",
+        "written": "近い",
+        "reading": "ちかい",
+        "meaning": "близкий"
+      },
+      "right": {
+        "word_id": 432,
+        "word": "遠い",
+        "word_reading": "とおい",
+        "written": "遠い",
+        "reading": "とおい",
+        "meaning": "далёкий"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-403-737",
+      "kind": "antonym",
+      "context": "Сила человека",
+      "left": {
+        "word_id": 403,
+        "word": "強い",
+        "word_reading": "つよい",
+        "written": "強い",
+        "reading": "つよい",
+        "meaning": "сильный"
+      },
+      "right": {
+        "word_id": 737,
+        "word": "弱い",
+        "word_reading": "よわい",
+        "written": "弱い",
+        "reading": "よわい",
+        "meaning": "слабый"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-456-605",
+      "kind": "antonym",
+      "context": "Длина верёвки",
+      "left": {
+        "word_id": 456,
+        "word": "長い",
+        "word_reading": "ながい",
+        "written": "長い",
+        "reading": "ながい",
+        "meaning": "длинный"
+      },
+      "right": {
+        "word_id": 605,
+        "word": "短い",
+        "word_reading": "みじかい",
+        "written": "短い",
+        "reading": "みじかい",
+        "meaning": "короткий"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-556-575",
+      "kind": "antonym",
+      "context": "Толщина верёвки",
+      "left": {
+        "word_id": 556,
+        "word": "太い",
+        "word_reading": "ふとい",
+        "written": "太い",
+        "reading": "ふとい",
+        "meaning": "толстый"
+      },
+      "right": {
+        "word_id": 575,
+        "word": "細い",
+        "word_reading": "ほそい",
+        "written": "細い",
+        "reading": "ほそい",
+        "meaning": "тонкий"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-704-531",
+      "kind": "antonym",
+      "context": "Высота здания",
+      "left": {
+        "word_id": 704,
+        "word": "高い",
+        "word_reading": "たかい",
+        "written": "高い",
+        "reading": "たかい",
+        "meaning": "высокий"
+      },
+      "right": {
+        "word_id": 531,
+        "word": "低い",
+        "word_reading": "ひくい",
+        "written": "低い",
+        "reading": "ひくい",
+        "meaning": "низкий"
+      },
+      "note": "高い означает и «высокий», и «дорогой». Антоним выбирайте по контексту: 低い или 安い."
+    },
+    {
+      "id": "antonym-704-732",
+      "kind": "antonym",
+      "context": "Цена товара",
+      "left": {
+        "word_id": 704,
+        "word": "高い",
+        "word_reading": "たかい",
+        "written": "高い",
+        "reading": "たかい",
+        "meaning": "дорогой"
+      },
+      "right": {
+        "word_id": 732,
+        "word": "安い",
+        "word_reading": "やすい",
+        "written": "安い",
+        "reading": "やすい",
+        "meaning": "дешёвый"
+      },
+      "note": "高い означает и «высокий», и «дорогой». Антоним выбирайте по контексту: 低い или 安い."
+    },
+    {
+      "id": "antonym-715-716",
+      "kind": "antonym",
+      "context": "Температура воздуха",
+      "left": {
+        "word_id": 715,
+        "word": "暑い",
+        "word_reading": "あつい",
+        "written": "暑い",
+        "reading": "あつい",
+        "meaning": "жаркий"
+      },
+      "right": {
+        "word_id": 716,
+        "word": "寒い",
+        "word_reading": "さむい",
+        "written": "寒い",
+        "reading": "さむい",
+        "meaning": "холодный"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-991-719",
+      "kind": "antonym",
+      "context": "Температура напитка",
+      "left": {
+        "word_id": 991,
+        "word": "熱い",
+        "word_reading": "あつい",
+        "written": "熱い",
+        "reading": "あつい",
+        "meaning": "горячий"
+      },
+      "right": {
+        "word_id": 719,
+        "word": "冷たい",
+        "word_reading": "つめたい",
+        "written": "冷たい",
+        "reading": "つめたい",
+        "meaning": "холодный"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-40-675",
+      "kind": "antonym",
+      "context": "Оценка поступка",
+      "left": {
+        "word_id": 40,
+        "word": "良い",
+        "word_reading": "いい",
+        "written": "良い",
+        "reading": "いい",
+        "meaning": "хороший",
+        "alternatives": [
+          {
+            "written": "良い",
+            "reading": "よい"
+          }
+        ]
+      },
+      "right": {
+        "word_id": 675,
+        "word": "悪い",
+        "word_reading": "わるい",
+        "written": "悪い",
+        "reading": "わるい",
+        "meaning": "плохой"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-747-748",
+      "kind": "antonym",
+      "context": "Количество вещей",
+      "left": {
+        "word_id": 747,
+        "word": "多い",
+        "word_reading": "おおい",
+        "written": "多い",
+        "reading": "おおい",
+        "meaning": "многочисленный"
+      },
+      "right": {
+        "word_id": 748,
+        "word": "少ない",
+        "word_reading": "すくない",
+        "written": "少ない",
+        "reading": "すくない",
+        "meaning": "немногочисленный"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-760-761",
+      "kind": "antonym",
+      "context": "Умение играть на пианино",
+      "left": {
+        "word_id": 760,
+        "word": "上手",
+        "word_reading": "じょうず",
+        "written": "上手",
+        "reading": "じょうず",
+        "meaning": "умелый"
+      },
+      "right": {
+        "word_id": 761,
+        "word": "下手",
+        "word_reading": "へた",
+        "written": "下手",
+        "reading": "へた",
+        "meaning": "неумелый"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-753-754",
+      "kind": "antonym",
+      "context": "Отношение к еде",
+      "left": {
+        "word_id": 753,
+        "word": "好き",
+        "word_reading": "すき",
+        "written": "好き",
+        "reading": "すき",
+        "meaning": "нравится"
+      },
+      "right": {
+        "word_id": 754,
+        "word": "嫌い",
+        "word_reading": "きらい",
+        "written": "嫌い",
+        "reading": "きらい",
+        "meaning": "не нравится"
+      },
+      "note": "好き и 嫌い — な-прилагательные. «Не нравится» в русском переводе 嫌い не делает его грамматическим отрицанием 好き."
+    },
+    {
+      "id": "antonym-740-759",
+      "kind": "antonym",
+      "context": "Занятость человека",
+      "left": {
+        "word_id": 740,
+        "word": "忙しい",
+        "word_reading": "いそがしい",
+        "written": "忙しい",
+        "reading": "いそがしい",
+        "meaning": "занятой"
+      },
+      "right": {
+        "word_id": 759,
+        "word": "暇",
+        "word_reading": "ひま",
+        "written": "暇",
+        "reading": "ひま",
+        "meaning": "свободный"
+      },
+      "note": "暇 здесь означает наличие свободного времени; это な-прилагательное."
+    },
+    {
+      "id": "antonym-619-993",
+      "kind": "antonym",
+      "context": "Сложность задания",
+      "left": {
+        "word_id": 619,
+        "word": "難しい",
+        "word_reading": "むずかしい",
+        "written": "難しい",
+        "reading": "むずかしい",
+        "meaning": "трудный"
+      },
+      "right": {
+        "word_id": 993,
+        "word": "易しい",
+        "word_reading": "やさしい",
+        "written": "易しい",
+        "reading": "やさしい",
+        "meaning": "лёгкий"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-193-764",
+      "kind": "antonym",
+      "context": "Чистота комнаты",
+      "left": {
+        "word_id": 193,
+        "word": "汚い",
+        "word_reading": "きたない",
+        "written": "汚い",
+        "reading": "きたない",
+        "meaning": "грязный"
+      },
+      "right": {
+        "word_id": 764,
+        "word": "きれい",
+        "word_reading": "きれい",
+        "written": "きれい",
+        "reading": "きれい",
+        "meaning": "чистый"
+      },
+      "note": "きれい здесь означает «чистый», а не «красивый». Это な-прилагательное, несмотря на конечное い."
+    },
+    {
+      "id": "antonym-287-470",
+      "kind": "antonym",
+      "context": "Атмосфера на улице",
+      "left": {
+        "word_id": 287,
+        "word": "静か",
+        "word_reading": "しずか",
+        "written": "静か",
+        "reading": "しずか",
+        "meaning": "тихий"
+      },
+      "right": {
+        "word_id": 470,
+        "word": "賑やか",
+        "word_reading": "にぎやか",
+        "written": "賑やか",
+        "reading": "にぎやか",
+        "meaning": "оживлённый"
+      },
+      "note": "静か и 賑やか противопоставлены по атмосфере места; 賑やか может означать приятную оживлённость."
+    },
+    {
+      "id": "antonym-8-296",
+      "kind": "antonym",
+      "context": "Действие с дверью",
+      "left": {
+        "word_id": 8,
+        "word": "開ける",
+        "word_reading": "あける",
+        "written": "開ける",
+        "reading": "あける",
+        "meaning": "открыть"
+      },
+      "right": {
+        "word_id": 296,
+        "word": "閉める",
+        "word_reading": "しめる",
+        "written": "閉める",
+        "reading": "しめる",
+        "meaning": "закрыть"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-789-295",
+      "kind": "antonym",
+      "context": "Состояние двери",
+      "left": {
+        "word_id": 789,
+        "word": "開く",
+        "word_reading": "あく",
+        "written": "開く",
+        "reading": "あく",
+        "meaning": "открываться"
+      },
+      "right": {
+        "word_id": 295,
+        "word": "閉まる",
+        "word_reading": "しまる",
+        "written": "閉まる",
+        "reading": "しまる",
+        "meaning": "закрываться"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-399-813",
+      "kind": "antonym",
+      "context": "Действие со светом",
+      "left": {
+        "word_id": 399,
+        "word": "点ける",
+        "word_reading": "つける",
+        "written": "点ける",
+        "reading": "つける",
+        "meaning": "включить"
+      },
+      "right": {
+        "word_id": 813,
+        "word": "消す",
+        "word_reading": "けす",
+        "written": "消す",
+        "reading": "けす",
+        "meaning": "выключить"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-499-127",
+      "kind": "antonym",
+      "context": "Ход урока",
+      "left": {
+        "word_id": 499,
+        "word": "始まる",
+        "word_reading": "はじまる",
+        "written": "始まる",
+        "reading": "はじまる",
+        "meaning": "начинаться"
+      },
+      "right": {
+        "word_id": 127,
+        "word": "終わる",
+        "word_reading": "おわる",
+        "written": "終わる",
+        "reading": "おわる",
+        "meaning": "заканчиваться"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-78-138",
+      "kind": "antonym",
+      "context": "Покупка и продажа",
+      "left": {
+        "word_id": 78,
+        "word": "売る",
+        "word_reading": "うる",
+        "written": "売る",
+        "reading": "うる",
+        "meaning": "продать"
+      },
+      "right": {
+        "word_id": 138,
+        "word": "買う",
+        "word_reading": "かう",
+        "written": "買う",
+        "reading": "かう",
+        "meaning": "купить"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-150-179",
+      "kind": "antonym",
+      "context": "Книга на время",
+      "left": {
+        "word_id": 150,
+        "word": "貸す",
+        "word_reading": "かす",
+        "written": "貸す",
+        "reading": "かす",
+        "meaning": "дать взаймы"
+      },
+      "right": {
+        "word_id": 179,
+        "word": "借りる",
+        "word_reading": "かりる",
+        "written": "借りる",
+        "reading": "かりる",
+        "meaning": "взять взаймы"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "antonym-1136-1137",
+      "kind": "antonym",
+      "context": "Результат матча",
+      "left": {
+        "word_id": 1136,
+        "word": "勝つ",
+        "word_reading": "かつ",
+        "written": "勝つ",
+        "reading": "かつ",
+        "meaning": "победить"
+      },
+      "right": {
+        "word_id": 1137,
+        "word": "負ける",
+        "word_reading": "まける",
+        "written": "負ける",
+        "reading": "まける",
+        "meaning": "проиграть"
+      },
+      "note": "Противоположные значения в указанном контексте."
+    },
+    {
+      "id": "synonym-31-776",
+      "kind": "synonym",
+      "context": "Опасная ситуация",
+      "left": {
+        "word_id": 31,
+        "word": "危ない",
+        "word_reading": "あぶない",
+        "written": "危ない",
+        "reading": "あぶない",
+        "meaning": "опасный"
+      },
+      "right": {
+        "word_id": 776,
+        "word": "危険",
+        "word_reading": "きけん",
+        "written": "危険",
+        "reading": "きけん",
+        "meaning": "опасный"
+      },
+      "note": "危ない — い-прилагательное, 危険 — な-прилагательное. Перед существительным: 危ない道 / 危険な道. Близки по смыслу, но отличаются употреблением."
+    },
+    {
+      "id": "synonym-993-900",
+      "kind": "synonym",
+      "context": "Задание, которое легко выполнить",
+      "left": {
+        "word_id": 993,
+        "word": "易しい",
+        "word_reading": "やさしい",
+        "written": "易しい",
+        "reading": "やさしい",
+        "meaning": "лёгкий"
+      },
+      "right": {
+        "word_id": 900,
+        "word": "簡単",
+        "word_reading": "かんたん",
+        "written": "簡単",
+        "reading": "かんたん",
+        "meaning": "простой"
+      },
+      "note": "易しい — い-прилагательное; 簡単 — な-прилагательное. Простота устройства и лёгкость выполнения не всегда совпадают."
+    },
+    {
+      "id": "synonym-95-1202",
+      "kind": "synonym",
+      "context": "Деньги",
+      "left": {
+        "word_id": 95,
+        "word": "お金",
+        "word_reading": "おかね",
+        "written": "お金",
+        "reading": "おかね",
+        "meaning": "деньги"
+      },
+      "right": {
+        "word_id": 1202,
+        "word": "金",
+        "word_reading": "かね",
+        "written": "金",
+        "reading": "かね",
+        "meaning": "деньги"
+      },
+      "note": "お金 — обычное нейтрально-вежливое слово. 金 без お может звучать более прямо или грубо."
+    },
+    {
+      "id": "synonym-534-154",
+      "kind": "synonym",
+      "context": "Обозначение человека",
+      "left": {
+        "word_id": 534,
+        "word": "人",
+        "word_reading": "ひと",
+        "written": "人",
+        "reading": "ひと",
+        "meaning": "человек"
+      },
+      "right": {
+        "word_id": 154,
+        "word": "方",
+        "word_reading": "かた",
+        "written": "方",
+        "reading": "かた",
+        "meaning": "человек (вежливо)"
+      },
+      "note": "人 читается ひと. 方 в значении «человек» читается かた и выражает уважение; не путайте с ほう «сторона»."
+    },
+    {
+      "id": "synonym-893-894",
+      "kind": "synonym",
+      "context": "Обозначение того человека",
+      "left": {
+        "word_id": 893,
+        "word": "あの人",
+        "word_reading": "あのひと",
+        "written": "あの人",
+        "reading": "あのひと",
+        "meaning": "тот человек"
+      },
+      "right": {
+        "word_id": 894,
+        "word": "あの方",
+        "word_reading": "あのかた",
+        "written": "あの方",
+        "reading": "あのかた",
+        "meaning": "тот человек (вежливо)"
+      },
+      "note": "あの方 — уважительный вариант あの人."
+    },
+    {
+      "id": "synonym-440-363",
+      "kind": "synonym",
+      "context": "Усиление прилагательного",
+      "left": {
+        "word_id": 440,
+        "word": "とても",
+        "word_reading": "とても",
+        "written": "とても",
+        "reading": "とても",
+        "meaning": "очень"
+      },
+      "right": {
+        "word_id": 363,
+        "word": "大変",
+        "word_reading": "たいへん",
+        "written": "大変",
+        "reading": "たいへん",
+        "meaning": "очень"
+      },
+      "note": "大変 здесь наречие «очень», как в 大変おいしい. В других контекстах 大変 означает «тяжёлый / серьёзный»."
+    },
+    {
+      "id": "synonym-256-985",
+      "kind": "synonym",
+      "context": "Приём пищи",
+      "left": {
+        "word_id": 256,
+        "word": "御飯",
+        "word_reading": "ごはん",
+        "written": "御飯",
+        "reading": "ごはん",
+        "meaning": "еда"
+      },
+      "right": {
+        "word_id": 985,
+        "word": "食事",
+        "word_reading": "しょくじ",
+        "written": "食事",
+        "reading": "しょくじ",
+        "meaning": "приём пищи"
+      },
+      "note": "ご飯 и 食事 близки в значении приёма пищи. ご飯 также означает варёный рис; для риса 食事 не подходит."
+    },
+    {
+      "id": "synonym-512-1178",
+      "kind": "synonym",
+      "context": "Разговор с другом",
+      "left": {
+        "word_id": 512,
+        "word": "話す",
+        "word_reading": "はなす",
+        "written": "話す",
+        "reading": "はなす",
+        "meaning": "говорить"
+      },
+      "right": {
+        "word_id": 1178,
+        "word": "喋る",
+        "word_reading": "しゃべる",
+        "written": "喋る",
+        "reading": "しゃべる",
+        "meaning": "болтать, разговаривать"
+      },
+      "note": "喋る — более разговорное слово. 話す шире по употреблению; не всякое 話す можно заменить на 喋る."
+    },
+    {
+      "id": "synonym-1167-925",
+      "kind": "synonym",
+      "context": "Получение знаний",
+      "left": {
+        "word_id": 1167,
+        "word": "勉強する",
+        "word_reading": "べんきょうする",
+        "written": "勉強する",
+        "reading": "べんきょうする",
+        "meaning": "учиться, заниматься"
+      },
+      "right": {
+        "word_id": 925,
+        "word": "学ぶ",
+        "word_reading": "まなぶ",
+        "written": "学ぶ",
+        "reading": "まなぶ",
+        "meaning": "учиться, изучать"
+      },
+      "note": "勉強する подчёркивает занятия; 学ぶ — приобретение знаний или опыта. Это близкие значения, а не полная взаимозаменяемость."
+    },
+    {
+      "id": "synonym-1129-1006",
+      "kind": "synonym",
+      "context": "Положительное впечатление",
+      "left": {
+        "word_id": 1129,
+        "word": "素晴らしい",
+        "word_reading": "すばらしい",
+        "written": "素晴らしい",
+        "reading": "すばらしい",
+        "meaning": "замечательный"
+      },
+      "right": {
+        "word_id": 1006,
+        "word": "素敵",
+        "word_reading": "すてき",
+        "written": "素敵",
+        "reading": "すてき",
+        "meaning": "чудесный"
+      },
+      "note": "素晴らしい — い-прилагательное, 素敵 — な-прилагательное. Оттенки оценки и сочетаемость различаются."
+    },
+    {
+      "id": "paraphrase-223-5",
+      "kind": "paraphrase",
+      "context": "Освещённость комнаты",
+      "left": {
+        "word_id": 223,
+        "word": "暗い",
+        "word_reading": "くらい",
+        "written": "暗い",
+        "reading": "くらい",
+        "meaning": "тёмный"
+      },
+      "right": {
+        "word_id": 5,
+        "word": "明るい",
+        "word_reading": "あかるい",
+        "written": "明るくない",
+        "reading": "あかるくない",
+        "meaning": "не светлый"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-5-223",
+      "kind": "paraphrase",
+      "context": "Освещённость комнаты",
+      "left": {
+        "word_id": 5,
+        "word": "明るい",
+        "word_reading": "あかるい",
+        "written": "明るい",
+        "reading": "あかるい",
+        "meaning": "светлый"
+      },
+      "right": {
+        "word_id": 223,
+        "word": "暗い",
+        "word_reading": "くらい",
+        "written": "暗くない",
+        "reading": "くらくない",
+        "meaning": "не тёмный"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-381-91",
+      "kind": "paraphrase",
+      "context": "Размер предмета",
+      "left": {
+        "word_id": 381,
+        "word": "小さい",
+        "word_reading": "ちいさい",
+        "written": "小さい",
+        "reading": "ちいさい",
+        "meaning": "маленький"
+      },
+      "right": {
+        "word_id": 91,
+        "word": "大きい",
+        "word_reading": "おおきい",
+        "written": "大きくない",
+        "reading": "おおきくない",
+        "meaning": "не большой"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-91-381",
+      "kind": "paraphrase",
+      "context": "Размер предмета",
+      "left": {
+        "word_id": 91,
+        "word": "大きい",
+        "word_reading": "おおきい",
+        "written": "大きい",
+        "reading": "おおきい",
+        "meaning": "большой"
+      },
+      "right": {
+        "word_id": 381,
+        "word": "小さい",
+        "word_reading": "ちいさい",
+        "written": "小さくない",
+        "reading": "ちいさくない",
+        "meaning": "не маленький"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-181-123",
+      "kind": "paraphrase",
+      "context": "Вес сумки",
+      "left": {
+        "word_id": 181,
+        "word": "軽い",
+        "word_reading": "かるい",
+        "written": "軽い",
+        "reading": "かるい",
+        "meaning": "лёгкий"
+      },
+      "right": {
+        "word_id": 123,
+        "word": "重い",
+        "word_reading": "おもい",
+        "written": "重くない",
+        "reading": "おもくない",
+        "meaning": "не тяжёлый"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-123-181",
+      "kind": "paraphrase",
+      "context": "Вес сумки",
+      "left": {
+        "word_id": 123,
+        "word": "重い",
+        "word_reading": "おもい",
+        "written": "重い",
+        "reading": "おもい",
+        "meaning": "тяжёлый"
+      },
+      "right": {
+        "word_id": 181,
+        "word": "軽い",
+        "word_reading": "かるい",
+        "written": "軽くない",
+        "reading": "かるくない",
+        "meaning": "не лёгкий"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-732-704",
+      "kind": "paraphrase",
+      "context": "Цена товара",
+      "left": {
+        "word_id": 732,
+        "word": "安い",
+        "word_reading": "やすい",
+        "written": "安い",
+        "reading": "やすい",
+        "meaning": "дешёвый"
+      },
+      "right": {
+        "word_id": 704,
+        "word": "高い",
+        "word_reading": "たかい",
+        "written": "高くない",
+        "reading": "たかくない",
+        "meaning": "не дорогой"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-531-704",
+      "kind": "paraphrase",
+      "context": "Высота здания",
+      "left": {
+        "word_id": 531,
+        "word": "低い",
+        "word_reading": "ひくい",
+        "written": "低い",
+        "reading": "ひくい",
+        "meaning": "низкий"
+      },
+      "right": {
+        "word_id": 704,
+        "word": "高い",
+        "word_reading": "たかい",
+        "written": "高くない",
+        "reading": "たかくない",
+        "meaning": "не высокий"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-545-335",
+      "kind": "paraphrase",
+      "context": "Размер комнаты",
+      "left": {
+        "word_id": 545,
+        "word": "広い",
+        "word_reading": "ひろい",
+        "written": "広い",
+        "reading": "ひろい",
+        "meaning": "просторный"
+      },
+      "right": {
+        "word_id": 335,
+        "word": "狭い",
+        "word_reading": "せまい",
+        "written": "狭くない",
+        "reading": "せまくない",
+        "meaning": "не тесный"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-335-545",
+      "kind": "paraphrase",
+      "context": "Размер комнаты",
+      "left": {
+        "word_id": 335,
+        "word": "狭い",
+        "word_reading": "せまい",
+        "written": "狭い",
+        "reading": "せまい",
+        "meaning": "тесный"
+      },
+      "right": {
+        "word_id": 545,
+        "word": "広い",
+        "word_reading": "ひろい",
+        "written": "広くない",
+        "reading": "ひろくない",
+        "meaning": "не просторный"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-605-456",
+      "kind": "paraphrase",
+      "context": "Длина верёвки",
+      "left": {
+        "word_id": 605,
+        "word": "短い",
+        "word_reading": "みじかい",
+        "written": "短い",
+        "reading": "みじかい",
+        "meaning": "короткий"
+      },
+      "right": {
+        "word_id": 456,
+        "word": "長い",
+        "word_reading": "ながい",
+        "written": "長くない",
+        "reading": "ながくない",
+        "meaning": "не длинный"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-456-605",
+      "kind": "paraphrase",
+      "context": "Длина верёвки",
+      "left": {
+        "word_id": 456,
+        "word": "長い",
+        "word_reading": "ながい",
+        "written": "長い",
+        "reading": "ながい",
+        "meaning": "длинный"
+      },
+      "right": {
+        "word_id": 605,
+        "word": "短い",
+        "word_reading": "みじかい",
+        "written": "短くない",
+        "reading": "みじかくない",
+        "meaning": "не короткий"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-737-403",
+      "kind": "paraphrase",
+      "context": "Сила человека",
+      "left": {
+        "word_id": 737,
+        "word": "弱い",
+        "word_reading": "よわい",
+        "written": "弱い",
+        "reading": "よわい",
+        "meaning": "слабый"
+      },
+      "right": {
+        "word_id": 403,
+        "word": "強い",
+        "word_reading": "つよい",
+        "written": "強くない",
+        "reading": "つよくない",
+        "meaning": "не сильный"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-403-737",
+      "kind": "paraphrase",
+      "context": "Сила человека",
+      "left": {
+        "word_id": 403,
+        "word": "強い",
+        "word_reading": "つよい",
+        "written": "強い",
+        "reading": "つよい",
+        "meaning": "сильный"
+      },
+      "right": {
+        "word_id": 737,
+        "word": "弱い",
+        "word_reading": "よわい",
+        "written": "弱くない",
+        "reading": "よわくない",
+        "meaning": "не слабый"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-675-40",
+      "kind": "paraphrase",
+      "context": "Оценка поступка",
+      "left": {
+        "word_id": 675,
+        "word": "悪い",
+        "word_reading": "わるい",
+        "written": "悪い",
+        "reading": "わるい",
+        "meaning": "плохой"
+      },
+      "right": {
+        "word_id": 40,
+        "word": "良い",
+        "word_reading": "いい",
+        "written": "良くない",
+        "reading": "よくない",
+        "meaning": "не хороший"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. У 良い（いい）особая основа よ: отрицание 良くない（よくない）."
+    },
+    {
+      "id": "paraphrase-40-675",
+      "kind": "paraphrase",
+      "context": "Оценка поступка",
+      "left": {
+        "word_id": 40,
+        "word": "良い",
+        "word_reading": "いい",
+        "written": "良い",
+        "reading": "いい",
+        "meaning": "хороший",
+        "alternatives": [
+          {
+            "written": "良い",
+            "reading": "よい"
+          }
+        ]
+      },
+      "right": {
+        "word_id": 675,
+        "word": "悪い",
+        "word_reading": "わるい",
+        "written": "悪くない",
+        "reading": "わるくない",
+        "meaning": "не плохой"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-748-747",
+      "kind": "paraphrase",
+      "context": "Количество вещей",
+      "left": {
+        "word_id": 748,
+        "word": "少ない",
+        "word_reading": "すくない",
+        "written": "少ない",
+        "reading": "すくない",
+        "meaning": "немногочисленный"
+      },
+      "right": {
+        "word_id": 747,
+        "word": "多い",
+        "word_reading": "おおい",
+        "written": "多くない",
+        "reading": "おおくない",
+        "meaning": "не много"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-747-748",
+      "kind": "paraphrase",
+      "context": "Количество вещей",
+      "left": {
+        "word_id": 747,
+        "word": "多い",
+        "word_reading": "おおい",
+        "written": "多い",
+        "reading": "おおい",
+        "meaning": "многочисленный"
+      },
+      "right": {
+        "word_id": 748,
+        "word": "少ない",
+        "word_reading": "すくない",
+        "written": "少なくない",
+        "reading": "すくなくない",
+        "meaning": "не мало"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-759-740",
+      "kind": "paraphrase",
+      "context": "Занятость человека",
+      "left": {
+        "word_id": 759,
+        "word": "暇",
+        "word_reading": "ひま",
+        "written": "暇",
+        "reading": "ひま",
+        "meaning": "свободный"
+      },
+      "right": {
+        "word_id": 740,
+        "word": "忙しい",
+        "word_reading": "いそがしい",
+        "written": "忙しくない",
+        "reading": "いそがしくない",
+        "meaning": "не занятой"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-740-759",
+      "kind": "paraphrase",
+      "context": "Занятость человека",
+      "left": {
+        "word_id": 740,
+        "word": "忙しい",
+        "word_reading": "いそがしい",
+        "written": "忙しい",
+        "reading": "いそがしい",
+        "meaning": "занятой"
+      },
+      "right": {
+        "word_id": 759,
+        "word": "暇",
+        "word_reading": "ひま",
+        "written": "暇じゃない",
+        "reading": "ひまじゃない",
+        "meaning": "не свободный",
+        "alternatives": [
+          {
+            "written": "暇ではない",
+            "reading": "ひまではない"
+          }
+        ]
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. な-прилагательное: добавьте じゃない или ではない. Конечное い у きれい и 嫌い не убирается."
+    },
+    {
+      "id": "paraphrase-761-760",
+      "kind": "paraphrase",
+      "context": "Умение играть на пианино",
+      "left": {
+        "word_id": 761,
+        "word": "下手",
+        "word_reading": "へた",
+        "written": "下手",
+        "reading": "へた",
+        "meaning": "неумелый"
+      },
+      "right": {
+        "word_id": 760,
+        "word": "上手",
+        "word_reading": "じょうず",
+        "written": "上手じゃない",
+        "reading": "じょうずじゃない",
+        "meaning": "не умелый",
+        "alternatives": [
+          {
+            "written": "上手ではない",
+            "reading": "じょうずではない"
+          }
+        ]
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. な-прилагательное: добавьте じゃない или ではない. Конечное い у きれい и 嫌い не убирается."
+    },
+    {
+      "id": "paraphrase-760-761",
+      "kind": "paraphrase",
+      "context": "Умение играть на пианино",
+      "left": {
+        "word_id": 760,
+        "word": "上手",
+        "word_reading": "じょうず",
+        "written": "上手",
+        "reading": "じょうず",
+        "meaning": "умелый"
+      },
+      "right": {
+        "word_id": 761,
+        "word": "下手",
+        "word_reading": "へた",
+        "written": "下手じゃない",
+        "reading": "へたじゃない",
+        "meaning": "не неумелый",
+        "alternatives": [
+          {
+            "written": "下手ではない",
+            "reading": "へたではない"
+          }
+        ]
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. な-прилагательное: добавьте じゃない или ではない. Конечное い у きれい и 嫌い не убирается."
+    },
+    {
+      "id": "paraphrase-287-470",
+      "kind": "paraphrase",
+      "context": "Атмосфера на улице",
+      "left": {
+        "word_id": 287,
+        "word": "静か",
+        "word_reading": "しずか",
+        "written": "静か",
+        "reading": "しずか",
+        "meaning": "тихий"
+      },
+      "right": {
+        "word_id": 470,
+        "word": "賑やか",
+        "word_reading": "にぎやか",
+        "written": "賑やかじゃない",
+        "reading": "にぎやかじゃない",
+        "meaning": "не оживлённый",
+        "alternatives": [
+          {
+            "written": "賑やかではない",
+            "reading": "にぎやかではない"
+          }
+        ]
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. な-прилагательное: добавьте じゃない или ではない. Конечное い у きれい и 嫌い не убирается."
+    },
+    {
+      "id": "paraphrase-193-764",
+      "kind": "paraphrase",
+      "context": "Чистота комнаты",
+      "left": {
+        "word_id": 193,
+        "word": "汚い",
+        "word_reading": "きたない",
+        "written": "汚い",
+        "reading": "きたない",
+        "meaning": "грязный"
+      },
+      "right": {
+        "word_id": 764,
+        "word": "きれい",
+        "word_reading": "きれい",
+        "written": "きれいじゃない",
+        "reading": "きれいじゃない",
+        "meaning": "не чистый",
+        "alternatives": [
+          {
+            "written": "きれいではない",
+            "reading": "きれいではない"
+          }
+        ]
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. な-прилагательное: добавьте じゃない или ではない. Конечное い у きれい и 嫌い не убирается."
+    },
+    {
+      "id": "paraphrase-764-193",
+      "kind": "paraphrase",
+      "context": "Чистота комнаты",
+      "left": {
+        "word_id": 764,
+        "word": "きれい",
+        "word_reading": "きれい",
+        "written": "きれい",
+        "reading": "きれい",
+        "meaning": "чистый"
+      },
+      "right": {
+        "word_id": 193,
+        "word": "汚い",
+        "word_reading": "きたない",
+        "written": "汚くない",
+        "reading": "きたなくない",
+        "meaning": "не грязный"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-754-753",
+      "kind": "paraphrase",
+      "context": "Отношение к еде",
+      "left": {
+        "word_id": 754,
+        "word": "嫌い",
+        "word_reading": "きらい",
+        "written": "嫌い",
+        "reading": "きらい",
+        "meaning": "не нравится"
+      },
+      "right": {
+        "word_id": 753,
+        "word": "好き",
+        "word_reading": "すき",
+        "written": "好きじゃない",
+        "reading": "すきじゃない",
+        "meaning": "не нравится",
+        "alternatives": [
+          {
+            "written": "好きではない",
+            "reading": "すきではない"
+          }
+        ]
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. な-прилагательное: добавьте じゃない или ではない. Конечное い у きれい и 嫌い не убирается."
+    },
+    {
+      "id": "paraphrase-753-754",
+      "kind": "paraphrase",
+      "context": "Отношение к еде",
+      "left": {
+        "word_id": 753,
+        "word": "好き",
+        "word_reading": "すき",
+        "written": "好き",
+        "reading": "すき",
+        "meaning": "нравится"
+      },
+      "right": {
+        "word_id": 754,
+        "word": "嫌い",
+        "word_reading": "きらい",
+        "written": "嫌いじゃない",
+        "reading": "きらいじゃない",
+        "meaning": "не испытывать неприязни",
+        "alternatives": [
+          {
+            "written": "嫌いではない",
+            "reading": "きらいではない"
+          }
+        ]
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. な-прилагательное: добавьте じゃない или ではない. Конечное い у きれい и 嫌い не убирается."
+    },
+    {
+      "id": "paraphrase-993-619",
+      "kind": "paraphrase",
+      "context": "Сложность задания",
+      "left": {
+        "word_id": 993,
+        "word": "易しい",
+        "word_reading": "やさしい",
+        "written": "易しい",
+        "reading": "やさしい",
+        "meaning": "лёгкий"
+      },
+      "right": {
+        "word_id": 619,
+        "word": "難しい",
+        "word_reading": "むずかしい",
+        "written": "難しくない",
+        "reading": "むずかしくない",
+        "meaning": "не трудный"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-619-993",
+      "kind": "paraphrase",
+      "context": "Сложность задания",
+      "left": {
+        "word_id": 619,
+        "word": "難しい",
+        "word_reading": "むずかしい",
+        "written": "難しい",
+        "reading": "むずかしい",
+        "meaning": "трудный"
+      },
+      "right": {
+        "word_id": 993,
+        "word": "易しい",
+        "word_reading": "やさしい",
+        "written": "易しくない",
+        "reading": "やさしくない",
+        "meaning": "не лёгкий"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-592-90",
+      "kind": "paraphrase",
+      "context": "Вкус блюда",
+      "left": {
+        "word_id": 592,
+        "word": "不味い",
+        "word_reading": "まずい",
+        "written": "不味い",
+        "reading": "まずい",
+        "meaning": "невкусный"
+      },
+      "right": {
+        "word_id": 90,
+        "word": "美味しい",
+        "word_reading": "おいしい",
+        "written": "美味しくない",
+        "reading": "おいしくない",
+        "meaning": "не вкусный"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-90-592",
+      "kind": "paraphrase",
+      "context": "Вкус блюда",
+      "left": {
+        "word_id": 90,
+        "word": "美味しい",
+        "word_reading": "おいしい",
+        "written": "美味しい",
+        "reading": "おいしい",
+        "meaning": "вкусный"
+      },
+      "right": {
+        "word_id": 592,
+        "word": "不味い",
+        "word_reading": "まずい",
+        "written": "不味くない",
+        "reading": "まずくない",
+        "meaning": "не невкусный"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-716-715",
+      "kind": "paraphrase",
+      "context": "Температура воздуха",
+      "left": {
+        "word_id": 716,
+        "word": "寒い",
+        "word_reading": "さむい",
+        "written": "寒い",
+        "reading": "さむい",
+        "meaning": "холодный"
+      },
+      "right": {
+        "word_id": 715,
+        "word": "暑い",
+        "word_reading": "あつい",
+        "written": "暑くない",
+        "reading": "あつくない",
+        "meaning": "не жаркий"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    },
+    {
+      "id": "paraphrase-715-716",
+      "kind": "paraphrase",
+      "context": "Температура воздуха",
+      "left": {
+        "word_id": 715,
+        "word": "暑い",
+        "word_reading": "あつい",
+        "written": "暑い",
+        "reading": "あつい",
+        "meaning": "жаркий"
+      },
+      "right": {
+        "word_id": 716,
+        "word": "寒い",
+        "word_reading": "さむい",
+        "written": "寒くない",
+        "reading": "さむくない",
+        "meaning": "не холодный"
+      },
+      "note": "Близкое выражение в этом контексте, не точное равенство. Отрицание признака может описывать промежуточную степень. い-прилагательное: конечное い заменяется на くない."
+    }
+  ]
+}

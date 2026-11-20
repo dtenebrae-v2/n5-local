@@ -135,6 +135,10 @@ export function closestAnswer(exercise, value) {
 export function checkAnswer(exercise, value) {
   const answer = normalizeAnswer(value);
   if (!answer) return { status: 'incorrect', answer };
+  if (exercise.kind === 'phrase') {
+    return { status: /[a-z]/iu.test(answer) ? 'incomplete'
+      : exercise.answers.some(expected => normalizeAnswer(expected) === answer) ? 'correct' : 'incorrect', answer, full: answer };
+  }
   if (!/^[ぁ-ゖー]+$/u.test(answer)) return { status: 'incomplete', answer };
   return {
     status: exercise.answers.some(expected => answerKey(expected) === answerKey(answer)) ? 'correct' : 'incorrect',

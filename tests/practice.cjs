@@ -1,3 +1,4 @@
+const baseText = require('./base-text.cjs');
 const assert = require('node:assert/strict');
 const path = require('node:path');
 const fs = require('node:fs');
@@ -15,7 +16,7 @@ module.exports = async function practiceChecks(page, base) {
     await input.fill(value);
     await page.locator('#practice-form button[type="submit"]').click();
     assert.equal(await feedback.getAttribute('data-status'), status, value);
-    if (full) assert.match(await feedback.innerText(), new RegExp(full.replace(/ /g, '\\s+')));
+    if (full) assert.match(await baseText(feedback), new RegExp(full.replace(/ /g, '\\s+')));
   }
 
   await open('verbs', '行く', 44);
@@ -34,10 +35,10 @@ module.exports = async function practiceChecks(page, base) {
   await input.press('Enter');
   assert.equal((await page.locator('.practice-dialog').boundingBox()).y, beforeAnswer.y);
   assert.deepEqual(await input.boundingBox(), beforeInput);
-  assert.equal(await feedback.locator('.feedback-expected [lang=ja]').innerText(), '行きました（いきました）');
+  assert.equal(await baseText(feedback.locator('.feedback-expected [lang=ja]')), '行きました（いきました）');
   await answer('ました', 'incorrect');
-  assert.match(await feedback.innerText(), /Ваш ответ: ました/);
-  assert.match(await feedback.innerText(), /Godan/);
+  assert.match(await baseText(feedback), /Ваш ответ: ました/);
+  assert.match(await baseText(feedback), /Godan/);
   assert.equal((await page.locator('.practice-dialog').boundingBox()).y, beforeAnswer.y);
   assert.deepEqual(await input.boundingBox(), beforeInput);
   assert.equal(await input.getAttribute('aria-invalid'), 'true');
@@ -50,11 +51,11 @@ module.exports = async function practiceChecks(page, base) {
   assert.equal(await input.inputValue(), 'いきました');
   await page.locator('#practice-target input[value=\"negative\"]').check();
   assert.equal(await input.inputValue(), '');
-  assert.equal(await feedback.innerText(), '');
+  assert.equal(await baseText(feedback), '');
   await input.pressSequentially('ikimasen');
   await input.press('Enter');
   assert.equal(await input.inputValue(), 'いきません');
-  assert.equal(await feedback.locator('.feedback-expected [lang=ja]').innerText(), '行きません（いきません）');
+  assert.equal(await baseText(feedback.locator('.feedback-expected [lang=ja]')), '行きません（いきません）');
   await page.locator('#practice-target input[value=\"past_negative\"]').check();
   await answer('ikimasendeshita', 'correct', 'いきませんでした');
   await page.keyboard.press('Escape');
@@ -70,9 +71,9 @@ module.exports = async function practiceChecks(page, base) {
   }
   await answer('gakuseijanadeshita', 'incorrect', 'Правильный ответ: 学生じゃなかったです');
   await page.locator('#practice-reveal').click();
-  assert.match(await feedback.innerText(), /がくせいじゃなかったです/);
+  assert.match(await baseText(feedback), /がくせいじゃなかったです/);
   await page.locator('#practice-alternatives summary').click();
-  assert.match(await page.locator('#practice-alternatives').innerText(), /がくせいではありませんでした/);
+  assert.match(await baseText(page.locator('#practice-alternatives')), /がくせいではありませんでした/);
   assert.equal(await feedback.evaluate(el => el.scrollWidth <= el.clientWidth), true);
   console.log('PASS noun endings and accepted negative alternatives');
 
@@ -108,7 +109,7 @@ module.exports = async function practiceChecks(page, base) {
   await page.waitForSelector('#results[aria-busy="false"]');
   await page.locator('[data-conjugation="376"]').click();
   await page.waitForSelector('.verb-reference[open]');
-  assert.match(await page.locator('.verb-form-list').innerText(), /たべれば/);
+  assert.match(await baseText(page.locator('.verb-form-list')), /たべれば/);
   if (process.env.SCREENSHOT_DIR) {
     fs.mkdirSync(process.env.SCREENSHOT_DIR, { recursive: true });
     await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, 'n5-verb-reference.png') });
@@ -127,7 +128,7 @@ module.exports = async function practiceChecks(page, base) {
   await page.locator('.verb-reference .lesson-link').click();
   await page.waitForSelector('#ichidan');
   await page.waitForSelector('.practice-dialog', { state: 'detached' });
-  assert.match(await page.locator('.lesson').innerText(), /Основ/);
+  assert.match(await baseText(page.locator('.lesson')), /Основ/);
   await page.setViewportSize({ width: 1440, height: 1000 });
   console.log('PASS verb reference, practice transition, mobile layout and grammar navigation');
 
@@ -139,12 +140,12 @@ module.exports = async function practiceChecks(page, base) {
     element.dispatchEvent(new CompositionEvent('compositionupdate', { data: 'たべました', bubbles: true }));
     element.form.requestSubmit();
   });
-  assert.equal(await feedback.innerText(), '');
+  assert.equal(await baseText(feedback), '');
   await input.evaluate((element) => {
     element.dispatchEvent(new CompositionEvent('compositionend', { data: 'たべました', bubbles: true }));
   });
   await input.press('Enter');
-  assert.equal(await feedback.locator('.feedback-expected [lang=ja]').innerText(), '食べました（たべました）');
+  assert.equal(await baseText(feedback.locator('.feedback-expected [lang=ja]')), '食べました（たべました）');
   console.log('PASS native kana composition guard');
 
   if (process.env.SCREENSHOT_DIR) {

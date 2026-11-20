@@ -7,6 +7,8 @@ export function resolveRoute(pathname, catalog) {
   }
   if (path === `${catalog.base}/progress`) return {type:'progress',title:'Подробные результаты'};
   if (path === `${catalog.base}/practice`) return { type: 'game', title: 'Тренировка' };
+  if (path === `${catalog.base}/word-relations`) return { type: 'word-relations', title: 'Синонимы и антонимы' };
+  if (path === `${catalog.base}/verb-phrases`) return { type: 'verb-phrases', title: 'Глаголы в сочетаниях' };
   if (path === `${catalog.base}/counters`) return { type: 'counters', title: 'Счётные суффиксы' };
   if (path === `${catalog.base}/mock`) return { type: 'mock', title: 'Письменный пробник N5' };
   if (path === `${catalog.base}/exams`) return { type:'exam-sets', title:'Экзаменационные варианты N5' };

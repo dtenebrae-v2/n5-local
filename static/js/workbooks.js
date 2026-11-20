@@ -1,3 +1,5 @@
+import { annotateFurigana } from './furigana.js';
+import { rubyText } from './furigana-core.js';
 import { getJSON } from './api.js';
 import { escapeHTML as esc } from './ui.js';
 import { highlightedRule } from './form-highlight.js';
@@ -79,7 +81,7 @@ export async function mountWorkbooks(root, signal, bookId) {
   function result(q = current()) { return session.answers[q.id] ||= {choice:null,status:null,first:null,firstChoice:null,assisted:false}; }
   function referenceHTML(unit) {
     return `<h3 lang="ja">${esc(unit.title)}</h3>${(unit.reference || []).map(text => `<p>${highlightedRule(text)}</p>`).join('')}
-      ${unit.topic === 'kanji' ? `<table class="counter-table"><thead><tr><th>Слово</th><th>Чтение</th></tr></thead><tbody>${book.items.filter(q => q.unit === unit.id && q.kind === 'reading-kanji').map(q => `<tr><th lang="ja">${esc(q.target)}</th><td lang="ja">${esc(q.choices[q.correct])}</td></tr>`).join('')}</tbody></table>` : ''}`;
+      ${unit.topic === 'kanji' ? `<table class="counter-table"><thead><tr><th>Слово</th><th>Чтение</th></tr></thead><tbody>${book.items.filter(q => q.unit === unit.id && q.kind === 'reading-kanji').map(q => `<tr><th lang="ja">${rubyText(q.target,q.choices[q.correct])}</th><td lang="ja">${esc(q.choices[q.correct])}</td></tr>`).join('')}</tbody></table>` : ''}`;
   }
   function openReference() {
     const q = current(); if (!q || dialog?.open) return;
@@ -118,6 +120,13 @@ export async function mountWorkbooks(root, signal, bookId) {
   function feedback(q) {
     const record = result(q), box = root.querySelector('#workbook-feedback');
     if (!record.status) { box.innerHTML = ''; delete box.dataset.status; return; }
+    const article = root.querySelector('.workbook-question');
+    article?.removeAttribute('data-furigana');
+    if (q.kind === 'reading-kanji' && q.target && q.correct !== null) {
+      const target = article?.querySelector('.workbook-prompt mark');
+      if (target) target.innerHTML = rubyText(q.target,q.choices[q.correct]);
+    }
+    annotateFurigana(article);
     const known = q.correct !== null;
     box.dataset.status = record.status;
     box.innerHTML = `<strong>${STATUS[record.status]}</strong>
@@ -141,7 +150,7 @@ export async function mountWorkbooks(root, signal, bookId) {
     }
     const r = result(q);
     study.innerHTML = `<p class="counter-progress">${esc(session.title)} · задание ${session.index + 1} из ${session.keys.length} · стр. ${q.page} · ${q.example ? 'Пример' : '№ ' + esc(q.number)}</p>
-      <article class="game-card workbook-question" tabindex="-1"><p class="practice-help">${esc(q.instruction)}</p>
+      <article class="game-card workbook-question" tabindex="-1" ${!r.status && ['reading-kanji','orthography'].includes(q.kind) ? 'data-furigana="off"' : ''}><p class="practice-help">${esc(q.instruction)}</p>
         ${q.audio ? audioHTML(q.audio) : ''}${q.passage ? `<div class="workbook-passage" lang="ja">${esc(q.passage)}</div>` : ''}
         <h2 class="workbook-prompt" lang="${q.kind === 'listening' ? 'ru' : 'ja'}">${promptHTML(q)}</h2>
         ${q.image && media(q.image) ? `<img class="workbook-illustration" src="${esc(media(q.image))}" alt="Иллюстрация к заданию">` : ''}

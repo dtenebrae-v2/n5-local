@@ -1,3 +1,4 @@
+import { rubyText } from './furigana-core.js';
 import { highlightedRule } from './form-highlight.js';
 import { openPracticeRules } from './practice-rules.js';
 import { VERB_FORM_LABELS } from './verb-forms.js';
@@ -22,7 +23,7 @@ export function openPractice(entry, kind, pageSignal, initialForm = 'past') {
       <div><h2 id="practice-title">Проверка форм</h2></div>
       <button type="button" class="practice-close" aria-label="Закрыть проверку">×</button>
     </div>
-    <p class="practice-word"><span lang="ja">${esc(entry.kanji)}</span>
+    <p class="practice-word"><span lang="ja">${rubyText(entry.kanji, exercise.reading)}</span>
       <span class="practice-reading" lang="ja">${esc(exercise.reading)}</span></p>
     <p class="practice-meaning">${esc(entry.meaning)}</p>
     <form id="practice-form">

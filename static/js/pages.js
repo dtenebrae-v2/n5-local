@@ -21,7 +21,9 @@ export function navigation(catalog) {
     <a class="nav-home" href="${catalog.base}">Моё обучение</a>
     ${group('course','Курс N5',`<a href="${catalog.base}/course">Уроки 1–25</a>
     <a href="${catalog.base}/course/workbook">Практика по тетради</a>
-    <a href="${catalog.base}/course/reviews">Повторение по урокам</a>`)}
+    <a href="${catalog.base}/course/reviews">Повторение по урокам</a>
+    <a href="${catalog.base}/verb-phrases">Глаголы в сочетаниях</a>
+    <a href="${catalog.base}/word-relations">Синонимы и антонимы</a>`)}
     ${group('practice','Тренировки',`<a href="${catalog.base}/preparation">Задания по темам</a>
     <a href="${catalog.base}/practice">Слова и формы</a>
     <a href="${catalog.base}/counters">Счётные суффиксы</a>`)}

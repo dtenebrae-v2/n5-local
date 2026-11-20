@@ -8,6 +8,7 @@ module.exports=async function preparationChecks(page,base) {
  };
  await page.evaluate(()=>localStorage.removeItem('n5.preparation.v1'));
  await page.goto(base+'/jlpt/n5/preparation');
+ await page.locator('#navigation .nav-group').first().waitFor();
  assert.equal(await page.locator('#navigation .nav-group').count(),6);
  assert.equal(await page.locator('#nav-course').locator('..').locator('a[href$="/course/workbook"]').count(),1);
  assert.equal(await page.locator('#nav-words').locator('..').locator('a[href$="/practice"]').count(),0);

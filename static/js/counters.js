@@ -1,3 +1,4 @@
+import { rubyText } from './furigana-core.js';
 import { getJSON } from './api.js';
 import { escapeHTML as esc } from './ui.js';
 import { answerFields, bindAnswer } from './practice-answer.js';
@@ -7,10 +8,10 @@ import { counterPool, counterExercise, counterSession, restoreCounterSession } f
 
 const STORAGE = 'n5.counters.v1';
 function reference(counter, number) {
-  return `<h3>${esc(counter.symbol)} · ${esc(counter.label)}</h3><p>${highlightedRule(counter.rule)}</p>
+  return `<h3>${rubyText(counter.symbol,counter.reading)} · ${esc(counter.label)}</h3><p>${highlightedRule(counter.rule)}</p>
     <table class="counter-table"><thead><tr><th scope="col">Запись</th><th scope="col">Чтение</th></tr></thead><tbody>
     ${counter.forms.map(form => `<tr ${form.number === number ? 'class="current-rule" aria-current="true"' : ''}>
-      <th scope="row" lang="ja">${esc(form.written)}</th><td lang="ja">${form.readings.map(reading => highlightedForm(reading, form.base)).join('<br>')}</td></tr>`).join('')}</tbody></table>
+      <th scope="row" lang="ja">${rubyText(form.written,form.readings[0])}</th><td lang="ja">${form.readings.map(reading => highlightedForm(reading, form.base)).join('<br>')}</td></tr>`).join('')}</tbody></table>
     <details class="counter-sources"><summary>Источники</summary>${counter.sources.map(source => `<p><a href="${esc(source.url)}" target="_blank" rel="noreferrer">${esc(source.title)} ↗</a></p>`).join('')}</details>`;
 }
 
@@ -29,11 +30,11 @@ export async function mountCounters(root, signal) {
   root.innerHTML = `<h1>Счётные суффиксы</h1>
     <div class="library-filters" role="group" aria-label="Режим суффиксов"><button class="chip selected" data-counter-mode="practice" aria-pressed="true">Тренировка</button><button class="chip" data-counter-mode="reference" aria-pressed="false">Справка · 17</button></div>
     <section id="counter-practice"><details id="game-options"><summary>Настройки</summary>
-      <div class="counter-choices" role="group" aria-label="Суффиксы для тренировки">${data.counters.map(counter => `<button type="button" class="chip" data-counter="${counter.id}"><b lang="ja">${esc(counter.symbol)}</b> ${esc(counter.label)}</button>`).join('')}</div>
+      <div class="counter-choices" role="group" aria-label="Суффиксы для тренировки">${data.counters.map(counter => `<button type="button" class="chip" data-counter="${counter.id}"><b lang="ja">${rubyText(counter.symbol,counter.reading)}</b> ${esc(counter.label)}</button>`).join('')}</div>
       <div class="library-filters" role="group" aria-label="Количество заданий">${[10,20].map(n => `<button class="chip" data-counter-limit="${n}">${n} заданий</button>`).join('')}<button class="secondary" id="counter-all">Выбрать все</button></div>
       <button class="primary" id="counter-start">Начать заново</button></details>
       <p id="counter-storage" role="status"></p><div id="counter-task"></div></section>
-    <section id="counter-reference" hidden><div class="counter-choices" role="group" aria-label="Справка по суффиксу">${data.counters.map(counter => `<button class="chip" data-counter-reference="${counter.id}">${esc(counter.symbol)} · ${esc(counter.label)}</button>`).join('')}</div><div id="counter-table"></div></section>`;
+    <section id="counter-reference" hidden><div class="counter-choices" role="group" aria-label="Справка по суффиксу">${data.counters.map(counter => `<button class="chip" data-counter-reference="${counter.id}">${rubyText(counter.symbol,counter.reading)} · ${esc(counter.label)}</button>`).join('')}</div><div id="counter-table"></div></section>`;
   function save() {
     try { localStorage.setItem(STORAGE, JSON.stringify({ ...state, session })); }
     catch { root.querySelector('#counter-storage').textContent = 'Не удалось сохранить занятие в этом браузере.'; }

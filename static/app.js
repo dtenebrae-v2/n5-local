@@ -1,6 +1,9 @@
+import { installFurigana, updateFuriganaWords, annotateFurigana } from './js/furigana.js';
 import { mountProgress } from './js/progress-view.js';
 import { highlightRuleParagraphs } from './js/form-highlight.js';
 import { mountLibrary } from './js/library.js';
+import { mountWordRelations } from './js/word-relations.js';
+import { mountVerbPhrases } from './js/verb-phrases.js';
 import { mountCounters } from './js/counters.js';
 import { mountWorkbooks } from './js/workbooks.js';
 import { mountExamSets } from './js/exam-sets.js';
@@ -8,7 +11,7 @@ import { mountPreparation } from './js/preparation.js';
 import { mountCourseWorkbook } from './js/course-workbook.js';
 import { mountMockExam } from './js/mock-exam.js';
 import { mountGame } from './js/game.js';
-import { getJSON } from './js/api.js';
+import { getJSON, trainingWords } from './js/api.js';
 import { grammarPage, navigation, sectionPage } from './js/pages.js';
 import { resolveRoute } from './js/router.js';
 import { errorPage } from './js/ui.js';
@@ -59,6 +62,10 @@ async function render(focusPage = false) {
       await mountExamSets(content, signal, route.examId);
     } else if (route.type === 'workbooks' || route.type === 'workbook') {
       await mountWorkbooks(content, signal, route.workbookId);
+    } else if (route.type === 'word-relations') {
+      await mountWordRelations(content, signal);
+    } else if (route.type === 'verb-phrases') {
+      await mountVerbPhrases(content, signal);
     } else if (route.type === 'counters') {
       await mountCounters(content, signal);
     } else if (route.type === 'library' || route.type === 'book') {
@@ -89,6 +96,7 @@ async function render(focusPage = false) {
       content.innerHTML = `<h1>Страница не найдена</h1><a href="${catalog.base}">Открыть словарь →</a>`;
     }
     if (!signal.aborted) {
+      annotateFurigana(content);
       if (focusPage && !location.search.includes('search=1') && !document.activeElement.closest('#content')) content.focus({ preventScroll: true });
       scrollToAnchor();
     }
@@ -150,7 +158,8 @@ function bindNavigation() {
     else navigate(`${catalog.base}/vocabulary/complete?search=1`);
   });
   window.addEventListener('popstate', () => render(true));
-  document.addEventListener('vocabulary-updated', event => {
+  document.addEventListener('vocabulary-updated', async event => {
+    try { const words = await trainingWords({ refresh: true }); updateFuriganaWords(words.entries); } catch { /* Retain the last available readings. */ }
     catalog = event.detail.catalog;
     menu.innerHTML = navigation(catalog);
     navigate(`${catalog.base}/vocabulary/${encodeURIComponent(event.detail.collection)}?q=${encodeURIComponent(event.detail.kanji)}`);
@@ -159,7 +168,9 @@ function bindNavigation() {
 
 async function start() {
   try {
-    catalog = await getJSON('/api/catalog');
+    const [loadedCatalog, words] = await Promise.all([getJSON('/api/catalog'), trainingWords()]);
+    catalog = loadedCatalog;
+    installFurigana(document.body, words.entries);
     menu.innerHTML = navigation(catalog);
     bindNavigation();
     await render();

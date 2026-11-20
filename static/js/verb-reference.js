@@ -1,3 +1,4 @@
+import { rubyText } from './furigana-core.js';
 import { highlightedForm, changed } from './form-highlight.js';
 import { verbForms, GODAN_ROWS, VERB_FORM_LABELS } from './verb-forms.js';
 import { readingOf } from './conjugation.js';
@@ -29,7 +30,7 @@ export function openVerbReference(entry, signal) {
   dialog.className = 'practice-dialog verb-reference';
   dialog.setAttribute('aria-labelledby', 'verb-reference-title');
   dialog.innerHTML = `<div class="practice-header"><div><p class="eyebrow">${esc(data.group)} · СПРАВКА</p>
-    <h2 id="verb-reference-title">Спряжение: ${esc(entry.kanji)}</h2></div>
+    <h2 id="verb-reference-title">Спряжение: ${rubyText(entry.kanji,reading)}</h2></div>
     <button class="practice-close" aria-label="Закрыть справку">×</button></div>
     <p class="practice-meaning">${esc(reading)} · ${esc(entry.meaning)}</p>
     <p>Перед ます: <b lang="ja">${highlightedForm(data.masuStem, reading)}</b>. Перед ない: <b lang="ja">${highlightedForm(data.naiStem, reading)}</b>${reading === 'ある' ? ' (но отрицание ある — ない)' : ''}.</p>
@@ -58,12 +59,12 @@ export function verbReferenceLesson() {
   return `<article class="lesson" lang="ru">
     <p>Основа — часть, к которой добавляется окончание: かい ＋ ます → かいます.
     Словарная форма, приказ и намерение — уже готовые формы. Поэтому здесь они показаны отдельно от основ.</p>
-    <h2 id="godan">Godan · 五段 · группа 1</h2>
+    <h2 id="godan">Godan · ${rubyText('五段','ごだん')} · группа 1</h2>
     <p>Меняется последний слог. В таблице — соответствия рядов あ・い・う・え・お; перед ない конечное う переходит в わ.</p>
     <div class="table-scroll"><table><thead><tr><th>Словарное окончание</th><th>Перед ない</th><th>Перед ます</th><th>Перед ば / приказ</th><th>Перед う (намерение)</th></tr></thead>
     <tbody>${Object.entries(GODAN_ROWS).map(([u, [a, i, e, o]]) => `<tr>${[u,a,i,e,o].map(x => `<td lang="ja">${changed(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
     <p>Пример: かう → かわない・かいます・かえば・かえ・かおう. Отрицание ある — ない.</p>
-    <h2 id="ichidan">Ichidan · 一段 · группа 2</h2>
+    <h2 id="ichidan">Ichidan · ${rubyText('一段','いちだん')} · группа 2</h2>
     <p>Уберите конечное る: たべる → たべ. Добавьте ない, ます, た, て, れば или よう.
     Приказ: たべろ (книжное たべよ). Исключение: くれる → くれ.</p>
     <p>Окончание いる / える не гарантирует Ichidan: かえる «возвращаться», きる «резать», いる «нуждаться» — Godan. Группа хранится в словаре.</p>

@@ -1,3 +1,4 @@
+import { rubyText } from './furigana-core.js';
 import { escapeHTML as esc } from './ui.js';
 
 export function passageHTML(question, review = false) {
@@ -15,7 +16,7 @@ export function passageHTML(question, review = false) {
   for (const token of tokens) {
     const start = token.index, end = start + token[0].length;
     const word = words.get(token[0]);
-    const body = word ? `<button class="reading-word" data-reading-word="${word.id}" data-reading-question="${esc(question.id)}" data-reading-offset="${start}">${esc(token[0])}</button>` : esc(token[0]);
+    const body = word ? `<button class="reading-word" data-reading-word="${word.id}" data-reading-question="${esc(question.id)}" data-reading-offset="${start}">${rubyText(token[0],word.reading)}</button>` : esc(token[0]);
     html += ranges.some(range => start < range.end && end > range.start) ? `<mark class="reading-evidence">${body}</mark>` : body;
   }
   return html;
@@ -42,7 +43,7 @@ export function bindReading(root, signal, getQuestions, progress, save) {
     dialog.setAttribute('aria-labelledby', 'reading-word-title');
     const key = `${word.id}:${word.context}`;
     const saved = () => (progress.bookmarks || []).some(item => item.key === key);
-    dialog.innerHTML = `<div class="practice-header"><h2 id="reading-word-title" lang="ja">${esc(word.written)}</h2><button class="practice-close" aria-label="Закрыть">×</button></div>
+    dialog.innerHTML = `<div class="practice-header"><h2 id="reading-word-title" lang="ja">${rubyText(word.written,word.reading)}</h2><button class="practice-close" aria-label="Закрыть">×</button></div>
       <p lang="ja">${esc(word.reading)}</p><p lang="en">${esc(word.meaning)}</p><p class="mock-passage" lang="ja">${esc(word.context)}</p>
       <div class="practice-actions"><button class="primary" data-bookmark ${saved() ? 'disabled' : ''}>${saved() ? 'Пример сохранён' : 'Сохранить пример'}</button>
       <a class="secondary" href="/jlpt/n5/vocabulary/${encodeURIComponent(word.collection)}?q=${encodeURIComponent(word.written)}">В словарь →</a></div>`;
@@ -65,5 +66,5 @@ export function bindReading(root, signal, getQuestions, progress, save) {
 }
 export function readingBookmarks(progress) {
   const words = progress.bookmarks || [];
-  return `<details class="prep-stats"><summary>Примеры из чтения (${words.length})</summary>${words.map(word => `<article class="reading-bookmark"><a href="/jlpt/n5/vocabulary/${encodeURIComponent(word.collection)}?q=${encodeURIComponent(word.written)}" lang="ja">${esc(word.written)}（${esc(word.reading)}）</a><p lang="en">${esc(word.meaning)}</p><p lang="ja">${esc(word.context)}</p></article>`).join('')}</details>`;
+  return `<details class="prep-stats"><summary>Примеры из чтения (${words.length})</summary>${words.map(word => `<article class="reading-bookmark"><a href="/jlpt/n5/vocabulary/${encodeURIComponent(word.collection)}?q=${encodeURIComponent(word.written)}" lang="ja">${rubyText(word.written,word.reading)}</a><p lang="en">${esc(word.meaning)}</p><p lang="ja">${esc(word.context)}</p></article>`).join('')}</details>`;
 }

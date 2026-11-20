@@ -21,3 +21,16 @@ export function latestRequest(parentSignal) {
   };
   return { get, cancel };
 }
+
+// Shared by page-wide furigana and the word/form trainer; refreshed after vocabulary edits.
+let trainingWordsRequest;
+export function trainingWords({ refresh = false } = {}) {
+  if (refresh || !trainingWordsRequest) {
+    const current = getJSON('/api/training-words').catch(error => {
+      if (trainingWordsRequest === current) trainingWordsRequest = null;
+      throw error;
+    });
+    trainingWordsRequest = current;
+  }
+  return trainingWordsRequest;
+}

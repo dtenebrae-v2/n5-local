@@ -33,6 +33,8 @@ class Catalog:
         }
         self.routes = {'/', '/jlpt', BASE, f'{BASE}/vocabulary', f'{BASE}/practice', f'{BASE}/mock', f'{BASE}/preparation', f'{BASE}/library'}
         self.routes.add(f'{BASE}/counters')
+        self.routes.add(f'{BASE}/verb-phrases')
+        self.routes.add(f'{BASE}/word-relations')
         self.routes.add(f'{BASE}/workbooks')
         self.routes.add(f'{BASE}/exams')
         self.routes.update({f'{BASE}/course', f'{BASE}/course/reviews'})

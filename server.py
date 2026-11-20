@@ -8,6 +8,8 @@ from urllib.parse import parse_qs, urlsplit
 
 from n5.grammar_practice import load_grammar
 from n5.counters import load_counters
+from n5.word_relations import load_relations, public_relations
+from n5.verb_phrases import load_phrases, public_phrases
 from n5.mock_exam import load_mock_exam
 from n5.library import Library, byte_range
 from n5.workbooks import Workbooks
@@ -21,6 +23,8 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / 'data'
 MATERIALS = Path(os.environ.get('N5_MATERIALS_DIR', DATA / 'materials'))
 COUNTERS = load_counters(DATA / 'counters.json')
+VERB_PHRASES = load_phrases(DATA / 'verb-phrases.json')
+WORD_RELATIONS = load_relations(DATA / 'word-relations.json')
 GRAMMAR_PRACTICE = load_grammar(DATA / 'grammar-practice.json')
 MOCK_EXAM = load_mock_exam(DATA / 'mock-exam.json')
 LIBRARY = Library(MATERIALS / 'tadoku/catalog.json', MATERIALS / 'tadoku/files')
@@ -165,6 +169,10 @@ class Handler(BaseHTTPRequestHandler):
         if path == '/api/workbook':
             data = WORKBOOKS.public(params.get('id', [''])[0])
             return self.send(data) if data else self.not_found()
+        if path == '/api/word-relations':
+            return self.send(public_relations(WORD_RELATIONS, repository.training_words()))
+        if path == '/api/verb-phrases':
+            return self.send(public_phrases(VERB_PHRASES, repository.training_words()))
         if path == '/api/counters':
             return self.send(COUNTERS)
         if path == '/api/mock-exam':

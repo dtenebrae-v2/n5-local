@@ -1,3 +1,4 @@
+import { rubyDisplay } from './furigana-core.js';
 import { escapeHTML as esc } from './ui.js';
 import { highlightedRule } from './form-highlight.js';
 import { bind, unbind } from '../vendor/wanakana-5.3.1.js';
@@ -34,11 +35,11 @@ export function bindAnswer(root, getExercise, onResult = () => {}) {
     const expected = closestAnswer(exercise, userAnswer);
     feedback.innerHTML = `<strong>${status === 'correct' ? 'Верно' : status === 'incorrect' ? 'Неверно' : status === 'unknown' ? 'Не знаю' : 'Ответ'}</strong>
       <div class="feedback-user"><span>Ваш ответ:</span> <span lang="ja">${esc(userAnswer || '—')}</span></div>
-      <div class="feedback-expected"><span>Правильный ответ:</span> <span lang="ja">${esc(expected)}</span></div>
+      <div class="feedback-expected"><span>Правильный ответ:</span> <span lang="ja">${rubyDisplay(expected)}</span></div>
       ${status !== 'correct' && exercise.hint ? `<p class="feedback-rule">${highlightedRule(exercise.hint)}</p>` : ''}`;
     const other = (exercise.displayAnswers || exercise.answers).filter(a => a !== expected);
     alternatives.hidden = !other.length;
-    alternatives.querySelector('ul').innerHTML = other.map(a => `<li lang="ja">${esc(a)}</li>`).join('');
+    alternatives.querySelector('ul').innerHTML = other.map(a => `<li lang="ja">${rubyDisplay(a)}</li>`).join('');
   }
   bind(input, { IMEMode: 'toHiragana' });
   function clear() {

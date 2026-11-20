@@ -1,10 +1,11 @@
+import { rubyText } from './furigana-core.js';
 import { grammarWords, grammarQuestion, openGrammarRules } from './grammar-exercise.js';
 import { mountShortcuts } from './training-shortcuts.js';
 import { loadProgress, saveProgress, recordAttempt, TE_GROUPS, teGroup } from './training-progress.js';
 import { groupLabels } from './group-labels.js';
 import { vocabularyExercise } from './vocabulary-exercise.js';
 import { openPracticeRules } from './practice-rules.js';
-import { getJSON } from './api.js';
+import { getJSON, trainingWords } from './api.js';
 import { closestAnswer, exerciseFor, FORM_LABELS } from './conjugation.js';
 import { VERB_FORM_LABELS } from './verb-forms.js';
 import { answerFields, bindAnswer } from './practice-answer.js';
@@ -23,7 +24,7 @@ export async function mountGame(root, catalog, signal) {
   root.innerHTML = '<p class="loading">Загружаем слова…</p>';
   const collections = catalog.collections;
   const practiceCollections = collections.filter(item => item.practice_kind);
-  const [wordData, groups, grammar] = await Promise.all([getJSON('/api/training-words', signal), getJSON('/api/groups', signal), getJSON('/api/grammar-practice', signal)]);
+  const [wordData, groups, grammar] = await Promise.all([trainingWords(), getJSON('/api/groups', signal), getJSON('/api/grammar-practice', signal)]);
   const words = wordData.entries.map(entry => ({ entry, kind: entry.practice_kind, collection: entry.collection }));
   const grammarPool = grammarWords(grammar);
   const grammarLabels = Object.fromEntries(grammar.rules.map(rule => [rule.id, rule.label]));
@@ -254,7 +255,7 @@ export async function mountGame(root, catalog, signal) {
     exercise = getExercise(word, form);
     counted = false; hinted = false;
     root.querySelector('#game-hint-status').textContent = '';
-    question.innerHTML = isGrammar() ? grammarQuestion(exercise) : isVocabulary() ? `<h2 class="game-target" lang="en">${esc(exercise.prompt)}</h2>` : `<p class="practice-word" lang="ja">${esc(word.entry.kanji)}
+    question.innerHTML = isGrammar() ? grammarQuestion(exercise) : isVocabulary() ? `<h2 class="game-target" lang="en">${esc(exercise.prompt)}</h2>` : `<p class="practice-word" lang="ja">${rubyText(word.entry.kanji, exercise.reading)}
       <span class="practice-reading">${esc(exercise.reading)}</span></p>
       <p class="practice-meaning">${esc(word.entry.meaning)}</p>
       <h2 class="game-target">${esc(FORM_LABELS[form] || VERB_FORM_LABELS[form])}</h2>

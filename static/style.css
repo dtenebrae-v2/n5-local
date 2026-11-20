@@ -1766,3 +1766,43 @@ body:has(.book-screen) .sidebar, .workspace:has(.book-screen) .topbar { display:
 .cw-image img {display:block; width:100%; height:auto;}
 .cw-note {border-left:3px solid var(--green); padding:8px 12px;}
 @media(max-width:480px) {.cw-card {padding:14px;} .cw-model {padding:12px;} .cw-pager {gap:8px;} .cw-pager label {order:3; width:100%; text-align:center;} .cw-actions button {flex:1;} }
+
+/* Collocations: readable study cards with a compact, optional directory. */
+.phrase-filters { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+.phrase-filters label { display: grid; gap: .4rem; flex: 1 1 12rem; }
+.phrase-filters input, .phrase-filters select, .phrase-training select { max-width: 100%; width: 100%; }
+.phrase-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+.phrase-card { padding: clamp(1rem, 3vw, 2rem); }
+.phrase-japanese { font-size: clamp(1.5rem, 4vw, 2.5rem); overflow-wrap: anywhere; line-height: 1.6; font-weight: 400; }
+.phrase-japanese strong { text-decoration: underline; text-underline-offset: .25em; }
+.phrase-meaning { font-size: 1.3rem; }
+.phrase-note, .phrase-related { padding: .8rem; background: var(--surface, #f6f5f0); border-radius: .6rem; }
+.phrase-related button { text-align: left; max-width: 100%; white-space: normal; }
+.phrase-directory { padding: 1rem; border: 1px solid var(--line, #d8d8d0); border-radius: .8rem; }
+#phrase-list, #relation-list { max-height: 32rem; overflow: auto; margin-top: 1rem; }
+.phrase-list-item { display: grid; gap: .3rem; width: 100%; text-align: left; white-space: normal; margin-bottom: .5rem; padding: .8rem; }
+.phrase-list-item small { opacity: .7; }
+.phrase-training { margin-top: 1.5rem; }
+.phrase-training > label { display: block; margin: 1rem 0; }
+.phrase-training select { width: auto; }
+.phrase-sources { margin: 1.5rem 0; }
+@media (max-width: 760px) { .phrase-layout { grid-template-columns: 1fr; } .phrase-card .practice-actions { flex-wrap: wrap; } }
+
+.relation-context { font-size: 1.1rem; color: var(--muted); }
+.relation-pair { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: .8rem; margin: 1.5rem 0; }
+.relation-side h3 { font-size: clamp(1.5rem, 3vw, 2rem); overflow-wrap: anywhere; margin: 0 0 .6rem; }
+.relation-side p { overflow-wrap: anywhere; }
+.relation-symbol { font-size: 2rem; color: var(--green); }
+.relation-dictionary { display: flex; flex-wrap: wrap; gap: 1rem; }
+@media (max-width: 480px) { .relation-pair { grid-template-columns: 1fr; gap: .4rem; } .relation-symbol { line-height: 1; } }
+
+/* Keep readings above kanji, including in compact tables and interactive cards. */
+ruby { ruby-align: center; ruby-position: over; }
+rt { font-size: max(.55em, 10px); font-weight: 400; line-height: 1.2; letter-spacing: 0; color: var(--muted); }
+rp { display: none; }
+.japanese-word, .phrase-japanese, .relation-side h3, .mock-passage, .workbook-passage { line-height: 2; }
+.phrase-list-item { line-height: 1.8; }
+.phrase-list-item ruby, .word-table ruby { white-space: nowrap; }
+p[lang="ja"], h2[lang="ja"], h3[lang="ja"], legend[lang="ja"], .workbook-prompt, #prep-heading { line-height: 2; }
+
+.workbook-question .workbook-prompt { line-height: 2.5; }
