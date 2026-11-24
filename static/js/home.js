@@ -1,3 +1,4 @@
+import { escapeHTML as esc } from './ui.js';
 import { loadReading } from './library-progress.js';
 import { loadWorkbookProgress } from './workbook-progress.js';
 import { loadProgress } from './training-progress.js';
@@ -27,24 +28,26 @@ export function homePage(catalog, storage = localStorage) {
   const assessments = Object.keys(preparation.topics).map(id => topicAssessment(preparation,id));
   const strong = assessments.filter(topic => topic.state === 'good').length;
   const weak = assessments.filter(topic => topic.state === 'weak').length;
+  const completedLesson = Array.isArray(prep?.questions) && prep.questions.length && prep.index === prep.questions.length ? Number(prep.lesson) : 0;
+  const nextLesson = Number.isInteger(completedLesson) && completedLesson > 0 && completedLesson < 25 ? completedLesson + 1 : Math.min(25, Math.max(1, Math.floor(Number(preparation.courseSetup?.lessons?.lesson) || 1)));
+  const lessonTitle = catalog.courseLessons?.find(lesson => lesson.number === nextLesson)?.title || (nextLesson === 1 ? 'Именное сказуемое и первые частицы' : 'Правила, примеры и практика');
   const recommendation = resume ? '' : due
     ? `<h2>Повторение на сегодня</h2><p>Подошёл срок повторения: ${due}. Проверьте, что запомнилось.</p><a class="primary home-cta" href="${base}/preparation?mode=due">Повторить сегодня</a>`
     : mistakes
       ? `<h2>Разберите ошибки</h2><p>Правил для повторения: ${mistakes}.</p><a class="primary home-cta" href="${base}/preparation?mode=mistakes">Повторить ошибки</a>`
-      : `<h2>Занятие по курсу</h2><p>Откройте урок, изучите правило и закрепите его в заданиях.</p><a class="primary home-cta" href="${base}/course">Открыть курс N5</a>`;
-  return `<section class="home-intro"><h1>Моё обучение</h1>
+      : `<p class="home-kicker">Следующий шаг · урок ${nextLesson}</p><h2>${esc(lessonTitle)}</h2><p>Изучите правило и закрепите его в 10 заданиях.</p><p class="home-help">Около 10 минут · в своём темпе</p><a class="primary home-cta" href="${base}/course?lesson=${nextLesson}">Начать урок ${nextLesson}</a>`;
+  return `<h1>Моё обучение</h1><section class="home-intro" aria-label="Рекомендуемое занятие">
     ${resume ? `<div class="home-resume"><h2>Вернуться к занятию</h2>${resume}</div>` : ''}
     ${recommendation}
-    <a class="${resume || recommendation ? 'secondary' : 'primary'} home-cta" href="${base}/preparation?quick=1">Начать · 10 заданий</a>
-    <p class="home-help">Смешанное занятие по темам N5. Ответы и объяснения после каждого вопроса.</p></section>
+    <div class="home-alternative"><a href="${base}/preparation?quick=1">Смешанная тренировка · 10 заданий →</a></div></section>
     ${savedLinks ? `<section class="home-card home-saved"><h2>Сохранённая работа</h2>${savedLinks}</section>` : ''}
-    <section class="home-card home-saved" aria-labelledby="home-progress-title"><h2 id="home-progress-title">Прогресс и повторение</h2>
+    ${assessments.length || mistakes || due || lastExam ? `<section class="home-card home-saved" aria-labelledby="home-progress-title"><h2 id="home-progress-title">Прогресс и повторение</h2>
       <p>${assessments.length ? `Тем с устойчивым результатом: ${strong}. Нужна практика: ${weak}.` : 'После первых занятий здесь появятся результаты по темам.'}</p>
       <p>${mistakes ? `Правил с ошибками: ${mistakes}.` : 'Ошибки для повторения появятся после занятий.'} ${due ? `К повторению сегодня: ${due}.` : nextDue ? `Ближайшее повторение: ${new Date(nextDue).toLocaleDateString('ru-RU')}.` : ''}</p>
       ${mistakes ? `<a class="secondary home-cta" href="${base}/preparation?mode=mistakes">Повторить ошибки</a>` : ''}
       ${due ? `<a class="secondary home-cta" href="${base}/preparation?mode=due">Повторить сегодня</a>` : ''}
       ${lastExam ? `<p>Последний письменный пробник: ${lastExam.correct} из ${lastExam.total}. Это результат тренировки, а не оценка JLPT.</p>` : ''}
-      <a href="${base}/progress">Подробные результаты →</a></section>
+      <a href="${base}/progress">Подробные результаты →</a></section>` : `<p class="home-empty-progress">После первых занятий здесь появятся результаты по темам. <a href="${base}/progress">Подробные результаты →</a></p>`}
     <div class="home-grid">
       <section class="home-card"><h2>Курс N5</h2><p>25 уроков с правилами и заданиями. Повторение после каждых пяти уроков.</p><a href="${base}/course">Уроки 1–25 →</a><a href="${base}/course/workbook">Практика по тетради →</a><a href="${base}/course/reviews">Повторение по урокам →</a></section>
       <section class="home-card"><h2>Слова и формы</h2><p>Вспоминайте слова и вводите формы глаголов, прилагательных и существительных.</p><a href="${base}/practice">Тренировать слова и формы →</a></section>

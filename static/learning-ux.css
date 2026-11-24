@@ -24,3 +24,70 @@
 
 .progress-topics, .progress-details { margin-top: 32px; }
 .progress-topics .home-card { padding: 20px; }
+
+/* A quiet study desk: one next step, then the reference material. */
+:root { --muted: #526057; --panel-radius: 8px; }
+#content > h1, #content .page-heading h1, #content .home-intro h1 {
+  font-family: var(--serif); font-size: clamp(30px, 3.2vw, 40px);
+  font-weight: 400; line-height: 1.2; letter-spacing: -.7px; margin: 0 0 24px;
+}
+#content h2 { font-weight: 600; }
+#content h2:not([lang="ja"], .workbook-prompt, #prep-heading) { line-height: 1.35; }
+#content h3 { font-weight: 600; }
+#content h3:not([lang="ja"]) { line-height: 1.4; }
+#content > #prep-storage:empty { display: none; }
+.sidebar { box-shadow: none; border-radius: 0; }
+.sidebar nav { padding: 0 2px; scrollbar-width: thin; }
+.sidebar .nav-home { margin: 0 0 12px; }
+.sidebar .nav-group { margin: 0 0 4px; }
+.sidebar .nav-caption {
+  display: flex; align-items: center; justify-content: space-between;
+  list-style: none; min-height: 48px; padding: 10px 8px; margin: 0;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+}
+.sidebar .nav-caption::-webkit-details-marker { display: none; }
+.sidebar .nav-caption::after { content: '+'; font-weight: 400; color: var(--muted); margin-left: 8px; }
+.sidebar details[open] > .nav-caption::after { content: '−'; }
+.sidebar .nav-children { border-left: 1px solid var(--line); margin: 0 0 12px 8px; padding-left: 8px; }
+.sidebar .nav-children a { margin: 0; padding: 10px 8px; gap: 8px; line-height: 1.4; }
+.home-intro { max-width: none; margin: 0 0 24px; padding: 24px 0 28px; border-block: 1px solid var(--line); }
+.home-intro h2 { font-size: 26px; max-width: 32ch; margin-bottom: 12px; }
+.home-kicker { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+.home-intro > p { max-width: 65ch; }
+.home-intro .home-help { margin-bottom: 20px; }
+.home-resume { margin: 0; }
+.home-resume h2 { font-size: 26px; }
+.home-alternative { margin-top: 20px; font-size: 14px; }
+.home-alternative a, .home-empty-progress a { text-decoration: underline; text-underline-offset: 3px; }
+.home-empty-progress { color: var(--muted); font-size: 14px; max-width: 68ch; margin-bottom: 32px; }
+.home-grid { gap: 0 32px; align-items: start; }
+.home-grid .home-card { border: 0; border-top: 1px solid var(--line); border-radius: 0; background: transparent; padding: 24px 0; }
+.home-card h2 { font-size: 20px; margin-bottom: 12px; }
+.home-card p { max-width: 65ch; margin-bottom: 12px; }
+.home-card a { margin-top: 0; min-height: 44px; }
+.home-saved { background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 0 0 24px; }
+.prep-lesson-controls { margin: 20px 0 28px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.prep-lesson-controls .prep-count { margin: 0 0 16px; }
+.prep-lesson-controls .prep-count legend { font-size: 14px; font-weight: 500; }
+.prep-lesson-controls .prep-launch, .prep-launch-repeat { border: 0; border-radius: 0; padding: 0; background: transparent; }
+.prep-lesson-rules article { padding: 24px 0; }
+.prep-lesson-rules article > p:not(.lesson-example) { max-width: 65ch; }
+.prep-lesson-rules h3 { font-size: 18px; margin-bottom: 12px; }
+.prep-lesson-rules .lesson-example { font-size: 20px; line-height: 2; max-width: 58ch; margin: 20px 0 0; }
+rt { font-size: max(.6em, 12px); color: var(--muted); }
+.romaji, .usage { color: var(--muted); font-size: 12px; }
+.word-group { color: var(--muted); background: #efefea; font-size: 12px; }
+.word-table th, .results-heading, .eyebrow { color: var(--muted); }
+.word-actions button, .word-actions a, #add-word {
+  background: var(--white); color: var(--ink); border: 1px solid var(--control-border); box-shadow: none;
+}
+.word-actions button:hover, .word-actions a:hover, #add-word:hover { background: #efefea; }
+@media (max-width: 700px) {
+  #content > h1, #content .page-heading h1 { font-size: 30px; margin-bottom: 20px; }
+  .home-intro { padding: 20px 0 24px; }
+  .home-intro h2, .home-resume h2 { font-size: 24px; }
+  .home-grid { grid-template-columns: 1fr; }
+  .home-grid .home-card { padding: 20px 0; }
+  .home-alternative a { display: flex; align-items: center; min-height: 44px; }
+  .prep-lesson-rules .lesson-example { font-size: 20px; }
+}

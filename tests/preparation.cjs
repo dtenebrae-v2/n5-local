@@ -15,7 +15,7 @@ module.exports=async function preparationChecks(page,base) {
  assert.equal(await page.locator('#nav-exams').locator('..').locator('a').count(),3);
  assert.ok(await page.locator('.nav-caption').first().evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=parseFloat(getComputedStyle(document.querySelector('#navigation a')).fontSize)));
  assert.equal(await page.locator('.prep-settings').getAttribute('open'),null);
- assert.match(await page.locator('[data-action=launch]').innerText(),/10 заданий/);
+ assert.match(await page.locator('[data-action=launch]').first().innerText(),/10 заданий/);
  await openSettings();
  assert.ok(await page.locator('[data-topic=dates]').isVisible());
  await page.locator('#prep-topic-query').fill('част');
@@ -27,7 +27,7 @@ module.exports=async function preparationChecks(page,base) {
  await page.locator('[data-action=clear-search]').click();
  await page.locator('[data-topic=dates]').click();
  assert.equal(await page.locator('#prep-heading').count(),0,'Selecting a topic does not start the session');
- await page.locator('[data-action=launch]').click();
+ await page.locator('[data-action=launch]').first().click();
  const read=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('n5.preparation.v1')));
  let saved=await read();const q=saved.session.questions[0];
  const original=saved.session.questions.map(q=>q.id);
@@ -59,7 +59,7 @@ module.exports=async function preparationChecks(page,base) {
  await page.goto(base+'/jlpt/n5/vocabulary/complete');await page.goto(base+'/jlpt/n5/preparation');await page.waitForSelector('#prep-heading');
  assert.equal((await read()).session.questions[(await read()).session.index].id,current);
  await page.locator('[data-action=home]').click();await openSettings();
- await page.locator('[data-start=mistakes]').click();await page.locator('[data-action=launch]').click();
+ await page.locator('[data-start=mistakes]').click();await page.locator('[data-action=launch]').first().click();
  saved=await read();assert.ok(saved.session.questions.every(v=>v.topic==='dates'));
  assert.ok(saved.session.questions.every(q=>saved.skills[q.skill]?.needsPractice),'Only unresolved words and rules are practised');
  await page.locator('[data-action=home]').click();await openSettings();
@@ -69,11 +69,11 @@ module.exports=async function preparationChecks(page,base) {
  assert.ok(await page.locator('.prep-stats .table-scroll').first().evaluate(el=>el.scrollWidth<=el.clientWidth+1));
  if(process.env.SCREENSHOT_DIR)await page.screenshot({path:process.env.SCREENSHOT_DIR+'/n5-preparation-stats-mobile.png',fullPage:false});
  await page.clock.fastForward(11*60000);
- await page.reload();await openSettings();await page.locator('[data-start=due]').click();await page.locator('[data-action=launch]').click();
+ await page.reload();await openSettings();await page.locator('[data-start=due]').click();await page.locator('[data-action=launch]').first().click();
  assert.ok((await read()).session.questions.every(v=>v.topic==='dates'));
  await page.locator('[data-action=home]').click();await openSettings();
  await page.locator('[data-start=all]').click();await page.locator('[data-prep-category=texts]').click();
- await page.locator('[data-topic=reading]').click();await page.locator('[data-action=launch]').click();
+ await page.locator('[data-topic=reading]').click();await page.locator('[data-action=launch]').first().click();
  let reading=(await read()).session.questions[0];
  while(!reading.wordRefs?.length) {
   await page.locator('[data-action=unknown]').click();await page.keyboard.press('Shift+Enter');
@@ -96,7 +96,7 @@ module.exports=async function preparationChecks(page,base) {
   await page.locator('dialog .practice-close').click();
  }
  await page.locator('[data-action=home]').click();await openSettings();await page.locator('[data-start=all]').click();await page.locator('[data-prep-category=words]').click();
- await page.locator('[data-topic=kanji]').click();await page.locator('[data-action=launch]').click();
+ await page.locator('[data-topic=kanji]').click();await page.locator('[data-action=launch]').first().click();
  const plain=(await read()).session.questions[0];
  await page.locator('[data-action=hint]').click();
  assert.ok(!(await page.locator('#prep-feedback').innerText()).includes(plain.explanation),'Rule does not reuse the current answer');
@@ -133,8 +133,11 @@ module.exports=async function preparationChecks(page,base) {
  if(await page.locator('.prep-lesson-rules').getAttribute('open')===null) await page.locator('.prep-lesson-rules > summary').click();
  assert.match(await page.locator('.prep-lesson-rules').innerText(),/Godan|Ichidan/);
  assert.match(await page.locator('#prep-plan-summary').innerText(),/Урок 5/);
+ assert.equal(await page.locator('[data-action=launch]').count(),2);
+ assert.equal(await page.locator('[data-action=launch]').first().innerText(),await page.locator('[data-action=launch]').last().innerText());
+ assert.ok(await page.locator('.prep-lesson-controls').evaluate(el => !!(el.compareDocumentPosition(document.querySelector('.prep-lesson-rules')) & Node.DOCUMENT_POSITION_FOLLOWING)));
  assert.deepEqual((await read()).session.questions.map(q=>q.id),quickIds,'Selecting a lesson preserves the current session');
- await page.locator('[data-action=launch]').click();
+ await page.locator('[data-action=launch]').first().click();
  const lesson5=(await read()).session;
  assert.equal(lesson5.lesson,'5');
  const allowed5=new Set(bank.curriculum.lessons[4].objectives.flatMap(o=>bank.items.filter(q=>o.skillIds?.includes(q.skill)||o.itemIds?.includes(q.id)).map(q=>q.id)));
@@ -148,7 +151,7 @@ module.exports=async function preparationChecks(page,base) {
  await page.locator('[data-action=home]').click();
  assert.equal(await page.locator('#prep-lesson').inputValue(),'5');
  await page.locator('#prep-lesson').selectOption('24');
- await page.locator('[data-action=launch]').click();
+ await page.locator('[data-action=launch]').first().click();
  const lesson24=(await read()).session;
  assert.equal(lesson24.lesson,'24');
  for(const skill of ['foundations:dictionary','foundations:plain-ta','foundations:plain-nakatta'])assert.ok(lesson24.questions.some(q=>q.skill===skill));
@@ -166,7 +169,7 @@ module.exports=async function preparationChecks(page,base) {
  assert.match(await page.locator('#prep-plan-summary').innerText(),/Повторение уроков 1–5/);
  if(await page.locator('.prep-lesson-rules').getAttribute('open')===null) await page.locator('.prep-lesson-rules > summary').click();
  assert.equal(await page.locator('.prep-review-rules').count(),5);
- await page.locator('[data-action=launch]').click();
+ await page.locator('[data-action=launch]').first().click();
  const reviewSession=(await read()).session;
  assert.equal(reviewSession.lesson,'review-5');
  assert.deepEqual([...new Set(reviewSession.questions.map(q=>q.reviewLesson))].sort(),[1,2,3,4,5]);

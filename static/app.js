@@ -53,6 +53,9 @@ async function render(focusPage = false) {
     if (active) link.setAttribute('aria-current', 'page');
     else link.removeAttribute('aria-current');
   });
+  menu.querySelectorAll('.nav-group').forEach(group => {
+    group.open = !!group.querySelector('a.active');
+  });
   try {
     if (route.type === 'home') {
       content.innerHTML = homePage(catalog);

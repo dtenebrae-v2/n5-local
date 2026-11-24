@@ -30,6 +30,8 @@ class Catalog:
         self.public = {
             'base': BASE, 'collections': collections,
             'sections': sections, 'lessons': lesson_metadata,
+            'courseLessons': [{key: lesson[key] for key in ('number', 'title')}
+                              for lesson in json.loads((data_directory / 'mock-exam.json').read_text(encoding='utf-8'))['curriculum']['lessons']],
         }
         self.routes = {'/', '/jlpt', BASE, f'{BASE}/vocabulary', f'{BASE}/practice', f'{BASE}/mock', f'{BASE}/preparation', f'{BASE}/library'}
         self.routes.add(f'{BASE}/counters')

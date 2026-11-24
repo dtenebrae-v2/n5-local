@@ -98,7 +98,8 @@ module.exports = async function uxChecks(page, base) {
   assert.equal(await page.locator('#word-search').inputValue(), 'school');
   assert.ok(await page.locator('.word-table tbody tr').count());
   await page.unroute('**/api/words?*', failWords);
-  await page.locator('#navigation a[href$="/grammar/nouns"]').click();
+  if (await page.locator('#nav-grammar').locator('..').getAttribute('open') === null) await page.locator('#nav-grammar').click();
+    await page.locator('#navigation a[href$="/grammar/nouns"]').click();
   await page.waitForSelector('.lesson');
   assert.equal(await page.evaluate(() => document.activeElement.id), 'content');
   let failGame = true;

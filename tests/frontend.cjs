@@ -97,7 +97,7 @@ async function main() {
     await page.waitForSelector('.home-screen');
     assert.equal(await page.title(), 'Моё обучение · N5');
     assert.equal(new URL(page.url()).pathname, '/jlpt/n5');
-    assert.equal(await page.getByRole('link', { name: 'Начать · 10 заданий', exact: true }).count(), 1);
+    assert.equal(await page.locator('.home-intro a.primary').count(), 1);
     await page.getByRole('link', { name: 'Открыть словарь →', exact: true }).click();
     await ready();
     assert.equal(await page.title(), 'Все слова · N5');
@@ -105,12 +105,13 @@ async function main() {
     assert.equal(await page.locator('.hero, footer, .sidebar-note').count(), 0);
     assert.doesNotMatch(await page.locator('#navigation').innerText(), /Обзор курса/);
     assert.equal(await page.locator('tbody tr').count(), 60);
-    assert.match(await page.locator('#navigation').innerText(), /Существительные\s+586/);
+    assert.match(await page.locator('#navigation').textContent(), /Существительные\s+586/);
     console.log('PASS home, catalog navigation and titles');
 
     await page.keyboard.press('/');
     await ready();
     assert.equal(await page.locator('#word-search').evaluate((input) => input === document.activeElement), true);
+    if (await page.locator('#nav-words').locator('..').getAttribute('open') === null) await page.locator('#nav-words').click();
     await page.locator('#navigation a[href$="/vocabulary/nouns"]').click();
     await ready();
     assert.equal(await page.title(), 'Существительные · N5');
@@ -142,6 +143,7 @@ async function main() {
     assert.equal(await page.locator('.word-group-card').count(), 1);
     assert.equal(await page.locator('.word-group-header h2').innerText(), 'Люди и семья');
     const filteredURL = page.url();
+    if (await page.locator('#nav-grammar').locator('..').getAttribute('open') === null) await page.locator('#nav-grammar').click();
     await page.locator('#navigation a[href$="/grammar/nouns"]').click();
     await page.waitForSelector('.lesson');
     await page.goBack();
@@ -209,6 +211,7 @@ async function main() {
     await page.route('**/api/words?*', delayedNavigation);
     await page.locator('#word-search').fill('school');
     await navigationIntercepted;
+    if (await page.locator('#nav-grammar').locator('..').getAttribute('open') === null) await page.locator('#nav-grammar').click();
     await page.locator('#navigation a[href$="/grammar/nouns"]').click();
     await page.waitForSelector('.lesson');
     finishNavigationRequest();
@@ -233,6 +236,7 @@ async function main() {
     await page.waitForSelector('.home-intro');
     await page.locator('.menu-toggle').click();
     assert.equal(await page.locator('.menu-toggle').getAttribute('aria-expanded'), 'true');
+    if (await page.locator('#nav-words').locator('..').getAttribute('open') === null) await page.locator('#nav-words').click();
     await page.locator('#navigation a[href$="/vocabulary/nouns"]').click();
     await ready();
     assert.equal(await page.locator('.menu-toggle').getAttribute('aria-expanded'), 'false');

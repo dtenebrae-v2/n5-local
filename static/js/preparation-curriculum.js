@@ -24,7 +24,7 @@ export function lessonItems(bank, id) {
   return bank.items.filter(q => ids.has(q.id));
 }
 
-export function lessonPicker(bank, selected = '', {view='all', allowTopics=true} = {}) {
+export function lessonPicker(bank, selected = '', {view='all', allowTopics=true, controls=''} = {}) {
   if (!bank.curriculum) return '';
   const lesson = lessonFor(bank, selected);
   const review = reviewFor(bank, selected);
@@ -37,6 +37,7 @@ export function lessonPicker(bank, selected = '', {view='all', allowTopics=true}
       const checkpoint = bank.curriculum.reviews?.find(r=>r.afterLesson===l.number);
       return `${view!=='reviews'?`<option value="${l.number}" ${l===lesson?'selected':''}>${l.number}. ${esc(l.title)}</option>`:''}${view!=='lessons'&&checkpoint?`<option value="${checkpoint.id}" ${checkpoint===review?'selected':''}>${esc(checkpoint.title)}</option>`:''}`;
     }).join('')}</select>
+    ${controls}
     ${lesson || review ? `<p>${review ? 'Смешанное занятие по пяти урокам. В каждом будут задания; после занятия — результат по каждому уроку.' : esc(lesson.description)}</p><details class="prep-lesson-rules" ${view==='lessons'?'open':''}><summary>${review?'Правила пяти уроков':`Правила и примеры урока · ${lesson.objectives.length}`}</summary>
       ${review ? review.lessonNumbers.map(number=>{const l=lessonFor(bank,number);return `<details class="prep-review-rules"><summary>Урок ${number}. ${esc(l.title)}</summary>${objectives(l)}</details>`;}).join('') : objectives(lesson)}
       <p class="practice-help">Учебная последовательность приложения. Нумерация уроков не является официальной программой JLPT.</p>

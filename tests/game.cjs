@@ -120,6 +120,7 @@ module.exports = async function gameChecks(page, base) {
     await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, 'n5-game-mobile.png'), fullPage: true });
   }
   await page.setViewportSize({ width: 1440, height: 1000 });
+  if (await page.locator('#nav-words').locator('..').getAttribute('open') === null) await page.locator('#nav-words').click();
   await page.locator('#navigation a[href="/jlpt/n5/vocabulary/verbs"]').click();
   await page.waitForSelector('#results[aria-busy="false"]');
   await page.goBack();

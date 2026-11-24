@@ -45,7 +45,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
   }
   const params = new URLSearchParams(location.search);
   const requestedLesson = params.get('lesson');
-  if (courseView && lessonFor(bank, requestedLesson)) { settings.lesson=requestedLesson; showingHome=true; }
+  if (courseView && lessonFor(bank, requestedLesson)) { settings.lesson=requestedLesson; settings.count=10; showingHome=true; }
   const requestedTopic = params.get('topic');
   if (!courseView && bank.topics.some(topic => topic.id === requestedTopic)) {
     Object.assign(settings, {mode:'all',topic:requestedTopic,lesson:'',query:''});
@@ -95,6 +95,10 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
     const lesson = lessonFor(bank, plan.lesson);
     return lesson ? `Урок ${lesson.number}. ${lesson.title}` : bank.topics.find(t=>t.id===plan.topic)?.label || (plan.mode==='all'?'Все темы':MODE_LABELS[plan.mode]);
   }
+  function lessonControls() {
+    return `<div class="prep-lesson-controls"><fieldset class="prep-count"><legend>Количество заданий</legend><div class="library-filters">${[5,10,20].map(n=>`<button type="button" class="chip" data-prep-count="${n}" aria-pressed="${settings.count===n}">${n}</button>`).join('')}</div></fieldset>
+      <div class="prep-launch"><p id="prep-plan-summary" role="status"></p><button class="primary" data-action="launch">Начать</button></div></div>`;
+  }
   function home() {
     showingHome = true;
     save();
@@ -102,9 +106,8 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
     if (courseView) {
       shell(`<div class="prep-home prep-course-home"><p>${view==='reviews'?'Закрепите материал пяти уроков и посмотрите результат по каждому.':'Выберите урок, прочитайте правила и потренируйтесь.'}</p>
         ${ongoing?`<section class="prep-resume"><div><h2>Незавершённое занятие</h2><p>${esc(planLabel(session))} · задание ${session.index+1} из ${session.questions.length}</p></div><button class="secondary" data-action="resume">Продолжить</button></section>`:''}
-        <div id="prep-lesson-picker">${lessonPicker(bank,settings.lesson,{view,allowTopics:false})}</div>
-        <fieldset class="prep-count"><legend>Количество заданий</legend><div class="library-filters">${[5,10,20].map(n=>`<button type="button" class="chip" data-prep-count="${n}" aria-pressed="${settings.count===n}">${n}</button>`).join('')}</div></fieldset>
-        <div class="prep-launch"><p id="prep-plan-summary" role="status"></p><button class="primary" data-action="launch">Начать</button></div>
+        <div id="prep-lesson-picker">${lessonPicker(bank,settings.lesson,{view,allowTopics:false,controls:lessonControls()})}</div>
+        <div class="prep-launch prep-launch-repeat"><p>Готовы закрепить правила?</p><button class="secondary" data-action="launch">Начать</button></div>
         <section class="prep-progress-section"><h2>Прогресс</h2>${reviewHistory(bank,progress)}${preparationStats(progress,bank)}</section></div>`);
       updateSetup();return;
     }
@@ -131,9 +134,10 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
     const plan=practicePlan(bank,progress,{mode:settings.mode,topic:settings.mode==='all'&&!settings.lesson?settings.topic:'',lesson:settings.mode==='all'?settings.lesson:'',count:settings.count,seed:0});
     const topic=planLabel(plan);
     root.querySelector('#prep-plan-summary').textContent=`${topic} · ${taskCount(plan.questions.length)}`;
-    const launch=root.querySelector('[data-action="launch"]');
-    launch.disabled=!plan.questions.length;
-    launch.textContent=`${session && session.index<session.questions.length ? 'Начать новое занятие' : 'Начать'} · ${taskCount(plan.questions.length)}`;
+    root.querySelectorAll('[data-action="launch"]').forEach(launch => {
+      launch.disabled=!plan.questions.length;
+      launch.textContent=`${session && session.index<session.questions.length ? 'Начать новое занятие' : 'Начать'} · ${taskCount(plan.questions.length)}`;
+    });
     save();
   }
   function refreshModes() {
@@ -215,7 +219,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
   root.addEventListener('change',event=>{
     if (event.target.id==='prep-lesson') {
       settings.lesson=event.target.value;settings.topic='';
-      root.querySelector('#prep-lesson-picker').innerHTML=lessonPicker(bank,settings.lesson,{view:courseView?view:'all',allowTopics:!courseView});
+      root.querySelector('#prep-lesson-picker').innerHTML=lessonPicker(bank,settings.lesson,{view:courseView?view:'all',allowTopics:!courseView,controls:courseView?lessonControls():''});
       const topics=root.querySelector('#prep-topic-controls');if(topics)topics.hidden=!!settings.lesson;
       root.querySelectorAll('[data-topic]').forEach(b=>b.setAttribute('aria-pressed',String(!b.dataset.topic)));
       updateSetup();root.querySelector('#prep-lesson').focus({preventScroll:true});return;

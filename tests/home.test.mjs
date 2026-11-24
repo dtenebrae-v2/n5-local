@@ -31,8 +31,9 @@ test('course links and saved lesson sessions open their dedicated sections', () 
 
 test('empty home offers a ten-question lesson and useful destinations', () => {
   const html = homePage(catalog, storage());
-  assert.match(html, /href="\/jlpt\/n5\/preparation\?quick=1">Начать · 10 заданий/);
-  assert.match(html, /Ошибки для повторения появятся после занятий/);
+  assert.match(html, /href="\/jlpt\/n5\/course\?lesson=1">Начать урок 1/);
+  assert.match(html, /home-empty-progress/);
+  assert.doesNotMatch(html, /home-progress-title/);
   for (const destination of ['vocabulary/complete','practice','library','mock','exams']) {
     assert.ok(html.includes(`href="/jlpt/n5/${destination}"`));
   }
@@ -45,7 +46,7 @@ test('active preparation takes resume priority and shows the saved question', ()
   const html = homePage(catalog, storage({preparation, training:trainingSession(false)}));
   assert.match(html, /href="\/jlpt\/n5\/preparation">Продолжить · задание 2 из 3/);
   assert.doesNotMatch(html, /Продолжить слова и формы/);
-  assert.match(html, /class="secondary home-cta" href="\/jlpt\/n5\/preparation\?quick=1"/);
+  assert.match(html, /href="\/jlpt\/n5\/preparation\?quick=1">Смешанная тренировка/);
 });
 
 test('unfinished forms lesson is resumable but finished lessons are not', () => {
@@ -73,8 +74,14 @@ test('review links reflect unresolved mistakes and skills due today', () => {
 
 test('blocked or malformed storage still renders a usable home', () => {
   for (const store of [{getItem:() => '{broken'}, {getItem:() => {throw Error('blocked');}}]) {
-    assert.match(homePage(catalog, store), /Начать · 10 заданий/);
+    assert.match(homePage(catalog, store), /Начать урок 1/);
   }
+});
+
+test('incomplete saved session metadata still renders a recommendation', () => {
+  const preparation = emptyProgress();
+  preparation.session = {};
+  assert.match(homePage(catalog, storage({preparation})), /Начать урок 1/);
 });
 
 test('root aliases resolve to home while vocabulary aliases retain the complete list', () => {
@@ -125,8 +132,18 @@ test('saved reading and workbook links appear only for unfinished work', () => {
 
 test('learning home includes progress summary and a single detailed results link', () => {
   const html = homePage(catalog,storage());
-  assert.match(html, /Прогресс и повторение/);
+  assert.match(html, /home-empty-progress/);
   assert.match(html, /После первых занятий/);
   assert.equal((html.match(/href="\/jlpt\/n5\/progress"/g)||[]).length,1);
   assert.match(html, />Подробные результаты →/);
+});
+
+
+test('completed course recommends the next lesson without displacing saved work', () => {
+  const preparation = emptyProgress();
+  preparation.session = {questions:[{id:'q'}],index:1,lesson:'4'};
+  const html = homePage({...catalog,courseLessons:[{number:5,title:'Группы глаголов'}]},storage({preparation}));
+  assert.match(html, /course\?lesson=5/);
+  assert.match(html, /Группы глаголов/);
+  assert.equal((html.match(/class="primary home-cta"/g)||[]).length,1);
 });
