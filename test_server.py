@@ -46,6 +46,20 @@ class ServiceTests(unittest.TestCase):
         with urlopen(cls.base + path, timeout=3) as response:
             return json.load(response)
 
+    def test_full_audio_catalog_is_independent_of_exercises(self):
+        tracks = self.get('/api/audio')['tracks']
+        self.assertEqual({t['group'] for t in tracks}, {'exams', 'workbooks', 'books'})
+        self.assertEqual(len({t['id'] for t in tracks}), len(tracks))
+        self.assertTrue(all('clip' not in t and 'correct' not in t for t in tracks))
+        for group in ('exams', 'workbooks', 'books'):
+            track = next(t for t in tracks if t['group'] == group)
+            with urlopen(Request(self.base + track['url'], headers={'Range': 'bytes=0-31'}), timeout=3) as response:
+                self.assertEqual(response.status, 206)
+                self.assertTrue(response.headers['Content-Type'].startswith('audio/'))
+                self.assertEqual(len(response.read()), 32)
+        with urlopen(self.base + '/jlpt/n5/audio', timeout=3) as response:
+            self.assertEqual(response.status, 200)
+
     def test_training_words_are_unique_and_include_practice_kind(self):
         rows = self.get('/api/training-words')['entries']
         self.assertEqual(len(rows), 1092)

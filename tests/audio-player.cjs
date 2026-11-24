@@ -1,0 +1,76 @@
+const assert = require('node:assert/strict');
+module.exports = async function audioChecks(page, base) {
+  await page.goto(base+'/jlpt/n5/audio');
+  await page.locator('.audio-track-list [data-listen]').first().waitFor();
+  const tracks = (await (await page.request.get(base+'/api/audio')).json()).tracks;
+  assert.equal(await page.locator('.audio-track-list li').count(),tracks.length);
+  assert.equal(await page.locator('#exam-study, #prep-heading, #workbook-check').count(),0);
+  await page.locator('[data-audio-group=books]').click();
+  const books=tracks.filter(t=>t.group==='books');
+  await page.locator('#audio-play-all').click();
+  await page.waitForFunction(()=>{const a=document.querySelector('#continuous-audio');return a && !a.paused && a.currentTime>.1;});
+  assert.equal(await page.locator('#continuous-audio').getAttribute('src'),books[0].url);
+  const saved=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('n5.audio.v1')));
+  assert.deepEqual((await saved()).queue,books.map(t=>t.id));
+  await page.locator('.audio-rate').selectOption('1.25');
+  assert.equal(await page.locator('#continuous-audio').evaluate(a=>a.playbackRate),1.25);
+  await page.locator('#continuous-audio').evaluate(a=>{a.currentTime=5;});
+  await page.locator('[data-audio-command=toggle]').first().click();
+  assert.ok((await saved()).positions[books[0].id]>=4.9);
+  await page.reload();await page.locator('.audio-position').waitFor();
+  assert.equal(await page.locator('#continuous-audio').evaluate(a=>a.paused),true,'Reload never autoplays');
+  assert.equal(await page.locator('.audio-rate').inputValue(),'1.25');
+  await page.locator('[data-audio-command=toggle]').first().click();
+  await page.waitForFunction(()=>{const a=document.querySelector('#continuous-audio');return !a.paused && a.currentTime>=5;});
+  // SPA navigation preserves the same player and audio position.
+  await page.locator('#navigation .nav-home').click();
+  await page.locator('.home-intro').waitFor();
+  assert.equal(await page.locator('.audio-mini').isVisible(),true);
+  assert.equal(await page.locator('#continuous-audio').evaluate(a=>a.paused),false);
+  await page.locator('.audio-mini-title').click();await page.locator('.audio-screen').waitFor();
+  // Finishing a real recording advances without answering anything or clicking Next.
+  await page.locator('#continuous-audio').evaluate(a=>{a.currentTime=a.duration-.15;});
+  await page.waitForFunction(url=>{const a=document.querySelector('#continuous-audio');return a.getAttribute('src')===url && !a.paused;},books[1].url);
+  assert.equal((await saved()).index,1);
+  // Another app screen's media must take over instead of mixing two recordings.
+  await page.evaluate(async()=>{const other=document.createElement('audio');other.id='competing-audio';other.src=document.querySelector('#continuous-audio').src;document.body.append(other);await other.play();});
+  await page.waitForFunction(()=>document.querySelector('#continuous-audio').paused);
+  await page.waitForFunction(()=>!navigator.mediaSession || navigator.mediaSession.metadata===null);
+  await page.locator('#competing-audio').evaluate(a=>{a.pause();a.remove();});
+  await page.locator('[data-audio-command=toggle]').first().click();
+  await page.waitForFunction(()=>!document.querySelector('#continuous-audio').paused);
+  const beforeBackground=await page.locator('#continuous-audio').evaluate(a=>a.currentTime);
+  const cover=await page.context().newPage();await cover.goto('about:blank');await cover.bringToFront();
+  await page.waitForFunction(time=>document.querySelector('#continuous-audio').currentTime>time+.2,beforeBackground);
+  await cover.close();await page.bringToFront();
+  await page.locator('.audio-repeat').check();
+  await page.locator('[data-audio-command=next]').first().click();
+  await page.waitForFunction(url=>document.querySelector('#continuous-audio').getAttribute('src')===url,books.at(-1).url);
+  await page.waitForFunction(()=>document.querySelector('#continuous-audio').readyState>=2);
+  await page.locator('#continuous-audio').evaluate(a=>{a.currentTime=a.duration-.15;});
+  await page.waitForFunction(url=>{const a=document.querySelector('#continuous-audio');return a.getAttribute('src')===url&&!a.paused;},books[0].url);
+  await page.locator('[data-audio-command=toggle]').first().click();
+  for(const width of [390,320]) {
+    await page.setViewportSize({width,height:844});
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'Audio mobile overflow '+width);
+    if(process.env.SCREENSHOT_DIR && width===390)await page.screenshot({path:process.env.SCREENSHOT_DIR+'/n5-audio-mobile.png',fullPage:false});
+  }
+  await page.setViewportSize({width:1440,height:1000});
+  if(process.env.SCREENSHOT_DIR)await page.screenshot({path:process.env.SCREENSHOT_DIR+'/n5-audio.png',fullPage:false});
+  // Remove the test queue so later exercises start with their own audio state.
+  await page.locator('#navigation .nav-home').click();await page.locator('.home-intro').waitFor();
+  await page.locator('.audio-mini [data-audio-command=stop]').click();
+  assert.equal(await page.locator('.audio-mini').isVisible(),false);
+  await page.goto(base+'/jlpt/n5/audio');await page.locator('.audio-track-list [data-listen]').first().waitFor();
+  const failingURL=base+tracks[0].url;
+  await page.route(failingURL,route=>route.abort());
+  await page.locator('.audio-track-list [data-listen]').first().click();
+  await page.waitForFunction(()=>document.querySelector('.audio-error').textContent.length>0);
+  await page.unroute(failingURL);
+  await page.locator('.audio-transport [data-audio-command=toggle]').click();
+  await page.waitForFunction(()=>{const a=document.querySelector('#continuous-audio');return !a.paused&&a.currentTime>.1;});
+  await page.locator('#navigation .nav-home').click();await page.locator('.home-intro').waitFor();
+  await page.locator('.audio-mini [data-audio-command=stop]').click();
+  await require('./audio-native.cjs')(page,base);
+  console.log('PASS full audio: actual playback, queue auto-advance, seek/rate, saved resume, SPA persistence, mobile and no exercise state');
+};

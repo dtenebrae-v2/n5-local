@@ -25,6 +25,7 @@ const vocabularyGameChecks = require('./vocabulary-game.cjs');
 const practiceChecks = require('./practice.cjs');
 const courseWorkbookChecks = require('./course-workbook.cjs');
 const controlStyleChecks = require('./control-style.cjs');
+const audioChecks = require('./audio-player.cjs');
 
 const root = path.resolve(__dirname, '..');
 const serverCode = `
@@ -62,10 +63,12 @@ async function main() {
       executablePath: process.env.BROWSER_PATH || systemBrowser,
       headless: true,
     });
-    const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+    const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+    const page = await context.newPage();
     const errors = [];
     page.on('pageerror', (error) => errors.push(error.message));
     const base = `http://127.0.0.1:${port}`;
+    await audioChecks(page, base);
     await furiganaChecks(page, base);
     await controlStyleChecks(page, base);
     await courseWorkbookChecks(page, base);

@@ -15,6 +15,7 @@ from n5.library import Library, byte_range
 from n5.workbooks import Workbooks
 from n5.course_workbook import CourseWorkbook
 from n5.exam_sets import ExamSets
+from n5.audio import audio_catalog
 from n5.export import vocabulary_csv
 from n5.store import VocabularyStore, WordError
 from n5.vocabulary import unique_keys
@@ -153,6 +154,8 @@ class Handler(BaseHTTPRequestHandler):
     def serve_api(self, path, params):
         catalog = STORE.catalog
         repository = catalog.repository
+        if path == '/api/audio':
+            return self.send(audio_catalog(EXAM_SETS, WORKBOOKS, LIBRARY))
         if path == '/api/health':
             return self.send({'status': 'ok', 'entries': repository.count()})
         if path == '/api/library':

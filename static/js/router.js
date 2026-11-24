@@ -5,6 +5,7 @@ export function resolveRoute(pathname, catalog) {
     const item = catalog.collections.find((entry) => entry.id === 'complete');
     return { type: 'words', title: item.label, item, canonical: item.path };
   }
+  if (path === `${catalog.base}/audio`) return {type:'audio',title:'Аудио'};
   if (path === `${catalog.base}/progress`) return {type:'progress',title:'Подробные результаты'};
   if (path === `${catalog.base}/practice`) return { type: 'game', title: 'Тренировка' };
   if (path === `${catalog.base}/word-relations`) return { type: 'word-relations', title: 'Синонимы и антонимы' };

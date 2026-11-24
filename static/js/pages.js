@@ -19,6 +19,7 @@ export function navigation(catalog) {
   const group = (id,title,links) => `<details class="nav-group"><summary id="nav-${id}" class="nav-caption">${title}</summary><div class="nav-children">${links}</div></details>`;
   return `
     <a class="nav-home" href="${catalog.base}">Моё обучение</a>
+    <a href="${catalog.base}/audio">Аудио</a>
     ${group('course','Курс N5',`<a href="${catalog.base}/course">Уроки 1–25</a>
     <a href="${catalog.base}/course/workbook">Практика по тетради</a>
     <a href="${catalog.base}/course/reviews">Повторение по урокам</a>

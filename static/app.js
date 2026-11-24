@@ -1,3 +1,4 @@
+import { mountAudio, initAudio } from './js/audio-player.js';
 import { installFurigana, updateFuriganaWords, annotateFurigana } from './js/furigana.js';
 import { mountProgress } from './js/progress-view.js';
 import { highlightRuleParagraphs } from './js/form-highlight.js';
@@ -57,7 +58,9 @@ async function render(focusPage = false) {
     group.open = !!group.querySelector('a.active');
   });
   try {
-    if (route.type === 'home') {
+    if (route.type === 'audio') {
+      await mountAudio(content, signal);
+    } else if (route.type === 'home') {
       content.innerHTML = homePage(catalog);
     } else if (route.type === 'progress') {
       await mountProgress(content, signal);
@@ -176,6 +179,7 @@ async function start() {
     installFurigana(document.body, words.entries);
     menu.innerHTML = navigation(catalog);
     bindNavigation();
+    initAudio();
     await render();
   } catch {
     content.innerHTML = errorPage('/jlpt/n5');

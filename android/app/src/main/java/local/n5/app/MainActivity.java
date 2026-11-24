@@ -158,6 +158,7 @@ public class MainActivity extends Activity {
         web.setBackgroundColor(Color.rgb(248, 248, 242));
         WebSettings settings = web.getSettings();
         settings.setJavaScriptEnabled(true);
+        web.addJavascriptInterface(new AudioBridge(this), "N5Audio");
         settings.setDomStorageEnabled(true);
         settings.setSupportZoom(true);
         settings.setBuiltInZoomControls(true);
