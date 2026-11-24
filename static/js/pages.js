@@ -31,7 +31,7 @@ export function navigation(catalog) {
     ${group('exams','Экзамены и учебник',`
     <a href="${catalog.base}/mock">Письменный пробник</a>
     <a href="${catalog.base}/exams">Варианты и аудирование</a>
-    <a href="${catalog.base}/workbooks">Учебник Sō-matome N5</a>`)}
+    <a href="${catalog.base}/workbooks">Учебные наборы</a>`)}
     ${group('materials','Чтение',`<a href="${catalog.base}/library">Книги Tadoku</a>`)}
     ${group('words','Словарь',vocabulary)}
     ${group('grammar','Грамматика',grammar)}

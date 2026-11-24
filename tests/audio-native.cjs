@@ -21,7 +21,8 @@ module.exports = async function nativeAudioChecks(page,base) {
     await nativePage.locator('#audio-play-all').click();
     await nativePage.waitForFunction(()=>document.querySelector('.audio-transport [data-audio-command=toggle]').textContent==='Пауза');
     const initial=await nativePage.evaluate(()=>JSON.parse(window.N5Audio.getState()));
-    assert.equal(initial.queue.length,25);
+    const tracks = (await (await nativePage.request.get(base+'/api/audio')).json()).tracks;
+    assert.deepEqual(initial.queue.map(t=>t.id),tracks.filter(t=>t.group==='workbooks').map(t=>t.id));
     assert.ok(initial.queue.every(track=>track.url.startsWith('/material-files/')));
     assert.equal(await nativePage.locator('#continuous-audio').count(),0,'Native service owns the audio, not WebView');
     await nativePage.locator('.audio-position').evaluate(el=>{el.value='125';el.dispatchEvent(new Event('change',{bubbles:true}));});

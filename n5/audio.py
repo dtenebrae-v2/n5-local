@@ -20,7 +20,7 @@ def audio_catalog(exams, workbooks, library):
                 continue
             units = [unit for unit in data['units'] if unit.get('audio') == key
                      or any(item.get('audio') == key and item['unit'] == unit['id'] for item in data['items'])]
-            label = ', '.join(f"Неделя {u['week']} · день {u['day']}" for u in units)
+            label = ', '.join(u['title'] if data.get('groups') else f"Неделя {u['week']} · день {u['day']}" for u in units)
             tracks.append({'id': f'workbook:{book_id}:{key}', 'group': 'workbooks',
                            'album': data['title'], 'title': f"Дорожка {key.removeprefix('Track').lstrip('0') or key}" + (f' · {label}' if label else ''),
                            'url': f'/material-files/{book_id}/{key}', 'duration': None, 'note': ''})

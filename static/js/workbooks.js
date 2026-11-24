@@ -3,16 +3,18 @@ import { rubyText } from './furigana-core.js';
 import { getJSON } from './api.js';
 import { escapeHTML as esc } from './ui.js';
 import { highlightedRule } from './form-highlight.js';
+import { imageZoomDialog } from './exam-fragments.js';
 import { mountShortcuts } from './training-shortcuts.js';
 import { loadWorkbookProgress, saveWorkbookProgress, restoreWorkbookSession, workbookSession, recordWorkbookAnswer } from './workbook-progress.js';
 
 const TOPICS = { kanji:'Кандзи', vocabulary:'Лексика', 'grammar-reading':'Грамматика и чтение', listening:'Аудирование' };
+const edition = book => [book.year, book.publisher, book.isbn ? `ISBN ${book.isbn}` : null].filter(Boolean).map(esc).join(' · ');
 const STATUS = { correct:'Верно', incorrect:'Неверно', unknown:'Не знаю', answer:'Ответ открыт', skip:'Пропущено', ungraded:'Без автопроверки' };
 export async function mountWorkbooks(root, signal, bookId) {
   root.innerHTML = '<p class="loading">Загружаем упражнения…</p>';
   if (!bookId) {
     const catalog = await getJSON('/api/workbooks', signal); if (signal.aborted) return;
-    root.innerHTML = `<h1>Упражнения по книге</h1><div class="library-grid">${catalog.books.map(book => `<article class="library-card"><h2>${esc(book.title)}</h2><p>${book.year} · ${esc(book.publisher)} · ISBN ${esc(book.isbn)}</p><p>${book.questions} заданий · ${book.audio} аудиодорожек</p>${book.available ? `<a class="primary" href="/jlpt/n5/workbooks/${esc(book.id)}">Открыть</a>` : '<p>Учебные материалы не подключены.</p>'}</article>`).join('')}</div>`;
+    root.innerHTML = `<h1>Учебные наборы</h1><div class="library-grid">${catalog.books.map(book => `<article class="library-card"><h2>${esc(book.title)}</h2><p>${edition(book)}</p><p>${book.questions} заданий · ${book.audio} аудиодорожек${book.graded < book.questions ? ` · ${book.graded} с автопроверкой` : ''}</p>${book.available ? `<a class="primary" href="/jlpt/n5/workbooks/${esc(book.id)}">Открыть</a>` : '<p>Учебные материалы не подключены.</p>'}</article>`).join('')}</div>`;
     return;
   }
   const book = await getJSON('/api/workbook?id=' + encodeURIComponent(bookId), signal); if (signal.aborted) return;
@@ -24,14 +26,15 @@ export async function mountWorkbooks(root, signal, bookId) {
   all.books[bookId] = progress;
   for (const key of ['records','audio']) if (!progress[key] || typeof progress[key] !== 'object' || Array.isArray(progress[key])) progress[key] = {};
   let session = restoreWorkbookSession(progress.session, book.items), player = null, audioController = null, dialog = null, lastSave = 0;
-  let week = [1,2,3,4,5,6].includes(progress.week) ? progress.week : 1;
-  root.innerHTML = `<a class="library-back" href="/jlpt/n5/workbooks">← Учебники</a><h1>${esc(book.title)}</h1>
-    <details class="workbook-credits"><summary>Издание и материалы</summary><p>${book.year} · ISBN ${esc(book.isbn)} · ${book.authors.map(esc).join(', ')} · ${esc(book.publisher)}</p><p>Личный учебный набор. Аудио загружено с сайта издателя для ISBN ${esc(book.audio_source.isbn)}; содержание 25 дорожек сопоставлено с заданиями издания ${book.year}.</p><p><a href="${esc(book.audio_source.url)}" target="_blank" rel="noreferrer">Аудио ASK ↗</a></p></details>
+  const groups = book.groups || [1,2,3,4,5,6].map(n => ({id:String(n), title:`Неделя ${n}`}));
+  let group = groups.some(g => g.id === String(progress.group ?? progress.week)) ? String(progress.group ?? progress.week) : groups[0].id;
+  root.innerHTML = `<a class="library-back" href="/jlpt/n5/workbooks">← Учебные наборы</a><h1>${esc(book.title)}</h1>
+    <details class="workbook-credits"><summary>Издание и материалы</summary><p>${edition(book)}</p>${book.authors?.length ? `<p>${book.authors.map(esc).join(', ')}</p>` : ''}<p>${esc(book.source_note || 'Личный учебный набор. Аудио сопоставлено с упражнениями этого издания.')}</p>${book.audio_source?.url ? `<p><a href="${esc(book.audio_source.url)}" target="_blank" rel="noreferrer">Аудио издателя ↗</a></p>` : ''}</details>
     <p id="workbook-storage" role="status"></p><div class="practice-actions workbook-toolbar"><button class="secondary" id="workbook-contents">Разделы</button><button class="secondary" id="workbook-resume" ${session ? '' : 'hidden'}>Продолжить занятие</button><button class="secondary" id="workbook-random">Случайные 10</button><button class="secondary" id="workbook-mistakes">Ошибки</button></div>
     <details id="game-options"><summary>Клавиатура</summary></details>
-    <section id="workbook-picker"><div class="library-filters" role="group" aria-label="Неделя">${[1,2,3,4,5,6].map(n => `<button class="chip" data-week="${n}">Неделя ${n}</button>`).join('')}</div><div class="workbook-units" id="workbook-units"></div></section><section id="workbook-study" hidden></section>`;
+    <section id="workbook-picker"><div class="library-filters" role="group" aria-label="Раздел">${groups.map(g => `<button class="chip" data-group="${esc(g.id)}" ${book.groups ? '' : `data-week="${g.id}"`}>${esc(g.title)}</button>`).join('')}</div><div class="workbook-units" id="workbook-units"></div></section><section id="workbook-study" hidden></section>`;
   function save() {
-    progress.session = session; progress.week = week;
+    progress.session = session; progress.group = group; if (!book.groups) progress.week = Number(group);
     root.querySelector('#workbook-storage').textContent = saveWorkbookProgress(all) ? '' : 'Не удалось сохранить занятие в этом браузере.';
     root.querySelector('#workbook-resume').hidden = !session;
   }
@@ -71,10 +74,11 @@ export async function mountWorkbooks(root, signal, bookId) {
   }
   function showContents() {
     stopAudio(); root.querySelector('#workbook-picker').hidden = false; root.querySelector('#workbook-study').hidden = true;
-    root.querySelectorAll('[data-week]').forEach(b => { const selected = Number(b.dataset.week) === week; b.classList.toggle('selected',selected); b.setAttribute('aria-pressed',String(selected)); });
-    root.querySelector('#workbook-units').innerHTML = book.units.filter(u => u.week === week).map(unit => {
+    root.querySelectorAll('[data-group]').forEach(b => { const selected = b.dataset.group === group; b.classList.toggle('selected',selected); b.setAttribute('aria-pressed',String(selected)); });
+    root.querySelector('#workbook-units').innerHTML = book.units.filter(u => String(u.group ?? u.week) === group).map(unit => {
       const done = unit.questions.filter(id => progress.records[id]?.status === 'correct').length;
-      return `<article class="library-card"><p>${esc(TOPICS[unit.topic])} · день ${unit.day} · стр. ${unit.pages.join(', ')}</p><h2 lang="ja">${esc(unit.title)}</h2><p>${unit.questions.length ? `${unit.questions.length} заданий · верно с первой попытки: ${done}` : 'Справка'}</p><button class="primary" data-unit="${esc(unit.id)}">Открыть</button></article>`;
+      const graded = unit.questions.filter(id => byId.get(id).correct !== null).length;
+      return `<article class="library-card"><p>${esc(TOPICS[unit.topic] || unit.topic)}${unit.day ? ` · день ${unit.day}` : ''}${unit.pages?.length ? ` · стр. ${unit.pages.join(', ')}` : ''}</p><h2>${esc(unit.title)}</h2><p>${unit.questions.length ? `${unit.questions.length} заданий · ${graded ? `верно с первой попытки: ${done} из ${graded}` : 'без автопроверки'}${graded && graded < unit.questions.length ? ` · без оценки: ${unit.questions.length - graded}` : ''}` : unit.href ? 'Уже есть в экзаменационных вариантах' : 'Справка'}</p>${unit.href ? `<a class="primary" href="${esc(unit.href)}">Открыть вариант</a>` : `<button class="primary" data-unit="${esc(unit.id)}">Открыть</button>`}</article>`;
     }).join(''); save();
   }
   function current() { return byId.get(session?.keys[session.index]); }
@@ -99,7 +103,7 @@ export async function mountWorkbooks(root, signal, bookId) {
   }
   function startUnit(id) {
     const unit = book.units.find(u => u.id === id); if (!unit) return;
-    if (unit.questions.length) start(unit.questions.map(id => byId.get(id)), `Неделя ${unit.week} · день ${unit.day}`);
+    if (unit.questions.length) start(unit.questions.map(id => byId.get(id)), book.groups ? unit.title : `Неделя ${unit.week} · день ${unit.day}`);
     else {
       stopAudio(); root.querySelector('#workbook-picker').hidden = true;
       const study = root.querySelector('#workbook-study'); study.hidden = false;
@@ -117,6 +121,17 @@ export async function mountWorkbooks(root, signal, bookId) {
     const key = q.choice_images?.[choice];
     return key && media(key) ? `<img src="${esc(media(key))}" alt="Вариант ${choice + 1}" loading="lazy">` : '';
   }
+  function questionImages(keys, className = 'workbook-fragment') {
+    return (keys || []).filter(key => media(key)).map(key => `<button type="button" class="workbook-image-button" data-enlarge="${esc(key)}" aria-label="Увеличить изображение"><img class="${className}" src="${esc(media(key))}" alt="${className === 'workbook-transcript' ? 'Расшифровка и ответ' : 'Задание'}"></button>`).join('');
+  }
+  function enlarge(key) {
+    if (!media(key) || dialog?.open) return;
+    const trigger = document.activeElement;
+    dialog = imageZoomDialog(book.assets[key], 'Изображение задания', signal, () => {
+      if (!signal.aborted) trigger?.focus({preventScroll:true});
+    });
+  }
+
   function feedback(q) {
     const record = result(q), box = root.querySelector('#workbook-feedback');
     if (!record.status) { box.innerHTML = ''; delete box.dataset.status; return; }
@@ -131,9 +146,10 @@ export async function mountWorkbooks(root, signal, bookId) {
     box.dataset.status = record.status;
     box.innerHTML = `<strong>${STATUS[record.status]}</strong>
       <p class="workbook-user">Ваш ответ: <span lang="ja">${record.choice === null ? '—' : esc(choiceText(q,record.choice))}</span>${record.choice === null || record.choice === q.correct ? '' : choiceImage(q,record.choice)}</p>
-      ${known ? `<p class="workbook-correct">Правильный ответ: <span lang="ja">${esc(choiceText(q,q.correct))}</span>${choiceImage(q,q.correct)}</p>` : '<p>В PDF нет ключа к этому заданию. Ответ сохранён без оценки.</p>'}
+      ${known ? `<p class="workbook-correct">Правильный ответ: <span lang="ja">${esc(choiceText(q,q.correct))}</span>${choiceImage(q,q.correct)}</p>` : '<p>Ответ сохранён без оценки: нет проверенного однозначного ключа.</p>'}
       ${q.order ? `<p lang="ja">${q.order.map(i => esc(q.choices[i-1])).join(' → ')}</p>` : ''}
-      ${q.kind === 'listening' ? `<details><summary>Разбор записи</summary><p lang="ja">${esc(q.spoken_prompt)}</p>${q.spoken_choices ? `<ol lang="ja">${q.spoken_choices.map(c => `<li>${esc(c)}</li>`).join('')}</ol>` : ''}<p lang="ja">${esc(q.explanation)}</p></details>` : ''}`;
+      ${q.explanation && q.kind !== 'listening' ? `<p>${esc(q.explanation)}</p>` : ''}
+      ${q.kind === 'listening' && (q.spoken_prompt || q.transcript_images?.length) ? `<details><summary>Разбор записи</summary>${q.spoken_prompt ? `<p class="workbook-transcript-text" lang="ja">${esc(q.spoken_prompt)}</p>` : ''}${q.spoken_choices ? `<ol lang="ja">${q.spoken_choices.map(c => `<li>${esc(c)}</li>`).join('')}</ol>` : ''}${q.explanation ? `<p>${esc(q.explanation)}</p>` : ''}${questionImages(q.transcript_images,'workbook-transcript')}</details>` : ''}`;
   }
   function renderStudy() {
     stopAudio(); root.querySelector('#workbook-picker').hidden = true;
@@ -153,8 +169,10 @@ export async function mountWorkbooks(root, signal, bookId) {
       <article class="game-card workbook-question" tabindex="-1" ${!r.status && ['reading-kanji','orthography'].includes(q.kind) ? 'data-furigana="off"' : ''}><p class="practice-help">${esc(q.instruction)}</p>
         ${q.audio ? audioHTML(q.audio) : ''}${q.passage ? `<div class="workbook-passage" lang="ja">${esc(q.passage)}</div>` : ''}
         <h2 class="workbook-prompt" lang="${q.kind === 'listening' ? 'ru' : 'ja'}">${promptHTML(q)}</h2>
+        ${questionImages(q.images)}
         ${q.image && media(q.image) ? `<img class="workbook-illustration" src="${esc(media(q.image))}" alt="Иллюстрация к заданию">` : ''}
-        <div class="workbook-choices ${q.choice_images ? 'workbook-visual-choices' : ''}" role="group" aria-label="Варианты ответа">${q.choices.map((choice,i) => `<button type="button" class="secondary" data-workbook-choice="${i}" aria-pressed="${r.choice === i}"><span class="workbook-choice-number">${i+1}</span>${choiceImage(q,i) || `<span lang="ja">${esc(choice)}</span>`}</button>`).join('')}</div>
+        <div class="workbook-choices ${q.choice_images ? 'workbook-visual-choices' : ''} ${q.choice_layout === 'rows' ? 'workbook-choice-rows' : ''}" role="group" aria-label="Варианты ответа">${q.choices.map((choice,i) => `<button type="button" class="secondary" data-workbook-choice="${i}" aria-pressed="${r.choice === i}"><span class="workbook-choice-number">${i+1}</span>${choiceImage(q,i) || `<span lang="ja">${esc(choice)}</span>`}</button>`).join('')}</div>
+        ${q.choice_images ? `<div class="library-filters" aria-label="Увеличить варианты">${q.choice_images.map((key,i) => `<button class="secondary" data-enlarge="${esc(key)}" aria-label="Увеличить вариант ${i+1}">Увеличить ${i+1}</button>`).join('')}</div>` : ''}
         <p id="workbook-selection-status" role="status"></p>
         <div class="workbook-actions"><button class="primary" id="workbook-check">Проверить</button><button class="secondary" id="workbook-next">Дальше</button><button class="secondary" id="workbook-reveal">Показать ответ</button><button class="secondary" id="workbook-rules">Правила</button><button class="secondary" id="workbook-unknown">Не знаю</button></div>
         <div id="workbook-feedback" role="status" aria-live="polite"></div></article>`;
@@ -179,8 +197,9 @@ export async function mountWorkbooks(root, signal, bookId) {
   }
   root.addEventListener('click', event => {
     const b = event.target.closest('button'); if (!b) return;
-    if (b.dataset.week) { week = Number(b.dataset.week); showContents(); }
+    if (b.dataset.group) { group = b.dataset.group; showContents(); }
     if (b.dataset.unit) startUnit(b.dataset.unit);
+    if (b.dataset.enlarge) enlarge(b.dataset.enlarge);
     if (b.id === 'workbook-contents') showContents();
     if (b.id === 'workbook-resume' && session) renderStudy();
     if (b.id === 'workbook-random') start(book.items.filter(q => q.correct !== null && !q.example),'Случайные задания',true,10);

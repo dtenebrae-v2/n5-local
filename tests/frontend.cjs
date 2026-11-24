@@ -15,6 +15,7 @@ const verbPhraseChecks = require('./verb-phrases.cjs');
 const wordRelationChecks = require('./word-relations.cjs');
 const furiganaChecks = require('./furigana.cjs');
 const workbookChecks = require('./workbooks.cjs');
+const intensiveChecks = require('./intensive.cjs');
 const examSetChecks = require('./exam-sets.cjs');
 const preparationChecks = require('./preparation.cjs');
 const mockChecks = require('./mock-exam.cjs');
@@ -76,6 +77,7 @@ async function main() {
     await verbPhraseChecks(page, base);
     await counterChecks(page, base);
     await workbookChecks(page, base);
+    await intensiveChecks(page, base);
     await examSetChecks(page, base);
     const catalog = await (await page.request.get(base + '/api/catalog')).json();
 

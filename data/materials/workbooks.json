@@ -7,8 +7,20 @@
       "isbn": "9784866390765",
       "year": 2017,
       "publisher": "ASK Publishing",
-      "authors": ["Hitoko Sasaki", "Noriko Matsumoto"],
+      "authors": [
+        "Hitoko Sasaki",
+        "Noriko Matsumoto"
+      ],
       "catalog": "somatome/n5-2017/workbook.json"
+    },
+    {
+      "id": "intensive-n5",
+      "title": "Интенсив N5",
+      "isbn": null,
+      "year": null,
+      "publisher": "Личный учебный набор",
+      "authors": [],
+      "catalog": "intensive-n5/workbook.json"
     }
   ]
 }

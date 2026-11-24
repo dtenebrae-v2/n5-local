@@ -20,9 +20,9 @@ export function resolveRoute(pathname, catalog) {
   if (path === `${catalog.base}/course/reviews`) return { type: 'course', view: 'reviews', title: 'Повторение по урокам' };
   if (path === `${catalog.base}/course/workbook`) return { type: 'course-workbook', title: 'Практика по тетради' };
   if (path === `${catalog.base}/library`) return { type:'library',title:'Библиотека' };
-  if (path === `${catalog.base}/workbooks`) return { type:'workbooks', title:'Упражнения по книге' };
+  if (path === `${catalog.base}/workbooks`) return { type:'workbooks', title:'Учебные наборы' };
   const workbook = path.match(new RegExp(`^${catalog.base}/workbooks/([a-z0-9-]+)$`));
-  if (workbook) return { type:'workbook', title:'Упражнения по книге', workbookId:workbook[1] };
+  if (workbook) return { type:'workbook', title:'Учебные наборы', workbookId:workbook[1] };
   const book = path.match(new RegExp(`^${catalog.base}/library/([0-9]+)$`));
   if (book) return { type:'book',title:'Книга',bookId:book[1] };
   for (const [key, type] of [['collections', 'words'], ['sections', 'section'], ['lessons', 'grammar']]) {

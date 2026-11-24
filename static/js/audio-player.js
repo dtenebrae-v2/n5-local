@@ -1,7 +1,7 @@
 import { getJSON } from './api.js';
 import { escapeHTML as esc } from './ui.js';
 import { AUDIO_KEY, RATES, restoreAudio, nextIndex } from './audio-state.js';
-const GROUPS = {all:'Все записи',exams:'Экзамены',workbooks:'Sō-matome',books:'Книги Tadoku'};
+const GROUPS = {all:'Все записи',exams:'Экзамены',workbooks:'Учебные наборы',books:'Книги Tadoku'};
 let tracks = [], loading, audio, native, mini, nativeReady = false, started = false, storageError = '', error = '', saving = 0;
 let sessionOwned = false, sessionEligible = false;
 const MEDIA_ACTIONS = ['play','pause','previoustrack','nexttrack','stop','seekbackward','seekforward','seekto'];

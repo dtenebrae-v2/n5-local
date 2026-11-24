@@ -1,0 +1,4486 @@
+{
+  "version": 1,
+  "id": "intensive-n5",
+  "title": "Интенсив N5",
+  "year": null,
+  "isbn": null,
+  "authors": [],
+  "publisher": "Личный учебный набор",
+  "audio_source": {},
+  "source_note": "Материалы, предоставленные пользователем: фрагменты TRY! N5, лексические задания и экзаменационные упражнения. Источники сохранены для каждого задания. Для дорожек 56–62 нет проверенного ключа: они доступны без оценки. В комплекте 1 отсутствуют № 21–26. Грамматика и чтение варианта 2017 доступны по ссылке в соответствующем разделе.",
+  "groups": [
+    {
+      "id": "listening",
+      "title": "Аудирование"
+    },
+    {
+      "id": "vocabulary",
+      "title": "Лексика и кандзи"
+    },
+    {
+      "id": "grammar-reading",
+      "title": "Грамматика и чтение"
+    }
+  ],
+  "sources": {
+    "pdf0": {
+      "filename": "2 часть слова-иероглифы N5V.pdf",
+      "sha256": "6ce1cda961152d557a8a36fa943a9d0698467a57261b300383aa504544a9c3fb"
+    },
+    "pdf1": {
+      "filename": "JLPT-N5-practice-test-grammar-section.pdf",
+      "sha256": "16fe39e16455c658a2095bfa44313b2259c8ea273bdd9660af7f12ea49bb5332"
+    },
+    "pdf2": {
+      "filename": "N5 kanji vocab.pdf",
+      "sha256": "c73c013c300d786ad3faf0e189a6e38fecb5bb8929a2d49c47febe9eb53f0945"
+    },
+    "pdf3": {
+      "filename": "N5V 1-20.pdf",
+      "sha256": "02d7c7357edceb211bebc1c4dba46641888b0f7e667c43fbc90f18f96ae1da88"
+    },
+    "pdf4": {
+      "filename": "[Learnjapaneseaz.com]_jlpt-n5-7-2024-2.pdf 07.06.2025.pdf",
+      "sha256": "840415574ecb1e3d3b12836abbd8f432ac4269134641525907a7638e50ca7911"
+    },
+    "pdf5": {
+      "filename": "audio1/аудирование Try_N5.pdf",
+      "sha256": "d097840f02f0bfa22ee07aa83a77655b4c85ec07d1f1e18e4890b8f8d53a6a8a"
+    },
+    "pdf6": {
+      "filename": "audio2/задание 2 Try_N5.pdf",
+      "sha256": "ebd09c410581b6b6faa38e38104ae7d34762c50d2c1baa762f697f2ac9342afb"
+    },
+    "pdf7": {
+      "filename": "задание на 3 уроке jlpt-n5-2017-07.pdf",
+      "sha256": "52369975941f322567bc67d1deeba11d7feb382e79043aa412b13816603bdfa7"
+    },
+    "pdf8": {
+      "filename": "чтение lpt-n5-7-2024.pdf",
+      "sha256": "7e27b2d6586d5449f1d058f3373eac6e0f6618023b755d725c45dde701d2040e"
+    },
+    "source-neizvesten-track-56": {
+      "filename": "audio1/neizvesten-track-56.mp3",
+      "sha256": "a374a2fd7628171eadf6df1d27206fc32f732450d2e13856b5ad5d2081b08f42"
+    },
+    "source-neizvesten-track-57": {
+      "filename": "audio1/neizvesten-track-57.mp3",
+      "sha256": "96afa4ceff0f14d5d045c597af0f808440253a73728e70ea24b853cd398e05cc"
+    },
+    "source-neizvesten-track-58": {
+      "filename": "audio1/neizvesten-track-58.mp3",
+      "sha256": "d0bbae6186f85244a800f57b0b9c7361b91a64e3d7e1000f2f2e1260500552eb"
+    },
+    "source-neizvesten-track-59": {
+      "filename": "audio1/neizvesten-track-59.mp3",
+      "sha256": "8b2405e84eadd73998e0977608bde8c69f5e26fa2458c12249c6227b2801a53b"
+    },
+    "source-neizvesten-track-60": {
+      "filename": "audio1/neizvesten-track-60.mp3",
+      "sha256": "9bd9b034065972bb8c9d82a2d7cd4593ade3df1596abf89507e2a7666ea7ba98"
+    },
+    "source-neizvesten-track-61": {
+      "filename": "audio1/neizvesten-track-61.mp3",
+      "sha256": "37c81380a1a3cab5551ce526e5922de57d616fdfef0568507d84667dd7385d7e"
+    },
+    "source-neizvesten-track-62": {
+      "filename": "audio1/neizvesten-track-62.mp3",
+      "sha256": "c0575b47702193c1a1adede5161c445fedd5d61243910b169536895b804a9dcb"
+    },
+    "source-neizvesten-track-63": {
+      "filename": "audio1/neizvesten-track-63.mp3",
+      "sha256": "5cf832a7dd119694d1b68a1152289ef70c2238abe5daa949eaf21d26d86b2fee"
+    },
+    "source-1-track-64": {
+      "filename": "audio2/1-track-64.mp3",
+      "sha256": "93c7660788d9019f155dc433a56030451bfac16f60efe1fa967c97928e8c41d3"
+    },
+    "source-121": {
+      "filename": "audio2/121.jpeg",
+      "sha256": "034951105134d546c6afd5dbf7951d3c2f603dacbaf29a58b972ac4dd4c87c26"
+    },
+    "source-178": {
+      "filename": "audio2/178.png",
+      "sha256": "2b617e582eed4f747c7078416638541149ec31c5016bf714509a587c1effd79a"
+    },
+    "source-186": {
+      "filename": "audio2/186.jpeg",
+      "sha256": "e7b7c4c948783c5f330dd5215012354e643352a32914d9d09c9d3696d4726c65"
+    },
+    "source-247": {
+      "filename": "audio2/247.jpeg",
+      "sha256": "23b228bcf771a4a84f7aa9bdba58aa8b835207dd461831671a357c299ee8d4b4"
+    },
+    "source-253": {
+      "filename": "audio2/253.png",
+      "sha256": "b86aa11ff36f3fea6529b8969df57dbe9e89bb9e95af4ef03dfd9be25d9003e2"
+    },
+    "source-285": {
+      "filename": "audio2/285.jpeg",
+      "sha256": "f4e783ded7b7f957e5ff260cedec558715f14dcc95d2724b5ee0e1ec0474c704"
+    },
+    "source-308": {
+      "filename": "audio2/308.png",
+      "sha256": "fc52a294ca7f5ec35d3468796908770b0e3538ba97f396df7d22936926b9cc67"
+    },
+    "source-319": {
+      "filename": "audio2/319.png",
+      "sha256": "6d4f7d45e56aebedd311e93ede94830bb7730d3cbc00c77d2d5ddf651b07ac7b"
+    },
+    "source-350": {
+      "filename": "audio2/350.jpeg",
+      "sha256": "bd869c32321ef856ce977ce522152018755fe2b240dc00b143f91178ff9c9cd6"
+    },
+    "source-398": {
+      "filename": "audio2/398.png",
+      "sha256": "9c699f03cf01b2d75bec9d934bf85b2ac9ca48809c0af591476fded4c39c46bb"
+    },
+    "source-450": {
+      "filename": "audio2/450.png",
+      "sha256": "9dc36f58172eb6d143626eb70b836bdd5867f9c726b96cf2c393668abbf0fbdc"
+    },
+    "source-58": {
+      "filename": "audio2/58.png",
+      "sha256": "6aca4d01687759888be1ba76034f4a3692e10f727fb7b9edc3c74e81371effc6"
+    },
+    "source-neizvesten-track-65": {
+      "filename": "audio2/neizvesten-track-65.mp3",
+      "sha256": "8283846b8bcdb65c4d8e6d4c919b793ecf4b6c985f60970b96288f27d7ea6b7e"
+    },
+    "source-neizvesten-track-66": {
+      "filename": "audio2/neizvesten-track-66.mp3",
+      "sha256": "5b633e0ce72ab1b7cf2e0d9689d03783ab1832722236ab98a3a4232583e0e996"
+    },
+    "source-neizvesten-track-67": {
+      "filename": "audio2/neizvesten-track-67.mp3",
+      "sha256": "bb5f425a9cec7c03684396455c14e6d61f88ba07c3965c5cb7acc4e4845e9a35"
+    },
+    "source-neizvesten-track-68": {
+      "filename": "audio2/neizvesten-track-68.mp3",
+      "sha256": "4366007ea16343f7ca0f16ceed42769fd9a12e0189f57d2354590a427520346a"
+    },
+    "source-neizvesten-track-69": {
+      "filename": "audio2/neizvesten-track-69.mp3",
+      "sha256": "adeb8c9da59badb6c526f4e9b7cf460256ed73bfcebc2d873d6b3381fe00645f"
+    },
+    "source-neizvesten-track-70": {
+      "filename": "audio2/neizvesten-track-70.mp3",
+      "sha256": "d590efb88d039c3f9e58dba4d68a6237f14963f40172c0f97fd663f89b9ab587"
+    },
+    "source-neizvesten-track-71": {
+      "filename": "audio2/neizvesten-track-71.mp3",
+      "sha256": "2107ff75e5f924bf123631717a5f68fc8547f2b1afca1fbe7decb88876765561"
+    },
+    "source-neizvesten-track-72": {
+      "filename": "audio2/neizvesten-track-72.mp3",
+      "sha256": "171b3c6a78478385c8ef2faf0ada3d1c5df7475197ab2152ebc297f05b71b873"
+    },
+    "source-neizvesten-track-73": {
+      "filename": "audio2/neizvesten-track-73.mp3",
+      "sha256": "fd8911fd223b9b05e9387d48797f9fef7afa04bb4eba924bc9f8495597459b11"
+    },
+    "source-neizvesten-track-74": {
+      "filename": "audio2/neizvesten-track-74.mp3",
+      "sha256": "74be745d8d9ab593332e6d3dc31505ed727206fb86012ecf6fac233c3902e31c"
+    },
+    "source-neizvesten-track-75": {
+      "filename": "audio2/neizvesten-track-75.mp3",
+      "sha256": "f7cf3675a6c63bb9b35a6434d8e4558ef34b54e10bc63bfac65eab794f6ca0fb"
+    },
+    "source-neizvesten-track-76": {
+      "filename": "audio2/neizvesten-track-76.mp3",
+      "sha256": "d072c75f936a76177ad49906936534aae0bb8f8d506836aaed7400bcef58841c"
+    },
+    "source-neizvesten-track-77": {
+      "filename": "audio2/neizvesten-track-77.mp3",
+      "sha256": "2becec02c235a973e921c9883bd4b9e3892d2aaf1823213ce8fdbcb2901bb0f7"
+    },
+    "source-neizvesten-track-78": {
+      "filename": "audio2/neizvesten-track-78.mp3",
+      "sha256": "5a6fa46fcfe8a6c73f778d13c28b229edbd792a21274d0ddf650c13a717dcaac"
+    },
+    "source-neizvesten-track-79": {
+      "filename": "audio2/neizvesten-track-79.mp3",
+      "sha256": "bbffc4b13e86a3dc512c820d9749224d4cbead94115c5eae324f6b8de1489b29"
+    }
+  },
+  "coverage": {
+    "missing": [
+      {
+        "source": "pdf3",
+        "numbers": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "reason": "Эти страницы не предоставлены."
+      }
+    ],
+    "reused": [
+      {
+        "sources": [
+          "pdf1",
+          "pdf7"
+        ],
+        "exam": "n5-2017",
+        "section": "grammar-reading",
+        "questions": 32
+      }
+    ],
+    "unmatched_answer_images": [
+      "source-319",
+      "source-398"
+    ],
+    "ungraded": [
+      "vocab-b-context-29",
+      "listening-56",
+      "listening-57",
+      "listening-58",
+      "listening-59",
+      "listening-60",
+      "listening-61",
+      "listening-62"
+    ],
+    "availableQuestions": 110,
+    "sourcePages": 49
+  },
+  "units": [
+    {
+      "id": "vocab-a-reading",
+      "title": "Чтение кандзи · комплект 1",
+      "group": "vocabulary",
+      "topic": "kanji",
+      "pages": [
+        3,
+        4
+      ],
+      "questions": [
+        "vocab-a-reading-1",
+        "vocab-a-reading-2",
+        "vocab-a-reading-3",
+        "vocab-a-reading-4",
+        "vocab-a-reading-5",
+        "vocab-a-reading-6",
+        "vocab-a-reading-7",
+        "vocab-a-reading-8",
+        "vocab-a-reading-9",
+        "vocab-a-reading-10",
+        "vocab-a-reading-11",
+        "vocab-a-reading-12"
+      ]
+    },
+    {
+      "id": "vocab-a-writing",
+      "title": "Написание · комплект 1",
+      "group": "vocabulary",
+      "topic": "kanji",
+      "pages": [
+        5,
+        6
+      ],
+      "questions": [
+        "vocab-a-writing-13",
+        "vocab-a-writing-14",
+        "vocab-a-writing-15",
+        "vocab-a-writing-16",
+        "vocab-a-writing-17",
+        "vocab-a-writing-18",
+        "vocab-a-writing-19",
+        "vocab-a-writing-20"
+      ],
+      "reference": [
+        "カタカナ: ワイシャツ。漢字: 川、学校、見る、高い、会社、言う、来月。"
+      ]
+    },
+    {
+      "id": "vocab-a-context",
+      "title": "Слова в контексте · комплект 1",
+      "group": "vocabulary",
+      "topic": "vocabulary",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "questions": [
+        "vocab-a-context-27",
+        "vocab-a-context-28",
+        "vocab-a-context-29",
+        "vocab-a-context-30",
+        "vocab-a-context-31",
+        "vocab-a-context-32",
+        "vocab-a-context-33",
+        "vocab-a-context-34",
+        "vocab-a-context-35"
+      ],
+      "reference": [
+        "りょうしん＝父と母。やさしい＝かんたん。せんたくする＝服を洗う。",
+        "貸す（かす）— давать взаймы。借りる（かりる）— брать взаймы。"
+      ]
+    },
+    {
+      "id": "vocab-b-reading",
+      "title": "Чтение кандзи · комплект 2",
+      "group": "vocabulary",
+      "topic": "kanji",
+      "pages": [
+        1
+      ],
+      "questions": [
+        "vocab-b-reading-1",
+        "vocab-b-reading-2",
+        "vocab-b-reading-3",
+        "vocab-b-reading-4",
+        "vocab-b-reading-5",
+        "vocab-b-reading-6",
+        "vocab-b-reading-7",
+        "vocab-b-reading-8",
+        "vocab-b-reading-9",
+        "vocab-b-reading-10",
+        "vocab-b-reading-11",
+        "vocab-b-reading-12"
+      ]
+    },
+    {
+      "id": "vocab-b-writing",
+      "title": "Написание · комплект 2",
+      "group": "vocabulary",
+      "topic": "kanji",
+      "pages": [
+        2
+      ],
+      "questions": [
+        "vocab-b-writing-13",
+        "vocab-b-writing-14",
+        "vocab-b-writing-15",
+        "vocab-b-writing-16",
+        "vocab-b-writing-17",
+        "vocab-b-writing-18",
+        "vocab-b-writing-19",
+        "vocab-b-writing-20"
+      ],
+      "reference": [
+        "今週（こんしゅう）・白い（しろい）・勉強（べんきょう）・小さい（ちいさい）。",
+        "格好（かっこう）・勤める（つとめる）・住む（すむ）。"
+      ]
+    },
+    {
+      "id": "vocab-b-context",
+      "title": "Слова в контексте · комплект 2",
+      "group": "vocabulary",
+      "topic": "vocabulary",
+      "pages": [
+        2,
+        3
+      ],
+      "questions": [
+        "vocab-b-context-21",
+        "vocab-b-context-22",
+        "vocab-b-context-23",
+        "vocab-b-context-24",
+        "vocab-b-context-25",
+        "vocab-b-context-26",
+        "vocab-b-context-27",
+        "vocab-b-context-28",
+        "vocab-b-context-29",
+        "vocab-b-context-30",
+        "vocab-b-context-31",
+        "vocab-b-context-32",
+        "vocab-b-context-33",
+        "vocab-b-context-34",
+        "vocab-b-context-35"
+      ],
+      "reference": [
+        "かさをさす — раскрыть зонт。家庭教師（かていきょうし）— частный преподаватель。",
+        "一円も…ない — ни одной иены。玄関（げんかん）— вход в дом。渡す（わたす）— передавать。"
+      ]
+    },
+    {
+      "id": "grammar-2024",
+      "title": "Грамматика · комплект 2024",
+      "group": "grammar-reading",
+      "topic": "grammar-reading",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "questions": [
+        "grammar-2024-1",
+        "grammar-2024-2",
+        "grammar-2024-3",
+        "grammar-2024-4",
+        "grammar-2024-5",
+        "grammar-2024-6",
+        "grammar-2024-7",
+        "grammar-2024-8",
+        "grammar-2024-9",
+        "grammar-2024-10",
+        "grammar-2024-11",
+        "grammar-2024-12",
+        "grammar-2024-13",
+        "grammar-2024-14",
+        "grammar-2024-15",
+        "grammar-2024-16",
+        "grammar-2024-17"
+      ],
+      "reference": [
+        "Место действия + で: 銀行で働く。Частота: 一か月に２回。",
+        "AやB — неполное перечисление。何も + отрицание — ничего。",
+        "Словарная форма + 前に: 寝る前に。～ましょうか — предложение помощи。",
+        "Существительное が ほしい — хотеть предмет。Глагол на ～ます без ます + たい — хотеть выполнить действие。",
+        "AはBよりずっと… — A намного …, чем B。Существительное + の + существительное: 駅の近く。"
+      ]
+    },
+    {
+      "id": "reading-2024",
+      "title": "Чтение · комплект 2024",
+      "group": "grammar-reading",
+      "topic": "grammar-reading",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "questions": [
+        "reading-2024-18",
+        "reading-2024-19",
+        "reading-2024-20",
+        "reading-2024-21",
+        "reading-2024-22"
+      ],
+      "reference": [
+        "～ながら — одновременно с другим действием。～から — причина。",
+        "～たかった — хотел сделать。～たい — хочу сделать。まだ — ещё。来月のはじめ — начало следующего месяца。"
+      ]
+    },
+    {
+      "id": "existing-grammar-reading",
+      "title": "Грамматика и чтение · вариант 2017",
+      "group": "grammar-reading",
+      "topic": "grammar-reading",
+      "pages": [],
+      "questions": [],
+      "href": "/jlpt/n5/exams/n5-2017",
+      "reference": [
+        "Эти 32 задания уже доступны в экзаменационном варианте 2017 года. Повторная копия в набор не добавлена."
+      ]
+    },
+    {
+      "id": "listening-task",
+      "title": "Выбор действия · без ключа",
+      "group": "listening",
+      "topic": "listening",
+      "pages": [
+        2,
+        3,
+        4
+      ],
+      "questions": [
+        "listening-56",
+        "listening-57",
+        "listening-58",
+        "listening-59",
+        "listening-60",
+        "listening-61",
+        "listening-62"
+      ],
+      "reference": [
+        "Слушайте вопрос в начале и в конце записи. Отрицание ～ない и изменение решения могут менять ответ."
+      ]
+    },
+    {
+      "id": "listening-details",
+      "title": "Аудирование · понимание деталей",
+      "group": "listening",
+      "topic": "listening",
+      "pages": [
+        2,
+        3
+      ],
+      "questions": [
+        "listening-63",
+        "listening-64",
+        "listening-65",
+        "listening-66",
+        "listening-67",
+        "listening-68"
+      ],
+      "reference": [
+        "何時間（なんじかん）— сколько часов。いつから — начиная с какого времени。何で — чем, каким средством。",
+        "右（みぎ）— право。左（ひだり）— лево。前（まえ）— перед。"
+      ]
+    },
+    {
+      "id": "listening-expression",
+      "title": "Аудирование · выбор реплики",
+      "group": "listening",
+      "topic": "listening",
+      "pages": [
+        4,
+        5,
+        6
+      ],
+      "questions": [
+        "listening-69",
+        "listening-70",
+        "listening-71",
+        "listening-72",
+        "listening-73"
+      ],
+      "reference": [
+        "～ませんか — приглашение。～てください — просьба。何時からですか — во сколько начинается。",
+        "借りる（かりる）— брать взаймы。貸す（かす）— давать взаймы。"
+      ]
+    },
+    {
+      "id": "listening-response",
+      "title": "Аудирование · ответ собеседнику",
+      "group": "listening",
+      "topic": "listening",
+      "pages": [
+        7
+      ],
+      "questions": [
+        "listening-74",
+        "listening-75",
+        "listening-76",
+        "listening-77",
+        "listening-78",
+        "listening-79"
+      ],
+      "reference": [
+        "どうですか — как, каково。だれ — кто。何で — каким средством。",
+        "～てください — просьба。いいですよ — согласие。ありがとうございます — благодарность。"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "vocab-a-reading-1",
+      "unit": "vocab-a-reading",
+      "number": 1,
+      "page": 3,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "あしたは 雨ですか。",
+      "choices": [
+        "ゆき",
+        "はれ",
+        "くもり",
+        "あめ"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 3
+      },
+      "target": "雨"
+    },
+    {
+      "id": "vocab-a-reading-2",
+      "unit": "vocab-a-reading",
+      "number": 2,
+      "page": 3,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "きょうしつで 書いて ください。",
+      "choices": [
+        "かいて",
+        "きいて",
+        "はいて",
+        "ひいて"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 3
+      },
+      "target": "書いて"
+    },
+    {
+      "id": "vocab-a-reading-3",
+      "unit": "vocab-a-reading",
+      "number": 3,
+      "page": 3,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "しゃしんは はこの 中に あります。",
+      "choices": [
+        "そば",
+        "そと",
+        "なか",
+        "よこ"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 3
+      },
+      "target": "中"
+    },
+    {
+      "id": "vocab-a-reading-4",
+      "unit": "vocab-a-reading",
+      "number": 4,
+      "page": 3,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "この いすは 小さいです。",
+      "choices": [
+        "ちいさい",
+        "ちさい",
+        "しいさい",
+        "しさい"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 3
+      },
+      "target": "小さい"
+    },
+    {
+      "id": "vocab-a-reading-5",
+      "unit": "vocab-a-reading",
+      "number": 5,
+      "page": 3,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "あしたは 火よう日です。",
+      "choices": [
+        "どようび",
+        "すいようび",
+        "かようび",
+        "にちようび"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 3
+      },
+      "target": "火よう日"
+    },
+    {
+      "id": "vocab-a-reading-6",
+      "unit": "vocab-a-reading",
+      "number": 6,
+      "page": 3,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "きれいな 空ですね。",
+      "choices": [
+        "いえ",
+        "うみ",
+        "にわ",
+        "そら"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 3
+      },
+      "target": "空"
+    },
+    {
+      "id": "vocab-a-reading-7",
+      "unit": "vocab-a-reading",
+      "number": 7,
+      "page": 4,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "せいとは 百人 います。",
+      "choices": [
+        "ひゃくにん",
+        "びゃくにん",
+        "ひゃくじん",
+        "びゃくじん"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 4
+      },
+      "target": "百人"
+    },
+    {
+      "id": "vocab-a-reading-8",
+      "unit": "vocab-a-reading",
+      "number": 8,
+      "page": 4,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "犬が たくさん いますよ。",
+      "choices": [
+        "ねこ",
+        "とり",
+        "いぬ",
+        "さかな"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 4
+      },
+      "target": "犬"
+    },
+    {
+      "id": "vocab-a-reading-9",
+      "unit": "vocab-a-reading",
+      "number": 9,
+      "page": 4,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "パンを 半分 ともだちに あげました。",
+      "choices": [
+        "はんふん",
+        "はんぶん",
+        "ほんぶん",
+        "ほんふん"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 4
+      },
+      "target": "半分"
+    },
+    {
+      "id": "vocab-a-reading-10",
+      "unit": "vocab-a-reading",
+      "number": 10,
+      "page": 4,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "ぎんこうと スーパーの 間に ほそい みちが あります。",
+      "choices": [
+        "あいた",
+        "となり",
+        "あいだ",
+        "どなり"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 4
+      },
+      "target": "間"
+    },
+    {
+      "id": "vocab-a-reading-11",
+      "unit": "vocab-a-reading",
+      "number": 11,
+      "page": 4,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "たまごを 三つ とって ください。",
+      "choices": [
+        "いつつ",
+        "みっつ",
+        "さんつ",
+        "ごつ"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 4
+      },
+      "target": "三つ"
+    },
+    {
+      "id": "vocab-a-reading-12",
+      "unit": "vocab-a-reading",
+      "number": 12,
+      "page": 4,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "きょうは 天気が いいですね。",
+      "choices": [
+        "けんき",
+        "げんき",
+        "でんき",
+        "てんき"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 4
+      },
+      "target": "天気"
+    },
+    {
+      "id": "vocab-a-writing-13",
+      "unit": "vocab-a-writing",
+      "number": 13,
+      "page": 5,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "この わいしゃつを ください。",
+      "choices": [
+        "ウイシャソ",
+        "ウイシャツ",
+        "ワイシャソ",
+        "ワイシャツ"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 5
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 5
+      },
+      "target": "わいしゃつ"
+    },
+    {
+      "id": "vocab-a-writing-14",
+      "unit": "vocab-a-writing",
+      "number": 14,
+      "page": 5,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "わたしの くには かわが おおいです。",
+      "choices": [
+        "花",
+        "山",
+        "川",
+        "木"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 5
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 5
+      },
+      "target": "かわ"
+    },
+    {
+      "id": "vocab-a-writing-15",
+      "unit": "vocab-a-writing",
+      "number": 15,
+      "page": 5,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "ヤンさんの がっこうは どこですか。",
+      "choices": [
+        "宇校",
+        "学校",
+        "宇枚",
+        "学枚"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 5
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 5
+      },
+      "target": "がっこう"
+    },
+    {
+      "id": "vocab-a-writing-16",
+      "unit": "vocab-a-writing",
+      "number": 16,
+      "page": 5,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "この ざっしを みて ください。",
+      "choices": [
+        "見て",
+        "買て",
+        "貝て",
+        "目て"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 5
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 5
+      },
+      "target": "みて"
+    },
+    {
+      "id": "vocab-a-writing-17",
+      "unit": "vocab-a-writing",
+      "number": 17,
+      "page": 5,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "この カメラは たかいですね。",
+      "choices": [
+        "高い",
+        "安い",
+        "古い",
+        "新い"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 5
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 5
+      },
+      "target": "たかい"
+    },
+    {
+      "id": "vocab-a-writing-18",
+      "unit": "vocab-a-writing",
+      "number": 18,
+      "page": 5,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "きのうは かいしゃを やすみました。",
+      "choices": [
+        "公仕",
+        "公社",
+        "会仕",
+        "会社"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 5
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 5
+      },
+      "target": "かいしゃ"
+    },
+    {
+      "id": "vocab-a-writing-19",
+      "unit": "vocab-a-writing",
+      "number": 19,
+      "page": 6,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "まだ いわないで ください。",
+      "choices": [
+        "行わないで",
+        "立わないで",
+        "言わないで",
+        "食わないで"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 6
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 6
+      },
+      "target": "いわないで"
+    },
+    {
+      "id": "vocab-a-writing-20",
+      "unit": "vocab-a-writing",
+      "number": 20,
+      "page": 6,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "らいげつ けっこんします。",
+      "choices": [
+        "今月",
+        "来月",
+        "来週",
+        "今週"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf3",
+        "page": 6
+      },
+      "source": {
+        "id": "pdf3",
+        "page": 6
+      },
+      "target": "らいげつ"
+    },
+    {
+      "id": "vocab-a-context-27",
+      "unit": "vocab-a-context",
+      "number": 27,
+      "page": 1,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "この へやは あついですから、（　）を あけましょう。",
+      "choices": [
+        "おふろ",
+        "まど",
+        "エアコン",
+        "テーブル"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf0",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf0",
+        "page": 1
+      }
+    },
+    {
+      "id": "vocab-a-context-28",
+      "unit": "vocab-a-context",
+      "number": 28,
+      "page": 1,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "きのうは がっこうで たくさん かんじを（　）。",
+      "choices": [
+        "うりました",
+        "もちました",
+        "おぼえました",
+        "こまりました"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf0",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf0",
+        "page": 1
+      }
+    },
+    {
+      "id": "vocab-a-context-29",
+      "unit": "vocab-a-context",
+      "number": 29,
+      "page": 1,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "この コーヒーは、さとうを たくさん いれましたから、（　）です。",
+      "choices": [
+        "わかい",
+        "くろい",
+        "まるい",
+        "あまい"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf0",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf0",
+        "page": 1
+      }
+    },
+    {
+      "id": "vocab-a-context-30",
+      "unit": "vocab-a-context",
+      "number": 30,
+      "page": 1,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "つよい かぜが（　）います。",
+      "choices": [
+        "ふいて",
+        "いそいで",
+        "とんで",
+        "はしって"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf0",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf0",
+        "page": 1
+      }
+    },
+    {
+      "id": "vocab-a-context-31",
+      "unit": "vocab-a-context",
+      "number": 31,
+      "page": 2,
+      "kind": "vocabulary",
+      "instruction": "Выберите предложение с тем же значением.",
+      "prompt": "これは りょうしんの しゃしんです。",
+      "choices": [
+        "これは そふと そぼの しゃしんです。",
+        "これは ちちと ははの しゃしんです。",
+        "これは あにと おとうとの しゃしんです。",
+        "これは あねと いもうとの しゃしんです。"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf0",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf0",
+        "page": 2
+      }
+    },
+    {
+      "id": "vocab-a-context-32",
+      "unit": "vocab-a-context",
+      "number": 32,
+      "page": 2,
+      "kind": "vocabulary",
+      "instruction": "Выберите предложение с тем же значением.",
+      "prompt": "この ダンスは やさしいです。",
+      "choices": [
+        "この ダンスは かんたんです。",
+        "この ダンスは たいへんです。",
+        "この ダンスは たのしいです。",
+        "この ダンスは つまらないです。"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf0",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf0",
+        "page": 2
+      }
+    },
+    {
+      "id": "vocab-a-context-33",
+      "unit": "vocab-a-context",
+      "number": 33,
+      "page": 3,
+      "kind": "vocabulary",
+      "instruction": "Выберите предложение с тем же значением.",
+      "prompt": "ふくを せんたくしました。",
+      "choices": [
+        "ふくを ぬぎました。",
+        "ふくを わたしました。",
+        "ふくを あらいました。",
+        "ふくを きました。"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf0",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf0",
+        "page": 3
+      }
+    },
+    {
+      "id": "vocab-a-context-34",
+      "unit": "vocab-a-context",
+      "number": 34,
+      "page": 3,
+      "kind": "vocabulary",
+      "instruction": "Выберите предложение с тем же значением.",
+      "prompt": "この へやは くらいですね。",
+      "choices": [
+        "この へやは あかるいですね。",
+        "この へやは あかるくないですね。",
+        "この へやは しずかじゃ ないですね。",
+        "この へやは しずかですね。"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf0",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf0",
+        "page": 3
+      }
+    },
+    {
+      "id": "vocab-a-context-35",
+      "unit": "vocab-a-context",
+      "number": 35,
+      "page": 3,
+      "kind": "vocabulary",
+      "instruction": "Выберите предложение с тем же значением.",
+      "prompt": "リーさんは もりさんに ペンを かしました。",
+      "choices": [
+        "リーさんは もりさんに ペンを もらいました。",
+        "もりさんは リーさんに ペンを もらいました。",
+        "リーさんは もりさんに ペンを かりました。",
+        "もりさんは リーさんに ペンを かりました。"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf0",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf0",
+        "page": 3
+      }
+    },
+    {
+      "id": "vocab-b-reading-1",
+      "unit": "vocab-b-reading",
+      "number": 1,
+      "page": 1,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "かばんの なかに 五万円の とけいが あります。",
+      "choices": [
+        "ごまんねん",
+        "ごまんえん",
+        "ごぜんねん",
+        "ごぜんえん"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 1
+      },
+      "target": "五万円"
+    },
+    {
+      "id": "vocab-b-reading-2",
+      "unit": "vocab-b-reading",
+      "number": 2,
+      "page": 1,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "としょかんで にほんごの ほんを 読みます。",
+      "choices": [
+        "よみます",
+        "やみます",
+        "こみます",
+        "あみます"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 1
+      },
+      "target": "読みます"
+    },
+    {
+      "id": "vocab-b-reading-3",
+      "unit": "vocab-b-reading",
+      "number": 3,
+      "page": 1,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "毎日 晩ご飯の あと さんぽします。",
+      "choices": [
+        "まいひ",
+        "こんじつ",
+        "まいにち",
+        "こんにち"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 1
+      },
+      "target": "毎日"
+    },
+    {
+      "id": "vocab-b-reading-4",
+      "unit": "vocab-b-reading",
+      "number": 4,
+      "page": 1,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "この こうえんには とりが 多いです。",
+      "choices": [
+        "おい",
+        "おおきい",
+        "おいい",
+        "おおい"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 1
+      },
+      "target": "多い"
+    },
+    {
+      "id": "vocab-b-reading-5",
+      "unit": "vocab-b-reading",
+      "number": 5,
+      "page": 1,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "今朝、あめが ふりました。",
+      "choices": [
+        "あさ",
+        "けっさ",
+        "けさ",
+        "はさ"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 1
+      },
+      "target": "今朝"
+    },
+    {
+      "id": "vocab-b-reading-6",
+      "unit": "vocab-b-reading",
+      "number": 6,
+      "page": 1,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "ねるまえに 風呂に はいります。",
+      "choices": [
+        "ふろう",
+        "ふうろ",
+        "ふどう",
+        "ふろ"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 1
+      },
+      "target": "風呂"
+    },
+    {
+      "id": "vocab-b-reading-7",
+      "unit": "vocab-b-reading",
+      "number": 7,
+      "page": 1,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "ふゆやすみに 北海道へ あそびに いきました。",
+      "choices": [
+        "ほっかいど",
+        "ほっかいどう",
+        "ほかいど",
+        "ほかいどう"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 1
+      },
+      "target": "北海道"
+    },
+    {
+      "id": "vocab-b-reading-8",
+      "unit": "vocab-b-reading",
+      "number": 8,
+      "page": 1,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "この 道を みぎに まがります。",
+      "choices": [
+        "かど",
+        "はし",
+        "みち",
+        "へん"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 1
+      },
+      "target": "道"
+    },
+    {
+      "id": "vocab-b-reading-9",
+      "unit": "vocab-b-reading",
+      "number": 9,
+      "page": 1,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "あの ひとは とても 有名です。",
+      "choices": [
+        "ゆうめ",
+        "ゆめい",
+        "ゆうまい",
+        "ゆうめい"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 1
+      },
+      "target": "有名"
+    },
+    {
+      "id": "vocab-b-reading-10",
+      "unit": "vocab-b-reading",
+      "number": 10,
+      "page": 1,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "つくえの 下に ねこが います。",
+      "choices": [
+        "うえ",
+        "すた",
+        "した",
+        "かた"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 1
+      },
+      "target": "下"
+    },
+    {
+      "id": "vocab-b-reading-11",
+      "unit": "vocab-b-reading",
+      "number": 11,
+      "page": 1,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "可愛い おんなのこが うまれました。",
+      "choices": [
+        "かわい",
+        "かわいい",
+        "かはい",
+        "かはいい"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 1
+      },
+      "target": "可愛い"
+    },
+    {
+      "id": "vocab-b-reading-12",
+      "unit": "vocab-b-reading",
+      "number": 12,
+      "page": 1,
+      "kind": "reading-kanji",
+      "instruction": "Выберите чтение выделенного слова.",
+      "prompt": "六日の ごごに あいましょう。",
+      "choices": [
+        "いつつ",
+        "いつか",
+        "つか",
+        "むいか"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 1
+      },
+      "target": "六日"
+    },
+    {
+      "id": "vocab-b-writing-13",
+      "unit": "vocab-b-writing",
+      "number": 13,
+      "page": 2,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "こんしゅうは やすみです。",
+      "choices": [
+        "今周",
+        "本周",
+        "今過",
+        "今週"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      },
+      "target": "こんしゅう"
+    },
+    {
+      "id": "vocab-b-writing-14",
+      "unit": "vocab-b-writing",
+      "number": 14,
+      "page": 2,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "まことさんと でぱあとで あいました。",
+      "choices": [
+        "ディパト",
+        "ディパド",
+        "デパート",
+        "デパード"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      },
+      "target": "でぱあと"
+    },
+    {
+      "id": "vocab-b-writing-15",
+      "unit": "vocab-b-writing",
+      "number": 15,
+      "page": 2,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "この いぬは あしが しろいです。",
+      "choices": [
+        "黒い",
+        "白い",
+        "由い",
+        "長い"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      },
+      "target": "しろい"
+    },
+    {
+      "id": "vocab-b-writing-16",
+      "unit": "vocab-b-writing",
+      "number": 16,
+      "page": 2,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "としょかんで にほんごを べんきょうします。",
+      "choices": [
+        "頑学",
+        "勉学",
+        "頑強",
+        "勉強"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      },
+      "target": "べんきょう"
+    },
+    {
+      "id": "vocab-b-writing-17",
+      "unit": "vocab-b-writing",
+      "number": 17,
+      "page": 2,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "その ちいさい ノートを ください。",
+      "choices": [
+        "小さい",
+        "小い",
+        "少さい",
+        "少ない"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      },
+      "target": "ちいさい"
+    },
+    {
+      "id": "vocab-b-writing-18",
+      "unit": "vocab-b-writing",
+      "number": 18,
+      "page": 2,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "かれは だんだん かっこう よくなってきた。",
+      "choices": [
+        "各校",
+        "体格",
+        "格好",
+        "各行"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      },
+      "target": "かっこう"
+    },
+    {
+      "id": "vocab-b-writing-19",
+      "unit": "vocab-b-writing",
+      "number": 19,
+      "page": 2,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "あには ゆうびんきょくに つとめています。",
+      "choices": [
+        "働めて",
+        "動めて",
+        "勤めて",
+        "難めて"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      },
+      "target": "つとめて"
+    },
+    {
+      "id": "vocab-b-writing-20",
+      "unit": "vocab-b-writing",
+      "number": 20,
+      "page": 2,
+      "kind": "orthography",
+      "instruction": "Выберите написание выделенного слова.",
+      "prompt": "わたしは うるさいところには すみたくありません。",
+      "choices": [
+        "済み",
+        "澄み",
+        "住み",
+        "注み"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      },
+      "target": "すみ"
+    },
+    {
+      "id": "vocab-b-context-21",
+      "unit": "vocab-b-context",
+      "number": 21,
+      "page": 2,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "あめが ふって いるが、どうして（　）を ささないか。",
+      "choices": [
+        "かさ",
+        "かみ",
+        "セーター",
+        "シャツ"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      }
+    },
+    {
+      "id": "vocab-b-context-22",
+      "unit": "vocab-b-context",
+      "number": 22,
+      "page": 2,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "この へやは ストーブが ついていて、（　）です。",
+      "choices": [
+        "すずしい",
+        "つめたい",
+        "あたたかい",
+        "あたらしい"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      }
+    },
+    {
+      "id": "vocab-b-context-23",
+      "unit": "vocab-b-context",
+      "number": 23,
+      "page": 2,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "あねは 日本語の（　）きょうしを しています。",
+      "choices": [
+        "いえ",
+        "かてい",
+        "うち",
+        "やね"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      }
+    },
+    {
+      "id": "vocab-b-context-24",
+      "unit": "vocab-b-context",
+      "number": 24,
+      "page": 2,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "日本語の（　）は むずかしいですね。",
+      "choices": [
+        "いろ",
+        "よみ",
+        "かんじ",
+        "えいご"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      }
+    },
+    {
+      "id": "vocab-b-context-25",
+      "unit": "vocab-b-context",
+      "number": 25,
+      "page": 2,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "この ケーキに（　）を たくさん つかいました。",
+      "choices": [
+        "しょうゆ",
+        "おさけ",
+        "さとう",
+        "す"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      }
+    },
+    {
+      "id": "vocab-b-context-26",
+      "unit": "vocab-b-context",
+      "number": 26,
+      "page": 2,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "テキストを うちに（　）こまりました。",
+      "choices": [
+        "みせて",
+        "あげて",
+        "おくって",
+        "わすれて"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      }
+    },
+    {
+      "id": "vocab-b-context-27",
+      "unit": "vocab-b-context",
+      "number": 27,
+      "page": 2,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "ひとりで しずかに ほんを（　）のが すきです。",
+      "choices": [
+        "のむ",
+        "よむ",
+        "あそぶ",
+        "ぬぐ"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 2
+      }
+    },
+    {
+      "id": "vocab-b-context-28",
+      "unit": "vocab-b-context",
+      "number": 28,
+      "page": 3,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "まだ はやいですから、（　）すこし あそんで ください。",
+      "choices": [
+        "すぐ",
+        "もし",
+        "もう",
+        "でも"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 3
+      }
+    },
+    {
+      "id": "vocab-b-context-29",
+      "unit": "vocab-b-context",
+      "number": 29,
+      "page": 3,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "わたしは（　）しちじに おきます。",
+      "choices": [
+        "だれも",
+        "とても",
+        "たしか",
+        "いつも"
+      ],
+      "correct": null,
+      "answer_source": {
+        "kind": "ambiguous-source",
+        "source": "pdf2",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 3
+      },
+      "explanation": "В исходном задании без контекста возможны たしか («если не ошибаюсь») и いつも («всегда»). Поэтому ответ не оценивается."
+    },
+    {
+      "id": "vocab-b-context-30",
+      "unit": "vocab-b-context",
+      "number": 30,
+      "page": 3,
+      "kind": "vocabulary",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "その（　）は えきの ちかくに あります。",
+      "choices": [
+        "スカート",
+        "スリッパ",
+        "アパート",
+        "パーティー"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 3
+      }
+    },
+    {
+      "id": "vocab-b-context-31",
+      "unit": "vocab-b-context",
+      "number": 31,
+      "page": 3,
+      "kind": "vocabulary",
+      "instruction": "Выберите предложение с тем же значением.",
+      "prompt": "わたしの 先生は とても 熱心な 先生です。",
+      "choices": [
+        "わたしの 先生は とても ユーモアがある 先生です。",
+        "わたしの 先生は 一生懸命 教えてくれる 先生です。",
+        "わたしの 先生は まじめな 先生です。",
+        "わたしの 先生は とても りっぱな 先生です。"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 3
+      }
+    },
+    {
+      "id": "vocab-b-context-32",
+      "unit": "vocab-b-context",
+      "number": 32,
+      "page": 3,
+      "kind": "vocabulary",
+      "instruction": "Выберите предложение с тем же значением.",
+      "prompt": "さいふに 一円も 入っていません。",
+      "choices": [
+        "さいふに おかねが たくさん あります。",
+        "さいふに おかねが ありません。",
+        "さいふに おかねが いちえんしか ありません。",
+        "さいふに おかねが すこし あります。"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 3
+      }
+    },
+    {
+      "id": "vocab-b-context-33",
+      "unit": "vocab-b-context",
+      "number": 33,
+      "page": 3,
+      "kind": "vocabulary",
+      "instruction": "Выберите предложение с тем же значением.",
+      "prompt": "田中さんは げんかんを でました。",
+      "choices": [
+        "田中さんは でんわに でました。",
+        "田中さんは かいしゃに でました。",
+        "田中さんは いえを でました。",
+        "田中さんは テストに でました。"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 3
+      }
+    },
+    {
+      "id": "vocab-b-context-34",
+      "unit": "vocab-b-context",
+      "number": 34,
+      "page": 3,
+      "kind": "vocabulary",
+      "instruction": "Выберите предложение с тем же значением.",
+      "prompt": "すずしい かぜを いれましょう。",
+      "choices": [
+        "まどを しめましょう。",
+        "まどを あけましょう。",
+        "ストーブを けしましょう。",
+        "ストーブを つけましょう。"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 3
+      }
+    },
+    {
+      "id": "vocab-b-context-35",
+      "unit": "vocab-b-context",
+      "number": 35,
+      "page": 3,
+      "kind": "vocabulary",
+      "instruction": "Выберите предложение с тем же значением.",
+      "prompt": "わたしは 先生に レポートを わたしました。",
+      "choices": [
+        "レポートを ききました。",
+        "レポートを かきました。",
+        "レポートを わすれました。",
+        "レポートを だしました。"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf2",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf2",
+        "page": 3
+      }
+    },
+    {
+      "id": "grammar-2024-1",
+      "unit": "grammar-2024",
+      "number": 1,
+      "page": 1,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "私は 一か月（　）２回、ギターを 習っています。",
+      "choices": [
+        "も",
+        "が",
+        "を",
+        "に"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 1
+      },
+      "explanation": "Частота действия: 一か月に２回 — дважды в месяц."
+    },
+    {
+      "id": "grammar-2024-2",
+      "unit": "grammar-2024",
+      "number": 2,
+      "page": 1,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "日曜日に 買い物（　）さんぽを します。",
+      "choices": [
+        "へ",
+        "も",
+        "や",
+        "は"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 1
+      },
+      "explanation": "Неполное перечисление: 買い物や さんぽ。"
+    },
+    {
+      "id": "grammar-2024-3",
+      "unit": "grammar-2024",
+      "number": 3,
+      "page": 1,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "私の 母は 銀行（　）はたらいて います。",
+      "choices": [
+        "が",
+        "で",
+        "を",
+        "に"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 1
+      },
+      "explanation": "Место действия はたらく оформляется частицей で。"
+    },
+    {
+      "id": "grammar-2024-4",
+      "unit": "grammar-2024",
+      "number": 4,
+      "page": 1,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "私は 新しい カメラ（　）ほしいです。",
+      "choices": [
+        "を",
+        "か",
+        "に",
+        "が"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 1
+      },
+      "explanation": "Предмет желания: カメラが ほしい。"
+    },
+    {
+      "id": "grammar-2024-5",
+      "unit": "grammar-2024",
+      "number": 5,
+      "page": 1,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "きのう 私は デパートに 行きましたが、（　）買いませんでした。",
+      "choices": [
+        "何を",
+        "何も",
+        "何か",
+        "何に"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 1
+      },
+      "explanation": "何も с отрицанием означает «ничего»."
+    },
+    {
+      "id": "grammar-2024-6",
+      "unit": "grammar-2024",
+      "number": 6,
+      "page": 1,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "食堂の ラーメンは、大学の 食堂の ラーメンより（　）おいしいです。",
+      "choices": [
+        "あまり",
+        "すぐ",
+        "ずっと",
+        "いちばん"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 1
+      },
+      "explanation": "ずっと усиливает сравнение: «намного вкуснее»."
+    },
+    {
+      "id": "grammar-2024-7",
+      "unit": "grammar-2024",
+      "number": 7,
+      "page": 1,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "（店で）\nＡ「この ペンは（　）ですか。」\nＢ「100円です。」",
+      "choices": [
+        "いくら",
+        "いくつ",
+        "どれ",
+        "どうして"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 1
+      },
+      "explanation": "О цене спрашивают: いくらですか。"
+    },
+    {
+      "id": "grammar-2024-8",
+      "unit": "grammar-2024",
+      "number": 8,
+      "page": 2,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "きのうの 夜、（　）前に 本を 読みました。",
+      "choices": [
+        "ねる",
+        "ねて",
+        "ねた",
+        "ねて いる"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 2
+      },
+      "explanation": "Перед 前に используется словарная форма: ねる前に。"
+    },
+    {
+      "id": "grammar-2024-9",
+      "unit": "grammar-2024",
+      "number": 9,
+      "page": 2,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "リー「林さん、にもつが 多いですね。少し（　）。」\n林「あ、すみません。おねがいします。」",
+      "choices": [
+        "持っていませんか",
+        "持たないで ください",
+        "持ちましたね",
+        "持ちましょうか"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 2
+      },
+      "explanation": "Предложение помощи: 持ちましょうか。"
+    },
+    {
+      "id": "grammar-2024-10",
+      "unit": "grammar-2024",
+      "number": 10,
+      "page": 3,
+      "kind": "grammar",
+      "instruction": "Расположите фрагменты по порядку и выберите тот, который стоит на месте ★.",
+      "prompt": "私は たんじょうびに ＿＿ ★ ＿＿ ＿＿ 使って います。",
+      "choices": [
+        "くれた",
+        "毎日",
+        "カメラを",
+        "そふが"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 3
+      },
+      "order": [
+        4,
+        1,
+        3,
+        2
+      ],
+      "star_position": 1,
+      "explanation": "そふが → くれた → カメラを → 毎日。Звёздочка стоит во второй позиции."
+    },
+    {
+      "id": "grammar-2024-11",
+      "unit": "grammar-2024",
+      "number": 11,
+      "page": 3,
+      "kind": "grammar",
+      "instruction": "Расположите фрагменты по порядку и выберите тот, который стоит на месте ★.",
+      "prompt": "こうえん ＿＿ ＿＿ ★ ＿＿ たくさん います。",
+      "choices": [
+        "鳥",
+        "に",
+        "は",
+        "が"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 3
+      },
+      "order": [
+        2,
+        3,
+        1,
+        4
+      ],
+      "star_position": 2
+    },
+    {
+      "id": "grammar-2024-12",
+      "unit": "grammar-2024",
+      "number": 12,
+      "page": 3,
+      "kind": "grammar",
+      "instruction": "Расположите фрагменты по порядку и выберите тот, который стоит на месте ★.",
+      "prompt": "今年の 夏 ＿＿ ＿＿ ★ ＿＿ 山に 行きます。",
+      "choices": [
+        "海",
+        "では",
+        "は",
+        "なくて"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 3
+      },
+      "order": [
+        3,
+        1,
+        2,
+        4
+      ],
+      "star_position": 2
+    },
+    {
+      "id": "grammar-2024-13",
+      "unit": "grammar-2024",
+      "number": 13,
+      "page": 3,
+      "kind": "grammar",
+      "instruction": "Расположите фрагменты по порядку и выберите тот, который стоит на месте ★.",
+      "prompt": "私は 毎朝 へやを ＿＿ ＿＿ ★ ＿＿ 出ます。",
+      "choices": [
+        "を",
+        "から",
+        "家",
+        "そうじして"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 3
+      },
+      "order": [
+        4,
+        2,
+        3,
+        1
+      ],
+      "star_position": 2
+    },
+    {
+      "id": "grammar-2024-14",
+      "unit": "grammar-2024",
+      "number": 14,
+      "page": 4,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "［14］に 入る ものは どれですか。",
+      "choices": [
+        "も",
+        "は",
+        "の",
+        "と"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 4
+      },
+      "passage": "先週の 日曜日に 私は はじめて 日本の えいがかんで えいがを 見ました。駅の 近く［14］新しい えいがかんで 見ました。えいがかんは 広くて、とても きれいでした。また［15］。"
+    },
+    {
+      "id": "grammar-2024-15",
+      "unit": "grammar-2024",
+      "number": 15,
+      "page": 4,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "［15］に 入る ものは どれですか。",
+      "choices": [
+        "行ってください",
+        "行きたいです",
+        "来てください",
+        "来たいです"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 4
+      },
+      "passage": "先週の 日曜日に 私は はじめて 日本の えいがかんで えいがを 見ました。駅の 近く［14］新しい えいがかんで 見ました。えいがかんは 広くて、とても きれいでした。また［15］。"
+    },
+    {
+      "id": "grammar-2024-16",
+      "unit": "grammar-2024",
+      "number": 16,
+      "page": 4,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "［16］に 入る ものは どれですか。",
+      "choices": [
+        "いつも",
+        "もう",
+        "しかし",
+        "それから"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 4
+      },
+      "passage": "私は 先週の 土曜日に うちで ともだちと りょうりを しました。私たちは 二つの りょうりを 作りました。はじめは、おにぎりを 作りました。［16］、やさいの みそしるを 作りました。おにぎりは 少し むずかしかったです。でも、みそしるは［17］。ともだちと 作った おにぎりと みそしるは おいしかったです。"
+    },
+    {
+      "id": "grammar-2024-17",
+      "unit": "grammar-2024",
+      "number": 17,
+      "page": 4,
+      "kind": "grammar",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "［17］に 入る ものは どれですか。",
+      "choices": [
+        "かんたんでした",
+        "かんたんだったからです",
+        "かんたんではありませんでした",
+        "かんたんではなかったからです"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf4",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf4",
+        "page": 4
+      },
+      "passage": "私は 先週の 土曜日に うちで ともだちと りょうりを しました。私たちは 二つの りょうりを 作りました。はじめは、おにぎりを 作りました。［16］、やさいの みそしるを 作りました。おにぎりは 少し むずかしかったです。でも、みそしるは［17］。ともだちと 作った おにぎりと みそしるは おいしかったです。"
+    },
+    {
+      "id": "reading-2024-18",
+      "unit": "reading-2024",
+      "number": 18,
+      "page": 1,
+      "kind": "reading",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "この メールで、ムムさんは 大友さんに 何が 言いたいですか。",
+      "choices": [
+        "おかしを ありがとうございます。",
+        "わたしも 旅行に 行きたいです。",
+        "今、大友さんは どこに いますか。",
+        "わたしも おかしが 好きです。"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf8",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf8",
+        "page": 1
+      },
+      "passage": "（会社で）ムムさんは 同じ 会社の 大友さんに メールを しました。\n\n大友さん\n旅行の おかしを ありがとう。旅行は どうでしたか。\n今、大友さんの ところに 行きましたが、いませんでしたから、メールを しました。\nおいしかったです。ごちそうさまでした。\nムム",
+      "explanation": "Письмо благодарит за привезённые сладости: おかしを ありがとう。"
+    },
+    {
+      "id": "reading-2024-19",
+      "unit": "reading-2024",
+      "number": 19,
+      "page": 1,
+      "kind": "reading",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "「私」は 今、電車の 中で 何を しますか。",
+      "choices": [
+        "友だちと 話します。",
+        "友だちと 本を 読みます。",
+        "一人で 本を 読みます。",
+        "会社の 人と 話します。"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf8",
+        "page": 1
+      },
+      "source": {
+        "id": "pdf8",
+        "page": 1
+      },
+      "passage": "学生の ころ、私は いつも 友だちと 話しながら 電車で 学校に 行っていました。今は 一人で 電車で 会社に 行きます。会社まで １時間、本を 読みながら 行きます。今は 本が 私の 友だちです。",
+      "explanation": "Сейчас рассказчик едет один и читает: 一人で…本を 読みながら。"
+    },
+    {
+      "id": "reading-2024-20",
+      "unit": "reading-2024",
+      "number": 20,
+      "page": 2,
+      "kind": "reading",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "どうして ①うれしかったですか。",
+      "choices": [
+        "はじめて 青木山に のぼったから",
+        "山で ぜんぜん つかれなかったから",
+        "山で 会った 人たちと いっしょに 山に のぼったから",
+        "山で 会った 人たちが「私」に「こんにちは。」と 言ったから"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf8",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf8",
+        "page": 2
+      },
+      "passage": "青木山に のぼりました\n\nきのう、はじめて 青木山に のぼりました。山の 上の さくらが 見たかったからです。\n山の 入り口から 山の 上まで ２時間 かかります。私は 15分ぐらい のぼって、すぐに つかれました。でも、山で 会った 人たちが みんな、私に 元気な 声で「こんにちは。」と 言いました。ちょっと ①うれしかったです。\n１時ごろ 山の 上に 着きました。さくらの 木は ありましたが、花は ありませんでした。近くに いた 女の人に「さくらの 花は まだですか。」と 聞きました。女の人は「山の 上は 寒いですから、花は まだですよ。来月の はじめごろは きれいですよ。」と 言いました。\nですから、②来月 また 行きたいです。",
+      "explanation": "Радость вызвали приветствия людей, встреченных на горе."
+    },
+    {
+      "id": "reading-2024-21",
+      "unit": "reading-2024",
+      "number": 21,
+      "page": 3,
+      "kind": "reading",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "どうして ②来月 また 行きたいですか。",
+      "choices": [
+        "さくらの 花が 見たいから",
+        "さくらではない ほかの 花も 見たいから",
+        "山で 会った 女の人に また 会いたいから",
+        "山で もっと たくさんの 人と 話したいから"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf8",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf8",
+        "page": 3
+      },
+      "passage": "青木山に のぼりました\n\nきのう、はじめて 青木山に のぼりました。山の 上の さくらが 見たかったからです。\n山の 入り口から 山の 上まで ２時間 かかります。私は 15分ぐらい のぼって、すぐに つかれました。でも、山で 会った 人たちが みんな、私に 元気な 声で「こんにちは。」と 言いました。ちょっと ①うれしかったです。\n１時ごろ 山の 上に 着きました。さくらの 木は ありましたが、花は ありませんでした。近くに いた 女の人に「さくらの 花は まだですか。」と 聞きました。女の人は「山の 上は 寒いですから、花は まだですよ。来月の はじめごろは きれいですよ。」と 言いました。\nですから、②来月 また 行きたいです。",
+      "explanation": "Цель подъёма — увидеть цветущую сакуру; цветение ожидается в начале следующего месяца."
+    },
+    {
+      "id": "reading-2024-22",
+      "unit": "reading-2024",
+      "number": 22,
+      "page": 3,
+      "kind": "reading",
+      "instruction": "Выберите правильный вариант.",
+      "prompt": "ダトさんは、たまごと りんごを 安い 日に 買いたいです。いつ どの 店へ 行きますか。",
+      "choices": [
+        "13日に④、14日に②",
+        "13日に④、15日に①",
+        "14日に②、15日に①",
+        "14日に②、15日に④"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "reviewed-language-answer",
+        "source": "pdf8",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf8",
+        "page": 3
+      },
+      "images": [
+        "reading-2024-shops"
+      ],
+      "explanation": "Яблоки: 13-го в ④スーパーやまだ. Яйца: 14-го в ②とりの たかだ。"
+    },
+    {
+      "id": "listening-56",
+      "unit": "listening-task",
+      "number": 1,
+      "page": 2,
+      "kind": "listening",
+      "instruction": "Прослушайте запись. Проверенного ключа нет — ответ сохранится без оценки.",
+      "prompt": "Дорожка 56 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": null,
+      "answer_source": {
+        "kind": "missing-key",
+        "source": "pdf5",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf5",
+        "page": 2
+      },
+      "audio": "Track056",
+      "choice_images": [
+        "choice-56-1",
+        "choice-56-2",
+        "choice-56-3",
+        "choice-56-4"
+      ]
+    },
+    {
+      "id": "listening-57",
+      "unit": "listening-task",
+      "number": 2,
+      "page": 2,
+      "kind": "listening",
+      "instruction": "Прослушайте запись. Проверенного ключа нет — ответ сохранится без оценки.",
+      "prompt": "Дорожка 57 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": null,
+      "answer_source": {
+        "kind": "missing-key",
+        "source": "pdf5",
+        "page": 2
+      },
+      "source": {
+        "id": "pdf5",
+        "page": 2
+      },
+      "audio": "Track057",
+      "choice_images": [
+        "choice-57-1",
+        "choice-57-2",
+        "choice-57-3",
+        "choice-57-4"
+      ]
+    },
+    {
+      "id": "listening-58",
+      "unit": "listening-task",
+      "number": 3,
+      "page": 3,
+      "kind": "listening",
+      "instruction": "Прослушайте запись. Проверенного ключа нет — ответ сохранится без оценки.",
+      "prompt": "Дорожка 58 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": null,
+      "answer_source": {
+        "kind": "missing-key",
+        "source": "pdf5",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf5",
+        "page": 3
+      },
+      "audio": "Track058",
+      "choice_images": [
+        "choice-58-1",
+        "choice-58-2",
+        "choice-58-3",
+        "choice-58-4"
+      ],
+      "choice_layout": "rows"
+    },
+    {
+      "id": "listening-59",
+      "unit": "listening-task",
+      "number": 4,
+      "page": 3,
+      "kind": "listening",
+      "instruction": "Прослушайте запись. Проверенного ключа нет — ответ сохранится без оценки.",
+      "prompt": "Дорожка 59 · выберите ответ.",
+      "choices": [
+        "駅",
+        "会場の 入り口",
+        "会場の 外",
+        "会場の 中"
+      ],
+      "correct": null,
+      "answer_source": {
+        "kind": "missing-key",
+        "source": "pdf5",
+        "page": 3
+      },
+      "source": {
+        "id": "pdf5",
+        "page": 3
+      },
+      "audio": "Track059"
+    },
+    {
+      "id": "listening-60",
+      "unit": "listening-task",
+      "number": 5,
+      "page": 4,
+      "kind": "listening",
+      "instruction": "Прослушайте запись. Проверенного ключа нет — ответ сохранится без оценки.",
+      "prompt": "Дорожка 60 · выберите ответ.",
+      "choices": [
+        "ごりょうしんと お兄さん",
+        "ごりょうしんと お姉さん",
+        "お母さんと お兄さん",
+        "お母さんと お姉さん"
+      ],
+      "correct": null,
+      "answer_source": {
+        "kind": "missing-key",
+        "source": "pdf5",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf5",
+        "page": 4
+      },
+      "audio": "Track060"
+    },
+    {
+      "id": "listening-61",
+      "unit": "listening-task",
+      "number": 6,
+      "page": 4,
+      "kind": "listening",
+      "instruction": "Прослушайте запись. Проверенного ключа нет — ответ сохранится без оценки.",
+      "prompt": "Дорожка 61 · выберите ответ.",
+      "choices": [
+        "えんぴつ",
+        "えんぴつと けしゴム",
+        "えんぴつと けしゴムと 時計",
+        "えんぴつと けしゴムと けいたい電話"
+      ],
+      "correct": null,
+      "answer_source": {
+        "kind": "missing-key",
+        "source": "pdf5",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf5",
+        "page": 4
+      },
+      "audio": "Track061"
+    },
+    {
+      "id": "listening-62",
+      "unit": "listening-task",
+      "number": 7,
+      "page": 4,
+      "kind": "listening",
+      "instruction": "Прослушайте запись. Проверенного ключа нет — ответ сохранится без оценки.",
+      "prompt": "Дорожка 62 · выберите ответ.",
+      "choices": [
+        "土よう日に 山へ 行きます",
+        "土よう日に コンサートに 行きます",
+        "日よう日に 山へ 行きます",
+        "日よう日に 食事に 行きます"
+      ],
+      "correct": null,
+      "answer_source": {
+        "kind": "missing-key",
+        "source": "pdf5",
+        "page": 4
+      },
+      "source": {
+        "id": "pdf5",
+        "page": 4
+      },
+      "audio": "Track062"
+    },
+    {
+      "id": "listening-63",
+      "unit": "listening-details",
+      "number": 1,
+      "page": 2,
+      "kind": "listening",
+      "instruction": "Прослушайте запись и выберите вариант ответа.",
+      "prompt": "Дорожка 63 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 63,
+        "source": "source-58"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 2
+      },
+      "audio": "Track063",
+      "choice_images": [
+        "choice-63-1",
+        "choice-63-2",
+        "choice-63-3",
+        "choice-63-4"
+      ],
+      "spoken_prompt": "デパートで男の人と女の人が話しています。女の人はどのかばんを買いますか。\nＭ：この白いかばん、どう？\nＦ：白はちょっとね。\nＭ：この黒いのは？\nＦ：黒いのはうちにあるから……。もう少し大きいかばんがいいな。\nＭ：じゃあ、これかな。",
+      "explanation": "Нужна сумка побольше; белая не подходит, а чёрная уже есть. Верный рисунок — 4。",
+      "transcript_images": [
+        "transcript-63"
+      ]
+    },
+    {
+      "id": "listening-64",
+      "unit": "listening-details",
+      "number": 2,
+      "page": 2,
+      "kind": "listening",
+      "instruction": "Прослушайте запись и выберите вариант ответа.",
+      "prompt": "Дорожка 64 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 64,
+        "source": "source-450"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 2
+      },
+      "audio": "Track064",
+      "images": [
+        "question-64-map"
+      ],
+      "spoken_prompt": "女の人と男の人が話しています。ＡＢホテルはどこにありますか。\nＦ：すみません。ＡＢホテルはどこですか。\nＭ：ＡＢホテルですか。ＡＢホテルは駅の前の道を右に行ってください。\nＦ：あの道を右ですね。\nＭ：ええ、そうです。左がわにありますよ。\nＦ：右に行って、左ですね。ありがとうございました。",
+      "explanation": "По дороге перед станцией нужно идти направо; гостиница будет слева — точка 3。",
+      "transcript_images": [
+        "transcript-64"
+      ]
+    },
+    {
+      "id": "listening-65",
+      "unit": "listening-details",
+      "number": 3,
+      "page": 3,
+      "kind": "listening",
+      "instruction": "Прослушайте запись и выберите вариант ответа.",
+      "prompt": "Дорожка 65 · выберите ответ.",
+      "choices": [
+        "あしたから",
+        "あさってから",
+        "木よう日から",
+        "来週の 月よう日から"
+      ],
+      "correct": 3,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 65,
+        "source": "source-308"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 3
+      },
+      "audio": "Track065",
+      "spoken_prompt": "男の人と女の人が話しています。女の人はいつからアルバイトをしますか。\nＭ：じゃあ、よろしくおねがいします。明日から来てください。\nＦ：え？ 明日はちょっと……。\nＭ：じゃあ、あさっての木曜日からは？\nＦ：すみませんが、来週からおねがいします。\nＭ：わかりました。じゃあ、来週月曜日から来てください。\nＦ：はい。",
+      "explanation": "Окончательная договорённость — со следующего понедельника: 来週月曜日から。",
+      "transcript_images": [
+        "transcript-65"
+      ]
+    },
+    {
+      "id": "listening-66",
+      "unit": "listening-details",
+      "number": 4,
+      "page": 3,
+      "kind": "listening",
+      "instruction": "Прослушайте запись и выберите вариант ответа.",
+      "prompt": "Дорожка 66 · выберите ответ.",
+      "choices": [
+        "ぜんぜん しません",
+        "２時間",
+        "３時間",
+        "５時間"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 66,
+        "source": "source-350"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 3
+      },
+      "audio": "Track066",
+      "spoken_prompt": "男の人と女の人が話しています。女の人は毎日何時間インターネットをしますか。\nＭ：あ〜あ、つかれた……。\nＦ：朝から元気がないね。きのうの晩、おそくまでゲームをしていたから？\nＭ：うん。いつもは３時間くらいだけど、きのうは５時間やったからちょっとつかれたよ。\nＦ：そう。私も毎日２時間くらいインターネットするけど、……。ゲームはぜんぜんしない。\nＭ：そう。おもしろいよ。",
+      "explanation": "Вопрос о женщине: она проводит в интернете около двух часов в день, а не играет три или пять часов, как мужчина.",
+      "transcript_images": [
+        "transcript-66"
+      ]
+    },
+    {
+      "id": "listening-67",
+      "unit": "listening-details",
+      "number": 5,
+      "page": 3,
+      "kind": "listening",
+      "instruction": "Прослушайте запись и выберите вариант ответа.",
+      "prompt": "Дорожка 67 · выберите ответ.",
+      "choices": [
+        "えんぴつ",
+        "ペン",
+        "ボールペン",
+        "けしゴム"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 67,
+        "source": "source-121"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 3
+      },
+      "audio": "Track067",
+      "spoken_prompt": "先生が話しています。試験の答えは何で書きますか。\nＭ：今から試験をします。試験の答えはえんぴつで書いてください。ペンやボールペンは使わないでください。まちがえたところは、けしゴムできれいにけしてください。わかりましたか。\nＦ：はい。",
+      "explanation": "Ответы нужно писать карандашом: えんぴつで書いてください。Ластик нужен для исправлений.",
+      "transcript_images": [
+        "transcript-67"
+      ]
+    },
+    {
+      "id": "listening-68",
+      "unit": "listening-details",
+      "number": 6,
+      "page": 3,
+      "kind": "listening",
+      "instruction": "Прослушайте запись и выберите вариант ответа.",
+      "prompt": "Дорожка 68 · выберите ответ.",
+      "choices": [
+        "東町 １－１２－１３",
+        "西町 １－１２－１３",
+        "東町 ２－１２－１３",
+        "西町 ２－１２－１３"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 68,
+        "source": "source-253"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 3
+      },
+      "audio": "Track068",
+      "spoken_prompt": "女の人が電話で男の人に住所を聞いています。正しい住所はどれですか。\nＦ：もしもし、そちらの住所ですが東町１－１２－１２ですよね。\nＭ：いいえ、東町じゃなくて西町です。西町の１－１２－１３です。\nＦ：あ、そうですか。西町の１－１２－１３ですね。\nＭ：はい、そうです。\nＦ：ありがとうございました。",
+      "explanation": "После исправления адрес — 西町１－１２－１３。",
+      "transcript_images": [
+        "transcript-68"
+      ]
+    },
+    {
+      "id": "listening-69",
+      "unit": "listening-expression",
+      "number": 1,
+      "page": 4,
+      "kind": "listening",
+      "instruction": "Выберите реплику по записи. Текст вариантов появится после ответа.",
+      "prompt": "Дорожка 69 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 69,
+        "source": "source-247"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 4
+      },
+      "audio": "Track069",
+      "images": [
+        "question-69"
+      ],
+      "spoken_prompt": "会社の人といっしょに旅行に行きたいです。会社の人に何と言いますか。",
+      "explanation": "Приглашение выражается через ～ませんか。",
+      "transcript_images": [
+        "transcript-69"
+      ],
+      "spoken_choices": [
+        "いっしょに行きませんか。",
+        "いっしょに行きましたか。",
+        "いっしょに行きたいですか。"
+      ]
+    },
+    {
+      "id": "listening-70",
+      "unit": "listening-expression",
+      "number": 2,
+      "page": 4,
+      "kind": "listening",
+      "instruction": "Выберите реплику по записи. Текст вариантов появится после ответа.",
+      "prompt": "Дорожка 70 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 70,
+        "source": "source-247"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 4
+      },
+      "audio": "Track070",
+      "images": [
+        "question-70"
+      ],
+      "spoken_prompt": "会議が始まる時間がわかりません。何と言いますか。",
+      "explanation": "Нужно спросить время начала: 何時からですか。",
+      "transcript_images": [
+        "transcript-70"
+      ],
+      "spoken_choices": [
+        "今日の会議、どこでしますか。",
+        "今日の会議、何時からですか。",
+        "今日の会議、だれが出ますか。"
+      ]
+    },
+    {
+      "id": "listening-71",
+      "unit": "listening-expression",
+      "number": 3,
+      "page": 5,
+      "kind": "listening",
+      "instruction": "Выберите реплику по записи. Текст вариантов появится после ответа.",
+      "prompt": "Дорожка 71 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 71,
+        "source": "source-285"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 5
+      },
+      "audio": "Track071",
+      "images": [
+        "question-71"
+      ],
+      "spoken_prompt": "パン屋でパンを買います。店の人に何と言いますか。",
+      "explanation": "Покупатель просит товар: このパン、ください。",
+      "transcript_images": [
+        "transcript-71"
+      ],
+      "spoken_choices": [
+        "このパン、ください。",
+        "このパン、買ってください。",
+        "このパン、買いますか。"
+      ]
+    },
+    {
+      "id": "listening-72",
+      "unit": "listening-expression",
+      "number": 4,
+      "page": 5,
+      "kind": "listening",
+      "instruction": "Выберите реплику по записи. Текст вариантов появится после ответа.",
+      "prompt": "Дорожка 72 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 72,
+        "source": "source-285"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 5
+      },
+      "audio": "Track072",
+      "images": [
+        "question-72"
+      ],
+      "spoken_prompt": "友だちの本を借りたいです。友だちに何と言いますか。",
+      "explanation": "Чтобы взять книгу у друга, попросите одолжить её: その本、かしてください。",
+      "transcript_images": [
+        "transcript-72"
+      ],
+      "spoken_choices": [
+        "その本、もらってください。",
+        "その本、借りてください。",
+        "その本、かしてください。"
+      ]
+    },
+    {
+      "id": "listening-73",
+      "unit": "listening-expression",
+      "number": 5,
+      "page": 6,
+      "kind": "listening",
+      "instruction": "Выберите реплику по записи. Текст вариантов появится после ответа.",
+      "prompt": "Дорожка 73 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 73,
+        "source": "source-285"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 6
+      },
+      "audio": "Track073",
+      "images": [
+        "question-73"
+      ],
+      "spoken_prompt": "友だちが旅行から帰ってきました。友だちに何と言いますか。",
+      "explanation": "О завершившейся поездке спрашивают в прошедшем времени: 旅行、どうだった？",
+      "transcript_images": [
+        "transcript-73"
+      ],
+      "spoken_choices": [
+        "旅行、どれにした？",
+        "旅行、どうする？",
+        "旅行、どうだった？"
+      ]
+    },
+    {
+      "id": "listening-74",
+      "unit": "listening-response",
+      "number": 1,
+      "page": 7,
+      "kind": "listening",
+      "instruction": "Выберите реплику по записи. Текст вариантов появится после ответа.",
+      "prompt": "Дорожка 74 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 74,
+        "source": "source-178"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 7
+      },
+      "audio": "Track074",
+      "spoken_prompt": "Ｆ：すみません、10分くらい待ってください。",
+      "explanation": "На просьбу подождать подходит согласие: ええ、いいですよ。",
+      "transcript_images": [
+        "transcript-74"
+      ],
+      "spoken_choices": [
+        "ええ、いいですか。",
+        "ええ、いいですよ。",
+        "ええ、いいですね。"
+      ]
+    },
+    {
+      "id": "listening-75",
+      "unit": "listening-response",
+      "number": 2,
+      "page": 7,
+      "kind": "listening",
+      "instruction": "Выберите реплику по записи. Текст вариантов появится после ответа.",
+      "prompt": "Дорожка 75 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 0,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 75,
+        "source": "source-178"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 7
+      },
+      "audio": "Track075",
+      "spoken_prompt": "Ｍ：おなかがすきましたね。",
+      "explanation": "Собеседник голоден; уместно предложить поесть: 食事にしましょう。",
+      "transcript_images": [
+        "transcript-75"
+      ],
+      "spoken_choices": [
+        "そうですね。食事にしましょう。",
+        "そうですよ。おなかですよ。",
+        "そうですね。すきですよ。"
+      ]
+    },
+    {
+      "id": "listening-76",
+      "unit": "listening-response",
+      "number": 3,
+      "page": 7,
+      "kind": "listening",
+      "instruction": "Выберите реплику по записи. Текст вариантов появится после ответа.",
+      "prompt": "Дорожка 76 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 76,
+        "source": "source-178"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 7
+      },
+      "audio": "Track076",
+      "spoken_prompt": "Ｆ：木村さん、えが上手ですね。",
+      "explanation": "На комплимент подходит благодарность: ありがとうございます。",
+      "transcript_images": [
+        "transcript-76"
+      ],
+      "spoken_choices": [
+        "いいえ、好きですね。",
+        "え？ へたですか。",
+        "ありがとうございます。"
+      ]
+    },
+    {
+      "id": "listening-77",
+      "unit": "listening-response",
+      "number": 4,
+      "page": 7,
+      "kind": "listening",
+      "instruction": "Выберите реплику по записи. Текст вариантов появится после ответа.",
+      "prompt": "Дорожка 77 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 77,
+        "source": "source-186"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 7
+      },
+      "audio": "Track077",
+      "spoken_prompt": "Ｍ：新宿まで何で行きますか。",
+      "explanation": "何で спрашивает о средстве передвижения: バスで行きます。",
+      "transcript_images": [
+        "transcript-77"
+      ],
+      "spoken_choices": [
+        "友だちと行きます。",
+        "明日、行きます。",
+        "バスで行きます。"
+      ]
+    },
+    {
+      "id": "listening-78",
+      "unit": "listening-response",
+      "number": 5,
+      "page": 7,
+      "kind": "listening",
+      "instruction": "Выберите реплику по записи. Текст вариантов появится после ответа.",
+      "prompt": "Дорожка 78 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 1,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 78,
+        "source": "source-186"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 7
+      },
+      "audio": "Track078",
+      "spoken_prompt": "Ｆ：日本語の勉強はどうですか。",
+      "explanation": "На вопрос «Как учёба?» подходит оценка: とてもおもしろいです。",
+      "transcript_images": [
+        "transcript-78"
+      ],
+      "spoken_choices": [
+        "はい、日本語の勉強です。",
+        "とてもおもしろいです。",
+        "はい、これです。"
+      ]
+    },
+    {
+      "id": "listening-79",
+      "unit": "listening-response",
+      "number": 6,
+      "page": 7,
+      "kind": "listening",
+      "instruction": "Выберите реплику по записи. Текст вариантов появится после ответа.",
+      "prompt": "Дорожка 79 · выберите ответ.",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 2,
+      "answer_source": {
+        "kind": "printed-key",
+        "track": 79,
+        "source": "source-186"
+      },
+      "source": {
+        "id": "pdf6",
+        "page": 7
+      },
+      "audio": "Track079",
+      "spoken_prompt": "Ｍ：あの人、だれ？",
+      "explanation": "На вопрос «Кто тот человек?» нужно назвать его: 高橋さんよ。",
+      "transcript_images": [
+        "transcript-79"
+      ],
+      "spoken_choices": [
+        "あの人よ。",
+        "私よ。",
+        "高橋さんよ。"
+      ]
+    }
+  ],
+  "assets": {
+    "reading-2024-shops": {
+      "filename": "images/reading-2024-shops.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "6e9e4c4bbc0a98618386ce082c54da802b36e81e8adb81616c79be8038ae7d5c",
+      "bytes": 389577,
+      "source": "pdf8",
+      "source_page": 4,
+      "crop": [
+        0.08,
+        0.08,
+        0.95,
+        0.9
+      ],
+      "width": 1353,
+      "height": 1804
+    },
+    "Track056": {
+      "filename": "audio/Track056.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-56",
+      "sha256": "a374a2fd7628171eadf6df1d27206fc32f732450d2e13856b5ad5d2081b08f42",
+      "bytes": 1209525,
+      "duration": 74.631837
+    },
+    "choice-56-1": {
+      "filename": "images/choice-56-1.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "b3f9ffe8ac2be67f0383cc7c2d7d3f61f2be00ce6473d5e702edfedd931af9c8",
+      "bytes": 126278,
+      "source": "pdf5",
+      "source_page": 2,
+      "crop": [
+        0.2,
+        0.22,
+        0.515,
+        0.373
+      ],
+      "width": 490,
+      "height": 337
+    },
+    "choice-56-2": {
+      "filename": "images/choice-56-2.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "9006299794e98c89332a98fe3decd627d5bd8e9451c203d9f5046914a96b2e70",
+      "bytes": 101910,
+      "source": "pdf5",
+      "source_page": 2,
+      "crop": [
+        0.535,
+        0.22,
+        0.85,
+        0.373
+      ],
+      "width": 490,
+      "height": 337
+    },
+    "choice-56-3": {
+      "filename": "images/choice-56-3.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "b5f41ed3669c0fbb5f9f9aa0bccf119ded7865661441ea07e1aa55403fd94768",
+      "bytes": 108350,
+      "source": "pdf5",
+      "source_page": 2,
+      "crop": [
+        0.2,
+        0.385,
+        0.515,
+        0.54
+      ],
+      "width": 490,
+      "height": 341
+    },
+    "choice-56-4": {
+      "filename": "images/choice-56-4.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "8edd1bca551517045903de9c7e672269e15665cf3d0ff4ea5d98494beee85eeb",
+      "bytes": 176087,
+      "source": "pdf5",
+      "source_page": 2,
+      "crop": [
+        0.535,
+        0.385,
+        0.85,
+        0.54
+      ],
+      "width": 490,
+      "height": 341
+    },
+    "Track057": {
+      "filename": "audio/Track057.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-57",
+      "sha256": "96afa4ceff0f14d5d045c597af0f808440253a73728e70ea24b853cd398e05cc",
+      "bytes": 981713,
+      "duration": 60.447347
+    },
+    "choice-57-1": {
+      "filename": "images/choice-57-1.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "0d41b82b61c8aac2189e27de99ed57a94879080a8da13c30fa56509b31e3deeb",
+      "bytes": 122621,
+      "source": "pdf5",
+      "source_page": 2,
+      "crop": [
+        0.2,
+        0.606,
+        0.515,
+        0.76
+      ],
+      "width": 490,
+      "height": 339
+    },
+    "choice-57-2": {
+      "filename": "images/choice-57-2.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "dce36114d88849c01c7e07bbf2a935ac1fd73636cc99d5d6777adce8a2633d14",
+      "bytes": 100701,
+      "source": "pdf5",
+      "source_page": 2,
+      "crop": [
+        0.535,
+        0.606,
+        0.85,
+        0.76
+      ],
+      "width": 490,
+      "height": 339
+    },
+    "choice-57-3": {
+      "filename": "images/choice-57-3.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "cd7b8773e97c46847ea863a3fca7ddb5113bc5d910b2529657004134d13a91c9",
+      "bytes": 87838,
+      "source": "pdf5",
+      "source_page": 2,
+      "crop": [
+        0.2,
+        0.772,
+        0.515,
+        0.927
+      ],
+      "width": 490,
+      "height": 341
+    },
+    "choice-57-4": {
+      "filename": "images/choice-57-4.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "b6891d3437a0134fc3ad93909c56b572a43421018ca320eb7ff7f10b9a9f7983",
+      "bytes": 155362,
+      "source": "pdf5",
+      "source_page": 2,
+      "crop": [
+        0.535,
+        0.772,
+        0.85,
+        0.927
+      ],
+      "width": 490,
+      "height": 341
+    },
+    "Track058": {
+      "filename": "audio/Track058.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-58",
+      "sha256": "d0bbae6186f85244a800f57b0b9c7361b91a64e3d7e1000f2f2e1260500552eb",
+      "bytes": 882107,
+      "duration": 54.961633
+    },
+    "choice-58-1": {
+      "filename": "images/choice-58-1.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "042e06e6e4dda9c2f9d54b0a2420e3027ab224ffd4cbbeb381de07a8bd1ab53e",
+      "bytes": 347673,
+      "source": "pdf5",
+      "source_page": 3,
+      "crop": [
+        0.09,
+        0.078,
+        0.9,
+        0.21
+      ],
+      "width": 1260,
+      "height": 290
+    },
+    "choice-58-2": {
+      "filename": "images/choice-58-2.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "de6e92bc104c045664c1da80357c4ac6d1c51506dacc94c625bcc7dd7ed3e88e",
+      "bytes": 353584,
+      "source": "pdf5",
+      "source_page": 3,
+      "crop": [
+        0.09,
+        0.232,
+        0.9,
+        0.364
+      ],
+      "width": 1260,
+      "height": 291
+    },
+    "choice-58-3": {
+      "filename": "images/choice-58-3.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "5acd5743e0bd491e8c409951832e70d16dc489fd8a16921388032387f6617f4d",
+      "bytes": 343915,
+      "source": "pdf5",
+      "source_page": 3,
+      "crop": [
+        0.09,
+        0.386,
+        0.9,
+        0.518
+      ],
+      "width": 1260,
+      "height": 291
+    },
+    "choice-58-4": {
+      "filename": "images/choice-58-4.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "3e5d64d5e66267434808828a83cb973343836798fa42089f578c47c547fd4803",
+      "bytes": 340860,
+      "source": "pdf5",
+      "source_page": 3,
+      "crop": [
+        0.09,
+        0.54,
+        0.9,
+        0.674
+      ],
+      "width": 1260,
+      "height": 295
+    },
+    "Track059": {
+      "filename": "audio/Track059.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-59",
+      "sha256": "8b2405e84eadd73998e0977608bde8c69f5e26fa2458c12249c6227b2801a53b",
+      "bytes": 831009,
+      "duration": 50.755918
+    },
+    "Track060": {
+      "filename": "audio/Track060.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-60",
+      "sha256": "9bd9b034065972bb8c9d82a2d7cd4593ade3df1596abf89507e2a7666ea7ba98",
+      "bytes": 719838,
+      "duration": 45.191837
+    },
+    "Track061": {
+      "filename": "audio/Track061.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-61",
+      "sha256": "37c81380a1a3cab5551ce526e5922de57d616fdfef0568507d84667dd7385d7e",
+      "bytes": 911320,
+      "duration": 54.961633
+    },
+    "Track062": {
+      "filename": "audio/Track062.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-62",
+      "sha256": "c0575b47702193c1a1adede5161c445fedd5d61243910b169536895b804a9dcb",
+      "bytes": 965562,
+      "duration": 59.95102
+    },
+    "Track063": {
+      "filename": "audio/Track063.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-63",
+      "sha256": "5cf832a7dd119694d1b68a1152289ef70c2238abe5daa949eaf21d26d86b2fee",
+      "bytes": 1169395,
+      "duration": 72.777143
+    },
+    "choice-63-1": {
+      "filename": "images/choice-63-1.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "61d6e16a8586938ab027d85853bbf1c73b3715b05ada99284a51dd20cc046d5e",
+      "bytes": 54528,
+      "source": "pdf6",
+      "source_page": 2,
+      "crop": [
+        0.075,
+        0.225,
+        0.28,
+        0.401
+      ],
+      "width": 318,
+      "height": 387
+    },
+    "choice-63-2": {
+      "filename": "images/choice-63-2.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "c77ae34728835855189af7ef423d3b342902fa0f7e4abc459db5cb1f4b2f7802",
+      "bytes": 38616,
+      "source": "pdf6",
+      "source_page": 2,
+      "crop": [
+        0.28,
+        0.225,
+        0.48,
+        0.401
+      ],
+      "width": 311,
+      "height": 387
+    },
+    "choice-63-3": {
+      "filename": "images/choice-63-3.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "8c772eb947a39c67f0238877a3645ad843d78db51dead9085d76d75dd6a0a18c",
+      "bytes": 51671,
+      "source": "pdf6",
+      "source_page": 2,
+      "crop": [
+        0.48,
+        0.225,
+        0.67,
+        0.401
+      ],
+      "width": 296,
+      "height": 387
+    },
+    "choice-63-4": {
+      "filename": "images/choice-63-4.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "8e680f061106c42bd8f6ed0dd72534c13eefd2bdc6952e8fbea097a70e9f13c9",
+      "bytes": 111194,
+      "source": "pdf6",
+      "source_page": 2,
+      "crop": [
+        0.67,
+        0.225,
+        0.89,
+        0.401
+      ],
+      "width": 342,
+      "height": 387
+    },
+    "Track064": {
+      "filename": "audio/Track064.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-1-track-64",
+      "sha256": "93c7660788d9019f155dc433a56030451bfac16f60efe1fa967c97928e8c41d3",
+      "bytes": 832126,
+      "duration": 51.748571
+    },
+    "question-64-map": {
+      "filename": "images/question-64-map.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "5e2473470bbbe1b271cb41fc6b4cf26fe5264792a24f6e3fda428220344219be",
+      "bytes": 107961,
+      "source": "pdf6",
+      "source_page": 2,
+      "crop": [
+        0.12,
+        0.49,
+        0.59,
+        0.65
+      ],
+      "width": 730,
+      "height": 352
+    },
+    "Track065": {
+      "filename": "audio/Track065.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-65",
+      "sha256": "8283846b8bcdb65c4d8e6d4c919b793ecf4b6c985f60970b96288f27d7ea6b7e",
+      "bytes": 840777,
+      "duration": 51.853061
+    },
+    "Track066": {
+      "filename": "audio/Track066.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-66",
+      "sha256": "5b633e0ce72ab1b7cf2e0d9689d03783ab1832722236ab98a3a4232583e0e996",
+      "bytes": 942117,
+      "duration": 57.234286
+    },
+    "Track067": {
+      "filename": "audio/Track067.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-67",
+      "sha256": "bb5f425a9cec7c03684396455c14e6d61f88ba07c3965c5cb7acc4e4845e9a35",
+      "bytes": 722741,
+      "duration": 45.00898
+    },
+    "Track068": {
+      "filename": "audio/Track068.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-68",
+      "sha256": "4366007ea16343f7ca0f16ceed42769fd9a12e0189f57d2354590a427520346a",
+      "bytes": 1721631,
+      "duration": 106.527347
+    },
+    "Track069": {
+      "filename": "audio/Track069.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-69",
+      "sha256": "adeb8c9da59badb6c526f4e9b7cf460256ed73bfcebc2d873d6b3381fe00645f",
+      "bytes": 1001208,
+      "duration": 64.731429
+    },
+    "question-69": {
+      "filename": "images/question-69.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "26f86b42e430fbc7de8a0a512561918f3dafdcd43394ae3f3f352cde2de3825d",
+      "bytes": 638932,
+      "source": "pdf6",
+      "source_page": 4,
+      "crop": [
+        0.105,
+        0.23,
+        0.84,
+        0.55
+      ],
+      "width": 1143,
+      "height": 704
+    },
+    "Track070": {
+      "filename": "audio/Track070.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-70",
+      "sha256": "d590efb88d039c3f9e58dba4d68a6237f14963f40172c0f97fd663f89b9ab587",
+      "bytes": 623627,
+      "duration": 42.34449
+    },
+    "question-70": {
+      "filename": "images/question-70.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "15a2740f1a634d2c09d6736da4708bf55a5d71e5c6bbaeb7ebf4bd262a7eb1b6",
+      "bytes": 580111,
+      "source": "pdf6",
+      "source_page": 4,
+      "crop": [
+        0.105,
+        0.61,
+        0.84,
+        0.93
+      ],
+      "width": 1143,
+      "height": 704
+    },
+    "Track071": {
+      "filename": "audio/Track071.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-71",
+      "sha256": "2107ff75e5f924bf123631717a5f68fc8547f2b1afca1fbe7decb88876765561",
+      "bytes": 576922,
+      "duration": 39.68
+    },
+    "question-71": {
+      "filename": "images/question-71.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "4d84d50912916c320b969e8e1bdb0300ba0ddae52ac1c2a9be04c05d3d2a17cd",
+      "bytes": 460306,
+      "source": "pdf6",
+      "source_page": 5,
+      "crop": [
+        0.165,
+        0.08,
+        0.905,
+        0.405
+      ],
+      "width": 1150,
+      "height": 715
+    },
+    "Track072": {
+      "filename": "audio/Track072.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-72",
+      "sha256": "171b3c6a78478385c8ef2faf0ada3d1c5df7475197ab2152ebc297f05b71b873",
+      "bytes": 589107,
+      "duration": 40.228571
+    },
+    "question-72": {
+      "filename": "images/question-72.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "9a67e158d2972b8c1002bb55ffaaf7a85605f1837e9ec9f81c81e6ae4720e61a",
+      "bytes": 462037,
+      "source": "pdf6",
+      "source_page": 5,
+      "crop": [
+        0.165,
+        0.47,
+        0.905,
+        0.79
+      ],
+      "width": 1150,
+      "height": 704
+    },
+    "Track073": {
+      "filename": "audio/Track073.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-73",
+      "sha256": "fd8911fd223b9b05e9387d48797f9fef7afa04bb4eba924bc9f8495597459b11",
+      "bytes": 594195,
+      "duration": 40.646531
+    },
+    "question-73": {
+      "filename": "images/question-73.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "7e6fb021222c602358249883a5b84a2961e3b53faa9f589090fe31a77c5f1e9a",
+      "bytes": 543874,
+      "source": "pdf6",
+      "source_page": 6,
+      "crop": [
+        0.105,
+        0.085,
+        0.845,
+        0.415
+      ],
+      "width": 1151,
+      "height": 726
+    },
+    "Track074": {
+      "filename": "audio/Track074.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-74",
+      "sha256": "74be745d8d9ab593332e6d3dc31505ed727206fb86012ecf6fac233c3902e31c",
+      "bytes": 876784,
+      "duration": 58.148571
+    },
+    "Track075": {
+      "filename": "audio/Track075.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-75",
+      "sha256": "f7cf3675a6c63bb9b35a6434d8e4558ef34b54e10bc63bfac65eab794f6ca0fb",
+      "bytes": 540839,
+      "duration": 37.12
+    },
+    "Track076": {
+      "filename": "audio/Track076.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-76",
+      "sha256": "d072c75f936a76177ad49906936534aae0bb8f8d506836aaed7400bcef58841c",
+      "bytes": 532241,
+      "duration": 36.675918
+    },
+    "Track077": {
+      "filename": "audio/Track077.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-77",
+      "sha256": "2becec02c235a973e921c9883bd4b9e3892d2aaf1823213ce8fdbcb2901bb0f7",
+      "bytes": 502184,
+      "duration": 34.873469
+    },
+    "Track078": {
+      "filename": "audio/Track078.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-78",
+      "sha256": "5a6fa46fcfe8a6c73f778d13c28b229edbd792a21274d0ddf650c13a717dcaac",
+      "bytes": 518518,
+      "duration": 36.362449
+    },
+    "Track079": {
+      "filename": "audio/Track079.mp3",
+      "kind": "audio",
+      "mime": "audio/mpeg",
+      "source": "source-neizvesten-track-79",
+      "sha256": "bbffc4b13e86a3dc512c820d9749224d4cbead94115c5eae324f6b8de1489b29",
+      "bytes": 599860,
+      "duration": 42.109388
+    },
+    "transcript-63": {
+      "filename": "images/transcript-63.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "26c00301a579492d7e6372e87fd2309a5d8bf4689512b4bdf990265bd7aa7aa3",
+      "bytes": 406023,
+      "source": "source-58",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "width": 914,
+      "height": 800
+    },
+    "transcript-64": {
+      "filename": "images/transcript-64.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "0e9c7b3626fabf28ad481ea068d72bdc329c7adbd2d4658fcba6df4cd3e5a7be",
+      "bytes": 396849,
+      "source": "source-450",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "width": 938,
+      "height": 792
+    },
+    "transcript-65": {
+      "filename": "images/transcript-65.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "570bb868811315a0f1b4e6746014def4510d10db02b3090b61e5815e4f5e29de",
+      "bytes": 445414,
+      "source": "source-308",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "width": 916,
+      "height": 870
+    },
+    "transcript-66": {
+      "filename": "images/transcript-66.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "8319c6dc48e745a58e88151876b3873297eee53811cbeb402f6a98c6c304960a",
+      "bytes": 543502,
+      "source": "source-350",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "width": 948,
+      "height": 990
+    },
+    "transcript-67": {
+      "filename": "images/transcript-67.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "263720b32f25e6b18270a9c9008a35e2dde86b7b62e657001ab51e5197bdf49c",
+      "bytes": 345549,
+      "source": "source-121",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "width": 914,
+      "height": 720
+    },
+    "transcript-68": {
+      "filename": "images/transcript-68.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "e78d61cd28e7200c7351a31d379777d9c4875f8285a8963f8c8f916e1e067017",
+      "bytes": 435353,
+      "source": "source-253",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "width": 924,
+      "height": 866
+    },
+    "transcript-69": {
+      "filename": "images/transcript-69.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "0f002d5334dcb337ac4b800d0e84db310bc63d52d09e2e7711ff967bd24377fb",
+      "bytes": 217109,
+      "source": "source-247",
+      "crop": [
+        0,
+        0,
+        1,
+        0.55
+      ],
+      "width": 942,
+      "height": 564
+    },
+    "transcript-70": {
+      "filename": "images/transcript-70.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "4e05d744dfc33e909d0d5b41910ed2fa01c956b309719311273a03204c61af87",
+      "bytes": 200753,
+      "source": "source-247",
+      "crop": [
+        0,
+        0.55,
+        1,
+        1
+      ],
+      "width": 942,
+      "height": 462
+    },
+    "transcript-71": {
+      "filename": "images/transcript-71.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "59545ec5f0e16b9fbbc7cc06941528aecf75eae08a4a29612c2de001a25fa371",
+      "bytes": 171440,
+      "source": "source-285",
+      "crop": [
+        0,
+        0,
+        1,
+        0.325
+      ],
+      "width": 982,
+      "height": 416
+    },
+    "transcript-72": {
+      "filename": "images/transcript-72.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "447922be54c47ccb9ef08a6e7114b6cd2a96a15a7af8f3497822fe43cde99063",
+      "bytes": 181116,
+      "source": "source-285",
+      "crop": [
+        0,
+        0.325,
+        1,
+        0.67
+      ],
+      "width": 982,
+      "height": 442
+    },
+    "transcript-73": {
+      "filename": "images/transcript-73.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "0e0024e6b8d8e01cbc39b90dd0be2ec7c0de5741375de16e5919f0288ad6c298",
+      "bytes": 181411,
+      "source": "source-285",
+      "crop": [
+        0,
+        0.67,
+        1,
+        1
+      ],
+      "width": 982,
+      "height": 422
+    },
+    "transcript-74": {
+      "filename": "images/transcript-74.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "42128315c3352aa8e0a305d0860cfcc883c8e483adf6788434c572a65ce4569b",
+      "bytes": 207362,
+      "source": "source-178",
+      "crop": [
+        0,
+        0,
+        1,
+        0.375
+      ],
+      "width": 1046,
+      "height": 480
+    },
+    "transcript-75": {
+      "filename": "images/transcript-75.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "e9a03f93773e3f1ba9fcbc973f877e37673e2b69cd2c80055b65b07a3a9cd3b5",
+      "bytes": 187377,
+      "source": "source-178",
+      "crop": [
+        0,
+        0.375,
+        1,
+        0.69
+      ],
+      "width": 1046,
+      "height": 403
+    },
+    "transcript-76": {
+      "filename": "images/transcript-76.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "221ddca46ca01fd29a310290988c12825b8c59715c61680cf98fbcd3c5c4a99e",
+      "bytes": 186835,
+      "source": "source-178",
+      "crop": [
+        0,
+        0.69,
+        1,
+        1
+      ],
+      "width": 1046,
+      "height": 397
+    },
+    "transcript-77": {
+      "filename": "images/transcript-77.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "734c4708aea3c4072545ecd2ac394da150dbb7e2c8c47e683fa69fad731021c7",
+      "bytes": 187407,
+      "source": "source-186",
+      "crop": [
+        0,
+        0,
+        1,
+        0.325
+      ],
+      "width": 1050,
+      "height": 400
+    },
+    "transcript-78": {
+      "filename": "images/transcript-78.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "d6f2f352ec10ff01ddc1b4134dc740a886fbec8fc8cb9f7ee98a141eb2f0dc2f",
+      "bytes": 193633,
+      "source": "source-186",
+      "crop": [
+        0,
+        0.325,
+        1,
+        0.645
+      ],
+      "width": 1050,
+      "height": 393
+    },
+    "transcript-79": {
+      "filename": "images/transcript-79.png",
+      "kind": "image",
+      "mime": "image/png",
+      "sha256": "ef6fe3061b74a425a23868bca36edd86ad8edb78589b8a97aef5e8d5a4c33882",
+      "bytes": 181406,
+      "source": "source-186",
+      "crop": [
+        0,
+        0.645,
+        1,
+        1
+      ],
+      "width": 1050,
+      "height": 437
+    }
+  }
+}

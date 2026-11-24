@@ -1614,6 +1614,11 @@ body:has(.book-screen) .sidebar, .workspace:has(.book-screen) .topbar { display:
 #workbook-feedback img, .counter-result img { display:block; max-width:100%; height:auto; max-height:180px; object-fit:contain; margin-top:8px; }
 #workbook-feedback details { margin-top:12px; color:var(--ink); line-height:1.8; }
 .workbook-reference { max-width:820px; line-height:1.8; }
+.workbook-image-button { display:block; width:100%; padding:0; margin:12px 0; border:1px solid var(--line); background:#fff; border-radius:8px; cursor:zoom-in; overflow:hidden; }
+.workbook-image-button .workbook-fragment, #workbook-feedback .workbook-transcript { display:block; width:100%; max-width:100%; height:auto; max-height:none; margin:0; }
+.workbook-transcript-text { white-space:pre-line; }
+.workbook-choice-rows { grid-template-columns:minmax(0,1fr); }
+.workbook-choice-rows .secondary { flex-direction:row; }
 @media(max-width:600px) {
   .workbook-passage { font-size:18px; padding:12px; }
   .workbook-question .workbook-prompt { font-size:19px; }

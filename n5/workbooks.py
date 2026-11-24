@@ -1,4 +1,4 @@
-"""Local study workbooks; source content and assets stay outside the image/repository."""
+"""Local study workbooks and curated exercise collections."""
 import hashlib
 import json
 from pathlib import Path
@@ -11,6 +11,14 @@ def validate_workbook(data):
     units = {unit['id'] for unit in data['units']}
     if len(units) != len(data['units']):
         raise ValueError('Duplicate workbook unit')
+    if 'groups' in data:
+        groups = {g['id'] for g in data['groups']}
+        if (not groups or len(groups) != len(data['groups'])
+                or any(u.get('group') not in groups for u in data['units'])):
+            raise ValueError('Invalid workbook groups')
+    for unit in data['units']:
+        if unit.get('href') and not re.fullmatch(r'/jlpt/n5/exams/[a-z0-9-]+', unit['href']):
+            raise ValueError('Invalid related exam link')
     ids = set()
     for key, asset in data['assets'].items():
         path = Path(asset['filename'])
@@ -37,15 +45,22 @@ def validate_workbook(data):
             raise ValueError('Missing answer provenance')
         if item.get('target') and item['target'] not in item['prompt']:
             raise ValueError('Question target is missing from prompt')
-        if item.get('order') and (sorted(item['order']) != [1, 2, 3, 4] or item['order'][2] - 1 != correct):
+        star = item.get('star_position', 2)
+        if type(star) is not int or star not in range(4):
+            raise ValueError('Invalid starred position')
+        if item.get('order') and (sorted(item['order']) != [1, 2, 3, 4] or item['order'][star] - 1 != correct):
             raise ValueError('Incorrect starred answer or fragment order')
-        media = item.get('choice_images', []) + [item[k] for k in ('image', 'audio') if item.get(k)]
+        media = (item.get('choice_images', []) + item.get('images', [])
+                 + item.get('transcript_images', []) + [item[k] for k in ('image', 'audio') if item.get(k)])
         if any(key not in data['assets'] for key in media):
             raise ValueError('Unknown question media')
         if item.get('choice_images') and len(item['choice_images']) != len(choices):
             raise ValueError('Choice image count does not match choices')
         if item.get('spoken_choices') and len(item['spoken_choices']) != len(choices):
             raise ValueError('Spoken choice count does not match choices')
+        if any(data['assets'][key]['mime'] != 'image/png'
+               for key in item.get('images', []) + item.get('transcript_images', [])):
+            raise ValueError('Expected question or transcript image')
     if set(references) != ids or len(references) != len(ids):
         raise ValueError('Workbook questions must belong to exactly one unit')
     for unit in data['units']:
@@ -64,7 +79,7 @@ class Workbooks:
             if not path.is_relative_to(self.root):
                 raise ValueError('Workbook catalog outside materials root')
             content = validate_workbook(json.loads(path.read_text(encoding='utf-8'))) if path.is_file() else None
-            if content and (content['id'] != book['id'] or content['isbn'] != book['isbn']):
+            if content and (content['id'] != book['id'] or content.get('isbn') != book.get('isbn')):
                 raise ValueError('Workbook metadata does not match content')
             self.books[book['id']] = (book, content, path.parent)
 
@@ -72,6 +87,7 @@ class Workbooks:
         return {'books': [{k: v for k, v in book.items() if k != 'catalog'} | {
             'available': content is not None,
             'questions': len(content['items']) if content else 0,
+            'graded': sum(q['correct'] is not None for q in content['items']) if content else 0,
             'audio': sum(a['kind'] == 'audio' for a in content['assets'].values()) if content else 0,
         } for book, content, _ in self.books.values()]}
 
@@ -83,7 +99,9 @@ class Workbooks:
         assets = {key: {'url': f'/material-files/{book_id}/{key}', 'mime': asset['mime'],
                         'available': self.asset(book_id, key) is not None}
                   for key, asset in data['assets'].items()}
-        return {k: data[k] for k in ('id', 'version', 'title', 'year', 'isbn', 'authors', 'publisher', 'units', 'items', 'audio_source')} | {'assets': assets}
+        fields = ('id', 'version', 'title', 'year', 'isbn', 'authors', 'publisher', 'units',
+                  'items', 'audio_source', 'groups', 'source_note', 'coverage')
+        return {k: data[k] for k in fields if k in data} | {'assets': assets}
 
     def asset(self, book_id, key):
         found = self.books.get(book_id)
