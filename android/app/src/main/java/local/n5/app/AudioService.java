@@ -1,5 +1,6 @@
 package local.n5.app;
 
+import android.annotation.SuppressLint;
 import android.app.*;
 import android.content.*;
 import android.media.*;
@@ -234,6 +235,13 @@ public class AudioService extends Service {
             .addAction(new Notification.Action.Builder(Icon.createWithResource(this,android.R.drawable.ic_menu_close_clear_cancel),"Закрыть",action("stop")).build())
             .setStyle(new Notification.MediaStyle().setMediaSession(session.getSessionToken()).setShowActionsInCompactView(0,1,2)).build();
     }
+    @SuppressLint("NotificationPermission")
+    private void updateMediaNotification() {
+        // notification() always uses MediaStyle with this service's MediaSession token.
+        // Media-session notifications are exempt from POST_NOTIFICATIONS:
+        // https://developer.android.com/develop/ui/views/notifications/notification-permission#media-sessions
+        getSystemService(NotificationManager.class).notify(NOTIFICATION, notification());
+    }
     private void publish(boolean persist) {
         remember();
         try {
@@ -249,7 +257,7 @@ public class AudioService extends Service {
             session.setMetadata(new MediaMetadata.Builder().putString(MediaMetadata.METADATA_KEY_TITLE,current().optString("title"))
                 .putString(MediaMetadata.METADATA_KEY_ALBUM,current().optString("album")).putString(MediaMetadata.METADATA_KEY_ARTIST,"N5 Local")
                 .putLong(MediaMetadata.METADATA_KEY_DURATION,(long)(duration * 1000)).build());
-            if (persist) getSystemService(NotificationManager.class).notify(NOTIFICATION,notification());
+            if (persist) updateMediaNotification();
         }
     }
     @Override public IBinder onBind(Intent intent) { return null; }
