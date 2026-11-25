@@ -12,6 +12,13 @@ from urllib.request import ProxyHandler, Request, build_opener
 from zipfile import ZipFile
 
 
+def furigana_dictionaries(content):
+    directory = content / 'static/vendor/kuromoji-0.1.2/dict'
+    files = sorted(directory.glob('*.dat.gz'))
+    assert len(files) == 12, f'Incomplete bundled furigana dictionary: {directory} ({len(files)}/12 files)'
+    return files
+
+
 def check(archive):
     archive = archive.resolve()
     expected = archive.with_name(archive.name + '.sha256').read_text(encoding='utf-8').split()[0]
@@ -50,7 +57,7 @@ def check(archive):
                     assert response.status == 206 and len(response.read()) == 64
 
             assert get('/api/health')['status'] == 'ok'
-            for dictionary in (ROOT / 'static/vendor/kuromoji-0.1.2/dict').glob('*.dat.gz'):
+            for dictionary in furigana_dictionaries(folder / 'n5-local/_internal'):
                 media('/vendor/kuromoji-0.1.2/dict/' + dictionary.name)
             course = get('/api/course-workbook')
             assert course['available'] and len(course['items']) == 777

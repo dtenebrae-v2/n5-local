@@ -12,11 +12,28 @@ from urllib.request import ProxyHandler, build_opener
 
 import desktop
 from scripts.prepare_android_signing import prepare
+from scripts.check_desktop_bundle import furigana_dictionaries
 
 ROOT = Path(__file__).parent
 
 
 class DesktopTests(unittest.TestCase):
+    def test_release_checker_uses_extracted_dictionary_and_rejects_missing_files(self):
+        with tempfile.TemporaryDirectory() as folder:
+            content = Path(folder) / 'n5-local/_internal'
+            with self.assertRaisesRegex(AssertionError, 'Incomplete bundled'):
+                furigana_dictionaries(content)
+            directory = content / 'static/vendor/kuromoji-0.1.2/dict'
+            directory.mkdir(parents=True)
+            for number in range(12):
+                (directory / f'fixture-{number}.dat.gz').write_bytes(b'dictionary fixture')
+            files = furigana_dictionaries(content)
+            self.assertEqual(len(files), 12)
+            self.assertTrue(all(path.is_relative_to(content) for path in files))
+            files[0].unlink()
+            with self.assertRaisesRegex(AssertionError, '11/12'):
+                furigana_dictionaries(content)
+
     def test_linux_browser_is_detached_and_uses_system_libraries(self):
         for original in (None, '/system/lib'):
             with self.subTest(original=original), patch.object(desktop.sys, 'platform', 'linux'), \

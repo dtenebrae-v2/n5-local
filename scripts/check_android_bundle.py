@@ -42,7 +42,9 @@ def check(assets):
 
         try:
             assert get('/api/health')['status'] == 'ok'
-            for dictionary in (ROOT / 'static/vendor/kuromoji-0.1.2/dict').glob('*.dat.gz'):
+            dictionaries = sorted((content / 'static/vendor/kuromoji-0.1.2/dict').glob('*.dat.gz'))
+            assert len(dictionaries) == 12, 'Incomplete bundled furigana dictionary'
+            for dictionary in dictionaries:
                 media('/vendor/kuromoji-0.1.2/dict/' + dictionary.name)
             course = get('/api/course-workbook')
             assert course['available'] and len(course['items']) == manifest['courseCards']
