@@ -1,5 +1,15 @@
 export const AUDIO_KEY = 'n5.audio.v1';
 export const RATES = [.75, 1, 1.25, 1.5];
+export function uniqueAudioTracks(tracks, preferredId) {
+  const preferred = tracks.find(t => t.id === preferredId);
+  const seen = new Set();
+  return tracks.flatMap(track => {
+    const family = track.family || track.id;
+    if (seen.has(family)) return [];
+    seen.add(family);
+    return [preferred && family === (preferred.family || preferred.id) ? preferred : track];
+  });
+}
 export function restoreAudio(value, tracks) {
   const known = new Set(tracks.map(t => t.id));
   const queue = Array.isArray(value?.queue) ? [...new Set(value.queue.filter(id => known.has(id)))] : [];

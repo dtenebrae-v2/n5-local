@@ -60,6 +60,26 @@ class ServiceTests(unittest.TestCase):
         with urlopen(self.base + '/jlpt/n5/audio', timeout=3) as response:
             self.assertEqual(response.status, 200)
 
+    def test_audio_transcripts_match_the_recording_and_exclude_books(self):
+        tracks = self.get('/api/audio')['tracks']
+        track = next(t for t in tracks if t['group'] == 'workbooks' and t['transcript']['available'])
+        script = self.get(track['transcript']['url'])
+        self.assertEqual(script['sha256'],track['sha256'])
+        self.assertEqual(script['language'],'ja')
+        self.assertTrue(script['segments'])
+        for key in ['book:61371', '../../server.py', 'unknown']:
+            with self.assertRaises(HTTPError) as error:
+                self.get('/api/audio-transcript?' + urlencode({'id':key}))
+            self.assertEqual(error.exception.code,404)
+
+    def test_offline_furigana_dictionary_is_served_as_cacheable_binary(self):
+        path = '/vendor/kuromoji-0.1.2/dict/base.dat.gz'
+        with urlopen(Request(self.base + path, headers={'Range':'bytes=0-31'}), timeout=3) as response:
+            self.assertEqual(response.status,206)
+            self.assertEqual(response.headers['Content-Type'],'application/gzip')
+            self.assertIn('max-age=3600',response.headers['Cache-Control'])
+            self.assertTrue(response.read().startswith(b'\x1f\x8b'))
+
     def test_training_words_are_unique_and_include_practice_kind(self):
         rows = self.get('/api/training-words')['entries']
         self.assertEqual(len(rows), 1092)

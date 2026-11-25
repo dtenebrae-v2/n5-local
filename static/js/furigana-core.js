@@ -74,6 +74,44 @@ export function annotateText(text, index) {
   return result;
 }
 
+export function annotateTokens(text, tokens, index = new Map()) {
+  let result = '', offset = 0;
+  const ranges = [];
+  for (const token of tokens) {
+    const written = token.surface_form;
+    const start = text.indexOf(written,offset);
+    if (!written || start < 0) return annotateText(text,index);
+    ranges.push({start,end:start + written.length,token});
+    offset = start + written.length;
+  }
+  offset = 0;
+  for (let i=0; i<ranges.length; i++) {
+    const {start,end,token} = ranges[i];
+    result += esc(text.slice(offset,start));
+    if (/^[1１一]$/u.test(token.surface_form) && ranges[i+1]?.token.surface_form === '日'
+        && /(?:[\d０-９一二三四五六七八九十]+月|今月|来月|先月)\s*$/u.test(text.slice(0,start))) {
+      offset = ranges[++i].end;
+      result += rubyText(text.slice(start,offset),'ついたち');
+      continue;
+    }
+    const entry = (index.get(text[start]) || []).find(item => {
+      const finish = start + item.written.length;
+      return text.startsWith(item.written,start) && ranges.some(range => range.end === finish)
+        && (ranges.some(range => range.start >= start && range.end <= finish && !range.token.reading)
+          || /^[\d０-９一二三四五六七八九十百千万]+[歳羽冊杯日枚階時頭本台分人匹回年ヶかケカ]/u.test(item.written));
+    });
+    if (entry) {
+      result += entry.html; offset = start + entry.written.length;
+      while (i+1 < ranges.length && ranges[i+1].end <= offset) i++;
+    } else {
+      const html = token.reading ? rubyText(token.surface_form,token.reading) : '';
+      result += html.includes('<ruby>') ? html : annotateText(token.surface_form,index);
+      offset = end;
+    }
+  }
+  return result + esc(text.slice(offset));
+}
+
 // Existing answer models store their verified reading as written（kana）.
 export function rubyDisplay(value) {
   const text = String(value ?? '');

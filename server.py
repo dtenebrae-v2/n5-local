@@ -1,5 +1,6 @@
 """Offline N5 HTTP server; Python standard library only."""
 import json
+import hashlib
 import os
 import re
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -16,6 +17,7 @@ from n5.workbooks import Workbooks
 from n5.course_workbook import CourseWorkbook
 from n5.exam_sets import ExamSets
 from n5.audio import audio_catalog
+from n5.audio_transcripts import AudioTranscripts
 from n5.export import vocabulary_csv
 from n5.store import VocabularyStore, WordError
 from n5.vocabulary import unique_keys
@@ -32,6 +34,7 @@ LIBRARY = Library(MATERIALS / 'tadoku/catalog.json', MATERIALS / 'tadoku/files')
 WORKBOOKS = Workbooks(MATERIALS)
 COURSE_WORKBOOK = CourseWorkbook(MATERIALS / 'course/n5')
 EXAM_SETS = ExamSets(MATERIALS)
+AUDIO_TRANSCRIPTS = AudioTranscripts(MATERIALS / 'audio/transcripts.json')
 STORE = VocabularyStore(DATA, Path(os.environ.get('N5_VOCABULARY', DATA / 'vocabulary.json')))
 CATALOG = STORE.catalog
 REPOSITORY = CATALOG.repository
@@ -44,11 +47,15 @@ ASSETS.update({
     '/' + path.relative_to(ROOT / 'static').as_posix(): (path, {
         '.js':'text/javascript; charset=utf-8', '.mjs':'text/javascript; charset=utf-8',
         '.ttf':'font/ttf', '.txt':'text/plain; charset=utf-8',
-        '.css':'text/css; charset=utf-8', '.svg':'image/svg+xml', '.gif':'image/gif',
+        '.css':'text/css; charset=utf-8', '.svg':'image/svg+xml', '.gif':'image/gif', '.gz':'application/gzip',
     }.get(path.suffix, 'application/octet-stream'))
     for path in (ROOT / 'static').rglob('*')
-    if path.is_file() and path.suffix in {'.js','.mjs','.bcmap','.pfb','.ttf','.txt','.css','.svg','.gif'}
+    if path.is_file() and path.suffix in {'.js','.mjs','.bcmap','.pfb','.ttf','.txt','.css','.svg','.gif','.gz'}
 })
+STATIC_BINARY = {
+    url: {'sha256':hashlib.sha256(path.read_bytes()).hexdigest(), 'filename':path.name}
+    for url, (path, _) in ASSETS.items() if path.suffix == '.gz'
+}
 
 CSP = (
     "default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; "
@@ -119,7 +126,10 @@ class Handler(BaseHTTPRequestHandler):
                 self.serve_api(path, params)
             elif path in ASSETS:
                 filename, mime = ASSETS[path]
-                self.send(filename.read_bytes(), mime)
+                if path in STATIC_BINARY:
+                    self.serve_file(filename, STATIC_BINARY[path], mime)
+                else:
+                    self.send(filename.read_bytes(), mime)
             elif path in STORE.catalog.routes:
                 self.send((ROOT / 'static/index.html').read_bytes(), 'text/html; charset=utf-8')
             else:
@@ -155,7 +165,13 @@ class Handler(BaseHTTPRequestHandler):
         catalog = STORE.catalog
         repository = catalog.repository
         if path == '/api/audio':
-            return self.send(audio_catalog(EXAM_SETS, WORKBOOKS, LIBRARY))
+            return self.send(audio_catalog(EXAM_SETS, WORKBOOKS, LIBRARY, AUDIO_TRANSCRIPTS))
+        if path == '/api/audio-transcript':
+            track_id = params.get('id', [''])[0]
+            track = next((t for t in audio_catalog(EXAM_SETS, WORKBOOKS, LIBRARY)['tracks']
+                          if t['id'] == track_id and t['group'] != 'books'), None)
+            transcript = AUDIO_TRANSCRIPTS.get(track_id, track['sha256']) if track else None
+            return self.send(transcript) if transcript else self.not_found()
         if path == '/api/health':
             return self.send({'status': 'ok', 'entries': repository.count()})
         if path == '/api/library':

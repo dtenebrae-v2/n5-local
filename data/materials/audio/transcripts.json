@@ -1,0 +1,8170 @@
+{
+  "version": 1,
+  "tracks": {
+    "workbook:intensive-n5:Track077": {
+      "sha256": "2becec02c235a973e921c9883bd4b9e3892d2aaf1823213ce8fdbcb2901bb0f7",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 34.83,
+      "segments": [
+        {
+          "start": 2.64,
+          "end": 7.06,
+          "text": "4番 新宿まで何で行きますか?"
+        },
+        {
+          "start": 7.06,
+          "end": 13.86,
+          "text": "1. 友達と行きます"
+        },
+        {
+          "start": 13.86,
+          "end": 20.64,
+          "text": "2. 明日行きます"
+        },
+        {
+          "start": 20.64,
+          "end": 27.51,
+          "text": "3. バスで行きます"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track078": {
+      "sha256": "5a6fa46fcfe8a6c73f778d13c28b229edbd792a21274d0ddf650c13a717dcaac",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 36.32,
+      "segments": [
+        {
+          "start": 2.64,
+          "end": 4.52,
+          "text": "5番"
+        },
+        {
+          "start": 4.52,
+          "end": 7.02,
+          "text": "日本語の勉強はどうですか?"
+        },
+        {
+          "start": 7.02,
+          "end": 12.33,
+          "text": "1"
+        },
+        {
+          "start": 12.33,
+          "end": 17.7,
+          "text": "はい、日本語の勉強です"
+        },
+        {
+          "start": 17.7,
+          "end": 20.24,
+          "text": "2"
+        },
+        {
+          "start": 20.24,
+          "end": 21.74,
+          "text": "とても面白いです"
+        },
+        {
+          "start": 21.74,
+          "end": 27.24,
+          "text": "3"
+        },
+        {
+          "start": 27.24,
+          "end": 29.24,
+          "text": "はい、これです"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track076": {
+      "sha256": "d072c75f936a76177ad49906936534aae0bb8f8d506836aaed7400bcef58841c",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 36.63,
+      "segments": [
+        {
+          "start": 2.7,
+          "end": 4.42,
+          "text": "3番"
+        },
+        {
+          "start": 4.42,
+          "end": 7.62,
+          "text": "木村さん、映画は上手ですね"
+        },
+        {
+          "start": 7.62,
+          "end": 11.26,
+          "text": "1"
+        },
+        {
+          "start": 11.26,
+          "end": 15.0,
+          "text": "いいえ、好きですね"
+        },
+        {
+          "start": 15.0,
+          "end": 18.63,
+          "text": "2"
+        },
+        {
+          "start": 18.63,
+          "end": 22.24,
+          "text": "え、下手ですか?"
+        },
+        {
+          "start": 22.24,
+          "end": 25.94,
+          "text": "3"
+        },
+        {
+          "start": 25.94,
+          "end": 29.05,
+          "text": "ありがとうございます"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track075": {
+      "sha256": "f7cf3675a6c63bb9b35a6434d8e4558ef34b54e10bc63bfac65eab794f6ca0fb",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 37.07,
+      "segments": [
+        {
+          "start": 2.7,
+          "end": 8.92,
+          "text": "2番 おなかがすきましたね。"
+        },
+        {
+          "start": 8.92,
+          "end": 11.48,
+          "text": "1"
+        },
+        {
+          "start": 11.48,
+          "end": 16.95,
+          "text": "そうですね、食事にしましょう。"
+        },
+        {
+          "start": 16.95,
+          "end": 19.42,
+          "text": "2"
+        },
+        {
+          "start": 19.42,
+          "end": 22.22,
+          "text": "そうですよ、おなかですよ。"
+        },
+        {
+          "start": 22.22,
+          "end": 27.23,
+          "text": "3"
+        },
+        {
+          "start": 27.23,
+          "end": 29.67,
+          "text": "そうですね、すきですよ。"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track071": {
+      "sha256": "2107ff75e5f924bf123631717a5f68fc8547f2b1afca1fbe7decb88876765561",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 39.64,
+      "segments": [
+        {
+          "start": 2.7,
+          "end": 7.15,
+          "text": "パン屋でパンを買います。"
+        },
+        {
+          "start": 7.15,
+          "end": 10.57,
+          "text": "店の人に何と言いますか?"
+        },
+        {
+          "start": 10.57,
+          "end": 17.34,
+          "text": "1. このパンください。"
+        },
+        {
+          "start": 17.34,
+          "end": 25.15,
+          "text": "2. このパン買ってください。"
+        },
+        {
+          "start": 25.15,
+          "end": 32.02,
+          "text": "3. このパン買いますか?"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track072": {
+      "sha256": "171b3c6a78478385c8ef2faf0ada3d1c5df7475197ab2152ebc297f05b71b873",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 40.18,
+      "segments": [
+        {
+          "start": 2.67,
+          "end": 7.81,
+          "text": "4番 友達の本を借りたいです"
+        },
+        {
+          "start": 7.81,
+          "end": 13.21,
+          "text": "友達に何と言いますか"
+        },
+        {
+          "start": 13.21,
+          "end": 20.55,
+          "text": "1 その本もらってください"
+        },
+        {
+          "start": 20.55,
+          "end": 28.08,
+          "text": "2 その本借りてください"
+        },
+        {
+          "start": 28.08,
+          "end": 32.56,
+          "text": "3 その本貸してください"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track073": {
+      "sha256": "fd8911fd223b9b05e9387d48797f9fef7afa04bb4eba924bc9f8495597459b11",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 40.6,
+      "segments": [
+        {
+          "start": 2.67,
+          "end": 13.87,
+          "text": "5番、友達が旅行から帰ってきました。 友達に何と言いますか。"
+        },
+        {
+          "start": 13.87,
+          "end": 18.25,
+          "text": "1、旅行、どれにした?"
+        },
+        {
+          "start": 18.25,
+          "end": 28.52,
+          "text": "2、旅行、どうする?"
+        },
+        {
+          "start": 28.52,
+          "end": 32.99,
+          "text": "3、旅行、どうだった?"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track079": {
+      "sha256": "bbffc4b13e86a3dc512c820d9749224d4cbead94115c5eae324f6b8de1489b29",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 42.07,
+      "segments": [
+        {
+          "start": 2.64,
+          "end": 8.96,
+          "text": "6番、あの人を誰?"
+        },
+        {
+          "start": 8.96,
+          "end": 9.96,
+          "text": "1"
+        },
+        {
+          "start": 9.96,
+          "end": 12.9,
+          "text": "あの人よ"
+        },
+        {
+          "start": 12.9,
+          "end": 16.36,
+          "text": "2"
+        },
+        {
+          "start": 16.36,
+          "end": 19.3,
+          "text": "私よ"
+        },
+        {
+          "start": 19.3,
+          "end": 22.73,
+          "text": "3"
+        },
+        {
+          "start": 22.73,
+          "end": 26.08,
+          "text": "高橋さんよ"
+        },
+        {
+          "start": 26.08,
+          "end": 40.01,
+          "text": "これで、超会試験を終わります"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track070": {
+      "sha256": "d590efb88d039c3f9e58dba4d68a6237f14963f40172c0f97fd663f89b9ab587",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 42.29,
+      "segments": [
+        {
+          "start": 2.7,
+          "end": 8.7,
+          "text": "2番 会議が始まる時間が分かりません"
+        },
+        {
+          "start": 8.7,
+          "end": 14.03,
+          "text": "なんと言いますか 1"
+        },
+        {
+          "start": 14.03,
+          "end": 21.87,
+          "text": "今日の会議どこでしますか 2"
+        },
+        {
+          "start": 21.87,
+          "end": 29.84,
+          "text": "今日の会議何時からですか 3"
+        },
+        {
+          "start": 29.84,
+          "end": 36.31,
+          "text": "今日の会議誰が出ますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track025": {
+      "sha256": "3c93e090a32e54fed0a3efee885d3b6b232d2465ba494e5ba048c4124b140e4f",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 26.98,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 5.35,
+          "text": "3番 手伝いましょうか"
+        },
+        {
+          "start": 5.35,
+          "end": 9.86,
+          "text": "1 どうぞ"
+        },
+        {
+          "start": 9.86,
+          "end": 14.5,
+          "text": "2 お願いします"
+        },
+        {
+          "start": 14.5,
+          "end": 18.91,
+          "text": "3 こちらこそ"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track024": {
+      "sha256": "7e937eeb7240d590351045be5ed0b020ca3052754ecb18b5ae7842a842f12096",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 27.59,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 7.5,
+          "text": "2番 毎日夜遅くまで勉強しています"
+        },
+        {
+          "start": 7.5,
+          "end": 12.6,
+          "text": "1 すみません"
+        },
+        {
+          "start": 12.6,
+          "end": 17.08,
+          "text": "2 いいですよ"
+        },
+        {
+          "start": 17.08,
+          "end": 21.72,
+          "text": "3 大変ですね"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track013": {
+      "sha256": "0d2de52d5fef8762e2ee93111f00d23e0a226491dba2b13bc5f44020be7dfbfb",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 27.87,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 7.43,
+          "text": "2番 田中さんは何時に帰りましたか"
+        },
+        {
+          "start": 7.43,
+          "end": 12.58,
+          "text": "1 まだ来ません"
+        },
+        {
+          "start": 12.58,
+          "end": 17.08,
+          "text": "2 ごじごろです"
+        },
+        {
+          "start": 17.08,
+          "end": 21.85,
+          "text": "3 バスで帰りました"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track015": {
+      "sha256": "e66ec7de5f24c8baf8877f9759d43f3318ebd8298d2d9d087078a55e53c193a2",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 27.98,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 6.38,
+          "text": "4番 それは誰の本ですか"
+        },
+        {
+          "start": 6.38,
+          "end": 12.16,
+          "text": "1 言え辞書です"
+        },
+        {
+          "start": 12.16,
+          "end": 17.41,
+          "text": "2 日本語の本です"
+        },
+        {
+          "start": 17.41,
+          "end": 21.96,
+          "text": "3 トムさんのです"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track014": {
+      "sha256": "8ba6162efd929db243c6d9dc565317d73ffcf93f4116d14e2d0dd4fb3e6f92e6",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 28.97,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 8.58,
+          "text": "3番 夏休みにどこへ行きますか?"
+        },
+        {
+          "start": 8.58,
+          "end": 13.86,
+          "text": "1 国に帰ります"
+        },
+        {
+          "start": 13.86,
+          "end": 18.32,
+          "text": "2 行ってきます"
+        },
+        {
+          "start": 18.32,
+          "end": 21.7,
+          "text": "3 気をつけてください"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track060": {
+      "sha256": "9bd9b034065972bb8c9d82a2d7cd4593ade3df1596abf89507e2a7666ea7ba98",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 45.14,
+      "segments": [
+        {
+          "start": 2.64,
+          "end": 9.07,
+          "text": "5番 女の人と男の人が話しています"
+        },
+        {
+          "start": 9.07,
+          "end": 16.74,
+          "text": "女の人は誰と京都へ行きますか 来週京都へ旅行に行きます"
+        },
+        {
+          "start": 16.74,
+          "end": 22.52,
+          "text": "いいですねー一人で いいえ母と姉と一緒に行きます"
+        },
+        {
+          "start": 22.52,
+          "end": 26.76,
+          "text": "お父さんは 父は仕事が忙しいですから"
+        },
+        {
+          "start": 26.76,
+          "end": 36.9,
+          "text": "そうですか 女の人は誰と京都へ行きますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track067": {
+      "sha256": "bb5f425a9cec7c03684396455c14e6d61f88ba07c3965c5cb7acc4e4845e9a35",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 44.96,
+      "segments": [
+        {
+          "start": 2.67,
+          "end": 7.34,
+          "text": "5番 先生が話しています"
+        },
+        {
+          "start": 7.34,
+          "end": 14.21,
+          "text": "試験の答えは何で書きますか 今から試験をします"
+        },
+        {
+          "start": 14.21,
+          "end": 20.78,
+          "text": "試験の答えは鉛筆で書いてください ペンやボールペンは使わないでください"
+        },
+        {
+          "start": 20.78,
+          "end": 27.36,
+          "text": "間違えたところは消しゴムで綺麗に消してください わかりましたか"
+        },
+        {
+          "start": 27.36,
+          "end": 35.78,
+          "text": "はい 試験の答えは何で書きますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track011": {
+      "sha256": "a0b7a47d044813c2f7a387af5c840462ece7ad2aba1dfdddb47fd56fe023ab19",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 33.91,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 9.4,
+          "text": "6日目どんな返事をしますか 例をしましょう"
+        },
+        {
+          "start": 9.4,
+          "end": 14.75,
+          "text": "何か飲みませんか 1"
+        },
+        {
+          "start": 14.75,
+          "end": 19.92,
+          "text": "まだ飲んでいません 2"
+        },
+        {
+          "start": 19.92,
+          "end": 25.3,
+          "text": "お腹が空いていません 3"
+        },
+        {
+          "start": 25.3,
+          "end": 28.1,
+          "text": "いいですね"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track059": {
+      "sha256": "8b2405e84eadd73998e0977608bde8c69f5e26fa2458c12249c6227b2801a53b",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 50.7,
+      "segments": [
+        {
+          "start": 2.67,
+          "end": 9.83,
+          "text": "よんばん 男の人と女の人が電話で話しています"
+        },
+        {
+          "start": 9.83,
+          "end": 16.95,
+          "text": "2人は明日どこで会いますか 明日のポンサーとは4時からですから"
+        },
+        {
+          "start": 16.95,
+          "end": 24.36,
+          "text": "3時半に駅で会いましょう 駅は人が多いですから会場の入り口はどうですか"
+        },
+        {
+          "start": 32.96,
+          "end": 42.66,
+          "text": "分かりました 二人は明日どこで会いますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track064": {
+      "sha256": "93c7660788d9019f155dc433a56030451bfac16f60efe1fa967c97928e8c41d3",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 51.71,
+      "segments": [
+        {
+          "start": 2.7,
+          "end": 3.7,
+          "text": "2番"
+        },
+        {
+          "start": 3.7,
+          "end": 8.15,
+          "text": "女の人と男の人が話しています"
+        },
+        {
+          "start": 8.15,
+          "end": 13.05,
+          "text": "ABホテルはどこにありますか?"
+        },
+        {
+          "start": 13.05,
+          "end": 14.05,
+          "text": "すみません"
+        },
+        {
+          "start": 14.05,
+          "end": 16.05,
+          "text": "ABホテルはどこですか?"
+        },
+        {
+          "start": 16.05,
+          "end": 18.05,
+          "text": "ABホテルですか?"
+        },
+        {
+          "start": 18.05,
+          "end": 23.14,
+          "text": "ABホテルは駅の前の道を右に行ってください"
+        },
+        {
+          "start": 23.14,
+          "end": 26.14,
+          "text": "あの道を右ですね?"
+        },
+        {
+          "start": 26.14,
+          "end": 28.14,
+          "text": "ええ、そうです"
+        },
+        {
+          "start": 28.14,
+          "end": 30.34,
+          "text": "左側にありますよ"
+        },
+        {
+          "start": 30.34,
+          "end": 33.34,
+          "text": "右に行って左ですね?"
+        },
+        {
+          "start": 33.7,
+          "end": 41.83,
+          "text": "ありがとうございました。ABホテルはどこにありますか?"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track065": {
+      "sha256": "8283846b8bcdb65c4d8e6d4c919b793ecf4b6c985f60970b96288f27d7ea6b7e",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 51.8,
+      "segments": [
+        {
+          "start": 2.74,
+          "end": 9.3,
+          "text": "さんばん 男の人と女の人が話しています"
+        },
+        {
+          "start": 9.3,
+          "end": 16.4,
+          "text": "女の人はいつからアルバイトをしますか じゃあよろしくお願いします"
+        },
+        {
+          "start": 16.4,
+          "end": 21.6,
+          "text": "明日から来てください 明日はちょっと"
+        },
+        {
+          "start": 21.6,
+          "end": 24.92,
+          "text": "じゃあ 朝っての木曜日からは"
+        },
+        {
+          "start": 24.92,
+          "end": 30.65,
+          "text": "すみませんが来週からお願いします わかりました"
+        },
+        {
+          "start": 34.18,
+          "end": 42.28,
+          "text": "はい、女の人はいつからアルバイトをしますか?"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track010": {
+      "sha256": "f555c7f97099d5de20dbd72decc15df846044a5858782539e7151c89a4bd0082",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 34.95,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 5.74,
+          "text": "2番 テレビの音がうるさいです"
+        },
+        {
+          "start": 5.74,
+          "end": 10.96,
+          "text": "何と言いますか 1"
+        },
+        {
+          "start": 10.96,
+          "end": 16.19,
+          "text": "ちょっと 電話をしないでください"
+        },
+        {
+          "start": 16.19,
+          "end": 23.45,
+          "text": "2 ちょっとテレビの音を小さくしてください"
+        },
+        {
+          "start": 23.45,
+          "end": 28.93,
+          "text": "3 ちょっとテレビを見ましょう"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track074": {
+      "sha256": "74be745d8d9ab593332e6d3dc31505ed727206fb86012ecf6fac233c3902e31c",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 58.1,
+      "segments": [
+        {
+          "start": 3.02,
+          "end": 9.15,
+          "text": "問題4 問題4は絵などがありません"
+        },
+        {
+          "start": 9.15,
+          "end": 24.24,
+          "text": "文を聞いて1から3の中から一番 いいものを一つ選んでください"
+        },
+        {
+          "start": 24.24,
+          "end": 31.96,
+          "text": "一番 すみません10分くらい待ってください"
+        },
+        {
+          "start": 31.96,
+          "end": 39.0,
+          "text": "1 a いいですか"
+        },
+        {
+          "start": 39.0,
+          "end": 46.08,
+          "text": "2 a いいですよ"
+        },
+        {
+          "start": 46.08,
+          "end": 52.02,
+          "text": "3 a いいですね"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track058": {
+      "sha256": "d0bbae6186f85244a800f57b0b9c7361b91a64e3d7e1000f2f2e1260500552eb",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 54.92,
+      "segments": [
+        {
+          "start": 2.74,
+          "end": 8.95,
+          "text": "3番 先生が学生に話しています"
+        },
+        {
+          "start": 8.95,
+          "end": 12.95,
+          "text": "これから学生はどの順番でしますか"
+        },
+        {
+          "start": 12.95,
+          "end": 16.4,
+          "text": "今から紙芝居を作ります"
+        },
+        {
+          "start": 16.4,
+          "end": 19.5,
+          "text": "先生紙芝居は何ですか"
+        },
+        {
+          "start": 19.5,
+          "end": 22.53,
+          "text": "はじめにお話を考えてください"
+        },
+        {
+          "start": 22.53,
+          "end": 26.04,
+          "text": "それからこの紙に絵を描いて"
+        },
+        {
+          "start": 26.04,
+          "end": 29.65,
+          "text": "後ろにお話を描いてください"
+        },
+        {
+          "start": 29.65,
+          "end": 31.65,
+          "text": "絵とお話を描いた後で"
+        },
+        {
+          "start": 35.22,
+          "end": 47.02,
+          "text": "いいですかはい これから学生はどの順番でしますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track008": {
+      "sha256": "9a2ff84adc183c32a223ee4a84408323c62b731f4ce3318c7375b90d66b4f7fc",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 37.54,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 9.34,
+          "text": "5日目、なんと言いますか? 例をしましょう"
+        },
+        {
+          "start": 9.34,
+          "end": 17.45,
+          "text": "これからご飯を食べます 何と言いますか?"
+        },
+        {
+          "start": 17.45,
+          "end": 20.83,
+          "text": "1 どういたしまして?"
+        },
+        {
+          "start": 20.83,
+          "end": 26.97,
+          "text": "2 いただきます"
+        },
+        {
+          "start": 26.97,
+          "end": 30.48,
+          "text": "3 ごちそうさまでした"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track061": {
+      "sha256": "37c81380a1a3cab5551ce526e5922de57d616fdfef0568507d84667dd7385d7e",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 54.92,
+      "segments": [
+        {
+          "start": 2.67,
+          "end": 8.88,
+          "text": "6番 教室で先生が話しています"
+        },
+        {
+          "start": 8.88,
+          "end": 18.41,
+          "text": "この学生は机の上に何を置きますか 今からテストをしますから机の上のものは"
+        },
+        {
+          "start": 18.41,
+          "end": 24.57,
+          "text": "鞄に入れてください 先生鉛筆と消しゴムも鞄に入れますか"
+        },
+        {
+          "start": 24.57,
+          "end": 33.85,
+          "text": "いいえそれは机の上に置いてください 先生時計は時計はいいですが"
+        },
+        {
+          "start": 32.61,
+          "end": 46.95,
+          "text": "携帯電話はダメですよ はいわかりましたこの学生は机の上に何を置きますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track022": {
+      "sha256": "da878f36e1f9a0841814d53426d42771e5a5e652a32c8e24e5c718d1d5553f6c",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 38.32,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 10.85,
+          "text": "2番 教室で話しています 先生の質問がわかりません"
+        },
+        {
+          "start": 10.85,
+          "end": 17.71,
+          "text": "先生に何と言いますか 1"
+        },
+        {
+          "start": 17.71,
+          "end": 22.88,
+          "text": "もう一度ください 2"
+        },
+        {
+          "start": 22.88,
+          "end": 28.52,
+          "text": "もう一度言いませんか 3"
+        },
+        {
+          "start": 28.52,
+          "end": 32.24,
+          "text": "もう一度お願いします"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track066": {
+      "sha256": "5b633e0ce72ab1b7cf2e0d9689d03783ab1832722236ab98a3a4232583e0e996",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 57.19,
+      "segments": [
+        {
+          "start": 2.77,
+          "end": 3.77,
+          "text": "4番"
+        },
+        {
+          "start": 3.77,
+          "end": 8.18,
+          "text": "男の人と女の人が話しています"
+        },
+        {
+          "start": 8.18,
+          "end": 14.82,
+          "text": "女の人は毎日何時間インターネットをしますか?"
+        },
+        {
+          "start": 14.82,
+          "end": 18.21,
+          "text": "あー疲れた"
+        },
+        {
+          "start": 18.21,
+          "end": 20.21,
+          "text": "朝から元気がないね"
+        },
+        {
+          "start": 20.21,
+          "end": 23.21,
+          "text": "昨日の晩遅くまでゲームをしていたから"
+        },
+        {
+          "start": 23.21,
+          "end": 24.21,
+          "text": "うん"
+        },
+        {
+          "start": 24.21,
+          "end": 26.21,
+          "text": "いつもは3時間くらいだけど"
+        },
+        {
+          "start": 26.21,
+          "end": 30.21,
+          "text": "昨日は5時間やったからちょっと疲れたよ"
+        },
+        {
+          "start": 30.21,
+          "end": 31.21,
+          "text": "そう"
+        },
+        {
+          "start": 31.14,
+          "end": 36.9,
+          "text": "私も毎日2時間くらいインターネットするけど ゲームは全然しない"
+        },
+        {
+          "start": 36.9,
+          "end": 49.28,
+          "text": "そう面白いよ 女の人は毎日何時間インターネットをしますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track062": {
+      "sha256": "c0575b47702193c1a1adede5161c445fedd5d61243910b169536895b804a9dcb",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 59.9,
+      "segments": [
+        {
+          "start": 2.7,
+          "end": 4.82,
+          "text": "七番"
+        },
+        {
+          "start": 4.82,
+          "end": 9.51,
+          "text": "男の人と女の人が話しています"
+        },
+        {
+          "start": 9.51,
+          "end": 15.76,
+          "text": "男の人は女の人といつ、どこへ行きますか?"
+        },
+        {
+          "start": 15.76,
+          "end": 20.88,
+          "text": "鈴木さん、僕、明日友達と山へ行きますが"
+        },
+        {
+          "start": 20.88,
+          "end": 22.76,
+          "text": "一緒に行きませんか?"
+        },
+        {
+          "start": 22.76,
+          "end": 25.24,
+          "text": "とても綺麗な山ですよ"
+        },
+        {
+          "start": 25.24,
+          "end": 30.62,
+          "text": "すみません、明日は山田さんとコンサートに行きますから"
+        },
+        {
+          "start": 30.62,
+          "end": 33.92,
+          "text": "そうですか、残念だな"
+        },
+        {
+          "start": 34.22,
+          "end": 39.22,
+          "text": "じゃあ、あさっての日曜日に一緒に食事をしましょう。"
+        },
+        {
+          "start": 39.22,
+          "end": 50.36,
+          "text": "ええ、じゃああさって。男の人は女の人と、いつどこへ行きますか?"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track057": {
+      "sha256": "96afa4ceff0f14d5d045c597af0f808440253a73728e70ea24b853cd398e05cc",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 60.4,
+      "segments": [
+        {
+          "start": 2.83,
+          "end": 4.65,
+          "text": "2番"
+        },
+        {
+          "start": 4.65,
+          "end": 9.37,
+          "text": "男の人と女の人が話しています"
+        },
+        {
+          "start": 9.37,
+          "end": 10.77,
+          "text": "日曜日"
+        },
+        {
+          "start": 10.77,
+          "end": 16.3,
+          "text": "女の人は海へ行く前に何をしますか?"
+        },
+        {
+          "start": 16.3,
+          "end": 17.5,
+          "text": "日曜日"
+        },
+        {
+          "start": 17.5,
+          "end": 20.52,
+          "text": "僕の車で海へ行きませんか?"
+        },
+        {
+          "start": 20.52,
+          "end": 23.36,
+          "text": "インターネットでいいところがありましたから"
+        },
+        {
+          "start": 23.36,
+          "end": 24.64,
+          "text": "いいですね"
+        },
+        {
+          "start": 24.64,
+          "end": 27.8,
+          "text": "じゃあ私お弁当作りますね"
+        },
+        {
+          "start": 27.8,
+          "end": 29.16,
+          "text": "飲み物も"
+        },
+        {
+          "start": 29.16,
+          "end": 30.4,
+          "text": "ああ"
+        },
+        {
+          "start": 30.4,
+          "end": 31.84,
+          "text": "お弁当ですか"
+        },
+        {
+          "start": 31.84,
+          "end": 33.36,
+          "text": "嬉しいな"
+        },
+        {
+          "start": 33.71,
+          "end": 44.8,
+          "text": "でも飲み物は重いですからいいですよ そうですかじゃあそうします"
+        },
+        {
+          "start": 44.8,
+          "end": 52.4,
+          "text": "日曜日 女の人は海へ行く前に何をしますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track069": {
+      "sha256": "adeb8c9da59badb6c526f4e9b7cf460256ed73bfcebc2d873d6b3381fe00645f",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 64.68,
+      "segments": [
+        {
+          "start": 3.06,
+          "end": 13.43,
+          "text": "問題3 問題3では絵を見ながら質問を聞いてください"
+        },
+        {
+          "start": 13.43,
+          "end": 26.82,
+          "text": "矢印の人は何と言いますか 一から三の中から一番いいものを一つ選んでください"
+        },
+        {
+          "start": 26.82,
+          "end": 32.99,
+          "text": "一番 会社の人と一緒に旅行に行きたいです"
+        },
+        {
+          "start": 32.99,
+          "end": 41.17,
+          "text": "会社の人に何と言いますか 一"
+        },
+        {
+          "start": 45.52,
+          "end": 50.03,
+          "text": "2 一緒に行きましたか?"
+        },
+        {
+          "start": 50.03,
+          "end": 57.4,
+          "text": "3 一緒に行きたいですか?"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track063": {
+      "sha256": "5cf832a7dd119694d1b68a1152289ef70c2238abe5daa949eaf21d26d86b2fee",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 72.73,
+      "segments": [
+        {
+          "start": 2.64,
+          "end": 11.27,
+          "text": "問題2 問題2では初めに質問を聞いてください"
+        },
+        {
+          "start": 11.27,
+          "end": 27.3,
+          "text": "それから話を聞いて問題用紙の 1から4の中から一番いいものを一つ選んでください"
+        },
+        {
+          "start": 27.3,
+          "end": 33.78,
+          "text": "一番 デパートで男の人と女の人が話しています"
+        },
+        {
+          "start": 33.78,
+          "end": 39.8,
+          "text": "女の人はどのカバンを買いますか"
+        },
+        {
+          "start": 39.31,
+          "end": 44.69,
+          "text": "この白いカバンどう 白はちょっとねー"
+        },
+        {
+          "start": 44.69,
+          "end": 49.48,
+          "text": "この黒いのは 黒いのはうちにあるから"
+        },
+        {
+          "start": 49.48,
+          "end": 53.75,
+          "text": "もう少し大きいカバンがいいな じゃあ"
+        },
+        {
+          "start": 53.75,
+          "end": 59.41,
+          "text": "これかな そうね"
+        },
+        {
+          "start": 59.41,
+          "end": 64.65,
+          "text": "女の人はどのカバンを買いますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track023": {
+      "sha256": "33ab5368eed07986029bfbfd7dc68ac7520cd0b29eba6e1eead81aa2d9fb733b",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 49.08,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 5.34,
+          "text": "問題4 問題4は"
+        },
+        {
+          "start": 5.34,
+          "end": 10.98,
+          "text": "絵などがありません 文を聞いて"
+        },
+        {
+          "start": 10.98,
+          "end": 21.29,
+          "text": "1から3の中から1番いいものを 一つ選んでください"
+        },
+        {
+          "start": 21.29,
+          "end": 28.22,
+          "text": "1番 それは何の雑誌ですか"
+        },
+        {
+          "start": 28.22,
+          "end": 33.5,
+          "text": "1 車の雑誌です"
+        },
+        {
+          "start": 38.16,
+          "end": 43.28,
+          "text": "3 面白い雑誌です"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track012": {
+      "sha256": "f00f8aa227217dd08fa90a4963cf311437db20c5a01dcaa0aa5d0b7a95ae93f0",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 49.89,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.27,
+          "text": "練習 この問題は"
+        },
+        {
+          "start": 4.27,
+          "end": 10.18,
+          "text": "絵などがありません 文を聞いて"
+        },
+        {
+          "start": 10.18,
+          "end": 15.94,
+          "text": "1から3の中から 1番いいものを"
+        },
+        {
+          "start": 15.94,
+          "end": 23.7,
+          "text": "1つ選んでください 1番"
+        },
+        {
+          "start": 23.7,
+          "end": 30.29,
+          "text": "田中さんは兄弟がいますか 1"
+        },
+        {
+          "start": 30.29,
+          "end": 35.3,
+          "text": "母と一緒にいます 2"
+        },
+        {
+          "start": 39.15,
+          "end": 40.15,
+          "text": "3"
+        },
+        {
+          "start": 40.77,
+          "end": 42.57,
+          "text": "誰もありません"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track056": {
+      "sha256": "a374a2fd7628171eadf6df1d27206fc32f732450d2e13856b5ad5d2081b08f42",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 74.58,
+      "segments": [
+        {
+          "start": 3.09,
+          "end": 10.94,
+          "text": "問題1 問題1では初めに質問を聞いてください"
+        },
+        {
+          "start": 10.94,
+          "end": 22.4,
+          "text": "それから話を聞いて 問題用紙の1から4の中から一番いいものを一つ選んでください"
+        },
+        {
+          "start": 22.4,
+          "end": 36.04,
+          "text": "一番 男の人と女の人が話しています"
+        },
+        {
+          "start": 36.04,
+          "end": 40.84,
+          "text": "男の人はこの後すぐ何をしますか"
+        },
+        {
+          "start": 41.26,
+          "end": 43.26,
+          "text": "何か手伝いましょうか?"
+        },
+        {
+          "start": 43.26,
+          "end": 51.26,
+          "text": "ありがとう。じゃあ、部屋を掃除してこのお皿を洗ってリンゴを切って、それからジュースを買いに…"
+        },
+        {
+          "start": 51.26,
+          "end": 54.26,
+          "text": "え?それはちょっと…"
+        },
+        {
+          "start": 54.26,
+          "end": 65.34,
+          "text": "じゃあ掃除お願いします。男の人はこの後すぐ何をしますか?"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track007": {
+      "sha256": "f46944dbc191b3b321d296ef0a0e31b59a46a289b5cac3907ac2dd6912c86b84",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 57.6,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 8.3,
+          "text": "2番 男の人と女の人が話しています"
+        },
+        {
+          "start": 8.3,
+          "end": 19.87,
+          "text": "女の人は誰と買い物に行きましたか 昨日は何をしましたか"
+        },
+        {
+          "start": 19.87,
+          "end": 28.75,
+          "text": "妹と買い物に行きました 弟の誕生日のプレゼントを買いました"
+        },
+        {
+          "start": 34.18,
+          "end": 37.84,
+          "text": "三人ですか いいえ"
+        },
+        {
+          "start": 37.84,
+          "end": 51.67,
+          "text": "兄もいます 女の人は誰と買い物に行きましたか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track021": {
+      "sha256": "80e300906ac11df60d94e3f89048ab04d349fbdb2065eeb58e3059c2dda77df7",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 60.45,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 5.53,
+          "text": "問題3 問題3では"
+        },
+        {
+          "start": 5.53,
+          "end": 13.54,
+          "text": "絵を見ながら質問を聞いてください 矢印の人は"
+        },
+        {
+          "start": 13.54,
+          "end": 19.61,
+          "text": "なんと言いますか 1から3の中から"
+        },
+        {
+          "start": 19.61,
+          "end": 29.3,
+          "text": "一番いいものを一つ選んでください 1番"
+        },
+        {
+          "start": 34.93,
+          "end": 38.93,
+          "text": "女の人に、何と言いますか?"
+        },
+        {
+          "start": 38.93,
+          "end": 41.4,
+          "text": "1"
+        },
+        {
+          "start": 41.4,
+          "end": 43.25,
+          "text": "どうぞ"
+        },
+        {
+          "start": 43.25,
+          "end": 45.69,
+          "text": "2"
+        },
+        {
+          "start": 45.69,
+          "end": 47.67,
+          "text": "お大事に"
+        },
+        {
+          "start": 47.67,
+          "end": 51.06,
+          "text": "3"
+        },
+        {
+          "start": 51.06,
+          "end": 53.06,
+          "text": "お先に失礼します"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track009": {
+      "sha256": "47f2ecb808335314cc0e75bb0a2b06845685a1b1211039f1acf952fa9a608665",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 60.66,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 10.26,
+          "text": "練習 この問題では絵を見ながら質問を聞いてください"
+        },
+        {
+          "start": 10.26,
+          "end": 26.28,
+          "text": "矢印の人は何と言いますか 1から3の中から1番いいものを1つ選んでください"
+        },
+        {
+          "start": 26.28,
+          "end": 31.36,
+          "text": "1番 消しゴムがありません"
+        },
+        {
+          "start": 32.96,
+          "end": 36.79,
+          "text": "何と言いますか?"
+        },
+        {
+          "start": 36.79,
+          "end": 38.48,
+          "text": "1"
+        },
+        {
+          "start": 38.48,
+          "end": 43.07,
+          "text": "消しゴム使いましょうか?"
+        },
+        {
+          "start": 43.07,
+          "end": 44.53,
+          "text": "2"
+        },
+        {
+          "start": 44.53,
+          "end": 49.0,
+          "text": "消しゴム買いませんか?"
+        },
+        {
+          "start": 49.0,
+          "end": 50.64,
+          "text": "3"
+        },
+        {
+          "start": 50.64,
+          "end": 53.44,
+          "text": "消しゴム貸してください"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track002": {
+      "sha256": "3065d736fd99be517da5523e6780a002eb086c3b09eab35f24a930da4a3e9473",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 61.41,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 9.42,
+          "text": "3日目どれですか 例をしましょう"
+        },
+        {
+          "start": 9.42,
+          "end": 22.96,
+          "text": "女の人と店の人が話しています 女の人はどのTシャツを買いますか"
+        },
+        {
+          "start": 22.96,
+          "end": 28.1,
+          "text": "すみません これは白いのだけですか"
+        },
+        {
+          "start": 28.1,
+          "end": 33.72,
+          "text": "黒いのがありますか 黒いのもありますよ"
+        },
+        {
+          "start": 36.11,
+          "end": 49.07,
+          "text": "日本語がありますがどちらがいいですか 英語のおください"
+        },
+        {
+          "start": 49.07,
+          "end": 55.59,
+          "text": "女の人はどのTシャツを買いますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track017": {
+      "sha256": "8b442a0553a485a670cf38bc1eb209cd402d63bb7e07cfdee4f37511d0d210ec",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 63.87,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 7.98,
+          "text": "2番 男の人と女の人が話しています"
+        },
+        {
+          "start": 7.98,
+          "end": 15.32,
+          "text": "男の人は 何番線の電車に乗りますか"
+        },
+        {
+          "start": 15.32,
+          "end": 22.17,
+          "text": "すみません この電車は大山駅へ行きますか"
+        },
+        {
+          "start": 22.17,
+          "end": 29.02,
+          "text": "いえ 大山駅へ行く電車は3番線と4番線です"
+        },
+        {
+          "start": 34.18,
+          "end": 40.07,
+          "text": "5番線から出ます 階段を上がって向こうのホームですよ"
+        },
+        {
+          "start": 40.07,
+          "end": 51.23,
+          "text": "ああはい わかりましたありがとうございます"
+        },
+        {
+          "start": 51.23,
+          "end": 57.78,
+          "text": "男の人は 何番線の電車に乗りますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track004": {
+      "sha256": "6fe26a0c5a67a2504f01a12f2ac7ddab9a2f132990b61f54a54be2a93952a0c4",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 67.13,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 16.18,
+          "text": "2番会社で男の人と女の人が話しています 来週何番の部屋で会議をしますか"
+        },
+        {
+          "start": 16.18,
+          "end": 22.62,
+          "text": "来週の会議はどの部屋でしますか そうですね"
+        },
+        {
+          "start": 22.62,
+          "end": 31.62,
+          "text": "3番と4番の部屋はちょっと小さいですから 他の部屋がいいですね"
+        },
+        {
+          "start": 33.41,
+          "end": 43.36,
+          "text": "この会議は3時からですね 1番と5番の部屋は同じ時間で他の会議がありますから"
+        },
+        {
+          "start": 43.36,
+          "end": 54.46,
+          "text": "2番ですね じゃあ予約をお願いします"
+        },
+        {
+          "start": 54.46,
+          "end": 61.3,
+          "text": "来週何番の部屋で会議をしますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track019": {
+      "sha256": "b4777d2900b889939895cd1c9ed7d92a921156ad824be2977eefcd7e3b82edda",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 70.74,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.29,
+          "text": "2番 女の先生と"
+        },
+        {
+          "start": 4.29,
+          "end": 15.3,
+          "text": "男の学生が話しています 女の先生の住所はどれですか"
+        },
+        {
+          "start": 15.3,
+          "end": 22.99,
+          "text": "事務さん念画状をありがとう でもちょっと遅くきました"
+        },
+        {
+          "start": 22.99,
+          "end": 30.66,
+          "text": "住所がちょっと間違っていましたから 1の5の13じゃなくて"
+        },
+        {
+          "start": 34.1,
+          "end": 45.02,
+          "text": "え、あ、今書きます。 えっと、1の5じゃなくて、1の…"
+        },
+        {
+          "start": 45.02,
+          "end": 48.98,
+          "text": "3の15です。"
+        },
+        {
+          "start": 48.98,
+          "end": 58.62,
+          "text": "わかりました。すみませんでした。"
+        },
+        {
+          "start": 58.62,
+          "end": 63.62,
+          "text": "女の先生の重症はどれですか?"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track020": {
+      "sha256": "cd8aafab53c2de696c84c7ce821d32bed5ae0e28b7f8efd90aa7e11073138f5f",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 71.6,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 5.97,
+          "text": "3番 男の人と女の人が"
+        },
+        {
+          "start": 5.97,
+          "end": 15.64,
+          "text": "電話で話しています 男の人はどこで待ちますか"
+        },
+        {
+          "start": 15.64,
+          "end": 19.33,
+          "text": "もしもし あ田中です"
+        },
+        {
+          "start": 19.33,
+          "end": 27.78,
+          "text": "今駅に着きました はいじゃあ今から車で行きますから"
+        },
+        {
+          "start": 34.19,
+          "end": 36.42,
+          "text": "コンビニのお前です。"
+        },
+        {
+          "start": 36.42,
+          "end": 38.7,
+          "text": "あ、そう。"
+        },
+        {
+          "start": 38.7,
+          "end": 48.31,
+          "text": "あ、えっと、そこはバスが止まりますから、パン屋さんのお前がいいですね。銀行の隣の。"
+        },
+        {
+          "start": 48.31,
+          "end": 59.71,
+          "text": "パン屋さん。あ、はい。わかりました。"
+        },
+        {
+          "start": 59.71,
+          "end": 64.87,
+          "text": "男の人は、どこで待ちますか?"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:intensive-n5:Track068": {
+      "sha256": "4366007ea16343f7ca0f16ceed42769fd9a12e0189f57d2354590a427520346a",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 106.48,
+      "segments": [
+        {
+          "start": 2.67,
+          "end": 7.02,
+          "text": "6番 女の人が電話で"
+        },
+        {
+          "start": 7.02,
+          "end": 17.94,
+          "text": "男の人に住所を聞いています 正しい住所はどれですか"
+        },
+        {
+          "start": 17.94,
+          "end": 25.94,
+          "text": "もしもしそちらの住所ですが 東町1の12の12ですよね"
+        },
+        {
+          "start": 25.94,
+          "end": 30.37,
+          "text": "いえ 東町じゃなくて西町です"
+        },
+        {
+          "start": 30.37,
+          "end": 34.79,
+          "text": "西町の1の12の13です"
+        },
+        {
+          "start": 36.48,
+          "end": 48.52,
+          "text": "西町の1の12の13ですね はいそうですありがとうございました"
+        },
+        {
+          "start": 48.52,
+          "end": 99.9,
+          "text": "正しい住所はどれですか ここでちょっと休みましょう"
+        },
+        {
+          "start": 99.9,
+          "end": 103.66,
+          "text": "ではまた続けます"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track005": {
+      "sha256": "8fabdf92ba36eaaf284e4ce1d130bfdea5eb547bdd214401e471cb7f80941ffa",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 75.57,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 8.95,
+          "text": "4日目どうしてですか 例をしましょう"
+        },
+        {
+          "start": 8.95,
+          "end": 17.14,
+          "text": "学校で男の学生と女の学生が話しています"
+        },
+        {
+          "start": 17.14,
+          "end": 28.89,
+          "text": "男の学生はお弁当をどこで買いますか 今日は天気がいいですね"
+        },
+        {
+          "start": 28.89,
+          "end": 36.52,
+          "text": "お昼ごはんは公園で食べましょう いいですね"
+        },
+        {
+          "start": 35.38,
+          "end": 40.39,
+          "text": "お弁当を買いに、スーパーへ行きませんか?"
+        },
+        {
+          "start": 40.39,
+          "end": 45.89,
+          "text": "私は、けさ、駅前のパン屋でサンドイッチを買いました。"
+        },
+        {
+          "start": 45.89,
+          "end": 50.87,
+          "text": "お弁当、公園の中でも売っていますよ。"
+        },
+        {
+          "start": 50.87,
+          "end": 62.04,
+          "text": "そうですか。じゃあ、そこで買います。"
+        },
+        {
+          "start": 62.04,
+          "end": 68.11,
+          "text": "男の学生は、お弁当をどこで買いますか?"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track018": {
+      "sha256": "c689daf7f1acd74bfaed0895aa72b5c1e8ffee3920fdbbf6041d8576ce6dd777",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 84.77,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 10.41,
+          "text": "問題2 問題2では初めに質問を聞いてください"
+        },
+        {
+          "start": 10.41,
+          "end": 24.68,
+          "text": "それから話を聞いて1から4の中から 一番いいものを一つ選んでください"
+        },
+        {
+          "start": 33.65,
+          "end": 41.28,
+          "text": "女の学生は、明日、どこへ行きますか?"
+        },
+        {
+          "start": 41.28,
+          "end": 48.73,
+          "text": "たんさん、明日か、あさって、一緒に映画に行きませんか?"
+        },
+        {
+          "start": 48.73,
+          "end": 62.82,
+          "text": "あ、明日は、兄と空港へ行きます。両親が帯から来ますから。それで、あさっては、みんなで京都へ行きます。"
+        },
+        {
+          "start": 62.82,
+          "end": 65.91,
+          "text": "そうですか。楽しみですね。"
+        },
+        {
+          "start": 71.41,
+          "end": 77.5,
+          "text": "女の学生は、明日、どこへ行きますか?"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track006": {
+      "sha256": "1fff498ae7d6064afa53fbe2e83b6a9bbe1f4eff9e95197de8c9acf9d4cd4df1",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 84.79,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.29,
+          "text": "練習 この問題では"
+        },
+        {
+          "start": 4.29,
+          "end": 9.46,
+          "text": "はじめに 質問を聞いてください"
+        },
+        {
+          "start": 9.46,
+          "end": 16.77,
+          "text": "それから話を聞いて 1から4の中から"
+        },
+        {
+          "start": 16.77,
+          "end": 24.46,
+          "text": "一番いいものを 一つ選んでください"
+        },
+        {
+          "start": 24.46,
+          "end": 28.89,
+          "text": "一番 男の学生と"
+        },
+        {
+          "start": 33.1,
+          "end": 40.1,
+          "text": "男の学生はディズニーランドに何回行きましたか?"
+        },
+        {
+          "start": 40.1,
+          "end": 46.96,
+          "text": "昨日初めてディズニーランドへ行きました。"
+        },
+        {
+          "start": 46.96,
+          "end": 52.92,
+          "text": "そうですか。私は3回行きました。"
+        },
+        {
+          "start": 52.92,
+          "end": 58.5,
+          "text": "リンソンはもう4回行きましたよ。どうでしたか?"
+        },
+        {
+          "start": 58.5,
+          "end": 64.55,
+          "text": "とても楽しかったです。また行きたいです。"
+        },
+        {
+          "start": 72.62,
+          "end": 77.62,
+          "text": "ディズニーランドに何回行きましたか?"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track003": {
+      "sha256": "79fb9a92d30c36ade1cfff3f60b5f87cceb2a5bfd99ac87458b4dc0fb2272b7d",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 86.94,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.64,
+          "text": "練習 この問題では"
+        },
+        {
+          "start": 4.64,
+          "end": 10.31,
+          "text": "はじめに 質問を聞いてください"
+        },
+        {
+          "start": 10.31,
+          "end": 17.31,
+          "text": "それから話を聞いて 1から4の中から"
+        },
+        {
+          "start": 17.31,
+          "end": 24.72,
+          "text": "一番いいものを 一つ選んでください"
+        },
+        {
+          "start": 24.72,
+          "end": 32.9,
+          "text": "一番 男の人と女の人が話しています"
+        },
+        {
+          "start": 32.69,
+          "end": 41.81,
+          "text": "二人は、これから何をしますか? たくさん本を買いましたね。"
+        },
+        {
+          "start": 41.81,
+          "end": 52.21,
+          "text": "はい、思いです。 映画の前に何か食べませんか?お腹がすきました。"
+        },
+        {
+          "start": 52.21,
+          "end": 60.16,
+          "text": "映画は6時からですよ。 今5時40分です。早く行きましょう。"
+        },
+        {
+          "start": 60.16,
+          "end": 64.73,
+          "text": "あ、そこでチョコレートを買ってから行きましょう。"
+        },
+        {
+          "start": 64.73,
+          "end": 66.23,
+          "text": "そうですね。"
+        },
+        {
+          "start": 66.48,
+          "end": 81.05,
+          "text": "ごはんは映画の後ですね 二人はこれから何をしますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track016": {
+      "sha256": "62ead68d696ea2df081f3abbf86192a669bc8bcf3a234e854668056ae937c04d",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 102.14,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 8.83,
+          "text": "7日目まとめ問題 問題1"
+        },
+        {
+          "start": 8.83,
+          "end": 19.91,
+          "text": "問題1では初めに質問を聞いてください それから話を聞いて"
+        },
+        {
+          "start": 19.91,
+          "end": 30.68,
+          "text": "1から4の中から1番いいものを 1つ選んでください"
+        },
+        {
+          "start": 30.68,
+          "end": 34.96,
+          "text": "1番 クラスで"
+        },
+        {
+          "start": 33.98,
+          "end": 45.18,
+          "text": "先生が話しています 学生は何を持って外へ出ますか"
+        },
+        {
+          "start": 45.18,
+          "end": 55.22,
+          "text": "今から家事の時の練習をします アナウンスがあったらみんなで一緒に外へ出ます"
+        },
+        {
+          "start": 55.22,
+          "end": 67.16,
+          "text": "ノートや本などは持たないで 財布だけ持って早く外へ出ます"
+        },
+        {
+          "start": 67.16,
+          "end": 71.91,
+          "text": "家事です 外へ出てください"
+        },
+        {
+          "start": 70.54,
+          "end": 74.67,
+          "text": "これは練習です 家事です"
+        },
+        {
+          "start": 74.67,
+          "end": 79.61,
+          "text": "外へ出てください さあ早く"
+        },
+        {
+          "start": 79.61,
+          "end": 96.24,
+          "text": "あ外は寒いですから上着は持って 学生は何を持って外へ出ますか"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "workbook:somatome-n5-2017:Track001": {
+      "sha256": "37270e37e20fdfcde07110f389144696061a92322cb72bba2f80ce4db6588b3a",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 180.64,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 5.18,
+          "text": "1日目 準備をしましょう"
+        },
+        {
+          "start": 5.18,
+          "end": 12.94,
+          "text": "1 1 初めて会った時"
+        },
+        {
+          "start": 12.94,
+          "end": 18.26,
+          "text": "はじめまして どうぞよろしくお願いします"
+        },
+        {
+          "start": 18.26,
+          "end": 28.17,
+          "text": "よろしくお願いします 2 毎日の挨拶"
+        },
+        {
+          "start": 28.17,
+          "end": 37.95,
+          "text": "おはようございます こんにちは こんばんは おやすみなさい"
+        },
+        {
+          "start": 39.5,
+          "end": 43.2,
+          "text": "分かれるとき"
+        },
+        {
+          "start": 43.2,
+          "end": 44.7,
+          "text": "さようなら"
+        },
+        {
+          "start": 44.7,
+          "end": 46.87,
+          "text": "じゃあまた"
+        },
+        {
+          "start": 46.87,
+          "end": 50.02,
+          "text": "また明日"
+        },
+        {
+          "start": 50.02,
+          "end": 52.73,
+          "text": "おやすみなさい"
+        },
+        {
+          "start": 52.73,
+          "end": 54.8,
+          "text": "お元気で"
+        },
+        {
+          "start": 54.8,
+          "end": 57.84,
+          "text": "お大事に"
+        },
+        {
+          "start": 57.84,
+          "end": 66.02,
+          "text": "4. 会社や仕事先から帰るとき"
+        },
+        {
+          "start": 66.02,
+          "end": 69.22,
+          "text": "お先に失礼します"
+        },
+        {
+          "start": 69.22,
+          "end": 72.22,
+          "text": "失礼します"
+        },
+        {
+          "start": 72.22,
+          "end": 76.7,
+          "text": "5. 何かをあげるとき"
+        },
+        {
+          "start": 76.7,
+          "end": 80.72,
+          "text": "何かをすすめるとき"
+        },
+        {
+          "start": 82.38,
+          "end": 85.06,
+          "text": "お茶をどうぞ。"
+        },
+        {
+          "start": 85.06,
+          "end": 87.5,
+          "text": "ありがとうございます。"
+        },
+        {
+          "start": 87.5,
+          "end": 88.5,
+          "text": "どうぞ。"
+        },
+        {
+          "start": 88.5,
+          "end": 92.46,
+          "text": "どうも。"
+        },
+        {
+          "start": 92.46,
+          "end": 94.06,
+          "text": "ろく。"
+        },
+        {
+          "start": 94.06,
+          "end": 97.06,
+          "text": "なにかを頼むとき。"
+        },
+        {
+          "start": 97.06,
+          "end": 101.18,
+          "text": "お願いします。"
+        },
+        {
+          "start": 101.18,
+          "end": 104.62,
+          "text": "わかりました。"
+        },
+        {
+          "start": 104.62,
+          "end": 105.62,
+          "text": "なな。"
+        },
+        {
+          "start": 106.06,
+          "end": 110.63,
+          "text": "お礼を言うとき。"
+        },
+        {
+          "start": 110.63,
+          "end": 113.05,
+          "text": "ありがとうございます。"
+        },
+        {
+          "start": 113.05,
+          "end": 116.05,
+          "text": "いいえ、どういたしまして。"
+        },
+        {
+          "start": 116.72,
+          "end": 119.07,
+          "text": "ありがとうございます。"
+        },
+        {
+          "start": 119.07,
+          "end": 122.58,
+          "text": "どういたしまして。"
+        },
+        {
+          "start": 124.11,
+          "end": 126.11,
+          "text": "食事のとき"
+        },
+        {
+          "start": 126.11,
+          "end": 130.19,
+          "text": "いただきます"
+        },
+        {
+          "start": 130.19,
+          "end": 133.89,
+          "text": "ごちそうさまでした"
+        },
+        {
+          "start": 133.89,
+          "end": 134.89,
+          "text": "きゅう"
+        },
+        {
+          "start": 134.89,
+          "end": 138.87,
+          "text": "出かけるとき"
+        },
+        {
+          "start": 138.87,
+          "end": 141.16,
+          "text": "行ってきます"
+        },
+        {
+          "start": 141.16,
+          "end": 142.16,
+          "text": "いってらっしゃい"
+        },
+        {
+          "start": 142.16,
+          "end": 144.7,
+          "text": "じゅう"
+        },
+        {
+          "start": 144.7,
+          "end": 147.05,
+          "text": "かえったとき"
+        },
+        {
+          "start": 147.05,
+          "end": 150.9,
+          "text": "ただいま"
+        },
+        {
+          "start": 150.9,
+          "end": 154.31,
+          "text": "おかえりなさい"
+        },
+        {
+          "start": 154.31,
+          "end": 155.31,
+          "text": "じゅういち"
+        },
+        {
+          "start": 155.31,
+          "end": 157.92,
+          "text": "店などで"
+        },
+        {
+          "start": 157.92,
+          "end": 162.03,
+          "text": "いらっしゃいませ"
+        },
+        {
+          "start": 162.03,
+          "end": 164.03,
+          "text": "ありがとうございました"
+        },
+        {
+          "start": 164.03,
+          "end": 166.73,
+          "text": "じゅうに"
+        },
+        {
+          "start": 166.73,
+          "end": 169.24,
+          "text": "あやまるとき"
+        },
+        {
+          "start": 171.28,
+          "end": 177.72,
+          "text": "すみません。ごめんなさい。失礼しました。"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "exam:n5-2018:recording": {
+      "sha256": "417d524aa0490a060b725c5c7ca1dfe80e160650c24daae4760a1afc60776762",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 1742.63,
+      "segments": [
+        {
+          "start": 1.52,
+          "end": 13.86,
+          "text": "日本語能力試験、聴解、N5。これから、N5の聴解試験を始めます。"
+        },
+        {
+          "start": 13.86,
+          "end": 19.16,
+          "text": "問題用紙に、目も取ってもいいです。"
+        },
+        {
+          "start": 19.16,
+          "end": 30.06,
+          "text": "問題用紙を開けてください。問題用紙のページがない時は、手を挙げてください。"
+        },
+        {
+          "start": 30.06,
+          "end": 36.96,
+          "text": "問題がよく見えない時も、手を挙げてください。"
+        },
+        {
+          "start": 37.74,
+          "end": 54.5,
+          "text": "いつでもいいです。問題1、問題1では、初めに質問を聞いてください。"
+        },
+        {
+          "start": 54.5,
+          "end": 71.88,
+          "text": "それから話を聞いて、問題用紙の1から4の中から、一番いいものを一つ選んでください。"
+        },
+        {
+          "start": 71.88,
+          "end": 80.92,
+          "text": "では、練習しましょう。"
+        },
+        {
+          "start": 86.03,
+          "end": 97.72,
+          "text": "学生は今日うちでどこを勉強しますか では今日は20ページまで終わりましたから"
+        },
+        {
+          "start": 97.72,
+          "end": 102.87,
+          "text": "21ページは宿題ですね 全部ですか"
+        },
+        {
+          "start": 102.87,
+          "end": 115.4,
+          "text": "いえ21ページの1番です 2番はクラスでします"
+        },
+        {
+          "start": 115.4,
+          "end": 123.65,
+          "text": "学生は今日うちでどこを勉強しますか"
+        },
+        {
+          "start": 122.29,
+          "end": 135.62,
+          "text": "一番いいものは、三番です。 回答用詞の問題一の例のところを見てください。"
+        },
+        {
+          "start": 135.62,
+          "end": 146.44,
+          "text": "一番いいものは、三番ですから。 答えは、このように書きます。"
+        },
+        {
+          "start": 146.44,
+          "end": 157.92,
+          "text": "では、はじめます。"
+        },
+        {
+          "start": 157.92,
+          "end": 158.92,
+          "text": "一番"
+        },
+        {
+          "start": 165.76,
+          "end": 170.62,
+          "text": "どこへ行きますか すみません"
+        },
+        {
+          "start": 170.62,
+          "end": 176.06,
+          "text": "喫茶店緑はどこですか 喫茶店緑ですね"
+        },
+        {
+          "start": 176.06,
+          "end": 179.74,
+          "text": "あそこに交差点がありますね はい"
+        },
+        {
+          "start": 179.74,
+          "end": 187.5,
+          "text": "あの交差点を左に曲がってください 道の左側に銀行があります"
+        },
+        {
+          "start": 187.5,
+          "end": 200.42,
+          "text": "喫茶店緑は銀行の隣ですよ わかりましたありがとうございます"
+        },
+        {
+          "start": 202.0,
+          "end": 222.07,
+          "text": "どこへ行きますか 2番会社で"
+        },
+        {
+          "start": 222.07,
+          "end": 233.62,
+          "text": "女の人と男の人が話しています 男の人はどの雑誌を女の人に渡しますか"
+        },
+        {
+          "start": 233.62,
+          "end": 240.0,
+          "text": "木村さんすみません 木村さんの後ろにある雑誌をとってください"
+        },
+        {
+          "start": 240.0,
+          "end": 245.6,
+          "text": "時計の雑誌ですか 車の雑誌ですか時計の雑誌です"
+        },
+        {
+          "start": 248.91,
+          "end": 258.54,
+          "text": "いいえ 7月のお願いします はい"
+        },
+        {
+          "start": 258.54,
+          "end": 279.27,
+          "text": "男の人は どの雑誌を女の人に渡しますか"
+        },
+        {
+          "start": 279.27,
+          "end": 285.47,
+          "text": "3番 学校で先生が話しています"
+        },
+        {
+          "start": 285.47,
+          "end": 293.01,
+          "text": "学生は次何日に学校に来ますか"
+        },
+        {
+          "start": 293.01,
+          "end": 297.22,
+          "text": "皆さん 明日から休みですね"
+        },
+        {
+          "start": 301.18,
+          "end": 306.06,
+          "text": "6日間です 通過はテストをします"
+        },
+        {
+          "start": 306.06,
+          "end": 312.58,
+          "text": "休まないでください では6日間ゆっくり休んで"
+        },
+        {
+          "start": 312.58,
+          "end": 323.1,
+          "text": "また学校に来てください 学生は次"
+        },
+        {
+          "start": 323.1,
+          "end": 343.3,
+          "text": "何日に学校に来ますか 4番"
+        },
+        {
+          "start": 343.3,
+          "end": 350.29,
+          "text": "うちで女の学生と男の学生が話しています"
+        },
+        {
+          "start": 352.26,
+          "end": 360.08,
+          "text": "冷蔵庫から何を出しますか あ12時ですね"
+        },
+        {
+          "start": 360.08,
+          "end": 365.61,
+          "text": "お昼ご飯を食べましょう 私が作りますよ"
+        },
+        {
+          "start": 365.61,
+          "end": 369.42,
+          "text": "何かしましょうか ありがとう"
+        },
+        {
+          "start": 369.42,
+          "end": 376.78,
+          "text": "じゃあ冷蔵庫から 卵を2個と牛乳を出してください はい"
+        },
+        {
+          "start": 376.78,
+          "end": 383.93,
+          "text": "それから魚も出してください あすみません"
+        },
+        {
+          "start": 382.51,
+          "end": 391.73,
+          "text": "卵は3個お願いします。 はい。"
+        },
+        {
+          "start": 391.73,
+          "end": 413.93,
+          "text": "男の学生は、冷蔵庫から何を出しますか? 5番。"
+        },
+        {
+          "start": 413.93,
+          "end": 419.93,
+          "text": "日本語学校で、女の人と男の人が話しています。"
+        },
+        {
+          "start": 419.93,
+          "end": 434.14,
+          "text": "女の人は何曜日のクラスで勉強しますか? すみません。1週間に1回、日本語で話す練習をしたいです。"
+        },
+        {
+          "start": 435.02,
+          "end": 437.78,
+          "text": "夜のクラスはありますか?"
+        },
+        {
+          "start": 437.78,
+          "end": 450.23,
+          "text": "はい。夜のクラスは毎週月曜日、火曜日、木曜日、金曜日です。夜6時からです。"
+        },
+        {
+          "start": 450.23,
+          "end": 456.58,
+          "text": "うーん。火曜日と金曜日は仕事が6時に終わりません。"
+        },
+        {
+          "start": 456.58,
+          "end": 465.97,
+          "text": "そうですか。では月曜日がいいですよ。木曜日のクラスは話す時間が短いです。"
+        },
+        {
+          "start": 465.79,
+          "end": 480.03,
+          "text": "わかりました じゃあ来週から勉強したいです どうぞよろしくお願いします"
+        },
+        {
+          "start": 480.03,
+          "end": 499.98,
+          "text": "女の人は何曜日のクラスで勉強しますか"
+        },
+        {
+          "start": 499.98,
+          "end": 508.29,
+          "text": "6番 日本語学校で先生が学生に話しています"
+        },
+        {
+          "start": 508.29,
+          "end": 514.74,
+          "text": "学生は明日の午前 どの教室に行きますか"
+        },
+        {
+          "start": 519.34,
+          "end": 527.08,
+          "text": "クラスに日本人の学生が来ますから 広い教室で授業をします"
+        },
+        {
+          "start": 527.08,
+          "end": 531.5,
+          "text": "2階の4番の教室に来てください"
+        },
+        {
+          "start": 531.5,
+          "end": 536.5,
+          "text": "午後は1階の3番の教室で授業をします"
+        },
+        {
+          "start": 536.5,
+          "end": 563.14,
+          "text": "学生は明日の午前どの教室に行きますか"
+        },
+        {
+          "start": 563.14,
+          "end": 564.36,
+          "text": "7番"
+        },
+        {
+          "start": 564.36,
+          "end": 568.36,
+          "text": "女の人と男の人が話しています"
+        },
+        {
+          "start": 570.61,
+          "end": 575.89,
+          "text": "何を持っていきますか 佐藤さん"
+        },
+        {
+          "start": 575.89,
+          "end": 581.27,
+          "text": "日曜日 佐藤さんのうちでパーティーをしますね"
+        },
+        {
+          "start": 581.27,
+          "end": 587.3,
+          "text": "何か持っていきましょうか 飲み物はどうですか"
+        },
+        {
+          "start": 587.3,
+          "end": 591.55,
+          "text": "ありがとうございます 飲み物はたくさんありますから"
+        },
+        {
+          "start": 591.55,
+          "end": 598.03,
+          "text": "食べ物がいいです じゃあおにぎりを持ってきてください"
+        },
+        {
+          "start": 598.03,
+          "end": 602.03,
+          "text": "私はスパゲティーを作ります わかりました"
+        },
+        {
+          "start": 603.07,
+          "end": 605.98,
+          "text": "カメラはありますか はい"
+        },
+        {
+          "start": 605.98,
+          "end": 617.58,
+          "text": "パーティーの時使いたいですから貸してください はいいいですよ"
+        },
+        {
+          "start": 617.58,
+          "end": 638.91,
+          "text": "女の人は何を持っていきますか 問題2"
+        },
+        {
+          "start": 638.91,
+          "end": 649.68,
+          "text": "問題2では初めに質問を聞いてください それから話を聞いて"
+        },
+        {
+          "start": 654.42,
+          "end": 670.52,
+          "text": "一番いいものを一つ選んでください。 では、練習しましょう。"
+        },
+        {
+          "start": 670.52,
+          "end": 671.82,
+          "text": "で。"
+        },
+        {
+          "start": 671.82,
+          "end": 681.67,
+          "text": "男の人と女の人が話しています。 男の人は昨日、どこへ行きましたか?"
+        },
+        {
+          "start": 681.67,
+          "end": 684.94,
+          "text": "男の人です。"
+        },
+        {
+          "start": 684.94,
+          "end": 689.1,
+          "text": "山田さん、昨日どこかへ行きましたか?"
+        },
+        {
+          "start": 689.1,
+          "end": 691.81,
+          "text": "図書館へ行きました。"
+        },
+        {
+          "start": 691.81,
+          "end": 694.37,
+          "text": "駅のそばの図書館ですか?"
+        },
+        {
+          "start": 695.79,
+          "end": 700.29,
+          "text": "僕は山川デパートへ行って買い物をしました"
+        },
+        {
+          "start": 700.29,
+          "end": 704.05,
+          "text": "え?私も昨日の夜"
+        },
+        {
+          "start": 704.05,
+          "end": 708.05,
+          "text": "山川デパートのレストランへ行きましたよ"
+        },
+        {
+          "start": 708.05,
+          "end": 714.8,
+          "text": "そうですか"
+        },
+        {
+          "start": 714.8,
+          "end": 721.04,
+          "text": "男の人は昨日どこへ行きましたか?"
+        },
+        {
+          "start": 721.04,
+          "end": 726.58,
+          "text": "一番いいものは3番です"
+        },
+        {
+          "start": 726.58,
+          "end": 733.27,
+          "text": "回答用紙の問題2の例のところを見てください"
+        },
+        {
+          "start": 735.09,
+          "end": 746.28,
+          "text": "一番いいものは、三番ですから。答えは、このように書きます。"
+        },
+        {
+          "start": 746.28,
+          "end": 749.17,
+          "text": "では、はじめます。"
+        },
+        {
+          "start": 749.17,
+          "end": 756.81,
+          "text": "一番"
+        },
+        {
+          "start": 756.81,
+          "end": 762.36,
+          "text": "うちで、女の人と男の人が話しています。"
+        },
+        {
+          "start": 762.36,
+          "end": 768.11,
+          "text": "女の人は、何のジュースを作りましたか?"
+        },
+        {
+          "start": 768.11,
+          "end": 771.18,
+          "text": "果物のジュースを作りました。"
+        },
+        {
+          "start": 771.18,
+          "end": 774.66,
+          "text": "どうぞ飲んでください。"
+        },
+        {
+          "start": 774.66,
+          "end": 776.16,
+          "text": "いただきます。"
+        },
+        {
+          "start": 776.32,
+          "end": 781.12,
+          "text": "これは何のジュースですか リンゴと"
+        },
+        {
+          "start": 781.12,
+          "end": 810.56,
+          "text": "それからミカンとバナナを少し入れました 女の人は何のジュースを作りましたか"
+        },
+        {
+          "start": 810.56,
+          "end": 817.5,
+          "text": "2番 女の学生と男の学生が話しています"
+        },
+        {
+          "start": 817.5,
+          "end": 825.03,
+          "text": "男の学生はお兄さんが何人いますか 中山さん"
+        },
+        {
+          "start": 828.5,
+          "end": 833.85,
+          "text": "4人です 両親と兄が一人と僕です"
+        },
+        {
+          "start": 833.85,
+          "end": 838.89,
+          "text": "お兄さんは学生ですか いや会社員です"
+        },
+        {
+          "start": 838.89,
+          "end": 849.88,
+          "text": "結婚して子供が2人いますよ 男の学生は"
+        },
+        {
+          "start": 849.88,
+          "end": 863.17,
+          "text": "お兄さんが何人いますか 3番"
+        },
+        {
+          "start": 863.17,
+          "end": 868.8,
+          "text": "会社で女の人と男の人が話しています"
+        },
+        {
+          "start": 871.73,
+          "end": 876.82,
+          "text": "会社に来ていますか 加藤さん"
+        },
+        {
+          "start": 876.82,
+          "end": 882.08,
+          "text": "加藤さんのうちはどちらですか 南町です"
+        },
+        {
+          "start": 882.08,
+          "end": 891.2,
+          "text": "私も南町ですよ でも駅や電車で全然加藤さんに会いませんね"
+        },
+        {
+          "start": 891.2,
+          "end": 898.58,
+          "text": "電車じゃなくてバスで会社に来ていますか いや僕は自転車です"
+        },
+        {
+          "start": 904.08,
+          "end": 907.84,
+          "text": "今は乗っていません そうですか"
+        },
+        {
+          "start": 907.84,
+          "end": 919.49,
+          "text": "時間は50分ぐらいかかりますが楽しいですよ 男の人は"
+        },
+        {
+          "start": 919.49,
+          "end": 939.18,
+          "text": "何で会社に来ていますか 4番"
+        },
+        {
+          "start": 939.18,
+          "end": 945.7,
+          "text": "電話で 女の学生と男の学生が話しています"
+        },
+        {
+          "start": 945.7,
+          "end": 952.5,
+          "text": "二人は今日一緒に何をしますか もしもし"
+        },
+        {
+          "start": 954.83,
+          "end": 960.37,
+          "text": "おはようございます 今日うちで映画を見ませんか"
+        },
+        {
+          "start": 960.37,
+          "end": 968.45,
+          "text": "面白い dvd を借りましたよ あ今日は今から友達とバスケットボールをして"
+        },
+        {
+          "start": 968.45,
+          "end": 975.49,
+          "text": "それからみんなと一緒にラーメンを食べに行きます でも午後は大丈夫です"
+        },
+        {
+          "start": 975.49,
+          "end": 983.51,
+          "text": "じゃあ午後来てください はいじゃあ行く前に電話します"
+        },
+        {
+          "start": 982.13,
+          "end": 986.13,
+          "text": "何か美味しいお菓子を買って持っていきます。"
+        },
+        {
+          "start": 986.32,
+          "end": 990.48,
+          "text": "ありがとうございます。お菓子も待っています。"
+        },
+        {
+          "start": 990.48,
+          "end": 1000.05,
+          "text": "2人は今日一緒に何をしますか?"
+        },
+        {
+          "start": 1000.05,
+          "end": 1017.31,
+          "text": "5番。"
+        },
+        {
+          "start": 1017.31,
+          "end": 1023.31,
+          "text": "大学で日本人の学生と男の留学生が話しています。"
+        },
+        {
+          "start": 1023.31,
+          "end": 1030.89,
+          "text": "日本から男の留学生の国まで飛行機で何時間かかりますか?"
+        },
+        {
+          "start": 1034.0,
+          "end": 1038.19,
+          "text": "冬休みに国へ帰りますか はい"
+        },
+        {
+          "start": 1038.19,
+          "end": 1043.86,
+          "text": "日本からジョージさんの国まで 飛行機でどのぐらいですか"
+        },
+        {
+          "start": 1043.86,
+          "end": 1049.06,
+          "text": "5時間か6時間ぐらいですか もっと早いですよ"
+        },
+        {
+          "start": 1049.06,
+          "end": 1053.83,
+          "text": "3時間半です ああ近いですねー"
+        },
+        {
+          "start": 1053.83,
+          "end": 1064.03,
+          "text": "私も冬休みに両親に会いに帰りますが ここからうちまで電車で5時間ぐらいかかりますよ"
+        },
+        {
+          "start": 1062.77,
+          "end": 1068.74,
+          "text": "5時間ですか じゃあ私の国の方が近いですね"
+        },
+        {
+          "start": 1068.74,
+          "end": 1098.33,
+          "text": "1時間半早いです 日本から男の留学生の国まで飛行機で何時間かかりますか"
+        },
+        {
+          "start": 1098.33,
+          "end": 1104.52,
+          "text": "6番 電話で女の学生が話しています"
+        },
+        {
+          "start": 1104.52,
+          "end": 1115.06,
+          "text": "今晩何の店にご飯を食べに行きますか もしもし森さん"
+        },
+        {
+          "start": 1116.98,
+          "end": 1128.38,
+          "text": "こんばんクラスのみんなとご飯を食べに行きますね 今朝学校では駅の前のカレー屋に来てくださいと言いましたが"
+        },
+        {
+          "start": 1128.38,
+          "end": 1134.64,
+          "text": "今日は店が休みです だからピザ屋に行きます"
+        },
+        {
+          "start": 1134.64,
+          "end": 1143.18,
+          "text": "先週一緒に行った寿司屋の前のビルです 一回にそば屋があるビルで"
+        },
+        {
+          "start": 1172.62,
+          "end": 1182.85,
+          "text": "問題3 問題3では絵を見ながら質問を聞いてください"
+        },
+        {
+          "start": 1182.85,
+          "end": 1198.03,
+          "text": "矢印の人は何と言いますか? 1から3の中から一番いいものを一つ選んでください"
+        },
+        {
+          "start": 1198.03,
+          "end": 1207.08,
+          "text": "では練習しましょう"
+        },
+        {
+          "start": 1213.39,
+          "end": 1216.77,
+          "text": "何と言いますか?"
+        },
+        {
+          "start": 1216.77,
+          "end": 1217.81,
+          "text": "1"
+        },
+        {
+          "start": 1217.81,
+          "end": 1219.9,
+          "text": "いらっしゃいませ。"
+        },
+        {
+          "start": 1219.9,
+          "end": 1222.05,
+          "text": "2"
+        },
+        {
+          "start": 1222.05,
+          "end": 1224.26,
+          "text": "失礼しました。"
+        },
+        {
+          "start": 1224.26,
+          "end": 1226.58,
+          "text": "3"
+        },
+        {
+          "start": 1226.58,
+          "end": 1228.7,
+          "text": "すみません。"
+        },
+        {
+          "start": 1228.7,
+          "end": 1234.14,
+          "text": "一番いいものは、3番です。"
+        },
+        {
+          "start": 1234.14,
+          "end": 1244.69,
+          "text": "回答用紙の、問題3の、例のところを見てください。"
+        },
+        {
+          "start": 1244.69,
+          "end": 1250.14,
+          "text": "一番いいものは、3番ですから。"
+        },
+        {
+          "start": 1250.14,
+          "end": 1253.34,
+          "text": "答えは、このように書きます。"
+        },
+        {
+          "start": 1255.98,
+          "end": 1264.96,
+          "text": "では、はじめます。"
+        },
+        {
+          "start": 1264.96,
+          "end": 1266.54,
+          "text": "1番"
+        },
+        {
+          "start": 1266.54,
+          "end": 1269.2,
+          "text": "山を歩いています。"
+        },
+        {
+          "start": 1269.2,
+          "end": 1273.17,
+          "text": "友達と一緒に休みたいです。"
+        },
+        {
+          "start": 1273.17,
+          "end": 1276.38,
+          "text": "何と言いますか?"
+        },
+        {
+          "start": 1276.38,
+          "end": 1277.69,
+          "text": "1"
+        },
+        {
+          "start": 1277.69,
+          "end": 1281.05,
+          "text": "あまり休みません。"
+        },
+        {
+          "start": 1281.05,
+          "end": 1282.27,
+          "text": "2"
+        },
+        {
+          "start": 1282.27,
+          "end": 1285.94,
+          "text": "今、休んでいますか?"
+        },
+        {
+          "start": 1285.94,
+          "end": 1287.33,
+          "text": "3"
+        },
+        {
+          "start": 1287.33,
+          "end": 1302.32,
+          "text": "少し休みましょう。"
+        },
+        {
+          "start": 1302.32,
+          "end": 1303.82,
+          "text": "2番"
+        },
+        {
+          "start": 1303.82,
+          "end": 1307.47,
+          "text": "友達にチョコレートをあげます。"
+        },
+        {
+          "start": 1307.47,
+          "end": 1310.65,
+          "text": "何と言いますか?"
+        },
+        {
+          "start": 1310.65,
+          "end": 1312.76,
+          "text": "1"
+        },
+        {
+          "start": 1311.89,
+          "end": 1315.74,
+          "text": "どんなチョコレートですか?"
+        },
+        {
+          "start": 1315.74,
+          "end": 1316.7,
+          "text": "に"
+        },
+        {
+          "start": 1316.7,
+          "end": 1319.88,
+          "text": "チョコレートあげませんか?"
+        },
+        {
+          "start": 1319.88,
+          "end": 1322.58,
+          "text": "さん"
+        },
+        {
+          "start": 1322.58,
+          "end": 1325.5,
+          "text": "チョコレートいかがですか?"
+        },
+        {
+          "start": 1325.5,
+          "end": 1339.89,
+          "text": "さんばん"
+        },
+        {
+          "start": 1340.08,
+          "end": 1342.87,
+          "text": "エレベーターに乗りたいです"
+        },
+        {
+          "start": 1342.87,
+          "end": 1346.09,
+          "text": "何と言いますか?"
+        },
+        {
+          "start": 1346.09,
+          "end": 1347.17,
+          "text": "いち"
+        },
+        {
+          "start": 1347.17,
+          "end": 1351.14,
+          "text": "あ、乗りまーす"
+        },
+        {
+          "start": 1351.14,
+          "end": 1352.1,
+          "text": "に"
+        },
+        {
+          "start": 1352.1,
+          "end": 1354.54,
+          "text": "さあ、乗りましょう"
+        },
+        {
+          "start": 1354.54,
+          "end": 1356.93,
+          "text": "さん"
+        },
+        {
+          "start": 1356.93,
+          "end": 1372.54,
+          "text": "すぐ乗ってください"
+        },
+        {
+          "start": 1372.54,
+          "end": 1373.94,
+          "text": "よんばん"
+        },
+        {
+          "start": 1374.16,
+          "end": 1375.68,
+          "text": "まえに"
+        },
+        {
+          "start": 1375.36,
+          "end": 1380.74,
+          "text": "自転車があります 友達は見ていません"
+        },
+        {
+          "start": 1380.74,
+          "end": 1385.29,
+          "text": "なんと言いますか 1"
+        },
+        {
+          "start": 1385.29,
+          "end": 1389.38,
+          "text": "見ませんよ 2"
+        },
+        {
+          "start": 1389.38,
+          "end": 1393.76,
+          "text": "危ないですよ 3"
+        },
+        {
+          "start": 1393.76,
+          "end": 1410.05,
+          "text": "痛いですよ 5番"
+        },
+        {
+          "start": 1410.05,
+          "end": 1417.3,
+          "text": "レストランでコーヒーが来ません 長い時間待っています"
+        },
+        {
+          "start": 1417.3,
+          "end": 1422.9,
+          "text": "店の人になんと言いますか 1"
+        },
+        {
+          "start": 1426.54,
+          "end": 1431.53,
+          "text": "2 コーヒーはまだですか"
+        },
+        {
+          "start": 1431.53,
+          "end": 1448.58,
+          "text": "3 コーヒーを飲みませんか"
+        },
+        {
+          "start": 1448.58,
+          "end": 1452.88,
+          "text": "問題4 問題4は"
+        },
+        {
+          "start": 1452.88,
+          "end": 1458.04,
+          "text": "絵などがありません 文を聞いて"
+        },
+        {
+          "start": 1458.04,
+          "end": 1467.53,
+          "text": "1から3の中から 一番いいものを一つ選んでください"
+        },
+        {
+          "start": 1467.53,
+          "end": 1476.62,
+          "text": "では 練習しましょう"
+        },
+        {
+          "start": 1482.96,
+          "end": 1488.5,
+          "text": "あちらです アメリカです"
+        },
+        {
+          "start": 1488.5,
+          "end": 1496.46,
+          "text": "部屋です 一番いいものは"
+        },
+        {
+          "start": 1496.46,
+          "end": 1504.11,
+          "text": "2番です 回答用紙の問題4の"
+        },
+        {
+          "start": 1504.11,
+          "end": 1510.68,
+          "text": "例のところを見てください 一番いいものは"
+        },
+        {
+          "start": 1510.68,
+          "end": 1519.32,
+          "text": "2番ですから 答えはこのように書きます"
+        },
+        {
+          "start": 1519.32,
+          "end": 1527.98,
+          "text": "では始めます"
+        },
+        {
+          "start": 1529.52,
+          "end": 1535.96,
+          "text": "りいさん。りいさんはいつ日本に来ましたか?"
+        },
+        {
+          "start": 1535.96,
+          "end": 1536.96,
+          "text": "いち。"
+        },
+        {
+          "start": 1536.96,
+          "end": 1540.4,
+          "text": "去年です。"
+        },
+        {
+          "start": 1540.4,
+          "end": 1541.59,
+          "text": "に。"
+        },
+        {
+          "start": 1541.59,
+          "end": 1542.59,
+          "text": "ご時間です。"
+        },
+        {
+          "start": 1542.59,
+          "end": 1544.97,
+          "text": "さん。"
+        },
+        {
+          "start": 1544.97,
+          "end": 1547.22,
+          "text": "さんかげつです。"
+        },
+        {
+          "start": 1547.22,
+          "end": 1559.2,
+          "text": "にばん。"
+        },
+        {
+          "start": 1559.2,
+          "end": 1562.49,
+          "text": "ひるごはんはもう食べましたか?"
+        },
+        {
+          "start": 1562.49,
+          "end": 1565.96,
+          "text": "いち。"
+        },
+        {
+          "start": 1565.96,
+          "end": 1569.21,
+          "text": "そうしましょう。"
+        },
+        {
+          "start": 1569.21,
+          "end": 1570.5,
+          "text": "に。"
+        },
+        {
+          "start": 1570.5,
+          "end": 1573.81,
+          "text": "食堂ですよ。"
+        },
+        {
+          "start": 1573.81,
+          "end": 1575.03,
+          "text": "さん。"
+        },
+        {
+          "start": 1575.03,
+          "end": 1588.01,
+          "text": "いえ、今からです。"
+        },
+        {
+          "start": 1588.01,
+          "end": 1590.23,
+          "text": "さんばん。"
+        },
+        {
+          "start": 1589.52,
+          "end": 1595.06,
+          "text": "おいしいクッキーですね。どこで買いましたか?"
+        },
+        {
+          "start": 1595.06,
+          "end": 1600.03,
+          "text": "1. デパートで買いましょう。"
+        },
+        {
+          "start": 1600.03,
+          "end": 1604.72,
+          "text": "2. はい、そうです。"
+        },
+        {
+          "start": 1604.72,
+          "end": 1619.26,
+          "text": "3. 私が作りました。"
+        },
+        {
+          "start": 1619.26,
+          "end": 1624.18,
+          "text": "4番。 明日、京都に行きますね。"
+        },
+        {
+          "start": 1624.18,
+          "end": 1628.2,
+          "text": "何時の飛行機に乗りますか?"
+        },
+        {
+          "start": 1628.2,
+          "end": 1633.58,
+          "text": "1. はい、飛行機で行きますよ。"
+        },
+        {
+          "start": 1633.58,
+          "end": 1637.14,
+          "text": "2. 四時半の飛行機です。"
+        },
+        {
+          "start": 1639.79,
+          "end": 1654.33,
+          "text": "1時間ぐらい乗ります。5番"
+        },
+        {
+          "start": 1654.33,
+          "end": 1659.72,
+          "text": "すみません。田中さんの電話番号を知っていますか?"
+        },
+        {
+          "start": 1659.72,
+          "end": 1661.93,
+          "text": "1"
+        },
+        {
+          "start": 1661.93,
+          "end": 1664.66,
+          "text": "はい、わかりますよ。"
+        },
+        {
+          "start": 1664.66,
+          "end": 1666.87,
+          "text": "2"
+        },
+        {
+          "start": 1666.87,
+          "end": 1669.53,
+          "text": "え、知りませんでした。"
+        },
+        {
+          "start": 1669.53,
+          "end": 1671.91,
+          "text": "3"
+        },
+        {
+          "start": 1671.91,
+          "end": 1674.13,
+          "text": "電話をしていません。"
+        },
+        {
+          "start": 1674.13,
+          "end": 1686.61,
+          "text": "6番"
+        },
+        {
+          "start": 1686.61,
+          "end": 1690.33,
+          "text": "夏休みはどこかへ出かけましたか?"
+        },
+        {
+          "start": 1690.33,
+          "end": 1692.55,
+          "text": "1"
+        },
+        {
+          "start": 1692.55,
+          "end": 1694.74,
+          "text": "旅行しましょう。"
+        },
+        {
+          "start": 1694.74,
+          "end": 1696.96,
+          "text": "2"
+        },
+        {
+          "start": 1697.52,
+          "end": 1716.32,
+          "text": "どこへも行きませんでした 外国から来ました"
+        },
+        {
+          "start": 1716.32,
+          "end": 1721.48,
+          "text": "これで 朝会試験を終わります"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "exam:n5-2013:recording": {
+      "sha256": "cd22739e4ccc0538afd383982cc3432f454209405a4dc97ddad31ad2f9ee941a",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 1493.51,
+      "segments": [
+        {
+          "start": 4.34,
+          "end": 22.82,
+          "text": "2013年第1回日本語能力試験 聴解N5これからN5の聴解試験を始めます"
+        },
+        {
+          "start": 22.82,
+          "end": 33.1,
+          "text": "問題用紙に目も取ってもいいです 問題用紙を開けてください"
+        },
+        {
+          "start": 40.24,
+          "end": 54.61,
+          "text": "問題がよく見えない時も、手を挙げてください。いつでもいいです。"
+        },
+        {
+          "start": 54.61,
+          "end": 79.6,
+          "text": "問題1。問題1では、初めに質問を聞いてください。それから、話を聞いて、問題用紙の1から4の中から、一番いいものを一つ。"
+        },
+        {
+          "start": 79.73,
+          "end": 91.98,
+          "text": "選んでください。では、練習しましょう。"
+        },
+        {
+          "start": 91.98,
+          "end": 93.28,
+          "text": "一番"
+        },
+        {
+          "start": 93.28,
+          "end": 97.98,
+          "text": "教室で先生が話しています。"
+        },
+        {
+          "start": 97.98,
+          "end": 105.0,
+          "text": "学生は明日の朝、どこで先生に会いますか?"
+        },
+        {
+          "start": 105.0,
+          "end": 110.22,
+          "text": "皆さん、明日は古い町を見に行きます。"
+        },
+        {
+          "start": 110.22,
+          "end": 113.3,
+          "text": "9時の電車に乗りますよ。"
+        },
+        {
+          "start": 113.3,
+          "end": 117.6,
+          "text": "町には日本で一番古いホテルがあります。"
+        },
+        {
+          "start": 117.94,
+          "end": 124.64,
+          "text": "きれいな公園もあります 明日は学校に来てから行きますか"
+        },
+        {
+          "start": 124.64,
+          "end": 128.14,
+          "text": "いいえ 駅に来てください"
+        },
+        {
+          "start": 128.14,
+          "end": 139.02,
+          "text": "8時半に待っています 学生は明日の朝"
+        },
+        {
+          "start": 139.02,
+          "end": 159.73,
+          "text": "どこで先生に会いますか 2番"
+        },
+        {
+          "start": 159.73,
+          "end": 167.09,
+          "text": "学校で男の学生と女の先生が話しています"
+        },
+        {
+          "start": 170.27,
+          "end": 175.06,
+          "text": "どこにおきますか 先生"
+        },
+        {
+          "start": 175.06,
+          "end": 181.86,
+          "text": "この椅子はどこにおきますか 机の左側においてください"
+        },
+        {
+          "start": 181.86,
+          "end": 184.84,
+          "text": "はい 窓のそばですね"
+        },
+        {
+          "start": 184.84,
+          "end": 193.68,
+          "text": "そうです どうもありがとう"
+        },
+        {
+          "start": 193.68,
+          "end": 217.08,
+          "text": "男の学生は椅子をどこにおきますか 三番"
+        },
+        {
+          "start": 223.92,
+          "end": 228.56,
+          "text": "男の学生はどの本を持ってきますか?"
+        },
+        {
+          "start": 228.56,
+          "end": 236.43,
+          "text": "すみません。あそこの机の上の本を持ってきてください。"
+        },
+        {
+          "start": 236.43,
+          "end": 240.62,
+          "text": "はい。先生、どの本ですか?"
+        },
+        {
+          "start": 240.62,
+          "end": 242.66,
+          "text": "黒い本ですか?"
+        },
+        {
+          "start": 242.66,
+          "end": 245.82,
+          "text": "いいえ。白い本です。"
+        },
+        {
+          "start": 245.82,
+          "end": 247.86,
+          "text": "暑い本ですか?"
+        },
+        {
+          "start": 247.86,
+          "end": 250.9,
+          "text": "いいえ。薄い本です。"
+        },
+        {
+          "start": 250.9,
+          "end": 252.46,
+          "text": "分かりました。"
+        },
+        {
+          "start": 257.71,
+          "end": 259.55,
+          "text": "男の学生は?"
+        },
+        {
+          "start": 259.79,
+          "end": 280.58,
+          "text": "どの本を持ってきますか 4番"
+        },
+        {
+          "start": 280.58,
+          "end": 290.32,
+          "text": "女の人が男の人に道を聞いています 桜ビルはどこですか"
+        },
+        {
+          "start": 290.32,
+          "end": 296.56,
+          "text": "すみません あの桜ビルへ行きたいです"
+        },
+        {
+          "start": 296.56,
+          "end": 302.59,
+          "text": "桜ビルはどこですか 桜ビルですね"
+        },
+        {
+          "start": 302.59,
+          "end": 309.5,
+          "text": "この道を真っ直ぐ行ってください あそこに"
+        },
+        {
+          "start": 308.08,
+          "end": 313.61,
+          "text": "大きいデパートがありますね その向こうです"
+        },
+        {
+          "start": 313.61,
+          "end": 319.21,
+          "text": "この道の右側ですね ありがとうございます"
+        },
+        {
+          "start": 319.21,
+          "end": 344.18,
+          "text": "桜ビルはどこですか"
+        },
+        {
+          "start": 344.18,
+          "end": 345.38,
+          "text": "5番"
+        },
+        {
+          "start": 345.38,
+          "end": 357.25,
+          "text": "花屋で店の人と男の人が話しています 店の人は花をどうしますか"
+        },
+        {
+          "start": 357.25,
+          "end": 359.04,
+          "text": "いらっしゃいませ"
+        },
+        {
+          "start": 363.15,
+          "end": 367.48,
+          "text": "はい これですね プレゼントですか"
+        },
+        {
+          "start": 367.48,
+          "end": 373.24,
+          "text": "はい あすみません もう一本お願いします"
+        },
+        {
+          "start": 373.24,
+          "end": 377.49,
+          "text": "はい リボンはどうしますか"
+        },
+        {
+          "start": 377.49,
+          "end": 381.48,
+          "text": "リボンですか 入りません"
+        },
+        {
+          "start": 381.48,
+          "end": 409.4,
+          "text": "わかりました 店の人は花をどうしますか"
+        },
+        {
+          "start": 409.4,
+          "end": 416.12,
+          "text": "6番 男の人と女の人が話しています"
+        },
+        {
+          "start": 417.7,
+          "end": 423.3,
+          "text": "何を持っていきますか 山田さん"
+        },
+        {
+          "start": 423.3,
+          "end": 425.7,
+          "text": "来週の日曜日"
+        },
+        {
+          "start": 425.7,
+          "end": 428.6,
+          "text": "緑公園の掃除をします"
+        },
+        {
+          "start": 428.6,
+          "end": 433.46,
+          "text": "近くに住んでいる人がたくさん来ますよ"
+        },
+        {
+          "start": 433.46,
+          "end": 436.21,
+          "text": "山田さんも来てください"
+        },
+        {
+          "start": 436.21,
+          "end": 438.01,
+          "text": "分かりました"
+        },
+        {
+          "start": 438.01,
+          "end": 440.7,
+          "text": "何を持っていきますか"
+        },
+        {
+          "start": 440.7,
+          "end": 442.3,
+          "text": "暑いですから"
+        },
+        {
+          "start": 442.3,
+          "end": 445.49,
+          "text": "帽子を忘れないでください"
+        },
+        {
+          "start": 445.49,
+          "end": 447.38,
+          "text": "それから"
+        },
+        {
+          "start": 447.38,
+          "end": 449.28,
+          "text": "皆さんのお茶は"
+        },
+        {
+          "start": 449.25,
+          "end": 457.17,
+          "text": "私が持っていきますからカップを持ってきてください よろしくお願いします"
+        },
+        {
+          "start": 457.17,
+          "end": 484.13,
+          "text": "はい 女の人は何を持っていきますか"
+        },
+        {
+          "start": 484.13,
+          "end": 491.75,
+          "text": "7番 女の人がバス会社の人と話しています"
+        },
+        {
+          "start": 491.75,
+          "end": 498.78,
+          "text": "女の人はどのバスに乗りますか すみません"
+        },
+        {
+          "start": 503.06,
+          "end": 510.6,
+          "text": "いえ、山川駅は2番と3番と4番のバスですよ。"
+        },
+        {
+          "start": 510.6,
+          "end": 517.6,
+          "text": "でも、4番は土曜日と日曜日のバスですから、今日はありません。"
+        },
+        {
+          "start": 517.6,
+          "end": 522.95,
+          "text": "あ、3番のバスが来ました。あれに乗ります。"
+        },
+        {
+          "start": 522.95,
+          "end": 533.37,
+          "text": "あ、すぐ2番のバスが来ますよ。3番はバス停がたくさんありますから、2番のほうが早いですよ。"
+        },
+        {
+          "start": 533.46,
+          "end": 545.62,
+          "text": "わかりました じゃあ少し待ちます ありがとうございます"
+        },
+        {
+          "start": 545.62,
+          "end": 570.84,
+          "text": "女の人はどのバスに乗りますか 問題2問題2では"
+        },
+        {
+          "start": 570.84,
+          "end": 582.99,
+          "text": "初めに質問を聞いてください それから話を聞いて問題用紙の"
+        },
+        {
+          "start": 589.07,
+          "end": 603.21,
+          "text": "一つ選んでください では練習しましょう"
+        },
+        {
+          "start": 603.21,
+          "end": 609.94,
+          "text": "一番 男の学生と女の学生が話しています"
+        },
+        {
+          "start": 609.94,
+          "end": 618.14,
+          "text": "男の学生は帽子を誰にもらいましたか 帽子です"
+        },
+        {
+          "start": 618.14,
+          "end": 621.68,
+          "text": "おはよう おはようりんさん"
+        },
+        {
+          "start": 621.68,
+          "end": 627.4,
+          "text": "綺麗な色のセーターですね 誕生日に"
+        },
+        {
+          "start": 625.82,
+          "end": 631.18,
+          "text": "兄と姉にもらいました この帽子もプレゼントです"
+        },
+        {
+          "start": 631.18,
+          "end": 640.26,
+          "text": "父がくれました いいですね"
+        },
+        {
+          "start": 640.26,
+          "end": 663.95,
+          "text": "男の学生は帽子を誰にもらいましたか 2番"
+        },
+        {
+          "start": 663.95,
+          "end": 672.25,
+          "text": "ダンス教室で山田先生が話しています 山田先生のクラスは"
+        },
+        {
+          "start": 679.76,
+          "end": 687.59,
+          "text": "どうぞよろしくお願いします。 今日からダンスのクラスが始まります。"
+        },
+        {
+          "start": 687.59,
+          "end": 696.2,
+          "text": "私は月曜日に教えます。 木曜と金曜は他の先生が教えます。"
+        },
+        {
+          "start": 696.2,
+          "end": 706.86,
+          "text": "火曜と水曜はクラスはありません。"
+        },
+        {
+          "start": 706.86,
+          "end": 710.86,
+          "text": "山田先生のクラスは何曜日ですか?"
+        },
+        {
+          "start": 710.86,
+          "end": 729.57,
+          "text": "3番。"
+        },
+        {
+          "start": 729.57,
+          "end": 731.57,
+          "text": "うちで。"
+        },
+        {
+          "start": 730.56,
+          "end": 739.86,
+          "text": "女の人と男の人が話しています 男の人はどこを掃除しますか"
+        },
+        {
+          "start": 739.86,
+          "end": 746.5,
+          "text": "男の人です 明日は家でパーティーだね"
+        },
+        {
+          "start": 746.5,
+          "end": 751.19,
+          "text": "うん 私は玄関を掃除してから"
+        },
+        {
+          "start": 751.19,
+          "end": 756.12,
+          "text": "台所を掃除するね トイレの掃除をお願い"
+        },
+        {
+          "start": 768.24,
+          "end": 790.62,
+          "text": "男の人はどこを掃除しますか 4番"
+        },
+        {
+          "start": 790.62,
+          "end": 801.24,
+          "text": "ホテルで先生が学生に話しています 学生の部屋は何階ですか"
+        },
+        {
+          "start": 801.24,
+          "end": 808.72,
+          "text": "えー皆さん このホテルは1階と2階にレストランがあります"
+        },
+        {
+          "start": 808.72,
+          "end": 817.1,
+          "text": "お風呂は1番上の10階にあります 皆さんの部屋は8階です"
+        },
+        {
+          "start": 816.88,
+          "end": 832.49,
+          "text": "えー、今から部屋に行って自分の荷物を置いてください。 それから2階のレストランに来てください。"
+        },
+        {
+          "start": 832.49,
+          "end": 852.46,
+          "text": "学生の部屋は何階ですか?"
+        },
+        {
+          "start": 852.46,
+          "end": 854.01,
+          "text": "5番"
+        },
+        {
+          "start": 854.01,
+          "end": 863.41,
+          "text": "女の人と男の人が話しています。 男の人は昨日何をしましたか?"
+        },
+        {
+          "start": 863.41,
+          "end": 866.56,
+          "text": "男の人です。"
+        },
+        {
+          "start": 866.56,
+          "end": 868.92,
+          "text": "昨日の日曜日"
+        },
+        {
+          "start": 870.74,
+          "end": 885.71,
+          "text": "寒かったですねえ毎週日曜日は友達とテニスをしていますが 昨日は家で本を読みました買い物も行きませんでした"
+        },
+        {
+          "start": 885.71,
+          "end": 918.19,
+          "text": "私も昨日は家でテレビを見たり本を読んだりしました 男の人は昨日何をしましたか"
+        },
+        {
+          "start": 922.64,
+          "end": 934.38,
+          "text": "男の人が話しています2人は何時に出口の前で会いますか 田中さん"
+        },
+        {
+          "start": 934.38,
+          "end": 940.74,
+          "text": "この後私はスカートを見たいです そうですか"
+        },
+        {
+          "start": 940.74,
+          "end": 949.42,
+          "text": "じゃあ私は本を見に行きます 今から1時間ぐらい自分が好きなものを見て"
+        },
+        {
+          "start": 955.58,
+          "end": 963.33,
+          "text": "7時20分ですから8時20分に出口の前で会いませんか"
+        },
+        {
+          "start": 963.33,
+          "end": 970.19,
+          "text": "でもこのデパートは8時に閉まりますよ あそうですか"
+        },
+        {
+          "start": 970.19,
+          "end": 984.94,
+          "text": "それじゃあ8時5分前に会いましょう 二人は何時に出口の前で会いますか"
+        },
+        {
+          "start": 1008.24,
+          "end": 1014.78,
+          "text": "質問を聞いてください 矢印の人は"
+        },
+        {
+          "start": 1014.78,
+          "end": 1021.83,
+          "text": "なんと言いますか 1から3の中から"
+        },
+        {
+          "start": 1021.83,
+          "end": 1027.19,
+          "text": "一番いいものを 一つ選んでください"
+        },
+        {
+          "start": 1027.19,
+          "end": 1038.94,
+          "text": "では練習しましょう 1番"
+        },
+        {
+          "start": 1038.94,
+          "end": 1045.61,
+          "text": "今から寝ます 家族に何と言いますか"
+        },
+        {
+          "start": 1045.61,
+          "end": 1050.09,
+          "text": "1 おやすみなさい"
+        },
+        {
+          "start": 1051.15,
+          "end": 1056.78,
+          "text": "こんばんは。 さん。さようなら。"
+        },
+        {
+          "start": 1056.78,
+          "end": 1079.46,
+          "text": "2番。 時計がありません。時間が知りたいです。"
+        },
+        {
+          "start": 1079.46,
+          "end": 1084.34,
+          "text": "何と言いますか? 1"
+        },
+        {
+          "start": 1084.34,
+          "end": 1089.78,
+          "text": "あの、いくらですか? 2"
+        },
+        {
+          "start": 1089.78,
+          "end": 1095.29,
+          "text": "あの、どのぐらいですか? 3"
+        },
+        {
+          "start": 1095.29,
+          "end": 1116.93,
+          "text": "あの、今何時ですか? 3番。"
+        },
+        {
+          "start": 1120.05,
+          "end": 1125.71,
+          "text": "座りたいです なんと言いますか"
+        },
+        {
+          "start": 1125.71,
+          "end": 1130.74,
+          "text": "1 座りませんでしたか"
+        },
+        {
+          "start": 1130.74,
+          "end": 1135.29,
+          "text": "2 どの椅子ですか"
+        },
+        {
+          "start": 1135.29,
+          "end": 1155.08,
+          "text": "3 ここいいですか"
+        },
+        {
+          "start": 1155.08,
+          "end": 1159.79,
+          "text": "4番 お菓子をあげたいです"
+        },
+        {
+          "start": 1159.79,
+          "end": 1164.48,
+          "text": "なんと言いますか 1"
+        },
+        {
+          "start": 1164.48,
+          "end": 1169.36,
+          "text": "これなんですか 2"
+        },
+        {
+          "start": 1169.36,
+          "end": 1174.5,
+          "text": "これいかがですか 3"
+        },
+        {
+          "start": 1175.41,
+          "end": 1197.49,
+          "text": "どうしてですか 5番 カメラを見たいです"
+        },
+        {
+          "start": 1197.49,
+          "end": 1203.44,
+          "text": "店の人に何と言いますか 1"
+        },
+        {
+          "start": 1203.44,
+          "end": 1208.99,
+          "text": "このカメラを見せたいです 2"
+        },
+        {
+          "start": 1208.99,
+          "end": 1214.92,
+          "text": "このカメラを見せますか 3"
+        },
+        {
+          "start": 1214.92,
+          "end": 1236.8,
+          "text": "このカメラを見せてください 問題4"
+        },
+        {
+          "start": 1236.8,
+          "end": 1242.22,
+          "text": "問題4は 絵などがありません"
+        },
+        {
+          "start": 1244.37,
+          "end": 1263.35,
+          "text": "1 から 3 の 中 から 一番 いい もの を 一 つ 選ん で ください では 練習 し ましょう"
+        },
+        {
+          "start": 1263.35,
+          "end": 1270.51,
+          "text": "一番 学校 まで なん で き ます か 1"
+        },
+        {
+          "start": 1270.51,
+          "end": 1275.28,
+          "text": "一人 で き ます 2"
+        },
+        {
+          "start": 1275.28,
+          "end": 1279.85,
+          "text": "9 時 に き ます 3"
+        },
+        {
+          "start": 1279.85,
+          "end": 1302.3,
+          "text": "自転車 で き ます 2 番 この 雑誌"
+        },
+        {
+          "start": 1300.96,
+          "end": 1304.14,
+          "text": "誰のですか?"
+        },
+        {
+          "start": 1304.14,
+          "end": 1305.14,
+          "text": "1"
+        },
+        {
+          "start": 1305.14,
+          "end": 1308.55,
+          "text": "日本語のです"
+        },
+        {
+          "start": 1308.55,
+          "end": 1309.55,
+          "text": "2"
+        },
+        {
+          "start": 1309.55,
+          "end": 1313.18,
+          "text": "誤察です"
+        },
+        {
+          "start": 1313.18,
+          "end": 1314.41,
+          "text": "3"
+        },
+        {
+          "start": 1314.41,
+          "end": 1332.18,
+          "text": "私のです"
+        },
+        {
+          "start": 1332.18,
+          "end": 1333.54,
+          "text": "3番"
+        },
+        {
+          "start": 1333.54,
+          "end": 1335.66,
+          "text": "鈴木先生"
+        },
+        {
+          "start": 1335.66,
+          "end": 1339.88,
+          "text": "机はいくつ並べますか?"
+        },
+        {
+          "start": 1339.88,
+          "end": 1341.1,
+          "text": "1"
+        },
+        {
+          "start": 1341.1,
+          "end": 1344.35,
+          "text": "3つです"
+        },
+        {
+          "start": 1344.35,
+          "end": 1345.54,
+          "text": "2"
+        },
+        {
+          "start": 1345.54,
+          "end": 1348.86,
+          "text": "ええ、並べましょう"
+        },
+        {
+          "start": 1348.86,
+          "end": 1349.86,
+          "text": "3"
+        },
+        {
+          "start": 1349.86,
+          "end": 1368.14,
+          "text": "教室です"
+        },
+        {
+          "start": 1368.14,
+          "end": 1369.14,
+          "text": "4番"
+        },
+        {
+          "start": 1369.14,
+          "end": 1371.4,
+          "text": "あそこにいる"
+        },
+        {
+          "start": 1371.23,
+          "end": 1376.96,
+          "text": "髪が長い人は誰ですか 1"
+        },
+        {
+          "start": 1376.96,
+          "end": 1381.6,
+          "text": "とても長いです 2"
+        },
+        {
+          "start": 1381.6,
+          "end": 1386.86,
+          "text": "ドアの近くにいます 3"
+        },
+        {
+          "start": 1386.86,
+          "end": 1406.75,
+          "text": "私の妹です 5番"
+        },
+        {
+          "start": 1406.75,
+          "end": 1414.56,
+          "text": "来週の日曜日 どこかへ行きますか 1"
+        },
+        {
+          "start": 1414.56,
+          "end": 1418.8,
+          "text": "そうですか 2"
+        },
+        {
+          "start": 1418.8,
+          "end": 1423.63,
+          "text": "山に登ります 3"
+        },
+        {
+          "start": 1441.3,
+          "end": 1450.8,
+          "text": "ろくばん 田中さんは子供の時よく本を読みましたか"
+        },
+        {
+          "start": 1450.8,
+          "end": 1454.99,
+          "text": "一 毎週図書館に行きます"
+        },
+        {
+          "start": 1454.99,
+          "end": 1459.5,
+          "text": "二 あまり読みませんでした"
+        },
+        {
+          "start": 1459.5,
+          "end": 1465.26,
+          "text": "三 時々本を読みます"
+        },
+        {
+          "start": 1465.26,
+          "end": 1486.22,
+          "text": "これで聴解試験を終わります"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "exam:n5-2021-12:recording": {
+      "sha256": "0991cb92b16520d57667fbdd05df52ccedc01dbf72b53ae12737cf8127771a1f",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 1821.15,
+      "segments": [
+        {
+          "start": 3.86,
+          "end": 16.95,
+          "text": "これから、音を聴いてください。音がよく聴こえない時は、手を挙げてください。"
+        },
+        {
+          "start": 16.95,
+          "end": 34.26,
+          "text": "天気がいいから、散歩しましょう。"
+        },
+        {
+          "start": 34.26,
+          "end": 43.94,
+          "text": "2021年"
+        },
+        {
+          "start": 44.08,
+          "end": 58.94,
+          "text": "第2回、日本語能力試験、聴解、N5、これからN5の聴解試験を始めます。"
+        },
+        {
+          "start": 58.94,
+          "end": 64.78,
+          "text": "問題用紙にメモを取ってもいいです。"
+        },
+        {
+          "start": 64.78,
+          "end": 69.62,
+          "text": "問題用紙を開けてください。"
+        },
+        {
+          "start": 69.62,
+          "end": 79.43,
+          "text": "問題用紙のページがない時は、手を開けてください。"
+        },
+        {
+          "start": 82.51,
+          "end": 94.06,
+          "text": "手をあげてください。いつでもいいです。"
+        },
+        {
+          "start": 94.06,
+          "end": 104.82,
+          "text": "問題1。問題1では、初めに質問を聞いてください。"
+        },
+        {
+          "start": 104.82,
+          "end": 123.46,
+          "text": "それから、話を聞いて、問題用紙の1から4の中から、一番いいものを一つ選んでください。"
+        },
+        {
+          "start": 124.82,
+          "end": 145.6,
+          "text": "練習しましょう レークラスで先生が話しています学生は今日うちでどこを勉強しますか"
+        },
+        {
+          "start": 145.6,
+          "end": 153.68,
+          "text": "では今日は20ページまで終わりましたから 21ページは宿題ですね"
+        },
+        {
+          "start": 153.68,
+          "end": 156.24,
+          "text": "全部ですか いえ"
+        },
+        {
+          "start": 156.24,
+          "end": 167.69,
+          "text": "21ページの1番です 2番はクラスでします"
+        },
+        {
+          "start": 168.18,
+          "end": 183.18,
+          "text": "女性は今日うちでどこを勉強しますか 一番いいものは3番です回答用紙の"
+        },
+        {
+          "start": 183.18,
+          "end": 197.13,
+          "text": "問題1の例のところを見てください 一番いいものは3番ですから答えはこの"
+        },
+        {
+          "start": 211.57,
+          "end": 226.34,
+          "text": "料理のクラスで女の先生と男の学生が話しています 男の学生はこの後すぐ何をしますか"
+        },
+        {
+          "start": 226.34,
+          "end": 235.06,
+          "text": "ではこれからカレーを作りましょう 先生私は野菜を切りましょうか"
+        },
+        {
+          "start": 248.02,
+          "end": 266.53,
+          "text": "この後すぐ 何をしますか"
+        },
+        {
+          "start": 266.53,
+          "end": 270.13,
+          "text": "2番 喫茶店で"
+        },
+        {
+          "start": 270.13,
+          "end": 276.34,
+          "text": "店の女の人と男の人が話しています"
+        },
+        {
+          "start": 276.34,
+          "end": 281.74,
+          "text": "店の男の人は 誰に手袋を渡しますか"
+        },
+        {
+          "start": 281.74,
+          "end": 289.61,
+          "text": "この手袋は 今店を出た女の人のですね"
+        },
+        {
+          "start": 289.61,
+          "end": 293.41,
+          "text": "ああ 4人のグループですね"
+        },
+        {
+          "start": 293.41,
+          "end": 295.56,
+          "text": "あそこにいますよ"
+        },
+        {
+          "start": 297.66,
+          "end": 305.31,
+          "text": "渡してください あの髪が短くて眼鏡をかけている人のです"
+        },
+        {
+          "start": 305.31,
+          "end": 314.88,
+          "text": "わかりました 店の男の人は"
+        },
+        {
+          "start": 314.88,
+          "end": 334.74,
+          "text": "誰に手袋を渡しますか 3番"
+        },
+        {
+          "start": 334.74,
+          "end": 344.28,
+          "text": "男の子とお母さんが話しています 男の子は荷物をどこに置きますか"
+        },
+        {
+          "start": 344.28,
+          "end": 351.04,
+          "text": "お母さん 荷物来たよ どこに置く"
+        },
+        {
+          "start": 349.68,
+          "end": 360.52,
+          "text": "テーブルの上でいいそれ食べ物よ テーブルの上じゃなくて冷蔵庫に入れて"
+        },
+        {
+          "start": 360.52,
+          "end": 376.04,
+          "text": "お母さん冷蔵庫いっぱいだよ じゃあ冷蔵庫の横の椅子に置いて"
+        },
+        {
+          "start": 376.04,
+          "end": 397.5,
+          "text": "男の子は荷物をどこに置きますか 4番"
+        },
+        {
+          "start": 397.5,
+          "end": 401.62,
+          "text": "女の人と男の人が"
+        },
+        {
+          "start": 400.19,
+          "end": 409.94,
+          "text": "電話で話しています 女の人はこの後どこへ行きますか"
+        },
+        {
+          "start": 409.94,
+          "end": 414.74,
+          "text": "もしもし 今駅に着きました"
+        },
+        {
+          "start": 414.74,
+          "end": 418.9,
+          "text": "そうですか 僕は喫茶店にいます"
+        },
+        {
+          "start": 418.9,
+          "end": 422.82,
+          "text": "あ 駅の隣の喫茶店ですね"
+        },
+        {
+          "start": 422.82,
+          "end": 426.69,
+          "text": "いえ 大学の前の喫茶店です"
+        },
+        {
+          "start": 426.69,
+          "end": 436.18,
+          "text": "あ わかりました すぐ行きます"
+        },
+        {
+          "start": 437.9,
+          "end": 462.18,
+          "text": "この後どこへ行きますか 5番 クラスで先生が話しています"
+        },
+        {
+          "start": 462.18,
+          "end": 474.65,
+          "text": "学生はどこで新しい教科書を買いますか 皆さん今日授業の後この新しい教科書を買って"
+        },
+        {
+          "start": 474.65,
+          "end": 482.43,
+          "text": "次の授業の時に持ってきてください 教科書の名前は日本語2です"
+        },
+        {
+          "start": 485.44,
+          "end": 493.23,
+          "text": "101教室で売っています この教室は2階の201ですから"
+        },
+        {
+          "start": 493.23,
+          "end": 521.66,
+          "text": "ちょうどこの下の教室ですね 学生はどこで新しい教科書を買いますか"
+        },
+        {
+          "start": 521.66,
+          "end": 529.22,
+          "text": "6番 男の学生と女の学生が話しています"
+        },
+        {
+          "start": 537.9,
+          "end": 541.74,
+          "text": "アンさんのその赤い帽子、いいね。"
+        },
+        {
+          "start": 541.74,
+          "end": 545.1,
+          "text": "これは、私が作った帽子だよ。"
+        },
+        {
+          "start": 545.1,
+          "end": 546.92,
+          "text": "上手だね。"
+        },
+        {
+          "start": 546.92,
+          "end": 552.48,
+          "text": "他の色で、同じものを3つ作ったから、どれかあげる。"
+        },
+        {
+          "start": 552.48,
+          "end": 555.74,
+          "text": "え、本当?ありがとう。"
+        },
+        {
+          "start": 555.74,
+          "end": 563.66,
+          "text": "黄色の帽子と、青と、それから黒があるよ。どれがいい?"
+        },
+        {
+          "start": 568.21,
+          "end": 578.58,
+          "text": "黄色がいいわかった 女の学生は"
+        },
+        {
+          "start": 578.58,
+          "end": 600.29,
+          "text": "男の学生に何色の帽子をあげますか 七番"
+        },
+        {
+          "start": 600.29,
+          "end": 610.64,
+          "text": "学校で先生が話しています 学生は山に何を持っていきますか"
+        },
+        {
+          "start": 610.64,
+          "end": 618.49,
+          "text": "明日は東山に行きます 学校の前のバス帝から山の下まで"
+        },
+        {
+          "start": 620.78,
+          "end": 631.42,
+          "text": "バスのキップは500円ですが、山に登ってまたバスで帰りますから、1000円持ってきてください。"
+        },
+        {
+          "start": 631.42,
+          "end": 638.06,
+          "text": "山の上は少し寒いですから、上着も忘れないでくださいね。"
+        },
+        {
+          "start": 638.06,
+          "end": 649.38,
+          "text": "みんな一緒に歩きますから、山の地図は私が持っていきます。"
+        },
+        {
+          "start": 649.38,
+          "end": 669.93,
+          "text": "学生は、山に何を持っていきますか?"
+        },
+        {
+          "start": 671.44,
+          "end": 707.64,
+          "text": "問題2では、初めに質問を聞いてください。それから話を聞いて、問題用紙の1から4の中から、一番いいものを一つ選んでください。では、練習しましょう。"
+        },
+        {
+          "start": 713.55,
+          "end": 722.18,
+          "text": "男の人は昨日どこへ行きましたか 男の人です"
+        },
+        {
+          "start": 722.18,
+          "end": 729.01,
+          "text": "山田さん昨日どこかへ行きましたか 図書館へ行きました"
+        },
+        {
+          "start": 729.01,
+          "end": 733.1,
+          "text": "駅のそばの図書館ですか はい"
+        },
+        {
+          "start": 733.1,
+          "end": 737.7,
+          "text": "僕は山川デパートへ行って買い物をしました"
+        },
+        {
+          "start": 744.98,
+          "end": 754.42,
+          "text": "そうですか 男の人は昨日"
+        },
+        {
+          "start": 754.42,
+          "end": 760.43,
+          "text": "どこへ行きましたか 一番いいものは"
+        },
+        {
+          "start": 760.43,
+          "end": 767.8,
+          "text": "3番です 回答用紙の問題2の"
+        },
+        {
+          "start": 767.8,
+          "end": 774.85,
+          "text": "例のところを見てください 一番いいものは"
+        },
+        {
+          "start": 774.85,
+          "end": 783.5,
+          "text": "3番ですから 答えはこのように書きます"
+        },
+        {
+          "start": 793.71,
+          "end": 806.46,
+          "text": "女の人と男の留学生が話しています 男の留学生は金曜日何をしていますか"
+        },
+        {
+          "start": 806.46,
+          "end": 811.62,
+          "text": "日本はどうですか はいとても楽しいです"
+        },
+        {
+          "start": 811.62,
+          "end": 816.22,
+          "text": "毎日大学に行きますか いいえ"
+        },
+        {
+          "start": 825.42,
+          "end": 834.22,
+          "text": "土曜日や日曜日はどうしていますか 掃除をしたり友達とあったりしています"
+        },
+        {
+          "start": 834.22,
+          "end": 862.31,
+          "text": "そうですか 男の留学生は金曜日何をしていますか"
+        },
+        {
+          "start": 862.31,
+          "end": 868.27,
+          "text": "2番 男の人と女の人が話しています"
+        },
+        {
+          "start": 868.27,
+          "end": 875.98,
+          "text": "女の人は今から何をしますか 仕事は終わりましたか"
+        },
+        {
+          "start": 877.15,
+          "end": 884.21,
+          "text": "じゃあ一緒に晩ご飯を食べに行きませんか あごめんなさい"
+        },
+        {
+          "start": 884.21,
+          "end": 890.22,
+          "text": "ちょっと頭が痛いですから 今日はもううちに帰ります"
+        },
+        {
+          "start": 890.22,
+          "end": 898.62,
+          "text": "そう じゃあまた"
+        },
+        {
+          "start": 898.62,
+          "end": 919.58,
+          "text": "女の人は今から何をしますか 3番"
+        },
+        {
+          "start": 927.68,
+          "end": 933.18,
+          "text": "いつ国へ帰りますか リンさん"
+        },
+        {
+          "start": 933.18,
+          "end": 940.38,
+          "text": "いつ国へ帰りますか 今日は3月4日ですから"
+        },
+        {
+          "start": 940.38,
+          "end": 944.39,
+          "text": "ちょうど2週間後です そうですか"
+        },
+        {
+          "start": 944.39,
+          "end": 953.41,
+          "text": "さらい週の金曜ですね はい"
+        },
+        {
+          "start": 953.41,
+          "end": 975.1,
+          "text": "男の留学生はいつ国へ帰りますか 4番"
+        },
+        {
+          "start": 975.1,
+          "end": 978.58,
+          "text": "日本語の授業で"
+        },
+        {
+          "start": 977.2,
+          "end": 987.29,
+          "text": "男の留学生が話しています。男の留学生が毎日しているスポーツは何ですか?"
+        },
+        {
+          "start": 987.29,
+          "end": 997.92,
+          "text": "僕はスポーツが大好きです。授業の前に毎朝友達とバスケットボールの練習をしています。"
+        },
+        {
+          "start": 997.92,
+          "end": 1014.97,
+          "text": "時々大学のプールで泳いだりテニスをしたりしています。サッカーはあまりしませんがテレビで毎日見ています。"
+        },
+        {
+          "start": 1014.74,
+          "end": 1035.74,
+          "text": "男の留学生が毎日しているスポーツは何ですか"
+        },
+        {
+          "start": 1035.74,
+          "end": 1036.74,
+          "text": "5番"
+        },
+        {
+          "start": 1036.74,
+          "end": 1042.1,
+          "text": "男の学生と女の学生が話しています"
+        },
+        {
+          "start": 1042.1,
+          "end": 1047.1,
+          "text": "女の学生の誕生日は何月何日ですか"
+        },
+        {
+          "start": 1047.1,
+          "end": 1050.38,
+          "text": "山本さん"
+        },
+        {
+          "start": 1050.38,
+          "end": 1055.38,
+          "text": "今日は5月29日山本さんの誕生日ですね"
+        },
+        {
+          "start": 1055.38,
+          "end": 1058.38,
+          "text": "これプレゼントですどうぞ"
+        },
+        {
+          "start": 1058.38,
+          "end": 1060.44,
+          "text": "綺麗な花ですね"
+        },
+        {
+          "start": 1059.95,
+          "end": 1067.62,
+          "text": "ありがとうございます。でも、誕生日はまだです。1日早いですよ。"
+        },
+        {
+          "start": 1067.62,
+          "end": 1069.62,
+          "text": "え、すみません。"
+        },
+        {
+          "start": 1069.62,
+          "end": 1095.88,
+          "text": "女の学生の誕生日は、何月何日ですか?"
+        },
+        {
+          "start": 1095.88,
+          "end": 1096.88,
+          "text": "6番。"
+        },
+        {
+          "start": 1096.88,
+          "end": 1110.31,
+          "text": "店で、女の人と男の人が、はがきを見ながら話しています。2人は、どのはがきを選びましたか?"
+        },
+        {
+          "start": 1110.16,
+          "end": 1118.38,
+          "text": "綺麗なはがきがたくさんありますね 一つ選んで一緒にリンさんに出しましょうか"
+        },
+        {
+          "start": 1118.38,
+          "end": 1125.08,
+          "text": "いいですね 花の絵海の絵いろいろありますね"
+        },
+        {
+          "start": 1125.08,
+          "end": 1135.27,
+          "text": "この山のはがきはどうですか リンさんのうちは山と海は近いから毎日見ていますよ"
+        },
+        {
+          "start": 1135.27,
+          "end": 1142.3,
+          "text": "この橋の絵のはがきはどうですか 花が綺麗ですよ"
+        },
+        {
+          "start": 1141.2,
+          "end": 1166.02,
+          "text": "いいですねそれを出しましょう 二人はどの葉書を選びましたか"
+        },
+        {
+          "start": 1166.02,
+          "end": 1202.17,
+          "text": "ここで ちょっと休みましょう"
+        },
+        {
+          "start": 1202.17,
+          "end": 1211.1,
+          "text": "では また続けます"
+        },
+        {
+          "start": 1211.1,
+          "end": 1221.72,
+          "text": "問題3 問題3では絵を見ながら質問を聞いてください"
+        },
+        {
+          "start": 1221.72,
+          "end": 1229.06,
+          "text": "矢印の人は 何と言いますか"
+        },
+        {
+          "start": 1227.7,
+          "end": 1248.32,
+          "text": "1から3の中から一番良いものを一つ選んでください。では、練習しましょう。"
+        },
+        {
+          "start": 1248.32,
+          "end": 1249.42,
+          "text": "レー"
+        },
+        {
+          "start": 1249.42,
+          "end": 1258.06,
+          "text": "レストランでお店の人を呼びます。何と言いますか?"
+        },
+        {
+          "start": 1258.06,
+          "end": 1259.45,
+          "text": "1"
+        },
+        {
+          "start": 1259.45,
+          "end": 1262.53,
+          "text": "いらっしゃいませ。"
+        },
+        {
+          "start": 1262.53,
+          "end": 1263.23,
+          "text": "2"
+        },
+        {
+          "start": 1263.23,
+          "end": 1265.61,
+          "text": "失礼しました。"
+        },
+        {
+          "start": 1265.61,
+          "end": 1268.02,
+          "text": "3"
+        },
+        {
+          "start": 1268.02,
+          "end": 1271.29,
+          "text": "すみません。"
+        },
+        {
+          "start": 1273.71,
+          "end": 1286.06,
+          "text": "3番です 回答用紙の問題3の例のところを見てください"
+        },
+        {
+          "start": 1286.06,
+          "end": 1297.43,
+          "text": "一番いいものは 3番ですから答えはこのように書きます"
+        },
+        {
+          "start": 1297.43,
+          "end": 1310.65,
+          "text": "では始めます 一番 時計を忘れました"
+        },
+        {
+          "start": 1310.65,
+          "end": 1319.34,
+          "text": "今の時間が知りたいです 友達に何と言いますか"
+        },
+        {
+          "start": 1318.54,
+          "end": 1349.74,
+          "text": "1 今何時 2 今時間がある 3 今10時だよ 2番 先生の部屋に入ります"
+        },
+        {
+          "start": 1349.74,
+          "end": 1381.26,
+          "text": "何と言いますか 1 また明日 2 失礼します 3 どうぞ 3番 友達が結婚します"
+        },
+        {
+          "start": 1384.24,
+          "end": 1386.99,
+          "text": "1 いらっしゃい"
+        },
+        {
+          "start": 1388.27,
+          "end": 1392.34,
+          "text": "2 おめでとう"
+        },
+        {
+          "start": 1392.34,
+          "end": 1408.14,
+          "text": "3 ありがとう"
+        },
+        {
+          "start": 1408.14,
+          "end": 1413.04,
+          "text": "4番 バスで京都に行きます"
+        },
+        {
+          "start": 1413.04,
+          "end": 1418.18,
+          "text": "キップを買います なんと言いますか"
+        },
+        {
+          "start": 1418.18,
+          "end": 1423.53,
+          "text": "1 京都にバスで行ってください"
+        },
+        {
+          "start": 1423.53,
+          "end": 1429.11,
+          "text": "2 京都でキップを買ってください"
+        },
+        {
+          "start": 1429.11,
+          "end": 1446.24,
+          "text": "3 京都まで1枚ください"
+        },
+        {
+          "start": 1447.95,
+          "end": 1454.98,
+          "text": "スプーンで食べたいです 店の人に何と言いますか"
+        },
+        {
+          "start": 1454.98,
+          "end": 1460.0,
+          "text": "1 スプーンはいかがですか"
+        },
+        {
+          "start": 1460.0,
+          "end": 1464.82,
+          "text": "2 スプーンはありませんか"
+        },
+        {
+          "start": 1464.82,
+          "end": 1482.17,
+          "text": "3 スプーンで食べましょうか"
+        },
+        {
+          "start": 1482.17,
+          "end": 1486.54,
+          "text": "問題4 問題4は"
+        },
+        {
+          "start": 1486.54,
+          "end": 1492.18,
+          "text": "絵などがありません 文を聞いて"
+        },
+        {
+          "start": 1492.18,
+          "end": 1497.9,
+          "text": "1から3の中から 1番いいものを"
+        },
+        {
+          "start": 1499.09,
+          "end": 1513.0,
+          "text": "選んでください。では、練習しましょう。"
+        },
+        {
+          "start": 1513.0,
+          "end": 1514.32,
+          "text": "例"
+        },
+        {
+          "start": 1514.32,
+          "end": 1518.0,
+          "text": "奥にはどちらですか?"
+        },
+        {
+          "start": 1518.0,
+          "end": 1519.4,
+          "text": "1"
+        },
+        {
+          "start": 1519.4,
+          "end": 1522.11,
+          "text": "あちらです"
+        },
+        {
+          "start": 1522.11,
+          "end": 1523.34,
+          "text": "2"
+        },
+        {
+          "start": 1523.34,
+          "end": 1526.31,
+          "text": "アメリカです"
+        },
+        {
+          "start": 1526.31,
+          "end": 1527.74,
+          "text": "3"
+        },
+        {
+          "start": 1527.74,
+          "end": 1530.35,
+          "text": "部屋です"
+        },
+        {
+          "start": 1530.35,
+          "end": 1535.85,
+          "text": "一番いいものは、2番です。"
+        },
+        {
+          "start": 1535.85,
+          "end": 1544.57,
+          "text": "回答用紙の問題4の例のところを見てください。"
+        },
+        {
+          "start": 1546.96,
+          "end": 1564.34,
+          "text": "2番ですから答えはこのように書きます では始めます"
+        },
+        {
+          "start": 1564.34,
+          "end": 1569.93,
+          "text": "1番 行ってきまーす"
+        },
+        {
+          "start": 1569.93,
+          "end": 1574.37,
+          "text": "1 おかえりなさい"
+        },
+        {
+          "start": 1574.37,
+          "end": 1576.56,
+          "text": "2 ただいま"
+        },
+        {
+          "start": 1576.56,
+          "end": 1589.19,
+          "text": "3 行ってらっしゃい"
+        },
+        {
+          "start": 1589.19,
+          "end": 1595.78,
+          "text": "2番 それはどこのカメラですか"
+        },
+        {
+          "start": 1595.78,
+          "end": 1598.98,
+          "text": "1 一回にあります"
+        },
+        {
+          "start": 1605.84,
+          "end": 1617.33,
+          "text": "そこでとります 3番"
+        },
+        {
+          "start": 1617.33,
+          "end": 1623.79,
+          "text": "どんなカバンを忘れましたか 1"
+        },
+        {
+          "start": 1623.79,
+          "end": 1628.04,
+          "text": "電車の中です 2"
+        },
+        {
+          "start": 1628.04,
+          "end": 1632.93,
+          "text": "黒いカバンです 3"
+        },
+        {
+          "start": 1632.93,
+          "end": 1644.22,
+          "text": "私のです 4番"
+        },
+        {
+          "start": 1644.22,
+          "end": 1650.6,
+          "text": "日曜日に行ったレストラン おいしかったね 1"
+        },
+        {
+          "start": 1650.6,
+          "end": 1655.01,
+          "text": "何を食べる 2"
+        },
+        {
+          "start": 1655.01,
+          "end": 1660.51,
+          "text": "日曜日大丈夫だよ 3"
+        },
+        {
+          "start": 1660.46,
+          "end": 1673.47,
+          "text": "また行きたいね"
+        },
+        {
+          "start": 1673.47,
+          "end": 1674.47,
+          "text": "5番"
+        },
+        {
+          "start": 1674.47,
+          "end": 1676.7,
+          "text": "学生の時"
+        },
+        {
+          "start": 1676.7,
+          "end": 1679.7,
+          "text": "何かスポーツをしていましたか?"
+        },
+        {
+          "start": 1679.7,
+          "end": 1681.91,
+          "text": "1"
+        },
+        {
+          "start": 1681.91,
+          "end": 1685.07,
+          "text": "何もしていませんでした"
+        },
+        {
+          "start": 1685.07,
+          "end": 1687.29,
+          "text": "2"
+        },
+        {
+          "start": 1687.29,
+          "end": 1689.54,
+          "text": "サッカーをしましょう"
+        },
+        {
+          "start": 1689.54,
+          "end": 1691.92,
+          "text": "3"
+        },
+        {
+          "start": 1691.92,
+          "end": 1695.11,
+          "text": "あの学生がしていました"
+        },
+        {
+          "start": 1695.11,
+          "end": 1707.15,
+          "text": "6番"
+        },
+        {
+          "start": 1707.15,
+          "end": 1709.54,
+          "text": "すみません"
+        },
+        {
+          "start": 1709.54,
+          "end": 1711.54,
+          "text": "この駅から山川駅まで"
+        },
+        {
+          "start": 1711.54,
+          "end": 1715.75,
+          "text": "電車でどのぐらいかかりますか?"
+        },
+        {
+          "start": 1715.75,
+          "end": 1716.98,
+          "text": "1"
+        },
+        {
+          "start": 1716.88,
+          "end": 1720.91,
+          "text": "10時15分です。"
+        },
+        {
+          "start": 1720.91,
+          "end": 1724.05,
+          "text": "2. あの電車です。"
+        },
+        {
+          "start": 1725.33,
+          "end": 1729.67,
+          "text": "3. 10分か15分です。"
+        },
+        {
+          "start": 1729.67,
+          "end": 1745.53,
+          "text": "これで、聴解試験を終わります。"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "exam:n5-2017:recording": {
+      "sha256": "50802a1c8e4c71e44bd68ca4119c7e420d3f11547d9f63b325e0809b789141c8",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 1675.27,
+      "segments": [
+        {
+          "start": 4.85,
+          "end": 13.93,
+          "text": "問題1 問題1では、初めに質問を聞いてください。"
+        },
+        {
+          "start": 13.93,
+          "end": 34.3,
+          "text": "それから話を聞いて、問題用紙の1から4の中から一番いいものを一つ選んでください。"
+        },
+        {
+          "start": 34.3,
+          "end": 44.04,
+          "text": "では、練習しましょう。"
+        },
+        {
+          "start": 45.39,
+          "end": 56.46,
+          "text": "クラスで先生が話しています 学生は今日うちでどこを勉強しますか"
+        },
+        {
+          "start": 56.46,
+          "end": 64.57,
+          "text": "では今日は20ページまで終わりましたから 21ページは宿題ですね"
+        },
+        {
+          "start": 64.57,
+          "end": 70.46,
+          "text": "全部ですか いいえ21ページの一番です"
+        },
+        {
+          "start": 70.46,
+          "end": 82.87,
+          "text": "2番はクラスでします 学生は今日うちで"
+        },
+        {
+          "start": 81.78,
+          "end": 88.19,
+          "text": "どこを勉強しますか 一番いいものは"
+        },
+        {
+          "start": 88.19,
+          "end": 93.9,
+          "text": "3番です 回答用紙の"
+        },
+        {
+          "start": 93.9,
+          "end": 103.21,
+          "text": "問題1の例のところを見てください 一番いいものは"
+        },
+        {
+          "start": 103.21,
+          "end": 107.62,
+          "text": "3番ですから 答えは"
+        },
+        {
+          "start": 107.62,
+          "end": 121.26,
+          "text": "このように書きます では始めます"
+        },
+        {
+          "start": 121.26,
+          "end": 126.38,
+          "text": "一番 靴下の店で"
+        },
+        {
+          "start": 125.01,
+          "end": 135.78,
+          "text": "女の人と店の人が話しています 女の人はどの靴下を買いますか"
+        },
+        {
+          "start": 135.78,
+          "end": 142.9,
+          "text": "子供の靴下ありますか はい長いのですか"
+        },
+        {
+          "start": 142.9,
+          "end": 146.68,
+          "text": "短いのですか 長いのです"
+        },
+        {
+          "start": 146.68,
+          "end": 152.13,
+          "text": "はい 果物の絵と動物の絵があります"
+        },
+        {
+          "start": 163.89,
+          "end": 191.73,
+          "text": "女の人はどの靴下を買いますか 2番病院で医者と女の人が話しています"
+        },
+        {
+          "start": 191.73,
+          "end": 205.33,
+          "text": "女の人は1日に何回薬を飲みますか この薬は朝と夜ご飯を食べた後で飲んでください"
+        },
+        {
+          "start": 211.28,
+          "end": 221.01,
+          "text": "4日間飲んでくださいね わかりました"
+        },
+        {
+          "start": 221.01,
+          "end": 243.3,
+          "text": "女の人は1日に何回薬を飲みますか 3番"
+        },
+        {
+          "start": 243.3,
+          "end": 255.69,
+          "text": "デパートで女の人と店の人が話しています 店の人はどのカバンを取りますか"
+        },
+        {
+          "start": 255.69,
+          "end": 261.89,
+          "text": "すみません その上の黒いカバンを取ってください"
+        },
+        {
+          "start": 263.63,
+          "end": 267.57,
+          "text": "この小さいのですか いいえ"
+        },
+        {
+          "start": 267.57,
+          "end": 275.67,
+          "text": "大きいのです はい"
+        },
+        {
+          "start": 275.67,
+          "end": 295.24,
+          "text": "店の人は どのカバンを取りますか"
+        },
+        {
+          "start": 295.24,
+          "end": 301.53,
+          "text": "4番 教室で先生が話しています"
+        },
+        {
+          "start": 301.53,
+          "end": 311.15,
+          "text": "学生は机の上に何を置きますか 今からテストをします"
+        },
+        {
+          "start": 316.1,
+          "end": 324.44,
+          "text": "机の上に辞書を出してください 鉛筆と消しゴムも出してください"
+        },
+        {
+          "start": 324.44,
+          "end": 329.46,
+          "text": "時計はカバンの中に入れてください 先生"
+        },
+        {
+          "start": 329.46,
+          "end": 340.98,
+          "text": "ノートはどうしますか ノートもカバンの中に入れてください"
+        },
+        {
+          "start": 340.98,
+          "end": 363.01,
+          "text": "学生は机の上に何を置きますか 5番"
+        },
+        {
+          "start": 363.01,
+          "end": 368.24,
+          "text": "バスの中で 旅行会社の人が"
+        },
+        {
+          "start": 366.98,
+          "end": 372.24,
+          "text": "学生に話しています 学生は"
+        },
+        {
+          "start": 372.24,
+          "end": 378.28,
+          "text": "初めに何をしますか 皆さん"
+        },
+        {
+          "start": 378.28,
+          "end": 383.9,
+          "text": "ホテルに着きました 今から一回のレストランで"
+        },
+        {
+          "start": 383.9,
+          "end": 390.49,
+          "text": "晩御飯を食べます 晩御飯は7時からです"
+        },
+        {
+          "start": 390.49,
+          "end": 397.12,
+          "text": "今6時50分ですから すぐに行ってください"
+        },
+        {
+          "start": 400.69,
+          "end": 415.34,
+          "text": "部屋に持っていきます 晩ご飯の後はテレビを見たり買い物をしたりしてください"
+        },
+        {
+          "start": 415.34,
+          "end": 437.39,
+          "text": "学生は初めに何をしますか 6番"
+        },
+        {
+          "start": 437.39,
+          "end": 444.58,
+          "text": "男の人と女の人が話しています 男の人は"
+        },
+        {
+          "start": 444.58,
+          "end": 450.66,
+          "text": "何を持っていきますか 来週の日曜日"
+        },
+        {
+          "start": 452.56,
+          "end": 459.02,
+          "text": "何を持っていきましょうか 私はおにぎりを持っていきます"
+        },
+        {
+          "start": 459.02,
+          "end": 465.22,
+          "text": "じゃあ僕は 飲み物とお菓子をお願いします"
+        },
+        {
+          "start": 465.22,
+          "end": 469.67,
+          "text": "はい 飲み物とお菓子ですね"
+        },
+        {
+          "start": 469.67,
+          "end": 474.03,
+          "text": "あ 飲み物は思いですね"
+        },
+        {
+          "start": 474.03,
+          "end": 483.62,
+          "text": "海についてから買いましょう そうですね"
+        },
+        {
+          "start": 503.09,
+          "end": 506.54,
+          "text": "7番 バス停で"
+        },
+        {
+          "start": 506.54,
+          "end": 514.24,
+          "text": "女の人とバス会社の人が話しています 女の人は"
+        },
+        {
+          "start": 514.24,
+          "end": 520.4,
+          "text": "何番のバスに乗りますか すみません"
+        },
+        {
+          "start": 520.4,
+          "end": 526.74,
+          "text": "1番のバスは緑駅に行きますか いいえ"
+        },
+        {
+          "start": 526.74,
+          "end": 533.92,
+          "text": "緑駅に行くバスは 3番と5番と7番ですよ"
+        },
+        {
+          "start": 536.21,
+          "end": 542.84,
+          "text": "でも 今日は日曜日ですから 5番のバスはありません"
+        },
+        {
+          "start": 542.84,
+          "end": 550.5,
+          "text": "そうですか それから3番は朝と夕方のバスですから"
+        },
+        {
+          "start": 550.5,
+          "end": 563.11,
+          "text": "今の時間は7番ですね わかりましたありがとうございます"
+        },
+        {
+          "start": 563.11,
+          "end": 586.46,
+          "text": "女の人は 何番のバスに乗りますか"
+        },
+        {
+          "start": 590.64,
+          "end": 624.5,
+          "text": "はじめに質問を聞いてください。それから話を聞いて、問題用紙の1から4の中から一番いいものを一つ選んでください。では、練習しましょう。"
+        },
+        {
+          "start": 632.85,
+          "end": 635.7,
+          "text": "どこへ行きましたか?"
+        },
+        {
+          "start": 635.7,
+          "end": 639.01,
+          "text": "男の人です"
+        },
+        {
+          "start": 639.01,
+          "end": 643.17,
+          "text": "山田さん、昨日どこかへ行きましたか?"
+        },
+        {
+          "start": 643.17,
+          "end": 645.74,
+          "text": "図書館へ行きました"
+        },
+        {
+          "start": 645.74,
+          "end": 648.24,
+          "text": "駅のそばの図書館ですか?"
+        },
+        {
+          "start": 648.24,
+          "end": 650.02,
+          "text": "はい"
+        },
+        {
+          "start": 650.02,
+          "end": 654.52,
+          "text": "僕は山川デパートへ行って買い物をしました"
+        },
+        {
+          "start": 654.52,
+          "end": 661.78,
+          "text": "え?私も昨日の夜、山川デパートのレストランへ行きましたよ?"
+        },
+        {
+          "start": 661.78,
+          "end": 663.28,
+          "text": "そうですか"
+        },
+        {
+          "start": 668.66,
+          "end": 680.44,
+          "text": "男の人は昨日、どこへ行きましたか? 一番いいものは、三番です。"
+        },
+        {
+          "start": 680.44,
+          "end": 700.28,
+          "text": "回答用紙の問題二の例のところを見てください。 一番いいものは、三番ですから。答えは、このように書きます。"
+        },
+        {
+          "start": 712.66,
+          "end": 726.38,
+          "text": "男の学生と女の学生が話しています 女の学生は今日何時間勉強しますか"
+        },
+        {
+          "start": 726.38,
+          "end": 733.26,
+          "text": "山田さんはいつも何時間ぐらい勉強しますか"
+        },
+        {
+          "start": 733.26,
+          "end": 741.74,
+          "text": "毎日3時間ぐらいです 私は毎日1時間です"
+        },
+        {
+          "start": 744.86,
+          "end": 757.26,
+          "text": "テストがありますから今日は4時間勉強します そうですか"
+        },
+        {
+          "start": 757.26,
+          "end": 780.22,
+          "text": "女の学生は今日何時間勉強しますか 2番"
+        },
+        {
+          "start": 780.22,
+          "end": 788.78,
+          "text": "男の人と女の人が話しています 女の人の電話番号は"
+        },
+        {
+          "start": 796.46,
+          "end": 802.46,
+          "text": "512の7734ですね"
+        },
+        {
+          "start": 802.46,
+          "end": 811.38,
+          "text": "いいえ7734じゃなくて7743です"
+        },
+        {
+          "start": 811.38,
+          "end": 816.8,
+          "text": "えっちょっと待ってください 目のします"
+        },
+        {
+          "start": 816.8,
+          "end": 831.42,
+          "text": "512の7743です はいありがとうございました"
+        },
+        {
+          "start": 832.99,
+          "end": 853.56,
+          "text": "電話番号は何番ですか 3番"
+        },
+        {
+          "start": 853.56,
+          "end": 864.56,
+          "text": "女の学生と男の学生が話しています 男の学生は誰と住んでいますか"
+        },
+        {
+          "start": 864.56,
+          "end": 871.32,
+          "text": "山田さんはお父さんとお母さんと一緒に住んでいますか"
+        },
+        {
+          "start": 871.32,
+          "end": 875.66,
+          "text": "いえ 両親は遠くに住んでいます"
+        },
+        {
+          "start": 875.66,
+          "end": 879.54,
+          "text": "そうですか 今"
+        },
+        {
+          "start": 878.22,
+          "end": 884.58,
+          "text": "姉と一緒に住んでいます 兄弟は一人ですか"
+        },
+        {
+          "start": 884.58,
+          "end": 896.11,
+          "text": "弟もいますよ 弟は両親と一緒です"
+        },
+        {
+          "start": 896.11,
+          "end": 917.25,
+          "text": "男の学生は誰と住んでいますか 4番"
+        },
+        {
+          "start": 917.25,
+          "end": 923.25,
+          "text": "学校で男の学生と女の学生が話しています"
+        },
+        {
+          "start": 930.45,
+          "end": 934.98,
+          "text": "もう一時ですね。何か食べませんか?"
+        },
+        {
+          "start": 934.98,
+          "end": 944.72,
+          "text": "そうですね。でも、今日は土曜日だから、学校の食堂や喫茶店は休みですよ。"
+        },
+        {
+          "start": 944.72,
+          "end": 950.28,
+          "text": "じゃあ、パン屋でパンを買って、教室で食べましょうか。"
+        },
+        {
+          "start": 950.28,
+          "end": 962.44,
+          "text": "そうですね。二人は、どこで、昼ご飯を食べますか?"
+        },
+        {
+          "start": 980.72,
+          "end": 991.4,
+          "text": "先生が学生に話しています 学生は何で名前を書きますか"
+        },
+        {
+          "start": 991.4,
+          "end": 996.06,
+          "text": "はい じゃあちょっと聞いてください"
+        },
+        {
+          "start": 996.06,
+          "end": 1007.05,
+          "text": "えー 来月のバス旅行に行きたい人はこの紙にボールペンで名前を書いてください"
+        },
+        {
+          "start": 1014.93,
+          "end": 1043.38,
+          "text": "赤で描かないでくださいね 学生は何で名前を描きますか"
+        },
+        {
+          "start": 1043.38,
+          "end": 1049.31,
+          "text": "6番 女の学生と男の学生が話しています"
+        },
+        {
+          "start": 1049.31,
+          "end": 1054.95,
+          "text": "二人は明日 どこで会いますか"
+        },
+        {
+          "start": 1054.95,
+          "end": 1061.77,
+          "text": "明日の夜 一緒にサッカーを見に行きませんか"
+        },
+        {
+          "start": 1061.77,
+          "end": 1065.78,
+          "text": "いいですね どこで会いましょうか"
+        },
+        {
+          "start": 1066.94,
+          "end": 1072.3,
+          "text": "駅で会いませんか 駅は人が多いですよ"
+        },
+        {
+          "start": 1072.3,
+          "end": 1079.42,
+          "text": "そうですねじゃあ 駅の前の喫茶店はどうですか"
+        },
+        {
+          "start": 1079.42,
+          "end": 1083.89,
+          "text": "はいそうしましょう あ"
+        },
+        {
+          "start": 1083.89,
+          "end": 1090.38,
+          "text": "サッカーを見てから 近くのレストランで晩御飯を食べませんか"
+        },
+        {
+          "start": 1103.3,
+          "end": 1125.07,
+          "text": "合いますか問題3 問題3では"
+        },
+        {
+          "start": 1125.07,
+          "end": 1133.31,
+          "text": "絵を見ながら質問を聞いてください 矢印の人は"
+        },
+        {
+          "start": 1133.31,
+          "end": 1140.33,
+          "text": "何と言いますか 1から3の中から"
+        },
+        {
+          "start": 1140.33,
+          "end": 1148.14,
+          "text": "一番いいものを 一つ選んでください"
+        },
+        {
+          "start": 1148.14,
+          "end": 1159.0,
+          "text": "では 練習しましょう"
+        },
+        {
+          "start": 1160.54,
+          "end": 1167.24,
+          "text": "お店の人を呼びます。何と言いますか?"
+        },
+        {
+          "start": 1167.24,
+          "end": 1168.28,
+          "text": "1"
+        },
+        {
+          "start": 1168.28,
+          "end": 1171.68,
+          "text": "いらっしゃいませ。"
+        },
+        {
+          "start": 1171.68,
+          "end": 1172.58,
+          "text": "2"
+        },
+        {
+          "start": 1172.58,
+          "end": 1174.76,
+          "text": "失礼しました。"
+        },
+        {
+          "start": 1174.76,
+          "end": 1177.53,
+          "text": "3"
+        },
+        {
+          "start": 1177.53,
+          "end": 1180.46,
+          "text": "すみません。"
+        },
+        {
+          "start": 1180.46,
+          "end": 1186.15,
+          "text": "一番いいものは、3番です。"
+        },
+        {
+          "start": 1186.15,
+          "end": 1195.17,
+          "text": "回答用紙の、問題3の、例のところを見てください。"
+        },
+        {
+          "start": 1195.17,
+          "end": 1200.62,
+          "text": "一番いいものは、3番ですから。"
+        },
+        {
+          "start": 1201.94,
+          "end": 1215.59,
+          "text": "このように書きます では始めます"
+        },
+        {
+          "start": 1215.59,
+          "end": 1220.11,
+          "text": "1番 ご飯を食べました"
+        },
+        {
+          "start": 1220.11,
+          "end": 1224.84,
+          "text": "何と言いますか 1"
+        },
+        {
+          "start": 1224.84,
+          "end": 1229.49,
+          "text": "ごちそうさまでした 2"
+        },
+        {
+          "start": 1229.49,
+          "end": 1233.82,
+          "text": "いただきます 3"
+        },
+        {
+          "start": 1233.82,
+          "end": 1250.18,
+          "text": "どういたしまして 2番"
+        },
+        {
+          "start": 1250.18,
+          "end": 1255.78,
+          "text": "電車の中です 女の人が来ました"
+        },
+        {
+          "start": 1260.4,
+          "end": 1263.71,
+          "text": "どうもありがとう"
+        },
+        {
+          "start": 1263.71,
+          "end": 1264.94,
+          "text": "に"
+        },
+        {
+          "start": 1264.94,
+          "end": 1265.94,
+          "text": "はじめまして"
+        },
+        {
+          "start": 1265.94,
+          "end": 1269.57,
+          "text": "さん"
+        },
+        {
+          "start": 1269.57,
+          "end": 1284.56,
+          "text": "ここどうぞ"
+        },
+        {
+          "start": 1284.56,
+          "end": 1285.75,
+          "text": "さんばん"
+        },
+        {
+          "start": 1285.75,
+          "end": 1287.75,
+          "text": "うちへ帰ります"
+        },
+        {
+          "start": 1287.75,
+          "end": 1293.45,
+          "text": "友達に何と言いますか"
+        },
+        {
+          "start": 1293.45,
+          "end": 1294.67,
+          "text": "いち"
+        },
+        {
+          "start": 1294.67,
+          "end": 1297.92,
+          "text": "いってきます"
+        },
+        {
+          "start": 1297.92,
+          "end": 1299.14,
+          "text": "に"
+        },
+        {
+          "start": 1299.14,
+          "end": 1300.14,
+          "text": "じゃあまた"
+        },
+        {
+          "start": 1300.14,
+          "end": 1302.49,
+          "text": "さん"
+        },
+        {
+          "start": 1302.49,
+          "end": 1317.67,
+          "text": "ただいま"
+        },
+        {
+          "start": 1317.67,
+          "end": 1318.67,
+          "text": "よんばん"
+        },
+        {
+          "start": 1318.67,
+          "end": 1323.54,
+          "text": "郵便局できっておかいます"
+        },
+        {
+          "start": 1326.67,
+          "end": 1354.18,
+          "text": "1 切手を買いませんか 2 切手をどうぞ 3 切手をください 5番"
+        },
+        {
+          "start": 1354.18,
+          "end": 1363.7,
+          "text": "友達は鉛筆がありません 友達に何と言いますか"
+        },
+        {
+          "start": 1363.7,
+          "end": 1374.75,
+          "text": "1 鉛筆かりましょうか 2 鉛筆使いますか"
+        },
+        {
+          "start": 1394.99,
+          "end": 1416.38,
+          "text": "問題4 問題4は絵などがありません 文を聞いて1から3の中から一番いいものを一つ選んでください"
+        },
+        {
+          "start": 1416.38,
+          "end": 1431.13,
+          "text": "では練習しましょう 奥にはどちらですか"
+        },
+        {
+          "start": 1440.56,
+          "end": 1445.87,
+          "text": "部屋です 一番いいものは"
+        },
+        {
+          "start": 1445.87,
+          "end": 1453.55,
+          "text": "2番です 回答用紙の問題4の"
+        },
+        {
+          "start": 1453.55,
+          "end": 1460.15,
+          "text": "例のところを見てください 一番いいものは"
+        },
+        {
+          "start": 1460.15,
+          "end": 1468.76,
+          "text": "2番ですから 答えはこのように書きます"
+        },
+        {
+          "start": 1468.76,
+          "end": 1479.1,
+          "text": "では始めます 一番"
+        },
+        {
+          "start": 1479.1,
+          "end": 1484.86,
+          "text": "今日は何日ですか 1"
+        },
+        {
+          "start": 1487.5,
+          "end": 1492.1,
+          "text": "2 3週間です"
+        },
+        {
+          "start": 1492.1,
+          "end": 1505.94,
+          "text": "3 3時です"
+        },
+        {
+          "start": 1505.94,
+          "end": 1509.15,
+          "text": "2番 すみません"
+        },
+        {
+          "start": 1509.15,
+          "end": 1514.19,
+          "text": "図書館はどこですか? 1"
+        },
+        {
+          "start": 1514.19,
+          "end": 1518.46,
+          "text": "あそこです 2"
+        },
+        {
+          "start": 1518.46,
+          "end": 1523.09,
+          "text": "6時までです 3"
+        },
+        {
+          "start": 1523.09,
+          "end": 1537.62,
+          "text": "本を借ります 3番"
+        },
+        {
+          "start": 1537.62,
+          "end": 1544.79,
+          "text": "明日 何時に学校に来ますか? 1"
+        },
+        {
+          "start": 1544.79,
+          "end": 1549.6,
+          "text": "バスで来ます 2"
+        },
+        {
+          "start": 1548.98,
+          "end": 1553.48,
+          "text": "9時半です 3"
+        },
+        {
+          "start": 1553.48,
+          "end": 1567.7,
+          "text": "6人です 4番"
+        },
+        {
+          "start": 1567.7,
+          "end": 1574.43,
+          "text": "田中さん その荷物を持ちましょうか 1"
+        },
+        {
+          "start": 1574.43,
+          "end": 1579.0,
+          "text": "どういたしまして 2"
+        },
+        {
+          "start": 1579.0,
+          "end": 1583.62,
+          "text": "持ちませんでした 3"
+        },
+        {
+          "start": 1583.62,
+          "end": 1598.13,
+          "text": "ありがとうございます 5番"
+        },
+        {
+          "start": 1598.13,
+          "end": 1603.22,
+          "text": "ちょっと休みませんか 1"
+        },
+        {
+          "start": 1603.22,
+          "end": 1607.5,
+          "text": "日曜日です 2"
+        },
+        {
+          "start": 1611.92,
+          "end": 1626.42,
+          "text": "そうしましょう 6番"
+        },
+        {
+          "start": 1626.42,
+          "end": 1632.33,
+          "text": "それは何の本ですか 1"
+        },
+        {
+          "start": 1632.33,
+          "end": 1636.83,
+          "text": "料理の本です 2"
+        },
+        {
+          "start": 1636.83,
+          "end": 1641.14,
+          "text": "私の本です 3"
+        },
+        {
+          "start": 1641.14,
+          "end": 1656.26,
+          "text": "はいそうです これで"
+        },
+        {
+          "start": 1656.26,
+          "end": 1660.98,
+          "text": "聴解試験を終わります"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "exam:n5-2010-2011:recording": {
+      "sha256": "1b9f83b182be8239f4c0f72a041aeb66814439ae598e99c5e907177dbb8d794e",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 1750.91,
+      "segments": [
+        {
+          "start": 7.09,
+          "end": 22.72,
+          "text": "日本語能力試験、聴解N5、これからN5の聴解試験を始めます。"
+        },
+        {
+          "start": 22.72,
+          "end": 26.03,
+          "text": "メモをとってもいいです。"
+        },
+        {
+          "start": 26.03,
+          "end": 31.79,
+          "text": "問題用紙を開けてください。"
+        },
+        {
+          "start": 31.79,
+          "end": 40.82,
+          "text": "問題用紙のページがない時は、手を開けてください。"
+        },
+        {
+          "start": 40.82,
+          "end": 44.12,
+          "text": "問題がよく見えない時も、"
+        },
+        {
+          "start": 44.69,
+          "end": 56.89,
+          "text": "手をあげてください。いつでもいいです。"
+        },
+        {
+          "start": 56.89,
+          "end": 86.22,
+          "text": "問題1。問題1では、初めに質問を聞いてください。それから、話を聞いて、問題用紙の1から4の中から、一番いいものを一つ選んでください。"
+        },
+        {
+          "start": 87.6,
+          "end": 103.61,
+          "text": "練習しましょう レークラスで先生が話しています学生は今日"
+        },
+        {
+          "start": 103.61,
+          "end": 112.86,
+          "text": "うちでどこを勉強しますか では今日は20ページまで終わりましたから"
+        },
+        {
+          "start": 112.86,
+          "end": 117.92,
+          "text": "21ページは宿題ですね 全部ですか"
+        },
+        {
+          "start": 130.32,
+          "end": 137.6,
+          "text": "学生は今日、うちでどこを勉強しますか?"
+        },
+        {
+          "start": 137.6,
+          "end": 143.55,
+          "text": "一番いいものは3番です。"
+        },
+        {
+          "start": 143.55,
+          "end": 150.81,
+          "text": "回答用紙の問題1の例のところを見てください。"
+        },
+        {
+          "start": 150.81,
+          "end": 156.66,
+          "text": "一番いいものは3番ですから。"
+        },
+        {
+          "start": 156.66,
+          "end": 164.15,
+          "text": "答えはこのように書きます。"
+        },
+        {
+          "start": 164.15,
+          "end": 173.42,
+          "text": "では始めます。"
+        },
+        {
+          "start": 174.8,
+          "end": 187.74,
+          "text": "靴下の店で女の人と店の人が話しています 女の人はどの靴下を買いますか"
+        },
+        {
+          "start": 187.74,
+          "end": 192.87,
+          "text": "子供の靴下ありますか はい"
+        },
+        {
+          "start": 192.87,
+          "end": 196.98,
+          "text": "長いのですか 短いのですか"
+        },
+        {
+          "start": 196.98,
+          "end": 200.03,
+          "text": "長いのです はい"
+        },
+        {
+          "start": 200.03,
+          "end": 206.03,
+          "text": "果物の絵と動物の絵があります どちらがいいですか"
+        },
+        {
+          "start": 208.21,
+          "end": 235.92,
+          "text": "動物のをください 女の人はどの靴下を買いますか"
+        },
+        {
+          "start": 235.92,
+          "end": 243.66,
+          "text": "2番 病院で医者と女の人が話しています"
+        },
+        {
+          "start": 243.66,
+          "end": 257.22,
+          "text": "女の人は1日に何回薬を飲みますか この薬は朝と夜ご飯を食べた後で飲んでください"
+        },
+        {
+          "start": 259.58,
+          "end": 266.1,
+          "text": "昼は飲まないでくださいはい 4日間飲んでくださいね"
+        },
+        {
+          "start": 266.1,
+          "end": 293.64,
+          "text": "わかりました 女の人は1日に何回薬を飲みますか"
+        },
+        {
+          "start": 293.64,
+          "end": 297.04,
+          "text": "3番 テパートで"
+        },
+        {
+          "start": 297.04,
+          "end": 307.61,
+          "text": "女の人と店の人が話しています 店の人はどのカバンを取りますか"
+        },
+        {
+          "start": 312.34,
+          "end": 318.29,
+          "text": "取ってください どちらですかこの小さいのですか"
+        },
+        {
+          "start": 318.29,
+          "end": 321.45,
+          "text": "いいえ 大きいのです"
+        },
+        {
+          "start": 321.45,
+          "end": 347.26,
+          "text": "はい 店の人はどのカバンを取りますか"
+        },
+        {
+          "start": 347.26,
+          "end": 353.55,
+          "text": "4番 教室で先生が話しています"
+        },
+        {
+          "start": 353.55,
+          "end": 363.18,
+          "text": "学生は机の上に何を置きますか 今からテストをします"
+        },
+        {
+          "start": 364.8,
+          "end": 372.41,
+          "text": "辞書を使う問題がありますから 机の上に辞書を出してください"
+        },
+        {
+          "start": 372.41,
+          "end": 380.18,
+          "text": "鉛筆と消しゴムも出してください 時計はカバンの中に入れてください"
+        },
+        {
+          "start": 380.18,
+          "end": 392.94,
+          "text": "先生ノートはどうしますか ノートもカバンの中に入れてください"
+        },
+        {
+          "start": 392.94,
+          "end": 414.94,
+          "text": "学生は机の上に何を置きますか 5番"
+        },
+        {
+          "start": 416.66,
+          "end": 428.82,
+          "text": "旅行会社の人が学生に話しています 学生は初めに何をしますか"
+        },
+        {
+          "start": 428.82,
+          "end": 438.62,
+          "text": "皆さんホテルに着きました 今から一回のレストランで晩御飯を食べます"
+        },
+        {
+          "start": 438.62,
+          "end": 449.05,
+          "text": "晩御飯は7時からです 今6時50分ですからすぐに行ってください"
+        },
+        {
+          "start": 450.98,
+          "end": 467.31,
+          "text": "ホテルの人が部屋に持っていきます 晩ご飯の後はテレビを見たり買い物をしたりしてください"
+        },
+        {
+          "start": 467.31,
+          "end": 489.33,
+          "text": "学生は初めに何をしますか 6番"
+        },
+        {
+          "start": 489.33,
+          "end": 500.39,
+          "text": "男の人と女の人が話しています 男の人は何を持っていきますか"
+        },
+        {
+          "start": 504.5,
+          "end": 510.91,
+          "text": "何を持っていきましょうか 私はおにぎりを持っていきます"
+        },
+        {
+          "start": 510.91,
+          "end": 517.11,
+          "text": "じゃあ僕は 飲み物とお菓子をお願いします"
+        },
+        {
+          "start": 517.11,
+          "end": 521.61,
+          "text": "はい 飲み物とお菓子ですね"
+        },
+        {
+          "start": 521.61,
+          "end": 525.97,
+          "text": "あ 飲み物は思いですね"
+        },
+        {
+          "start": 525.97,
+          "end": 535.6,
+          "text": "海についてから買いましょう そうですね"
+        },
+        {
+          "start": 555.02,
+          "end": 564.35,
+          "text": "7番 バス停で女の人とバス会社の人が話しています"
+        },
+        {
+          "start": 564.35,
+          "end": 572.37,
+          "text": "女の人は何番のバスに乗りますか すみません"
+        },
+        {
+          "start": 572.37,
+          "end": 578.71,
+          "text": "1番のバスは緑駅に行きますか いいえ"
+        },
+        {
+          "start": 578.71,
+          "end": 587.39,
+          "text": "緑駅に行くバスは3番と5番と7番ですよ そうですか"
+        },
+        {
+          "start": 588.16,
+          "end": 594.79,
+          "text": "でも 今日は日曜日ですから 5番のバスはありません"
+        },
+        {
+          "start": 594.79,
+          "end": 602.46,
+          "text": "そうですか それから3番は 朝と夕方のバスですから"
+        },
+        {
+          "start": 602.46,
+          "end": 615.06,
+          "text": "今の時間は7番ですね 分かりました ありがとうございます"
+        },
+        {
+          "start": 615.06,
+          "end": 619.69,
+          "text": "女の人は 何番のバスに乗りますか"
+        },
+        {
+          "start": 639.54,
+          "end": 673.39,
+          "text": "はじめに、質問を聞いてください。それから話を聞いて、問題用紙の1から4の中から、一番いいものを一つ選んでください。では、練習しましょう。"
+        },
+        {
+          "start": 681.74,
+          "end": 687.91,
+          "text": "どこへ行きましたか? 男の人です。"
+        },
+        {
+          "start": 687.91,
+          "end": 692.07,
+          "text": "山田さん、昨日どこかへ行きましたか?"
+        },
+        {
+          "start": 692.07,
+          "end": 694.63,
+          "text": "図書館へ行きました。"
+        },
+        {
+          "start": 694.63,
+          "end": 697.13,
+          "text": "駅のそばの図書館ですか?"
+        },
+        {
+          "start": 697.13,
+          "end": 698.92,
+          "text": "はい。"
+        },
+        {
+          "start": 698.92,
+          "end": 703.42,
+          "text": "僕は山川デパートへ行って買い物をしました。"
+        },
+        {
+          "start": 703.42,
+          "end": 710.64,
+          "text": "え? 私も昨日の夜、山川デパートのレストランへ行きましたよ。"
+        },
+        {
+          "start": 710.64,
+          "end": 712.14,
+          "text": "そうですか。"
+        },
+        {
+          "start": 717.55,
+          "end": 729.34,
+          "text": "男の人は昨日、どこへ行きましたか? 一番いいものは、三番です。"
+        },
+        {
+          "start": 729.34,
+          "end": 749.21,
+          "text": "回答用紙の問題二の例のところを見てください。 一番いいものは、三番ですから。答えは、このように書きます。"
+        },
+        {
+          "start": 761.55,
+          "end": 775.26,
+          "text": "男の学生と女の学生が話しています 女の学生は今日何時間勉強しますか"
+        },
+        {
+          "start": 775.26,
+          "end": 782.22,
+          "text": "山田さんはいつも何時間ぐらい勉強しますか"
+        },
+        {
+          "start": 782.22,
+          "end": 790.66,
+          "text": "毎日3時間ぐらいです 私は毎日1時間です"
+        },
+        {
+          "start": 795.7,
+          "end": 806.1,
+          "text": "今日は4時間勉強します そうですか"
+        },
+        {
+          "start": 806.1,
+          "end": 809.66,
+          "text": "女の学生は 今日"
+        },
+        {
+          "start": 809.66,
+          "end": 829.01,
+          "text": "何時間勉強しますか 2番"
+        },
+        {
+          "start": 829.01,
+          "end": 837.61,
+          "text": "男の人と女の人が話しています 女の人の電話番号は"
+        },
+        {
+          "start": 837.61,
+          "end": 842.39,
+          "text": "何番ですか あの"
+        },
+        {
+          "start": 847.66,
+          "end": 852.95,
+          "text": "7、7、3、4ですね いいえ?"
+        },
+        {
+          "start": 852.95,
+          "end": 860.18,
+          "text": "7、7、3、4じゃなくて 7、7、4、3です"
+        },
+        {
+          "start": 860.18,
+          "end": 863.5,
+          "text": "えっ ちょっと待ってください"
+        },
+        {
+          "start": 863.5,
+          "end": 868.04,
+          "text": "目のします 5、1、2の"
+        },
+        {
+          "start": 868.04,
+          "end": 871.04,
+          "text": "7、7、4、3です"
+        },
+        {
+          "start": 871.04,
+          "end": 880.31,
+          "text": "はい ありがとうございました"
+        },
+        {
+          "start": 883.71,
+          "end": 902.39,
+          "text": "何番ですか 3番"
+        },
+        {
+          "start": 902.39,
+          "end": 913.39,
+          "text": "女の学生と男の学生が話しています 男の学生は誰と住んでいますか"
+        },
+        {
+          "start": 913.39,
+          "end": 920.14,
+          "text": "山田さんはお父さんとお母さんと 一緒に住んでいますか"
+        },
+        {
+          "start": 920.14,
+          "end": 924.5,
+          "text": "いえ 両親は遠くに住んでいます"
+        },
+        {
+          "start": 924.5,
+          "end": 929.78,
+          "text": "そうですか 今 姉と一緒に住んでいます"
+        },
+        {
+          "start": 930.06,
+          "end": 936.43,
+          "text": "兄弟は一人ですか あ弟もいますよ"
+        },
+        {
+          "start": 936.43,
+          "end": 964.56,
+          "text": "弟は両親と一緒です 男の学生は誰と住んでいますか"
+        },
+        {
+          "start": 964.56,
+          "end": 972.18,
+          "text": "4番 学校で男の学生と女の学生が話しています"
+        },
+        {
+          "start": 972.18,
+          "end": 983.03,
+          "text": "二人はどこで昼ご飯を食べますか もう一時ですね"
+        },
+        {
+          "start": 981.87,
+          "end": 993.71,
+          "text": "何か食べませんかそうですね でも今日は土曜日だから学校の食堂や喫茶店は休みですよ"
+        },
+        {
+          "start": 993.71,
+          "end": 1006.27,
+          "text": "じゃあパン屋でパンを買って教室で食べましょうか そうですね"
+        },
+        {
+          "start": 1006.27,
+          "end": 1030.82,
+          "text": "2人はどこで昼ご飯を食べますか 5番 教室で"
+        },
+        {
+          "start": 1029.66,
+          "end": 1040.25,
+          "text": "先生が学生に話しています 学生は何で名前を書きますか"
+        },
+        {
+          "start": 1040.25,
+          "end": 1044.88,
+          "text": "はい じゃあちょっと聞いてください"
+        },
+        {
+          "start": 1044.88,
+          "end": 1051.58,
+          "text": "えー 来月のバス旅行に行きたい人はこの紙に"
+        },
+        {
+          "start": 1051.58,
+          "end": 1060.6,
+          "text": "ボールペンで名前を書いてください 鉛筆じゃなくてボールペンですよ"
+        },
+        {
+          "start": 1063.82,
+          "end": 1092.28,
+          "text": "赤で描かないでくださいね 学生は何で名前を描きますか"
+        },
+        {
+          "start": 1092.28,
+          "end": 1099.54,
+          "text": "6番 女の学生と男の学生が話しています"
+        },
+        {
+          "start": 1099.54,
+          "end": 1103.86,
+          "text": "二人は明日 どこで会いますか"
+        },
+        {
+          "start": 1105.23,
+          "end": 1110.67,
+          "text": "明日の夜 一緒にサッカーを見に行きませんか"
+        },
+        {
+          "start": 1110.67,
+          "end": 1114.72,
+          "text": "いいですね どこで会いましょうか"
+        },
+        {
+          "start": 1115.84,
+          "end": 1121.2,
+          "text": "駅で会いませんか 駅は人が多いですよ"
+        },
+        {
+          "start": 1121.2,
+          "end": 1128.36,
+          "text": "そうですねじゃあ 駅の前の記者店はどうですか"
+        },
+        {
+          "start": 1128.36,
+          "end": 1132.78,
+          "text": "はいそうしましょう あ"
+        },
+        {
+          "start": 1132.78,
+          "end": 1139.27,
+          "text": "サッカーを見てから 近くのレストランで晩御飯を食べませんか"
+        },
+        {
+          "start": 1152.19,
+          "end": 1169.68,
+          "text": "合いますか問題3 問題3では"
+        },
+        {
+          "start": 1169.68,
+          "end": 1177.92,
+          "text": "絵を見ながら質問を聞いてください 矢印の人は"
+        },
+        {
+          "start": 1177.92,
+          "end": 1184.9,
+          "text": "何と言いますか 1から3の中から"
+        },
+        {
+          "start": 1184.9,
+          "end": 1192.74,
+          "text": "一番いいものを 一つ選んでください"
+        },
+        {
+          "start": 1192.74,
+          "end": 1203.61,
+          "text": "では 練習しましょう"
+        },
+        {
+          "start": 1205.15,
+          "end": 1211.85,
+          "text": "お店の人を呼びます。何と言いますか?"
+        },
+        {
+          "start": 1211.85,
+          "end": 1212.89,
+          "text": "1"
+        },
+        {
+          "start": 1212.89,
+          "end": 1216.28,
+          "text": "いらっしゃいませ。"
+        },
+        {
+          "start": 1216.28,
+          "end": 1217.16,
+          "text": "2"
+        },
+        {
+          "start": 1217.16,
+          "end": 1220.7,
+          "text": "失礼しました。"
+        },
+        {
+          "start": 1220.7,
+          "end": 1222.11,
+          "text": "3"
+        },
+        {
+          "start": 1222.11,
+          "end": 1225.06,
+          "text": "すみません。"
+        },
+        {
+          "start": 1225.06,
+          "end": 1230.74,
+          "text": "一番いいものは、3番です。"
+        },
+        {
+          "start": 1230.74,
+          "end": 1239.74,
+          "text": "回答用紙の、問題3の、例のところを見てください。"
+        },
+        {
+          "start": 1239.74,
+          "end": 1245.2,
+          "text": "一番いいものは、3番ですから。"
+        },
+        {
+          "start": 1246.54,
+          "end": 1260.17,
+          "text": "このように書きます では始めます"
+        },
+        {
+          "start": 1260.17,
+          "end": 1264.75,
+          "text": "1番 ご飯を食べました"
+        },
+        {
+          "start": 1264.75,
+          "end": 1269.48,
+          "text": "何と言いますか 1"
+        },
+        {
+          "start": 1269.48,
+          "end": 1274.14,
+          "text": "ごちそうさまでした 2"
+        },
+        {
+          "start": 1274.14,
+          "end": 1278.43,
+          "text": "いただきます 3"
+        },
+        {
+          "start": 1278.43,
+          "end": 1294.83,
+          "text": "どういたしまして 2番"
+        },
+        {
+          "start": 1294.83,
+          "end": 1300.43,
+          "text": "電車の中です 女の人が来ました"
+        },
+        {
+          "start": 1305.01,
+          "end": 1308.29,
+          "text": "どうもありがとう"
+        },
+        {
+          "start": 1308.29,
+          "end": 1309.29,
+          "text": "に"
+        },
+        {
+          "start": 1309.29,
+          "end": 1312.92,
+          "text": "はじめまして"
+        },
+        {
+          "start": 1312.92,
+          "end": 1314.14,
+          "text": "さん"
+        },
+        {
+          "start": 1314.14,
+          "end": 1329.14,
+          "text": "ここどうぞ"
+        },
+        {
+          "start": 1329.14,
+          "end": 1330.33,
+          "text": "さんばん"
+        },
+        {
+          "start": 1330.33,
+          "end": 1332.33,
+          "text": "うちへ帰ります"
+        },
+        {
+          "start": 1332.33,
+          "end": 1338.02,
+          "text": "友達に何と言いますか"
+        },
+        {
+          "start": 1338.02,
+          "end": 1339.25,
+          "text": "いち"
+        },
+        {
+          "start": 1339.25,
+          "end": 1342.46,
+          "text": "行ってきます"
+        },
+        {
+          "start": 1342.46,
+          "end": 1343.69,
+          "text": "に"
+        },
+        {
+          "start": 1343.69,
+          "end": 1344.69,
+          "text": "じゃあまた"
+        },
+        {
+          "start": 1344.69,
+          "end": 1347.03,
+          "text": "さん"
+        },
+        {
+          "start": 1347.03,
+          "end": 1362.22,
+          "text": "ただいま"
+        },
+        {
+          "start": 1362.22,
+          "end": 1363.22,
+          "text": "よんばん"
+        },
+        {
+          "start": 1363.22,
+          "end": 1368.14,
+          "text": "郵便局で切っておかいます"
+        },
+        {
+          "start": 1371.28,
+          "end": 1403.19,
+          "text": "1 切手を買いませんか 2 切手をどうぞ 3 切手をください 5番 友達は鉛筆がありません"
+        },
+        {
+          "start": 1403.19,
+          "end": 1436.8,
+          "text": "友達に何と言いますか 1 鉛筆買いましょうか 2 鉛筆使いますか 3 鉛筆貸してください"
+        },
+        {
+          "start": 1436.56,
+          "end": 1457.96,
+          "text": "問題4 問題4は 絵などがありません 文を聞いて1から3の中から 一番いいものを 一つ選んでください"
+        },
+        {
+          "start": 1457.96,
+          "end": 1467.63,
+          "text": "では 練習しましょう"
+        },
+        {
+          "start": 1482.16,
+          "end": 1499.21,
+          "text": "部屋です一番いいものは2番です 回答用紙の問題4の例のところを見てください"
+        },
+        {
+          "start": 1499.21,
+          "end": 1519.08,
+          "text": "一番いいものは2番ですから答えはこのように書きます では始めます"
+        },
+        {
+          "start": 1529.07,
+          "end": 1549.12,
+          "text": "2 3週間です 3時です 2番"
+        },
+        {
+          "start": 1549.12,
+          "end": 1555.9,
+          "text": "すみません 図書館はどこですか 1"
+        },
+        {
+          "start": 1555.9,
+          "end": 1560.05,
+          "text": "あそこです 2"
+        },
+        {
+          "start": 1560.05,
+          "end": 1577.61,
+          "text": "6時までです 3本を借ります"
+        },
+        {
+          "start": 1577.61,
+          "end": 1584.99,
+          "text": "3番 明日何時に学校に来ますか"
+        },
+        {
+          "start": 1584.99,
+          "end": 1589.46,
+          "text": "1 バスで来ます"
+        },
+        {
+          "start": 1590.58,
+          "end": 1595.05,
+          "text": "9時半です 3"
+        },
+        {
+          "start": 1595.05,
+          "end": 1609.26,
+          "text": "6人です 4番"
+        },
+        {
+          "start": 1609.26,
+          "end": 1616.01,
+          "text": "田中さん その荷物を持ちましょうか 1"
+        },
+        {
+          "start": 1616.01,
+          "end": 1620.58,
+          "text": "どういたしまして 2"
+        },
+        {
+          "start": 1620.58,
+          "end": 1625.18,
+          "text": "持ちませんでした 3"
+        },
+        {
+          "start": 1625.18,
+          "end": 1639.7,
+          "text": "ありがとうございます 5番"
+        },
+        {
+          "start": 1639.7,
+          "end": 1644.79,
+          "text": "ちょっと休みませんか 1"
+        },
+        {
+          "start": 1644.79,
+          "end": 1649.08,
+          "text": "日曜日です 2"
+        },
+        {
+          "start": 1652.11,
+          "end": 1666.34,
+          "text": "3. そうしましょう。"
+        },
+        {
+          "start": 1666.34,
+          "end": 1671.2,
+          "text": "6番。 それは何の本ですか?"
+        },
+        {
+          "start": 1671.2,
+          "end": 1677.35,
+          "text": "1. 料理の本です。"
+        },
+        {
+          "start": 1677.35,
+          "end": 1681.89,
+          "text": "2. 私の本です。"
+        },
+        {
+          "start": 1681.89,
+          "end": 1696.6,
+          "text": "3. はい、そうです。"
+        },
+        {
+          "start": 1696.6,
+          "end": 1701.73,
+          "text": "これで聴解試験を終わります。"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    },
+    "exam:n5-2012:recording": {
+      "sha256": "1a273cb39adc4a7bfae3cab65e8c4febec3531fb00a3c632f0b9d8ab159fa99f",
+      "status": "automatic",
+      "model": "small",
+      "language": "ja",
+      "duration": 1758.99,
+      "segments": [
+        {
+          "start": 0.62,
+          "end": 19.79,
+          "text": "日本語能力試験 聴解 N5 これから N5の聴解試験を始めます"
+        },
+        {
+          "start": 19.79,
+          "end": 28.91,
+          "text": "メモをとってもいいです 問題用紙を開けてください"
+        },
+        {
+          "start": 28.91,
+          "end": 37.92,
+          "text": "問題用紙のページがない時は 手をあげてください"
+        },
+        {
+          "start": 41.52,
+          "end": 53.69,
+          "text": "手をあげてください。いつでもいいです。"
+        },
+        {
+          "start": 53.69,
+          "end": 80.56,
+          "text": "問題1。問題1では、初めに、質問を聞いてください。それから、話を聞いて、問題用紙の1から4の中から、一番いいものを一つ選んでください。"
+        },
+        {
+          "start": 84.43,
+          "end": 98.13,
+          "text": "練習しましょう レークラスで先生が話しています"
+        },
+        {
+          "start": 98.13,
+          "end": 109.65,
+          "text": "学生は今日うちでどこを勉強しますか では今日は20ページまで終わりましたから"
+        },
+        {
+          "start": 109.65,
+          "end": 114.75,
+          "text": "21ページは宿題ですね 全部ですか"
+        },
+        {
+          "start": 127.15,
+          "end": 134.4,
+          "text": "学生は今日、うちでどこを勉強しますか?"
+        },
+        {
+          "start": 134.4,
+          "end": 140.38,
+          "text": "一番いいものは3番です。"
+        },
+        {
+          "start": 140.38,
+          "end": 149.21,
+          "text": "回答用紙の問題1の例のところを見てください。"
+        },
+        {
+          "start": 149.21,
+          "end": 160.98,
+          "text": "一番いいものは3番ですから。答えはこのように書きます。"
+        },
+        {
+          "start": 160.98,
+          "end": 170.22,
+          "text": "では始めます。"
+        },
+        {
+          "start": 171.57,
+          "end": 184.46,
+          "text": "靴下の店で女の人と店の人が話しています 女の人はどの靴下を買いますか"
+        },
+        {
+          "start": 184.46,
+          "end": 189.65,
+          "text": "子供の靴下ありますか はい"
+        },
+        {
+          "start": 189.65,
+          "end": 193.72,
+          "text": "長いのですか 短いのですか"
+        },
+        {
+          "start": 193.72,
+          "end": 196.77,
+          "text": "長いのです はい"
+        },
+        {
+          "start": 196.77,
+          "end": 202.77,
+          "text": "果物の絵と動物の絵があります どちらがいいですか"
+        },
+        {
+          "start": 205.01,
+          "end": 232.63,
+          "text": "動物のをください 女の人はどの靴下を買いますか"
+        },
+        {
+          "start": 232.63,
+          "end": 240.44,
+          "text": "2番 病院で医者と女の人が話しています"
+        },
+        {
+          "start": 240.44,
+          "end": 253.97,
+          "text": "女の人は1日に何回薬を飲みますか この薬は朝と夜ご飯を食べた後で飲んでください"
+        },
+        {
+          "start": 256.35,
+          "end": 262.87,
+          "text": "昼は飲まないでくださいはい 4日間飲んでくださいね"
+        },
+        {
+          "start": 262.87,
+          "end": 290.38,
+          "text": "わかりました 女の人は1日に何回薬を飲みますか"
+        },
+        {
+          "start": 290.38,
+          "end": 293.78,
+          "text": "3番 テパートで"
+        },
+        {
+          "start": 293.78,
+          "end": 304.38,
+          "text": "女の人と店の人が話しています 店の人はどのカバンを取りますか"
+        },
+        {
+          "start": 309.07,
+          "end": 315.02,
+          "text": "とってください どちらですかこの小さいのですか"
+        },
+        {
+          "start": 315.02,
+          "end": 318.18,
+          "text": "いいえ 大きいのです"
+        },
+        {
+          "start": 318.18,
+          "end": 343.95,
+          "text": "はい 店の人はどのカバンを取りますか"
+        },
+        {
+          "start": 343.95,
+          "end": 350.24,
+          "text": "4番 教室で先生が話しています"
+        },
+        {
+          "start": 350.24,
+          "end": 359.87,
+          "text": "学生は机の上に何を置きますか 今からテストをします"
+        },
+        {
+          "start": 361.52,
+          "end": 369.12,
+          "text": "辞書を使う問題がありますから 机の上に辞書を出してください"
+        },
+        {
+          "start": 369.12,
+          "end": 376.85,
+          "text": "鉛筆と消しゴムも出してください 時計はカバンの中に入れてください"
+        },
+        {
+          "start": 376.85,
+          "end": 389.6,
+          "text": "先生ノートはどうしますか ノートもカバンの中に入れてください"
+        },
+        {
+          "start": 389.6,
+          "end": 411.56,
+          "text": "学生は机の上に何を置きますか 5番"
+        },
+        {
+          "start": 413.36,
+          "end": 425.49,
+          "text": "旅行会社の人が学生に話しています 学生は初めに何をしますか"
+        },
+        {
+          "start": 425.49,
+          "end": 435.26,
+          "text": "皆さんホテルに着きました 今から一回のレストランで晩御飯を食べます"
+        },
+        {
+          "start": 435.26,
+          "end": 445.64,
+          "text": "晩御飯は7時からです 今6時50分ですからすぐに行ってください"
+        },
+        {
+          "start": 447.65,
+          "end": 463.94,
+          "text": "ホテルの人が部屋に持っていきます 晩ご飯の後はテレビを見たり買い物をしたりしてください"
+        },
+        {
+          "start": 463.94,
+          "end": 484.3,
+          "text": "学生は 初めに何をしますか"
+        },
+        {
+          "start": 484.3,
+          "end": 491.15,
+          "text": "6番 男の人と女の人が話しています"
+        },
+        {
+          "start": 491.15,
+          "end": 497.06,
+          "text": "男の人は 何を持っていきますか"
+        },
+        {
+          "start": 501.14,
+          "end": 507.63,
+          "text": "何を持っていきましょうか 私はおにぎりを持っていきます"
+        },
+        {
+          "start": 507.63,
+          "end": 513.79,
+          "text": "じゃあ僕は 飲み物とお菓子をお願いします"
+        },
+        {
+          "start": 513.79,
+          "end": 518.25,
+          "text": "はい 飲み物とお菓子ですね"
+        },
+        {
+          "start": 518.25,
+          "end": 522.61,
+          "text": "あ 飲み物は思いですね"
+        },
+        {
+          "start": 522.61,
+          "end": 532.23,
+          "text": "海についてから買いましょう そうですね"
+        },
+        {
+          "start": 551.7,
+          "end": 555.11,
+          "text": "7番 バス停で"
+        },
+        {
+          "start": 555.11,
+          "end": 562.82,
+          "text": "女の人とバス会社の人が話しています 女の人は"
+        },
+        {
+          "start": 562.82,
+          "end": 568.96,
+          "text": "何番のバスに乗りますか すみません"
+        },
+        {
+          "start": 568.96,
+          "end": 575.35,
+          "text": "1番のバスは緑駅に行きますか いえ"
+        },
+        {
+          "start": 575.35,
+          "end": 582.51,
+          "text": "緑駅に行くバスは 3番と5番と7番ですよ"
+        },
+        {
+          "start": 584.82,
+          "end": 591.45,
+          "text": "でも 今日は日曜日ですから 5番のバスはありません"
+        },
+        {
+          "start": 591.45,
+          "end": 599.1,
+          "text": "そうですか それから 3番は 朝と夕方のバスですから"
+        },
+        {
+          "start": 599.1,
+          "end": 606.23,
+          "text": "今の時間は7番ですね わかりました ありがとうございます"
+        },
+        {
+          "start": 606.23,
+          "end": 637.2,
+          "text": "女の人は 何番のバスに乗りますか 問題2"
+        },
+        {
+          "start": 639.28,
+          "end": 673.17,
+          "text": "はじめに質問を聞いてください。それから話を聞いて、問題用紙の1から4の中から一番いいものを一つ選んでください。では、練習しましょう。"
+        },
+        {
+          "start": 681.46,
+          "end": 691.88,
+          "text": "どこへ行きましたか男の人です 山田さん昨日どこかへ行きましたか"
+        },
+        {
+          "start": 691.88,
+          "end": 697.07,
+          "text": "図書館へ行きました 駅のそばの図書館ですか"
+        },
+        {
+          "start": 697.07,
+          "end": 703.2,
+          "text": "はい 僕は山川デパートへ行って買い物をしました"
+        },
+        {
+          "start": 703.2,
+          "end": 710.58,
+          "text": "えっ 私も昨日の夜山川デパートのレストランへ行きましたよ"
+        },
+        {
+          "start": 710.58,
+          "end": 718.66,
+          "text": "そうですか"
+        },
+        {
+          "start": 717.3,
+          "end": 723.51,
+          "text": "男の人は昨日、どこへ行きましたか?"
+        },
+        {
+          "start": 723.51,
+          "end": 728.95,
+          "text": "一番いいものは、3番です。"
+        },
+        {
+          "start": 728.95,
+          "end": 737.87,
+          "text": "回答用紙の問題2の例のところを見てください。"
+        },
+        {
+          "start": 737.87,
+          "end": 742.16,
+          "text": "一番いいものは、3番ですから。"
+        },
+        {
+          "start": 742.16,
+          "end": 745.96,
+          "text": "答えは、このように書きます。"
+        },
+        {
+          "start": 745.96,
+          "end": 751.65,
+          "text": "では、始めます。"
+        },
+        {
+          "start": 761.26,
+          "end": 774.95,
+          "text": "男の学生と女の学生が話しています 女の学生は今日何時間勉強しますか"
+        },
+        {
+          "start": 774.95,
+          "end": 781.92,
+          "text": "山田さんはいつも何時間ぐらい勉強しますか"
+        },
+        {
+          "start": 781.92,
+          "end": 790.36,
+          "text": "毎日3時間ぐらいです 私は毎日1時間です"
+        },
+        {
+          "start": 793.49,
+          "end": 805.89,
+          "text": "テストがありますから今日は4時間勉強します そうですか"
+        },
+        {
+          "start": 805.89,
+          "end": 828.81,
+          "text": "女の学生は今日何時間勉強しますか 2番"
+        },
+        {
+          "start": 828.81,
+          "end": 840.62,
+          "text": "男の人と女の人が話しています 女の人の電話番号は何番ですか"
+        },
+        {
+          "start": 840.62,
+          "end": 846.18,
+          "text": "あの 山田さんの電話番号は"
+        },
+        {
+          "start": 845.07,
+          "end": 851.07,
+          "text": "512の7734ですね"
+        },
+        {
+          "start": 851.07,
+          "end": 859.91,
+          "text": "いいえ 7734じゃなくて 7743です"
+        },
+        {
+          "start": 859.91,
+          "end": 863.23,
+          "text": "えっ ちょっと待ってください"
+        },
+        {
+          "start": 863.23,
+          "end": 871.85,
+          "text": "目もします 512の7743です"
+        },
+        {
+          "start": 871.85,
+          "end": 880.0,
+          "text": "はい ありがとうございました"
+        },
+        {
+          "start": 881.58,
+          "end": 902.14,
+          "text": "電話番号は何番ですか 3番"
+        },
+        {
+          "start": 902.14,
+          "end": 913.12,
+          "text": "女の学生と男の学生が話しています 男の学生は誰と住んでいますか"
+        },
+        {
+          "start": 913.12,
+          "end": 919.87,
+          "text": "山田さんはお父さんとお母さんと一緒に住んでいますか"
+        },
+        {
+          "start": 919.87,
+          "end": 924.22,
+          "text": "いえ 両親は遠くに住んでいます"
+        },
+        {
+          "start": 924.22,
+          "end": 928.14,
+          "text": "そうですか 今"
+        },
+        {
+          "start": 926.8,
+          "end": 933.14,
+          "text": "姉と一緒に住んでいます 兄弟は一人ですか"
+        },
+        {
+          "start": 933.14,
+          "end": 944.75,
+          "text": "弟もいますよ 弟は両親と一緒です"
+        },
+        {
+          "start": 944.75,
+          "end": 965.89,
+          "text": "男の学生は誰と住んでいますか 4番"
+        },
+        {
+          "start": 965.89,
+          "end": 972.91,
+          "text": "学校で男の学生と女の学生が話しています"
+        },
+        {
+          "start": 978.96,
+          "end": 983.67,
+          "text": "もう一時ですね 何か食べませんか"
+        },
+        {
+          "start": 983.67,
+          "end": 988.71,
+          "text": "そうですね でも今日は土曜日だから"
+        },
+        {
+          "start": 988.71,
+          "end": 994.47,
+          "text": "学校の食堂や喫茶店は休みですよ じゃあ"
+        },
+        {
+          "start": 994.47,
+          "end": 998.95,
+          "text": "パン屋でパンを買って 教室で食べましょうか"
+        },
+        {
+          "start": 998.95,
+          "end": 1008.59,
+          "text": "そうですね 二人はどこで"
+        },
+        {
+          "start": 1029.26,
+          "end": 1039.92,
+          "text": "先生が学生に話しています 学生は何で名前を書きますか"
+        },
+        {
+          "start": 1039.92,
+          "end": 1044.56,
+          "text": "はい じゃあちょっと聞いてください"
+        },
+        {
+          "start": 1044.56,
+          "end": 1051.26,
+          "text": "えー 来月のバス旅行に行きたい人はこの紙に"
+        },
+        {
+          "start": 1051.26,
+          "end": 1057.5,
+          "text": "ボールペンで名前を書いてください 鉛筆じゃなくて"
+        },
+        {
+          "start": 1063.44,
+          "end": 1091.92,
+          "text": "赤で書かないでくださいね 学生は何で名前を書きますか"
+        },
+        {
+          "start": 1091.92,
+          "end": 1099.17,
+          "text": "6番 女の学生と男の学生が話しています"
+        },
+        {
+          "start": 1099.17,
+          "end": 1104.87,
+          "text": "2人は明日 どこで会いますか"
+        },
+        {
+          "start": 1104.87,
+          "end": 1110.35,
+          "text": "明日の夜 一緒にサッカーを見に行きませんか"
+        },
+        {
+          "start": 1110.35,
+          "end": 1114.38,
+          "text": "いいですね どこで会いましょうか"
+        },
+        {
+          "start": 1115.42,
+          "end": 1120.82,
+          "text": "駅で会いませんか 駅は人が多いですよ"
+        },
+        {
+          "start": 1120.82,
+          "end": 1123.98,
+          "text": "そうですね じゃあ"
+        },
+        {
+          "start": 1123.98,
+          "end": 1131.13,
+          "text": "駅の前の喫茶店はどうですか はいそうしましょう"
+        },
+        {
+          "start": 1131.13,
+          "end": 1138.9,
+          "text": "あサッカーを見てから 近くのレストランで晩御飯を食べませんか"
+        },
+        {
+          "start": 1151.79,
+          "end": 1201.0,
+          "text": "会いますか ここでちょっと休みましょう"
+        },
+        {
+          "start": 1201.0,
+          "end": 1209.95,
+          "text": "では また続けます"
+        },
+        {
+          "start": 1209.95,
+          "end": 1220.61,
+          "text": "問題3 問題3では 絵を見ながら質問を聞いてください"
+        },
+        {
+          "start": 1220.61,
+          "end": 1226.71,
+          "text": "矢印の人は なんと言いますか"
+        },
+        {
+          "start": 1226.71,
+          "end": 1232.26,
+          "text": "1から3の中から 一番いいものを"
+        },
+        {
+          "start": 1237.78,
+          "end": 1247.26,
+          "text": "では 練習しましょう"
+        },
+        {
+          "start": 1247.26,
+          "end": 1253.71,
+          "text": "レー レストランでお店の人を呼びます"
+        },
+        {
+          "start": 1253.71,
+          "end": 1258.35,
+          "text": "なんと言いますか 1"
+        },
+        {
+          "start": 1258.35,
+          "end": 1262.69,
+          "text": "いらっしゃいませ 2"
+        },
+        {
+          "start": 1262.69,
+          "end": 1267.3,
+          "text": "失礼しました 3"
+        },
+        {
+          "start": 1267.3,
+          "end": 1275.87,
+          "text": "すみません 一番いいものは 3番です"
+        },
+        {
+          "start": 1275.87,
+          "end": 1281.61,
+          "text": "回答用紙の 問題3の"
+        },
+        {
+          "start": 1280.3,
+          "end": 1296.13,
+          "text": "例のところを見てください 一番いいものは三番ですから答えはこのように書きます"
+        },
+        {
+          "start": 1296.13,
+          "end": 1306.75,
+          "text": "では始めます 一番"
+        },
+        {
+          "start": 1306.75,
+          "end": 1313.09,
+          "text": "ご飯を食べました なんと言いますか"
+        },
+        {
+          "start": 1313.09,
+          "end": 1317.85,
+          "text": "一 ごちそうさまでした"
+        },
+        {
+          "start": 1317.85,
+          "end": 1322.08,
+          "text": "に いただきます"
+        },
+        {
+          "start": 1339.63,
+          "end": 1345.3,
+          "text": "電車の中です。女の人が来ました。"
+        },
+        {
+          "start": 1345.3,
+          "end": 1348.58,
+          "text": "何と言いますか?"
+        },
+        {
+          "start": 1348.58,
+          "end": 1350.11,
+          "text": "1"
+        },
+        {
+          "start": 1350.11,
+          "end": 1353.29,
+          "text": "どうもありがとう。"
+        },
+        {
+          "start": 1353.29,
+          "end": 1354.55,
+          "text": "2"
+        },
+        {
+          "start": 1354.55,
+          "end": 1356.11,
+          "text": "始めまして。"
+        },
+        {
+          "start": 1356.11,
+          "end": 1358.83,
+          "text": "3"
+        },
+        {
+          "start": 1358.83,
+          "end": 1360.75,
+          "text": "ここ、どうぞ。"
+        },
+        {
+          "start": 1373.71,
+          "end": 1375.3,
+          "text": "3番"
+        },
+        {
+          "start": 1375.3,
+          "end": 1378.01,
+          "text": "うちへ帰ります。"
+        },
+        {
+          "start": 1378.01,
+          "end": 1382.78,
+          "text": "友達に、何と言いますか?"
+        },
+        {
+          "start": 1382.78,
+          "end": 1384.22,
+          "text": "1"
+        },
+        {
+          "start": 1384.22,
+          "end": 1387.03,
+          "text": "行ってきます。"
+        },
+        {
+          "start": 1387.03,
+          "end": 1388.26,
+          "text": "2"
+        },
+        {
+          "start": 1388.26,
+          "end": 1389.9,
+          "text": "じゃあ、また。"
+        },
+        {
+          "start": 1389.9,
+          "end": 1392.17,
+          "text": "3"
+        },
+        {
+          "start": 1392.62,
+          "end": 1408.67,
+          "text": "ただいま 4番"
+        },
+        {
+          "start": 1408.67,
+          "end": 1413.01,
+          "text": "郵便局で 切手を買います"
+        },
+        {
+          "start": 1413.01,
+          "end": 1416.38,
+          "text": "何と言いますか?"
+        },
+        {
+          "start": 1416.38,
+          "end": 1421.38,
+          "text": "1 切手を買いませんか?"
+        },
+        {
+          "start": 1421.38,
+          "end": 1425.85,
+          "text": "2 切手をどうぞ?"
+        },
+        {
+          "start": 1425.85,
+          "end": 1442.06,
+          "text": "3 切手をください"
+        },
+        {
+          "start": 1442.06,
+          "end": 1448.19,
+          "text": "5番 友達は鉛筆がありません"
+        },
+        {
+          "start": 1448.19,
+          "end": 1453.12,
+          "text": "友達に何と言いますか?"
+        },
+        {
+          "start": 1453.12,
+          "end": 1455.64,
+          "text": "1 鉛筆"
+        },
+        {
+          "start": 1455.79,
+          "end": 1460.23,
+          "text": "借りましょうか 2"
+        },
+        {
+          "start": 1460.23,
+          "end": 1465.8,
+          "text": "鉛筆使いますか 3"
+        },
+        {
+          "start": 1465.8,
+          "end": 1486.18,
+          "text": "鉛筆貸してください 問題4"
+        },
+        {
+          "start": 1486.18,
+          "end": 1492.66,
+          "text": "問題4は 絵などがありません"
+        },
+        {
+          "start": 1492.66,
+          "end": 1498.58,
+          "text": "文を聞いて 1から3の中から"
+        },
+        {
+          "start": 1498.58,
+          "end": 1505.98,
+          "text": "一番いいものを 1つ選んでください"
+        },
+        {
+          "start": 1515.5,
+          "end": 1520.64,
+          "text": "0 奥にはどちらですか"
+        },
+        {
+          "start": 1520.64,
+          "end": 1524.76,
+          "text": "1 あちらです"
+        },
+        {
+          "start": 1524.76,
+          "end": 1528.88,
+          "text": "2 アメリカです"
+        },
+        {
+          "start": 1528.88,
+          "end": 1533.01,
+          "text": "3 部屋です"
+        },
+        {
+          "start": 1533.01,
+          "end": 1538.46,
+          "text": "一番いいものは 2番です"
+        },
+        {
+          "start": 1538.46,
+          "end": 1547.23,
+          "text": "回答用紙の問題4の例のところを見てください"
+        },
+        {
+          "start": 1547.23,
+          "end": 1552.59,
+          "text": "一番いいものは 2番ですから"
+        },
+        {
+          "start": 1558.22,
+          "end": 1567.04,
+          "text": "では、はじめます。"
+        },
+        {
+          "start": 1567.04,
+          "end": 1568.56,
+          "text": "1番"
+        },
+        {
+          "start": 1568.56,
+          "end": 1572.88,
+          "text": "今日は何日ですか?"
+        },
+        {
+          "start": 1572.88,
+          "end": 1574.3,
+          "text": "1"
+        },
+        {
+          "start": 1574.3,
+          "end": 1577.15,
+          "text": "3日です"
+        },
+        {
+          "start": 1577.15,
+          "end": 1578.44,
+          "text": "2"
+        },
+        {
+          "start": 1578.44,
+          "end": 1580.24,
+          "text": "3週間です"
+        },
+        {
+          "start": 1581.62,
+          "end": 1583.1,
+          "text": "3"
+        },
+        {
+          "start": 1583.1,
+          "end": 1595.48,
+          "text": "3時です"
+        },
+        {
+          "start": 1595.48,
+          "end": 1597.03,
+          "text": "2番"
+        },
+        {
+          "start": 1597.03,
+          "end": 1598.63,
+          "text": "すみません"
+        },
+        {
+          "start": 1598.63,
+          "end": 1602.34,
+          "text": "図書館はどこですか?"
+        },
+        {
+          "start": 1602.34,
+          "end": 1603.77,
+          "text": "1"
+        },
+        {
+          "start": 1603.77,
+          "end": 1606.71,
+          "text": "あそこです"
+        },
+        {
+          "start": 1606.71,
+          "end": 1607.94,
+          "text": "2"
+        },
+        {
+          "start": 1607.94,
+          "end": 1611.24,
+          "text": "6時までです"
+        },
+        {
+          "start": 1611.24,
+          "end": 1612.6,
+          "text": "3"
+        },
+        {
+          "start": 1612.6,
+          "end": 1614.3,
+          "text": "本を借ります"
+        },
+        {
+          "start": 1625.42,
+          "end": 1627.15,
+          "text": "3番"
+        },
+        {
+          "start": 1627.15,
+          "end": 1632.83,
+          "text": "明日何時に学校に来ますか?"
+        },
+        {
+          "start": 1632.83,
+          "end": 1634.29,
+          "text": "1"
+        },
+        {
+          "start": 1634.29,
+          "end": 1637.34,
+          "text": "バスで来ます"
+        },
+        {
+          "start": 1637.34,
+          "end": 1638.59,
+          "text": "2"
+        },
+        {
+          "start": 1638.59,
+          "end": 1641.57,
+          "text": "9時半です"
+        },
+        {
+          "start": 1641.57,
+          "end": 1643.02,
+          "text": "3"
+        },
+        {
+          "start": 1643.02,
+          "end": 1655.54,
+          "text": "6人です"
+        },
+        {
+          "start": 1655.54,
+          "end": 1657.22,
+          "text": "4番"
+        },
+        {
+          "start": 1657.22,
+          "end": 1662.54,
+          "text": "田中さんその荷物を持ちましょうか?"
+        },
+        {
+          "start": 1662.54,
+          "end": 1663.93,
+          "text": "1"
+        },
+        {
+          "start": 1663.93,
+          "end": 1667.28,
+          "text": "どういたしまして?"
+        },
+        {
+          "start": 1667.28,
+          "end": 1668.47,
+          "text": "2"
+        },
+        {
+          "start": 1668.47,
+          "end": 1671.75,
+          "text": "持ちませんでした"
+        },
+        {
+          "start": 1671.75,
+          "end": 1673.1,
+          "text": "3"
+        },
+        {
+          "start": 1673.1,
+          "end": 1674.9,
+          "text": "ありがとうございます"
+        },
+        {
+          "start": 1686.0,
+          "end": 1691.39,
+          "text": "5番 ちょっと休みませんか?"
+        },
+        {
+          "start": 1691.39,
+          "end": 1695.81,
+          "text": "1 日曜日です"
+        },
+        {
+          "start": 1695.81,
+          "end": 1700.16,
+          "text": "2 お元気ですか?"
+        },
+        {
+          "start": 1700.16,
+          "end": 1714.13,
+          "text": "3 そうしましょう"
+        },
+        {
+          "start": 1714.13,
+          "end": 1720.46,
+          "text": "6番 それは何の本ですか?"
+        },
+        {
+          "start": 1720.46,
+          "end": 1725.1,
+          "text": "1 料理の本です"
+        },
+        {
+          "start": 1725.1,
+          "end": 1729.7,
+          "text": "2 私の本です"
+        },
+        {
+          "start": 1729.7,
+          "end": 1744.32,
+          "text": "3 はいそうです"
+        },
+        {
+          "start": 1747.66,
+          "end": 1749.66,
+          "text": "終わります"
+        }
+      ],
+      "normalization": "jlpt-terms"
+    }
+  }
+}

@@ -1681,6 +1681,13 @@ body:has(.book-screen) .sidebar, .workspace:has(.book-screen) .topbar { display:
 }
 
 .nav-group {margin:0 0 20px;}
+.audio-transcript { border-top:1px solid var(--line); margin-top:20px; }
+.audio-transcript > summary { min-height:48px; padding:12px 0; cursor:pointer; font-weight:600; }
+.audio-transcript-note { color:var(--muted); font-size:14px; }
+.audio-script-lines { list-style:none; padding:0; margin:0; }
+.audio-script-lines li { display:grid; grid-template-columns:64px minmax(0,1fr); align-items:start; gap:12px; padding:12px 0; border-bottom:1px solid var(--line); }
+.audio-script-lines p { margin:0; line-height:2; overflow-wrap:anywhere; }
+.audio-script-lines button { margin:0; padding:8px 4px; min-height:44px; font-variant-numeric:tabular-nums; }
 .sidebar .brand {flex-shrink:0;}
 .prep-home h2 {font-size:1.2rem; margin-bottom:12px;}
 .prep-config > section {margin-top:24px;}

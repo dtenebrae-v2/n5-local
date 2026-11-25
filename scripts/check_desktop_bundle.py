@@ -50,6 +50,8 @@ def check(archive):
                     assert response.status == 206 and len(response.read()) == 64
 
             assert get('/api/health')['status'] == 'ok'
+            for dictionary in (ROOT / 'static/vendor/kuromoji-0.1.2/dict').glob('*.dat.gz'):
+                media('/vendor/kuromoji-0.1.2/dict/' + dictionary.name)
             course = get('/api/course-workbook')
             assert course['available'] and len(course['items']) == 777
             for asset in course['assets'].values():
@@ -69,6 +71,11 @@ def check(archive):
                     for asset in detail['assets'].values():
                         assert asset['available']
                         media(asset['url']); media_count += 1
+            for track in get('/api/audio')['tracks']:
+                if track['group'] != 'books':
+                    assert track['transcript']['available'], track['id']
+                    script = get(track['transcript']['url'])
+                    assert script['sha256'] == track['sha256'] and script['segments']
             with opener.open(origin + '/jlpt/n5') as response:
                 assert b'id="content"' in response.read()
             assert (profile / 'vocabulary.json').is_file()

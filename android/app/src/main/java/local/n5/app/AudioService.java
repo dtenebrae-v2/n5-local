@@ -20,7 +20,8 @@ public class AudioService extends Service {
     private int index;
     private double position, duration;
     private float rate = 1f;
-    private boolean repeat, prepared, playing, wantPlay, foreground, resumeOnFocus;
+    private boolean repeat, prepared, playing, wantPlay, foreground, resumeOnFocus, initialSeek;
+    private String requestId = "";
     private String error = "";
     private MediaPlayer player;
     private MediaSession session;
@@ -39,7 +40,7 @@ public class AudioService extends Service {
     public static String state(Context context) {
         String value = snapshot;
         if (value != null) return value;
-        try { return new JSONObject(context.getSharedPreferences(PREFS, MODE_PRIVATE).getString("state", "{}")).put("playing",false).toString(); }
+        try { return new JSONObject(context.getSharedPreferences(PREFS, MODE_PRIVATE).getString("state", "{}")).put("playing",false).put("loading",false).toString(); }
         catch (JSONException ignored) { return "{}"; }
     }
     @Override public void onCreate() {
@@ -98,6 +99,7 @@ public class AudioService extends Service {
         ensureForeground();
         try {
             JSONObject command = new JSONObject(intent == null ? "{}" : intent.getStringExtra("command") == null ? "{}" : intent.getStringExtra("command"));
+            requestId = command.optString("requestId", requestId);
             String action = command.optString("action", intent == null ? "pause" : intent.getAction());
             if ("queue".equals(action)) {
                 JSONArray nextQueue = validatedQueue(command.optJSONArray("tracks"));
@@ -122,7 +124,7 @@ public class AudioService extends Service {
     private float validRate(double value) { return value == .75 || value == 1 || value == 1.25 || value == 1.5 ? (float)value : 1f; }
     private JSONObject current() { return queue.optJSONObject(index); }
     private double currentPosition() {
-        if (prepared && player != null) { try { return player.getCurrentPosition() / 1000d; } catch (IllegalStateException ignored) {} }
+        if (prepared && !initialSeek && player != null) { try { return player.getCurrentPosition() / 1000d; } catch (IllegalStateException ignored) {} }
         return position;
     }
     private void remember() {
@@ -130,8 +132,12 @@ public class AudioService extends Service {
         try { if (current() != null) positions.put(current().getString("id"), position); } catch (JSONException ignored) {}
     }
     private void releasePlayer() {
-        if (player != null) { player.setOnCompletionListener(null); player.setOnErrorListener(null); player.release(); player = null; }
-        prepared = playing = false;
+        MediaPlayer old = player; player = null;
+        if (old != null) {
+            old.setOnPreparedListener(null); old.setOnSeekCompleteListener(null);
+            old.setOnCompletionListener(null); old.setOnErrorListener(null); old.release();
+        }
+        prepared = playing = initialSeek = false;
     }
     private void load(boolean autoplay) {
         if (current() == null) { stopPlayback(); return; }
@@ -145,12 +151,19 @@ public class AudioService extends Service {
             audio.setDataSource("http://127.0.0.1:8095" + current().getString("url"));
             audio.setOnPreparedListener(ready -> {
                 if (player != ready) return;
+                final double offset = position;
                 prepared = true; duration = ready.getDuration() / 1000d;
-                position = Math.min(position, Math.max(0, duration - .1));
-                // Starting on seek completion prevents an audible burst from the start of a resumed file.
-                ready.setOnSeekCompleteListener(seeked -> { if (player == seeked && wantPlay) play(); });
-                ready.seekTo((long)(position * 1000), MediaPlayer.SEEK_CLOSEST);
-                if (!wantPlay) publish(true);
+                position = Math.min(offset, Math.max(0, duration - .1));
+                if (position > 0) {
+                    initialSeek = true;
+                    ready.setOnSeekCompleteListener(seeked -> {
+                        if (player != seeked) return;
+                        seeked.setOnSeekCompleteListener(null); initialSeek = false;
+                        if (wantPlay) play(); else publish(true);
+                    });
+                    ready.seekTo((long)(position * 1000), MediaPlayer.SEEK_CLOSEST);
+                } else if (wantPlay) play();
+                else publish(true);
             });
             audio.setOnCompletionListener(done -> { if (player == done) { position = 0; next(1, true); } });
             audio.setOnErrorListener((failed, what, extra) -> { if (player == failed) fail(); return true; });
@@ -167,7 +180,7 @@ public class AudioService extends Service {
         if (current() == null) { stopPlayback(); return; }
         ensureForeground(); wantPlay = true; error = "";
         if (player == null) { load(true); return; }
-        if (!prepared) return;
+        if (!prepared || initialSeek) return;
         if (manager.requestAudioFocus(focus) != AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
             wantPlay = false; error = "Звук занят другим приложением. Нажмите «Слушать» позже."; publish(true); detachForeground(); return;
         }
@@ -189,6 +202,7 @@ public class AudioService extends Service {
         publish(true);
     }
     private void next(int delta, boolean completed) {
+        resumeOnFocus = false;
         if (completed && current() != null) { try { positions.put(current().getString("id"),0); } catch (JSONException ignored) {} }
         else remember();
         int next = index + delta;
@@ -196,6 +210,7 @@ public class AudioService extends Service {
             if (!repeat || queue.length() == 0) { if (completed) position = 0; pause(); if (completed) { position = 0; releasePlayer(); publish(true); } return; }
             next = (next + queue.length()) % queue.length();
         }
+        releasePlayer();
         index = next; position = completed ? 0 : Math.max(0,positions.optDouble(current().optString("id"),0));
         ensureForeground(); load(true);
     }
@@ -247,7 +262,8 @@ public class AudioService extends Service {
         try {
             JSONObject value = new JSONObject().put("queue",queue).put("index",index).put("positions",positions)
                 .put("position",position).put("duration",duration).put("rate",rate).put("repeat",repeat)
-                .put("playing",playing).put("error",error).put("updated",System.currentTimeMillis());
+                .put("playing",playing).put("loading",wantPlay && (!prepared || initialSeek))
+                .put("requestId",requestId).put("error",error).put("updated",System.currentTimeMillis());
             snapshot = value.toString();
             if (persist) { getSharedPreferences(PREFS,MODE_PRIVATE).edit().putString("state",snapshot).apply(); lastPersist = System.currentTimeMillis(); }
         } catch (JSONException ignored) {}

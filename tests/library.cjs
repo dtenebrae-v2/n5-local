@@ -1,4 +1,5 @@
 const assert=require('node:assert/strict');
+const baseText=require('./base-text.cjs');
 module.exports=async function libraryChecks(page,base) {
  const data=await (await page.request.get(base+'/api/library')).json();
  assert.equal(data.books.length,44);assert.ok(data.books.every(b=>[1,2].includes(b.level)));
@@ -22,7 +23,7 @@ module.exports=async function libraryChecks(page,base) {
  assert.equal(await page.locator('#book-total').innerText(),'/ 18');
  assert.equal(await page.locator('.textLayer').count(),0,'Text selection is deliberately disabled');
  await page.locator('#book-info-open').click();
- assert.match(await page.locator('#book-info .library-credits').innerText(),/池田あきつ/);
+ assert.match(await baseText(page.locator('#book-info .library-credits')),/池田あきつ/);
  assert.match(await page.locator('#book-info .library-credits').innerText(),/CC BY-NC-ND 4.0/);
  await page.keyboard.press('Escape');
  await page.locator('#book-next').click();

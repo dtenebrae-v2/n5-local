@@ -174,9 +174,9 @@ function bindNavigation() {
 
 async function start() {
   try {
-    const [loadedCatalog, words] = await Promise.all([getJSON('/api/catalog'), trainingWords()]);
+    const [loadedCatalog, words, counters] = await Promise.all([getJSON('/api/catalog'), trainingWords(), getJSON('/api/counters').catch(() => ({counters:[]}))]);
     catalog = loadedCatalog;
-    installFurigana(document.body, words.entries);
+    installFurigana(document.body, words.entries, counters.counters);
     menu.innerHTML = navigation(catalog);
     bindNavigation();
     initAudio();

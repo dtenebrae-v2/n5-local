@@ -18,6 +18,19 @@ module.exports = async function furiganaChecks(page, base) {
   assert.equal(await baseText(page.locator('#phrase-study h2')),'窓を開ける');
   await page.locator('#phrase-learning').click();
   assert.equal(await page.locator('ruby ruby').count(),0);
+  await page.evaluate(() => {
+    const p=document.createElement('p');p.id='furigana-context';
+    p.textContent='日本語能力試験の聴解を始めます。3日目の復習です。国際交流の説明を聞いて図書館の受付に行きました。';
+    document.querySelector('#content').append(p);
+  });
+  await page.waitForFunction(() => {
+    const root=document.querySelector('#furigana-context');
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let node;
+    while(node=walker.nextNode()) if(!node.parentElement.closest('ruby') && /[\p{Script=Han}]/u.test(node.textContent)) return false;
+    return root.querySelectorAll('rt').length>10;
+  });
+  assert.ok((await page.locator('#furigana-context rt').allTextContents()).includes('ちょうかい'));
+  assert.ok((await page.locator('#furigana-context rt').allTextContents()).includes('みっか'));
   await page.goto(base+'/jlpt/n5/word-relations');
   await page.locator('#relation-kind').selectOption('paraphrase');
   await page.locator('#relation-study ruby').first().waitFor();
@@ -62,4 +75,5 @@ module.exports = async function furiganaChecks(page, base) {
   if(process.env.SCREENSHOT_DIR)await page.screenshot({path:process.env.SCREENSHOT_DIR+'/n5-furigana-mobile.png',fullPage:true});
   await page.setViewportSize({width:1440,height:1000});
   await page.evaluate(saved => { localStorage.clear(); for (const [key,value] of Object.entries(saved)) localStorage.setItem(key,value); }, saved);
+  console.log('PASS furigana: offline dictionary, compounds, inflections, dates, hidden answers and mobile layout');
 };

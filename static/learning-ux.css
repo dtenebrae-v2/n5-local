@@ -8,7 +8,6 @@
 .home-card { padding: 24px; border: 1px solid var(--line); border-radius: var(--panel-radius); background: var(--white); }
 .home-card h2 { margin-top: 0; font-size: 1.2rem; }
 .home-card a { display: block; margin-top: 12px; min-height: 44px; align-content: center; }
-.sidebar .nav-home { margin-bottom: 12px; }
 .game-card #practice-form .practice-actions .game-advance,
 .game-card #practice-form .practice-actions [type="submit"] { grid-column: 1 / -1; grid-row: 1; }
 .game-card .practice-actions #practice-action-help { grid-column: 1 / -1; margin: 0; font-size: .82rem; }
@@ -38,7 +37,8 @@
 #content > #prep-storage:empty { display: none; }
 .sidebar { box-shadow: none; border-radius: 0; }
 .sidebar nav { padding: 0 2px; scrollbar-width: thin; }
-.sidebar .nav-home { margin: 0 0 12px; }
+.sidebar nav > a { margin:0; padding:10px 8px; min-height:48px; font-family:inherit; font-size:14px; font-weight:600; line-height:1.4; }
+.nav-divider { border:0; border-top:1px solid var(--line); margin:8px 0; }
 .sidebar .nav-group { margin: 0 0 4px; }
 .sidebar .nav-caption {
   display: flex; align-items: center; justify-content: space-between;
@@ -99,6 +99,8 @@ rt { font-size: max(.6em, 12px); color: var(--muted); }
 .audio-album, .audio-note, .audio-time, .audio-list-count { color: var(--muted); font-size: 14px; }
 .audio-transport, .audio-seek, .audio-options, .audio-list-heading { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
 .audio-transport button { min-height: 48px; }
+.audio-icon-button { display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; min-width:44px; min-height:44px; padding:10px; }
+.audio-icon-button svg { display:block; pointer-events:none; }
 .audio-seek { margin: 20px 0 8px; flex-wrap: nowrap; }
 .audio-seek > label { flex: 1; min-width: 0; font-size: 13px; color: var(--muted); }
 .audio-position { display: block; width: 100%; min-height: 36px; margin: 0; }
@@ -119,8 +121,8 @@ body.has-audio-player:not(:has(.audio-screen)) .workspace { padding-bottom: 100p
 @media (max-width: 760px) {
   .audio-mini { left: 0; padding-inline: 12px; gap: 8px; }
   .audio-mini button { padding-inline: 10px; }
-  .audio-transport { display: grid; grid-template-columns: 1fr 1fr; }
-  .audio-transport .primary { grid-column: 1 / -1; grid-row: 1; }
+  .audio-transport { display:flex; justify-content:center; }
+  .audio-mini { gap:4px; padding-inline:8px; }
   .audio-seek { gap: 8px; }
   .audio-seek button { padding-inline: 8px; white-space: nowrap; }
   .audio-screen h1 { font-size: 30px; }

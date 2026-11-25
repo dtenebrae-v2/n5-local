@@ -2221,7 +2221,8 @@
       "sha256": "1b9f83b182be8239f4c0f72a041aeb66814439ae598e99c5e907177dbb8d794e",
       "duration": 1750.9275,
       "matched": true,
-      "bytes": 23537057
+      "bytes": 23537057,
+      "audio_family": "jlpt-n5-shared-2010-2012-2017"
     },
     "crop-2010-2011-vocabulary-g1-q1-1": {
       "filename": "images/questions/n5-2010-2011-vocabulary-g1-q1-1.png",
