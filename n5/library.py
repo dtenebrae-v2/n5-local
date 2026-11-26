@@ -140,7 +140,7 @@ class Library:
     def public(self):
         books=[]
         for book in self.data['books']:
-            public={**book,'assets':{}}
+            public={**book,'assets':{},'cover_url':f"/book-covers/{book['id']}.webp?v={book['assets']['pdf'].get('sha256','')[:12]}"}
             for kind,asset in book['assets'].items():
                 available=self.asset(book['id'],kind) is not None
                 public['assets'][kind]={**asset,'available':available,

@@ -1,3 +1,4 @@
+import { grammarGuide } from './grammar-guides.js';
 import { verbReferenceLesson } from './verb-reference.js';
 import { getJSON } from './api.js';
 import { breadcrumbs, collectionCard, escapeHTML, heading } from './ui.js';
@@ -50,7 +51,7 @@ export function sectionPage(catalog, section) {
 
 export async function grammarPage(catalog, lesson, signal) {
   const localVerbs = lesson.id === 'grammar/verbs/forms';
-  const page = localVerbs ? null : await getJSON('/api/lesson?path=' + encodeURIComponent(lesson.path), signal);
+  const [page, bank] = localVerbs ? [null,null] : await Promise.all([getJSON('/api/lesson?path=' + encodeURIComponent(lesson.path), signal),getJSON('/api/grammar-practice',signal)]);
   const items = lesson.id === 'grammar'
     ? [['Грамматика']]
     : [['Грамматика', `${catalog.base}/grammar`], [lesson.label]];
@@ -59,9 +60,9 @@ export async function grammarPage(catalog, lesson, signal) {
   `).join('');
   // Lesson HTML is the bundled, sanitized source snapshot, not user input.
   return breadcrumbs(catalog.base, items)
-    + heading('ГРАММАТИКА · N5', lesson.label, localVerbs ? 'Основы, готовые формы и исключения. Правила и примеры на русском.' : 'Правила и примеры из учебного раздела. Объяснения сохранены на английском.')
+    + heading('ГРАММАТИКА · N5', lesson.label, 'Правила, конструкции и примеры с переводом на русский.')
     + `
-      <nav class="lesson-nav" aria-label="Темы грамматики">${links}</nav>
-${localVerbs ? verbReferenceLesson() : `<article class="lesson" lang="en">${page.html}</article>`}
+      <details class="grammar-topics" ${matchMedia('(min-width: 900px)').matches ? 'open' : ''}><summary>Темы грамматики</summary><nav class="lesson-nav" aria-label="Темы грамматики">${links}</nav></details>
+${localVerbs ? verbReferenceLesson() : ` ${grammarGuide(lesson.id,bank,catalog)}<details class="source-original"><summary>Оригинальный материал источника · английский</summary><article class="source-text" lang="en">${page.html.replace(/<h1(\s[^>]*)?>/gi,'<h3$1>').replace(/<\/h1>/gi,'</h3>')}</article><a href="${escapeHTML(page.source)}" target="_blank" rel="noreferrer">Открыть источник ↗</a></details>`}
     `;
 }

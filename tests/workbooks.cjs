@@ -13,10 +13,9 @@ module.exports = async function workbookChecks(page, base) {
   const question=()=>page.locator('.workbook-prompt');
   assert.ok((await baseText(question())).includes('一人'));
   await page.keyboard.press('2');
-  const before=await page.locator('#workbook-next').boundingBox();
   await page.keyboard.press('Enter');
   assert.equal(await page.locator('#workbook-feedback').getAttribute('data-status'),'incorrect');
-  assert.equal((await page.locator('#workbook-next').boundingBox()).y,before.y);
+  await page.waitForFunction(()=>{const r=document.querySelector('#workbook-feedback').getBoundingClientRect();return r.top>=0&&r.top<innerHeight;});
   await page.keyboard.press('1');await page.keyboard.press('Enter');
   assert.equal(await page.locator('#workbook-feedback').getAttribute('data-status'),'correct');
   assert.equal((await state()).books['somatome-n5-2017'].session.answers['p17-1'].first,'incorrect');
@@ -32,7 +31,7 @@ module.exports = async function workbookChecks(page, base) {
   await page.locator('#workbook-contents').click();
   await page.locator('[data-week="6"]').click();
   await page.locator('[data-unit="w6d3"]').click();
-  await page.locator('#workbook-audio').waitFor();
+  await page.locator('#workbook-audio').waitFor({state:'attached'});
   await page.waitForFunction(()=>document.querySelector('#workbook-audio').readyState>=1);
   const source=await page.locator('#workbook-audio').getAttribute('src');
   assert.ok(source.endsWith('/Track002'));

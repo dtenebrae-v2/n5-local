@@ -14,8 +14,8 @@ export async function mountBookReader(root, book, progress, signal, credits) {
   const state = readingState(progress, book.id), pdf = book.assets.pdf, audio = book.assets.audio;
   root.innerHTML = `<section class="book-shell book-viewer" aria-label="Чтение книги">
     <div class="book-chrome"><header class="book-header"><a class="library-back" href="/jlpt/n5/library" aria-label="Вернуться в библиотеку">←</a>
-      <h1 lang="ja">${esc(book.title)}</h1><button class="secondary" id="book-info-open">О книге</button></header>
-    <div class="book-controls" aria-label="Управление чтением">
+      <h1 lang="ja">${esc(book.title)}</h1><button class="secondary" id="book-tools-toggle" aria-expanded="false" aria-controls="book-reader-controls">Параметры</button><button class="secondary" id="book-info-open">О книге</button></header>
+    <div id="book-reader-controls" class="book-controls" aria-label="Управление чтением">
       <div class="book-page-controls"><button class="secondary" id="book-thumbnails-open" aria-label="Миниатюры страниц">Страницы</button>
       <button class="secondary" id="book-prev" aria-label="Предыдущая страница">←</button>
       <label class="book-page-label"><span class="sr-only">Страница PDF</span><input id="book-page" type="number" min="1" value="${state.page}" inputmode="numeric" aria-label="Страница PDF"></label>
@@ -31,7 +31,7 @@ export async function mountBookReader(root, book, progress, signal, credits) {
     <div class="book-viewport"><div id="book-stage" class="book-stage" tabindex="0" role="region" aria-label="Страницы книги: прокрутка, увеличение двумя пальцами" aria-busy="true"><div class="pdfViewer" lang="ja"></div></div></div>
     ${audio?.available ? `<footer class="book-audio" aria-label="Аудиокнига"><audio id="book-audio" preload="metadata" src="${esc(audio.local_url)}"></audio>
       <div class="book-audio-buttons"><button class="secondary" id="book-audio-play" aria-label="Воспроизвести аудио" disabled>▶</button>
-      <button class="secondary" id="book-audio-back" aria-label="Назад на 10 секунд" disabled>−10 с</button><button class="secondary" id="book-audio-forward" aria-label="Вперёд на 10 секунд" disabled>+10 с</button>
+      <button class="secondary" id="book-audio-back" aria-label="Назад на 15 секунд" disabled>−15 с</button><button class="secondary" id="book-audio-forward" aria-label="Вперёд на 15 секунд" disabled>+15 с</button>
       <label><span class="sr-only">Скорость аудио</span><select id="book-rate" aria-label="Скорость аудио">${[.75,1,1.25,1.5].map(rate => `<option value="${rate}" ${rate === state.rate ? 'selected' : ''}>${rate}×</option>`).join('')}</select></label>
       <span id="book-audio-time" aria-label="Время аудио">0:00</span></div>
       <input id="book-audio-seek" type="range" min="0" max="0" step=".1" value="0" aria-label="Позиция аудио" disabled><p id="book-audio-error" role="status"></p></footer>` : ''}
@@ -44,6 +44,11 @@ export async function mountBookReader(root, book, progress, signal, credits) {
     <dialog id="book-thumbnails" class="practice-dialog book-thumbnails-dialog" aria-labelledby="book-thumbnails-title"><div class="practice-header"><h2 id="book-thumbnails-title">Страницы PDF</h2><button class="practice-close" aria-label="Закрыть миниатюры">×</button></div><div class="book-thumbnail-grid"></div></dialog>
     </section>`;
   const shell = root.querySelector('.book-shell'), stage = root.querySelector('#book-stage');
+  const mini = document.querySelector('.audio-mini');
+  if (mini) { shell.append(mini); signal.addEventListener('abort',()=>document.body.append(mini),{once:true}); }
+  root.querySelector('#book-tools-toggle').addEventListener('click',event=>{
+    const open = shell.classList.toggle('book-tools-open'); event.currentTarget.setAttribute('aria-expanded',String(open));
+  },{signal});
   bindReaderChrome(shell, stage, signal, {
     autoReveal: progress.readerAutoPanel !== false,
     onAutoReveal(value) { progress.readerAutoPanel=value; saveReading(progress); },
@@ -145,7 +150,7 @@ export async function mountBookReader(root, book, progress, signal, credits) {
       try { if (player.paused) await player.play(); else player.pause(); $('#book-audio-error').textContent = ''; }
       catch { $('#book-audio-error').textContent = 'Не удалось начать воспроизведение. Попробуйте ещё раз.'; }
     }, { signal });
-    for (const [id, offset] of [['book-audio-back', -10], ['book-audio-forward', 10]]) $('#' + id).addEventListener('click', () => {
+    for (const [id, offset] of [['book-audio-back', -15], ['book-audio-forward', 15]]) $('#' + id).addEventListener('click', () => {
       player.currentTime = Math.max(0, Math.min(Number.isFinite(player.duration) ? player.duration : Infinity, player.currentTime + offset)); audioUI(); save();
     }, { signal });
     $('#book-audio-seek').addEventListener('input', event => { player.currentTime = Number(event.target.value); audioUI(); save(); }, { signal });

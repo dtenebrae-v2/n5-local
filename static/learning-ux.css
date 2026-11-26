@@ -8,8 +8,8 @@
 .home-card { padding: 24px; border: 1px solid var(--line); border-radius: var(--panel-radius); background: var(--white); }
 .home-card h2 { margin-top: 0; font-size: 1.2rem; }
 .home-card a { display: block; margin-top: 12px; min-height: 44px; align-content: center; }
-.game-card #practice-form .practice-actions .game-advance,
-.game-card #practice-form .practice-actions [type="submit"] { grid-column: 1 / -1; grid-row: 1; }
+.game-card #practice-form .practice-actions:has(#game-next) .game-advance,
+.game-card #practice-form .practice-actions:has(#game-next) [type="submit"] { grid-column: 1 / -1; grid-row: 1; }
 .game-card .practice-actions #practice-action-help { grid-column: 1 / -1; margin: 0; font-size: .82rem; }
 @media (max-width: 600px) {
   .home-grid { grid-template-columns: 1fr; }
@@ -131,3 +131,171 @@ body.has-audio-player:not(:has(.audio-screen)) .workspace { padding-bottom: 100p
 .audio-now[hidden] { display: none; }
 .audio-catalog .chip[aria-pressed="true"] { background: var(--soft); border-color: var(--green); color: var(--ink); }
 @media (max-width: 700px) { .workspace:has(.audio-screen) > .topbar { display: none; } }
+
+/* Shared study roles: instruction, rule, example, result, then next action. */
+#content h1:not(.book-header h1) { font-family:var(--serif); font-size:clamp(30px,3.2vw,40px); font-weight:400; line-height:1.2; letter-spacing:-.7px; }
+.rule-block { background:var(--white); border:1px solid var(--line); border-left:4px solid var(--green); border-radius:8px; padding:24px; margin:24px 0; max-width:80ch; }
+.prep-lesson-rules article.rule-block { border-top:1px solid var(--line); padding:24px; }
+.material-label { display:block; font:600 12px/1.5 system-ui,sans-serif; letter-spacing:.04em; color:var(--muted); margin-bottom:8px; }
+.rule-block h2, .rule-block h3 { margin:0 0 16px; font-size:20px; }
+.rule-explanation, .rule-block > p { max-width:65ch; }
+.rule-model { padding:12px 16px; background:var(--soft); border-radius:6px; font-size:21px; line-height:2; overflow-wrap:anywhere; }
+.rule-block .lesson-example { margin:20px 0 0; padding:16px 0 0; border-top:1px solid var(--line); }
+.rule-block .lesson-example p[lang="ja"] { font-size:21px; line-height:2; margin:0 0 8px; }
+.rule-block .example-translation { font-size:15px; line-height:1.6; color:var(--muted); margin:0; }
+.rule-caution { background:var(--paper); padding:16px; margin-top:20px; border-left:3px solid var(--control-border); }
+.rule-caution p { margin:0; }
+.grammar-topics, .source-original, .study-options, .progress-unstarted, .progress-details { margin:20px 0; }
+.grammar-topics > summary, .source-original > summary, .study-options > summary, .progress-unstarted > summary, .progress-details > summary, .book-card-credits > summary { min-height:44px; padding:10px 0; cursor:pointer; font-weight:600; }
+.source-original { border-top:1px solid var(--line); }
+.source-original .lesson h3 { font-size:20px; }
+.grammar-index { display:grid; gap:12px; max-width:65ch; }
+.grammar-index a { padding:16px; border-bottom:1px solid var(--line); }
+.lesson:has(#godan) > section, .lesson:has(#ichidan) > section { border-top:1px solid var(--line); padding:24px 0; }
+#practice-feedback, #prep-feedback, #workbook-feedback, #exam-feedback, #cw-feedback { scroll-margin-block:16px; }
+#workbook-feedback:empty, #exam-feedback:empty { display:none; }
+#practice-feedback:not(:empty), #prep-feedback:not(:empty), #workbook-feedback:not(:empty), #exam-feedback:not(:empty), #cw-feedback:not(:empty) { padding:16px; margin:16px 0; border:1px solid var(--control-border); border-left-width:4px; border-radius:6px; background:var(--white); }
+#cw-feedback { font-weight:600; }
+#practice-feedback[data-status="empty"], #practice-feedback[data-status="incomplete"] { background:var(--soft); color:var(--ink); }
+.game-card #practice-form .practice-actions .game-advance:not(#game-next) { grid-column:auto; grid-row:auto; }
+.game-card #practice-form .practice-actions [type="submit"] { grid-column:1/-1; }
+.game-card #practice-form .practice-actions #counter-next { grid-column:1/-1; }
+.word-actions { flex-wrap:wrap; overflow:visible; }
+.word-actions > * { max-width:100%; white-space:normal; }
+.study-options .phrase-filters { margin:0 0 16px; }
+.study-session-active .breadcrumbs, .study-session-active .page-heading > p, .study-session-active .study-options, .study-session-active .phrase-layout, .study-session-active .phrase-sources, .study-session-active #phrase-count, .study-session-active #relation-count { display:none; }
+.study-session-active .phrase-training > label, .study-session-active .phrase-training > p, .study-session-active .phrase-training > #phrase-start, .study-session-active .phrase-training > #relation-start { display:none; }
+.exam-in-session > .exam-note, .exam-in-session > .workbook-credits, .exam-in-session > #game-options, .exam-in-session #exam-resume, .workbook-in-session > .workbook-credits, .workbook-in-session > #game-options, .workbook-in-session #workbook-resume, .workbook-in-session #workbook-random, .workbook-in-session #workbook-mistakes { display:none; }
+.exam-in-session .exam-toolbar, .workbook-in-session .workbook-toolbar { margin:8px 0 16px; }
+.progress-unstarted nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 24px; }
+.progress-unstarted a { min-height:44px; padding:10px 0; border-bottom:1px solid var(--line); }
+.book-catalog-card { display:grid; grid-template-columns:minmax(110px,34%) minmax(0,1fr); gap:20px; align-items:start; }
+.book-cover { display:flex; align-items:center; justify-content:center; aspect-ratio:340/480; background:var(--paper); border:1px solid var(--line); border-radius:4px; overflow:hidden; }
+.book-cover img { display:block; width:100%; height:100%; object-fit:contain; }
+.book-cover img[hidden], .cover-fallback[hidden] { display:none; }
+.cover-fallback { padding:12px; font-size:13px; color:var(--muted); text-align:center; }
+.book-card-content { min-width:0; }
+.book-catalog-card h2 { font-size:20px; margin:4px 0 12px; }
+.book-card-credits { margin-top:12px; }
+.book-card-credits summary { font-size:13px; color:var(--muted); }
+.book-shell > .audio-mini { position:static; flex-shrink:0; width:100%; padding:8px 12px; }
+body.has-audio-player:has(.book-screen) .workspace { padding-bottom:0; }
+#book-tools-toggle { display:none; }
+@media (max-width:800px), (pointer:coarse) {
+  #book-tools-toggle { display:block; min-height:44px; }
+  .book-shell:not(.book-tools-open) .book-zoom-controls, .book-shell:not(.book-tools-open) .book-auto-controls { display:none; }
+  .book-header h1 { font-size:16px; }
+}
+@media (max-width:700px) {
+  .keyboard-hint, #game-shortcuts { display:none; }
+  .workspace:has(.phrase-layout) .topbar, .workspace:has(.grammar-guide) .topbar { display:none; }
+  .rule-block, .prep-lesson-rules article.rule-block { padding:16px; margin:16px 0; }
+  .rule-block h2, .rule-block h3 { font-size:18px; }
+  .rule-model { padding:12px; font-size:20px; }
+  .lesson-nav { margin:12px 0; }
+  .book-catalog-card { grid-template-columns:100px minmax(0,1fr); gap:16px; }
+  .book-catalog-card h2 { font-size:18px; }
+  .progress-unstarted nav { grid-template-columns:1fr; }
+  .exam-paper { width:100%; }
+  .exam-paper .exam-fragment { width:100%; }
+}
+.custom-inline-audio > audio { display:none; }
+.inline-audio-seek { display:block; font-size:13px; color:var(--muted); margin-top:12px; }
+.inline-audio-seek input { display:block; width:100%; min-height:32px; margin:0; }
+.inline-audio-time { font-size:13px; font-variant-numeric:tabular-nums; color:var(--muted); }
+.custom-inline-audio .library-filters { flex-wrap:wrap; }
+.word-actions { width:100%; max-width:100%; }
+/* Keep result colours consistent after the shared feedback panel styling. */
+#practice-feedback[data-status="correct"], #prep-feedback[data-correct="true"], #workbook-feedback[data-status="correct"], #exam-feedback[data-status="correct"] { border-left-color:#21843e; background:#e6f4e9; }
+#practice-feedback[data-status="incorrect"], #prep-feedback[data-correct="false"], #workbook-feedback[data-status="incorrect"], #exam-feedback[data-status="incorrect"] { border-left-color:#b12d2d; background:#fce8e8; }
+.workbook-actions [hidden] { display:none !important; }
+
+/* Equal roles share the same rhythm; rich choice cards keep their own layout. */
+.primary, .secondary, .practice-launch, .chip { line-height:1.4; }
+.chip { justify-content:center; min-height:var(--control-height); text-align:center; }
+.practice-actions, .cw-actions, .cw-pager, .library-filters, .counter-choices { gap:var(--space-control); }
+.workbook-toolbar, .exam-toolbar, .cw-actions, .cw-pager { margin-block:var(--space-group); }
+.home-grid, .library-grid, .workbook-units { gap:var(--space-group); }
+.word-table td { padding-block:var(--space-group); }
+.word-actions > .practice-launch { margin:0; min-height:var(--control-height); }
+.book-card-content > .primary { margin-top:var(--space-group); }
+
+@media (max-width:1200px) {
+  .word-table tr { gap:var(--space-group); }
+  .word-table td { padding:0; }
+  .word-table td:first-child { display:contents; }
+  .word-table .japanese-word { grid-column:1; grid-row:1; }
+  .word-table .reading-col { grid-column:2; grid-row:1; }
+  .word-table td:nth-child(3) { grid-row:2; padding-top:0; }
+  .word-table td:nth-child(4) { grid-row:3; }
+  .word-table .word-actions { grid-column:1 / -1; grid-row:4; margin:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--space-control); }
+  .word-table .word-actions > :only-child { grid-column:1 / -1; }
+}
+.primary, .secondary { padding:10px 16px; }
+.home-card, .library-card, .collection-card, .cw-card, .prep-launch, .prep-resume, .prep-mode-card, .prep-topic-card { border-radius:var(--panel-radius); }
+.home-card > :first-child, .library-card > :first-child { margin-top:0; }
+.home-card > :last-child, .library-card > :last-child { margin-bottom:0; }
+.prep-listening, .prep-progress-section { margin-top:var(--space-section); padding-top:var(--space-section); }
+@media (max-width:700px) {
+  /* Navigation already contains search; don't leave a utility row on only some pages. */
+  .workspace > .topbar { display:none; }
+}
+@media (max-width:1200px) {
+  .word-table tr:not(:has(td:nth-child(4))) .word-actions { grid-row:3; }
+}
+/* Keep related vocabulary commands in a stable row instead of wrapping one away. */
+.word-actions { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+.word-actions > .practice-launch { min-width:0; padding:8px; font-size:12px; }
+.word-actions > :only-child { grid-column:1/-1; justify-self:start; padding-inline:12px; }
+.phrase-card .practice-actions + .practice-actions { margin-top:16px; padding-top:16px; border-top:1px solid var(--line); }
+.cw-selectors { margin-bottom:16px; }
+.cw-progress { margin:16px 0 24px; line-height:1.6; }
+@media(max-width:1200px) {
+  .word-table .word-actions { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .word-table .word-actions > :last-child:nth-child(3) { grid-column:1/-1; }
+}
+
+@media(min-width:761px) and (max-width:1200px) {
+  .word-table .word-actions { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .word-table .word-actions > :last-child:nth-child(3) { grid-column:auto; }
+}
+.sidebar nav { overflow-x:hidden; }
+.sidebar .nav-children a { min-width:0; flex-wrap:wrap; column-gap:8px; overflow-wrap:anywhere; }
+.sidebar .nav-children a small { flex-shrink:0; margin-left:auto; }
+.phrase-card > .practice-actions { margin-top:16px; }
+.phrase-card > .practice-actions:not(:has([id$="prev"])) { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+.phrase-card > .practice-actions > button { min-width:0; }
+#phrase-training-help, #relation-training-help { margin-top:8px; line-height:1.6; }
+.phrase-related { margin-bottom:16px; }
+@media(max-width:1200px) { .phrase-layout { grid-template-columns:1fr; } }
+@media(max-width:520px) {
+  .phrase-card > .practice-actions:not(:has([id$="prev"])) { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .phrase-card > .practice-actions:not(:has([id$="prev"])) > :last-child { grid-column:1/-1; }
+}
+.phrase-card > .practice-actions:has([id$="prev"]) { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.audio-transport { display:grid; grid-template-columns:repeat(4,minmax(44px,1fr)); gap:8px; max-width:320px; }
+.audio-transport .audio-icon-button { min-width:44px; width:100%; padding:8px; }
+.sidebar .nav-children a:has(small) { display:block; font-size:13px; line-height:1.5; }
+.sidebar .nav-children a small { display:block; margin:4px 0 0; line-height:1.4; }
+@media(max-width:700px) {
+  .book-zoom-controls { display:grid; grid-template-columns:44px minmax(0,1fr) repeat(3,44px); gap:8px; }
+  .book-zoom-controls > label { grid-column:1/-1; grid-row:2; width:100%; }
+  .book-zoom-controls select { width:100%; min-width:0; }
+}
+/* Dictionary hierarchy: the entry leads; study commands remain secondary. */
+.word-table .japanese-word { font-size:34px; line-height:1.8; }
+.word-table .reading-col .kana { font-size:20px; line-height:1.6; }
+.word-table .word-meaning { font-size:18px; line-height:1.6; }
+.word-table .meaning-english, .word-table .romaji { font-size:13px; line-height:1.5; color:var(--muted); }
+.word-table .word-actions { margin-top:8px; gap:8px; }
+.word-table .word-actions > .practice-launch { min-height:32px; padding:4px 6px; font-size:12px; font-weight:400; background:transparent; border-color:transparent; color:var(--muted); text-decoration:underline; text-decoration-color:var(--control-border); text-underline-offset:3px; }
+.word-table .word-actions > .practice-launch:hover { background:var(--soft); color:var(--green); }
+@media(max-width:1200px) { .word-table .word-actions { margin-top:0; } }
+@media(max-width:760px), (pointer:coarse) {
+  .word-table .word-actions > .practice-launch { min-height:44px; }
+  .word-table .japanese-word { font-size:30px; }
+}
+@media(min-width:561px) and (max-width:1200px) {
+  .word-table .word-actions { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .word-table .word-actions > :last-child:nth-child(3) { grid-column:auto; }
+}

@@ -21,5 +21,5 @@ export function vocabularyExercise(entry) {
     const reading = readings.join(' / ');
     return item.kanji && item.kanji !== reading ? `${item.kanji}（${reading}）` : reading;
   }).filter(Boolean))];
-  return answers.length ? { kind: 'vocabulary', form: 'vocabulary', answers, displayAnswers, prompt: task?.prompt || entry.meaning } : null;
+  return answers.length ? { kind: 'vocabulary', form: 'vocabulary', answers, displayAnswers, prompt: task?.prompt || entry.meaning_ru || entry.meaning } : null;
 }

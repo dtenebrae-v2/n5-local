@@ -63,6 +63,7 @@ module.exports = async function audioChecks(page, base) {
   await page.locator('[data-audio-command=toggle]').first().click();
   for(const width of [390,320]) {
     await page.setViewportSize({width,height:844});
+    assert.equal(await page.locator('.audio-transport button').evaluateAll(buttons=>buttons.every(button=>Math.abs(button.getBoundingClientRect().top-buttons[0].getBoundingClientRect().top)<1)),true,'Audio commands stay in one row '+width);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'Audio mobile overflow '+width);
     if(process.env.SCREENSHOT_DIR && width===390)await page.screenshot({path:process.env.SCREENSHOT_DIR+'/n5-audio-mobile.png',fullPage:false});
   }

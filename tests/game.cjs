@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 module.exports = async function gameChecks(page, base) {
+  await page.evaluate(()=>localStorage.removeItem('n5.training.v1'));
   await page.goto(base + '/jlpt/n5/practice');
   await page.waitForSelector('#game-question[data-word]');
   assert.equal(await page.locator('#navigation a.active').innerText(), 'Слова и формы');
@@ -48,9 +49,9 @@ module.exports = async function gameChecks(page, base) {
   assert.equal(await input.inputValue(), '');
   assert.equal(await input.evaluate(el => el === document.activeElement), true);
   await submit();
-  assert.equal(await feedback.getAttribute('data-status'), 'incorrect');
-  assert.match(await feedback.innerText(), /Правильный ответ:/);
-  assert.equal(await score.innerText(), 'С первой попытки: 0 из 2');
+  assert.equal(await feedback.getAttribute('data-status'), 'empty');
+  assert.match(await feedback.innerText(), /Попытка не засчитана/);
+  assert.equal(await score.innerText(), 'С первой попытки: 0 из 1');
   await input.fill('でした');
   await submit();
   assert.equal(await feedback.getAttribute('data-status'), 'incorrect');
@@ -112,9 +113,8 @@ module.exports = async function gameChecks(page, base) {
   await page.waitForSelector('.practice-rules-dialog', { state: 'detached' });
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   await input.fill('あ');
-  const before = await input.boundingBox();
   await input.press('Enter');
-  assert.deepEqual(await input.boundingBox(), before);
+  await page.waitForFunction(()=>{const r=document.querySelector('#practice-feedback').getBoundingClientRect();return r.top>=0&&r.top<innerHeight;});
   if (process.env.SCREENSHOT_DIR) {
     fs.mkdirSync(process.env.SCREENSHOT_DIR, { recursive: true });
     await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, 'n5-game-mobile.png'), fullPage: true });

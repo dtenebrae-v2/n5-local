@@ -50,11 +50,10 @@ module.exports = async function uxChecks(page, base) {
   const reading = await page.locator('.practice-reading').innerText();
   const form = await page.locator('#game-question').getAttribute('data-form');
   await input.fill(reading + { past: 'でした', negative: 'じゃないです', past_negative: 'じゃなかったです' }[form]);
-  const before = await page.locator('#practice-form [type=submit]').evaluate(el => el.getBoundingClientRect().top + scrollY);
   assert.equal(await page.locator('#practice-form [type=submit]').evaluate(el => el.classList.contains('primary')), true);
   await input.press('Enter');
   assert.equal(await page.locator('#game-next').evaluate(el => el.classList.contains('primary')), true);
-  assert.equal(await page.locator('#game-next').evaluate(el => el.getBoundingClientRect().top + scrollY), before, 'Next replaces Check in the same action position');
+  await page.waitForFunction(()=>{const r=document.querySelector('#practice-feedback').getBoundingClientRect();return r.top>=0&&r.top<innerHeight;});
   assert.equal(await page.locator('#practice-form [type=submit]').isHidden(), true);
   assert.equal(await page.locator('#practice-reveal').isHidden(), true);
   await page.locator('#game-finish').click();

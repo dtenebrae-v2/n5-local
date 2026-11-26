@@ -100,16 +100,17 @@ export async function mountCounters(root, signal) {
     task.querySelector('label').textContent = 'Число и суффикс целиком';
     task.querySelector('#practice-input-help').textContent = 'Ромадзи превращается в хирагану при вводе.';
     const actions = task.querySelector('.practice-actions');
-    actions.insertAdjacentHTML('beforeend', '<button class="secondary game-advance" type="button" id="counter-next">Дальше</button><button class="secondary" type="button" id="counter-unknown">Не знаю</button>');
+    actions.insertAdjacentHTML('beforeend', '<button class="secondary game-advance" type="button" id="counter-next">Пропустить</button><button class="secondary" type="button" id="counter-unknown">Не знаю</button>');
     binding = bindAnswer(task, () => counterExercise(item()), status => {
       if (status === 'incomplete') return;
       const record = answer(); record.value = task.querySelector('input').value; record.status = status;
       if (!record.first) { record.first = status; record.firstValue = record.value; }
+      task.querySelector('#counter-next').textContent = 'Следующее задание';
       save();
     });
     const record = answer();
     task.querySelector('input').value = record.value;
-    if (record.status) binding.render(record.status, record.value);
+    if (record.status) { binding.render(record.status, record.value); task.querySelector('#counter-next').textContent = 'Следующее задание'; }
     task.querySelector('input').addEventListener('input', () => { const record = answer(); record.value = task.querySelector('input').value; record.status = null; save(); }, { signal });
     task.querySelector('#practice-rules').addEventListener('click', rules, { signal });
     task.querySelector('#counter-unknown').addEventListener('click', () => binding.reveal('unknown'), { signal });

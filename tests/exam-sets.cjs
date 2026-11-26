@@ -19,10 +19,9 @@ module.exports = async function examSetChecks(page,base) {
   assert.match(await page.locator('.exam-answer-panel').innerText(),new RegExp(`Ответ на вопрос №\\s*${q.number}`));
   assert.equal(await page.locator('select,input[type=radio]').count(),0);
   await page.keyboard.press(String(((q.correct+1)%q.choices)+1));
-  const before=await page.locator('#exam-next').boundingBox();
   await page.keyboard.press('Enter');
   assert.equal(await page.locator('#exam-feedback').getAttribute('data-status'),'incorrect');
-  assert.equal((await page.locator('#exam-next').boundingBox()).y,before.y);
+  await page.waitForFunction(()=>{const r=document.querySelector('#exam-feedback').getBoundingClientRect();return r.top>=0&&r.top<innerHeight;});
   await page.keyboard.press(String(q.correct+1));await page.keyboard.press('Enter');
   assert.equal(await page.locator('#exam-feedback').getAttribute('data-status'),'correct');
   assert.equal((await state()).sessions.mixed.answers[q.id].first,'incorrect');
@@ -64,9 +63,8 @@ module.exports = async function examSetChecks(page,base) {
     await page.setViewportSize({width,height:1000});
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Exam overflow ${width}`);
     await page.locator('#exam-next').scrollIntoViewIfNeeded();
-    const top=(await page.locator('#exam-next').boundingBox()).y;
     await page.keyboard.press(String(((q.correct+1)%q.choices)+1));await page.keyboard.press('Enter');
-    assert.equal((await page.locator('#exam-next').boundingBox()).y,top,`Answer moves controls at ${width}`);
+    await page.waitForFunction(()=>{const r=document.querySelector('#exam-feedback').getBoundingClientRect();return r.top>=0&&r.top<innerHeight;});
   }
   await page.keyboard.press(String(q.correct+1));await page.keyboard.press('Enter');
   await page.locator('#exam-reference').click();

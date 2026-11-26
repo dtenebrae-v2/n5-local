@@ -43,6 +43,25 @@ module.exports = async function controlStyleChecks(page, base) {
       if(process.env.SCREENSHOT_DIR&&width===390)await page.screenshot({path:process.env.SCREENSHOT_DIR+'/unified-controls-mobile.png',fullPage:true});
     }
   }
+  // Native buttons and link-buttons must place their labels identically.
+  for (const width of [1440,1200,1000,800,663,390,320]) {
+    await page.setViewportSize({width,height:900});
+    await page.goto(base+'/jlpt/n5/vocabulary/verbs');
+    await page.locator('#results[aria-busy="false"]').waitFor();
+    const failures=await page.locator('.word-actions').evaluateAll(groups=>groups.flatMap(group=>{
+      const buttons=[...group.children];
+      const positions=buttons.map(button=>{
+        const box=button.getBoundingClientRect(), range=document.createRange();range.selectNodeContents(button);
+        const label=range.getBoundingClientRect(), style=getComputedStyle(button);
+        return {offset:label.top+label.height/2-box.top-box.height/2,height:box.height,lineHeight:style.lineHeight,font:style.font,display:style.display};
+      });
+      const sameRow=innerWidth<=560 || buttons.every(button=>Math.abs(button.getBoundingClientRect().top-buttons[0].getBoundingClientRect().top)<1);
+      return !sameRow || positions.some(p=>Math.abs(p.offset-positions[0].offset)>1 || p.height<(innerWidth<=760?44:32) || p.lineHeight!==positions[0].lineHeight || p.font!==positions[0].font || !['flex','inline-flex'].includes(p.display)) ? [positions] : [];
+    }));
+    assert.deepEqual(failures,[],'Aligned button/link labels '+width);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    if(process.env.SCREENSHOT_DIR && [663,390].includes(width))await page.screenshot({path:process.env.SCREENSHOT_DIR+'/word-actions-'+width+'.png'});
+  }
   // Reader fields use the same controls, including page number and audio rate.
   const library=await (await page.request.get(base+'/api/library')).json();
   const readable=library.books.find(book=>book.assets?.pdf?.available);
@@ -51,6 +70,11 @@ module.exports = async function controlStyleChecks(page, base) {
       await page.setViewportSize({width,height:1000});
       await page.goto(base+'/jlpt/n5/library/'+readable.id);await page.locator('#book-page').waitFor();
       await inspect('book reader '+width);
+      if(width<700) {
+        await page.locator('#book-tools-toggle').click();
+        assert.ok((await page.locator('#book-fit').boundingBox()).width>=200,'Readable reader fit selector '+width);
+        await inspect('expanded reader '+width);
+      }
     }
   }
   await page.evaluate(()=>localStorage.removeItem('n5-course-workbook-v1'));

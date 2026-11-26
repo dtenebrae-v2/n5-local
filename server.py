@@ -47,10 +47,10 @@ ASSETS.update({
     '/' + path.relative_to(ROOT / 'static').as_posix(): (path, {
         '.js':'text/javascript; charset=utf-8', '.mjs':'text/javascript; charset=utf-8',
         '.ttf':'font/ttf', '.txt':'text/plain; charset=utf-8',
-        '.css':'text/css; charset=utf-8', '.svg':'image/svg+xml', '.gif':'image/gif', '.gz':'application/gzip',
+        '.css':'text/css; charset=utf-8', '.svg':'image/svg+xml', '.gif':'image/gif', '.webp':'image/webp', '.gz':'application/gzip',
     }.get(path.suffix, 'application/octet-stream'))
     for path in (ROOT / 'static').rglob('*')
-    if path.is_file() and path.suffix in {'.js','.mjs','.bcmap','.pfb','.ttf','.txt','.css','.svg','.gif','.gz'}
+    if path.is_file() and path.suffix in {'.js','.mjs','.bcmap','.pfb','.ttf','.txt','.css','.svg','.gif','.webp','.gz'}
 })
 STATIC_BINARY = {
     url: {'sha256':hashlib.sha256(path.read_bytes()).hexdigest(), 'filename':path.name}
@@ -74,9 +74,10 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Content-Length', str(len(body)))
         self.send_header('X-Content-Type-Options', 'nosniff')
         self.send_header('Content-Security-Policy', CSP)
-        self.send_header('Cache-Control', 'no-cache')
+        self.send_header('Cache-Control', (extra or {}).get('Cache-Control', 'no-cache'))
         for key, value in (extra or {}).items():
-            self.send_header(key, value)
+            if key.lower() != 'cache-control':
+                self.send_header(key, value)
         self.end_headers()
         if self.command != 'HEAD':
             self.wfile.write(body)
@@ -129,7 +130,7 @@ class Handler(BaseHTTPRequestHandler):
                 if path in STATIC_BINARY:
                     self.serve_file(filename, STATIC_BINARY[path], mime)
                 else:
-                    self.send(filename.read_bytes(), mime)
+                    self.send(filename.read_bytes(), mime, extra={'Cache-Control': 'private, max-age=86400'} if filename.suffix == '.webp' else None)
             elif path in STORE.catalog.routes:
                 self.send((ROOT / 'static/index.html').read_bytes(), 'text/html; charset=utf-8')
             else:

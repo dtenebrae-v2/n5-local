@@ -11,6 +11,9 @@
   --control-radius: 6px;
   --panel-radius: 12px;
   --control-height: 44px;
+  --space-control: 8px;
+  --space-group: 16px;
+  --space-section: 24px;
   --serif: Georgia,'Times New Roman',serif;
 }
 * {
@@ -192,7 +195,10 @@ kbd {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: var(--space-control);
+  line-height: 1.4;
+  text-align: center;
+  vertical-align: middle;
   border-radius: var(--control-radius);
   min-height: var(--control-height);
   padding: 12px 20px;
@@ -206,7 +212,7 @@ kbd {
   background: #1a3d31;
 }
 .primary span {
-  font-size: 18px;
+  font-size: inherit;
 }
 .secondary {
   background: transparent;
@@ -808,7 +814,7 @@ table {
     transition: none!important;
   }
 }
-@media(max-width:520px) {
+@media(max-width:1200px) {
   .word-table {
     min-width: 0;
     display: block;
@@ -863,15 +869,22 @@ table {
 
 /* Word-form practice: local dialog, keyboard and touch friendly. */
 .practice-launch {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.4;
+  min-height: var(--control-height);
   margin-top: 8px;
   border: 1px solid #c5d0bd;
-  border-radius: 5px;
-  padding: 4px 8px;
+  border-radius: var(--control-radius);
+  padding: 8px 12px;
   background: var(--soft);
   color: var(--green);
-  font-size: 11px;
-  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 550;
+  white-space: normal;
 }
 .practice-launch:hover {
   background: var(--accent);
@@ -1237,10 +1250,11 @@ table {
 
 .word-actions {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 4px;
-  margin-top: 8px;
-  width: max-content;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--space-control);
+  margin-top: var(--space-group);
+  width: 100%;
 }
 .word-actions .practice-launch {
   margin-top: 0;
@@ -1384,7 +1398,7 @@ table {
 #game-finish { display: block; margin-top: 16px; }
 .training-results [data-result="hinted"] .result-status { color: #704712; background: #fff1d6; }
 #game-summary-title:focus, #results:focus, #content:focus { outline: none; }
-.word-actions .practice-launch { min-height: 36px; }
+.word-actions .practice-launch { min-height: var(--control-height); }
 @media (max-width: 600px) {
   .practice-screen { padding-top: 16px; }
   .practice-screen h1 { font-size: 26px; }

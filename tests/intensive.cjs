@@ -9,7 +9,7 @@ module.exports = async function intensiveChecks(page, base) {
   assert.equal(await page.locator('select').count(),0);
   assert.equal(await page.locator('#content').getByText('Неделя',{exact:false}).count(),0);
   await page.locator('[data-unit="listening-details"]').click();
-  await page.locator('#workbook-audio').waitFor();
+  await page.locator('#workbook-audio').waitFor({state:'attached'});
   await page.waitForFunction(()=>document.querySelector('audio').readyState>=1);
   assert.ok((await page.locator('audio').getAttribute('src')).endsWith('/Track063'));
   assert.equal(await baseText(page.locator('#workbook-feedback')),'');

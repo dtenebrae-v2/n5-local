@@ -39,6 +39,7 @@ module.exports=async function libraryChecks(page,base) {
  assert.ok(await page.locator('#book-audio').evaluate(a=>a.currentTime>=21.5));
  await page.locator('#book-audio-back').click();
  assert.ok(await page.locator('#book-audio').evaluate(a=>a.currentTime<13));
+ if (!await page.locator('#book-zoom-in').isVisible()) await page.locator('#book-tools-toggle').click();
  await page.locator('#book-zoom-in').click();
  assert.equal(await page.locator('#book-fit').inputValue(),'custom');
  await page.locator('#book-fit').selectOption('page-width');
@@ -60,6 +61,7 @@ module.exports=async function libraryChecks(page,base) {
  assert.equal(await page.locator('.book-chrome').evaluate(el=>el.inert),true);
  await page.waitForTimeout(500);await page.mouse.wheel(0,-180);
  await page.waitForFunction(()=>!document.querySelector('.book-chrome-hidden'));
+ if (!await page.locator('#book-hide-controls').isVisible()) await page.locator('#book-tools-toggle').click();
  await page.locator('#book-hide-controls').click();
  await page.waitForTimeout(300);
  const panelPosition=()=>page.locator('#book-stage').evaluate(el=>({top:el.scrollTop,height:el.clientHeight,pageTop:el.querySelector('.page[data-page-number="5"]').getBoundingClientRect().top}));
@@ -80,6 +82,7 @@ module.exports=async function libraryChecks(page,base) {
  await page.reload();await page.waitForSelector('#book-stage[aria-busy="false"]',{timeout:60000});
  assert.equal(await page.locator('.book-chrome-hidden').count(),1,'Panel preference survives reload');
  await page.locator('#book-show-controls').click();
+ if (!await page.locator('#book-auto-controls').isVisible()) await page.locator('#book-tools-toggle').click();
  assert.equal(await page.locator('#book-auto-controls').getAttribute('aria-checked'),'false');
  await page.locator('#book-auto-controls').click();
  assert.equal(await page.locator('#book-auto-controls').getAttribute('aria-checked'),'true');
@@ -130,7 +133,9 @@ module.exports=async function libraryChecks(page,base) {
  await page.waitForSelector('.book-chrome-hidden');
  await page.locator('#book-show-controls').click();
  await touch.send('Emulation.setTouchEmulationEnabled',{enabled:false});await touch.detach();
+ if (!await page.locator('#book-zoom-in').isVisible()) await page.locator('#book-tools-toggle').click();
  await page.locator('#book-zoom-in').click();
+ await page.locator('#book-tools-toggle').click();
  await page.locator('#book-stage').evaluate(el=>{el.scrollLeft=100;el.scrollTop+=90;});
  await page.waitForTimeout(350);
  const position=await page.locator('#book-stage').evaluate(el=>({left:el.scrollLeft,top:el.scrollTop}));
@@ -138,6 +143,7 @@ module.exports=async function libraryChecks(page,base) {
  await page.waitForFunction(p=>{const el=document.querySelector('#book-stage');return Math.abs(el.scrollLeft-p.left)<6&&Math.abs(el.scrollTop-p.top)<6;},position);
  assert.equal(await page.locator('#book-fit').inputValue(),'custom');
  // Width and whole-page fitting survive orientation changes, without document overflow.
+ await page.locator('#book-tools-toggle').click();
  await page.locator('#book-fit').selectOption('page-fit');
  await page.setViewportSize({width:844,height:390});
  await page.waitForTimeout(350);

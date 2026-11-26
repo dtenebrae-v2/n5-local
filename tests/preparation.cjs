@@ -1,5 +1,6 @@
 const assert=require('node:assert/strict');
 module.exports=async function preparationChecks(page,base) {
+ await page.clock.install();
  const bank=await (await page.request.get(base+'/api/mock-exam')).json();
  const openSettings=async()=>{
   const settings=page.locator('.prep-settings');
@@ -39,11 +40,10 @@ module.exports=async function preparationChecks(page,base) {
  assert.deepEqual((await read()).session.questions.map(q=>q.id),original);
  assert.equal(q.topic,'dates');
  await page.keyboard.press(String(q.correct+1));
- const before=await page.locator('[data-action=next]').boundingBox();
  await page.keyboard.press('Enter');
  assert.equal(await page.locator('#prep-feedback').getAttribute('data-correct'),'true');
  assert.match(await page.locator('#prep-feedback').innerText(),/Правильный ответ/);
- assert.equal((await page.locator('[data-action=next]').boundingBox()).y,before.y);
+ await page.waitForFunction(()=>{const r=document.querySelector('#prep-feedback').getBoundingClientRect();return r.top>=0&&r.top<innerHeight;});
  saved=await read();assert.equal(saved.topics.dates.freshCorrect,1);
  await page.keyboard.press('Shift+Enter');
  await page.locator('[data-action=hint]').click();
@@ -196,5 +196,5 @@ module.exports=async function preparationChecks(page,base) {
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
  await page.setViewportSize({width:1440,height:1000});
  await page.goto(base+'/jlpt/n5/vocabulary/complete');
- console.log('PASS preparation: new examples, hints, saved session, no result jumps, topic schedule and mobile stats');
+ console.log('PASS preparation: new examples, hints, saved session, visible results, topic schedule and mobile stats');
 };

@@ -30,7 +30,7 @@ export async function mountGame(root, catalog, signal) {
   const grammarLabels = Object.fromEntries(grammar.rules.map(rule => [rule.id, rule.label]));
   if (signal.aborted) return;
   const progress = loadProgress();
-  root.innerHTML = `<h1>Тренировка</h1>
+  root.innerHTML = `<h1>Слова и формы</h1>
     <div class="training-toolbar"><p id="game-settings-summary"></p><button class="secondary" id="game-configure">Настроить</button></div>
     <dialog id="game-settings" class="practice-dialog" aria-labelledby="settings-title">
     <div class="practice-header"><h2 id="settings-title">Настройки занятия</h2><button class="practice-close" id="settings-close" aria-label="Закрыть настройки">×</button></div>
@@ -257,7 +257,7 @@ export async function mountGame(root, catalog, signal) {
     root.querySelector('#game-hint-status').textContent = '';
     question.innerHTML = isGrammar() ? grammarQuestion(exercise) : isVocabulary() ? `<h2 class="game-target" lang="en">${esc(exercise.prompt)}</h2>` : `<p class="practice-word" lang="ja">${rubyText(word.entry.kanji, exercise.reading)}
       <span class="practice-reading">${esc(exercise.reading)}</span></p>
-      <p class="practice-meaning">${esc(word.entry.meaning)}</p>
+      <p class="practice-meaning">${esc(word.entry.meaning_ru || word.entry.meaning)}</p>
       <h2 class="game-target">${esc(FORM_LABELS[form] || VERB_FORM_LABELS[form])}</h2>
       <p>${Object.hasOwn(FORM_LABELS, form) ? 'Вежливая форма · です / ます' : 'Обычная форма'}</p>`;
     question.dataset.word = word.entry.id;

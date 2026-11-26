@@ -25,7 +25,7 @@ export function openPractice(entry, kind, pageSignal, initialForm = 'past') {
     </div>
     <p class="practice-word"><span lang="ja">${rubyText(entry.kanji, exercise.reading)}</span>
       <span class="practice-reading" lang="ja">${esc(exercise.reading)}</span></p>
-    <p class="practice-meaning">${esc(entry.meaning)}</p>
+    <p class="practice-meaning">${esc(entry.meaning_ru || entry.meaning)}</p>
     <form id="practice-form">
       <fieldset id="practice-target" class="practice-target">
         <legend>Требуемая форма</legend>

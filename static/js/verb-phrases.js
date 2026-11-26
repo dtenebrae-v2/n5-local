@@ -1,3 +1,4 @@
+import { prepareStudyPage, studySession } from './learning-ui.js';
 import { rubyText } from './furigana-core.js';
 import { getJSON } from './api.js';
 import { escapeHTML as esc, heading, breadcrumbs } from './ui.js';
@@ -53,6 +54,7 @@ export async function mountVerbPhrases(root, signal) {
     </section>
     <details class="phrase-sources"><summary>О материале и источники</summary><p>Учебные сочетания составлены для значений из словаря. «Дополнительные глаголы» включают редкие слова за пределами N5. Переводы передают значение сочетания; время действия определяется контекстом.</p>
     ${data.sources.map(s => `<p><a href="${esc(s.url)}" target="_blank" rel="noreferrer">${esc(s.title)} ↗</a></p>`).join('')}</details>`;
+  prepareStudyPage(root, signal);
   const el = id => root.querySelector(`#${id}`);
   const pool = () => selectPhrases(phrases, progress, filters);
   function save() {
@@ -88,7 +90,7 @@ export async function mountVerbPhrases(root, signal) {
       <div class="practice-actions"><button type="button" class="secondary" id="phrase-learning">Учу · повторять</button>
       <button type="button" class="primary" id="phrase-known">Знаю · дальше</button>
       <button type="button" class="secondary" id="phrase-reset">Снять отметку</button></div>
-      <div class="practice-actions"><button type="button" class="secondary" id="phrase-prev">← Предыдущая</button><button type="button" class="secondary" id="phrase-next">Следующая →</button></div>
+      <div class="practice-actions"><button type="button" class="secondary" id="phrase-prev">← Назад</button><button type="button" class="secondary" id="phrase-next">Далее →</button></div>
       <a class="lesson-link" href="/jlpt/n5/vocabulary/complete?q=${encodeURIComponent(p.verb)}">Открыть глагол в словаре →</a>
       </article>`;
     function mark(status) {
@@ -134,6 +136,7 @@ export async function mountVerbPhrases(root, signal) {
   }
   el('phrase-studied').addEventListener('change', updateTraining, { signal });
   function endSession() {
+    studySession(root,false);
     binding?.destroy(); binding = null;
     session = null; updateTraining();
   }
@@ -170,6 +173,7 @@ export async function mountVerbPhrases(root, signal) {
   el('phrase-start').addEventListener('click', () => {
     session = phraseSession(trainingPool());
     if (!session.length) { session = null; updateTraining(); return; }
+    studySession(root,true);
     position = 0; results = []; mode = el('phrase-mode').value;
     updateTraining(); task();
   }, { signal });

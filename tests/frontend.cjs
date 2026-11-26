@@ -69,6 +69,8 @@ async function main() {
     const errors = [];
     page.on('pageerror', (error) => errors.push(error.message));
     const base = `http://127.0.0.1:${port}`;
+    await require('./ux-audit-fixes.cjs')(browser, base);
+    await require('./design-consistency.cjs')(page, base);
     await audioChecks(page, base);
     await furiganaChecks(page, base);
     await controlStyleChecks(page, base);

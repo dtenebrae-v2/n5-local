@@ -32,7 +32,7 @@ export function openVerbReference(entry, signal) {
   dialog.innerHTML = `<div class="practice-header"><div><p class="eyebrow">${esc(data.group)} · СПРАВКА</p>
     <h2 id="verb-reference-title">Спряжение: ${rubyText(entry.kanji,reading)}</h2></div>
     <button class="practice-close" aria-label="Закрыть справку">×</button></div>
-    <p class="practice-meaning">${esc(reading)} · ${esc(entry.meaning)}</p>
+    <p class="practice-meaning">${esc(reading)} · ${esc(entry.meaning_ru || entry.meaning)}</p>
     <p>Перед ます: <b lang="ja">${highlightedForm(data.masuStem, reading)}</b>. Перед ない: <b lang="ja">${highlightedForm(data.naiStem, reading)}</b>${reading === 'ある' ? ' (но отрицание ある — ない)' : ''}.</p>
     <p class="practice-help">Изменённая часть выделена зелёным. Приказ — прямая команда, не вежливая просьба. Варианты на よ / せよ — книжные.</p>
     ${formRows(data, reading, true)}
@@ -59,26 +59,26 @@ export function verbReferenceLesson() {
   return `<article class="lesson" lang="ru">
     <p>Основа — часть, к которой добавляется окончание: かい ＋ ます → かいます.
     Словарная форма, приказ и намерение — уже готовые формы. Поэтому здесь они показаны отдельно от основ.</p>
-    <h2 id="godan">Godan · ${rubyText('五段','ごだん')} · группа 1</h2>
+    <section class="rule-block"><span class="material-label">Правило</span><h2 id="godan">Godan · ${rubyText('五段','ごだん')} · группа 1</h2>
     <p>Меняется последний слог. В таблице — соответствия рядов あ・い・う・え・お; перед ない конечное う переходит в わ.</p>
     <div class="table-scroll"><table><thead><tr><th>Словарное окончание</th><th>Перед ない</th><th>Перед ます</th><th>Перед ば / приказ</th><th>Перед う (намерение)</th></tr></thead>
     <tbody>${Object.entries(GODAN_ROWS).map(([u, [a, i, e, o]]) => `<tr>${[u,a,i,e,o].map(x => `<td lang="ja">${changed(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
-    <p>Пример: かう → かわない・かいます・かえば・かえ・かおう. Отрицание ある — ない.</p>
-    <h2 id="ichidan">Ichidan · ${rubyText('一段','いちだん')} · группа 2</h2>
+    <p class="rule-model" lang="ja">かう → かわない・かいます・かえば・かえ・かおう. Отрицание ある — ない.</p>
+    </section><section class="rule-block"><span class="material-label">Правило</span><h2 id="ichidan">Ichidan · ${rubyText('一段','いちだん')} · группа 2</h2>
     <p>Уберите конечное る: たべる → たべ. Добавьте ない, ます, た, て, れば или よう.
     Приказ: たべろ (книжное たべよ). Исключение: くれる → くれ.</p>
-    <p>Окончание いる / える не гарантирует Ichidan: かえる «возвращаться», きる «резать», いる «нуждаться» — Godan. Группа хранится в словаре.</p>
-    <h2 id="irregular">Неправильные · группа 3</h2>
+    <aside class="rule-caution"><span class="material-label">Обратите внимание</span><p>Окончание いる / える не гарантирует Ichidan: かえる «возвращаться», きる «резать», いる «нуждаться» — Godan. Группа хранится в словаре.</p></aside>
+    </section><section class="rule-block"><span class="material-label">Правило</span><h2 id="irregular">Неправильные · группа 3</h2>
     <p>する: しない・します・すれば・しろ / せよ・しよう.
     くる: こない・きます・くれば・こい・こよう. Здесь меняется и чтение основы.</p>
-    <h2>て и обычное прошедшее た</h2>
+    </section><section class="rule-block"><span class="material-label">Правило</span><h2>て и обычное прошедшее た</h2>
     <p>Godan: う・つ・る → って / った; む・ぶ・ぬ → んで / んだ;
     く → いて / いた; ぐ → いで / いだ; す → して / した.
     Исключение: いく → いって / いった. Ichidan: убрать る, добавить て / た.
     する → して / した; くる → きて / きた.</p>
-    <h2>Как читать формы</h2>
+    </section><section class="rule-block"><span class="material-label">Значение форм</span><h2>Как читать формы</h2>
     <p>Условие с ば и приказ различаются: たべれば — «если съесть», たべろ — «ешь!». Приказ не заменяет вежливую просьбу.
     Намерение / предложение: たべよう — «давай поедим». Это дополнительные формы, а не только начальный набор N5.</p>
-    <div class="verb-examples">${examples.map(([reading, group]) => `<details><summary>${reading} · ${group}</summary>${formRows(verbForms(reading, group), reading)}</details>`).join('')}</div>
+    </section><div class="verb-examples">${examples.map(([reading, group]) => `<details><summary>${reading} · ${group}</summary>${formRows(verbForms(reading, group), reading)}</details>`).join('')}</div>
     ${verbSources}<a class="lesson-link" href="/jlpt/n5/vocabulary/verbs">Открыть глаголы и практику →</a></article>`;
 }

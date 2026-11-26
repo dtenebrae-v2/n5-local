@@ -14,6 +14,16 @@ PAYLOAD = {'kanji': '試験語', 'readings': [{'kana': 'しけんご', 'romaji':
 
 
 class StoreTests(unittest.TestCase):
+    def test_russian_only_word_survives_restart_and_remains_searchable(self):
+        self.store.add({**PAYLOAD, 'meanings': [], 'meanings_ru': ['тестовое русское слово']})
+        restarted = VocabularyStore(DATA, self.path)
+        rows = restarted.catalog.repository.words({'q': ['тестовое русское слово']})['entries']
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]['meaning_ru'], 'тестовое русское слово')
+        self.assertEqual(rows[0]['meaning'], 'тестовое русское слово')
+        with self.assertRaises(WordError):
+            self.store.add({**PAYLOAD, 'kanji': '空語', 'meanings': []})
+
     def test_russian_meanings_survive_add_and_restart(self):
         self.store.add({**PAYLOAD, 'meanings_ru': ['тестовое слово']})
         with self.assertRaises(WordError) as duplicate:

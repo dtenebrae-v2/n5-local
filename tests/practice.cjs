@@ -30,20 +30,16 @@ module.exports = async function practiceChecks(page, base) {
   assert.equal(await input.evaluate((element) => element === document.activeElement), true);
   await input.pressSequentially('ikimashita');
   assert.equal(await input.inputValue(), 'いきました');
-  const beforeAnswer = await page.locator('.practice-dialog').boundingBox();
-  const beforeInput = await input.boundingBox();
   await input.press('Enter');
-  assert.equal((await page.locator('.practice-dialog').boundingBox()).y, beforeAnswer.y);
-  assert.deepEqual(await input.boundingBox(), beforeInput);
+  await page.waitForFunction(()=>{const r=document.querySelector('#practice-feedback').getBoundingClientRect();return r.top>=0&&r.top<innerHeight;});
   assert.equal(await baseText(feedback.locator('.feedback-expected [lang=ja]')), '行きました（いきました）');
   await answer('ました', 'incorrect');
   assert.match(await baseText(feedback), /Ваш ответ: ました/);
   assert.match(await baseText(feedback), /Godan/);
-  assert.equal((await page.locator('.practice-dialog').boundingBox()).y, beforeAnswer.y);
-  assert.deepEqual(await input.boundingBox(), beforeInput);
+  await page.waitForFunction(()=>{const r=document.querySelector('#practice-feedback').getBoundingClientRect();return r.top>=0&&r.top<innerHeight;});
   assert.equal(await input.getAttribute('aria-invalid'), 'true');
-  assert.equal(await feedback.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(255, 235, 231)');
-  await answer('', 'incorrect', 'Правильный ответ: 行きました');
+  assert.equal(await feedback.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(252, 232, 232)');
+  await answer('', 'empty', 'Попытка не засчитана');
   await answer('sh', 'incomplete');
   await answer('ＩＫＩＭＡＳＨＩＴＡ', 'correct', 'いきました');
   await input.evaluate((element) => { element.focus(); element.setSelectionRange(2, 3); });
@@ -140,7 +136,8 @@ module.exports = async function practiceChecks(page, base) {
     element.dispatchEvent(new CompositionEvent('compositionupdate', { data: 'たべました', bubbles: true }));
     element.form.requestSubmit();
   });
-  assert.equal(await baseText(feedback), '');
+  assert.match(await baseText(feedback), /Завершите ввод символа/);
+  assert.notEqual(await input.getAttribute('aria-invalid'),'true');
   await input.evaluate((element) => {
     element.dispatchEvent(new CompositionEvent('compositionend', { data: 'たべました', bubbles: true }));
   });

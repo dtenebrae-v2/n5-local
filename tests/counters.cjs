@@ -16,7 +16,7 @@ module.exports = async function counterChecks(page, base) {
   await page.locator('#practice-answer').press('Enter');
   assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'),'incorrect');
   const after = await page.locator('#counter-next').boundingBox();
-  assert.equal(before.y,after.y);
+  assert.ok(await page.locator('#practice-feedback').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.top<innerHeight;}));
   await page.locator('#practice-answer').fill(form.readings[0]);
   await page.locator('#practice-answer').press('Enter');
   assert.equal(await page.locator('#practice-feedback').getAttribute('data-status'),'correct');

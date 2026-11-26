@@ -7,7 +7,7 @@ export function resolveRoute(pathname, catalog) {
   }
   if (path === `${catalog.base}/audio`) return {type:'audio',title:'Аудио'};
   if (path === `${catalog.base}/progress`) return {type:'progress',title:'Подробные результаты'};
-  if (path === `${catalog.base}/practice`) return { type: 'game', title: 'Тренировка' };
+  if (path === `${catalog.base}/practice`) return { type: 'game', title: 'Слова и формы' };
   if (path === `${catalog.base}/word-relations`) return { type: 'word-relations', title: 'Синонимы и антонимы' };
   if (path === `${catalog.base}/verb-phrases`) return { type: 'verb-phrases', title: 'Глаголы в сочетаниях' };
   if (path === `${catalog.base}/counters`) return { type: 'counters', title: 'Счётные суффиксы' };
@@ -15,11 +15,11 @@ export function resolveRoute(pathname, catalog) {
   if (path === `${catalog.base}/exams`) return { type:'exam-sets', title:'Экзаменационные варианты N5' };
   const exam = path.match(new RegExp(`^${catalog.base}/exams/([a-z0-9-]+)$`));
   if (exam) return { type:'exam-set', title:'Вариант N5', examId:exam[1] };
-  if (path === `${catalog.base}/preparation`) return { type: 'preparation', title: 'Подготовка N5' };
+  if (path === `${catalog.base}/preparation`) return { type: 'preparation', title: 'Задания по темам' };
   if (path === `${catalog.base}/course`) return { type: 'course', view: 'lessons', title: 'Уроки N5' };
   if (path === `${catalog.base}/course/reviews`) return { type: 'course', view: 'reviews', title: 'Повторение по урокам' };
   if (path === `${catalog.base}/course/workbook`) return { type: 'course-workbook', title: 'Практика по тетради' };
-  if (path === `${catalog.base}/library`) return { type:'library',title:'Библиотека' };
+  if (path === `${catalog.base}/library`) return { type:'library',title:'Книги Tadoku' };
   if (path === `${catalog.base}/workbooks`) return { type:'workbooks', title:'Учебные наборы' };
   const workbook = path.match(new RegExp(`^${catalog.base}/workbooks/([a-z0-9-]+)$`));
   if (workbook) return { type:'workbook', title:'Учебные наборы', workbookId:workbook[1] };

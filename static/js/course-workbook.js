@@ -1,3 +1,4 @@
+import { revealFeedback } from './learning-ui.js';
 import { getJSON } from './api.js';
 import { escapeHTML as esc } from './ui.js';
 import { toKana, bind, unbind } from '../vendor/wanakana-5.3.1.js';
@@ -142,12 +143,12 @@ export async function mountCourseWorkbook(root, signal) {
     if (action === 'check') {
       if (!record.value.trim()) {
         root.querySelector('#cw-feedback').textContent = 'Сначала введите ответ или откройте образец.';
-        root.querySelector('#cw-answer').focus(); return;
+        root.querySelector('#cw-answer').focus(); revealFeedback(root.querySelector('#cw-feedback')); return;
       }
       if (!item.answers || record.revealed || record.status) return;
       if (/[a-z]/i.test(record.value)) {
         root.querySelector('#cw-feedback').textContent = 'Завершите ввод ромадзи или введите кану.';
-        root.querySelector('#cw-answer').focus(); return;
+        root.querySelector('#cw-answer').focus(); revealFeedback(root.querySelector('#cw-feedback')); return;
       }
       const correct = checkWorkbookAnswer(item, record.value);
       record.status = correct ? 'correct' : 'review'; record.first ||= record.status;
@@ -163,7 +164,11 @@ export async function mountCourseWorkbook(root, signal) {
     }
     save(); render();
     const target = action === 'check' || action === 'reveal' ? '.cw-model' : '#cw-answer';
-    root.querySelector(target)?.scrollIntoView({block:'nearest'});
+    if (action === 'check' || action === 'reveal') {
+      const feedback = root.querySelector('#cw-feedback');
+      revealFeedback(feedback?.textContent.trim() ? feedback : root.querySelector('.cw-model'));
+    }
+    else root.querySelector(target)?.scrollIntoView({block:'nearest'});
   }, { signal });
   render();
 }

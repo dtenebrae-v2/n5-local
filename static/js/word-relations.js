@@ -1,3 +1,4 @@
+import { prepareStudyPage, studySession } from './learning-ui.js';
 import { rubyText } from './furigana-core.js';
 import { getJSON } from './api.js';
 import { escapeHTML as esc, heading, breadcrumbs } from './ui.js';
@@ -40,6 +41,7 @@ export async function mountWordRelations(root, signal) {
     </section><details class="phrase-sources"><summary>О материале и источники</summary>
       <p>Пары подобраны для отдельных значений словаря. Близкие слова могут отличаться стилем речи и сочетаемостью. Отрицание антонима обычно слабее прямого утверждения: «не большой» не обязательно значит «маленький».</p>
       ${data.sources.map(s => `<p><a href="${esc(s.url)}" target="_blank" rel="noreferrer">${esc(s.title)} ↗</a></p>`).join('')}</details>`;
+  prepareStudyPage(root, signal);
   const el = id => root.querySelector(`#${id}`);
   const pool = () => selectRelations(relations, progress, filters);
   const trainingPool = () => pool().filter(r => !el('relation-studied').checked || progress[r.id]);
@@ -62,7 +64,7 @@ export async function mountWordRelations(root, signal) {
       <div class="relation-pair">${sideHTML(r.left)}<span class="relation-symbol" aria-label="${r.kind === 'antonym' ? 'Противоположные значения' : 'Близкие значения'}">${symbol(r.kind)}</span>${sideHTML(r.right)}</div>
       <p class="phrase-note">${esc(r.note)}</p>
       <div class="practice-actions"><button type="button" class="secondary" id="relation-learning">Учу · повторять</button><button type="button" class="primary" id="relation-known">Знаю · дальше</button><button type="button" class="secondary" id="relation-reset">Снять отметку</button></div>
-      <div class="practice-actions"><button type="button" class="secondary" id="relation-prev">← Предыдущая</button><button type="button" class="secondary" id="relation-next">Следующая →</button></div>
+      <div class="practice-actions"><button type="button" class="secondary" id="relation-prev">← Назад</button><button type="button" class="secondary" id="relation-next">Далее →</button></div>
       <div class="relation-dictionary">${[r.left,r.right].map(side => `<a class="lesson-link" href="/jlpt/n5/vocabulary/complete?q=${encodeURIComponent(side.word)}">${esc(side.word)} в словаре →</a>`).join('')}</div></article>`;
     function mark(status) {
       const before = pool(), index = before.indexOf(r);
@@ -96,7 +98,8 @@ export async function mountWordRelations(root, signal) {
     el(id).addEventListener(id === 'relation-search' ? 'input' : 'change', e => { filters[field] = e.target.value; render(); }, { signal });
   }
   el('relation-studied').addEventListener('change', updateTraining, { signal });
-  function finish() { binding?.destroy(); binding = null; session = null; updateTraining(); }
+  function finish() {
+    studySession(root,false); binding?.destroy(); binding = null; session = null; updateTraining(); }
   function task() {
     binding?.destroy(); binding = null;
     const area = el('relation-task');
@@ -127,6 +130,7 @@ export async function mountWordRelations(root, signal) {
   el('relation-start').addEventListener('click', () => {
     session = relationSession(trainingPool());
     if (!session.length) { session = null; updateTraining(); return; }
+    studySession(root,true);
     position = 0; results = []; updateTraining(); task();
   }, { signal });
   signal.addEventListener('abort', () => binding?.destroy(), { once: true });

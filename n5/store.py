@@ -64,7 +64,7 @@ def word_from_form(payload, catalog):
             if not valid:
                 raise WordError('Чтение не соответствует типу спряжения. Для неправильных глаголов поддерживаются する и くる.')
     meanings = payload['meanings']
-    if not isinstance(meanings, list) or not 1 <= len(meanings) <= 20:
+    if not isinstance(meanings, list) or len(meanings) > 20:
         raise WordError('Добавьте перевод (не более 20 значений).')
     memberships = [{'collection': 'complete', 'group': None}]
     if collection != 'complete':
@@ -86,6 +86,8 @@ def word_from_form(payload, catalog):
     russian = payload.get('meanings_ru', [])
     if not isinstance(russian, list) or len(russian) > 20:
         raise WordError('Добавьте не более 20 значений на русском.')
+    if not meanings and not russian:
+        raise WordError('Добавьте перевод на русский или английский.')
     if russian:
         word['meanings']['ru'] = [required_text(m, 'Перевод на русский', 500) for m in russian]
 

@@ -1,3 +1,4 @@
+import { revealFeedback } from './learning-ui.js';
 import { getJSON } from './api.js';
 import { escapeHTML as esc } from './ui.js';
 import { highlightedRule } from './form-highlight.js';
@@ -13,7 +14,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
   if (signal.aborted) return;
   const progress = loadPreparation();
   const courseView=['lessons','reviews'].includes(view);
-  const pageTitle=courseView ? (view==='reviews'?'Повторение по урокам':'Уроки N5') : 'Подготовка N5';
+  const pageTitle=courseView ? (view==='reviews'?'Повторение по урокам':'Уроки N5') : 'Задания по темам';
   const backLabel=courseView ? (view==='reviews'?'К повторениям':'К урокам') : 'К темам';
   hydrateSkills(progress, bank);
   const byId = new Map(bank.items.map(q => [q.id,q]));
@@ -113,8 +114,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
     }
     shell(`<div class="prep-home">${ongoing ? `<section class="prep-resume" aria-labelledby="prep-resume-title"><div><h2 id="prep-resume-title">Незавершённое занятие</h2><p>${esc(planLabel(session))} · задание ${session.index+1} из ${session.questions.length}</p></div><button class="primary" data-action="resume">Продолжить</button></section>` : ''}
       <div class="prep-launch prep-launch-first"><div><p id="prep-plan-summary" role="status"></p><p class="prep-launch-help">Короткое занятие с разбором каждого ответа.</p></div><button class="primary" data-action="launch">${ongoing ? 'Начать новое занятие' : 'Начать тренировку'}</button></div>
-      <button class="secondary" data-action="choose-topic" aria-controls="prep-settings">Выбрать тему и длительность</button>
-      <details id="prep-settings" class="prep-settings" ${setupOpen ? 'open' : ''}><summary>Настроить темы и длительность</summary><div class="prep-config"><section aria-labelledby="prep-mode-title"><h2 id="prep-mode-title">Режим занятия</h2><div id="prep-mode-options">${preparationModes(progress,settings.mode)}</div></section>
+      <details id="prep-settings" class="prep-settings" ${setupOpen ? 'open' : ''}><summary>Выбрать тему и длительность</summary><div class="prep-config"><section aria-labelledby="prep-mode-title"><h2 id="prep-mode-title">Режим занятия</h2><div id="prep-mode-options">${preparationModes(progress,settings.mode)}</div></section>
       <section class="prep-topic-picker" aria-labelledby="prep-topics-title" ${settings.mode==='all'?'':'hidden'}><h2 id="prep-topics-title">Материал занятия</h2>
       <div id="prep-topic-controls" ${settings.lesson?'hidden':''}>
       <button class="secondary prep-all-topics" data-topic="" aria-pressed="${!settings.topic}">Все темы · смешанное занятие</button>
@@ -125,7 +125,6 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
       </div></details>
       <section class="prep-listening"><h2>Аудирование</h2><p>Отдельные вопросы с записью из экзаменационных вариантов.</p><a class="secondary" href="/jlpt/n5/exams?section=listening">Тренировать аудирование</a></section>
       <section class="prep-progress-section" aria-labelledby="prep-progress-title"><h2 id="prep-progress-title">Прогресс</h2>${preparationStats(progress,bank)}${reviewHistory(bank,progress)}${readingBookmarks(progress)}</section></div>`);
-    root.querySelector('[data-action=choose-topic]')?.addEventListener('click', () => { const panel=root.querySelector('.prep-settings'); panel.open=true; panel.querySelector('button')?.focus(); }, {signal});
     root.querySelector('.prep-settings').addEventListener('toggle', event => { setupOpen = event.target.open; }, {signal});
     updateSetup();
   }
@@ -170,8 +169,8 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
         <section class="mock-question" ${!submitted && ['reading-kanji','orthography'].includes(q.type) ? 'data-furigana="off"' : ''}><h2 id="prep-heading" tabindex="-1" lang="ja">${esc(q.prompt)}</h2>
         ${q.passageText ? `<p class="mock-passage" lang="ja">${passageHTML(q,!!submitted)}</p>` : ''}
         <fieldset ${submitted ? 'disabled' : ''}><legend class="sr-only">Выберите ответ</legend><div class="mock-choices">${q.choices.map((choice,i)=>`<label class="form-choice"><input type="radio" name="prep-choice" value="${i}" ${selected===i?'checked':''}><span lang="ja">${i+1}. ${esc(choice)}</span></label>`).join('')}</div></fieldset></section>
-        <div class="practice-actions prep-actions"><button class="primary" data-action="check" ${submitted || selected===undefined ? 'disabled' : ''}>Проверить · Enter</button>
-        <button class="primary" data-action="next" ${submitted?'':'disabled'}>Далее · Shift+Enter</button>
+        <div class="practice-actions prep-actions"><button class="primary" data-action="check" ${submitted || selected===undefined ? 'disabled' : ''}>Проверить<span class="keyboard-hint"> · Enter</span></button>
+        <button class="primary" data-action="next" ${submitted?'':'disabled'}>Следующее задание<span class="keyboard-hint"> · Shift+Enter</span></button>
         <button class="secondary" data-action="hint" ${submitted?'disabled':''}>${level===0?'Правило':level===1?'Другой пример':'Показать ответ'}</button>
         <button class="secondary" data-action="unknown" ${submitted?'disabled':''}>Не знаю</button></div>
         <div id="prep-feedback" role="status" aria-live="polite" class="prep-feedback" ${submitted?`data-correct="${submitted.correct}"`:''}>
@@ -183,6 +182,8 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
         ${q.translation && submitted ? `<details><summary>Перевод</summary><p>${esc(q.translation)}</p></details>` : ''}
         <button class="secondary" data-action="home">${courseView?backLabel:'Выбор тренировки'}</button>`);
     }
+    const feedbackBox = root.querySelector('#prep-feedback');
+    if (feedbackBox) root.querySelector('.prep-actions').before(feedbackBox);
     if (focus) root.querySelector('#prep-heading')?.focus({ preventScroll:true });
   }
   function submit(unknown = false, revealed = false) {
@@ -197,7 +198,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
     const result = noteAnswer(progress,q,status,session.elapsed || 0,Date.now(),revealed ? 3 : session.hintLevel || 0);
     session.results.push({ ...result,id:q.id });
     save(); render();
-    root.querySelector('[data-action="next"]').focus({ preventScroll:true });
+    revealFeedback(root.querySelector('#prep-feedback'));
   }
   function next() {
     if (!session?.submitted) return;
@@ -209,7 +210,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
     tick();
     if ((session.hintLevel || 0) >= 2) return submit(false,true);
     session.hintLevel=(session.hintLevel || 0)+1;
-    save(); render(); root.querySelector('[data-action="hint"]').focus({ preventScroll:true });
+    save(); render(); revealFeedback(root.querySelector('#prep-feedback'));
   }
   function start(mode,topic='',count=settings.count,lesson='') {
     tick(); showingHome=false;session=practicePlan(bank,progress,{mode,topic,count,lesson}); lastTick=Date.now(); save(); render(true);

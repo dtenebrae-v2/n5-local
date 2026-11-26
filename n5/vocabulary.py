@@ -103,15 +103,15 @@ def validate(document, collections):
             pair = (reading['kana'], reading['romaji'])
             require(pair not in readings, path, 'duplicate reading')
             readings.add(pair)
-        require(isinstance(word['meanings'], dict) and bool(word['meanings'].get('en')), path, 'English meanings are required')
+        require(isinstance(word['meanings'], dict) and 'en' in word['meanings'] and bool(word['meanings'].get('en') or word['meanings'].get('ru')), path, 'Russian or English meanings are required')
         for language, meanings in word['meanings'].items():
             text(language, path + '.meanings language')
-            require(isinstance(meanings, list) and bool(meanings), path, 'meanings must be non-empty arrays')
+            require(isinstance(meanings, list) and (bool(meanings) or language == 'en' and bool(word['meanings'].get('ru'))), path, 'meanings must be non-empty arrays')
             for meaning in meanings:
                 text(meaning, path + '.meanings.' + language)
             require(len(meanings) == len(set(meanings)), path, 'duplicate meanings')
         # Optional translations enrich a record; they do not make it a new word.
-        fingerprint = (word['kanji'], tuple(sorted(readings)), json.dumps(word['meanings']['en']))
+        fingerprint = (word['kanji'], tuple(sorted(readings)), json.dumps(word['meanings']['en'] or {'ru':word['meanings'].get('ru',[])}))
         require(fingerprint not in fingerprints, path, 'duplicate word: add memberships to the existing record')
         fingerprints.add(fingerprint)
         require(bool(word['memberships']), path, 'at least one membership is required')

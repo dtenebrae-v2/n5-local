@@ -1,3 +1,4 @@
+import { revealFeedback, bindInlineAudio, inlineTimeline } from './learning-ui.js';
 import { getJSON } from './api.js';
 import { escapeHTML as esc } from './ui.js';
 import { mountShortcuts } from './training-shortcuts.js';
@@ -79,7 +80,9 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     if (session && Number.isFinite(old.currentTime)) session.audio[old.dataset.position] = old.currentTime;
     old.pause(); old.removeAttribute('src'); old.load(); player = null; save();
   }
+  signal.addEventListener('abort',()=>root.classList.remove('exam-in-session'),{once:true});
   function picker() {
+    root.classList.remove('exam-in-session');
     stopAudio(); reviewId = null;
     root.querySelector('#exam-picker').hidden = false; root.querySelector('#exam-study').hidden = true;
     root.querySelectorAll('[data-exam-filter]').forEach(b => b.setAttribute('aria-pressed',String(b.dataset.examFilter === filter)));
@@ -115,7 +118,7 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     const a = asset(q,q.audio);
     if (!a) return '<p role="status">Аудиофайл недоступен.</p>';
     const continuous = session.mode === 'exam' && !isReview();
-    return `<div class="exam-audio"><audio id="exam-audio" ${continuous ? '' : 'controls'} preload="metadata" src="${esc(a.url)}" data-position="${esc(continuous ? q.examId : q.id)}"></audio><div class="practice-actions"><button class="secondary" id="exam-play">${continuous ? 'Включить запись' : 'Слушать / пауза · F3'}</button>${continuous ? '' : '<button class="secondary" id="exam-replay">Повторить фрагмент</button>'}</div>${continuous ? '<p>Запись проигрывается подряд. Таймер продолжает идти при выходе со страницы.</p>' : '<div class="library-filters" role="group" aria-label="Скорость записи">' + [.75,1,1.25].map(rate => `<button class="chip" data-exam-rate="${rate}" aria-pressed="${(progress.settings.rate || 1) === rate}">${rate}×</button>`).join('') + '</div>'}<p id="exam-audio-status" role="status"></p></div>`;
+    return `<div class="exam-audio"><audio id="exam-audio" ${continuous ? '' : 'controls'} preload="metadata" src="${esc(a.url)}" data-position="${esc(continuous ? q.examId : q.id)}"></audio><div class="practice-actions"><button class="secondary" id="exam-play">${continuous ? 'Включить запись' : 'Слушать / пауза · F3'}</button>${continuous ? '' : '<button class="secondary" id="exam-replay">Повторить фрагмент</button>'}</div>${continuous ? '<p>Запись проигрывается подряд. Таймер продолжает идти при выходе со страницы.</p>' : '<div class="library-filters" role="group" aria-label="Скорость записи">' + [.75,1,1.25,1.5].map(rate => `<button class="chip" data-exam-rate="${rate}" aria-pressed="${(progress.settings.rate || 1) === rate}">${rate}×</button>`).join('') + '</div>'}${continuous ? '' : inlineTimeline()}<p id="exam-audio-status" role="status"></p></div>`;
   }
   function bindAudio(q,position = null,wasPlaying = false) {
     player = root.querySelector('#exam-audio'); if (!player) return;
@@ -123,7 +126,8 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     const clip = continuous ? null : q.clip;
     const initial = position ?? session.audio[audio.dataset.position] ?? clip?.[0] ?? 0;
     playerEvents = new AbortController(); const options = {signal:playerEvents.signal};
-    audio.playbackRate = continuous ? 1 : [.75,1,1.25].includes(progress.settings.rate) ? progress.settings.rate : 1;
+    if (!continuous) bindInlineAudio(audio,root.querySelector('.exam-audio'),playerEvents.signal,{start:clip?.[0] || 0,end:clip?.[1] ?? Infinity});
+    audio.playbackRate = continuous ? 1 : [.75,1,1.25,1.5].includes(progress.settings.rate) ? progress.settings.rate : 1;
     const persist = () => { if (Number.isFinite(audio.currentTime)) { session.audio[audio.dataset.position] = audio.currentTime; save(); } };
     audio.addEventListener('loadedmetadata',() => {
       audio.currentTime = clip ? (initial >= clip[0] && initial < clip[1] ? initial : clip[0]) : Math.min(initial,Math.max(0,audio.duration-.1));
@@ -155,6 +159,7 @@ function mountPlayer(root,signal,exam,sets,mixed) {
   }
   function feedback() {
     const q = current(), a = answerRecord(session,q.id), box = root.querySelector('#exam-feedback');
+    const next = root.querySelector('#exam-next'); if (next && isPractice()) next.textContent = a.first ? 'Следующее задание' : 'Пропустить';
     if (!box) return;
     const choice = isReview() && session.mode === 'practice' ? a.firstChoice : a.choice;
     const status = isReview() ? q.correct === null ? 'ungraded' : session.mode === 'practice' ? a.first || 'skip' : choice === q.correct ? 'correct' : choice === null ? 'skip' : 'incorrect' : a.status;
@@ -178,6 +183,7 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     document.body.append(dialog); dialog.showModal();
   }
   function render() {
+    root.classList.add('exam-in-session');
     expireExamSection(session,exam);
     // Keep the continuous recording mounted while navigating the listening booklet.
     const carry = player && session.mode === 'exam' && !session.finished && !session.ready
@@ -199,12 +205,13 @@ function mountPlayer(root,signal,exam,sets,mixed) {
       <h2 class="exam-question-title" tabindex="-1">Блок ${q.group}: ${esc(q.groupTitle)} · № ${q.number}</h2>
       <div class="exam-layout exam-individual"><div class="exam-paper">${questionFragments(q,sources.get(q.examId).assets)}<div class="exam-page-tools"><button class="secondary" id="exam-source-pages">Исходные страницы</button></div></div>
       <div class="exam-answer-panel">${audioHTML(q)}<h3 class="exam-answer-label">Ответ на вопрос № ${q.number}</h3><div class="exam-answer-choices" role="group" aria-label="Ответ на задание ${q.number}">${Array.from({length:q.choices},(_,i) => `<button class="secondary" data-exam-choice="${i}" aria-pressed="${a.choice === i}" ${isReview() ? 'disabled' : ''}>${i+1}</button>`).join('')}</div>
-      <p id="exam-selection" role="status"></p><div class="exam-command-grid">${isReview() ? '<button class="primary" id="exam-results">К результатам</button>' : `${isPractice() ? '<button class="primary" id="exam-check">Проверить</button><button class="secondary" id="exam-unknown">Не знаю</button>' : ''}<button class="secondary" id="exam-next">Дальше</button>${isPractice() ? '<button class="secondary" id="exam-reveal">Показать ответ</button>' : '<button class="secondary" id="exam-finish-section">Сдать раздел</button>'}`}<button class="secondary" id="exam-rules">Справка</button></div>
+      <p id="exam-selection" role="status"></p><div class="exam-command-grid">${isReview() ? '<button class="primary" id="exam-results">К результатам</button>' : `${isPractice() ? '<button class="primary" id="exam-check">Проверить</button><button class="secondary" id="exam-unknown">Не знаю</button>' : ''}<button class="secondary" id="exam-next">${isPractice() ? (a.first ? 'Следующее задание' : 'Пропустить') : 'Дальше'}</button>${isPractice() ? '<button class="secondary" id="exam-reveal">Показать ответ</button>' : '<button class="secondary" id="exam-finish-section">Сдать раздел</button>'}`}<button class="secondary" id="exam-rules">Справка</button></div>
       <div id="exam-feedback" role="status" aria-live="polite"></div>
       <div class="exam-reference-slot">${(q.reference?.length || q.answer_source?.pages?.length) ? '<button class="secondary" id="exam-reference" hidden>Ключ и расшифровка</button>' : ''}</div>
       ${session.mode === 'exam' && !isReview() ? `<details class="exam-answer-sheet"><summary>Ответы раздела</summary><div class="exam-question-grid">${section.groups.map(g => `<h3>Блок ${g.number}</h3>${g.items.map(item => `<button class="chip" data-exam-jump="${esc(item.id)}" aria-current="${item.id === q.id ? 'step' : 'false'}">${item.number}${session.answers[item.id]?.choice != null ? ' ✓' : ''}</button>`).join('')}`).join('')}</div></details>` : ''}</div></div>`;
     if (carry) root.querySelector('.exam-audio').replaceWith(carry);
     else bindAudio(q);
+    root.querySelector('.exam-command-grid').before(root.querySelector('#exam-feedback'));
     if (isPractice() || isReview()) feedback();
     clock(); save();
   }
@@ -226,7 +233,7 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     const q = current(), first = answerRecord(session,q.id).first;
     if (!checkPractice(session,q,action)) { root.querySelector('#exam-selection').textContent = 'Выберите ответ.'; return; }
     if (first === null) storeRecord(q);
-    feedback(); save();
+    feedback(); save(); revealFeedback(root.querySelector('#exam-feedback'));
   }
   function next() {
     if (!session || session.finished || isReview() || session.ready) return;

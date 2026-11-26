@@ -14,8 +14,8 @@ export function openAddWord(catalog, pageSignal) {
       <label>Написание *<input name="kanji" required maxlength="200" autocomplete="off" lang="ja" placeholder="例: 食べる"></label>
       <fieldset class="word-readings"><legend>Чтения *</legend><div id="new-readings"></div>
         <button type="button" class="secondary" id="add-reading">Ещё чтение</button></fieldset>
-      <label>Перевод на русский<textarea name="meaning_ru" maxlength="4000" rows="2" placeholder="Например: есть, кушать"></textarea></label>
-      <label>Перевод на английский *<textarea name="meaning" required maxlength="4000" rows="2" placeholder="Например: to eat"></textarea></label>
+      <p class="practice-help">Укажите хотя бы один перевод: русский или английский.</p><label>Перевод на русский<textarea name="meaning_ru" maxlength="4000" rows="2" placeholder="Например: есть, кушать"></textarea></label>
+      <label>Перевод на английский<textarea name="meaning" maxlength="4000" rows="2" placeholder="Например: to eat"></textarea></label>
       <fieldset id="new-collection" class="practice-target"><legend>Раздел *</legend><div class="game-modes">
         ${catalog.collections.map(c => `<label class="form-choice"><input type="radio" name="collection" value="${esc(c.id)}" required><span>${c.id === 'complete' ? 'Только общий словарь' : esc(c.label)}</span></label>`).join('')}
       </div></fieldset>
@@ -113,6 +113,7 @@ export function openAddWord(catalog, pageSignal) {
       vocabulary_answers: form.elements.vocabulary_answers.value.split('\n').map(s => s.trim()).filter(Boolean).map(line => { const [kana, written] = line.split('|').map(s => s.trim()); return { kana, kanji: written || kana }; }),
       context: form.elements.context.value.trim(), source: form.elements.source.value.trim(),
     };
+    if (!payload.meanings.length && !payload.meanings_ru.length) { error.textContent = 'Добавьте перевод на русский или английский.'; form.elements.meaning_ru.focus(); return; }
     saving = true;
     error.textContent = '';
     submit.disabled = true;

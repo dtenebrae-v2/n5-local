@@ -1,3 +1,5 @@
+import { ruleExample } from './learning-ui.js';
+import { highlightedRule } from './form-highlight.js';
 import { escapeHTML as esc } from './ui.js';
 
 export function lessonFor(bank, id) {
@@ -29,7 +31,7 @@ export function lessonPicker(bank, selected = '', {view='all', allowTopics=true,
   const lesson = lessonFor(bank, selected);
   const review = reviewFor(bank, selected);
   const source = bank.curriculum.sources;
-  const objectives = l => l.objectives.map(o => `<article><h3>${esc(o.label)}</h3><p>${esc(o.rule)}</p><p class="lesson-example">${esc(o.example)}</p></article>`).join('');
+  const objectives = l => l.objectives.map(o => `<article class="rule-block"><span class="material-label">Правило</span><h3>${esc(o.label)}</h3><div class="rule-explanation">${highlightedRule(o.rule)}</div>${ruleExample(o.example,esc)}</article>`).join('');
   const prompt=view==='reviews'?'Выберите повторение':'Выберите урок';
   return `<section class="prep-lessons" aria-labelledby="prep-lessons-title"><h2 id="prep-lessons-title">${view==='reviews'?'Повторение пяти уроков':'Уроки 1–25'}</h2>
     <label for="prep-lesson">${prompt}</label><select id="prep-lesson">${allowTopics?'<option value="">Выбрать по темам</option>':''}

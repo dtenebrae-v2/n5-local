@@ -1,3 +1,4 @@
+import { revealFeedback } from './learning-ui.js';
 import { rubyDisplay } from './furigana-core.js';
 import { escapeHTML as esc } from './ui.js';
 import { highlightedRule } from './form-highlight.js';
@@ -10,10 +11,10 @@ export function answerFields() {
       aria-describedby="practice-input-help" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done"
       placeholder="Ромадзи или хирагана"></div>
     <p class="practice-help" id="practice-input-help">Ромадзи превращается в хирагану при вводе. Для では набирайте deha, для じゃ — ja.</p>
+    <div id="practice-feedback" tabindex="0" role="status" aria-live="polite" aria-atomic="true"></div>
     <div class="practice-actions"><button class="primary" type="submit">Проверить</button>
       <button class="secondary" type="button" id="practice-reveal">Показать ответ</button>
       <button class="secondary" type="button" id="practice-rules">Правила</button></div>
-    <div id="practice-feedback" tabindex="0" role="status" aria-live="polite" aria-atomic="true"></div>
     <details id="practice-alternatives" hidden><summary>Другие допустимые ответы</summary><ul></ul></details>`;
 }
 
@@ -31,7 +32,7 @@ export function bindAnswer(root, getExercise, onResult = () => {}) {
     resultState = { status, answer: userAnswer };
     feedback.dataset.status = input.dataset.status = status;
     input.setAttribute('aria-invalid', String(status === 'incorrect' || status === 'incomplete'));
-    if (status === 'incomplete') { feedback.textContent = 'Завершите ввод ромадзи или введите хирагану.'; return; }
+    if (status === 'incomplete') { feedback.textContent = 'Завершите ввод ромадзи или введите хирагану.'; revealFeedback(feedback); return; }
     const expected = closestAnswer(exercise, userAnswer);
     feedback.innerHTML = `<strong>${status === 'correct' ? 'Верно' : status === 'incorrect' ? 'Неверно' : status === 'unknown' ? 'Не знаю' : 'Ответ'}</strong>
       <div class="feedback-user"><span>Ваш ответ:</span> <span lang="ja">${esc(userAnswer || '—')}</span></div>
@@ -56,16 +57,22 @@ export function bindAnswer(root, getExercise, onResult = () => {}) {
   input.addEventListener('input', clear, options);
   root.querySelector('#practice-form').addEventListener('submit', event => {
     event.preventDefault();
-    if (composing) return;
+    if (composing) { feedback.textContent = 'Завершите ввод символа, затем проверьте ответ.'; revealFeedback(feedback); return; }
+    if (!input.value.trim()) {
+      feedback.dataset.status = 'empty'; feedback.textContent = 'Введите ответ. Попытка не засчитана.';
+      revealFeedback(feedback); return;
+    }
     input.value = normalizeAnswer(input.value);
     const exercise = getExercise();
     const result = checkAnswer(exercise, input.value);
     render(result.status, result.answer);
     onResult(result.status);
+    revealFeedback(feedback);
   }, options);
   function reveal(status = 'answer') {
     render(status, normalizeAnswer(input.value));
     onResult(status);
+    revealFeedback(feedback);
   }
   root.querySelector('#practice-reveal').addEventListener('click', () => reveal(), options);
   return {

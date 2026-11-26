@@ -1,3 +1,4 @@
+import { revealFeedback, bindInlineAudio, inlineTimeline } from './learning-ui.js';
 import { annotateFurigana } from './furigana.js';
 import { rubyText } from './furigana-core.js';
 import { getJSON } from './api.js';
@@ -48,17 +49,18 @@ export async function mountWorkbooks(root, signal, bookId) {
     player.pause(); player.removeAttribute('src'); player.load(); player = null; save();
   }
   function audioHTML(key) {
-    return media(key) ? `<div class="workbook-audio"><audio id="workbook-audio" controls preload="metadata" data-key="${esc(key)}" src="${esc(media(key))}"></audio><div class="library-filters"><button class="secondary" data-audio="toggle" title="F3">Слушать / пауза · F3</button><button class="secondary" data-audio="restart">Сначала</button>${[.75,1,1.25].map(rate => `<button class="chip" data-audio-rate="${rate}" aria-pressed="false">${rate}×</button>`).join('')}</div><p id="workbook-audio-error" role="status"></p></div>` : '<p role="status">Аудиофайл недоступен.</p>';
+    return media(key) ? `<div class="workbook-audio"><audio id="workbook-audio" controls preload="metadata" data-key="${esc(key)}" src="${esc(media(key))}"></audio><div class="library-filters"><button class="secondary" data-audio="toggle" title="F3">Слушать</button><button class="secondary" data-audio="back" aria-label="Назад на 15 секунд">−15 с</button><button class="secondary" data-audio="forward" aria-label="Вперёд на 15 секунд">+15 с</button><button class="secondary" data-audio="restart">Сначала</button>${[.75,1,1.25,1.5].map(rate => `<button class="chip" data-audio-rate="${rate}" aria-pressed="false">${rate}×</button>`).join('')}</div>${inlineTimeline()}<p id="workbook-audio-error" role="status"></p></div>` : '<p role="status">Аудиофайл недоступен.</p>';
   }
   function bindAudio() {
     player = root.querySelector('#workbook-audio'); if (!player) return;
     audioController = new AbortController();
     const audioOptions = { signal: audioController.signal };
+    bindInlineAudio(player,root.querySelector('.workbook-audio'),audioController.signal);
     const persistPosition = () => {
       if (!player || !Number.isFinite(player.currentTime)) return;
       progress.audio[player.dataset.key] = player.currentTime; save();
     };
-    player.playbackRate = [.75,1,1.25].includes(progress.rate) ? progress.rate : 1;
+    player.playbackRate = [.75,1,1.25,1.5].includes(progress.rate) ? progress.rate : 1;
     root.querySelectorAll('[data-audio-rate]').forEach(b => { const active = Number(b.dataset.audioRate) === player.playbackRate; b.classList.toggle('selected',active); b.setAttribute('aria-pressed',String(active)); });
     player.addEventListener('loadedmetadata', () => {
       const offset = progress.audio?.[player.dataset.key];
@@ -72,7 +74,9 @@ export async function mountWorkbooks(root, signal, bookId) {
     window.addEventListener('pagehide', persistPosition, audioOptions);
     player.addEventListener('error', () => { if (root.querySelector('#workbook-audio-error')) root.querySelector('#workbook-audio-error').textContent = 'Не удалось воспроизвести файл.'; }, audioOptions);
   }
+  signal.addEventListener('abort',()=>root.classList.remove('workbook-in-session'),{once:true});
   function showContents() {
+    root.classList.remove('workbook-in-session');
     stopAudio(); root.querySelector('#workbook-picker').hidden = false; root.querySelector('#workbook-study').hidden = true;
     root.querySelectorAll('[data-group]').forEach(b => { const selected = b.dataset.group === group; b.classList.toggle('selected',selected); b.setAttribute('aria-pressed',String(selected)); });
     root.querySelector('#workbook-units').innerHTML = book.units.filter(u => String(u.group ?? u.week) === group).map(unit => {
@@ -144,6 +148,7 @@ export async function mountWorkbooks(root, signal, bookId) {
     annotateFurigana(article);
     const known = q.correct !== null;
     box.dataset.status = record.status;
+    root.querySelector('#workbook-next').textContent = 'Следующее задание';
     box.innerHTML = `<strong>${STATUS[record.status]}</strong>
       <p class="workbook-user">Ваш ответ: <span lang="ja">${record.choice === null ? '—' : esc(choiceText(q,record.choice))}</span>${record.choice === null || record.choice === q.correct ? '' : choiceImage(q,record.choice)}</p>
       ${known ? `<p class="workbook-correct">Правильный ответ: <span lang="ja">${esc(choiceText(q,q.correct))}</span>${choiceImage(q,q.correct)}</p>` : '<p>Ответ сохранён без оценки: нет проверенного однозначного ключа.</p>'}
@@ -152,6 +157,7 @@ export async function mountWorkbooks(root, signal, bookId) {
       ${q.kind === 'listening' && (q.spoken_prompt || q.transcript_images?.length) ? `<details><summary>Разбор записи</summary>${q.spoken_prompt ? `<p class="workbook-transcript-text" lang="ja">${esc(q.spoken_prompt)}</p>` : ''}${q.spoken_choices ? `<ol lang="ja">${q.spoken_choices.map(c => `<li>${esc(c)}</li>`).join('')}</ol>` : ''}${q.explanation ? `<p>${esc(q.explanation)}</p>` : ''}${questionImages(q.transcript_images,'workbook-transcript')}</details>` : ''}`;
   }
   function renderStudy() {
+    root.classList.add('workbook-in-session');
     stopAudio(); root.querySelector('#workbook-picker').hidden = true;
     const study = root.querySelector('#workbook-study'); study.hidden = false;
     const q = current();
@@ -174,8 +180,9 @@ export async function mountWorkbooks(root, signal, bookId) {
         <div class="workbook-choices ${q.choice_images ? 'workbook-visual-choices' : ''} ${q.choice_layout === 'rows' ? 'workbook-choice-rows' : ''}" role="group" aria-label="Варианты ответа">${q.choices.map((choice,i) => `<button type="button" class="secondary" data-workbook-choice="${i}" aria-pressed="${r.choice === i}"><span class="workbook-choice-number">${i+1}</span>${choiceImage(q,i) || `<span lang="ja">${esc(choice)}</span>`}</button>`).join('')}</div>
         ${q.choice_images ? `<div class="library-filters" aria-label="Увеличить варианты">${q.choice_images.map((key,i) => `<button class="secondary" data-enlarge="${esc(key)}" aria-label="Увеличить вариант ${i+1}">Увеличить ${i+1}</button>`).join('')}</div>` : ''}
         <p id="workbook-selection-status" role="status"></p>
-        <div class="workbook-actions"><button class="primary" id="workbook-check">Проверить</button><button class="secondary" id="workbook-next">Дальше</button><button class="secondary" id="workbook-reveal">Показать ответ</button><button class="secondary" id="workbook-rules">Правила</button><button class="secondary" id="workbook-unknown">Не знаю</button></div>
+        <div class="workbook-actions"><button class="primary" id="workbook-check">${q.correct === null ? 'Сохранить ответ' : 'Проверить'}</button><button class="secondary" id="workbook-next">${r.first ? 'Следующее задание' : 'Пропустить'}</button><button class="secondary" id="workbook-reveal" ${q.correct === null ? 'hidden' : ''}>Показать ответ</button><button class="secondary" id="workbook-rules">Правила</button><button class="secondary" id="workbook-unknown">Не знаю</button></div>
         <div id="workbook-feedback" role="status" aria-live="polite"></div></article>`;
+    study.querySelector('.workbook-actions').before(study.querySelector('#workbook-feedback'));
     bindAudio(); feedback(q); root.querySelector('.workbook-question').focus({preventScroll:true}); study.scrollIntoView({block:'start',behavior:'instant'}); save();
   }
   function submit(status = null) {
@@ -183,7 +190,7 @@ export async function mountWorkbooks(root, signal, bookId) {
     const r = result(q);
     if (!status && r.choice === null) { root.querySelector('#workbook-selection-status').textContent = 'Выберите ответ.'; return; }
     recordWorkbookAnswer(progress,session,q,q.correct === null ? 'ungraded' : status || (r.choice === q.correct ? 'correct' : 'incorrect'),r.choice);
-    feedback(q); save();
+    feedback(q); save(); revealFeedback(root.querySelector('#workbook-feedback'));
   }
   function next() {
     const q = current(); if (!q) return;
@@ -215,6 +222,7 @@ export async function mountWorkbooks(root, signal, bookId) {
     if (b.id === 'workbook-next') next();
     if (b.id === 'workbook-rules') openReference();
     if (b.dataset.audio === 'toggle') toggleAudio();
+    if (['back','forward'].includes(b.dataset.audio) && player) player.currentTime = Math.max(0,Math.min(player.duration || 0,player.currentTime + (b.dataset.audio === 'back' ? -15 : 15)));
     if (b.dataset.audio === 'restart' && player) { player.currentTime = 0; progress.audio ||= {}; progress.audio[player.dataset.key] = 0; save(); }
     if (b.dataset.audioRate && player) { progress.rate = Number(b.dataset.audioRate); player.playbackRate = progress.rate; root.querySelectorAll('[data-audio-rate]').forEach(button => { const active = button === b; button.classList.toggle('selected',active); button.setAttribute('aria-pressed',String(active)); }); save(); }
   }, {signal});
