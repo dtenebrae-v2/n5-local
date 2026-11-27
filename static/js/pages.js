@@ -32,7 +32,7 @@ export function navigation(catalog) {
     <a href="${catalog.base}/word-relations">Синонимы и антонимы</a>`)}
     ${group('exams','Пробные экзамены',`
     <a href="${catalog.base}/mock">Письменный пробник</a>
-    <a href="${catalog.base}/exams">Варианты и аудирование</a>`)}
+    <a href="${catalog.base}/exams">Экзаменационные варианты</a>`)}
     ${group('materials','Книги',`<a href="${catalog.base}/library">Книги Tadoku</a>`)}
     ${group('words','Словарь',vocabulary)}
     ${group('grammar','Грамматика',grammar)}

@@ -41,7 +41,7 @@ module.exports = async function examSetChecks(page,base) {
   q=all.find(q=>q.id===session.keys[0]);
   await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1);
   assert.ok(Math.abs(await page.locator('audio').evaluate(a=>a.currentTime)-q.clip[0])<1);
-  await page.locator('[data-exam-rate="0.75"]').click();
+  await page.locator('[data-exam-rate-select]').selectOption('0.75');
   assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),.75);
   await page.locator('#exam-replay').click();
   await page.waitForFunction(()=>!document.querySelector('audio').paused);
@@ -92,7 +92,7 @@ module.exports = async function examSetChecks(page,base) {
   await page.locator('#exam-finish-section').click();await page.locator('dialog [data-confirm]').click();
   await page.locator('#exam-begin-section').click();
   await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1);
-  await page.locator('#exam-play').click();
+  if(await page.locator('audio').evaluate(a=>a.paused))await page.locator('#exam-play').click();
   await page.waitForFunction(()=>!document.querySelector('audio').paused);
   await page.evaluate(()=>{window.examOriginalAudio=document.querySelector('audio');});
   await page.locator('#exam-next').click();

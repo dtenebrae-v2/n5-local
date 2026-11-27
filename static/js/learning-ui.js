@@ -1,3 +1,5 @@
+import {claimAudioContext} from './audio-context.js';
+import {setAudioIcon} from './audio-controls.js';
 // Keep the beginning of a result in the usable viewport, including mobile keyboards.
 export function revealFeedback(element) {
   if (!element || !element.textContent.trim()) return;
@@ -38,19 +40,19 @@ export function bindInlineAudio(audio, container, signal, {start=0,end=Infinity}
   const seek = container.querySelector('[data-inline-seek]');
   const time = container.querySelector('[data-inline-time]');
   if (!seek || !time) return;
+  claimAudioContext(signal);
   const clock = seconds => { const n=Math.max(0,Math.floor(seconds||0)); return `${Math.floor(n/60)}:${String(n%60).padStart(2,'0')}`; };
   const update = () => {
     const limit = Math.min(end, Number.isFinite(audio.duration) ? audio.duration : start);
     seek.min = start; seek.max = Math.max(start,limit); seek.disabled = limit <= start;
     if (document.activeElement !== seek) seek.value = Math.max(start,audio.currentTime);
     time.textContent = `${clock(audio.currentTime-start)} / ${clock(limit-start)}`;
-    const toggle=container.querySelector('[data-audio="toggle"]');
-    if (toggle) toggle.textContent = audio.paused ? 'Слушать' : 'Пауза';
+    seek.setAttribute('aria-valuetext',time.textContent);
+    const toggle=container.querySelector('[data-media-toggle]');
+    if (toggle) setAudioIcon(toggle,audio.paused?'play':'pause');
+    const rate=container.querySelector('[data-media-rate]');if(rate)rate.value=String(audio.playbackRate);
   };
   seek.addEventListener('input',()=>{ audio.currentTime=Math.max(start,Math.min(Number(seek.max),Number(seek.value))); update(); },{signal});
-  for (const event of ['loadedmetadata','timeupdate','play','pause','ended']) audio.addEventListener(event,update,{signal});
+  for (const event of ['loadedmetadata','timeupdate','play','pause','ended','ratechange']) audio.addEventListener(event,update,{signal});
   container.classList.add('custom-inline-audio'); update();
-}
-export function inlineTimeline() {
-  return '<label class="inline-audio-seek">Позиция записи<input type="range" data-inline-seek min="0" max="0" step=".1" value="0" disabled></label><span data-inline-time class="inline-audio-time"></span>';
 }

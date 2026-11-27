@@ -1,0 +1,49 @@
+/* Shared audio geometry across recordings, books and exercises. */
+.media-controls { width:100%; min-width:0; padding:12px; border:1px solid var(--line); border-radius:var(--panel-radius); background:var(--white); }
+.media-main { display:flex; flex-wrap:nowrap; gap:8px; align-items:center; }
+.media-main > .audio-icon-button { display:inline-flex; align-items:center; justify-content:center; min-width:44px; min-height:44px; padding:8px; margin:0; font:500 14px/1.4 system-ui,sans-serif; white-space:nowrap; flex:0 0 auto; }
+.media-main > .audio-icon-button[data-media-toggle] { width:44px; }
+.media-rate { min-width:72px; margin-left:auto; }
+.media-rate select { width:100%; min-width:72px; min-height:44px; margin:0; padding:8px; }
+.media-timeline { display:flex; gap:12px; align-items:center; margin-top:12px; min-width:0; }
+.media-timeline input { flex:1; min-width:0; width:100%; margin:0; min-height:32px; }
+.media-time { font-size:12px; color:var(--muted); white-space:nowrap; font-variant-numeric:tabular-nums; }
+.media-queue { display:flex; gap:8px; padding-top:8px; margin-top:8px; border-top:1px solid var(--line); }
+.media-queue button { min-width:44px; min-height:44px; padding:8px; }
+.audio-screen .audio-transport { display:block; width:100%; max-width:720px; }
+.book-audio { display:block; padding:8px; }
+.book-audio .media-controls { padding:8px; border:0; background:transparent; }
+.book-audio .media-timeline { margin-top:4px; }
+.exam-audio, .workbook-audio { width:100%; margin:0 0 16px; }
+.exam-individual { display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,340px); gap:24px; align-items:start; }
+.exam-individual > .exam-audio { grid-column:1/-1; max-width:720px; margin:0; }
+.exam-individual .exam-answer-panel { width:100%; max-width:none; margin:0; }
+.exam-individual .exam-paper { min-width:0; width:100%; }
+.exam-individual .exam-fragment img { max-height:65dvh; object-fit:contain; }
+.exam-command-grid { gap:8px; margin-top:16px; }
+.exam-command-grid .primary { grid-column:1/-1; }
+.exam-reference-slot { margin-top:16px; }
+.audio-list-heading[hidden], .audio-track-list[hidden], .audio-training-catalog[hidden], .audio-hub-current[hidden] { display:none !important; }
+.audio-mode-switch { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0; }
+.audio-mode-switch a { min-height:44px; padding:10px 14px; border:1px solid var(--control-border); border-radius:6px; }
+.audio-mode-switch a[aria-current="page"] { background:var(--green); border-color:var(--green); color:var(--white); }
+.audio-training-catalog { display:grid; gap:16px; margin-top:16px; }
+@media(max-width:1200px) {
+ .exam-individual { grid-template-columns:1fr; gap:16px; }
+ .exam-individual .exam-fragment img { max-height:50dvh; }
+}
+@media(max-width:700px) {
+ .media-controls { padding:8px; }
+ .media-main { gap:6px; }
+ .media-main > .audio-icon-button { padding:6px; min-width:40px; }
+ .media-rate, .media-rate select { min-width:64px; }
+ .media-timeline { gap:8px; }
+ .media-time { font-size:11px; }
+}
+.media-aux { display:flex; gap:8px; align-items:center; margin-top:8px; color:var(--muted); font-size:13px; }
+.media-aux button { min-height:44px; min-width:44px; padding:8px; }
+.audio-learning-modes a[aria-current="page"] { background:var(--green); color:var(--white); border-color:var(--green); }
+@media(max-width:700px) { .media-main > .audio-icon-button { min-width:44px; } }
+.media-main > .audio-icon-button { width:auto; }
+.media-main > .audio-icon-button[data-media-toggle] { width:44px; }
+.media-queue > .audio-icon-button { width:44px; flex:0 0 44px; }

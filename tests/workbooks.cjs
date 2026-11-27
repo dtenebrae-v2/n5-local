@@ -40,7 +40,7 @@ module.exports = async function workbookChecks(page, base) {
   assert.equal(await page.locator('.workbook-choices img').count(),4);
   assert.ok(await page.locator('.workbook-choices img').evaluateAll(images=>images.every(i=>i.complete&&i.naturalWidth>0)));
   assert.equal(await page.locator('#workbook-feedback').innerText(),'');
-  await page.locator('[data-audio-rate="0.75"]').click();
+  await page.locator('[data-workbook-rate]').selectOption('0.75');
   assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),.75);
   await page.locator('[data-audio="toggle"]').click();
   await page.waitForFunction(()=>!document.querySelector('audio').paused);

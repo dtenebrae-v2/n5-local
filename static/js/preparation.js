@@ -126,7 +126,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
       <div id="prep-topic-options">${preparationTopicChoices(bank,progress,settings)}</div></div></section>
       <fieldset class="prep-count"><legend>Количество заданий</legend><div class="library-filters">${[5,10,20].map(n=>`<button type="button" class="chip" data-prep-count="${n}" aria-pressed="${settings.count===n}">${n}</button>`).join('')}</div></fieldset>
       </div></details>
-      <section class="prep-listening"><h2>Аудирование</h2><p>Отдельные вопросы с записью из экзаменационных вариантов.</p><a class="secondary" href="/jlpt/n5/exams?section=listening">Тренировать аудирование</a></section>
+      <section class="prep-listening"><h2>Аудирование</h2><p>Отдельные вопросы с записью из экзаменационных вариантов.</p><a class="secondary" href="/jlpt/n5/audio?mode=practice&source=exams">Тренировать аудирование</a></section>
       <section class="prep-progress-section" aria-labelledby="prep-progress-title"><h2 id="prep-progress-title">Прогресс</h2>${preparationStats(progress,bank)}${reviewHistory(bank,progress)}${readingBookmarks(progress)}</section></div>`);
     root.querySelector('.prep-settings').addEventListener('toggle', event => { setupOpen = event.target.open; }, {signal});
     updateSetup();

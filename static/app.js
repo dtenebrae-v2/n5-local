@@ -48,7 +48,8 @@ async function render(focusPage = false) {
   menuToggle.setAttribute('aria-expanded', 'false');
   menu.querySelectorAll('a').forEach((link) => {
     const path = location.pathname.replace(/\/$/, '');
-    const active = (route.type === 'progress' && link.pathname === catalog.base) || path === link.pathname
+    const audioContext=new URLSearchParams(location.search).get('from')==='audio' && ['exam-set','workbook','book'].includes(route.type);
+    const active = audioContext ? link.pathname===`${catalog.base}/audio` : (route.type === 'progress' && link.pathname === catalog.base) || path === link.pathname
       || (![catalog.base, `${catalog.base}/course`].includes(link.pathname) && path.startsWith(link.pathname + '/'));
     link.classList.toggle('active', active);
     if (active) link.setAttribute('aria-current', 'page');

@@ -44,7 +44,7 @@ export function homePage(catalog, storage = localStorage) {
       <section class="home-card"><h2>Повторять</h2><p>Вспоминайте слова и вводите формы глаголов, прилагательных и существительных.</p><a href="${base}/practice">Тренировать слова и формы →</a></section>
       <section class="home-card"><h2>Найти справку</h2><p>Найдите слово, чтение или значение; откройте спряжения и грамматику.</p><a href="${base}/vocabulary/complete">Открыть словарь →</a><a href="${base}/grammar/verbs">Грамматика →</a></section>
       <section class="home-card"><h2>Проверить знания</h2><p>Письменный пробник: лексика, грамматика и чтение с таймером. Без аудирования.</p><a href="${base}/mock">Письменный пробник →</a><a href="${base}/exams">Экзаменационные варианты →</a></section>
-      <section class="home-card"><h2>Слушать</h2><p>Слушайте полные записи подряд или тренируйтесь с заданиями.</p><a href="${base}/audio">Слушать аудио →</a><a href="${base}/exams">Выбрать вариант с аудио →</a></section>
+      <section class="home-card"><h2>Слушать</h2><p>Слушайте полные записи подряд или тренируйтесь с заданиями.</p><a href="${base}/audio">Слушать аудио →</a><a href="${base}/audio?mode=practice&source=exams">Тренировать аудирование →</a></section>
       <section class="home-card"><h2>Читать</h2><p>Книги на японском для начинающих.</p><a href="${base}/library">Книги Tadoku →</a></section>
     </div>`;
 }

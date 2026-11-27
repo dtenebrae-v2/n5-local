@@ -1,3 +1,5 @@
+import { audioHubContext, audioHubModes, audioHubURL, loadAudioLearningSources, audioLearningCards } from './audio-learning-hub.js';
+import {mediaControls} from './media-controls.js';
 import { getJSON } from './api.js';
 import { escapeHTML as esc } from './ui.js';
 import { AUDIO_KEY, RATES, restoreAudio, nextIndex, uniqueAudioTracks } from './audio-state.js';
@@ -5,6 +7,7 @@ import { mountAudioTranscript } from './audio-transcript.js';
 import { audioButton, audioIcon, setAudioIcon } from './audio-controls.js';
 const GROUPS = {all:'Все записи',exams:'Экзамены',workbooks:'Учебные наборы',books:'Книги Tadoku'};
 let tracks = [], loading, audio, native, mini, nativeReady = false, started = false, storageError = '', error = '', saving = 0;
+const localAudioContexts=new Set();
 let sessionOwned = false, sessionEligible = false;
 let pendingNative = null, commandSequence = 0, preparing = false;
 const MEDIA_ACTIONS = ['play','pause','previoustrack','nexttrack','stop','seekbackward','seekforward','seekto'];
@@ -20,7 +23,7 @@ function save() {
 }
 function notify() {
   if (mini) {
-    mini.hidden = !track(); document.body.classList.toggle('has-audio-player',!!track());
+    mini.hidden = !track() || localAudioContexts.size>0; document.body.classList.toggle('has-audio-player',!!track() && !localAudioContexts.size);
     mini.querySelector('.audio-mini-title').textContent = track()?.title || '';
     setAudioIcon(mini.querySelector('[data-audio-command="toggle"]'),playing ? 'pause' : 'play');
   }
@@ -154,6 +157,7 @@ export function initAudio() {
   mini.innerHTML = `<a href="/jlpt/n5/audio" class="audio-mini-title"></a>${audioButton('previous')}${audioButton('toggle','play')}${audioButton('next')}${audioButton('stop')}`;
   mini.addEventListener('click',e => { const b = e.target.closest('[data-audio-command]'); if (b) command(b.dataset.audioCommand); });
   document.body.append(mini);
+  document.addEventListener('learning-audio-context',event=>{const {token,active}=event.detail;if(active){localAudioContexts.add(token);pause();sessionEligible=false;releaseSession();}else localAudioContexts.delete(token);notify();});
   if (!native) {
     audio.addEventListener('play',() => { pauseOthers(); playing = true; error = ''; notify(); mediaSession(); });
     audio.addEventListener('pause',() => { if (preparing) return; playing = false; save(); notify(); mediaSession(); });
@@ -178,17 +182,38 @@ export function initAudio() {
 export async function mountAudio(root, signal) {
   initAudio(); root.innerHTML = '<p class="loading">Загружаем записи…</p>';
   await load(); if (signal.aborted) return;
-  let group = 'all';
-  root.innerHTML = `<div class="audio-screen"><h1>Аудио</h1><p>Полные записи без заданий и таймера. Следующая запись включится автоматически.</p>
+  const context = audioHubContext(location.search), mode = context.mode;
+  let group = context.source, previousGroup = group, trainingSources = null, trainingLoading = false, trainingFailed = false;
+  root.innerHTML = `<div class="audio-screen"><h1>Аудио</h1><div class="audio-hub-modes">${audioHubModes(mode,group)}</div><p>${mode === 'practice' ? 'Слушайте вопрос, выбирайте ответ и разбирайте ошибки.' : 'Полные записи без заданий и таймера. Следующая запись включится автоматически.'}</p><p class="audio-hub-current" hidden></p>
     <section class="audio-now" aria-label="Текущая запись"><p class="audio-album"></p><h2 class="audio-current-title">Выберите запись</h2><details class="audio-source"><summary>О записи</summary><p class="audio-note"></p></details>
-    <div class="audio-transport">${audioButton('previous')}${audioButton('toggle','play',true)}${audioButton('stop')}${audioButton('next')}</div>
-    <div class="audio-seek"><button class="secondary" data-audio-command="back" aria-label="Назад на 15 секунд">−15 с</button><label>Позиция<input class="audio-position" type="range" min="0" max="0" step="1" value="0"></label><button class="secondary" data-audio-command="forward" aria-label="Вперёд на 15 секунд">+15 с</button></div><p class="audio-time"></p>
-    <div class="audio-options"><label>Скорость <select class="audio-rate">${RATES.map(n=>`<option value="${n}">${n}×</option>`).join('')}</select></label><label><input class="audio-repeat" type="checkbox"> Повторять очередь</label></div><p class="audio-error" role="status"></p>
+    <div class="audio-transport">${mediaControls({play:'data-audio-command="toggle"',back:'data-audio-command="back"',forward:'data-audio-command="forward"',rate:'class="audio-rate"',seek:'class="audio-position"',time:'data-full-audio-time',value:state.rate,queue:audioButton('previous')+audioButton('stop')+audioButton('next')})}</div>
+    <div class="audio-options"><label><input class="audio-repeat" type="checkbox"> Повторять очередь</label></div><p class="audio-error" role="status"></p>
     <details class="audio-transcript" hidden><summary>Расшифровка</summary><div class="audio-transcript-content"></div></details></section>
-    <section class="audio-catalog"><h2>Записи</h2><div class="library-filters" role="group" aria-label="Источник записей">${Object.entries(GROUPS).map(([id,label])=>`<button class="chip" data-audio-group="${id}" aria-pressed="${id === group}">${label}</button>`).join('')}</div><div class="audio-list-heading"><p class="audio-list-count"></p><button class="primary" id="audio-play-all">Слушать подряд</button></div><ol class="audio-track-list"></ol></section></div>`;
+    <section class="audio-catalog"><h2>${mode === 'practice' ? 'Аудирование с заданиями' : 'Записи'}</h2><div class="library-filters" role="group" aria-label="Источник записей">${Object.entries(GROUPS).map(([id,label])=>`<button class="chip" data-audio-group="${id}" aria-pressed="${id === group}">${mode === 'practice' && id === 'all' ? 'Все источники' : label}</button>`).join('')}</div><div class="audio-list-heading" ${mode === 'practice' ? 'hidden' : ''}><p class="audio-list-count"></p><button class="primary" id="audio-play-all">Слушать подряд</button></div><ol class="audio-track-list" ${mode === 'practice' ? 'hidden' : ''}></ol><div class="audio-training-catalog" ${mode === 'listen' ? 'hidden' : ''}></div></section></div>`;
+  root.addEventListener('click', event => { if (event.target.closest('[data-audio-training-retry]')) loadTraining(); },{signal});
   const visible = () => tracks.filter(t => group === 'all' || t.group === group);
   const updateTranscript = mountAudioTranscript(root, signal, seek);
+  async function loadTraining() {
+    if (trainingLoading || signal.aborted) return;
+    trainingLoading = true; trainingFailed = false;
+    const target = root.querySelector('.audio-training-catalog');
+    target.setAttribute('aria-busy','true'); target.innerHTML = '<p class="loading">Сопоставляем записи с заданиями…</p>';
+    try {
+      const result = await loadAudioLearningSources(tracks,signal);
+      trainingSources = result.sources; trainingFailed = result.failed;
+    } catch { if (!signal.aborted) { trainingSources = []; trainingFailed = true; } }
+    finally { trainingLoading = false; }
+    if (!signal.aborted) { target.setAttribute('aria-busy','false'); paintList(); }
+  }
   function paintList() {
+    root.querySelector('.audio-hub-modes').innerHTML = audioHubModes(mode,group);
+    if (previousGroup !== group) { history.replaceState(history.state,'',audioHubURL(mode,group)); previousGroup = group; }
+    if (mode === 'practice') {
+      const target = root.querySelector('.audio-training-catalog');
+      if (group === 'books') target.innerHTML = audioLearningCards([],group,tracks);
+      else if (trainingSources !== null) target.innerHTML = `${trainingFailed ? '<p role="status">Часть материалов не удалось загрузить. Доступные задания показаны ниже.</p><button class="secondary" data-audio-training-retry>Повторить загрузку</button>' : ''}${audioLearningCards(trainingSources,group,tracks)}`;
+      else if (!trainingLoading) loadTraining();
+    }
     const list = visible();
     const unique = uniqueAudioTracks(list).length;
     root.querySelector('.audio-list-count').textContent = `В очереди: ${unique} записей`;
@@ -199,12 +224,15 @@ export async function mountAudio(root, signal) {
   function update() {
     const t = track();
     updateTranscript(t);
-    root.querySelector('.audio-now').hidden = !t;
+    root.querySelector('.audio-now').hidden = !t || mode === 'practice';
+    const current = root.querySelector('.audio-hub-current');
+    current.hidden = !t || mode !== 'practice';
+    current.innerHTML = t ? `Сохранена очередь записей: ${esc(t.title)}. <a href="${esc(audioHubURL('listen',group))}">Управление прослушиванием →</a>` : '';
     root.querySelector('.audio-album').textContent = t ? `${t.album} · ${state.index+1} из ${state.queue.length}` : '';
     root.querySelector('.audio-current-title').textContent = t?.title || 'Выберите запись';
     root.querySelector('.audio-note').textContent = t?.note || '';
     root.querySelector('.audio-now .audio-source').hidden = !t?.note;
-    root.querySelector('.audio-time').textContent = t ? `${clock(position)} / ${duration ? clock(duration) : '—'}` : '';
+    root.querySelector('[data-full-audio-time]').textContent = t ? `${clock(position)} / ${duration ? clock(duration) : '—'}` : '';
     root.querySelector('.audio-error').textContent = error || storageError;
     const range = root.querySelector('.audio-position'); range.disabled = !t || !duration; range.max = duration || 0;
     if (document.activeElement !== range) range.value = position;

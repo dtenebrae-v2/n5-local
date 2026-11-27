@@ -53,10 +53,8 @@ module.exports = async function auditFixChecks(browser, base) {
     await page.locator('.audio-transport [data-audio-command=toggle]').click();
     await page.locator('.menu-toggle').click();await page.locator('#nav-materials').click();await page.locator('#navigation a[href$="/library"]').click();
     await page.locator('.book-cover[href$="/61371"]').click();await page.locator('#book-audio-play:not([disabled])').waitFor();
-    assert.equal(await page.locator('.audio-mini').isVisible(),true,'Queue remains accessible inside reader');
-    const [mini,book]=await Promise.all([page.locator('.audio-mini').boundingBox(),page.locator('.book-audio').boundingBox()]);
-    assert.ok(mini.y>=book.y+book.height-1 || book.y>=mini.y+mini.height-1,'Audio panels never overlap');
-    assert.ok(Math.max(mini.y+mini.height,book.y+book.height)<=844,'Both panels fit the screen');
+    assert.equal(await page.locator('.audio-mini').isVisible(),false,'The book owns one visible audio player');
+    assert.equal(await page.locator('.book-audio .media-controls').isVisible(),true);
     assert.equal(await page.locator('#book-zoom-in').isVisible(),false,'Rare reader tools are collapsed');
     await page.locator('#book-tools-toggle').click();assert.equal(await page.locator('#book-zoom-in').isVisible(),true);
     await page.locator('#book-stage[aria-busy=false]').waitFor();

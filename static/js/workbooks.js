@@ -1,4 +1,5 @@
-import { revealFeedback, bindInlineAudio, inlineTimeline } from './learning-ui.js';
+import {mediaControls} from './media-controls.js';
+import { revealFeedback, bindInlineAudio } from './learning-ui.js';
 import { annotateFurigana } from './furigana.js';
 import { rubyText } from './furigana-core.js';
 import { getJSON } from './api.js';
@@ -19,7 +20,11 @@ export async function mountWorkbooks(root, signal, bookId) {
     return;
   }
   const book = await getJSON('/api/workbook?id=' + encodeURIComponent(bookId), signal); if (signal.aborted) return;
-  const byId = new Map(book.items.map(q => [q.id,q]));
+  const entry=new URLSearchParams(location.search);
+  const unitAudio=new Map(book.units.map(unit=>[unit.id,unit.audio]));
+  const playableItems=book.items.map(q=>q.kind==='listening'&&!q.audio&&unitAudio.get(q.unit)?{...q,audio:unitAudio.get(q.unit)}:q);
+  const listeningItems=entry.get('section')==='listening'?playableItems.filter(q=>q.kind==='listening'&&(!entry.get('audio')||q.audio===entry.get('audio'))&&(!entry.get('unit')||q.unit===entry.get('unit'))):[];
+  const byId = new Map(playableItems.map(q => [q.id,q]));
   const all = loadWorkbookProgress();
   if (!all.books || typeof all.books !== 'object' || Array.isArray(all.books)) all.books = {};
   const saved = all.books[bookId];
@@ -29,7 +34,7 @@ export async function mountWorkbooks(root, signal, bookId) {
   let session = restoreWorkbookSession(progress.session, book.items), player = null, audioController = null, dialog = null, lastSave = 0;
   const groups = book.groups || [1,2,3,4,5,6].map(n => ({id:String(n), title:`Неделя ${n}`}));
   let group = groups.some(g => g.id === String(progress.group ?? progress.week)) ? String(progress.group ?? progress.week) : groups[0].id;
-  root.innerHTML = `<a class="library-back" href="/jlpt/n5/workbooks">← Учебные наборы</a><h1>${esc(book.title)}</h1>
+  root.innerHTML = `<a class="library-back" href="${entry.get('section')==='listening'?'/jlpt/n5/audio?mode=practice&source=workbooks':'/jlpt/n5/workbooks'}">← ${entry.get('section')==='listening'?'Аудирование':'Учебные наборы'}</a><h1>${esc(book.title)}</h1>
     <details class="workbook-credits"><summary>Издание и материалы</summary><p>${edition(book)}</p>${book.authors?.length ? `<p>${book.authors.map(esc).join(', ')}</p>` : ''}<p>${esc(book.source_note || 'Личный учебный набор. Аудио сопоставлено с упражнениями этого издания.')}</p>${book.audio_source?.url ? `<p><a href="${esc(book.audio_source.url)}" target="_blank" rel="noreferrer">Аудио издателя ↗</a></p>` : ''}</details>
     <p id="workbook-storage" role="status"></p><div class="practice-actions workbook-toolbar"><button class="secondary" id="workbook-contents">Разделы</button><button class="secondary" id="workbook-resume" ${session ? '' : 'hidden'}>Продолжить занятие</button><button class="secondary" id="workbook-random">Случайные 10</button><button class="secondary" id="workbook-mistakes">Ошибки</button></div>
     <details id="game-options"><summary>Клавиатура</summary></details>
@@ -49,7 +54,7 @@ export async function mountWorkbooks(root, signal, bookId) {
     player.pause(); player.removeAttribute('src'); player.load(); player = null; save();
   }
   function audioHTML(key) {
-    return media(key) ? `<div class="workbook-audio"><audio id="workbook-audio" controls preload="metadata" data-key="${esc(key)}" src="${esc(media(key))}"></audio><div class="library-filters"><button class="secondary" data-audio="toggle" title="F3">Слушать</button><button class="secondary" data-audio="back" aria-label="Назад на 15 секунд">−15 с</button><button class="secondary" data-audio="forward" aria-label="Вперёд на 15 секунд">+15 с</button><button class="secondary" data-audio="restart">Сначала</button>${[.75,1,1.25,1.5].map(rate => `<button class="chip" data-audio-rate="${rate}" aria-pressed="false">${rate}×</button>`).join('')}</div>${inlineTimeline()}<p id="workbook-audio-error" role="status"></p></div>` : '<p role="status">Аудиофайл недоступен.</p>';
+    return media(key) ? `<div class="workbook-audio"><audio id="workbook-audio" controls preload="metadata" data-key="${esc(key)}" src="${esc(media(key))}"></audio>${mediaControls({play:'data-audio="toggle"',back:'data-audio="back"',forward:'data-audio="forward"',restart:'data-audio="restart"',rate:'data-media-rate data-workbook-rate',seek:'data-inline-seek',time:'data-inline-time',value:progress.rate||1})}<p id="workbook-audio-error" role="status"></p></div>` : '<p role="status">Аудиофайл недоступен.</p>';
   }
   function bindAudio() {
     player = root.querySelector('#workbook-audio'); if (!player) return;
@@ -61,7 +66,6 @@ export async function mountWorkbooks(root, signal, bookId) {
       progress.audio[player.dataset.key] = player.currentTime; save();
     };
     player.playbackRate = [.75,1,1.25,1.5].includes(progress.rate) ? progress.rate : 1;
-    root.querySelectorAll('[data-audio-rate]').forEach(b => { const active = Number(b.dataset.audioRate) === player.playbackRate; b.classList.toggle('selected',active); b.setAttribute('aria-pressed',String(active)); });
     player.addEventListener('loadedmetadata', () => {
       const offset = progress.audio?.[player.dataset.key];
       if (Number.isFinite(offset) && offset >= 0 && offset < player.duration) player.currentTime = offset;
@@ -209,11 +213,13 @@ export async function mountWorkbooks(root, signal, bookId) {
     if (!player.paused) player.pause(); else try { await player.play(); }
     catch { root.querySelector('#workbook-audio-error').textContent = 'Не удалось начать воспроизведение. Нажмите кнопку плеера.'; }
   }
+  root.addEventListener('change',event=>{if(event.target.matches('[data-workbook-rate]')&&player){progress.rate=Number(event.target.value);player.playbackRate=progress.rate;save();}},{signal});
   root.addEventListener('click', event => {
     const b = event.target.closest('button'); if (!b) return;
     if (b.dataset.group) { group = b.dataset.group; showContents(); }
     if (b.dataset.unit) startUnit(b.dataset.unit);
     if (b.dataset.enlarge) enlarge(b.dataset.enlarge);
+    if(b.id==='workbook-listening-start')start(listeningItems,'Аудирование · '+book.title);
     if (b.id === 'workbook-contents') showContents();
     if (b.id === 'workbook-resume' && session) renderStudy();
     if (b.id === 'workbook-random') start(book.items.filter(q => q.correct !== null && !q.example),'Случайные задания',true,10);
@@ -231,7 +237,6 @@ export async function mountWorkbooks(root, signal, bookId) {
     if (b.dataset.audio === 'toggle') toggleAudio();
     if (['back','forward'].includes(b.dataset.audio) && player) player.currentTime = Math.max(0,Math.min(player.duration || 0,player.currentTime + (b.dataset.audio === 'back' ? -15 : 15)));
     if (b.dataset.audio === 'restart' && player) { player.currentTime = 0; progress.audio ||= {}; progress.audio[player.dataset.key] = 0; save(); }
-    if (b.dataset.audioRate && player) { progress.rate = Number(b.dataset.audioRate); player.playbackRate = progress.rate; root.querySelectorAll('[data-audio-rate]').forEach(button => { const active = button === b; button.classList.toggle('selected',active); button.setAttribute('aria-pressed',String(active)); }); save(); }
   }, {signal});
   document.addEventListener('keydown', event => {
     if (event.isComposing || signal.aborted || shortcuts.handleCapture(event) || document.querySelector('dialog[open]')) return;
@@ -247,5 +252,9 @@ export async function mountWorkbooks(root, signal, bookId) {
   }, {signal});
   signal.addEventListener('abort', () => { stopAudio(); dialog?.close(); }, {once:true});
   if (new URLSearchParams(location.search).get('resume') === '1' && session) renderStudy();
-  else showContents();
+  else if(entry.get('section')==='listening') {
+    if(session && session.keys.every(id=>listeningItems.some(q=>q.id===id)))renderStudy();
+    else if(listeningItems.length && (!session || session.index>=session.keys.length))start(listeningItems,'Аудирование · '+book.title);
+    else {showContents();root.querySelector('#workbook-storage').innerHTML=listeningItems.length?'Есть незавершённое занятие. Продолжите его или начните новое аудирование. <button class="secondary" id="workbook-listening-start">Начать аудирование</button>':'Для этой записи нет связанных заданий.';}
+  } else showContents();
 }

@@ -1,4 +1,7 @@
-import { revealFeedback, bindInlineAudio, inlineTimeline } from './learning-ui.js';
+import {claimAudioContext} from './audio-context.js';
+import {mediaControls} from './media-controls.js';
+import {setAudioIcon} from './audio-controls.js';
+import { revealFeedback, bindInlineAudio } from './learning-ui.js';
 import { getJSON } from './api.js';
 import { escapeHTML as esc } from './ui.js';
 import { mountShortcuts } from './training-shortcuts.js';
@@ -51,11 +54,12 @@ function mountPlayer(root,signal,exam,sets,mixed) {
   const progress = readProgress();
   for (const key of ['sessions','records','settings']) if (!progress[key] || typeof progress[key] !== 'object' || Array.isArray(progress[key])) progress[key] = {};
   let session = restoreExamSession(progress.sessions[exam.id],exam,byId);
-  const requested=new URLSearchParams(location.search).get('section');
+  const entry=new URLSearchParams(location.search);
+  const requested=entry.get('section'), requestedAudio=entry.get('audio');
   let filter = ['vocabulary','grammar-reading','listening'].includes(requested) ? requested : ['all','vocabulary','grammar-reading','listening'].includes(progress.settings.filter) ? progress.settings.filter : 'all';
   let limit = [10,20,50].includes(progress.settings.limit) ? progress.settings.limit : 10;
   let player = null, playerEvents = null, dialog = null, lastAudioSave = 0, reviewId = null;
-  root.innerHTML = `<a class="library-back" href="/jlpt/n5/exams">← Варианты N5</a><h1>${esc(exam.title)}</h1>
+  root.innerHTML = `<a class="library-back" href="${new URLSearchParams(location.search).get('section')==='listening'?'/jlpt/n5/audio?mode=practice&source=exams':'/jlpt/n5/exams'}">← ${new URLSearchParams(location.search).get('section')==='listening'?'Аудио':'Варианты N5'}</a><h1>${esc(exam.title)}</h1>
     ${exam.notes.map(note => `<p class="exam-note">${esc(note)}</p>`).join('')}
     ${mixed ? '' : `<details class="workbook-credits"><summary>Источник и состав</summary><p>${esc(exam.sourceNote)}</p>${exam.sections.map(s => `<p>${esc(s.title)}: ${s.groups.reduce((n,g) => n+g.items.length,0)} заданий · ${duration(s.seconds)}${s.missing.length ? ` · отсутствует: ${s.missing.length}` : ''}</p>`).join('')}${(exam.unavailableSections || []).map((s,i) => `<p>${esc(s.title)}: ${esc(s.reason)}</p><button class="secondary" data-exam-unavailable="${i}">Просмотреть страницы</button>`).join('')}<p>Материалы хранятся локально. Процент правильных ответов не является баллом JLPT.</p></details>`}
     <p id="exam-storage" role="status"></p><div class="practice-actions exam-toolbar"><button class="secondary" id="exam-contents">Настройки</button><button class="secondary" id="exam-resume" ${session ? '' : 'hidden'}>Продолжить</button></div>
@@ -97,7 +101,7 @@ function mountPlayer(root,signal,exam,sets,mixed) {
   function isReview() { return !!reviewId; }
   function isPractice() { return session?.mode === 'practice' && !isReview(); }
   function start(mode, errors = false) {
-    const pool = items.filter(q => (filter === 'all' || q.sectionId === filter) && (!errors || ['incorrect','unknown','revealed'].includes(progress.records[q.id]?.status)));
+    const pool = items.filter(q => (filter === 'all' || q.sectionId === filter) && (!requestedAudio || q.audio===requestedAudio) && (!errors || ['incorrect','unknown','revealed'].includes(progress.records[q.id]?.status)));
     const chosen = mode === 'exam' ? items : practiceItems(pool,limit);
     if (!chosen.length) { root.querySelector('#exam-picker-status').textContent = errors ? 'Ошибок для повторения нет.' : 'Нет заданий с проверенным ключом и аудиофрагментом.'; return; }
     const begin = () => { stopAudio(); session = newExamSession(exam,mode,chosen); reviewId = null; save(); render(); };
@@ -119,7 +123,7 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     const a = asset(q,q.audio);
     if (!a) return '<p role="status">Аудиофайл недоступен.</p>';
     const continuous = session.mode === 'exam' && !isReview();
-    return `<div class="exam-audio"><audio id="exam-audio" ${continuous ? '' : 'controls'} preload="metadata" src="${esc(a.url)}" data-position="${esc(continuous ? q.examId : q.id)}"></audio><div class="practice-actions"><button class="secondary" id="exam-play">${continuous ? 'Включить запись' : 'Слушать / пауза · F3'}</button>${continuous ? '' : '<button class="secondary" id="exam-replay">Повторить фрагмент</button>'}</div>${continuous ? '<p>Запись проигрывается подряд. Таймер продолжает идти при выходе со страницы.</p>' : '<div class="library-filters" role="group" aria-label="Скорость записи">' + [.75,1,1.25,1.5].map(rate => `<button class="chip" data-exam-rate="${rate}" aria-pressed="${(progress.settings.rate || 1) === rate}">${rate}×</button>`).join('') + '</div>'}${continuous ? '' : inlineTimeline()}<p id="exam-audio-status" role="status"></p></div>`;
+    return `<div class="exam-audio"><audio id="exam-audio" ${continuous ? '' : 'controls'} preload="metadata" src="${esc(a.url)}" data-position="${esc(continuous ? q.examId : q.id)}"></audio>${mediaControls({play:'id="exam-play"',back:'id="exam-audio-back"',forward:'id="exam-audio-forward"',restart:continuous?'':'id="exam-replay"',rate:'data-media-rate data-exam-rate-select',seek:'data-inline-seek',time:'data-inline-time',value:progress.settings.rate||1,continuous})}${continuous?'<p class="practice-help">Экзамен: запись идёт непрерывно, пауза и изменение скорости недоступны.</p>':''}<p id="exam-audio-status" role="status"></p></div>`;
   }
   function bindAudio(q,position = null,wasPlaying = false) {
     player = root.querySelector('#exam-audio'); if (!player) return;
@@ -127,6 +131,7 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     const clip = continuous ? null : q.clip;
     const initial = position ?? session.audio[audio.dataset.position] ?? clip?.[0] ?? 0;
     playerEvents = new AbortController(); const options = {signal:playerEvents.signal};
+    if(continuous)claimAudioContext(playerEvents.signal);
     if (!continuous) bindInlineAudio(audio,root.querySelector('.exam-audio'),playerEvents.signal,{start:clip?.[0] || 0,end:clip?.[1] ?? Infinity});
     audio.playbackRate = continuous ? 1 : [.75,1,1.25,1.5].includes(progress.settings.rate) ? progress.settings.rate : 1;
     const persist = () => { if (Number.isFinite(audio.currentTime)) { session.audio[audio.dataset.position] = audio.currentTime; save(); } };
@@ -136,8 +141,10 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     },options);
     audio.addEventListener('play',() => {
       if (clip && (audio.currentTime < clip[0] || audio.currentTime >= clip[1]-.1)) audio.currentTime = clip[0];
-      root.querySelector('#exam-play').textContent = continuous ? 'Запись включена' : 'Слушать / пауза · F3';
+      setAudioIcon(root.querySelector('#exam-play'),'pause');
+      if(continuous)root.querySelector('#exam-play').disabled=true;
     },options);
+    audio.addEventListener('pause',()=>{if(!continuous)setAudioIcon(root.querySelector('#exam-play'),'play');},options);
     audio.addEventListener('timeupdate',() => {
       if (clip && audio.currentTime >= clip[1]) audio.pause();
       if (Date.now()-lastAudioSave > 1000) { lastAudioSave=Date.now(); persist(); }
@@ -216,6 +223,7 @@ function mountPlayer(root,signal,exam,sets,mixed) {
       ${session.mode === 'exam' && !isReview() ? `<details class="exam-answer-sheet"><summary>Ответы раздела</summary><div class="exam-question-grid">${section.groups.map(g => `<h3>Блок ${g.number}</h3>${g.items.map(item => `<button class="chip" data-exam-jump="${esc(item.id)}" aria-current="${item.id === q.id ? 'step' : 'false'}">${item.number}${session.answers[item.id]?.choice != null ? ' ✓' : ''}</button>`).join('')}`).join('')}</div></details>` : ''}</div></div>`;
     if (carry) root.querySelector('.exam-audio').replaceWith(carry);
     else bindAudio(q);
+    const media=root.querySelector('.exam-audio');if(media)root.querySelector('.exam-paper').before(media);
     root.querySelector('.exam-command-grid').before(root.querySelector('#exam-feedback'));
     if (isPractice() || isReview()) feedback();
     clock(); save();
@@ -275,6 +283,7 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     if (expireExamSection(session,exam)) { dialog?.close(); stopAudio(); render(); return; }
     const clock = root.querySelector('#exam-clock'); if (clock) clock.textContent = duration((session.deadline-Date.now())/1000);
   }
+  root.addEventListener('change',event=>{if(event.target.matches('[data-exam-rate-select]')&&player){progress.settings.rate=Number(event.target.value);player.playbackRate=progress.settings.rate;save();}},{signal});
   root.addEventListener('click',event => {
     const b = event.target.closest('button'); if (!b || b.disabled) return;
     if (session && expireExamSection(session,exam)) { dialog?.close(); stopAudio(); render(); return; }
@@ -334,11 +343,9 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     if (b.id === 'exam-play' && player) {
       if (player.paused) playAudio(); else if (isPractice() || isReview()) player.pause();
     }
+    if (['exam-audio-back','exam-audio-forward'].includes(b.id)&&player) {const clip=current()?.clip;player.currentTime=Math.max(clip?.[0]||0,Math.min(clip?.[1]??player.duration,player.currentTime+(b.id==='exam-audio-back'?-15:15)));}
     if (b.id === 'exam-replay' && player) { player.currentTime=current().clip?.[0] || 0; playAudio(); }
-    if (b.dataset.examRate && player) {
-      progress.settings.rate=Number(b.dataset.examRate); player.playbackRate=progress.settings.rate;
-      root.querySelectorAll('[data-exam-rate]').forEach(el => el.setAttribute('aria-pressed',String(el===b))); save();
-    }
+
   },{signal});
   document.addEventListener('keydown',event => {
     if (event.repeat || event.isComposing || signal.aborted || shortcuts.handleCapture(event) || dialog?.open
@@ -354,5 +361,6 @@ function mountPlayer(root,signal,exam,sets,mixed) {
   const timer = setInterval(clock,1000);
   signal.addEventListener('abort',() => { clearInterval(timer); stopAudio(); dialog?.close(); },{once:true});
   window.addEventListener('pagehide',save,{signal});
-  if (session && new URLSearchParams(location.search).get('resume')) render(); else picker();
+  if (session && entry.get('resume')) render(); else if(entry.get('mode')==='practice' && requested==='listening' && session?.mode==='practice' && !session.finished && session.keys.every(id=>{const q=byId.get(id);return q?.sectionId==='listening'&&(!requestedAudio||q.audio===requestedAudio);}))render();
+  else {picker();if(entry.get('mode')==='practice' && requested==='listening')start('practice');}
 }

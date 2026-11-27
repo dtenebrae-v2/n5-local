@@ -14,7 +14,7 @@ module.exports = async function audioChecks(page, base) {
   const books=tracks.filter(t=>t.group==='books');
   await page.locator('#audio-play-all').click();
   await page.waitForFunction(()=>{const a=document.querySelector('#continuous-audio');return a && !a.paused && a.currentTime>.1;});
-  const buttons=page.locator('.audio-transport [data-audio-command]');
+  const buttons=page.locator('.audio-transport [data-audio-icon]');
   assert.equal(await buttons.count(),4);
   assert.equal(await buttons.locator('svg[aria-hidden="true"]').count(),4);
   assert.ok((await buttons.allTextContents()).every(text=>text.trim()===''));
@@ -63,7 +63,7 @@ module.exports = async function audioChecks(page, base) {
   await page.locator('[data-audio-command=toggle]').first().click();
   for(const width of [390,320]) {
     await page.setViewportSize({width,height:844});
-    assert.equal(await page.locator('.audio-transport button').evaluateAll(buttons=>buttons.every(button=>Math.abs(button.getBoundingClientRect().top-buttons[0].getBoundingClientRect().top)<1)),true,'Audio commands stay in one row '+width);
+    assert.equal(await page.locator('.audio-transport .media-main button').evaluateAll(buttons=>buttons.every(button=>Math.abs(button.getBoundingClientRect().top-buttons[0].getBoundingClientRect().top)<1)),true,'Audio commands stay in one row '+width);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'Audio mobile overflow '+width);
     if(process.env.SCREENSHOT_DIR && width===390)await page.screenshot({path:process.env.SCREENSHOT_DIR+'/n5-audio-mobile.png',fullPage:false});
   }

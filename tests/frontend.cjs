@@ -71,6 +71,7 @@ async function main() {
     const base = `http://127.0.0.1:${port}`;
     await require('./ux-audit-fixes.cjs')(browser, base);
     await require('./learning-flow.cjs')(browser, base);
+    await require('./audio-journey.cjs')(browser, base);
     await require('./design-consistency.cjs')(page, base);
     await audioChecks(page, base);
     await furiganaChecks(page, base);

@@ -1,3 +1,6 @@
+import {claimAudioContext} from './audio-context.js';
+import {mediaControls} from './media-controls.js';
+import {setAudioIcon} from './audio-controls.js';
 import { escapeHTML as esc } from './ui.js';
 import { saveReading, readingState } from './library-progress.js';
 import { bindBookGestures, clampScale, zoomAround } from './book-gestures.js';
@@ -13,7 +16,7 @@ export async function mountBookReader(root, book, progress, signal, credits) {
   document.title = `${book.title} · N5`;
   const state = readingState(progress, book.id), pdf = book.assets.pdf, audio = book.assets.audio;
   root.innerHTML = `<section class="book-shell book-viewer" aria-label="Чтение книги">
-    <div class="book-chrome"><header class="book-header"><a class="library-back" href="/jlpt/n5/library" aria-label="Вернуться в библиотеку">←</a>
+    <div class="book-chrome"><header class="book-header"><a class="library-back" href="${new URLSearchParams(location.search).get('from')==='audio'?'/jlpt/n5/audio?mode=practice&source=books':'/jlpt/n5/library'}" aria-label="${new URLSearchParams(location.search).get('from')==='audio'?'Вернуться к аудио':'Вернуться в библиотеку'}">←</a>
       <h1 lang="ja">${esc(book.title)}</h1><button class="secondary" id="book-tools-toggle" aria-expanded="false" aria-controls="book-reader-controls">Параметры</button><button class="secondary" id="book-info-open">О книге</button></header>
     <div id="book-reader-controls" class="book-controls" aria-label="Управление чтением">
       <div class="book-page-controls"><button class="secondary" id="book-thumbnails-open" aria-label="Миниатюры страниц">Страницы</button>
@@ -30,11 +33,7 @@ export async function mountBookReader(root, book, progress, signal, credits) {
     <p id="book-loading" role="status">Загружаем PDF…</p><p id="book-error" role="alert"></p><p id="reading-storage" role="status"></p>
     <div class="book-viewport"><div id="book-stage" class="book-stage" tabindex="0" role="region" aria-label="Страницы книги: прокрутка, увеличение двумя пальцами" aria-busy="true"><div class="pdfViewer" lang="ja"></div></div></div>
     ${audio?.available ? `<footer class="book-audio" aria-label="Аудиокнига"><audio id="book-audio" preload="metadata" src="${esc(audio.local_url)}"></audio>
-      <div class="book-audio-buttons"><button class="secondary" id="book-audio-play" aria-label="Воспроизвести аудио" disabled>▶</button>
-      <button class="secondary" id="book-audio-back" aria-label="Назад на 15 секунд" disabled>−15 с</button><button class="secondary" id="book-audio-forward" aria-label="Вперёд на 15 секунд" disabled>+15 с</button>
-      <label><span class="sr-only">Скорость аудио</span><select id="book-rate" aria-label="Скорость аудио">${[.75,1,1.25,1.5].map(rate => `<option value="${rate}" ${rate === state.rate ? 'selected' : ''}>${rate}×</option>`).join('')}</select></label>
-      <span id="book-audio-time" aria-label="Время аудио">0:00</span></div>
-      <input id="book-audio-seek" type="range" min="0" max="0" step=".1" value="0" aria-label="Позиция аудио" disabled><p id="book-audio-error" role="status"></p></footer>` : ''}
+      ${mediaControls({play:'id="book-audio-play"',back:'id="book-audio-back"',forward:'id="book-audio-forward"',rate:'id="book-rate"',seek:'id="book-audio-seek"',time:'id="book-audio-time" aria-label="Время аудио"',value:state.rate,disabled:true})}<p id="book-audio-error" role="status"></p></footer>` : ''}
     <dialog id="book-info" class="practice-dialog book-info-dialog" aria-labelledby="book-info-title"><div class="practice-header"><h2 id="book-info-title">О книге</h2><button class="practice-close" aria-label="Закрыть сведения">×</button></div>
       <h3 lang="ja">${esc(book.title)}</h3><p>Уровень ${book.level}<span id="book-info-pages"></span></p>${credits}
       <p>Нумерация в просмотрщике включает обложку и служебные страницы PDF.</p>
@@ -136,10 +135,10 @@ export async function mountBookReader(root, book, progress, signal, credits) {
     $('#book-audio-seek').max = duration;
     $('#book-audio-seek').value = Math.min(time, duration);
     $('#book-audio-seek').setAttribute('aria-valuetext', `${clock(time)} из ${clock(duration)}`);
-    $('#book-audio-play').textContent = player.paused ? '▶' : 'Ⅱ';
-    $('#book-audio-play').setAttribute('aria-label', player.paused ? 'Воспроизвести аудио' : 'Приостановить аудио');
+    setAudioIcon($('#book-audio-play'),player.paused?'play':'pause');
   }
   if (player) {
+    claimAudioContext(signal);
     player.playbackRate = state.rate;
     player.addEventListener('loadedmetadata', () => {
       const end = Number.isFinite(player.duration) ? Math.max(0, player.duration - .1) : state.audioTime;
