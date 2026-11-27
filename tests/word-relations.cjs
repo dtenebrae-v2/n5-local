@@ -9,7 +9,7 @@ module.exports = async function wordRelations(page, base) {
   assert.match(await baseText(page.locator('#relation-study')), /暗い/);
   assert.match(await baseText(page.locator('#relation-study')), /明るくない/);
   assert.match(await baseText(page.locator('#relation-study')), /не точное равенство/);
-  assert.equal(await page.locator('#relation-start').isDisabled(), true);
+  assert.equal(await page.locator('#relation-start').isDisabled(), false);
   await page.locator('#relation-known').click();
   await page.locator('#relation-status').selectOption('known');
   assert.match(await baseText(page.locator('#relation-count')), /Выбрано: 1/);

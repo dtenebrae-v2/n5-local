@@ -25,7 +25,9 @@ module.exports = async function uxChecks(page, base) {
   assert.equal(requests.filter(url => url.includes('/api/words?')).length, 0);
   const input = page.locator('#practice-answer');
   assert.equal(await page.locator('#game-length input[value="10"]').isChecked(), true);
+  await page.locator('.session-help > summary').click();
   assert.match(await page.locator('#game-goal').innerText(), /10 заданий/);
+  await page.locator('.session-help > summary').click();
   assert.equal(await page.locator('#game-next').isHidden(), true);
   assert.equal(await page.locator('#practice-reveal').isVisible(), true);
   assert.ok((await input.boundingBox()).y < 844, 'Answer is on the first mobile screen');

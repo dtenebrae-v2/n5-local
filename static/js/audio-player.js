@@ -180,7 +180,7 @@ export async function mountAudio(root, signal) {
   await load(); if (signal.aborted) return;
   let group = 'all';
   root.innerHTML = `<div class="audio-screen"><h1>Аудио</h1><p>Полные записи без заданий и таймера. Следующая запись включится автоматически.</p>
-    <section class="audio-now" aria-label="Текущая запись"><p class="audio-album"></p><h2 class="audio-current-title">Выберите запись</h2><p class="audio-note"></p>
+    <section class="audio-now" aria-label="Текущая запись"><p class="audio-album"></p><h2 class="audio-current-title">Выберите запись</h2><details class="audio-source"><summary>О записи</summary><p class="audio-note"></p></details>
     <div class="audio-transport">${audioButton('previous')}${audioButton('toggle','play',true)}${audioButton('stop')}${audioButton('next')}</div>
     <div class="audio-seek"><button class="secondary" data-audio-command="back" aria-label="Назад на 15 секунд">−15 с</button><label>Позиция<input class="audio-position" type="range" min="0" max="0" step="1" value="0"></label><button class="secondary" data-audio-command="forward" aria-label="Вперёд на 15 секунд">+15 с</button></div><p class="audio-time"></p>
     <div class="audio-options"><label>Скорость <select class="audio-rate">${RATES.map(n=>`<option value="${n}">${n}×</option>`).join('')}</select></label><label><input class="audio-repeat" type="checkbox"> Повторять очередь</label></div><p class="audio-error" role="status"></p>
@@ -191,9 +191,9 @@ export async function mountAudio(root, signal) {
   function paintList() {
     const list = visible();
     const unique = uniqueAudioTracks(list).length;
-    root.querySelector('.audio-list-count').textContent = `Записей: ${list.length}${unique < list.length ? ` · разных записей в очереди: ${unique}` : ''}`;
+    root.querySelector('.audio-list-count').textContent = `В очереди: ${unique} записей`;
     root.querySelector('#audio-play-all').disabled = !list.length;
-    root.querySelector('.audio-track-list').innerHTML = list.map(t=>`<li data-track="${esc(t.id)}"><div><small>${esc(t.album)}</small><p>${esc(t.title)}</p>${t.note ? `<small>${esc(t.note)}</small>` : ''}</div><button class="secondary audio-icon-button" data-listen="${esc(t.id)}" aria-label="Слушать: ${esc(t.title)}" title="Слушать">${audioIcon('play')}</button></li>`).join('') || '<li>В этом разделе пока нет доступных записей.</li>';
+    root.querySelector('.audio-track-list').innerHTML = list.map(t=>`<li data-track="${esc(t.id)}"><div><small>${esc(t.album)}</small><p>${esc(t.title)}</p>${t.note ? `<details class="audio-source"><summary>О записи</summary><small>${esc(t.note)}</small></details>` : ''}</div><button class="secondary audio-icon-button" data-listen="${esc(t.id)}" aria-label="Слушать: ${esc(t.title)}" title="Слушать">${audioIcon('play')}</button></li>`).join('') || '<li>В этом разделе пока нет доступных записей.</li>';
     update();
   }
   function update() {
@@ -203,6 +203,7 @@ export async function mountAudio(root, signal) {
     root.querySelector('.audio-album').textContent = t ? `${t.album} · ${state.index+1} из ${state.queue.length}` : '';
     root.querySelector('.audio-current-title').textContent = t?.title || 'Выберите запись';
     root.querySelector('.audio-note').textContent = t?.note || '';
+    root.querySelector('.audio-now .audio-source').hidden = !t?.note;
     root.querySelector('.audio-time').textContent = t ? `${clock(position)} / ${duration ? clock(duration) : '—'}` : '';
     root.querySelector('.audio-error').textContent = error || storageError;
     const range = root.querySelector('.audio-position'); range.disabled = !t || !duration; range.max = duration || 0;

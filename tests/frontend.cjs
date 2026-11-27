@@ -70,6 +70,7 @@ async function main() {
     page.on('pageerror', (error) => errors.push(error.message));
     const base = `http://127.0.0.1:${port}`;
     await require('./ux-audit-fixes.cjs')(browser, base);
+    await require('./learning-flow.cjs')(browser, base);
     await require('./design-consistency.cjs')(page, base);
     await audioChecks(page, base);
     await furiganaChecks(page, base);
@@ -144,6 +145,7 @@ async function main() {
     await resultFor('nonexistentword12345');
     await page.locator('#reset-search').click();
     await ready();
+    await page.locator('.catalogue-filters > summary').click();
     await page.locator('[data-group="nouns:people"]').click();
     await ready();
     assert.equal(await page.locator('[data-group="nouns:people"]').getAttribute('aria-pressed'), 'true');
@@ -174,6 +176,7 @@ async function main() {
       fs.mkdirSync(process.env.SCREENSHOT_DIR, { recursive: true });
       await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, 'n5-topics.png') });
     }
+    await page.locator('.catalogue-filters > summary').click();
     await page.locator('.group-tile').filter({ hasText: 'Цвета' }).click();
     await ready();
     assert.equal(await page.locator('.word-group-card').count(), 1);

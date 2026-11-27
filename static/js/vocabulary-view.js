@@ -28,14 +28,14 @@ export function vocabularyPage(base, collection, groups, query) {
             placeholder="Слово, чтение или перевод…" aria-label="Поиск слов" aria-describedby="word-search-hint">
           <kbd>/</kbd>
         </label>
-        <button id="add-word" type="button" class="primary">Добавить слово</button>
-        <details class="vocabulary-more"><summary>Ещё</summary><a id="download" class="download" href="/api/export.csv?collection=${collection.id}">Скачать CSV ↓</a></details>
+        <button id="add-word" title="Добавить слово" type="button" class="primary">Добавить слово</button>
+        <details class="vocabulary-more"><summary aria-label="Дополнительные действия" title="Дополнительные действия">Ещё</summary><a id="download" class="download" href="/api/export.csv?collection=${collection.id}">Скачать CSV ↓</a></details>
       </div>
       <p class="word-search-hint" id="word-search-hint">Кана, ромадзи, русский или английский перевод.</p>
-${thematic ? '<div class="filter-heading">ГРУППЫ</div>' : ''}
+${thematic ? '<details class="catalogue-filters"><summary>Выбрать группу</summary>' : ''}
       ${thematic ? `<div class="group-tiles" role="group" aria-label="Фильтр по группам">
         <button data-group="" class="group-tile"><span>Все</span> <small>${collection.count} записей</small></button>${chips}
-      </div>` : ''}
+      </div></details>` : ''}
       <div class="results-heading">
         <span id="result-count" role="status" aria-live="polite"></span>
       </div>
@@ -53,11 +53,11 @@ function wordRow(entry, kind, showGroup = true) {
   return `
     <tr>
       <td><span class="japanese-word" lang="ja">${rubyText(entry.kanji, entry.readings?.[0]?.kana || entry.furigana)}</span>
-        ${practice || kind === 'verb' ? '<div class="word-actions">' : ''}
+        ${practice || kind === 'verb' ? '<div class="word-tools"><div class="word-actions">' : ''}
         ${kind === 'verb' ? `<button type="button" class="practice-launch" data-conjugation="${entry.id}">Таблица спряжения</button><a class="practice-launch" href="/jlpt/n5/verb-phrases?word=${entry.id}">Учить в сочетаниях</a>` : ''}
         ${practice ? `<button type="button" class="practice-launch" data-practice="${entry.id}"
           aria-label="Формы: ${esc(entry.kanji)}">Практика форм</button>` : ''}
-        ${practice || kind === 'verb' ? '</div>' : ''}
+        ${practice || kind === 'verb' ? '</div></div>' : ''}
       </td>
       <td class="reading-col">
         <span class="kana" lang="ja">${esc(entry.furigana || entry.kanji)}</span>

@@ -7,7 +7,7 @@ module.exports = async function verbPhrases(page, base) {
   await page.reload();
   await page.locator('#phrase-known').waitFor();
   assert.match(await baseText(page.locator('#phrase-study')), /窓を開ける/);
-  assert.equal(await page.locator('#phrase-start').isDisabled(), true);
+  assert.equal(await page.locator('#phrase-start').isDisabled(), false);
   await page.locator('#phrase-known').click();
   await page.reload();
   await page.locator('#phrase-known').waitFor();
@@ -45,7 +45,7 @@ module.exports = async function verbPhrases(page, base) {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(base + '/jlpt/n5/vocabulary/verbs?q=' + encodeURIComponent('開ける'));
-  await page.locator('a[href="/jlpt/n5/verb-phrases?word=8"]').click();
+  await require('./open-word-action.cjs')(page.locator('a[href="/jlpt/n5/verb-phrases?word=8"]'));
   await page.locator('#phrase-known').waitFor();
   assert.match(await baseText(page.locator('#phrase-study')), /窓を開ける/);
   await page.setViewportSize({ width: 1440, height: 1000 });

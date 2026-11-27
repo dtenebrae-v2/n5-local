@@ -15,6 +15,8 @@ module.exports = async function workbookChecks(page, base) {
   await page.keyboard.press('2');
   await page.keyboard.press('Enter');
   assert.equal(await page.locator('#workbook-feedback').getAttribute('data-status'),'incorrect');
+  assert.equal(await page.locator('[data-workbook-choice="1"]').getAttribute('data-answer'),'incorrect');
+  assert.equal(await page.locator('#workbook-check').isVisible(),false);
   await page.waitForFunction(()=>{const r=document.querySelector('#workbook-feedback').getBoundingClientRect();return r.top>=0&&r.top<innerHeight;});
   await page.keyboard.press('1');await page.keyboard.press('Enter');
   assert.equal(await page.locator('#workbook-feedback').getAttribute('data-status'),'correct');

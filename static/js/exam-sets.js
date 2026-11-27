@@ -25,7 +25,7 @@ export async function mountExamSets(root, signal, examId) {
   root.innerHTML = '<p class="loading">Загружаем варианты…</p>';
   if (!examId) {
     const catalog = await getJSON('/api/exams', signal); if (signal.aborted) return;
-    root.innerHTML = `<h1>Экзаменационные варианты N5</h1><div class="practice-actions"><button class="primary" id="exam-mixed" ${catalog.sets.some(s => s.available && s.graded) ? '' : 'disabled'}>Смешанная тренировка</button></div><p id="exam-loading" role="status"></p><div class="library-grid">${catalog.sets.map(set => `<article class="library-card"><h2>${esc(set.title)}</h2>${set.available ? `<p>${set.questions} заданий · ${set.audioSeconds ? 'аудио ' + duration(set.audioSeconds) : 'аудио не связано'}</p><p>${set.graded === set.questions ? 'С ключами' : 'Без автоматической оценки'}${set.incomplete ? ' · Неполный набор' : ''}</p><a class="primary" href="/jlpt/n5/exams/${esc(set.id)}">Открыть</a>` : '<p>Материалы не подключены.</p>'}</article>`).join('')}</div>`;
+    root.innerHTML = `<h1>Экзаменационные варианты N5</h1><div class="practice-actions"><button class="primary" id="exam-mixed" ${catalog.sets.some(s => s.available && s.graded) ? '' : 'disabled'}>Смешанная тренировка</button></div><p id="exam-loading" role="status"></p><div class="library-grid">${catalog.sets.map(set => `<article class="library-card"><h2>${esc(set.title)}</h2>${set.available ? `<p>${set.questions} заданий · ${set.audioSeconds ? 'аудио ' + duration(set.audioSeconds) : 'аудио слушается отдельно'}</p><p>${set.graded === set.questions ? 'С проверкой ответов' : set.graded ? `Проверка ${set.graded} из ${set.questions} заданий` : 'Самопроверка по образцу'}${set.incomplete ? ' · Часть заданий' : ''}</p><a class="primary" href="/jlpt/n5/exams/${esc(set.id)}">Открыть</a>` : '<p>Материалы не подключены.</p>'}</article>`).join('')}</div>`;
     root.querySelector('#exam-mixed').addEventListener('click', async event => {
       event.target.disabled = true;
       root.querySelector('#exam-loading').textContent = 'Загружаем задания…';
@@ -38,6 +38,7 @@ export async function mountExamSets(root, signal, examId) {
         if (!signal.aborted) { root.querySelector('#exam-loading').textContent = 'Не удалось загрузить задания. Повторите попытку.'; event.target.disabled = false; }
       }
     },{signal});
+    if(new URLSearchParams(location.search).get('resume')==='mixed') root.querySelector('#exam-mixed').click();
     return;
   }
   const exam = await getJSON('/api/exam?id=' + encodeURIComponent(examId),signal);
@@ -163,6 +164,10 @@ function mountPlayer(root,signal,exam,sets,mixed) {
     if (!box) return;
     const choice = isReview() && session.mode === 'practice' ? a.firstChoice : a.choice;
     const status = isReview() ? q.correct === null ? 'ungraded' : session.mode === 'practice' ? a.first || 'skip' : choice === q.correct ? 'correct' : choice === null ? 'skip' : 'incorrect' : a.status;
+    if(isPractice()) {
+      for(const id of ['exam-check','exam-unknown','exam-reveal'])root.querySelector('#'+id).hidden=!!status;
+      next.classList.toggle('primary',!!status);next.classList.toggle('secondary',!status);
+    }
     box.dataset.status = status || '';
     box.innerHTML = status ? `<strong>${STATES[status] || ''}</strong><p class="exam-user">Ваш ответ: ${choice === null ? '—' : choice+1}</p>${q.correct === null ? '<p>Проверенного ключа нет. Ответ сохранён без оценки.</p>' : `<p class="exam-correct">Правильный ответ: ${q.correct+1}</p>`}${isPractice() && a.first === 'incorrect' && a.status === 'correct' ? '<p>Первая попытка: неверно.</p>' : ''}` : '';
     root.querySelectorAll('[data-exam-choice]').forEach(b => {
@@ -349,5 +354,5 @@ function mountPlayer(root,signal,exam,sets,mixed) {
   const timer = setInterval(clock,1000);
   signal.addEventListener('abort',() => { clearInterval(timer); stopAudio(); dialog?.close(); },{once:true});
   window.addEventListener('pagehide',save,{signal});
-  picker();
+  if (session && new URLSearchParams(location.search).get('resume')) render(); else picker();
 }

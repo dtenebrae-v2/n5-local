@@ -1,4 +1,5 @@
 async function openSettings(page) {
+  if (!await page.locator('#game-configure').isVisible()) await page.locator('.session-options > summary').click();
   if (!await page.locator('#game-settings').evaluate(el => el.open)) await page.locator('#game-configure').click();
 }
 async function openOptions(page) {

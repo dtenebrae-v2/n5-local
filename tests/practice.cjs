@@ -7,7 +7,7 @@ module.exports = async function practiceChecks(page, base) {
   async function open(collection, query, id) {
     await page.goto(base + '/jlpt/n5/vocabulary/' + collection + '?q=' + encodeURIComponent(query));
     await page.waitForSelector('#results[aria-busy="false"]');
-    await page.locator(`[data-practice="${id}"]`).click();
+    await require('./open-word-action.cjs')(page.locator(`[data-practice="${id}"]`));
     await page.waitForSelector('.practice-dialog[open]');
   }
   const input = page.locator('#practice-answer');
@@ -103,7 +103,7 @@ module.exports = async function practiceChecks(page, base) {
 
   await page.goto(base + '/jlpt/n5/vocabulary/verbs?q=食べる');
   await page.waitForSelector('#results[aria-busy="false"]');
-  await page.locator('[data-conjugation="376"]').click();
+  await require('./open-word-action.cjs')(page.locator('[data-conjugation="376"]'));
   await page.waitForSelector('.verb-reference[open]');
   assert.match(await baseText(page.locator('.verb-form-list')), /たべれば/);
   if (process.env.SCREENSHOT_DIR) {
@@ -119,7 +119,7 @@ module.exports = async function practiceChecks(page, base) {
   assert.equal(await page.locator('.practice-dialog').evaluate(el => el.scrollWidth <= el.clientWidth), true);
   await page.locator('.practice-close').click();
   await page.waitForSelector('.practice-dialog', { state: 'detached' });
-  await page.locator('[data-conjugation="376"]').click();
+  await require('./open-word-action.cjs')(page.locator('[data-conjugation="376"]'));
   assert.equal(await page.locator('.verb-reference').evaluate(el => el.scrollWidth <= el.clientWidth), true);
   await page.locator('.verb-reference .lesson-link').click();
   await page.waitForSelector('#ichidan');

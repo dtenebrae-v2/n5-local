@@ -138,6 +138,13 @@ export async function mountWorkbooks(root, signal, bookId) {
 
   function feedback(q) {
     const record = result(q), box = root.querySelector('#workbook-feedback');
+    const answered=!!record.status;
+    root.querySelectorAll('[data-workbook-choice]').forEach(button=>{const index=Number(button.dataset.workbookChoice);if(answered && q.correct!==null)button.dataset.answer=index===q.correct?'correct':index===record.choice?'incorrect':'neutral';else delete button.dataset.answer;});
+    root.querySelector('#workbook-check').hidden=answered;
+    root.querySelector('#workbook-reveal').hidden=answered || q.correct===null;
+    root.querySelector('#workbook-unknown').hidden=answered;
+    root.querySelector('#workbook-next').classList.toggle('primary',answered);
+    root.querySelector('#workbook-next').classList.toggle('secondary',!answered);
     if (!record.status) { box.innerHTML = ''; delete box.dataset.status; return; }
     const article = root.querySelector('.workbook-question');
     article?.removeAttribute('data-furigana');
@@ -239,5 +246,6 @@ export async function mountWorkbooks(root, signal, bookId) {
     } else if (event.key === 'Enter' && !event.ctrlKey && !event.altKey && !event.metaKey && !event.shiftKey && current() && (event.target.closest('[data-workbook-choice]') || !event.target.closest('button,a,details,audio'))) { event.preventDefault(); submit(); }
   }, {signal});
   signal.addEventListener('abort', () => { stopAudio(); dialog?.close(); }, {once:true});
-  showContents();
+  if (new URLSearchParams(location.search).get('resume') === '1' && session) renderStudy();
+  else showContents();
 }

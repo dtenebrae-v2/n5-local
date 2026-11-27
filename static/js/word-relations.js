@@ -36,7 +36,7 @@ export async function mountWordRelations(root, signal) {
       <details class="phrase-directory"><summary>Список связок</summary><div id="relation-list"></div></details></div>
     <section class="phrase-training" aria-labelledby="relation-training-title"><h2 id="relation-training-title">Закрепление изученного</h2>
       <p>До 10 заданий по выбранным фильтрам. Антонимы и близкие слова спрашиваются в обоих направлениях; отрицание — по указанному слову. Ошибки возвращаются в «Учу».</p>
-      <label><input id="relation-studied" type="checkbox" checked> Только карточки с отметкой «Учу» или «Знаю»</label>
+      <label><input id="relation-studied" type="checkbox" ${Object.keys(progress).length?'checked':''}> Только карточки с отметкой «Учу» или «Знаю»</label>
       <button id="relation-start" class="primary" type="button">Начать тренировку</button><p id="relation-training-help" role="status"></p><div id="relation-task"></div>
     </section><details class="phrase-sources"><summary>О материале и источники</summary>
       <p>Пары подобраны для отдельных значений словаря. Близкие слова могут отличаться стилем речи и сочетаемостью. Отрицание антонима обычно слабее прямого утверждения: «не большой» не обязательно значит «маленький».</p>
@@ -63,7 +63,7 @@ export async function mountWordRelations(root, signal) {
       <h2 class="relation-context">${esc(r.context)}</h2>
       <div class="relation-pair">${sideHTML(r.left)}<span class="relation-symbol" aria-label="${r.kind === 'antonym' ? 'Противоположные значения' : 'Близкие значения'}">${symbol(r.kind)}</span>${sideHTML(r.right)}</div>
       <p class="phrase-note">${esc(r.note)}</p>
-      <div class="practice-actions"><button type="button" class="secondary" id="relation-learning">Учу · повторять</button><button type="button" class="primary" id="relation-known">Знаю · дальше</button><button type="button" class="secondary" id="relation-reset">Снять отметку</button></div>
+      <div class="practice-actions"><button type="button" class="secondary" id="relation-learning">Учу · повторять</button><button type="button" class="primary" id="relation-known">Знаю · дальше</button><button type="button" class="secondary" id="relation-reset" ${progress[r.id]?'':'hidden'}>Снять отметку</button></div>
       <div class="practice-actions"><button type="button" class="secondary" id="relation-prev">← Назад</button><button type="button" class="secondary" id="relation-next">Далее →</button></div>
       <div class="relation-dictionary">${[r.left,r.right].map(side => `<a class="lesson-link" href="/jlpt/n5/vocabulary/complete?q=${encodeURIComponent(side.word)}">${esc(side.word)} в словаре →</a>`).join('')}</div></article>`;
     function mark(status) {

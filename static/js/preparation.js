@@ -51,6 +51,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
   if (!courseView && bank.topics.some(topic => topic.id === requestedTopic)) {
     Object.assign(settings, {mode:'all',topic:requestedTopic,lesson:'',query:''});
     settings.category = TOPIC_GROUPS.find(group => group.topics.includes(requestedTopic))?.id || 'words';
+    root.classList.remove('focused-session');
     showingHome = true;
     setupOpen = true;
   }
@@ -63,7 +64,8 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
     if (session && session.index < session.questions.length) showingHome = true;
     else {
       session = practicePlan(bank, progress, {mode, count:10});
-      showingHome = false;
+      root.classList.add('focused-session');
+    showingHome = false;
     }
     params.delete('quick'); params.delete('mode');
     const query = params.toString();
@@ -87,6 +89,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
     if (el) el.textContent = storageError ? 'Не удалось сохранить прогресс в браузере.' : '';
     return !storageError;
   }
+  signal.addEventListener('abort',()=>root.classList.remove('focused-session'),{once:true});
   function shell(body) {
     root.innerHTML = `<h1>${esc(pageTitle)}</h1><p id="prep-storage" role="status">${storageError ? 'Не удалось сохранить прогресс в браузере.' : ''}</p>${body}`;
   }
@@ -101,6 +104,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
       <div class="prep-launch"><p id="prep-plan-summary" role="status"></p><button class="primary" data-action="launch">Начать</button></div></div>`;
   }
   function home() {
+    root.classList.remove('focused-session');
     showingHome = true;
     save();
     const ongoing=session && session.index<session.questions.length;
@@ -108,7 +112,6 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
       shell(`<div class="prep-home prep-course-home"><p>${view==='reviews'?'Закрепите материал пяти уроков и посмотрите результат по каждому.':'Выберите урок, прочитайте правила и потренируйтесь.'}</p>
         ${ongoing?`<section class="prep-resume"><div><h2>Незавершённое занятие</h2><p>${esc(planLabel(session))} · задание ${session.index+1} из ${session.questions.length}</p></div><button class="secondary" data-action="resume">Продолжить</button></section>`:''}
         <div id="prep-lesson-picker">${lessonPicker(bank,settings.lesson,{view,allowTopics:false,controls:lessonControls()})}</div>
-        <div class="prep-launch prep-launch-repeat"><p>Готовы закрепить правила?</p><button class="secondary" data-action="launch">Начать</button></div>
         <section class="prep-progress-section"><h2>Прогресс</h2>${reviewHistory(bank,progress)}${preparationStats(progress,bank)}</section></div>`);
       updateSetup();return;
     }
@@ -150,6 +153,7 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
   }
   function render(focus = false) {
     if (!session) return home();
+    root.classList.add('focused-session');
     showingHome = false;
     if (!session.questions.length) {
       shell(`<h2 id="prep-heading" tabindex="-1">Нет заданий для этих настроек</h2><button class="primary" data-action="home">${backLabel}</button>`);
@@ -168,12 +172,12 @@ export async function mountPreparation(root, signal, {view='topics'} = {}) {
       shell(`${session.lesson?`<p class="practice-help">${esc(planLabel(session))}</p>`:''}<p>${esc(topic)} · ${session.index+1} из ${session.questions.length} · ${q.fresh ? 'Новое задание' : 'Повторное задание'}</p>
         <section class="mock-question" ${!submitted && ['reading-kanji','orthography'].includes(q.type) ? 'data-furigana="off"' : ''}><h2 id="prep-heading" tabindex="-1" lang="ja">${esc(q.prompt)}</h2>
         ${q.passageText ? `<p class="mock-passage" lang="ja">${passageHTML(q,!!submitted)}</p>` : ''}
-        <fieldset ${submitted ? 'disabled' : ''}><legend class="sr-only">Выберите ответ</legend><div class="mock-choices">${q.choices.map((choice,i)=>`<label class="form-choice"><input type="radio" name="prep-choice" value="${i}" ${selected===i?'checked':''}><span lang="ja">${i+1}. ${esc(choice)}</span></label>`).join('')}</div></fieldset></section>
-        <div class="practice-actions prep-actions"><button class="primary" data-action="check" ${submitted || selected===undefined ? 'disabled' : ''}>Проверить<span class="keyboard-hint"> · Enter</span></button>
-        <button class="primary" data-action="next" ${submitted?'':'disabled'}>Следующее задание<span class="keyboard-hint"> · Shift+Enter</span></button>
-        <button class="secondary" data-action="hint" ${submitted?'disabled':''}>${level===0?'Правило':level===1?'Другой пример':'Показать ответ'}</button>
-        <button class="secondary" data-action="unknown" ${submitted?'disabled':''}>Не знаю</button></div>
-        <div id="prep-feedback" role="status" aria-live="polite" class="prep-feedback" ${submitted?`data-correct="${submitted.correct}"`:''}>
+        <fieldset ${submitted ? 'disabled' : ''}><legend class="sr-only">Выберите ответ</legend><div class="mock-choices">${q.choices.map((choice,i)=>`<label class="form-choice" ${submitted?`data-answer="${i===q.correct?'correct':i===submitted.selected?'incorrect':'neutral'}"`: ''}><input type="radio" name="prep-choice" value="${i}" ${selected===i?'checked':''}><span lang="ja">${i+1}. ${esc(choice)}</span></label>`).join('')}</div></fieldset></section>
+        <div class="practice-actions prep-actions"><button class="primary" data-action="check" ${submitted?'hidden':''} ${submitted || selected===undefined ? 'disabled' : ''}>Проверить<span class="keyboard-hint"> · Enter</span></button>
+        <button class="primary" data-action="next" ${submitted?'':'hidden disabled'}>Следующее задание<span class="keyboard-hint"> · Shift+Enter</span></button>
+        <button class="secondary" data-action="hint" ${submitted?'hidden disabled':''}>${level===0?'Правило':level===1?'Другой пример':'Показать ответ'}</button>
+        <button class="secondary" data-action="unknown" ${submitted?'hidden disabled':''}>Не знаю</button></div>
+        <div id="prep-feedback" role="status" aria-live="polite" class="prep-feedback" ${!submitted&&!level?'hidden':''} ${submitted?`data-correct="${submitted.correct}"`:''}>
         ${submitted ? `<strong>${title}${submitted.status==='hinted'?' · С подсказкой':''}</strong>
         <p class="mock-user">Ваш ответ: <span lang="ja">${esc(q.choices[submitted.selected]??'—')}</span></p>
         <p class="mock-correct">Правильный ответ: <span lang="ja">${esc(q.choices[q.correct])}</span></p>

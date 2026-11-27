@@ -18,9 +18,9 @@ export async function mountLibrary(root,signal,bookId=null) {
   let level='',audio=false,status='';
   root.innerHTML=`<h1>Книги Tadoku</h1><p>Tadoku · уровни 1 и 2</p>
     <label class="practice-label" for="library-search">Название книги</label><input id="library-search" class="library-search" type="search" autocomplete="off" placeholder="Поиск">
-    <div class="library-filters" role="group" aria-label="Уровень">${[['','Все'],['1','Уровень 1'],['2','Уровень 2']].map(([value,label])=>`<button class="chip ${value===''?'selected':''}" data-level="${value}" aria-pressed="${value===''}">${label}</button>`).join('')}</div>
+    <details class="catalogue-filters"><summary>Уровень и фильтры</summary><div class="library-filters" role="group" aria-label="Уровень">${[['','Все'],['1','Уровень 1'],['2','Уровень 2']].map(([value,label])=>`<button class="chip ${value===''?'selected':''}" data-level="${value}" aria-pressed="${value===''}">${label}</button>`).join('')}</div>
     <div class="library-filters" role="group" aria-label="Статус чтения">${[['','Все книги'],['reading','Читаю'],['completed','Прочитано']].map(([value,label])=>`<button class="chip ${value===''?'selected':''}" data-status="${value}" aria-pressed="${value===''}">${label}</button>`).join('')}<button class="chip" id="library-audio-only" aria-pressed="false">С локальным аудио</button></div>
-    <p id="library-count" role="status"></p><div class="library-grid" id="library-results"></div>`;
+    </details><p id="library-count" role="status"></p><div class="library-grid" id="library-results"></div>`;
   const input=root.querySelector('#library-search');
   const render=()=>{
     const query=input.value.trim().toLocaleLowerCase();

@@ -24,16 +24,16 @@ export function navigation(catalog) {
     ${group('course','Курс N5',`<a href="${catalog.base}/course">Уроки 1–25</a>
     <a href="${catalog.base}/course/workbook">Практика по тетради</a>
     <a href="${catalog.base}/course/reviews">Повторение по урокам</a>
-    <a href="${catalog.base}/verb-phrases">Глаголы в сочетаниях</a>
-    <a href="${catalog.base}/word-relations">Синонимы и антонимы</a>`)}
+    <a href="${catalog.base}/workbooks">Заниматься по учебнику</a>`)}
     ${group('practice','Тренировки',`<a href="${catalog.base}/preparation">Задания по темам</a>
     <a href="${catalog.base}/practice">Слова и формы</a>
-    <a href="${catalog.base}/counters">Счётные суффиксы</a>`)}
-    ${group('exams','Экзамены и учебник',`
+    <a href="${catalog.base}/counters">Счётные суффиксы</a>
+    <a href="${catalog.base}/verb-phrases">Глаголы в сочетаниях</a>
+    <a href="${catalog.base}/word-relations">Синонимы и антонимы</a>`)}
+    ${group('exams','Пробные экзамены',`
     <a href="${catalog.base}/mock">Письменный пробник</a>
-    <a href="${catalog.base}/exams">Варианты и аудирование</a>
-    <a href="${catalog.base}/workbooks">Учебные наборы</a>`)}
-    ${group('materials','Чтение',`<a href="${catalog.base}/library">Книги Tadoku</a>`)}
+    <a href="${catalog.base}/exams">Варианты и аудирование</a>`)}
+    ${group('materials','Книги',`<a href="${catalog.base}/library">Книги Tadoku</a>`)}
     ${group('words','Словарь',vocabulary)}
     ${group('grammar','Грамматика',grammar)}
     <hr class="nav-divider">

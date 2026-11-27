@@ -7,7 +7,7 @@ module.exports = async function furiganaChecks(page, base) {
   await word.locator('ruby rt').waitFor();
   assert.equal(await baseText(word),'開ける');
   assert.equal(await word.locator('rt').innerText(),'あ');
-  await page.locator('[data-practice="8"]').click();
+  await require('./open-word-action.cjs')(page.locator('[data-practice="8"]'));
   await page.locator('dialog .practice-word ruby').waitFor();
   await page.locator('#practice-reveal').click();
   await page.locator('.feedback-expected ruby').waitFor();

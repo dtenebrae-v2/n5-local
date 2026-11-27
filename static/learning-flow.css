@@ -1,0 +1,87 @@
+/* Learning-first composition: material, response, feedback, next step. */
+.catalogue-filters { margin:8px 0 16px; }
+.catalogue-filters > summary, .session-help > summary, .session-options > summary { cursor:pointer; min-height:44px; padding:12px 0; font-size:14px; font-weight:550; color:var(--green); }
+.catalogue-filters .group-tiles { margin:8px 0; }
+.word-search-hint { display:none; }
+.workspace:has(.vocabulary-panel) .page-heading > p, .workspace:has(.vocabulary-panel) .eyebrow { display:none; }
+.word-tools { margin-top:8px; }
+.word-table td { vertical-align:top; }
+.word-table .japanese-word { line-height:1.5; }
+.word-table .reading-col, .word-table .word-meaning { padding-top:24px; }
+.word-table .word-actions { margin:0; }
+.book-catalog-card { padding:16px; gap:16px; }
+.book-catalog-card .book-card-credits { margin-top:8px; }
+.book-catalog-card .book-card-credits > summary { min-height:32px; padding:6px 0; }
+#prep-feedback[hidden] { display:none !important; }
+.mock-choices .form-choice[data-answer="incorrect"] > span { background:#fce8e8; border-color:#b12d2d; color:#7d2020; }
+.mock-choices .form-choice[data-answer="correct"] > span { background:#e6f4e9; border-color:#21843e; color:#18552e; }
+.mock-choices .form-choice[data-answer="neutral"] > span { background:var(--white); color:var(--muted); border-color:var(--line); }
+.focused-session { max-width:820px; }
+.focused-session > h1 { font:550 18px/1.4 system-ui,sans-serif !important; margin:0 0 16px !important; color:var(--muted); }
+.focused-session .prep-actions > .primary { grid-column:1/-1; }
+.focused-session .prep-actions [hidden] { display:none !important; }
+.workspace:has(.focused-session) > .topbar { display:none; }
+#prep-storage:empty, #cw-storage:empty, #game-storage:empty, #game-hint-status:empty { display:none; }
+.session-help { margin:12px 0; }
+.session-help p { margin:8px 0; font-size:14px; }
+.session-options { margin:0 0 8px; }
+.session-options .training-toolbar { margin:8px 0; }
+.practice-screen > h1 { font-size:24px !important; margin-bottom:8px !important; }
+#game-progress, #game-score { display:inline-block; margin:0 16px 12px 0; font-size:13px; color:var(--muted); }
+.game-card #game-question { margin-top:0; }
+.game-card .game-reference-launch { margin:8px 0 16px; min-height:32px; padding:4px 8px; font-size:12px; background:transparent; border-color:transparent; text-decoration:underline; color:var(--muted); }
+.game-card #game-finish { min-height:32px; padding:4px 0; border:0; font-size:13px; color:var(--muted); background:transparent; }
+.phrase-card button[hidden] { display:none !important; }
+@media(max-width:1200px) {
+  .word-table tr { padding:12px 16px; gap:8px 16px; }
+  .word-table .reading-col, .word-table .word-meaning { padding:0; }
+  .word-table .word-tools { grid-column:1/-1; grid-row:4; margin:0; }
+  .word-table tr:not(:has(td:nth-child(4))) .word-tools { grid-row:3; }
+  .word-table .word-actions { padding-bottom:8px; }
+}
+@media(max-width:700px) {
+  .book-catalog-card { grid-template-columns:80px minmax(0,1fr); padding:12px; gap:12px; }
+  .book-catalog-card h2 { font-size:18px; }
+  .book-card-content > p { margin:0 0 8px; font-size:13px; }
+  .book-card-content > .primary { margin-top:0; }
+  .library-grid { gap:12px; }
+  .cw-page > h1 { font-size:24px !important; margin-bottom:16px !important; }
+  .cw-progress { font-size:13px; margin:16px 0; }
+  .cw-selectors { gap:8px; margin-bottom:8px; }
+  .cw-selectors label { flex:1; min-width:130px; font-size:13px; }
+}
+.mock-choices .form-choice[data-answer="incorrect"] { background:#fce8e8; border-color:#b12d2d; color:#7d2020; }
+.mock-choices .form-choice[data-answer="correct"] { background:#e6f4e9; border-color:#21843e; color:#18552e; }
+.mock-choices .form-choice[data-answer="neutral"] { background:var(--white); border-color:var(--line); }
+.mock-choices .form-choice[data-answer] > span { background:transparent; border-radius:inherit; }
+.prep-lessons > select + p { margin-top:12px; }
+.phrase-card > .practice-actions:not(:has([id$="prev"])):has(button[hidden]) { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.vocabulary-panel .results-heading { margin-top:8px; padding-top:8px; }
+@media(max-width:700px) {
+  .vocabulary-panel .search-toolbar { display:grid; grid-template-columns:minmax(0,1fr) 44px 44px; gap:8px; margin-bottom:8px; }
+  .vocabulary-panel .search-box { min-width:0; width:100%; }
+  .vocabulary-panel .search-box kbd { display:none; }
+  .vocabulary-panel #add-word { width:44px; min-width:44px; padding:8px; font-size:0; }
+  .vocabulary-panel #add-word::after { content:'+'; font-size:24px; font-weight:400; }
+  .vocabulary-more { margin:0; }
+  .vocabulary-more > summary { width:44px; padding:8px; justify-content:center; font-size:0; }
+  .vocabulary-more > summary::after { content:'⋯'; font-size:24px; }
+}
+.practice-screen { position:relative; }
+.practice-screen > h1 { padding-right:120px; }
+.practice-screen > .training-toolbar { position:absolute; top:0; right:0; margin:0; }
+.practice-screen > .training-toolbar #game-configure { min-height:36px; padding:6px 10px; font-size:13px; }
+.practice-screen > .training-toolbar { top:24px; right:32px; }
+@media(max-width:700px) { .practice-screen > .training-toolbar { top:20px; right:20px; } }
+.audio-source { margin:8px 0; font-size:13px; color:var(--muted); }
+.audio-source > summary { cursor:pointer; padding:8px 0; min-height:32px; }
+.audio-source[hidden] { display:none; }
+.word-table tbody tr:hover { background:#f6f8ee; }
+.word-table tr:hover td { background:transparent; }
+.workbook-choices button[data-answer="incorrect"] { background:#fce8e8; border-color:#b12d2d; color:#7d2020; outline-color:#b12d2d; }
+.workbook-choices button[data-answer="correct"] { background:#e6f4e9; border-color:#21843e; color:#18552e; }
+.workbook-choices button[data-answer="neutral"] { background:var(--white); border-color:var(--line); }
+.exam-command-grid [hidden] { display:none !important; }
+.cw-selectors label[hidden] { display:none; }
+@media(max-width:700px) { .cw-selectors label { flex-basis:100%; } }
+#content:has(.progress-topics) > section + section { margin-top:24px; }

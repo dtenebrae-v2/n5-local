@@ -83,7 +83,7 @@ export async function mountGame(root, catalog, signal) {
   const referenceButton = root.querySelector('#practice-rules');
   referenceButton.classList.add('game-reference-launch');
   referenceButton.setAttribute('aria-keyshortcuts', 'F1');
-  root.querySelector('.game-card').prepend(referenceButton);
+  root.querySelector('#game-question').after(referenceButton);
   let deck = [], pool = [], exercise, previous, counted = false, correct = 0, answered = 0;
   let current = null, attempts = [], retry = [], finished = false, hinted = false;
   let appliedSettings = null;
@@ -94,7 +94,10 @@ export async function mountGame(root, catalog, signal) {
   actions.insertAdjacentHTML('beforeend', '<p class="practice-help" id="practice-action-help">«Показать ответ» — посмотреть решение; «Не знаю» — отметить затруднение и посмотреть решение. Оба варианта попадут в повтор ошибок.</p>');
   root.querySelector('#practice-reveal').setAttribute('aria-describedby', 'practice-action-help');
   root.querySelector('#game-unknown').setAttribute('aria-describedby', 'practice-action-help');
-  actions.after(root.querySelector('#practice-input-help'));
+  const help = document.createElement('details'); help.className='session-help'; help.innerHTML='<summary>Помощь с ответом</summary>';
+  actions.after(help); help.append(root.querySelector('#practice-input-help'),root.querySelector('#practice-action-help'));
+  help.append(root.querySelector('#game-settings-summary'),root.querySelector('#game-goal'));
+  root.querySelector('#game-configure').setAttribute('aria-label','Настроить занятие');
   root.querySelector('.game-card').append(root.querySelector('#game-finish'));
   root.querySelector('#game-next').classList.add('game-advance');
   const input = root.querySelector('#practice-answer');

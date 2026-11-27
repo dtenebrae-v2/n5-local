@@ -200,7 +200,7 @@ class Handler(BaseHTTPRequestHandler):
         if path == '/api/grammar-practice':
             return self.send(GRAMMAR_PRACTICE)
         if path == '/api/catalog':
-            return self.send(catalog.public)
+            return self.send({**catalog.public, 'libraryBooks': [{'id':book['id'], 'title':book['title']} for book in LIBRARY.books.values()]})
         if path == '/api/groups':
             return self.send(repository.groups(params.get('collection', [None])[0]))
         if path == '/api/training-words':

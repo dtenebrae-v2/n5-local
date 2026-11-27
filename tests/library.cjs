@@ -12,6 +12,7 @@ module.exports=async function libraryChecks(page,base) {
  await page.goto(base+'/jlpt/n5/library');
  await page.waitForSelector('.library-card');
  assert.equal(await page.locator('.library-card').count(),44);
+ await page.locator('.catalogue-filters > summary').click();
  await page.locator('[data-level="2"]').click();assert.equal(await page.locator('.library-card').count(),19);
  await page.locator('#library-search').fill('鏡');assert.equal(await page.locator('.library-card').count(),1);
  await page.locator('.library-card .primary').click();
@@ -160,7 +161,7 @@ module.exports=async function libraryChecks(page,base) {
  await page.locator('#book-completed').click();assert.equal(await page.locator('#book-completed').getAttribute('aria-pressed'),'true');
  await page.keyboard.press('Escape');
  await page.locator('.library-back').click();await page.waitForSelector('.library-card');
- await page.locator('[data-status=completed]').click();assert.equal(await page.locator('.library-card').count(),1);
+ await page.locator('.catalogue-filters > summary').click();await page.locator('[data-status=completed]').click();assert.equal(await page.locator('.library-card').count(),1);
  assert.match(await page.locator('.library-card h2').innerText(),/鏡/);
  await page.setViewportSize({width:320,height:640});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  if(process.env.SCREENSHOT_DIR)await page.screenshot({path:process.env.SCREENSHOT_DIR+'/n5-library-catalog-mobile.png',fullPage:true});

@@ -13,7 +13,7 @@ module.exports=async function preparationChecks(page,base) {
  assert.equal(await page.locator('#navigation .nav-group').count(),6);
  assert.equal(await page.locator('#nav-course').locator('..').locator('a[href$="/course/workbook"]').count(),1);
  assert.equal(await page.locator('#nav-words').locator('..').locator('a[href$="/practice"]').count(),0);
- assert.equal(await page.locator('#nav-exams').locator('..').locator('a').count(),3);
+ assert.equal(await page.locator('#nav-exams').locator('..').locator('a').count(),2);
  assert.ok(await page.locator('.nav-caption').first().evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=parseFloat(getComputedStyle(document.querySelector('#navigation a')).fontSize)));
  assert.equal(await page.locator('.prep-settings').getAttribute('open'),null);
  assert.match(await page.locator('[data-action=launch]').first().innerText(),/10 заданий/);
@@ -133,9 +133,9 @@ module.exports=async function preparationChecks(page,base) {
  if(await page.locator('.prep-lesson-rules').getAttribute('open')===null) await page.locator('.prep-lesson-rules > summary').click();
  assert.match(await page.locator('.prep-lesson-rules').innerText(),/Godan|Ichidan/);
  assert.match(await page.locator('#prep-plan-summary').innerText(),/Урок 5/);
- assert.equal(await page.locator('[data-action=launch]').count(),2);
+ assert.equal(await page.locator('[data-action=launch]').count(),1);
  assert.equal(await page.locator('[data-action=launch]').first().innerText(),await page.locator('[data-action=launch]').last().innerText());
- assert.ok(await page.locator('.prep-lesson-controls').evaluate(el => !!(el.compareDocumentPosition(document.querySelector('.prep-lesson-rules')) & Node.DOCUMENT_POSITION_FOLLOWING)));
+ assert.ok(await page.locator('.prep-lesson-controls').evaluate(el => !!(el.compareDocumentPosition(document.querySelector('.prep-lesson-rules')) & Node.DOCUMENT_POSITION_PRECEDING)));
  assert.deepEqual((await read()).session.questions.map(q=>q.id),quickIds,'Selecting a lesson preserves the current session');
  await page.locator('[data-action=launch]').first().click();
  const lesson5=(await read()).session;

@@ -47,7 +47,7 @@ export async function mountVerbPhrases(root, signal) {
     <section class="vocabulary-panel phrase-training" aria-labelledby="phrase-training-title">
       <h2 id="phrase-training-title">Закрепление изученного</h2>
       <p>До 10 заданий по выбранной теме и фильтрам. Ошибки вернут карточку в «Учу».</p>
-      <label><input id="phrase-studied" type="checkbox" checked> Только карточки с отметкой «Учу» или «Знаю»</label>
+      <label><input id="phrase-studied" type="checkbox" ${Object.keys(progress).length?'checked':''}> Только карточки с отметкой «Учу» или «Знаю»</label>
       <label>Задание <select id="phrase-mode"><option value="verb">Дополнить глагол</option><option value="full">Написать сочетание целиком</option></select></label>
       <button id="phrase-start" class="primary" type="button">Начать тренировку</button>
       <p id="phrase-training-help" role="status"></p><div id="phrase-task"></div>
@@ -89,7 +89,7 @@ export async function mountVerbPhrases(root, signal) {
       ${related ? `<div class="phrase-related"><span>Сравните:</span> <button type="button" class="secondary" id="phrase-related"><span lang="ja">${rubyText(phraseText(related),phraseReading(related))}</span> — ${esc(related.meaning)}</button></div>` : ''}
       <div class="practice-actions"><button type="button" class="secondary" id="phrase-learning">Учу · повторять</button>
       <button type="button" class="primary" id="phrase-known">Знаю · дальше</button>
-      <button type="button" class="secondary" id="phrase-reset">Снять отметку</button></div>
+      <button type="button" class="secondary" id="phrase-reset" ${progress[p.id]?'':'hidden'}>Снять отметку</button></div>
       <div class="practice-actions"><button type="button" class="secondary" id="phrase-prev">← Назад</button><button type="button" class="secondary" id="phrase-next">Далее →</button></div>
       <a class="lesson-link" href="/jlpt/n5/vocabulary/complete?q=${encodeURIComponent(p.verb)}">Открыть глагол в словаре →</a>
       </article>`;

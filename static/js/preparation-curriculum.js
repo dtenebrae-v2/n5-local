@@ -39,11 +39,11 @@ export function lessonPicker(bank, selected = '', {view='all', allowTopics=true,
       const checkpoint = bank.curriculum.reviews?.find(r=>r.afterLesson===l.number);
       return `${view!=='reviews'?`<option value="${l.number}" ${l===lesson?'selected':''}>${l.number}. ${esc(l.title)}</option>`:''}${view!=='lessons'&&checkpoint?`<option value="${checkpoint.id}" ${checkpoint===review?'selected':''}>${esc(checkpoint.title)}</option>`:''}`;
     }).join('')}</select>
-    ${controls}
     ${lesson || review ? `<p>${review ? 'Смешанное занятие по пяти урокам. В каждом будут задания; после занятия — результат по каждому уроку.' : esc(lesson.description)}</p><details class="prep-lesson-rules" ${view==='lessons'?'open':''}><summary>${review?'Правила пяти уроков':`Правила и примеры урока · ${lesson.objectives.length}`}</summary>
       ${review ? review.lessonNumbers.map(number=>{const l=lessonFor(bank,number);return `<details class="prep-review-rules"><summary>Урок ${number}. ${esc(l.title)}</summary>${objectives(l)}</details>`;}).join('') : objectives(lesson)}
       <p class="practice-help">Учебная последовательность приложения. Нумерация уроков не является официальной программой JLPT.</p>
       <div class="prep-rule-sources">${source.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a>`).join('')}</div></details>` : '<p class="practice-help">Для каждого урока доступны правила, примеры и задания. Урок 4 посвящён кандзи.</p>'}
+    ${controls}
     <p><a href="/jlpt/n5/course/workbook?lesson=${encodeURIComponent(selected || '0')}">Практика по тетради →</a></p>
     </section>`;
 }
